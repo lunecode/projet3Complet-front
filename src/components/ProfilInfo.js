@@ -2,12 +2,17 @@ import React, { Component } from 'react'
 import axios from 'axios'
 
 
-class PostVideo extends Component {
+class ProfilInfo extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      video_title:'',
-      profil_id_profil:'',
+      profil_picture:'',
+      pseudo:'',
+      identity:'',
+      location:'',
+      profil_link:'',
+      birth_date:'',
+      nb_countries_visited:''
     }
   }
 
@@ -29,15 +34,15 @@ submitHandler = e => {
 }
 
   render() {
-    const { video_title, profil_id_profil} = this.state
+    const { profil_link, profil_picture,nb_countries_visited,identity,birth_date,location,pseudo} = this.state
     return (
       <div>
         <form onSubmit={this.submitHandler}>
           <div>
-            <input type='text' name="video_title" value={video_title} onChange={this.changeHandler} />
+            <input type='text' name="profil_picture" value={profil_picture} onChange={this.changeHandler} />
           </div>
           <div>
-            <input type="text" name="profil_id_profil" value={profil_id_profil} onChange={this.changeHandler}/>
+            <input type="text" name="pseudo" value={pseudo} onChange={this.changeHandler}/>
           </div>
           <button type="submit">Submit</button>
         </form>
@@ -46,4 +51,4 @@ submitHandler = e => {
   }
 }
 
-export default PostVideo
+export default ProfilInfo
