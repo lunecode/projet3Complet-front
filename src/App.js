@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import UploadPage from './screen/UploadPage';
+import PlayVideo from './screen/PlayVideo';
 
 
 class App extends Component {
@@ -7,6 +8,7 @@ class App extends Component {
     return (
       <>
         <UploadPage />
+        <PlayVideo />
       </>
     )
   }
