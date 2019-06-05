@@ -3,12 +3,10 @@ import DisplayVideo from './components/DisplayVideo';
 import PostVideo from './components/PostVideo';
 // import DisplayVideo from './components/displayvideo';
 
-
 class App extends Component {
   state = {
     getvideos: [],
   };
-
 
   // Permet l'affichage de la table general_video via un get
 
@@ -28,7 +26,6 @@ class App extends Component {
       <>
         <p>Affichage de la table general_video : </p>
         <DisplayVideo videos={this.state.getvideos} />
-
         <PostVideo />
       </>
     )

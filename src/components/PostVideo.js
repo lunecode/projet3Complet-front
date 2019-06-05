@@ -3,14 +3,10 @@ import axios from 'axios'
 
 
 class PostVideo extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      video_title: '',
-      profil_id_profil: '',
-    }
-  }
-
+   state = {
+      video_title:'',
+      profil_id_profil:'',
+    } 
   changeHandler = (e) => {
     this.setState({[e.target.name]: e.target.value})
   }
@@ -25,7 +21,6 @@ submitHandler = e => {
     .catch(error => {
       console.log(error)
     })
-
 }
 
   render() {
