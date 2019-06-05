@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
-import axios from 'axios'
+import axios from 'axios';
+import Youtube from 'react-youtube';
 
 
-// Permet l'affichage des données pour un test de la table " General_video "
+// Permet l'affichage des données de la table " General_video "
 
 class Display extends Component {
   state = {
     videos: [],
+    
   };
 
   getVideo = async () => {
@@ -19,13 +21,27 @@ class Display extends Component {
   }
 
   render() {
+    const opts = {
+      height: '390',
+      width: '640',
+      playerVars: {
+        autoplay: 1
+      }
+    };
     return (
       <>
+      
         {this.state.videos.map(item => (
           <li key={item.id_general_video}>
-          {item.video_title}
-          {item.profil_id_profil}
-        </li>
+            <Youtube videoId="P7LqDtG60o4" opts={item.video_link} onReady={this._onReady} />
+            {/* <video controls src={item.video_link}></video> */}
+            {/* {item.video_link} */}
+            <p>{item.video_title}</p>
+            <p>{item.video_description}</p>
+            <p>{item.equipment}</p>
+            <img src={item.cover_picture} alt={item.video_title}></img>
+            <p>{item.profil_id_profil}</p>
+          </li>
         ))}
       </>
     )

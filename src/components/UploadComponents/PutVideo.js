@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 
-// Permet d'inserer des données dans la table " General_video "
 
-class PostVideo extends Component {
+// NE MARCHE PAS 
+// Permet de modifier des données de la table " General_video "
+
+class PutVideo extends Component {
   state = {
+    id_general_video: '',
     video_link: '',
     video_title: '',
     video_description: '',
@@ -21,7 +24,7 @@ changeHandler = (e) => {
 submitHandler = e => {
   e.preventDefault()
   console.log(this.state)
-  axios.post('http://localhost:3000/videoUpload/insertdatavideo', this.state)
+  axios.put('http://localhost:3000/videoupload//updatedatavideo/1', this.state)
     .then(response => {
       console.log(response)
     })
@@ -32,10 +35,14 @@ submitHandler = e => {
 }
 
 render() {
-  const { video_link, video_title, profil_id_profil, video_description, equipment, link_equipment, cover_picture } = this.state
+  const { video_link, video_title, profil_id_profil, video_description, equipment, link_equipment, cover_picture, id_general_video } = this.state
   return (
     <div>
       <form onSubmit={this.submitHandler}>
+      <div>
+          <p>Id de la vidéo</p>
+          <input type='text' name="id_general_video" value={id_general_video} onChange={this.changeHandler} />
+        </div>
       <div>
           <p>Lien de la vidéo</p>
           <input type='text' name="video_link" value={video_link} onChange={this.changeHandler} />
@@ -71,4 +78,4 @@ render() {
 }
 }
 
-export default PostVideo
+export default PutVideo
