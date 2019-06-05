@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import UploadPage from './screen/UploadPage';
+import Home from './screen/Home';
 
 
 class App extends Component {
@@ -7,6 +8,7 @@ class App extends Component {
     return (
       <>
         <UploadPage />
+        <Home />
       </>
     )
   }
