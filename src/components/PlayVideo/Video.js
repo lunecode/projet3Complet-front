@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'
+import './Video.css';
 import YouTube from 'react-youtube';
 
 
@@ -11,7 +12,7 @@ class Video extends Component {
   };
 
   getVideo = async () => {
-    const res = await axios.get('http://localhost:3000/video/play_video')
+    const res = await axios.get('http://localhost:3000/general_video/get_general_video')
     this.setState({ videos: res.data })
     console.log(this.state.videos)
   }
@@ -30,13 +31,20 @@ render() {
     return (
     <>
         {this.state.videos.map(item => (
+        <div className="container_video">
         <li key={item.id_general_video}>
            <li>{item.video_title}</li> 
             <li>{item.video_description}</li>
+            <li>{item.video_status}</li>
+            <li>{item.equipment}</li>
+            <li>{item.link_equipment}</li>
+            <li><img src={item.cover_picture} alt="equipment_picture"></img></li>
             
             <YouTube  videoId={item.video_link} opts={opts} onReady={this._onReady}/>
+            <li>{item.video}</li>
           
         </li>
+        </div>
         ))}
     </>
     )
