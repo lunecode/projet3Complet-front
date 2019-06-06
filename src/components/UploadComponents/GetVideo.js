@@ -3,16 +3,15 @@ import axios from 'axios';
 import Youtube from 'react-youtube';
 
 
-// Permet l'affichage des données de la table " General_video "
+// Allow to display data from " general_video " table
 
-class Display extends Component {
+class GetVideo extends Component {
   state = {
-    videos: [],
-    
+    videos: [],    
   };
 
   getVideo = async () => {
-    const res = await axios.get('http://localhost:3000/videoUpload/getdatavideo')
+    const res = await axios.get('http://localhost:3000/general_video/get_general_video')
     this.setState({ videos: res.data })
     console.log(this.state.videos)
   }
@@ -20,22 +19,13 @@ class Display extends Component {
     this.getVideo()
   }
 
-  render() {
-    const opts = {
-      height: '390',
-      width: '640',
-      playerVars: {
-        autoplay: 1
-      }
-    };
+  render() {    
     return (
       <>
       
         {this.state.videos.map(item => (
           <li key={item.id_general_video}>
-            <Youtube videoId="P7LqDtG60o4" opts={item.video_link} onReady={this._onReady} />
-            {/* <video controls src={item.video_link}></video> */}
-            {/* {item.video_link} */}
+            <Youtube videoId="P7LqDtG60o4"  onReady={this._onReady} />
             <p>{item.video_title}</p>
             <p>{item.video_description}</p>
             <p>{item.equipment}</p>
@@ -48,4 +38,4 @@ class Display extends Component {
   }
 }
 
-export default Display;
+export default GetVideo;

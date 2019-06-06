@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 
-// Permet d'inserer des données dans la table " General_video "
+// Allow to insert data in " general_video " table
 
 class PostVideo extends Component {
   state = {
@@ -9,7 +9,7 @@ class PostVideo extends Component {
     video_title: '',
     video_description: '',
     equipment: '',
-    link_equipment: '',    
+    link_equipment: '',
     cover_picture: '',
     profil_id_profil: '',
   }
@@ -21,7 +21,7 @@ changeHandler = (e) => {
 submitHandler = e => {
   e.preventDefault()
   console.log(this.state)
-  axios.post('http://localhost:3000/videoUpload/insertdatavideo', this.state)
+  axios.post('http://localhost:3000/general_video/insert_general_video', this.state)
     .then(response => {
       console.log(response)
     })

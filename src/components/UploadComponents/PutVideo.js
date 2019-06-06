@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 
 
-// NE MARCHE PAS 
-// Permet de modifier des données de la table " General_video "
+// Allow to edit the data of " general_video "  table with the ID ( test )
 
 class PutVideo extends Component {
   state = {
@@ -24,7 +23,7 @@ changeHandler = (e) => {
 submitHandler = e => {
   e.preventDefault()
   console.log(this.state)
-  axios.put('http://localhost:3000/videoupload//updatedatavideo/1', this.state)
+  axios.put(`http://localhost:3000/general_video/update_general_video/${this.state.id_general_video}`, this.state)
     .then(response => {
       console.log(response)
     })
