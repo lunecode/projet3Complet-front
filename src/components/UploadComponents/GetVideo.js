@@ -25,7 +25,7 @@ class GetVideo extends Component {
       
         {this.state.videos.map(item => (
           <li key={item.id_general_video}>
-            <Youtube videoId="P7LqDtG60o4"  onReady={this._onReady} />
+            <Youtube videoId={item.video_link}  onReady={this._onReady} />
             <p>{item.video_title}</p>
             <p>{item.video_description}</p>
             <p>{item.equipment}</p>
