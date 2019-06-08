@@ -3,7 +3,7 @@ import axios from 'axios'
 
 
 
-// Permet l'affichage des données pour un test de la table " General_video "
+
 
 class UserNameFirstname extends Component {
     state = {

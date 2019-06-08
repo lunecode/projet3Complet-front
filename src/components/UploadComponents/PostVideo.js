@@ -16,7 +16,7 @@ changeHandler = (e) => {
 submitHandler = e => {
   e.preventDefault()
   console.log(this.state)
-  axios.post('http://localhost:3000/videoUpload/insertdatavideo', this.state)
+  axios.post('http://localhost:3000/general_video/insert_general_video', this.state)
     .then(response => {
       console.log(response)
     })
