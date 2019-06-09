@@ -3,7 +3,7 @@ import axios from 'axios';
 
 class Postingrédients extends Component {
   state = {
-    ingredients=""
+    ingredients:""
 
   }
   handleClick(e) {
