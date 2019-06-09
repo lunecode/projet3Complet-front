@@ -26,7 +26,7 @@ changeHandler = (e) => {
 submitHandler = e => {
   e.preventDefault()
   console.log(this.state)
-  axios.put(`http://localhost:3000/profil/put_profil/${this.state.id_profil}`,this.state)
+  axios.put(`http://localhost:3000/profil/update_profil/${this.state.id_profil}`,this.state)
     .then(response => {
       console.log(response)
     })
