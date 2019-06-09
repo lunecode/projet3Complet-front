@@ -26,6 +26,7 @@ render() {
             <li>{item.firstname}</li>
             <li>{item.lastname}</li>
             <li>{item.video_title}</li>
+            {/* video youtube a inserer  */}
             <li>{item.video_link}</li>
             <li>{item.video_description}</li>
             <li>{item.profil_id_profil}</li>

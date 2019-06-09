@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'
+import './TravelInfo.css';
+
 
 
 
@@ -22,7 +24,7 @@ render() {
     return (
     <>
         {this.state.travel.map(item => (
-        <li key={item.id_travel_information}>
+            <li key={item.id_travel_information}>
             <li>{item.countries}</li>
             <li>{item.departure_month}</li>
             <li>{item.departure_year}</li>
@@ -32,7 +34,7 @@ render() {
             <li>{item.accomodation_budget}</li>
             <li>{item.activities_budget}</li>
             <li>{item.travel_type}</li>
-        </li>
+            </li>
         ))}
     </>
     )

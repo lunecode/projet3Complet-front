@@ -1,8 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet');
+
+@import url('https://fonts.googleapis.com/css?family=Lora|Roboto&display=swap" rel="stylesheet');
+
+
 .container_video{
-    background-color: blue;
+    margin-bottom: 1%;
+    font-family: 'Roboto', sans-serif;
+  
+   /* font-family: 'Lora', serif; */
+}
+
+.title_video {
+    font-size: 25px;
+    font-weight: bold;
+    color: #2C404D;
+    
+}
+
+.video_user {
+    text-align: center;
+    margin: 0 auto;
+    background-color: #2C404D;
+
 }
 
 .container_video img{
-    width:100px;
+    width:60px;
     
+}
+
+.video_info{
+    margin-top: 1%;
+    width: 90%;
+    margin: 0 auto;
+    font-family: 'Lora', serif;
+}
+
+.loading{
+    font-size: 12px;
+    color: gray;
+}
+
+.status{
+    color: #E6C86B;
+    
+}
+
+.text{
+    font-size: 13px;
+    color: #6D7783;
 }
