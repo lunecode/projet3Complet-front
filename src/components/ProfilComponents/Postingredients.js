@@ -8,8 +8,8 @@ class Postingrédients extends Component {
   }
   handleClick(e) {
     e.preventDefault();
-    e = e || window.event;
-    e = e.target || e.srcElement;
+    e = e || window.event;  //récupère la structure des données d'événement dans e
+    e = e.target || e.srcElement;//obtenir la source de l'événement
     console.log(e.id);
     
     // axios.post('http://localhost:3000/profil/insert_profil', this.state)
@@ -20,7 +20,6 @@ class Postingrédients extends Component {
     //   console.log(error)
     // })
 }
-  
   render() {
     const ingredients = this.state
     return (
