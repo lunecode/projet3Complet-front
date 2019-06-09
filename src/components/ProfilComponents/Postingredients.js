@@ -3,7 +3,7 @@ import axios from 'axios';
 
 class Postingrédients extends Component {
   state = {
-    ingredients: ""
+    ingredients=""
 
   }
   handleClick(e) {
@@ -11,7 +11,7 @@ class Postingrédients extends Component {
     e = e || window.event;  //récupère la structure des données d'événement dans e
     e = e.target || e.srcElement;//obtenir la source de l'événement
     console.log(e.id);
-    
+
     // axios.post('http://localhost:3000/profil/insert_profil', this.state)
     // .then(response => {
     //   console.log(response)
@@ -19,7 +19,7 @@ class Postingrédients extends Component {
     // .catch(error => {
     //   console.log(error)
     // })
-}
+  }
   render() {
     const ingredients = this.state
     return (
@@ -38,17 +38,17 @@ class Postingrédients extends Component {
         />
         <img src="https://i.ibb.co/0m2HBgp/Capture-d-e-cran-2019-06-09-a-21-32-15.png"
           name="ingredients"
-          id="Photographe & Vidéaste"
+          id="Photographe et Vidéaste"
           value={ingredients}
           alt="L"
         />
-          <img src="https://i.ibb.co/XyKHRzx/Capture-d-e-cran-2019-06-09-a-21-32-29.png"
+        <img src="https://i.ibb.co/XyKHRzx/Capture-d-e-cran-2019-06-09-a-21-32-29.png"
           name="ingredients"
           id="Bloggeur voyage"
           value={ingredients}
           alt="L"
         />
-          <img src="https://i.ibb.co/brkcGx5/Capture-d-e-cran-2019-06-09-a-21-32-50.png"
+        <img src="https://i.ibb.co/brkcGx5/Capture-d-e-cran-2019-06-09-a-21-32-50.png"
           name="ingredients"
           id="Autre"
           value={ingredients}
