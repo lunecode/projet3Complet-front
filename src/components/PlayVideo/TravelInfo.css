@@ -1,4 +1,37 @@
-/* .container_travel_info{
-    margin-top: 5%;
-    background-color:blue;
-} */
+.container_travel{
+    margin-top: 3%;
+    background-color:#313F4F;
+    width: 75%;
+    padding-top: 1%;
+}
+
+.travel{
+    width:90%;
+    margin: 0 auto;
+}
+
+.countryName{
+    font-size: 35px;
+    color: white;
+    font-weight: bold;
+    margin-right: 3%;
+}
+
+.month{
+    font-size: 16px;
+    /* margin-right: 1%; */
+    
+}
+
+.duration{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.accomodation{
+    color: white;
+}
+
+.budget{
+    font-size: 12px;
+}

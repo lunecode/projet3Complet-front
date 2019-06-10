@@ -24,17 +24,13 @@ render() {
     return (
     <>
         {this.state.travel.map(item => (
-            <li key={item.id_travel_information}>
-            <li>{item.countries}</li>
-            <li>{item.departure_month}</li>
-            <li>{item.departure_year}</li>
-            <li>{item.travel_duration}</li>
-            <li>{item.nb_step}</li>
-            <li>{item.currency}</li>
-            <li>{item.accomodation_budget}</li>
-            <li>{item.activities_budget}</li>
-            <li>{item.travel_type}</li>
-            </li>
+            <div className="container_travel" key={item.id_travel_information}>
+                <div className="travel">
+                    <p className="countryName">{item.countries} <span className="month">{item.departure_month}</span> <span className="month">{item.departure_year} - </span><span className="duration">{item.travel_duration} jours</span></p>
+                    {/* <li>{item.nb_step}</li> */}
+                    <p className="accomodation">  <span>{item.travel_type}</span> | <span> Logement       {item.accomodation_budget}</span>  <span>{item.currency}</span>  <span>Repas et activités {item.activities_budget}</span>  <span>{item.currency}</span> <span className="budget">(Budget par jour et par personne)</span></p>
+                </div>
+            </div>
         ))}
     </>
     )

@@ -27,7 +27,7 @@ render() {
         {this.state.popularity.map(item => (
         <div className="popularity">
             <div key={item.id_popularity}>
-                <div className="view"><span>Number views {item.nb_views}</span><span>Number of like                 {item.nb_like_popularity}</span> <span>Number of comment popularity  {item.nb_comment_popularity}</span> <span>Number of share{item.nb_share}</span><span>NUmber of video in the playlist{item.nb_playlist_included}</span>
+                <div className="view"><span>Number views => {item.nb_views}</span><span>Number of like =>{item.nb_like_popularity}</span> <span>Number of comment popularity =>  {item.nb_comment_popularity}</span> <span>Number of share => {item.nb_share} </span><span>Number of video in the playlist =>{item.nb_playlist_included}</span>
                 </div> 
             </div>
         </div>

@@ -41,7 +41,7 @@ render() {
             <p className="title_video">{item.video_title}</p> 
             <p><span className="loading">Ajouté le {item.loading_time} -</span><span className="status"><i>{item.video_status}</i> </span> </p>
             <p className="text">{item.video_description}</p>
-            <p><img src={item.cover_picture} alt="equipment_picture"></img><a href="{item.link_equipment}>" target="_blank">Go Pro Hero 6</a></p>
+            <p><img className="pictureUser" src={item.cover_picture} alt="equipment_picture"></img><a href="{item.link_equipment}>" target="_blank">Go Pro Hero 6</a></p>
             {/* <a>{item.equipment}</a> */}
             
             {/* <a>{item.video_link}</a> */}

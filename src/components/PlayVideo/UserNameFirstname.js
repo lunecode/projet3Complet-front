@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './UserNameFirstname.css';
 import axios from 'axios'
 
 
@@ -24,9 +25,9 @@ render() {
     return (
     <>
         {this.state.name.map(item => (
-        <li key={item.id_profil}>
-            <p>{item.lastname}{item.firstname}</p>
-        </li>
+        <div className="container_name" key={item.id_profil}>
+            <p className="username">{item.lastname} {item.firstname}</p>
+        </div>
         ))}
     </>
     )

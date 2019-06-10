@@ -6,21 +6,22 @@
 .container_video{
     margin-bottom: 1%;
     font-family: 'Roboto', sans-serif;
-  
    /* font-family: 'Lora', serif; */
+   
 }
 
 .title_video {
     font-size: 25px;
-    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
     color: #2C404D;
+    font-weight: bold;
     
 }
 
 .video_user {
     text-align: center;
     margin: 0 auto;
-    background-color: #2C404D;
+    background-color: #232323;
 
 }
 
@@ -42,7 +43,10 @@
 }
 
 .status{
-    color: #E6C86B;
+    color:#f4b642;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    
     
 }
 
@@ -50,3 +54,9 @@
     font-size: 13px;
     color: #6D7783;
 }
+
+.pictureUser{
+    float: right;
+    border-radius: 50%;
+}
+

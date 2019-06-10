@@ -1,0 +1,12 @@
+.container_name{
+    width: 90%;
+    margin: 0 auto;
+
+}
+
+.username{
+    color: #313F4F;
+    font-size: 18px;
+    font-weight: bold;
+    float: right;
+}
