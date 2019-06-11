@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Destination from './Displaydestination'
+
 
 
 // Permet l'affichage des données pour un test de la table " travel-information"
@@ -11,7 +11,7 @@ class Getdestination extends Component {
   };
 
   getDestination = async () => {
-    const res = await axios.get('http://localhost:3000/home/datatravelinformation')
+    const res = await axios.get('http://localhost:3000/travel_information/get_travelinformation')
     this.setState({ destination: res.data })
     console.log(this.state.destination)
   }
@@ -25,15 +25,23 @@ class Getdestination extends Component {
 
 
     <div className='nav-video-category'>
+      <ul className='nav-video-continent'>
+        <li>AFRIQUE</li>
+        <li>ASIE-OCEANIE</li>
+        <li>EUROPE</li>
+        <li>AMERIQUE</li>
+        <li>AUTRES</li>
+      </ul>
 
-        <ul className='nav-video'>
+
+
         {this.state.destination.map(item => (
           <li key={item.id_travel_information}>
-          {item.continent} 
+          {item.continent_id_continent} 
           {item.countries}
         </li>
         ))}
-        </ul>
+  
     </div>
 
 
