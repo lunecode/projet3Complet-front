@@ -29,21 +29,53 @@
 
 // start css
 
-nav {
+.container_nav {
+    align-items: center;
+    background-color: #2C404D;
     display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    
+    .divLogoTripitto  {
+        width: 15%;
+        text-align: center;
+        
+        .logoTripitto  {
+        }
+    }
+    htmlform {
+        position: relative;
+        width: 20%;
+            
+        .inputNav {
+            background-color: #2C404D;
+            border: solid #1BA2A2;
+            height: 30px;
+            position: relative;
+            width: 100%;
+        }
+        
+        .icone-loupe {
+            position: absolute;
+            height: 20px;
+            right: 20px;
+            top: 10px;
+        }
+    }
+    .ulNav {
+        width: 20%;
+        display: flex;
+        color: white;
+        justify-content: space-around;
+        list-style: none;
+    
+        li {
+        }
+    }
 }
 
-header, .Search, .inputNav {
-    background: #2C404D;
-}
-.logoTripitto  {
-    margin-left: 8%;
-}
 
- .divLogoTripitto  {
-    width: 30%;
-    margin-top: 1.5%;
- }
+
 
 .videoContainer {
     display: flex;
@@ -77,36 +109,6 @@ header, .Search, .inputNav {
 .videastes {
     margin-right: 2%;
     font-size: 10px;
-}
-
-.inputSearch {
-    position: relative;
-}
-.inputNav {
-    position: relative;
-    margin-top: 4%;
-    margin-left: 30%;
-    height: 30px;
-    width: 230%;
-    border: solid #1BA2A2;
-}
-
-.icone-loupe {
-    position: absolute;
-    width: 1.5%;
-    top: 1.5%;
-    right: 74%;
-}
-
-.ulNav {
-    display: flex;
-    position: relative;
-    left: 60%;
-    color: white;
-}
-
-.ulNav li {
-    margin-right: 50%;
 }
 
 // .Search{

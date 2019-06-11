@@ -52,23 +52,19 @@ class Display extends Component {
         return (
             <>
             <header>
-                <div className="container_nav">
-                    <nav>
-                        <div className="divLogoTripitto">
-                            <img className="logoTripitto" src={Logo}alt="logo tripitto"></img>
-                        </div>
-                            <htmlform method="GET" action="rechercher">
-                                <div className="Search">
-                                    <input class="inputNav" type="text" placeholder="Voyager..."></input>
-                                    <img class="icone-loupe"src={Search}alt="Search"></img>
-                                </div>
-                            </htmlform>
-                                <ul className="ulNav">
-                                    <li>VIDÉOS</li>
-                                    <li>VIDÉASTES</li>
-                                </ul>
-                    </nav>
-                </div>
+                <nav className="container_nav">
+                    <div className="divLogoTripitto">
+                        <img className="logoTripitto" src={Logo}alt="logo tripitto"></img>
+                    </div>
+                    <htmlform method="GET" action="rechercher" className="Search">
+                        <input class="inputNav" type="text" placeholder="Voyager..."></input>
+                        <img class="icone-loupe"src={Search}alt="Search"></img>
+                    </htmlform>
+                    <ul className="ulNav">
+                        <li>VIDÉOS</li>
+                        <li>VIDÉASTES</li>
+                    </ul>
+                </nav>
             </header>
             <h4>RÉCEMMENT PUBLIÉ</h4>
             <div class="videoContainer">
