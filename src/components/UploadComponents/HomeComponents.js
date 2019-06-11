@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import YouTube from 'react-youtube';
+import './HomeComponents.scss'
+import Logo from '../../Images-tripitto/Logo/B&W.png';
+import Search from '../../Images-tripitto/Icons/Search-White.png';
+
 
 // Permet l'affichage des données pour un test de la table " General_video "
 
 class Display extends Component {
     state = {
         videos: [],
+        discoveredVideo : [],
+        videastes: [],
     };
 
 
@@ -16,14 +22,28 @@ class Display extends Component {
         console.log(this.state.videos)
     }
 
+    getdiscovered = async () => {
+        const res = await axios.get('http://localhost:3000/videoUpload/getdatavideo')
+        this.setState({ discoveredVideo: res.data })
+        console.log(this.state.discoveredVideo)
+    }
+
+    getVideastes = async () => {
+        const res = await axios.get('http://localhost:3000/profil/get_profil_general_video')
+        this.setState({ videastes: res.data })
+        console.log(this.state.videastes)
+    }
+    
     componentDidMount() {
         this.getRecentlyPublished()
+        this.getdiscovered()
+        this.getVideastes()
     }
 
     render() {
         const opts = {
-            height: '190',
-            width: '190',
+            height: '150',
+            width: '150',
             playerVars: { // https://developers.google.com/youtube/player_parameters
                 autoplay: 0
             }
@@ -31,12 +51,53 @@ class Display extends Component {
 
         return (
             <>
+            <header>
+                <div className="container_nav">
+                    <nav>
+                        <div className="divLogoTripitto">
+                            <img className="logoTripitto" src={Logo}alt="logo tripitto"></img>
+                        </div>
+                            <htmlform method="GET" action="rechercher">
+                                <div className="Search">
+                                    <input class="inputNav" type="text" placeholder="Voyager..."></input>
+                                    <img class="icone-loupe"src={Search}alt="Search"></img>
+                                </div>
+                            </htmlform>
+                                <ul className="ulNav">
+                                    <li>VIDÉOS</li>
+                                    <li>VIDÉASTES</li>
+                                </ul>
+                    </nav>
+                </div>
+            </header>
+            <h4>RÉCEMMENT PUBLIÉ</h4>
+            <div class="videoContainer">
                 {this.state.videos.map(video => (
-                    <li key={video.id_general_video}>
-                        {video.video_title} <br></br>
-                        <YouTube videoId={video.video_link} opts={opts} onReady={this._onReady} />
-                    </li>
+                    <div className="divVideoRecent" key={video.id_general_video}>
+                        <div>
+                            <p>{video.video_title} 
+                                <YouTube videoId={video.video_link} opts={opts} onReady={this._onReady} /></p><br></br>
+                        </div> 
+                    </div>
                 ))}
+            </div>  
+                <div class="imagesContainer">
+                    {this.state.discoveredVideo.map(image => (
+                        <div className="discoveredVideo" key={image.id_general_video}>
+                                <p>{image.video_title}</p>
+                                <img src={image.cover_picture} alt={image.video_title}></img>
+                        </div> 
+                    ))}
+                </div>
+            <div class="videastesContainer">
+                {this.state.videastes.map(videaste => (
+                    <div className="videastes" key={videaste.id_general_video}>
+                        <p>{videaste.lastname} {videaste.firstname}</p>
+                        <p>{videaste.location}</p>
+                        <p>(Numbers) Video</p>
+                    </div> 
+                    ))}
+            </div>
             </>
         )
     }

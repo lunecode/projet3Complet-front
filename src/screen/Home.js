@@ -6,7 +6,6 @@ class UploadPage extends Component {
     render() {
         return (
             <>
-                <p>RÉCEMMENT PUBLIÉ</p>
                 <HomeComponents />
 
             </>

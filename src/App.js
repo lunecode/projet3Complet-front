@@ -7,8 +7,9 @@ class App extends Component {
   render() {
     return (
       <>
-        <UploadPage />
         <Home />
+        <UploadPage />
+        
       </>
     )
   }
