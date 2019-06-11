@@ -7,6 +7,7 @@ import DetailledInfo from '../components/PlayVideo/DetailledInfo';
 import UserCommentGet from '../components/PlayVideo/UserCommentGet';
 import UserCommentPost from '../components/PlayVideo/UserCommentPost';
 import UserCommentPut from '../components/PlayVideo/UserCommentPut';
+import UserCommentDelete from '../components/PlayVideo/UserCommentDelete';
 import AllVideoUser from '../components/PlayVideo/AllVideoUser';
 
 
@@ -32,6 +33,7 @@ class PlayVideo extends Component {
         <p>Permet de  modifier des commentaires sous la video</p>
         <UserCommentPut />
         <p>Permet de supprimer les commentaires sous la video</p>
+        <UserCommentDelete />
         <p>Permet de reccupérer les videos de l'user dans la page "lecture video"</p>
         <AllVideoUser />
       </>
