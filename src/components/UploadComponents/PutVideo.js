@@ -2,7 +2,15 @@ import React, { Component } from 'react'
 import axios from 'axios'
 
 
-// Allow to edit the data of " general_video "  table with the ID ( test )
+
+
+// UPLOAD PAGE 1 / VIDEO AND DESCRIPTION 
+// ALLOW TO EDIT THE DATA OF "GENERAL VIDEO" TABLE WITH THE ID
+// TEST OK
+
+
+
+
 
 class PutVideo extends Component {
   state = {

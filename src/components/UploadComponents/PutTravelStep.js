@@ -2,16 +2,17 @@ import React, { Component } from 'react'
 import axios from 'axios'
 
 // UPLOAD PAGE 2 / TRAVEL STEP
-// ALLOW TO INSERT DATA IN "TRAVEL STEP" TABLE
-// TEST OK
+// ALLOW TO EDIT DATA IN "TRAVEL STEP" TABLE
+// TEST OK BUT ITS WEIRD BECAUSE I NEED TO INSERT INT INTO STEP_NUMBER AND STEP_DURATION ( its null ???)
 
 
 // REVIEW THE TRAVEL_STEP AND TRAVEL_INFORMATION TABLES AS THE TRAVEL_INFORMATION TABLE COLUMNS:
 // CURRENCY, ACCOMODATION_BUDGET, ACTIVITIES_BUDGET, TRAVEL_TYPE ARE BASED ON ITINERARY FROM THE TRAVEL_STEP TABLE
 
 
-class PostTravelStep extends Component {
+class PutTravelStep extends Component {
   state = {
+    id_travel_step: '',
     step_number: '',
     step_name: '',
     step_type: '',
@@ -55,7 +56,7 @@ changeHandler = (e) => {
 submitHandler = e => {
   e.preventDefault()
   console.log(this.state)
-  axios.post('http://localhost:3000/travel_step/insert_travelstep', this.state)
+  axios.put(`http://localhost:3000/travel_step/update_travelstep/${this.state.id_travel_step}`, this.state)
     .then(response => {
       console.log(response)
     })
@@ -66,10 +67,14 @@ submitHandler = e => {
 }
 
 render() {
-  const { step_number, step_name, step_type, step_duration, step_weather, step_transport, way_get_around, way_get_around_comment, district1, district2, district3, district_comment, accomodation1, accomodation2, accomodation3, accomodation_link1, accomodation_link2, accomodation_link3, restaurant1, restaurant2, restaurant3, bar1, bar2, bar3, must_visit1, must_visit2, must_visit3, sport_activity1, sport_activity2, sport_activity3, sport_activity_comment, crush, advice, general_video_id_general_video } = this.state
+  const { id_travel_step, step_number, step_name, step_type, step_duration, step_weather, step_transport, way_get_around, way_get_around_comment, district1, district2, district3, district_comment, accomodation1, accomodation2, accomodation3, accomodation_link1, accomodation_link2, accomodation_link3, restaurant1, restaurant2, restaurant3, bar1, bar2, bar3, must_visit1, must_visit2, must_visit3, sport_activity1, sport_activity2, sport_activity3, sport_activity_comment, crush, advice, general_video_id_general_video } = this.state
   return (
     <div>
       <form onSubmit={this.submitHandler}>
+      <div>
+          <p>Id de travel_step pour modifier les données</p>
+          <input type='number' name="id_travel_step" value={id_travel_step} onChange={this.changeHandler} />
+        </div>
       <div>
           <p>Numero de l'itinéraire</p>
           <input type='number' name="step_number" value={step_number} onChange={this.changeHandler} />
@@ -214,4 +219,4 @@ render() {
 }
 }
 
-export default PostTravelStep;
+export default PutTravelStep;

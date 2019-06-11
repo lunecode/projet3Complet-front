@@ -1,7 +1,15 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 
-// Allow to insert data in " general_video " table
+
+
+// UPLOAD PAGE 1 / VIDEO AND DESCRIPTION
+// ALLOW TO INSERT DATA IN "GENERAL_VIDEO" TABLE
+// TEST OK
+
+
+
+
 
 class PostVideo extends Component {
   state = {
@@ -36,13 +44,13 @@ render() {
   return (
     <div>
       <form onSubmit={this.submitHandler}>
-      <div>
-          <p>Lien de la vidéo</p>
-          <input type='text' name="video_link" value={video_link} onChange={this.changeHandler} />
-        </div>
         <div>
           <p>Titre ( obligatoire )</p>
           <input type='text' name="video_title" value={video_title} onChange={this.changeHandler} />
+        </div>
+      <div>
+          <p>Lien de la vidéo</p>
+          <input type='text' name="video_link" value={video_link} onChange={this.changeHandler} />
         </div>
         <div>
         <p>Description</p>

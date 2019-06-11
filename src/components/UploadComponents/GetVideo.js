@@ -3,7 +3,17 @@ import axios from 'axios';
 import Youtube from 'react-youtube';
 
 
-// Allow to display data from " general_video " table
+
+
+
+
+// UPLOAD PAGE 1 / VIDEO AND DESCRIPTION
+// ALLOW TO DISPLAY DATA FROM "GENERAL_VIDEO" TABLE
+// TEST OK
+
+
+
+
 
 class GetVideo extends Component {
   state = {
@@ -25,8 +35,8 @@ class GetVideo extends Component {
       
         {this.state.videos.map(item => (
           <li key={item.id_general_video}>
-            <Youtube videoId={item.video_link}  onReady={this._onReady} />
             <p>{item.video_title}</p>
+            <Youtube videoId={item.video_link}  onReady={this._onReady} />
             <p>{item.video_description}</p>
             <p>{item.equipment}</p>
             <img src={item.cover_picture} alt={item.video_title}></img>

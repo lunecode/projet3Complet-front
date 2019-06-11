@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
-import UploadPage from './screen/UploadPage/UploadPage';
-// import UploadTravelStep from './screen/UploadPage/UploadTravelStep';
+// import UploadVideo from './screen/UploadPage/UploadVideo';
+// import UploadInformation from './screen/UploadPage/UploadTravelInformation';
+import UploadTravelStep from './screen/UploadPage/UploadTravelStep';
 
 
 class App extends Component {
   render() {
     return (
       <>
-        <UploadPage />
-        {/* <UploadTravelStep /> */}
+        {/* <UploadVideo /> */}
+        {/* <UploadInformation /> */}
+        <UploadTravelStep />
       </>
     )
   }

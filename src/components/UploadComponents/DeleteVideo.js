@@ -2,13 +2,18 @@ import React, { Component } from 'react'
 import axios from 'axios'
 
 
-// Allow to delete the data of " general_video "  table with the ID ( test NOK)
-// Problem with the foreign key 
+// UPLOAD PAGE 1 / VIDEO AND DESCRIPTION
+// ALLOW TO DELETE DATA OF "GENERAL VIDEO" TABLE WITH THE ID (TEST OK)
+// PROBLEM WITH THE FOREIGN KEY OF PROFIL ID ==> RESOLVED BY UPDATE THE CHILD FOREIGN KEY TO DELETE WITH CASCADE
+// FK ON TABLE : ( COMMENT, TRAVEL_INFORMATION, TRAVEL_STEP)
+
+
+
+
 
 class DeleteVideo extends Component {
   state = {
-    id_general_video: '',
-    profil_id_profil: '',
+    id_general_video: ''
   }
 
 changeHandler = (e) => {
@@ -29,17 +34,13 @@ submitHandler = e => {
 }
 
 render() {
-  const { profil_id_profil, id_general_video } = this.state
+  const { id_general_video } = this.state
   return (
     <div>
       <form onSubmit={this.submitHandler}>
       <div>
           <p>Id de la vidéo</p>
           <input type='text' name="id_general_video" value={id_general_video} onChange={this.changeHandler} />
-        </div>
-        <div>
-          <p>Profil_id_profil</p>
-          <input type='text' name="profil_id_profil" value={profil_id_profil} onChange={this.changeHandler} />
         </div>
         <button type="submit">Submit</button>
       </form>

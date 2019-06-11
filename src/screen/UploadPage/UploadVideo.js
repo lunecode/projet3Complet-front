@@ -5,7 +5,7 @@ import PutVideo from '../../components/UploadComponents/PutVideo';
 import DeleteVideo from '../../components/UploadComponents/DeleteVideo';
 
 
-class UploadPage extends Component {
+class UploadVideo extends Component {
   render() {
     return (
       <>
@@ -15,14 +15,13 @@ class UploadPage extends Component {
         <PostVideo />
         <h1>Modification de données dans la table general_video</h1>
         <PutVideo />
-
        {/* Problem with the foreign key  */}
         <h1>Suppression des données de la table general_video</h1>
-        <DeleteVideo />        
+        <DeleteVideo />
       </>
     )
   }
 }
 
 
-export default UploadPage;
+export default UploadVideo;
