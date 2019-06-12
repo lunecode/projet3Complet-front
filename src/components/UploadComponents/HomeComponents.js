@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import YouTube from 'react-youtube';
 import './HomeComponents.scss'
-import Logo from '../../Images-tripitto/Logo/B&W.png';
-import Search from '../../Images-tripitto/Icons/Search-White.png';
+import Navbar from '../Navbar';
+import Footer from '../Footer';
 
 
 // Permet l'affichage des données pour un test de la table " General_video "
@@ -51,21 +51,7 @@ class Display extends Component {
 
         return (
             <>
-            <header>
-                <nav className="container_nav">
-                    <div className="divLogoTripitto">
-                        <img className="logoTripitto" src={Logo}alt="logo tripitto"></img>
-                    </div>
-                    <htmlform method="GET" action="rechercher" className="Search">
-                        <input class="inputNav" type="text" placeholder="Voyager..."></input>
-                        <img class="icone-loupe"src={Search}alt="Search"></img>
-                    </htmlform>
-                    <ul className="ulNav">
-                        <li>VIDÉOS</li>
-                        <li>VIDÉASTES</li>
-                    </ul>
-                </nav>
-            </header>
+            <Navbar />
             <h4>RÉCEMMENT PUBLIÉ</h4>
             <div class="videoContainer">
                 {this.state.videos.map(video => (
@@ -94,6 +80,7 @@ class Display extends Component {
                     </div> 
                     ))}
             </div>
+            <Footer />
             </>
         )
     }

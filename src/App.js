@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import UploadPage from './screen/UploadPage';
+// import UploadPage from './screen/UploadPage';
 import Home from './screen/Home';
 
 
@@ -8,7 +8,7 @@ class App extends Component {
     return (
       <>
         <Home />
-        <UploadPage />
+        {/* <UploadPage /> */}
         
       </>
     )
