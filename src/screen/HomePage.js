@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import Getdestination from '../components/HomeComponents/Getdestination';
-import Getplan from '../components/HomeComponents/Getplan';
+// import Getdestination from '../components/HomeComponents/Getdestination';
 
+import Getnexdestination from '../components/HomeComponents/Getnextdestination';
+import Getplan from '../components/HomeComponents/Getplan';
 
 
 
@@ -10,7 +11,8 @@ class HomePage extends Component {
       return (
         <>
           <p>Affichage des videos selon la destination </p>
-          <Getdestination />
+          {/* <Getdestination /> */}
+          <Getnexdestination />
           <Getplan />
 
 
