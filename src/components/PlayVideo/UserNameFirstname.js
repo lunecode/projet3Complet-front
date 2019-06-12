@@ -24,11 +24,11 @@ render() {
     
     return (
     <>
-        {this.state.name.map(item => (
+        {/* {this.state.name.map(item => (
         <div className="container_name" key={item.id_profil}>
             <p className="username">{item.lastname} {item.firstname}</p>
         </div>
-        ))}
+        ))} */}
     </>
     )
     }

@@ -6,7 +6,9 @@
 .container_video{
     margin-bottom: 1%;
     font-family: 'Roboto', sans-serif;
+   
    /* font-family: 'Lora', serif; */
+  
    
 }
 
@@ -15,6 +17,7 @@
     font-family: 'Roboto', sans-serif;
     color: #2C404D;
     font-weight: bold;
+    margin-top: 3%;
     
 }
 
@@ -25,10 +28,10 @@
 
 }
 
-.container_video img{
+/* .container_video img{
     width:60px;
     
-}
+} */
 
 .video_info{
     margin-top: 1%;
@@ -45,9 +48,7 @@
 .status{
     color:#f4b642;
     font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    
-    
+    font-size: 14px;  
 }
 
 .text{
@@ -58,5 +59,35 @@
 .pictureUser{
     float: right;
     border-radius: 50%;
+    width: 85px;
+    margin-right: 2%;
+   
+
 }
 
+/* .video_info img{
+    width: 52px;
+
+} */
+.play, .share{
+    width:25px;
+    
+}
+
+.likeComment{
+    float: right;
+    margin: 2%;
+}
+
+
+
+.nameUser{
+    float: right;
+    padding-top: 4%;
+}
+
+.userVideo{
+    
+    width:90%;
+    margin-left: 9%;
+}

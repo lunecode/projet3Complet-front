@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import './Video.css';
 import YouTube from 'react-youtube';
+import NumberTips from '../../Images-tripitto/IconVideo/Infosnbr.png';
+import Play from '../../Images-tripitto/Icon/Play.png';
+import Love from '../../Images-tripitto/Icon/Love.png';
+import Comment from '../../Images-tripitto/Icon/Comment.png';
+import Add from '../../Images-tripitto/Icons/Add-collection.png';
+import Share from '../../Images-tripitto/Icon/Share.png';
+
+
 
 
 // Permet l'affichage des données pour un test de la table " General_video "
@@ -17,8 +25,15 @@ class Video extends Component {
     console.log(this.state.videos)
   }
 
+  getPopularity = async () => {
+    const res = await axios.get('http://localhost:3000/popularity/get_popularity_liked_general_video')
+    this.setState({ videos: res.data })
+    console.log(this.state.videos)
+  }
+
   componentDidMount() {
     this.getVideo()
+    this.getPopularity()
   }
 
 render() {
@@ -37,16 +52,36 @@ render() {
           <div className="video_user">
             <YouTube  videoId={item.video_link} opts={opts} onReady={this._onReady}/>
           </div>
+          
           <div className="video_info">
-            <p className="title_video">{item.video_title}</p> 
-            <p><span className="loading">Ajouté le {item.loading_time} -</span><span className="status"><i>{item.video_status}</i> </span> </p>
+            <div className="title_video">{item.video_title} <span><img className="play" src={Play} alt="play"/>{item.nb_views}</span><span className="number_tips"><img className="numberTips" src={NumberTips} alt="number tips"/>{item.number_tips}</span>
+            </div>
+            
+            <div className="likeComment">
+              <span><img src={Love} alt= "love"/>     {item.nb_like_popularity}</span> 
+              <span> <img src={Comment} alt="comment"/>{item.nb_comment_popularity}</span><span> <img className="share" src={Add} alt="share"/> {item.nb_playlist_included}</span> <span> <img src={Share} alt="Share"/>{item.nb_share}
+               </span>
+             </div>
+             <div className="test" >
+            <p><span className="loading">Ajouté le {item.loading_time} -</span><span className="status"><i>{item.video_status}</i></span> </p>
             <p className="text">{item.video_description}</p>
-            <p><img className="pictureUser" src={item.cover_picture} alt="equipment_picture"></img><a href="{item.link_equipment}>" target="_blank">Go Pro Hero 6</a></p>
+            <p><a href="{item.link_equipment}>" target="_blank">Go Pro Hero 6</a></p>
+            <div className="userVideo">
+              <div className="nameUser">
+              <span className="username">{item.lastname} {item.firstname}</span>
+              </div>
+              <div className="pictureUser">
+              <span><img className="pictureUser" src={item.cover_picture} alt="equipment_picture"></img></span>
+              </div>
+            </div>
+            </div>
+            
             {/* <a>{item.equipment}</a> */}
             
             {/* <a>{item.video_link}</a> */}
           </div>
         </div>
+       
         </div>
         ))}
     </>

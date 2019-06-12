@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import './PopularityVideo.css';
 import axios from 'axios'
+// import Love from '../../Images-tripitto/Icon/Love.png';
+// import Comment from '../../Images-tripitto/Icon/Comment.png';
+// import Add from '../../Images-tripitto/Icons/Add-collection.png';
+// import Share from '../../Images-tripitto/Icon/Share.png';
+
 
 
 
@@ -24,14 +29,16 @@ render() {
     
     return (
     <>
-        {this.state.popularity.map(item => (
+        {/* {this.state.popularity.map(item => (
         <div className="popularity">
             <div key={item.id_popularity}>
-                <div className="view"><span>Number views => {item.nb_views}</span><span>Number of like =>{item.nb_like_popularity}</span> <span>Number of comment popularity =>  {item.nb_comment_popularity}</span> <span>Number of share => {item.nb_share} </span><span>Number of video in the playlist =>{item.nb_playlist_included}</span>
+                <div className="view">                                    
+                    <span><img src={Love} alt= "love"/>     {item.nb_like_popularity}</span> 
+                    <span> <img src={Comment} alt="comment"/>{item.nb_comment_popularity}</span> <span><img src={Comment} alt="Comment"/> <img src={Share} alt="Share"/>{item.nb_share} </span><span><img className="share" src={Add} alt="share"/>{item.nb_playlist_included}</span>
                 </div> 
             </div>
         </div>
-        ))}
+        ))} */}
     </>
     )
     }

@@ -18,3 +18,11 @@
     background-color: white;
     color: #313F4F;
 }
+
+.border{
+    border-bottom:2px solid #313F4F;
+}
+
+.weather, .step{
+    padding-bottom: 2%;
+}
