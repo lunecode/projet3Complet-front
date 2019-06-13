@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    src: url(../fonts/Roboto/Roboto-Thin.ttf);
+}
+
+/* .wrapper {
+    display: grid;
+    grid-template-columns: 6fr 6fr 6fr;
+    grid-auto-rows: 6vw;
+    flex-wrap: wrap;
+} */
+
+
+.container_nextdestination_title {
+    align-items: center;
+    background-color: #2C404D;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    color: white;
+    width: 100%;
+    font-family: 'Roboto';
+
+}
+
+h2 {
+
+ font-size: 2vh;
+ margin-left: 3.5vw;
+
+}

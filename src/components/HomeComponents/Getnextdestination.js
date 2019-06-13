@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import YouTube from 'react-youtube';
+import './Getnextdestination.css'
 
 
 class Getnextdestination extends Component {
@@ -28,11 +29,14 @@ class Getnextdestination extends Component {
             }
         }
         
-
-
         return (
             <>
-            <h4>PROJETTEZ VOUS DANS VOTRE PROCHAINE DESTINATION</h4>
+            <div className="wrapper">
+                <div className='container_nextdestination_title'>
+                    <h2>PROJETEZ-VOUS DANS VOTRE PROCHAINE DESTINATION</h2>
+                </div>   
+            </div>
+            
             <div class="section_nextdestination_video">
                 {this.state.nextvideo.map(nextvideo => (
                     <div className="divVideoNext" key={nextvideo.id_general_video}>
@@ -45,7 +49,8 @@ class Getnextdestination extends Component {
                         </div> 
                     </div>
                 ))}
-            </div>  
+                </div>  
+            
             </>
         )
     }
