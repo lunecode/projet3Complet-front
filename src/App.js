@@ -4,7 +4,7 @@ import UploadVideo from './screen/UploadPage/UploadVideo';
 // import UploadInformation from './screen/UploadPage/UploadTravelInformation';
 // import UploadTravelStep from './screen/UploadPage/UploadTravelStep';
 // import UploadPage from './screen/UploadPage';
-import Home from './screen/Home';
+// import Home from './screen/Home';
 
 
 class App extends Component {
@@ -15,7 +15,7 @@ class App extends Component {
         <UploadVideo />
         {/* <UploadInformation /> */}
         {/* <UploadTravelStep /> */}
-        <Home />
+        {/* <Home /> */}
         {/* <UploadPage /> */}
         
       </>

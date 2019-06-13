@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 
 import './PostVideo.css'
+import UploadIcon from '../../Images-tripitto/Icon/Upload-Video.png'
 
 
 
@@ -53,26 +54,30 @@ class PostVideo extends Component {
             </div>
 
             <div className="upload-link">
+              <img className="uploadIcon" src={UploadIcon} alt="upload icon"></img>
               <p>Lien de la vidéo</p>
-              <input type='text' name="video_link" value={video_link} onChange={this.changeHandler} />
+              <input className="input-upload" type='text' name="video_link" value={video_link} onChange={this.changeHandler} />
             </div>
 
             <div className="title">
               <p>Titre*</p>
-              <input className="input-title" type='text' name="video_title" value={video_title} onChange={this.changeHandler} />
+              <input className="input-title" placeholder="Escapade romantique dans la ville des lumières" type='text' name="video_title" value={video_title} onChange={this.changeHandler} />
             </div>
 
             <div className="description">
               <p>Description</p>
-              <input className="input-description" type='text' name="video_description" value={video_description} onChange={this.changeHandler} />
-            </div>
+              <textarea className="input-description" placeholder="Une description qui donne envie, très envie" value={video_description} onChange={this.changeHandler} name="video_description"
+                rows="8" cols="108">
 
+              </textarea>
+              {/* <input className="input-description" placeholder="Une description qui donne envie, très envie" type='text' name="video_description" value={video_description} onChange={this.changeHandler} /> */}
+            </div>
 
             <div className="title-equipment1">
               <p>Equipement utilisés pour filmer</p>
             </div>
             <div className="equipment1">
-              <input className="input-equipment" type='text' name="equipment" value={equipment} onChange={this.changeHandler} />
+              <input className="input-equipment" placeholder="DJI Mavic Pro" type='text' name="equipment" value={equipment} onChange={this.changeHandler} />
             </div>
             <div className="title-link1">
               <p>Ajouter un lien web</p>
@@ -87,7 +92,7 @@ class PostVideo extends Component {
             <div className="title-equipment2">
             </div>
             <div className="equipment2">
-              <input className="input-equipment2" type='text' name="equipment2" value={equipment2} onChange={this.changeHandler} />
+              <input className="input-equipment2" placeholder="Sony Alpha 7" type='text' name="equipment2" value={equipment2} onChange={this.changeHandler} />
             </div>
             <div className="title-link2">
               <p>Ajouter un lien web</p>
@@ -101,7 +106,7 @@ class PostVideo extends Component {
 
             </div>
             <div className="equipment3">
-              <input className="input-equipment3" type='text' name="equipment3" value={equipment3} onChange={this.changeHandler} />
+              <input className="input-equipment3" placeholder="IPhone X" type='text' name="equipment3" value={equipment3} onChange={this.changeHandler} />
             </div>
             <div className="title-link3">
               <p>Ajouter un lien web</p>
@@ -121,8 +126,9 @@ class PostVideo extends Component {
               <p>Profil_id ( obligatoire )</p>
               <input type="text" name="profil_id_profil" value={profil_id_profil} onChange={this.changeHandler} />
             </div>
-
-            <button className="submit" type="submit">Submit</button>
+            <div className="submit-div">
+              <button className="submit" type="submit">Submit</button>
+            </div>
 
           </div>
         </form>

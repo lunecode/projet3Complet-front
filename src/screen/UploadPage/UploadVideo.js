@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import PostVideo from '../../components/uploadComponents/PostVideo';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
 // import GetVideo from '../../components/uploadComponents/GetVideo';
 // import PutVideo from '../../components/uploadComponents/PutVideo';
 // import DeleteVideo from '../../components/uploadComponents/DeleteVideo';
@@ -17,7 +19,9 @@ class UploadVideo extends Component {
         <GetVideo /> */}
 
         {/* <h1>Insertion de données dans la table general_video</h1> */}
+        <Navbar />
         <PostVideo />
+        <Footer />
 
         {/* <h1>Modification de données dans la table general_video</h1>
         <PutVideo /> */}

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import HomeComponents from '../components/UploadComponents/HomeComponents';
+import HomeComponents from '../components/homeComponents/HomeComponents';
 
 
 class UploadPage extends Component {
@@ -7,7 +7,6 @@ class UploadPage extends Component {
         return (
             <>
                 <HomeComponents />
-
             </>
         )
     }
