@@ -33,6 +33,8 @@ class GetProfilInfo extends Component {
           
         </li>
         ))}
+
+
       </>
     )
   }

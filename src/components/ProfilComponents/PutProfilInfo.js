@@ -44,7 +44,7 @@ submitHandler = e => {
 }
 
   render() {
-    const { id_profil,profil_link,lastname,firstname,email,identity,password,password_forget,type,position,inscription_date,inscription_type, profile_picture,nb_countries_visited,birth_date,location,pseudo} = this.state
+    const { id_profil,profil_link,lastname,firstname,email,password,password_forget,type,position,inscription_date,inscription_type, profile_picture,nb_countries_visited,birth_date,location,pseudo} = this.state
     return (
       <div>
         <form onSubmit={this.submitHandler}>
