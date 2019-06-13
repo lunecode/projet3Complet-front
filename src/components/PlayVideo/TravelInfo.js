@@ -28,7 +28,7 @@ render() {
                 <div className="travel">
                     <p className="countryName">{item.countries} <span className="month">{item.departure_month}</span> <span className="month">{item.departure_year} - </span><span className="duration">{item.travel_duration} jours</span></p>
                     {/* <li>{item.nb_step}</li> */}
-                    <p className="accomodation">  <span>{item.travel_type}</span> | <span> Logement       {item.accomodation_budget}</span>  <span>{item.currency}</span>  <span>Repas et activités {item.activities_budget}</span>  <span>{item.currency}</span> <span className="budget">(Budget par jour et par personne)</span></p>
+                    <p className="accomodation">  <span>{item.travel_type}</span> | <span> Logement {item.accomodation_budget}</span>  <span>{item.currency}</span>  <span>Repas et activités {item.activities_budget}</span>  <span>{item.currency}</span> <span className="budget">(Budget par jour et par personne)</span></p>
                 </div>
             </div>
         ))}

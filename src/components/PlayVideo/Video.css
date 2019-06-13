@@ -57,14 +57,19 @@
 }
 
 .pictureUser{
-    float: right;
-    border-radius: 50%;
-    width: 85px;
-    margin-right: 2%;
-   
 
+    border-radius: 50%;
+    
+    display: flex;
+    justify-content: flex-end;
+  
+    
+    
 }
 
+.pictureUser img{
+    width:60px;
+}
 /* .video_info img{
     width: 52px;
 
@@ -76,18 +81,14 @@
 
 .likeComment{
     float: right;
-    margin: 2%;
+    
 }
-
-
 
 .nameUser{
     float: right;
     padding-top: 4%;
-}
-
-.userVideo{
+    display: flex;
+    padding-left: 2%;
     
-    width:90%;
-    margin-left: 9%;
+
 }
