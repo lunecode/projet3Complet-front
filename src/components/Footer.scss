@@ -51,7 +51,7 @@ $colorBorder: #1BA2A2;
 
 .allRightsReserved {
     display: grid;
-    grid-template-columns: 80% 5% 15%;
+    grid-template-columns: 24% 2% 50% 19% 3% 2%;
     grid-template-rows: 50px;
     grid-auto-flow: row;
     background-color: $colorbackground; 
@@ -59,7 +59,15 @@ $colorBorder: #1BA2A2;
     border-block-end: solid #3e5b6e;
     padding-left: 1%;
 
-    .love {
-        
+    .love  {
+        margin-top: 17px;
     }
+}
+
+.item-e-allRightsReserved {
+    margin-top: 15px;
+}
+
+.item-f-allRightsReserved {
+    margin-top: 15px;
 }

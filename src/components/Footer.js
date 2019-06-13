@@ -6,8 +6,27 @@ import WhatToDo from '../Images-tripitto/Icon/Footer/WhatToDo.png';
 import Advice from '../Images-tripitto/Icon/Footer/Conseils.png';
 import CommunityRules from '../Images-tripitto/Icon/Footer/Reglement.png';
 import Love from '../Images-tripitto/Icon/Footer/Love.png';
+import langFR from '../Images-tripitto/Icons/Drapeau-FR.png';
+import langEN from '../Images-tripitto/Icons/Drapeau-EN.png';
+import Path from '../Images-tripitto/Icon/Footer/Path2.png';
+
 
 class Footer extends Component {
+    state = {
+        lang: false,
+        flag: langFR,
+    };
+
+selectLanguage = () => {
+    const data = this.state.lang;
+    this.setState({ lang: !this.state.lang });
+        if (data === true) {
+            this.setState({flag: langFR})
+        }else {
+            this.setState({flag: langEN})
+        }
+    }
+
     render () {
         return (
         <>
@@ -70,13 +89,19 @@ class Footer extends Component {
         </div>
         <div class="item-c-allRightsReserved">
             <p>
-
+                à Paris,FR
             </p>
         </div>
         <div class="item-d-allRightsReserved">
             <p>
-
+                Contact/Confidentialité/Conditions
             </p>
+        </div>
+        <div class="item-e-allRightsReserved">
+            <img onClick={this.selectLanguage}src={this.state.flag} alt="flag"></img>
+        </div>
+        <div class="item-f-allRightsReserved">
+            <img onClick={this.selectLanguage}src={Path} alt="f"></img>
         </div>
     </section>
 </footer>        
