@@ -1,15 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet');
-
-@import url('https://fonts.googleapis.com/css?family=Lora|Roboto&display=swap" rel="stylesheet');
-
+@font-face {
+    font-family: "Roboto";
+    src: url("../../fonts/roboto/Roboto-Medium.ttf");
+    font-weight: normal;
+    font-style: normal;
+       
+   }
 
 .container_video{
     margin-bottom: 1%;
     font-family: 'Roboto', sans-serif;
-   
    /* font-family: 'Lora', serif; */
-  
-   
+
 }
 
 .title_video {
@@ -89,6 +90,9 @@
     padding-top: 4%;
     display: flex;
     padding-left: 2%;
-    
 
+}
+
+.username{
+    margin-top:2%;
 }

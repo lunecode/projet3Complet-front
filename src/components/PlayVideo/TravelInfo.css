@@ -1,13 +1,23 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("../../fonts/roboto/Roboto-Medium.ttf");
+    font-weight: normal;
+    font-style: normal;
+       
+   }
+
 .container_travel{
     margin-top: 3%;
     background-color:#313F4F;
     width: 75%;
     padding-top: 1%;
+    font-family: 'Roboto', sans-serif;
 }
 
 .travel{
     width:90%;
     margin: 0 auto;
+    padding-bottom: 5%;
 }
 
 .countryName{

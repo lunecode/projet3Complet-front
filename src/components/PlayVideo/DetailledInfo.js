@@ -30,7 +30,7 @@ render() {
         <div className="container_info" key={item.id_travel_step}>
             <div className="container_detailled">
                 <div className="container_trip">
-                    <span className="border"><img className="weather" src={Weather} alt="weather"/> <img src={Village} alt="village"/> 
+                    <span className="border"><img className="weather" src="../../Images-tripitto/Icon/etape/meteo/nuagegris.png" alt="weather"/> <img src={Village} alt="village"/> 
                     <span className="step">{item.step_number}</span>{item.step_weather} <li>{item.step_name}</li></span>
                     <li>{item.video_travel_step}</li>
                     <li>{item.step_name}</li>

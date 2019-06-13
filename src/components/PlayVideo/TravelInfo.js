@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import './TravelInfo.css';
+import Alone from '../../Images-tripitto/Icon/Aventurier/seulwhite.png';
+import House from '../../Images-tripitto/Icon/Logement.png';
+import Mug from '../../Images-tripitto/Icon/repas.png';
 
 
 
@@ -28,7 +31,7 @@ render() {
                 <div className="travel">
                     <p className="countryName">{item.countries} <span className="month">{item.departure_month}</span> <span className="month">{item.departure_year} - </span><span className="duration">{item.travel_duration} jours</span></p>
                     {/* <li>{item.nb_step}</li> */}
-                    <p className="accomodation">  <span>{item.travel_type}</span> | <span> Logement {item.accomodation_budget}</span>  <span>{item.currency}</span>  <span>Repas et activités {item.activities_budget}</span>  <span>{item.currency}</span> <span className="budget">(Budget par jour et par personne)</span></p>
+                    <span className="accomodation"> <img className="alone" src={Alone} alt= "seul"/>   <span>{item.travel_type}</span> | <img className="house" src={House} alt= "house"/><span> Logement {item.accomodation_budget}</span>  <span>{item.currency}</span>  <img className="mug" src={Mug} alt= "mug"/><span>Repas et activités {item.activities_budget}</span>  <span>{item.currency}</span> <span className="budget">(Budget par jour et par personne)</span></span>
                 </div>
             </div>
         ))}

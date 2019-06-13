@@ -9,6 +9,8 @@ import UserCommentPost from '../components/PlayVideo/UserCommentPost';
 import UserCommentPut from '../components/PlayVideo/UserCommentPut';
 import UserCommentDelete from '../components/PlayVideo/UserCommentDelete';
 import AllVideoUser from '../components/PlayVideo/AllVideoUser';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 
 
@@ -16,6 +18,7 @@ class PlayVideo extends Component {
   render() {
     return (
       <>
+        <Navbar/>
         {/* <p>Affichage des informations de la video : </p> */}
         <Video  />
         {/* <p>Affichage des informations concernant la popularité de la vidéo</p> */}
@@ -36,6 +39,7 @@ class PlayVideo extends Component {
         <UserCommentDelete />
         {/* <p>Permet de reccupérer les videos de l'user dans la page "lecture video"</p> */}
         <AllVideoUser />
+        <Footer/>
       </>
     )
   }
