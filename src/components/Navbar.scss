@@ -1,0 +1,83 @@
+.container_nav {
+    align-items: center;
+    background-color: #2C404D;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    width: 100%;
+    border-block-end: solid #1BA2A2;
+
+    .containerNavLeft {
+        align-items: center;
+        display: flex;
+        width: 55%;
+        
+        .divLogoTripitto  {
+            width: 20%;
+            text-align: center;
+        }
+        
+        htmlform {
+            position: relative;
+            width: 30%;
+                
+            .inputNav {
+                background-color: #2C404D;
+                border: solid #1BA2A2;
+                color: white;
+                height: 30px;
+                position: relative;
+                width: 100%;
+                padding-left: 5%;
+                font-size: 12px;
+            }
+            
+            .icone-loupe {
+                position: absolute;
+                height: 20px;
+                right: 20px;
+                top: 10px;
+            }
+        }
+    
+        .ulNav {
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            width: 30%;
+        }
+    }
+    
+
+        .containerNavRight {
+            position: relative;
+            width: 20%;
+            padding-right: 2%;
+            
+            ul {
+                align-items: center;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-around;
+                list-style: none;
+            }
+            
+            .logoAvatar {
+                border-radius: 50%;
+                height: 33px;
+            }
+
+            .notification {
+                height: 20px;
+                
+            }
+            .buttonNavbar {
+                background-color: #1BA2A2;
+                color: white;
+                font-size: 16px;
+                padding: 8px 25px;
+                border: none;
+            }
+        }
+    }

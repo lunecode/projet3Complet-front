@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import UploadPage from './screen/UploadPage';
 import HomePage from './screen/HomePage';
+// import UploadPage from './screen/UploadPage';
+import Home from './screen/Home';
 
 
 class App extends Component {
@@ -10,6 +12,9 @@ class App extends Component {
         <HomePage />
         <UploadPage />
   
+        <Home />
+        {/* <UploadPage /> */}
+        
       </>
     )
   }
