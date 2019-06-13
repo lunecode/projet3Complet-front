@@ -16,7 +16,7 @@ class UploadVideo extends Component {
         {/* <h1>Affichage de la table general_video :</h1>
         <GetVideo /> */}
 
-        <h1>Insertion de données dans la table general_video</h1>
+        {/* <h1>Insertion de données dans la table general_video</h1> */}
         <PostVideo />
 
         {/* <h1>Modification de données dans la table general_video</h1>

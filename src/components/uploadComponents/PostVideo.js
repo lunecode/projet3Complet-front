@@ -48,48 +48,82 @@ class PostVideo extends Component {
       <div>
         <form onSubmit={this.submitHandler}>
           <div className='grid'>
+
             <div className="empty">
+            </div>
+
+            <div className="upload-link">
+              <p>Lien de la vidéo</p>
+              <input type='text' name="video_link" value={video_link} onChange={this.changeHandler} />
+            </div>
+
+            <div className="title">
+              <p>Titre*</p>
+              <input className="input-title" type='text' name="video_title" value={video_title} onChange={this.changeHandler} />
+            </div>
+
+            <div className="description">
+              <p>Description</p>
+              <input className="input-description" type='text' name="video_description" value={video_description} onChange={this.changeHandler} />
+            </div>
+
+
+            <div className="title-equipment1">
+              <p>Equipement utilisés pour filmer</p>
+            </div>
+            <div className="equipment1">
+              <input className="input-equipment" type='text' name="equipment" value={equipment} onChange={this.changeHandler} />
+            </div>
+            <div className="title-link1">
+              <p>Ajouter un lien web</p>
+            </div>
+            <div className="link1">
+              <input className="input-link" type='text' name="link_equipment" value={link_equipment} onChange={this.changeHandler} />
+            </div>
+
+
+
+
+            <div className="title-equipment2">
+            </div>
+            <div className="equipment2">
+              <input className="input-equipment2" type='text' name="equipment2" value={equipment2} onChange={this.changeHandler} />
+            </div>
+            <div className="title-link2">
+              <p>Ajouter un lien web</p>
+            </div>
+            <div className="link2">
+              <input className="input-link2" type='text' name="link_equipment2" value={link_equipment2} onChange={this.changeHandler} />
+            </div>
+
+
+            <div className="title-equipment3">
 
             </div>
-          <div className="one">
-            <p>Lien de la vidéo</p>
-            <input type='text' name="video_link" value={video_link} onChange={this.changeHandler} />
-          </div>
-          <div className="two">
-            <p>Titre ( obligatoire )</p>
-            <input className="input-title" type='text' name="video_title" value={video_title} onChange={this.changeHandler} />
-          </div>
-          <div className="three">
-            <p>Description</p>
-            <input className="input-description" type='text' name="video_description" value={video_description} onChange={this.changeHandler} />
-          </div>
-          <div className="four">
-            <p>Equipement</p>
-            <input className="input-equipment"   type='text' name="equipment" value={equipment} onChange={this.changeHandler} />
-            <p>lien web de l'équipement</p>
-            <input className="input-link" type='text' name="link_equipment" value={link_equipment} onChange={this.changeHandler} />
-          </div>
-          <div className="five">
-            <p>Equipement2</p>
-            <input className="input-equipment2" type='text' name="equipment2" value={equipment2} onChange={this.changeHandler} />
-            <p>lien web de l'équipement2</p>
-            <input className="input-link2" type='text' name="link_equipment2" value={link_equipment2} onChange={this.changeHandler} />
-          </div>
-          <div className="six">
-            <p>Equipemen3</p>
-            <input className="input-equipment3" type='text' name="equipment3" value={equipment3} onChange={this.changeHandler} />
-            <p>lien web de l'équipement3</p>
-            <input className="input-link3" type='text' name="link_equipment3" value={link_equipment3} onChange={this.changeHandler} />
-          </div>
-          <div className="seven">
-            <p>Photo de couverture</p>
-            <input type='text' name="cover_picture" value={cover_picture} onChange={this.changeHandler} />
-          </div>
-          <div className="temp">
-            <p>Profil_id ( obligatoire )</p>
-            <input type="text" name="profil_id_profil" value={profil_id_profil} onChange={this.changeHandler} />
-          </div>
-          <button className="nine" type="submit">Submit</button>
+            <div className="equipment3">
+              <input className="input-equipment3" type='text' name="equipment3" value={equipment3} onChange={this.changeHandler} />
+            </div>
+            <div className="title-link3">
+              <p>Ajouter un lien web</p>
+            </div>
+            <div className="link3">
+              <input className="input-link3" type='text' name="link_equipment3" value={link_equipment3} onChange={this.changeHandler} />
+            </div>
+
+
+
+            <div className="cover-picture">
+              <p>Photo de couverture</p>
+              <input type='text' name="cover_picture" value={cover_picture} onChange={this.changeHandler} />
+            </div>
+
+            <div className="temp">
+              <p>Profil_id ( obligatoire )</p>
+              <input type="text" name="profil_id_profil" value={profil_id_profil} onChange={this.changeHandler} />
+            </div>
+
+            <button className="submit" type="submit">Submit</button>
+
           </div>
         </form>
       </div>
