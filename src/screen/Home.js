@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
-import HomeComponents from '../components/UploadComponents/HomeComponents';
+import HomeComponents from '../components/HomeComponents/HomeComponentsPart3';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 
-class UploadPage extends Component {
+class Home extends Component {
     render() {
         return (
             <>
+                <Navbar />
                 <HomeComponents />
-
+                <Footer />
             </>
         )
     }
 }
 
-export default UploadPage;
+export default Home;

@@ -27,6 +27,10 @@ $colorBorder: #1BA2A2;
         font-size: 12px;
     }
 
+    .item-b a:hover,.item-c a:hover {
+        opacity: 0.3;
+    }
+
     .item-b img, .item-c img {
         width: 20%
     }
@@ -70,4 +74,8 @@ $colorBorder: #1BA2A2;
 
 .item-f-allRightsReserved {
     margin-top: 15px;
+}
+
+.item-d .button-footer:hover {
+    opacity: 0.6;
 }

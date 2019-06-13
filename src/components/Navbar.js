@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom';
+
 import './Navbar.scss'
 import Logo from '../Images-tripitto/Logo/B&W.png';
 import Search from '../Images-tripitto/Icons/Search-White.png';
@@ -13,19 +15,19 @@ class Navbar extends Component {
                     <nav className="container_nav">
                         <div className="containerNavLeft">
                             <div className="divLogoTripitto">
-                                <img className="logoTripitto" src={Logo}alt="logo tripitto"></img>
+                            <NavLink exact to="/"><img className="logoTripitto" src={Logo}alt="logo tripitto"></img></NavLink>
                             </div>
                             <htmlform method="GET" action="rechercher" className="Search">
                                 <input class="inputNav" type="text" placeholder="Voyager..."></input>
                                 <img class="icone-loupe"src={Search}alt="Search"></img>
                             </htmlform>
                             <ul className="ulNav">
-                                <li>VIDÉOS</li>
-                                <li>VIDÉASTES</li>
+                                <li><NavLink>VIDÉOS</NavLink></li>
+                                <li><NavLink>VIDÉASTES</NavLink></li>
                             </ul>
                         </div>
                         <div className="containerNavRight">
-                            <ul>
+                            <ul className="Ulbutton">
                                 <li><img className="logoAvatar" src={Avatar}  alt="logo tripitto"></img></li>
                                 <li><img className="notification" src={Notification}alt="logo notification"></img></li>
                                 <li><button className="buttonNavbar">PUBLIER</button></li>

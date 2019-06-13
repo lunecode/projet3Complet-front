@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import PostVideo from '../components/UploadComponents/PostVideo';
-import Display from '../components/UploadComponents/Display';
+import PostVideo from '../components/HomeComponents/PostVideo';
+import Display from '../components/HomeComponents/Display';
 
 
 class UploadPage extends Component {
