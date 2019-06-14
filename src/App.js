@@ -4,7 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import PlayVideo from './screen/PlayVideo';
 
 // import UploadPage from './screen/UploadPage';
-import Home from './screen/Home';
+// import Home from './screen/Home';
 
 
 class App extends Component {
@@ -13,11 +13,14 @@ class App extends Component {
       <>
         {/* <UploadPage /> */}
         <PlayVideo />
-        <Home />
-        {/* <UploadPage /> */}
         <Switch>
-          <Route exact path="/" component={Home} />
+        <Route exact path="/" component={PlayVideo}/>
         </Switch>
+        {/* <Home /> */}
+        {/* <UploadPage /> */}
+        {/* <Switch>
+          <Route exact path="/" component={Home} />
+        </Switch> */}
       </>
     )
   }

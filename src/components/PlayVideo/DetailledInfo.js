@@ -38,11 +38,14 @@ render() {
                     <li>{item.step_type}</li>
                     <li>{item.step_duration}</li>
                     <p>Se déplacer en {item.step_transport} <img src={Moto} alt="village"/> <span className="location">Louez avant votre arrivée sur le site des compagnies internationales.</span> </p>
-                    <li>{item.way_get_around}</li>
-                    <li>{item.way_get_around_comment}</li>
-                    <li>{item.district1}</li>
-                    <li>{item.district2}</li>
-                    <li>{item.district3}</li>
+                    <p>Plutôt habiter vers Mayan  ou Taynan </p>
+                    <p><span className="district1">{item.district1}</span> |
+                    <span className="district">{item.district2}</span> |
+                    <span className="district"> {item.district3}</span>
+                    </p> 
+                    {/* <li>{item.way_get_around}</li>
+                    <li>{item.way_get_around_comment}</li> */}
+                    
                     <li>{item.district_comment}</li>
                     <li>{item.accomodation1}</li>
                     <li>{item.accomodation2}</li>

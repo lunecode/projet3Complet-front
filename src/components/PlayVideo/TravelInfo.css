@@ -40,6 +40,16 @@
 
 .accomodation{
     color: white;
+
+}
+
+.travelAlone, .currency{
+    margin-right: 3%;
+}
+
+.house, .mug{
+    margin-left: 3%;
+
 }
 
 .budget{
