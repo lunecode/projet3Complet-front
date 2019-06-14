@@ -1,0 +1,98 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("../../fonts/roboto/Roboto-Medium.ttf");
+    font-weight: normal;
+    font-style: normal;
+       
+   }
+
+.container_video{
+    margin-bottom: 1%;
+    font-family: 'Roboto', sans-serif;
+   /* font-family: 'Lora', serif; */
+
+}
+
+.title_video {
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    color: #2C404D;
+    font-weight: bold;
+    margin-top: 3%;
+    
+}
+
+.video_user {
+    text-align: center;
+    margin: 0 auto;
+    background-color: #232323;
+
+}
+
+/* .container_video img{
+    width:60px;
+    
+} */
+
+.video_info{
+    margin-top: 1%;
+    width: 90%;
+    margin: 0 auto;
+    font-family: 'Lora', serif;
+}
+
+.loading{
+    font-size: 12px;
+    color: gray;
+}
+
+.status{
+    color:#f4b642;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;  
+}
+
+.text{
+    font-size: 13px;
+    color: #6D7783;
+}
+
+.pictureUser{
+
+    border-radius: 50%;
+    
+    display: flex;
+    justify-content: flex-end;
+  
+    
+    
+}
+
+.pictureUser img{
+    width:60px;
+}
+/* .video_info img{
+    width: 52px;
+
+} */
+.play, .share{
+    width:25px;
+    
+}
+
+.likeComment{
+    float: right;
+    
+}
+
+.nameUser{
+    float: right;
+    padding-top: 4%;
+    display: flex;
+    padding-left: 2%;
+
+}
+
+.username{
+    margin-top:2%;
+}

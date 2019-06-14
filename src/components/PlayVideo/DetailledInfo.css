@@ -1,0 +1,51 @@
+.container_info{
+    /* margin-top: 3%; */
+    background-color:#313F4F;
+    width: 75%;
+    box-shadow: 5px 5px 5px lightgray;
+    
+    /* padding-top: 1%; */
+}
+
+.container_detailled{
+    width:90%;
+    margin: 0 auto;
+    
+}
+
+.container_trip{
+    width: 90%;
+    background-color: white;
+    color: #313F4F;
+    padding: 5%;
+    font-size:19px;
+}
+
+.border{
+    border-bottom:2px solid #313F4F;
+}
+
+.weather, .step{
+    padding-bottom: 2%;
+}
+
+.location{
+    font-size: 13px;
+    font-style: italic;
+    color: gray;
+}
+
+.district{
+    margin-left: 4%;
+    margin-right: 4%;
+}
+
+.district1{
+    margin-right: 4%;
+}
+
+.traitgauche{
+    border-left: 1px solid black;
+    padding-left: 5px;
+    margin-left: 50px;
+}

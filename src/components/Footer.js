@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom';
+
+
 import './Footer.scss'
 
 import About from '../Images-tripitto/Icon/Footer/Infos.png';
@@ -45,24 +48,24 @@ selectLanguage = () => {
                 </p>
         </div>
         <div class="item-b">
-        <img src={About} alt="info"></img>
+            <NavLink><img src={About} alt="info"></img></NavLink>
                     <p>
                         À propos de Tripitto
                     </p>
                     <div className="item-bMargin">
-                        <img class="item-bImage"  src={WhatToDo} alt="interogation"></img>
+                    <NavLink><img class="item-bImage"  src={WhatToDo} alt="interogation"></img></NavLink>
                         <p>
                             Que faire sur Tripitto ?
                         </p>
                 </div>
         </div>
             <div class="item-c">
-                <img src={Advice} alt="info"></img>
+                <NavLink><img src={Advice} alt="info"></img></NavLink>
                     <p>
                         Nos conseils <br></br>pour vos vidéos
                     </p>
                     <div className="item-cMargin">
-                        <img src={CommunityRules} alt="interogation"></img>
+                        <NavLink><img src={CommunityRules} alt="interogation"></img></NavLink>
                         <p>
                             Réglement <br></br>de la communauté
                         </p>
