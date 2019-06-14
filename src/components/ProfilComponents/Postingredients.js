@@ -25,40 +25,40 @@ class Postingrédients extends Component {
   render(){
     return (
       <div>
-      <div onClick={() => this.handleClick("Passionné de voyage")}>
-        <img src="https://i.ibb.co/NSqJfc5/Capture-d-e-cran-2019-06-09-a-21-31-34.png"
+    
+        <img  onClick={() => this.handleClick("Passionné de voyage")} src="https://i.ibb.co/NSqJfc5/Capture-d-e-cran-2019-06-09-a-21-31-34.png"
           name="Passionnédevoyage"
           alt="L"
         />
-       </div>
+   
 
-      <div onClick={() => this.handleClick("Créateur de contenu")}>
-         <img src="https://i.ibb.co/BC1SvVL/Capture-d-e-cran-2019-06-09-a-21-31-44.png"
+  
+         <img onClick={() => this.handleClick("Créateur de contenu")}src="https://i.ibb.co/BC1SvVL/Capture-d-e-cran-2019-06-09-a-21-31-44.png"
            name="Créateurdecontenu"
            alt="L"
          />
-      </div>
+   
 
- <div onClick={() => this.handleClick("Photographe & Vidéaste")}>
-         <img src="https://i.ibb.co/0m2HBgp/Capture-d-e-cran-2019-06-09-a-21-32-15.png"
+ 
+         <img onClick={() => this.handleClick("Photographe & Vidéaste")}src="https://i.ibb.co/0m2HBgp/Capture-d-e-cran-2019-06-09-a-21-32-15.png"
            name="PhotographeVidéaste"
            alt="L"
          />
-         </div>
+   
 
-         <div onClick={() => this.handleClick("Blogueur voyage")}>
-         <img src="https://i.ibb.co/XyKHRzx/Capture-d-e-cran-2019-06-09-a-21-32-29.png"
+       
+         <img onClick={() => this.handleClick("Blogueur voyage")}src="https://i.ibb.co/XyKHRzx/Capture-d-e-cran-2019-06-09-a-21-32-29.png"
            name="Blogueurvoyage"
            alt="L"
          />
-         </div>
+    
 
-        <div onClick={() => this.handleClick("Autre")}>
-         <img src="https://i.ibb.co/brkcGx5/Capture-d-e-cran-2019-06-09-a-21-32-50.png"
+    
+         <img onClick={() => this.handleClick("Autre")}src="https://i.ibb.co/brkcGx5/Capture-d-e-cran-2019-06-09-a-21-32-50.png"
            name="Autre"
            alt="L"
          />
-         </div>
+     
 
     </div>
     );
