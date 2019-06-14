@@ -4,6 +4,7 @@ import './DetailledInfo.css';
 import Weather from '../../Images-tripitto/Icon/etape/meteo/nuagegris.png';
 import Village from '../../Images-tripitto/Icon/etape/active/village.png';
 import Moto from '../../Images-tripitto/Icon/Voyage/moto.png';
+import Bed from '../../Images-tripitto/Icon/hebergement.png';
 
 
 
@@ -38,8 +39,8 @@ render() {
                     <li>{item.step_type}</li>
                     <li>{item.step_duration}</li>
                     <p>Se déplacer en {item.step_transport} <img src={Moto} alt="village"/> <span className="location">Louez avant votre arrivée sur le site des compagnies internationales.</span> </p>
-                    <p>Plutôt habiter vers Mayan  ou Taynan </p>
-                    <p><span className="district1">{item.district1}</span> |
+                    <p> Plutôt habiter vers Mayan  ou Taynan </p>
+                    <p><img className="bed" src={Bed} alt="bed"/><span className="district1">{item.district1}</span> |
                     <span className="district">{item.district2}</span> |
                     <span className="district"> {item.district3}</span>
                     </p> 

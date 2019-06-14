@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
+// import { Route, Switch } from 'react-router-dom';
 // import UploadPage from './screen/UploadPage';
 import PlayVideo from './screen/PlayVideo';
 
@@ -13,9 +13,9 @@ class App extends Component {
       <>
         {/* <UploadPage /> */}
         <PlayVideo />
-        <Switch>
+        {/* <Switch>
         <Route exact path="/" component={PlayVideo}/>
-        </Switch>
+        </Switch> */}
         {/* <Home /> */}
         {/* <UploadPage /> */}
         {/* <Switch>

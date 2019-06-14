@@ -8,6 +8,7 @@ import Mug from '../../Images-tripitto/Icon/repas_blc.png';
 
 
 
+
 class TravelInfo extends Component {
     state = {
     travel: [],
