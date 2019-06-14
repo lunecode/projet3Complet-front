@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import YouTube from 'react-youtube';
-import './HomeComponents.scss'
-import Navbar from '../Navbar';
-import Footer from '../Footer';
+import './HomeComponentsPart3.scss'
+
 
 
 // Permet l'affichage des données pour un test de la table " General_video "
@@ -51,7 +50,6 @@ class Display extends Component {
 
         return (
             <>
-            <Navbar />
             <h4>RÉCEMMENT PUBLIÉ</h4>
             <div class="videoContainer">
                 {this.state.videos.map(video => (
@@ -80,7 +78,6 @@ class Display extends Component {
                     </div> 
                     ))}
             </div>
-            <Footer />
             </>
         )
     }
