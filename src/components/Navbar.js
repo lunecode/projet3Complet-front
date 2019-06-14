@@ -17,13 +17,13 @@ class Navbar extends Component {
                             <div className="divLogoTripitto">
                             <NavLink exact to="/"><img className="logoTripitto" src={Logo}alt="logo tripitto"></img></NavLink>
                             </div>
-                            <htmlform method="GET" action="rechercher" className="Search">
-                                <input class="inputNav" type="text" placeholder="Voyager..."></input>
-                                <img class="icone-loupe"src={Search}alt="Search"></img>
-                            </htmlform>
+                            <form method="GET" action="rechercher" className="Search">
+                                <input className="inputNav" type="text" placeholder="Voyager..."></input>
+                                <img className="icone-loupe"src={Search}alt="Search"></img>
+                            </form>
                             <ul className="ulNav">
-                                <li><NavLink>VIDÉOS</NavLink></li>
-                                <li><NavLink>VIDÉASTES</NavLink></li>
+                                <li><NavLink exact to="/">VIDÉOS</NavLink></li>
+                                <li><NavLink exact to="/">VIDÉASTES</NavLink></li>
                             </ul>
                         </div>
                         <div className="containerNavRight">

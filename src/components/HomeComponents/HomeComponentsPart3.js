@@ -28,7 +28,7 @@ class Display extends Component {
     }
 
     getVideastes = async () => {
-        const res = await axios.get('http://localhost:3000/profil/get_profil_general_video')
+        const res = await axios.get('http://localhost:3000/profil/get_profil')
         this.setState({ videastes: res.data })
         console.log(this.state.videastes)
     }
@@ -51,17 +51,17 @@ class Display extends Component {
         return (
             <>
             <h4>RÉCEMMENT PUBLIÉ</h4>
-            <div class="videoContainer">
+            <div className="videoContainer">
                 {this.state.videos.map(video => (
                     <div className="divVideoRecent" key={video.id_general_video}>
                         <div>
-                            <p>{video.video_title} 
-                                <YouTube videoId={video.video_link} opts={opts} onReady={this._onReady} /></p><br></br>
+                            <p>{video.video_title} </p>
+                            <YouTube videoId={video.video_link} opts={opts} onReady={this._onReady} />
                         </div> 
                     </div>
                 ))}
             </div>  
-                <div class="imagesContainer">
+                <div className="imagesContainer">
                     {this.state.discoveredVideo.map(image => (
                         <div className="discoveredVideo" key={image.id_general_video}>
                                 <p>{image.video_title}</p>
@@ -69,9 +69,9 @@ class Display extends Component {
                         </div> 
                     ))}
                 </div>
-            <div class="videastesContainer">
+            <div className="videastesContainer">
                 {this.state.videastes.map(videaste => (
-                    <div className="videastes" key={videaste.id_general_video}>
+                    <div className="videastes" key={videaste.id_profil}>
                         <p>{videaste.lastname} {videaste.firstname}</p>
                         <p>{videaste.location}</p>
                         <p>(Numbers) Video</p>
