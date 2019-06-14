@@ -31,8 +31,7 @@ class GetVideo extends Component {
 
   render() {    
     return (
-      <>
-      
+      <>      
         {this.state.videos.map(item => (
           <li key={item.id_general_video}>
             <p>{item.video_title}</p>

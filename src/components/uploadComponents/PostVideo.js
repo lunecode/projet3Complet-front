@@ -66,11 +66,11 @@ class PostVideo extends Component {
 
             <div className="description">
               <p>Description</p>
-              <textarea className="input-description" placeholder="Une description qui donne envie, très envie" value={video_description} onChange={this.changeHandler} name="video_description"
+              {/* <textarea className="input-description" placeholder="Une description qui donne envie, très envie" value={video_description} onChange={this.changeHandler} name="video_description"
                 rows="8" cols="108">
 
-              </textarea>
-              {/* <input className="input-description" placeholder="Une description qui donne envie, très envie" type='text' name="video_description" value={video_description} onChange={this.changeHandler} /> */}
+              </textarea> */}
+              <input className="input-description" placeholder="Une description qui donne envie, très envie" type='text' name="video_description" value={video_description} onChange={this.changeHandler} />
             </div>
 
             <div className="title-equipment1">

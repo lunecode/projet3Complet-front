@@ -59,7 +59,7 @@ input {
 }
 
 .input-title {
-  width: 70%;
+  width: 87%;
   height: 25%;
 }
 
@@ -70,10 +70,10 @@ input {
   height: 200px;
 }
 
-/* .input-description {
-width: 70%;
+.input-description {
+width: 87%;
 height: 100px;
-} */
+}
 
 .input-description {
 resize: none;
@@ -105,9 +105,9 @@ resize: none;
   grid-column: 3;
   margin-left: 14%;
 }
-/* .input-upload {
-  height: 50%;
-} */
+.input-link {
+  height: 40%;
+}
 
 
 
@@ -120,6 +120,7 @@ resize: none;
 .equipment2 {
   grid-row: 5;
   grid-column: 4;
+  margin-left: 5%;
 }
 .input-equipment2 {
   height: 40%;
@@ -131,6 +132,7 @@ resize: none;
 .link2 {
   grid-row: 7;
   grid-column: 4;
+  margin-left: 4%;
 }
 .input-link2 {
   height: 40%;
@@ -181,7 +183,7 @@ resize: none;
 .submit-div {
   grid-row: 8;
   grid-column: 5;
-  margin-left: 65%;
+  margin-left: 28%;
 }
 
 .submit {
