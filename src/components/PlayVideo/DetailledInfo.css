@@ -17,6 +17,7 @@
     width: 90%;
     background-color: white;
     color: #313F4F;
+    padding: 5%;
 }
 
 .border{
@@ -27,3 +28,8 @@
     padding-bottom: 2%;
 }
 
+.location{
+    font-size: 13px;
+    font-style: italic;
+    color: gray;
+}
