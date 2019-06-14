@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import UploadVideo from './screen/UploadPage/UploadVideo';
+// import UploadVideo from './screen/UploadPage/UploadVideo';
+import TestProfilEnum from './screen/TestProfilEnum';
 // import ProfilDescription from './screen/ProfilDescription/ProfilDescription';
 // import UploadInformation from './screen/UploadPage/UploadTravelInformation';
 // import UploadTravelStep from './screen/UploadPage/UploadTravelStep';
@@ -11,8 +12,10 @@ class App extends Component {
   render() {
     return (
       <>
+
+      <TestProfilEnum />
         {/* <ProfilDescription /> */}
-        <UploadVideo />
+        {/* <UploadVideo /> */}
         {/* <UploadInformation /> */}
         {/* <UploadTravelStep /> */}
         {/* <Home /> */}

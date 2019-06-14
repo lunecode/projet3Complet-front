@@ -14,17 +14,17 @@ import UploadIcon from '../../Images-tripitto/Icon/Upload-Video.png'
 
 class PostVideo extends Component {
   state = {
-    video_link: '',
-    video_title: '',
-    video_description: '',
-    equipment: '',
-    equipment2: '',
-    equipment3: '',
-    link_equipment: '',
-    link_equipment2: '',
-    link_equipment3: '',
-    cover_picture: '',
-    profil_id_profil: '',
+    // video_link: '',
+    // video_title: '',
+    // video_description: '',
+    // equipment: '',
+    // equipment2: '',
+    // equipment3: '',
+    // link_equipment: '',
+    // link_equipment2: '',
+    // link_equipment3: '',
+    // cover_picture: '',
+    // profil_id_profil: '',
   }
 
   changeHandler = (e) => {
