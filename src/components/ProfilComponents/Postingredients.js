@@ -25,6 +25,7 @@ class Postingrédients extends Component {
       .catch(error => {
         console.log({ error })
       })
+      
   }
   // 'Passionné de voyage','Créateur de contenu','Photographe & Vidéaste','Blogueur voyage','Autre'
   render() {
