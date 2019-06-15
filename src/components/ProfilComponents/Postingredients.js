@@ -49,6 +49,8 @@ class Postingrédients extends Component {
           name="Photographvidéaste"
           alt="Photograph & vidéaste"
         />
+
+        
         <img className="pictureProfil" onClick={() => this.handleClick("Autre")} src={Autre}
           name="Autre"
           alt="L"
