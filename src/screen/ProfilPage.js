@@ -3,9 +3,10 @@ import PostBioProfil from '../components/ProfilComponents/PostBioProfil';
 import GetBioprofil from '../components/ProfilComponents/GetBioProfil';
 import PutProfil from '../components/ProfilComponents/PutProfil'
 import Postingredients from '../components/ProfilComponents/Postingredients';
+import PostProfilInfo from '../components/ProfilComponents/PostProfilInfo';
 
 
-class Profilpage extends Component {
+class ProfilPage extends Component {
   render() {
     return (
       <>
@@ -18,10 +19,12 @@ class Profilpage extends Component {
         <h1>Post Ingrédients</h1>
         <Postingredients />
 
+        <PostProfilInfo />
+
       </>
     )
   }
 }
 
 
-export default Profilpage;
+export default ProfilPage;
