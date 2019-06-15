@@ -5,7 +5,8 @@ import Weather from '../../Images-tripitto/Icon/etape/meteo/nuagegris.png';
 import Village from '../../Images-tripitto/Icon/etape/active/village.png';
 import Moto from '../../Images-tripitto/Icon/Voyage/moto.png';
 import Bed from '../../Images-tripitto/Icon/hebergement.png';
-
+import Food from '../../Images-tripitto/Icon/Ingredients/plaisir_culinaire.png';
+// import Oval2 from '../../Images-tripitto/Icon/Oval2.png';
 
 
 
@@ -29,37 +30,42 @@ render() {
     return (
     <>
         {this.state.detailledInfo.map(item => (
+        <div className="container_globalTravel">
         <div className="container_info" key={item.id_travel_step}>
             <div className="container_detailled">
                 <div className="container_trip">
                     <span className="border"><img className="weather" src={Weather} alt="weather"/> <img src={Village} alt="village"/> 
-                    <span className="step">{item.step_number}</span>{item.step_weather} <li>{item.step_name}</li></span>
-                    <li>{item.video_travel_step}</li>
-                    <li>{item.step_name}</li>
-                    <li>{item.step_type}</li>
-                    <li>{item.step_duration}</li>
-                    <p>Se déplacer en {item.step_transport} <img src={Moto} alt="village"/> <span className="location">Louez avant votre arrivée sur le site des compagnies internationales.</span> </p>
+                    <span className="step">{item.step_number}
+                    </span>{item.step_weather} <span>{item.step_name}</span></span>
+                    <span>{item.video_travel_step}</span>
+                    <span>{item.step_name}</span>
+                    <span>{item.step_type}</span>
+                    <span>{item.step_duration}</span>
+                    <p>Se déplacer en {item.step_transport} <img src={Moto} alt="village"/> <span className="location">Louez avant votre arrivée sur le site des compagnies internationales.</span> 
+                    </p>
                     <p> Plutôt habiter vers Mayan  ou Taynan </p>
-                    <p><img className="bed" src={Bed} alt="bed"/><span className="district1">{item.district1}</span> |
+                    <p>
+                        {/* <img className="oval" src={Oval2} alt="oval"/> */}
+                        <img className="bed" src={Bed} alt="bed"/><span className="district1">{item.district1}</span> |
                     <span className="district">{item.district2}</span> |
                     <span className="district"> {item.district3}</span>
                     </p> 
                     {/* <li>{item.way_get_around}</li>
                     <li>{item.way_get_around_comment}</li> */}
                     
-                    <li>{item.district_comment}</li>
+                    {/* <li>{item.district_comment}</li>
                     <li>{item.accomodation1}</li>
                     <li>{item.accomodation2}</li>
                     <li>{item.accomodation3}</li>
                     <li>{item.accomodation_link1}</li>
                     <li>{item.accomodation_link2}</li>
-                    <li>{item.accomodation_link3}</li>
-                    <li>{item.restaurant1}</li>
-                    <li>{item.restaurant2}</li>
-                    <li>{item.restaurant3}</li>
-                    <li>{item.restaurant4}</li>
+                    <li>{item.accomodation_link3}</li> */}
+                    <p><img className="food" src={Food} alt="food"/>            <span className="district1">{item.restaurant1}</span> |     
+                    <span className="district">{item.restaurant2}</span>  | 
+                    <span className="district">{item.restaurant3}</span> </p>   
+                    {/* <li>{item.restaurant4}</li>
                     <li>{item.restaurant5}</li>
-                    <li>{item.restaurant6}</li>
+                    <li>{item.restaurant6}</li> */}
                     <li>{item.bar1}</li>
                     <li>{item.bar2}</li>
                     <li>{item.bar3}</li>
@@ -83,6 +89,7 @@ render() {
                     <li>{item.advice}</li>
                 </div>
             </div>
+        </div>
         </div>
         ))}
     </>
