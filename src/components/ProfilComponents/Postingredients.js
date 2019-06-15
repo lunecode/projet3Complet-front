@@ -25,7 +25,7 @@ class Postingrédients extends Component {
       .catch(error => {
         console.log({ error })
       })
-      
+
   }
   // 'Passionné de voyage','Créateur de contenu','Photographe & Vidéaste','Blogueur voyage','Autre'
   render() {
@@ -33,20 +33,21 @@ class Postingrédients extends Component {
       <div className="Profilenum">
         <img className="pictureProfil" onClick={() => this.handleClick("Passionné de voyage")} src={Passionnedevoyage}
           name="Passionnédevoyage"
-          alt="L"
+          alt="Passioné de voyage"
         />
         <img className="pictureProfil" onClick={() => this.handleClick("Créateur de contenu")} src={Créateurdecontenu}
           name="Créateurdecontenu"
-          alt="L"
+          alt="Créateur de contenu"
         />
         <img className="pictureProfil" onClick={() => this.handleClick("Blogueur de voyage")} src={Blogueurdevoyage}
 
-          name="PhotographeVidéaste"
-          alt="L"
+          name="Blogueurdevoyage"
+          alt="Blogueur de voyage"
+
         />
         <img className="pictureProfil" onClick={() => this.handleClick("Photograph & vidéaste")} src={Photographevidéaste}
-          name="Blogueurvoyage"
-          alt="L"
+          name="Photographvidéaste"
+          alt="Photograph & vidéaste"
         />
         <img className="pictureProfil" onClick={() => this.handleClick("Autre")} src={Autre}
           name="Autre"
