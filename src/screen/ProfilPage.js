@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PostBioProfil from '../components/ProfilComponents/PostBioProfil';
 import GetBioprofil from '../components/ProfilComponents/GetBioProfil';
 import PutProfil from '../components/ProfilComponents/PutProfil'
-import Postingredients from '../components/ProfilComponents/Postingredients';
 import PostProfilInfo from '../components/ProfilComponents/PostProfilInfo';
+import PostEnumProfil from '../components/ProfilComponents/PostEnumProfil';
 
 
 class ProfilPage extends Component {
@@ -17,7 +17,8 @@ class ProfilPage extends Component {
         <h1>modification des données</h1>
         <PutProfil />
         <h1>Post Ingrédients</h1>
-        <Postingredients />
+        <PostEnumProfil />
+
 
         <PostProfilInfo />
 

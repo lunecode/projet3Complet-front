@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import "./PostBioProfil.scss" 
 
 class PostBioProfil extends Component {
   state = {
@@ -24,11 +25,16 @@ class PostBioProfil extends Component {
   render() {
     const {bio} = this.state
     return (
-      <div>
+      <div className="PostBioProfil">
         <form onSubmit={this.submitHandler}>
         <div className="Bio">
-          Bio
-            <input type='text' name="bio" value={bio} onChange={this.changeHandler} />
+          <h3>Bio </h3>
+            <input type='text' name="bio" value={bio} onChange={this.changeHandler}
+            placeholder="Parlez de votre personnalité de vaoyageur
+            et vos talents de vidéaste ou photohtaphe 
+            Rébélez-nous la partoe de globe que vous connaissez la mieux.
+            Avouez votre plus grad rêve de voyageur "/>
+
           </div>
           
         </form>

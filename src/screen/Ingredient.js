@@ -3,6 +3,7 @@ import PostProfilInfo from '../components/ProfilComponents/PostProfilInfo'
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import PostEnumProfil from '../components/ProfilComponents/PostEnumProfil';
+import PostBioProfil from '../components/ProfilComponents/PostBioProfil';
 
 
 class Ingrédients extends Component {
@@ -13,6 +14,7 @@ class Ingrédients extends Component {
         <Navbar/>  
         <PostProfilInfo />
         <PostEnumProfil />
+        <PostBioProfil/>
         <Footer/>
       </div>
     )
