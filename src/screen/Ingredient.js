@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import PostEnumProfil from '../components/ProfilComponents/PostEnumProfil';
 import PostBioProfil from '../components/ProfilComponents/PostBioProfil';
+import PostIngedients from '../components/ProfilComponents/PostIngedients';
 
 
 class Ingrédients extends Component {
@@ -15,6 +16,7 @@ class Ingrédients extends Component {
         <PostProfilInfo />
         <PostEnumProfil />
         <PostBioProfil/>
+        <PostIngedients/>
         <Footer/>
       </div>
     )
