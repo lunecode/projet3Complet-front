@@ -6,6 +6,7 @@ import Village from '../../Images-tripitto/Icon/etape/active/village.png';
 import Moto from '../../Images-tripitto/Icon/Voyage/moto.png';
 import Bed from '../../Images-tripitto/Icon/hebergement.png';
 import Food from '../../Images-tripitto/Icon/Ingredients/plaisir_culinaire.png';
+import Museum from '../../Images-tripitto/Icon/Visites.png';
 // import Oval2 from '../../Images-tripitto/Icon/Oval2.png';
 
 
@@ -66,18 +67,18 @@ render() {
                     {/* <li>{item.restaurant4}</li>
                     <li>{item.restaurant5}</li>
                     <li>{item.restaurant6}</li> */}
-                    <li>{item.bar1}</li>
-                    <li>{item.bar2}</li>
+                    <p><span>{item.bar1}</span></p>
+                    {/* <li>{item.bar2}</li>
                     <li>{item.bar3}</li>
                     <li>{item.bar4}</li>
                     <li>{item.bar5}</li>
-                    <li>{item.bar6}</li>
-                    <li>{item.must_visit1}</li>
-                    <li>{item.must_visit2}</li>
-                    <li>{item.must_visit3}</li>
+                    <li>{item.bar6}</li> */}
+                    <p><img className="Museum" src={Museum} alt="museum"/><span className="museum">{item.must_visit1}</span>  |
+                    <span className="museum1">{item.must_visit2}</span></p>
+                    {/* <li>{item.must_visit3}</li>
                     <li>{item.must_visit4}</li>
                     <li>{item.must_visit5}</li>
-                    <li>{item.must_visit6}</li>
+                    <li>{item.must_visit6}</li> */}
                     <li>{item.sport_activity1 }</li>
                     <li>{item.sport_activity2 }</li>
                     <li>{item.sport_activity3 }</li>

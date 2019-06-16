@@ -48,15 +48,10 @@
 
 .district1{
     margin-right: 4%;
+    margin-left: 2%;
 }
 
-.oval{
-    /* width: 75px;
-    position: relative;
-    right:60px;
-    bottom:3px;
-    */
-}
+
 
 
 .bed{
@@ -66,6 +61,20 @@
 }
 
 .food{
+    width: 30px;
+    
+}
+
+.museum{
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+.museum1{
+    margin-left: 2%;
+}
+
+.Museum{
     width: 30px;
     
 }
