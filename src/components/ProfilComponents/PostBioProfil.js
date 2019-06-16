@@ -3,20 +3,8 @@ import axios from 'axios'
 
 class PostBioProfil extends Component {
   state = {
-    lastname: "",
-    firstname: "",
-    pseudo: "",
-    email: "",
-    birth_date: "",
-    type: "",
-    position: "",
-    profil_link: "",
-    profile_picture: "",
     bio: "",
-    inscription_date: "",
-    inscription_type: "",
-    password: "",
-    password_forget: "",
+    
   }
 
   changeHandler = (e) => {
@@ -34,55 +22,15 @@ class PostBioProfil extends Component {
       })
   }
   render() {
-    const { lastname, firstname, pseudo, email, birth_date, type,
-      position, profil_link, profile_picture, bio, inscription_date, inscription_type, password,
-      password_forget } = this.state
+    const {bio} = this.state
     return (
       <div>
         <form onSubmit={this.submitHandler}>
-          <div>
-            <input type='text' name="lastname" value={lastname} onChange={this.changeHandler} />
-          </div>
-          <div>
-            <input type='text' name="firstname" value={firstname} onChange={this.changeHandler} />
-          </div>
-          <div>
-            <input type='text' name="pseudo" value={pseudo} onChange={this.changeHandler} />
-          </div>
-          <div>
-            <input type='text' name="email" value={email} onChange={this.changeHandler} />
-          </div>
-          <div>
-            <input type='text' name="birth_date" value={birth_date} onChange={this.changeHandler} />
-          </div>
-          <div>
-            <input type='text' name="type" value={type} onChange={this.changeHandler} />
-          </div>
-          <div>
-            <input type='text' name="position" value={position} onChange={this.changeHandler} />
-          </div>
-          <div>
-            <input type='text' name="profil_link" value={profil_link} onChange={this.changeHandler} />
-          </div>
-          <div>
-            <input type='text' name="profile_picture" value={profile_picture} onChange={this.changeHandler} />
-          </div>
-          <div>
+        <div className="Bio">
+          Bio
             <input type='text' name="bio" value={bio} onChange={this.changeHandler} />
           </div>
-          <div>
-            <input type='text' name="inscription_date" value={inscription_date} onChange={this.changeHandler} />
-          </div>
-          <div>
-            <input type='text' name="inscription_type" value={inscription_type} onChange={this.changeHandler} />
-          </div>
-          <div>
-            <input type='text' name="password" value={password} onChange={this.changeHandler} />
-          </div>
-          <div>
-            <input type='text' name="password_forget" value={password_forget} onChange={this.changeHandler} />
-          </div>
-          <button type="submit">Submit</button>
+          
         </form>
       </div>
     )

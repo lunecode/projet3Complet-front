@@ -1,22 +1,20 @@
 import React, { Component } from 'react';
-import Postingredients from '../components/ProfilComponents/Postingredients';
 import PostProfilInfo from '../components/ProfilComponents/PostProfilInfo'
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import PostEnumProfil from '../components/ProfilComponents/PostEnumProfil';
 
 
 class Ingrédients extends Component {
   render() {
     return (
-      <>
+      <div className="pageprofil">
 
         <Navbar/>  
         <PostProfilInfo />
-              <h1>Dites un peu plus ur vous</h1>
-        <Postingredients />
-
-       <Footer/>
-      </>
+        <PostEnumProfil />
+        <Footer/>
+      </div>
     )
   }
 }
