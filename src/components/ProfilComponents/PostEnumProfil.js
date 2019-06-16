@@ -74,7 +74,6 @@ class PostEnumProfil extends Component {
         Photograph & vidéaste
         </div>
 
-
         <div className="Profil_picture5">
         <img onClick={() => this.handleClick("Autre")} src={Autre}
         name="Autre"
