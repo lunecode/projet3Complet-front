@@ -1,0 +1,56 @@
+.ingédients{
+    background-color: rgb(244, 244, 244);
+   margin-left: 42vh;
+   
+  
+ 
+    .Ingredient_list1 {
+        text-align: center;
+        height: 8em;
+        display: flex;
+        margin-right: 24Vh;
+        div{
+            padding-right: 8vh;
+        }
+    
+    
+    
+
+    }
+    .Ingredient_list2{
+     
+        text-align: center;
+        height: 8em;
+        display: flex;
+        margin-right: 24Vh;
+        div::active{
+            color:red;
+            padding-right: 8vh;
+        }
+        
+    
+    }
+    .Ingredient_list3{
+        text-align: center;
+        height: 8em;
+        display: flex;
+        margin-right: 24Vh;
+        div{
+            padding-right: 8vh;
+        }
+        
+    
+    }
+    .Ingredient_list4{
+        text-align: center;
+        height: 8em;
+        display: flex;
+        margin-right: 24Vh;
+        div{
+            padding-right: 8vh;
+        }
+        
+    
+     
+    }
+}

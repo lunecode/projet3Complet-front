@@ -13,12 +13,25 @@ import Rencontre from  '../../Images-tripitto/Icon/Ingredients/Rencontre.png'
 import Romantique from  '../../Images-tripitto/Icon/Ingredients/Romantique.png'
 import Sacados from  '../../Images-tripitto/Icon/Ingredients/Sacados.png'
 import Safari from  '../../Images-tripitto/Icon/Ingredients/Safari.png'
+import Ville from  '../../Images-tripitto/Icon/Ingredients/Ville.png'
+import Spiritualité from  '../../Images-tripitto/Icon/Ingredients/Spiritualité.png'
+import Sportaventure from  '../../Images-tripitto/Icon/Ingredients/Sportaventure.png'
+import Plaisirculinaire from  '../../Images-tripitto/Icon/Ingredients/Plaisirculinaire.png'
+import Idea from "../../Images-tripitto/Icon/Idea.png"
+
+
+
+
+import "./postIngredient.scss"
 
 class PostIngedients extends Component {
     render() {
         return (
  <div className="ingédients">
-                
+         <h3>Vos ingrédients pour un voyage inoubliable </h3>
+         <p> <img src={Idea} alt="icon" />Selectionnez jusqu'à 5 choix</p>
+    <div className="Ingredient_list1"> 
+    
         <div className="ingredient1">
         <img src={Aventurierseul}
         name=""
@@ -54,6 +67,7 @@ class PostIngedients extends Component {
        Ecotourisme
         </div>
 
+
         <div className="ingredient5">
         <img src={Enforet}
         name=""
@@ -61,8 +75,9 @@ class PostIngedients extends Component {
         />
         En forêt
         </div>
+</div> 
 
-
+<div className="Ingredient_list2"> 
         <div className="ingredient6">
         <img src={Festival}
         name=""
@@ -88,6 +103,7 @@ class PostIngedients extends Component {
         </div>
 
 
+
         <div className="ingredient9">
         <img src={Montagne}
         name=""
@@ -96,16 +112,19 @@ class PostIngedients extends Component {
          Montagne
         </div>
 
-        <div className="ingredient9">
+
+
+        <div className="ingredient10">
         <img src={Plage}
         name=""
         alt=""
         />
          Plage
         </div>
+</div>
 
-
-        <div className="ingredient9">
+<div className="Ingredient_list3"> 
+        <div className="ingredient11">
         <img src={Rencontre}
         name=""
         alt=""
@@ -114,7 +133,7 @@ class PostIngedients extends Component {
         </div>
 
          
-        <div className="ingredient9">
+        <div className="ingredient12">
         <img src={Romantique}
         name=""
         alt=""
@@ -122,8 +141,8 @@ class PostIngedients extends Component {
          Romantique
         </div>
 
-
-        <div className="ingredient9">
+ 
+        <div className="ingredient13">
         <img src={Sacados}
         name=""
         alt=""
@@ -132,7 +151,7 @@ class PostIngedients extends Component {
         </div>
 
 
-        <div className="ingredient9">
+        <div className="ingredient14">
         <img src={Safari}
         name=""
         alt=""
@@ -141,11 +160,51 @@ class PostIngedients extends Component {
         </div>
 
 
+        <div className="ingredient15">
+        <img src={Ville}
+        name=""
+        alt=""
+        />
+        Ville
+        </div>
+</div>
+
+<div className="Ingredient_list4">
+
+        <div className="ingredient16">
+        <img src={Spiritualité}
+        name=""
+        alt=""
+        />
+         Spiritualité
+        </div>
+
+        <div className="ingredient17">
+        <img src={Sportaventure}
+        name=""
+        alt=""
+        />
+        Sportaventure
+        </div>
+
+        <div className="ingredient18">
+        <img src={Plaisirculinaire}
+        name=""
+        alt=""
+        />
+        Plaisirculinaire
+        </div>
+
+        <div className="ingredient19">
+        <img src={Romantique}
+        name=""
+        alt=""
+        />
+       Romantique
+        </div>
 
 
-
-
-
+        </div>
 
 
 
