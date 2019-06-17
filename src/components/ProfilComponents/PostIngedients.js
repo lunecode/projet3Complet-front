@@ -18,20 +18,35 @@ import Spiritualité from  '../../Images-tripitto/Icon/Ingredients/Spiritualité
 import Sportaventure from  '../../Images-tripitto/Icon/Ingredients/Sportaventure.png'
 import Plaisirculinaire from  '../../Images-tripitto/Icon/Ingredients/Plaisirculinaire.png'
 import Idea from "../../Images-tripitto/Icon/Idea.png"
-
-
+import axios from "axios"
 
 
 import "./postIngredient.scss"
 
 class PostIngedients extends Component {
+
+        state = {
+        ingredients:""
+            
+              }
+        //       handleClick(e) {
+        //         e.preventDefault();
+        //         axios.post('http://localhost:3000/profil/insert_profil', this.state)
+        //         .then(response => {
+        //          console.log(response)
+        //          })
+        //        .catch(error => {
+        //            console.log(error)
+        //         })
+        //       }
+
     render() {
+        const ingredients = this.state
         return (
- <div className="ingédients">
+ <div className="ingédients" >
          <h3>Vos ingrédients pour un voyage inoubliable </h3>
          <p> <img src={Idea} alt="icon" />Selectionnez jusqu'à 5 choix</p>
-    <div className="Ingredient_list1"> 
-    
+    <div className="Ingredient_list1" onClick={this.handleClick}> 
         <div className="ingredient1">
         <img src={Aventurierseul}
         name=""
@@ -39,8 +54,6 @@ class PostIngedients extends Component {
         />
          Aventurier seul
         </div>
-
-
         <div className="ingredient2">
         <img src={Copains}
         name=""
@@ -48,8 +61,6 @@ class PostIngedients extends Component {
         />
          Copains d'abord
         </div>
-
-
         <div className="ingredient3">
         <img src={DigitalNomad}
         name=""
@@ -57,8 +68,6 @@ class PostIngedients extends Component {
         />
         Digital Nomad
         </div>
-
-
         <div className="ingredient4">
         <img src={Ecotourisme}
         name=""
@@ -66,8 +75,6 @@ class PostIngedients extends Component {
         />
        Ecotourisme
         </div>
-
-
         <div className="ingredient5">
         <img src={Enforet}
         name=""
@@ -102,8 +109,6 @@ class PostIngedients extends Component {
          Luxe 
         </div>
 
-
-
         <div className="ingredient9">
         <img src={Montagne}
         name=""
@@ -111,8 +116,6 @@ class PostIngedients extends Component {
         />
          Montagne
         </div>
-
-
 
         <div className="ingredient10">
         <img src={Plage}
@@ -142,7 +145,7 @@ class PostIngedients extends Component {
         </div>
 
  
-        <div className="ingredient13">
+        <div className="">
         <img src={Sacados}
         name=""
         alt=""
