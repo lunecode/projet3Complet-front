@@ -18,9 +18,11 @@ class UploadVideo extends Component {
       {/* <TestContinentCountry /> */}
 
         {/* <h1>Affichage de la table general_video :</h1> */}
-        {/* <GetVideo /> */}
-
+        {/* <Navbar />
+        <GetVideo />
+        <Footer /> */}
         {/* <h1>Insertion de données dans la table general_video</h1> */}
+        
         <Navbar />
         <PostVideo />
         <Footer />

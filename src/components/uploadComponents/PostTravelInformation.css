@@ -1,0 +1,109 @@
+/* style of all the page */
+
+@font-face {
+  font-family: "Roboto-Medium";
+  src: url("../fonts/Roboto/Roboto-Medium.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+p {
+  font-family: "Roboto-Medium";
+}
+
+
+body {
+  margin: 0;
+}
+
+input {
+  border-radius: 5px;
+}
+
+
+
+
+/* Grid template start */
+
+.grid {
+  background-color: #F4F4F4;
+  display: grid;
+  grid-template-columns: 30% 20% 20% 20% 10%;
+  grid-template-rows: 15% 15% 15% 15% 15% 10% 15%;
+  grid-template-areas:  
+    "video_link empty empty empty empty"
+    "video_link continent country . ."
+    "video_link month duration . ."
+    ". step step step ."
+    ". currency accomodation activities ."
+    ". travel_type travel_type travel_type ."
+    ". temp save preview next "
+  ;
+}
+
+
+.video {
+  width: 80%;
+}
+
+.empty {
+  grid-area: empty;
+}
+
+.continent {
+  grid-area: continent;
+}
+
+.country {
+  grid-area: country;
+}
+
+.month {
+  grid-area: month;
+}
+
+.duration {
+  grid-area: duration;
+}
+
+.step {
+  grid-area: step;
+}
+
+.currency {
+  grid-area: currency;
+}
+
+.accomodation {
+  grid-area: accomodation;
+}
+
+.activities {
+  grid-area: activities;
+}
+
+.travel_type {
+  grid-area: travel_type;
+}
+
+.temp {
+  grid-area: temp;
+}
+
+.save {
+  grid-area: save;
+  width: 70%;
+  height: 25%;
+}
+
+.preview {
+  grid-area: preview;
+  width: 70%;
+  height: 25%;
+}
+
+.next {
+  grid-area: next;
+  width: 70%;
+  height: 25%;
+}

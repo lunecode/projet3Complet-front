@@ -20,6 +20,7 @@ class PostVideo extends Component {
     this.setState({ [e.target.name]: e.target.value })
   }
 
+
   submitHandler = e => {
     e.preventDefault()
     console.log(this.state)
@@ -53,10 +54,16 @@ class PostVideo extends Component {
               <input className="input-title" placeholder="Escapade romantique dans la ville des lumières" type='text' name="video_title" value={video_title} onChange={this.changeHandler} />
             </div>
 
+
+
+
             <div className="description">
               <p>Description</p>
               <input className="input-description" placeholder="Une description qui donne envie, très envie" type='text' name="video_description" value={video_description} onChange={this.changeHandler} />
             </div>
+
+
+
 
             <div className="title-equipment1">
               <p>Equipement utilisés pour filmer</p>
@@ -112,8 +119,13 @@ class PostVideo extends Component {
               <p>Profil_id ( obligatoire )</p>
               <input type="text" name="profil_id_profil" value={profil_id_profil} onChange={this.changeHandler} />
             </div>
+
+            <div className="next-div">
+              <button className="next-button" type="button">SUIVANT</button>
+            </div>
+
             <div className="submit-div">
-              <button className="submit" type="submit">Submit</button>
+              <button className="submit-button" type="submit">ENREGISTRER</button>
             </div>
 
           </div>
@@ -124,3 +136,5 @@ class PostVideo extends Component {
 }
 
 export default PostVideo
+
+
