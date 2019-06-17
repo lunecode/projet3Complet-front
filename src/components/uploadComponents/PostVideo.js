@@ -14,17 +14,6 @@ import UploadIcon from '../../Images-tripitto/Icon/Upload-Video.png'
 
 class PostVideo extends Component {
   state = {
-    // video_link: '',
-    // video_title: '',
-    // video_description: '',
-    // equipment: '',
-    // equipment2: '',
-    // equipment3: '',
-    // link_equipment: '',
-    // link_equipment2: '',
-    // link_equipment3: '',
-    // cover_picture: '',
-    // profil_id_profil: '',
   }
 
   changeHandler = (e) => {
@@ -66,10 +55,6 @@ class PostVideo extends Component {
 
             <div className="description">
               <p>Description</p>
-              {/* <textarea className="input-description" placeholder="Une description qui donne envie, très envie" value={video_description} onChange={this.changeHandler} name="video_description"
-                rows="8" cols="108">
-
-              </textarea> */}
               <input className="input-description" placeholder="Une description qui donne envie, très envie" type='text' name="video_description" value={video_description} onChange={this.changeHandler} />
             </div>
 

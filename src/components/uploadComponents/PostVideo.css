@@ -1,6 +1,6 @@
 /* Style of upload page with grid  */
 
-
+/* style of all the page */
 
 @font-face {
   font-family: 'Roboto-Medium';
@@ -8,10 +8,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
-
-
-/* style of all the page */
 
 p {
   font-family: 'Roboto-Medium';
@@ -37,7 +33,7 @@ input {
   display: grid;
   /* grid-template-columns: 1fr 1fr 1fr 1fr; */
   grid-template-columns: 15% 5% 20% 20% 20% 15%;
-  grid-template-rows: 15% 10% 200px 40px 15% 40px 15% 20%; 
+  grid-template-rows: 15% 10% 200px 40px 15% 40px 15% 20% 10px; 
   min-height: 100vh;
   /* grid-auto-rows: minmax(100px, auto); */  
 }
@@ -193,9 +189,13 @@ resize: none;
 
 
 .cover-picture {
-  grid-row: 8;
+  border: solid 2px;
+  border-color: #ed6256;
+  box-shadow: 10px 5px 5px grey;
+  grid-row: 8 / span 9;
   grid-column: 3;
   margin-left: 14%;
+  margin-bottom: 90px;
 }
 
 .temp {
