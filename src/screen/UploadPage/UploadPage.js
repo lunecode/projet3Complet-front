@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import PostVideo from '../../components/UploadComponents/PostVideo';
-import GetVideo from '../../components/UploadComponents/GetVideo';
-import PutVideo from '../../components/UploadComponents/PutVideo';
-import DeleteVideo from '../../components/UploadComponents/DeleteVideo';
+import PostVideo from '../../components/HomeComponents/PostVideo';
+import GetVideo from '../../components/HomeComponents/GetVideo';
+import PutVideo from '../../components/HomeComponents/PutVideo';
+import DeleteVideo from '../../components/HomeComponents/DeleteVideo';
 
 
 class UploadPage extends Component {

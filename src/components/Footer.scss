@@ -1,0 +1,81 @@
+$colorbackground: #2C404D;
+$colorBorder: #1BA2A2;
+
+.containerFooter {
+    display: grid;
+    grid-template-columns: 40% 10% 10% 40%;
+    grid-template-rows: 100px 100px 100px;
+    grid-auto-flow: row;
+    background-color: $colorbackground; 
+    color: white;
+    border-block-end: solid #3e5b6e;
+
+    .item-a {
+        margin: 5% 30% 0 10%;
+        font-size: 14px;
+    }
+
+    .item-d {
+        margin: 5% 10% 0 30%;
+        font-size: 14px;
+    }
+
+    .item-b, .item-c {
+        text-align: center;
+        align-items: center;
+        margin-top: 30%;
+        font-size: 12px;
+    }
+
+    .item-b a:hover,.item-c a:hover {
+        opacity: 0.3;
+    }
+
+    .item-b img, .item-c img {
+        width: 20%
+    }
+
+    .item-bMargin, .item-cMargin {
+        margin-top: 20%;
+    }
+
+    .item-bImage {
+        margin-top: 10%;
+    }
+    .button-footer {
+        border: solid $colorBorder;
+        background-color: $colorbackground;
+        color: $colorBorder;
+        font-size: 14px;
+        margin-top: 5%;
+        width: 100%;
+        height: 40%;
+    }
+}
+
+.allRightsReserved {
+    display: grid;
+    grid-template-columns: 24% 2% 50% 19% 3% 2%;
+    grid-template-rows: 50px;
+    grid-auto-flow: row;
+    background-color: $colorbackground; 
+    color: white;
+    border-block-end: solid #3e5b6e;
+    padding-left: 1%;
+
+    .love  {
+        margin-top: 17px;
+    }
+}
+
+.item-e-allRightsReserved {
+    margin-top: 15px;
+}
+
+.item-f-allRightsReserved {
+    margin-top: 15px;
+}
+
+.item-d .button-footer:hover {
+    opacity: 0.6;
+}

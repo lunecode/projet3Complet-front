@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import './GetProfil.css';
 
 // Allow to display data from " profil " table
 
@@ -23,18 +24,22 @@ class GetProfil extends Component {
             {this.state.profil.map(item => (
             <li key={item.id_profil}>
             <div>
-            <img src={item.profile_picture} alt="" />
+             <img src={item.profile_picture} alt="profil_pic" />
              <p>10 vidéos</p>
              <p>54 abonnés</p>
              <p>{item.nb_countries_visited} pays visités</p>
              </div>
-             <p>{item.firstname} {item.lastname}</p>
+             <div><p>{item.firstname} {item.lastname}</p>
              <p>{item.type}</p>
              <p>{item.location}</p>
-             <p>{item.bio}</p>
-             
+             <p>{item.bio}</p>  
+             </div>           
             </li>
           ))}
+          <div>
+          <button>Message</button>
+          <button>Modifier profil</button>
+          </div>
           </>
      )
    }
