@@ -7,6 +7,8 @@ import React, { Component } from 'react';
 // import ProfilDescription from './screen/ProfilDescription/ProfilDescription';
 // import UploadInformation from './screen/UploadPage/UploadTravelInformation';
 import UploadTravelStep from './screen/UploadPage/UploadTravelStep';
+import Footer from './components/Footer';
+import Navbar from './components/Navbar';
 // import UploadPage from './screen/UploadPage';
 // import Home from './screen/Home';
 
@@ -18,7 +20,7 @@ class App extends Component {
   render() {
     return (
       <>
-
+      <Navbar/>
       {/* <TestProfilEnum /> */}
         {/* <ProfilDescription /> */}
 
@@ -39,6 +41,7 @@ class App extends Component {
         {/* <Switch>
           <Route exact path="/" component={Home} />
         </Switch> */}
+        <Footer/>
       </>
     )
   }

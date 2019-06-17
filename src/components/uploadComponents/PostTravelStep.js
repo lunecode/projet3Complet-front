@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import './PostTravelStep.css'
+import Village from '../../Images-tripitto/Icon/etape/active/village.png';
+import Weather from '../../Images-tripitto/Icon/etape/meteo/nuagegris.png';
+import Car from '../../Images-tripitto/Icon/transport/voiture.png';
 
 // UPLOAD PAGE 2 / TRAVEL STEP
 // ALLOW TO INSERT DATA IN "TRAVEL STEP" TABLE
@@ -39,13 +42,22 @@ render() {
   return (
     
       <form onSubmit={this.submitHandler}>
+       
         <div className="grid">
+        <h1>Itinéraire</h1>
+          
           <div className="videoUser">
 
 
           </div>
+{/*          
+          this field will allow to select certain options concerning the travel with buttons */}
           <div className="travel">
-            <p>Numero de l'itinéraire</p>
+
+
+          <span className="border_travel"><img className="weather" src={Weather} alt="weather"/><img src={Village} alt="village"/><span className="duration">5 j</span></span>
+          <p>Fozzano</p>
+            {/* <p>Numero de l'itinéraire</p>
             <input type='number' name="step_number" value={step_number} onChange={this.changeHandler} />
             <p>Nom de l'étape</p>
             <input type='text' name="step_name" value={step_name} onChange={this.changeHandler} />
@@ -54,17 +66,36 @@ render() {
             <span>Nbre de jours de l'étape</span>
             <input type='number' name="step_duration" value={step_duration} onChange={this.changeHandler} />
             <span>Météo de l'étape</span>
-            <input type='text' name="step_weather" value={step_weather} onChange={this.changeHandler} />
+            <input type='text' name="step_weather" value={step_weather} onChange={this.changeHandler} /> */}
             <div className="transport">
             <p>Moyen de transport entre chaque itineraire</p>
             <input type='text' name="step_transport" value={step_transport} onChange={this.changeHandler} />
           </div>
             </div>
             <div className="way">
-            <p>Meilleurs moyen de se déplacer dans l'étape</p>
-            <input type="text" name="way_get_around" value={way_get_around} onChange={this.changeHandler} />
+            <span>Meilleurs moyen de se déplacer dans l'étape</span>
+            {/* <input type="text" name="way_get_around" value={way_get_around} onChange={this.changeHandler} /> */}
+            <div className="allButtons">
+            <div className="buttonStyle">
+              <button className="favorite_style" type="button"><img className="car" src={Car} alt="car"/>Voiture</button>
+            </div>
+            <div className="buttonStyle">
+              <button className="favorite_style" type="button">Moto</button>
+            </div>
+            <div className="buttonStyle">
+            < button className="favorite_style" type="button">Vélo</button>
+            </div>
+            <div className="buttonStyle">
+              <button className="favorite_style" type="button">A pied</button>
+            </div>
+            <div className="buttonStyle">
+              <button className="favorite_style" type="button">Taxi</button>
+            </div>
+            <div className="buttonStyle"> 
+              <button className="favorite_style" type="button">Transport en commun</button>
+            </div>
           </div>
-            
+          </div>  
           <div  className="astuce">
             <p>Astuce à ajouter sur le moyen de déplacement</p>
             <input type="text" name="way_get_around_comment" value={way_get_around_comment} onChange={this.changeHandler} />
@@ -179,12 +210,6 @@ render() {
             <p>Des conseils à partager ?</p>
             <input type="text" name="advice" value={advice} onChange={this.changeHandler} />
           </div>
-          <div>
-            
-          </div>
-            
-          
-          
           <div className="button">
             <button type="submit">Submit</button>
             <p>Fk de l'Id de general_video</p>

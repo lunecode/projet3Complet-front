@@ -13,6 +13,8 @@
     grid-template-rows: 100px 1fr;
     grid-column-gap: 25px;
     margin:7%;
+    font-size: 12px;
+   
 
 
 }
@@ -22,40 +24,48 @@
     grid-row-start: 1;
     grid-row-end: 3;
    
+   
     
 
 }
 
 .travel{
     grid-column-start: 2;
-    grid-row-start: 2;  
+    grid-row-start: 2; 
+    padding: 2%; 
 
 }
 
 .way{
     grid-column-start: 2;
     grid-row-start: 3;
+    padding: 2%;
+  
 }
 
 
 .astuce{
     grid-column-start: 2;
     grid-row-start: 4;
+    padding: 2%;
 }
 
 .district{
     grid-column-start: 2;
     grid-row-start: 5;
+    padding: 2%;
 }
 
 .comment{
     grid-column-start: 2;
     grid-row-start: 6;
+    padding: 2%;
 }
 
 .accomodation{
     grid-column-start: 2;
     grid-row-start: 7;
+    padding: 2%;
 
 }
 
@@ -63,43 +73,94 @@
 .restaurant{
     grid-column-start: 2;
     grid-row-start: 8;
+    padding: 2%;
 }
 
 .bar{
     grid-column-start: 2;
     grid-row-start: 9; 
+    padding: 2%;
 }
 
 .must_visit{
     grid-column-start: 2;
     grid-row-start: 10; 
+    padding: 2%;
 }
 
 .sportActivity{
     grid-column-start: 2;
     grid-row-start: 11; 
+    padding: 2%;
 }
 
 .sportActivityComment{
     grid-column-start: 2;
     grid-row-start: 12; 
+    padding: 2%;
 }
 
 .crushUser{
     grid-column-start: 2;
     grid-row-start: 13; 
+    padding: 2%;
 }
 
 .advice{
     grid-column-start: 2;
     grid-row-start: 14; 
+    padding: 2%;
 }
 
 .button{
     grid-column-start: 2;
     grid-row-start: 15; 
+    padding: 2%;
 }
 
 input{
     border: 2px solid black;
+}
+
+.weather, .duration{
+    padding-bottom: 2%;
+}
+
+.duration{
+    padding-bottom: 2%;
+
+    
+}
+
+.border_travel{
+    border-bottom: 2px solid #2C404D;
+
+}
+
+.buttonStyle{
+    margin: 2%;
+    
+    
+
+}
+
+.favorite_style{
+    color: black;
+    border: 2px solid gray;
+    border-radius: 4%;
+    height: 100%;
+    margin: 1%;
+    font-size: small;
+    width:100%;
+}
+
+.allButtons{
+    display: flex;
+    
+}
+
+.car{
+    width:25px;
+    /* margin:1px; */
+   
 }
