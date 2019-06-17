@@ -1,21 +1,39 @@
 import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
-// import UploadPage from './screen/UploadPage';
-import PlayVideo from './screen/PlayVideo';
+// import { Route, Switch } from 'react-router-dom';
 
+import UploadVideo from './screen/UploadPage/UploadVideo';
+
+// import TestProfilEnum from './screen/TestProfilEnum';
+// import ProfilDescription from './screen/ProfilDescription/ProfilDescription';
+// import UploadInformation from './screen/UploadPage/UploadTravelInformation';
+// import UploadTravelStep from './screen/UploadPage/UploadTravelStep';
 // import UploadPage from './screen/UploadPage';
 // import Home from './screen/Home';
+
+// import PlayVideo from './screen/PlayVideo';
+
 
 
 class App extends Component {
   render() {
     return (
       <>
+
+      {/* <TestProfilEnum /> */}
+        {/* <ProfilDescription /> */}
+
+        <UploadVideo />
+
+        {/* <UploadInformation /> */}
+        {/* <UploadTravelStep /> */}
+        {/* <Home /> */}
         {/* <UploadPage /> */}
-        <PlayVideo />
-        <Switch>
+
+        {/* <PlayVideo /> */}
+
+        {/* <Switch>
         <Route exact path="/" component={PlayVideo}/>
-        </Switch>
+        </Switch> */}
         {/* <Home /> */}
         {/* <UploadPage /> */}
         {/* <Switch>
@@ -25,6 +43,5 @@ class App extends Component {
     )
   }
 }
-
 
 export default App;

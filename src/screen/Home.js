@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import HomeComponents from '../components/homeComponents/HomeComponents';
 import HomeComponents from '../components/HomeComponents/HomeComponentsPart3';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
