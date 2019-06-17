@@ -33,7 +33,7 @@ input {
   display: grid;
   /* grid-template-columns: 1fr 1fr 1fr 1fr; */
   grid-template-columns: 15% 5% 20% 20% 20% 15%;
-  grid-template-rows: 15% 10% 200px 40px 15% 40px 15% 20% 10px; 
+  grid-template-rows: 15% 10% 200px 40px 15% 40px 15% 20% 10px 10px; 
   min-height: 100vh;
   /* grid-auto-rows: minmax(100px, auto); */  
 }
@@ -58,10 +58,14 @@ input {
   box-shadow: 10px 5px 5px grey;
   grid-column: 1 / span 2;
   grid-row: 2 / 5;
-  margin-left: 80px;
-  padding-left: 35px;
+  padding-left: 15%;
+  margin-left: 10%;
 }
-.uploadIcon {
+.input-upload{
+width: 80%;
+margin-left: 0;
+}
+.uploadIconVideo {
   padding-top: 10%;
   padding-left: 35%;
 }
@@ -76,7 +80,7 @@ input {
   padding-left: 5%;
 }
 .input-title {
-  width: 87%;
+  width: 93%;
   height: 25%;
 }
 
@@ -88,8 +92,9 @@ input {
   height: 200px;
 }
 .input-description {
-width: 87%;
-height: 100px;
+  width: 93%;
+  height: 100px;
+  text-orientation: upright;
 }
 .input-description {
 resize: none;
@@ -110,6 +115,7 @@ resize: none;
 }
 .input-equipment {
   height: 40%;
+  width: 80%;
 }
 .title-link1 {
   margin-left: 14%;
@@ -123,6 +129,7 @@ resize: none;
 }
 .input-link {
   height: 40%;
+  width: 80%;
 }
 
 
@@ -140,6 +147,7 @@ resize: none;
 }
 .input-equipment2 {
   height: 40%;
+  width: 80%;
 }
 .title-link2 {
   grid-row: 6;
@@ -153,6 +161,7 @@ resize: none;
 }
 .input-link2 {
   height: 40%;
+  width: 80%;
 }
 
 
@@ -169,6 +178,7 @@ resize: none;
 }
 .input-equipment3 {
   height: 40%;
+  width: 80%;
 }
 .title-link3 {
   grid-row: 6;
@@ -179,7 +189,8 @@ resize: none;
   grid-column: 5;
 }
 .input-link3 {
-  height: 40%
+  height: 40%;
+  width: 80%;
 }
 
 
@@ -194,22 +205,36 @@ resize: none;
   box-shadow: 10px 5px 5px grey;
   grid-row: 8 / span 9;
   grid-column: 3;
+  padding-left: 15%;
+  padding-top: 15%;
+  margin-top: 10%;
   margin-left: 14%;
-  margin-bottom: 90px;
+  margin-bottom: 20%;
+  margin-right: 15%;
+}
+.input-cover {
+  width: 80%;
+  margin-left: 0;
+}
+.uploadIconCover {
+  padding-left: 30%;
 }
 
 .temp {
   grid-row: 8;
-  grid-column: 6;
+  grid-column: 4;
+  margin-left: 4%;
 }
 
 .submit-div {
-  grid-row: 8;
+  grid-row: 15;
   grid-column: 5;
-  margin-left: 28%;
+  margin-left: 50%;
+  margin-right: 14%;
+
 }
 
 .submit {
-  height: 50px;
-  width: 130px;
+  height: 90%;
+  width: 90%;
 }

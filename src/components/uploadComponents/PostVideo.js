@@ -43,7 +43,7 @@ class PostVideo extends Component {
             </div>
 
             <div className="upload-link">
-              <img className="uploadIcon" src={UploadIcon} alt="upload icon"></img>
+              <img className="uploadIconVideo" src={UploadIcon} alt="upload icon"></img>
               <p>Lien de la vidéo</p>
               <input className="input-upload" type='text' name="video_link" value={video_link} onChange={this.changeHandler} />
             </div>
@@ -103,8 +103,9 @@ class PostVideo extends Component {
 
 
             <div className="cover-picture">
+              <img className="uploadIconCover" src={UploadIcon} alt="upload icon"></img>
               <p>Photo de couverture</p>
-              <input type='text' name="cover_picture" value={cover_picture} onChange={this.changeHandler} />
+              <input className="input-cover" type='text' name="cover_picture" value={cover_picture} onChange={this.changeHandler} />
             </div>
 
             <div className="temp">
