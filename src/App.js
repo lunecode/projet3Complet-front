@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 // import { Route, Switch } from 'react-router-dom';
 
-import UploadVideo from './screen/UploadPage/UploadVideo';
+// import UploadVideo from './screen/UploadPage/UploadVideo';
 
 // import TestProfilEnum from './screen/TestProfilEnum';
 // import ProfilDescription from './screen/ProfilDescription/ProfilDescription';
 // import UploadInformation from './screen/UploadPage/UploadTravelInformation';
-// import UploadTravelStep from './screen/UploadPage/UploadTravelStep';
+import UploadTravelStep from './screen/UploadPage/UploadTravelStep';
 // import UploadPage from './screen/UploadPage';
 // import Home from './screen/Home';
 
@@ -22,10 +22,10 @@ class App extends Component {
       {/* <TestProfilEnum /> */}
         {/* <ProfilDescription /> */}
 
-        <UploadVideo />
+        {/* <UploadVideo /> */}
 
         {/* <UploadInformation /> */}
-        {/* <UploadTravelStep /> */}
+        <UploadTravelStep />
         {/* <Home /> */}
         {/* <UploadPage /> */}
 
