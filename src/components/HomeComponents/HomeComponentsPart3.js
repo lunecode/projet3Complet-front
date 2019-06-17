@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-import YouTube from 'react-youtube';
+// import YouTube from 'react-youtube';
 import './HomeComponentsPart3.scss'
 
 
@@ -16,13 +16,14 @@ class Display extends Component {
 
 
     getRecentlyPublished = async () => {
-        const res = await axios.get('http://localhost:3000/videoUpload/getdatavideo')
-        this.setState({ videos: res.data })
-        console.log(this.state.videos)
+        const res = await axios.get('http://localhost:3000/video/play_video')
+        const recentlyPubVideo = res.data.slice(res.data.length - 5)
+        this.setState({ videos: recentlyPubVideo })
+        console.log('getRecentlyPublished', this.state.videos)
     }
 
     getdiscovered = async () => {
-        const res = await axios.get('http://localhost:3000/videoUpload/getdatavideo')
+        const res = await axios.get('http://localhost:3000/video/play_video')
         this.setState({ discoveredVideo: res.data })
         console.log(this.state.discoveredVideo)
     }
@@ -38,36 +39,52 @@ class Display extends Component {
         this.getdiscovered()
         this.getVideastes()
     }
-
+    
     render() {
-        const opts = {
-            height: '150',
-            width: '150',
-            playerVars: { // https://developers.google.com/youtube/player_parameters
-                autoplay: 0
-            }
-        }
-
+        let i = 1
+        // const opts = {
+            //     height: '150',
+            //     width: '150',
+            //     playerVars: { // https://developers.google.com/youtube/player_parameters
+        //         autoplay: 0
+        //     }
+        // }
+        
         return (
             <>
-            <h4>RÉCEMMENT PUBLIÉ</h4>
-            <div className="videoContainer">
-                {this.state.videos.map(video => (
+    <h4>RÉCEMMENT PUBLIÉ</h4>
+    <section className="RecentlyPublished">
+        {/* <div className="itemRecentlyPublished">
+            {this.state.videos.map(video => (
                     <div className="divVideoRecent" key={video.id_general_video}>
-                        <div>
                             <p>{video.video_title} </p>
                             <YouTube videoId={video.video_link} opts={opts} onReady={this._onReady} />
                         </div> 
-                    </div>
                 ))}
+        </div> */}
+        <div className="item1RecentlyPublished">
+            {this.state.videos.reverse().map(image => (
+                
+                <div className={"latestPublishedVideo" + i} key={i++}>
+                    {/* <p>{image.video_title}</p> */}
+                    <img src={image.cover_picture} alt={image.video_title}></img>
+                </div> 
+            ))}
+        </div>
+        <div className="item4contributor">
+            <h4>Merci à nos contributeurs</h4>
+        </div>
+    </section>
+            
+
+
+
+
+            <div className="videoContainer">
+                
             </div>  
                 <div className="imagesContainer">
-                    {this.state.discoveredVideo.map(image => (
-                        <div className="discoveredVideo" key={image.id_general_video}>
-                                <p>{image.video_title}</p>
-                                <img src={image.cover_picture} alt={image.video_title}></img>
-                        </div> 
-                    ))}
+                    
                 </div>
             <div className="videastesContainer">
                 {this.state.videastes.map(videaste => (
