@@ -6,6 +6,10 @@ import PostProfilInfo from '../components/ProfilComponents/PostProfilInfo';
 import PostEnumProfil from '../components/ProfilComponents/PostEnumProfil';
 
 
+// import PutProfilInfo from '../components/ProfilComponents/PutProfilInfo';
+import Footer from'../components/Footer';
+import Navbar from '../components/Navbar';
+
 class ProfilPage extends Component {
   render() {
     return (
@@ -17,12 +21,9 @@ class ProfilPage extends Component {
         <h1>modification des données</h1>
         <PutProfil />
         <h1>Post Ingrédients</h1>
-        <PostEnumProfil />
-
-
-        <PostProfilInfo />
-
-      </>
+       <PostEnumProfil />
+       <PostProfilInfo />
+        </>
     )
   }
 }

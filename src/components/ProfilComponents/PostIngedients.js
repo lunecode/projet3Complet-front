@@ -16,6 +16,11 @@ import Safari from '../../Images-tripitto/Icon/Ingredients/Safari.png'
 import Ville from '../../Images-tripitto/Icon/Ingredients/Ville.png'
 import Spiritualité from '../../Images-tripitto/Icon/Ingredients/Spiritualité.png'
 import Sportaventure from '../../Images-tripitto/Icon/Ingredients/Sportaventure.png'
+import En_famille from '../../Images-tripitto/Icon/Aventurier/En_famille.png'
+import plage from '../../Images-tripitto/Icon/Ingredients/Aventurier/plage.png'
+import histoireCulture from '../../Images-tripitto/Icon/Ingredients/histoirCulture.png'
+
+
 import Plaisirculinaire from '../../Images-tripitto/Icon/Ingredients/Plaisirculinaire.png'
 import Idea from "../../Images-tripitto/Icon/Idea.png"
 import axios from "axios"
@@ -26,79 +31,102 @@ import "./postIngredient.scss"
 class PostIngedients extends Component {
 
         state = {
+                ingredients:0
 
-                Aventurier_abord:"",
-                Les_copains_dabord:"",
-                Escapade_romantique:"",
-                En_famille:"",
-                Digita_nomad:"",
-                Iles_Plages:"",
-                Montagnes_Campagnes:"",
-                Safari_Animaux:"",
-                Grandes_villes:"",
-                En_foret:"",
-                Sport_Aventures:"",
-                Festivals_Musique:"",
-                Plaisir_culinaire:"",
-                Histoire_Culture:"",
-                Spiritualite:"",
-                Humanitaire:"",
-                Ecotourise:"",
-                Luxe:"",
-                En_sac_dos:"",
-                Rencontres_d_exceptions:"",
-
-         }
-         
-
-        //       handleClick= (e) =>{
-        //         e.preventDefault();
-        //         axios.post('http://localhost:3000/ingredients/insert_ingredients', this.satate)
-        //         .then(response => {
-        //          console.log(response)
-        //          })
-        //        .catch(error => {
-        //            console.log(error)
-        //         })
-        //       }
-        handleCheckbox = (e) => {
-                const target = e.target;
-                const value = target.type === 'image' ? target.checked : target.value;
-                const name = target.name;
-            
-                this.setState({
-                  [name]: value
-                });
+        }
+        submitHandler = e => {
+        e.preventDefault()
+        console.log(this.state)
+        axios.post('http://localhost:3000/profil/insert_profil', this.state)
+        .then(response => {
+        console.log(response)
+        })
+        .catch(error => {
+        console.log(error)
+        })   
+        }
+              Enum1 = () => {
+                this.setState({ ingredients: 1 })
               }
-              submitHandler = e => {
-                e.preventDefault()
-                console.log(this.state)
-                axios.post('http://localhost:3000/ingredients/insert_ingredients', this.state)
-                  .then(response => {
-                    console.log(response)
-                  })
-                  .catch(error => {
-                    console.log(error)
-                  })
-            
+              Enum2 = () => {
+                this.setState({ ingredients: 2 })
+              }
+              Enum3 = () => {
+                this.setState({ ingredients: 3 })
+              }
+              Enum4 = () => {
+                this.setState({ ingredients: 4 })
+              }
+              Enum5 = () => {
+                this.setState({ ingredients: 5})
+              }
+              Enum6 = () => {
+                this.setState({ ingredients: 6 })
+              }
+              Enum7 = () => {
+                this.setState({ ingredients: 7})
+              }
+              Enum8 = () => {
+                this.setState({ ingredients: 8})
+              }
+              Enum9 = () => {
+                this.setState({ ingredients: 9})
+              }
+              Enum10 = () => {
+                this.setState({ ingredients: 10})
+              }
+              Enum11= () => {
+                this.setState({ ingredients: 11})
+              }
+        
+              Enum12= () => {
+                this.setState({ ingredients: 12})
+              }
+              Enum13= () => {
+                this.setState({ ingredients: 13})
+              }
+               Enum14= () => {
+                this.setState({ ingredients: 14})
+              } 
+              Enum15= () => {
+                this.setState({ ingredients: 15})
+              }
+              Enum16= () => {
+                this.setState({ ingredients: 16})
+              }
+              Enum17= () => {
+                this.setState({ ingredients: 17})
+              }
+              Enum18= () => {
+                this.setState({ ingredients: 18})
+              }
+               Enum19= () => {
+                this.setState({ ingredients: 19})
+              }
+               Enum20= () => {
+                this.setState({ ingredients: 20})
+              }
+              Enum21= () => {
+                this.setState({ ingredients: 21})
               }
 
+             
+                
 render() {
-        console.log(this.state); 
+        
 return (
- 
+
 <div className="ingédients" >
+       <input className="input-travel_type" type="hidden" name="travel_type" value={this.state.ingredients} onChange={this.changeHandler} />
         <h3>Vos ingrédients pour un voyage inoubliable </h3>
         <p> <img src={Idea} alt="icon" />Selectionnez jusqu'à 5 choix</p>
 
-<div className="Ingredient_list1" onsubmit={this.submitHandler}>
+<div className="Ingredient_list1">
 
         <div className="ingredient1">
         <img src={Aventurierseul}
         name="Aventurier_abord"
-        type="image"
-        data={this.state.Aventurier_abord}
-        onClick={this.handleCheckbox}
+        onClick={this.Enum1}
         alt="Aventurier d'abord"
         />
         Aventurier seul
@@ -107,200 +135,195 @@ return (
         <div className="ingredient2">
         <img src={Copains}
         name="Les_copains_dabord"
-        value={this.state.Les_copains_dabord}
-        onChange={this.handleCheckbox}
+        onClick={this.Enum2}
         alt="Les copains d'abord"
         />
         Copains d'abord
         </div>
                 
         <div className="ingredient3">
-        <img src={DigitalNomad}
+        <img src={Romantique}
         name="Escapade_romantique"
-        value={this.state.Escapade_romantique}
-        onChange={this.handleCheckbox}
+        onClick={this.Enum3}
         alt="Escapade_romantique"
         />
-        Digital Nomad
+        Escapade romantique
         </div>
 
         <div className="ingredient4">
-        <img src={Ecotourisme}
+        <img src={En_famille}
         name="En_famille"
-        value={this.state.En_famille}
-        onChange={this.handleCheckbox}
+        onClick={this.Enum4}
         alt="En_famille"
         />
-         Ecotourisme
+        En famille
         </div>
 
         <div className="ingredient5">
-        <img src={Enforet}
+        <img src={DigitalNomad}
         name="Digita_nomad"
-        value={this.state.Digita_nomad}
-        onChange={this.handleCheckbox}
+        onClick={this.Enum5}
         alt="Digita_nomad"
         />
-        En forêt
+        Digita nomad
         </div>
 </div>
 
        <div className="Ingredient_list2">
                 <div className="ingredient6">
-                <img src={Festival}
+                <img src={plage}
                 name="Iles_Plages"
-                data={this.state.Iles_Plages}
-                onChange={this.handleCheckbox}
+                onClick={this.Enum6}
                 alt="Iles_Plages"
                 />
-                Festival
-                </div>
-
-                <div className="ingredient7">
-                <img src={Humanitaire}
-                name="Montagnes_Campagnes"
-                value={this.state.Montagnes_Campagnes}
-                onChange={this.handleCheckbox}
-                alt="Montagnes_Campagnes"
-                />
-                Humanitaire
-                </div>
-
-                <div className="ingredient8">
-                <img src={Luxe}
-                name="Safari_Animaux"
-                value={this.state.Safari_Animaux}
-                onChange={this.handleCheckbox}
-                alt="Safari_Animaux"
-                />
-                Luxe
+                Iles & Plages
                 </div>
 
                 <div className="ingredient9">
                 <img src={Montagne}
                 name="Grandes_villes"
-                value={this.state.Grandes_villes}
-                onChange={this.handleCheckbox}
+                onClick={this.Enum7}
                 alt="Grandes_villes"
                 />
                 Montagne
                 </div>
 
-                <div className="ingredient10">
-                <img src={Plage}
-                name="En_foret"
-                value={this.state.En_foret}
-                onChange={this.handleCheckbox}
-                alt="En_foret"
+                <div className="ingredient8">
+                <img src={Safari}
+                name="Safari_Animaux"
+                onClick={this.Enum8}
+                alt="Safari_Animaux"
                 />
-                Plage
+                Safari & Animaux
                 </div>
+
+                <div className="ingredient15">
+                <img src={Ville}
+                name="Histoire_Culture"
+                onClick={this.Enum9}
+                alt="Histoire_Culture"
+                />
+                Grande Ville
+                </div>
+
+                <div className="ingredient7">
+                <img src={Enforet}
+                name="En_foret"
+                onClick={this.Enum10}
+                alt="En foret"
+                />
+                En foret
+                </div>
+               
         </div>
 
-                <div className="Ingredient_list3">
-                        <div className="ingredient11">
-                        <img src={Rencontre}
-                        name="Sport_Aventures"
-                        value={this.state.Sport_Aventures}
-                        onChange={this.handleCheckbox}
-                        alt="Sport_Aventures"
-                        />
-                        Rencontre
-                        </div>
-
-                        <div className="ingredient12">
-                        <img src={Romantique}
-                        name="Festivals_Musique"
-                        value={this.state.Festivals_Musique}
-                        onChange={this.handleCheckbox}
-                        alt="Festivals_Musique"
-                        />
-                        Romantique
-                        </div>
-
-                        <div className="ingredient13">
-                        <img src={Sacados}
-                        name="Plaisir_culinaire"
-                        value={this.state.Plaisir_culinaire}
-                        onChange={this.handleCheckbox}
-                        alt="Plaisir_culinaire"
-                        />
-                        Sacados
-                        </div>
-
-                        <div className="ingredient15">
-                        <img src={Ville}
-                        name="Histoire_Culture"
-                        value={this.state.Histoire_Culture}
-                        onChange={this.handleCheckbox}
-                        alt="Histoire_Culture"
-                        />
-                        Ville
-                        </div>
-
-                        <div className="ingredient15">
-                        <img src={Ville}
-                        name="Histoire_Culture"
-                        value={this.state.Histoire_Culture}
-                        onChange={this.handleCheckbox}
-                        alt="Histoire_Culture"
-                        />
-                        Ville
-                        </div>
+                <div className="Ingredient_list3"> <div className="ingredient7">
+                <img src={Sportaventure}
+                name="Sport_Aventures"
+                onClick={this.Enum11}
+                alt="Montagnes_Campagnes"
+                />
+                Sport & Aventures
                 </div>
 
-                       <div className="Ingredient_list4">
-                                <div className="ingredient16">
-                                <img src={Spiritualité}
-                                name="Spiritualité"
-                                value={this.state.Spiritualite}
-                                onChange={this.handleCheckbox}
-                                alt="Spiritualité"
-                                />
-                                Spiritualité
-                                </div>
+                <div className="ingredient9">
+                <img src={Festival}
+                name="Sport_Aventures"
+                onClick={this.Enum12}
+                alt="Grandes_villes"
+                />
+                Festivals & Musique
+                </div>
 
-                                <div className="ingredient17">
-                                <img src={Sportaventure}
-                                name="Humanitaire"
-                                value={this.state.Humanitaire}
-                                onChange={this.handleCheckbox}
-                                alt="Humanitaire"
-                                />
-                                Sportaventure
-                                </div>
+                <div className="ingredient10">
+                <img src={Plaisirculinaire}
+                name="En_foret"
+                onClick={this.Enum13}
+                alt="En_foret"
+                />
+                Plaisir culinaire
+                </div>
 
-                                <div className="ingredient18">
-                                <img src={Plaisirculinaire}
-                                name="Ecotourise"
-                                value= {this.state.Ecotourise}
-                                onChange={this.handleCheckbox}
-                                alt="Ecotourise"
-                                />
-                                Plaisirculinaire
-                                </div>
+                <div className="ingredient11">
+                <img src={histoireCulture}
+                name="histoire_Culture"
+                onClick={this.Enum14}
+                alt="Histoire_Culture"
+                />
+                Histoire_Culture
+                </div>
+                
+                <div className="ingredient16">
+                <img src={Spiritualité}
+                name="Spiritualité"
+                onClick={this.Enum15}
+                alt="Spiritualité"
+                />
+                Spiritualité
+                </div>
+                </div>
 
-                                <div className="ingredient19">
-                                <img src={Romantique}
-                                name="Luxe"
-                                value={this.state.Luxe}
-                                alt="Luxe"
-                                />
-                                Romantique
-                                </div>
 
-                                <div className="ingredient19">
-                                <img src={Romantique}
-                                name="En_sac_dos"
-                                value={this.state.En_sac_dos}
-                                alt="En_sac_dos"
-                                />
-                                Romantique
-                                </div>
+ <div className="Ingredient_list4"> 
+ 
+           <div className="ingredient17">
+                <img src={Humanitaire}
+                name="Humanitaire"
+                onClick={this.Enum16}
+                alt="Humanitaire"
+                />
+                Humanitaire
+                </div>
+
+                <div className="ingredient15">
+                <img src={Ecotourisme}
+                name="Ecotourisme"
+                onClick={this.Enum17}
+                alt="Ecotourisme"
+                />
+                Ecotourisme
+                </div> 
+
+                <div className="ingredient18">
+                <img src={Plaisirculinaire}
+                name="Ecotourise"
+                onClick={this.Enum18}
+                alt="Ecotourise"
+                />
+                Plaisirculinaire
+                </div>
+
+                <div className="ingredient19">
+                <img src={Luxe}
+                name="Luxe"
+                onClick={this.Enum19}
+                alt="Luxe"
+                />
+                Luxe
+                </div>
+
+                <div className="ingredient19">
+                <img src={Sacados}
+                name="En_sac_dos"
+                onClick={this.Enum20}
+                alt="En_sac_dos"
+                />
+                Sac a dos
+                </div>
+
+                <div className="ingredient19">
+                <img src={Rencontre}
+                name="En_sac_dos"
+                onClick={this.Enum21}
+                alt="En_sac_dos"
+                />
+                Sac a dos
+                </div>
                                
-                        </div>
+        </div>
 
 </div>
+
 );
 }
 }
