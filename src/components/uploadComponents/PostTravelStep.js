@@ -52,8 +52,18 @@ render() {
         <h1>Itinéraire</h1>
           
           <div className="videoUser">
-
-
+          <div className="bandeau">
+            <p className="bandeau1">100% Mise en ligne des video</p>
+         
+          <img src="https://image.noelshack.com/fichiers/2019/25/2/1560880724-tripitto.png" alt="Avatar"  />
+          </div>
+          <div className="container">
+          <h4>Travel with Tripitto</h4>
+          <li>Taille maximum</li>
+          <li>Durée de la video</li>
+          <li>Résolution</li>
+          <li>Format de vidéo supportés</li>
+          </div>
           </div>
 {/*          
           this field will allow to select certain options concerning the travel with buttons */}
@@ -82,22 +92,22 @@ render() {
             {/* <input type="text" name="way_get_around" value={way_get_around} onChange={this.changeHandler} /> */}
             <div className="allButtons">
             <div className="buttonStyle">
-              <button className="favorite_style" type="button"><img className="moto" src={Car} alt="car"/>Voiture</button>
+              <button className="favorite_style" type="button"><img className="car" src={Car} alt="car"/>Voiture</button>
             </div>
             <div className="buttonStyle">
-              <button className="favorite_style" type="button"><img className="moto" src={Moto} alt="moto"/>Moto</button>
+              <button className="favorite_style" type="button"><img className="moto" src={Moto} alt="moto"/><span className="engine">Moto</span></button>
             </div>
             <div className="buttonStyle">
-            < button className="favorite_style" type="button"><img className="bike" src={Bike} alt="bike"/>Vélo</button>
+            <button className="favorite_style" type="button"><img className="bike" src={Bike} alt="bike"/><span className="engine">Vélo</span></button>
             </div>
             <div className="buttonStyle">
-              <button className="favorite_style" type="button"><img className="feet" src={Feet} alt="feet"/>A pied</button>
+              <button className="favorite_style" type="button"><img className="feet" src={Feet} alt="feet"/><span className="engine">A pied</span></button>
             </div>
             <div className="buttonStyle">
-              <button className="favorite_style" type="button"><img className="taxi" src={Taxi} alt="taxi"/>Taxi</button>
+              <button className="favorite_style" type="button"><img className="taxi" src={Taxi} alt="taxi"/><span className="engine">Taxi</span></button>
             </div>
             <div className="buttonStyle"> 
-              <button className="favorite_style" type="button"><img className="bus" src={Bus} alt="bus"/>Transport en commun</button>
+              <button className="favorite_style" type="button"><img className="bus" src={Bus} alt="bus"/><span className="engine">Transport en commun</span></button>
             </div>
           </div>
           </div>  
@@ -121,7 +131,7 @@ render() {
             <input type="text" name="accomodation1" value={accomodation1} onChange={this.changeHandler} className="link" placeholder="Mama Shelter"/>
             
             <input type="text" name="accomodation_link1" value={accomodation_link1} onChange={this.changeHandler} className="acco1"/>
-            <a href="#" >+ Ajouter lien web</a>
+            <a href="https://wildcodeschool.fr/" target="_blank" rel="noopener noreferrer"  >+ Ajouter lien web</a>
             </div>
             {/* <div className="accomodation_link">
             
@@ -131,7 +141,7 @@ render() {
             <input type="text" name="accomodation2" value={accomodation2} onChange={this.changeHandler} className="link" placeholder="OFF Paris Seine"/>
           
             <input type="text" name="accomodation_link2" value={accomodation_link2} onChange={this.changeHandler} className="acco2"/>
-            <a >Ajouter lien web2</a>
+            <a href="https://wildcodeschool.fr/" target="_blank" rel="noopener noreferrer" >Ajouter lien web2</a>
           </div>
           {/* <div>
             
@@ -139,9 +149,8 @@ render() {
           <div>
             <p>Un hébergement à recommander3</p>
             <input type="text" name="accomodation3" value={accomodation3} onChange={this.changeHandler} className="link" placeholder="Hôtel Saint-Marc ***"/>
-           
             <input type="text" name="accomodation_link3" value={accomodation_link3} onChange={this.changeHandler} className="acco3"/>
-            <a>Ajouter lien web3</a>
+            <a href="https://wildcodeschool.fr/" target="_blank" rel="noopener noreferrer" > Ajouter lien web3</a>
           </div>
           {/* <div>
             
