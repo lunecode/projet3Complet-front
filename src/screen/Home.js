@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import HomeComponents from '../components/UploadComponents/HomeComponents';
-import Getnexdestination from '../components/HomeComponents/Getnextdestination';
-import Getplan from '../components/HomeComponents/Getplan';
+import Getnextdestination from '../components/HomeComponents/Getnextdestination';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
@@ -11,8 +10,7 @@ class Home extends Component {
         return (
             <>
             <Navbar />
-            <Getnexdestination />
-            <Getplan />
+            <Getnextdestination />
             <HomeComponents />
             <Footer />
             </>
