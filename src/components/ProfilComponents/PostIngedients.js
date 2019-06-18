@@ -26,6 +26,7 @@ import "./postIngredient.scss"
 class PostIngedients extends Component {
 
         state = {
+
                 Aventurier_abord:"",
                 Les_copains_dabord:"",
                 Escapade_romantique:"",
@@ -47,35 +48,57 @@ class PostIngedients extends Component {
                 En_sac_dos:"",
                 Rencontres_d_exceptions:"",
 
+         }
+         
 
-        }
-
-
-
-              handleClick= (e) =>{
-                e.preventDefault();
+        //       handleClick= (e) =>{
+        //         e.preventDefault();
+        //         axios.post('http://localhost:3000/ingredients/insert_ingredients', this.satate)
+        //         .then(response => {
+        //          console.log(response)
+        //          })
+        //        .catch(error => {
+        //            console.log(error)
+        //         })
+        //       }
+        handleCheckbox = (e) => {
+                const target = e.target;
+                const value = target.type === 'image' ? target.checked : target.value;
+                const name = target.name;
+            
+                this.setState({
+                  [name]: value
+                });
+              }
+              submitHandler = e => {
+                e.preventDefault()
+                console.log(this.state)
                 axios.post('http://localhost:3000/ingredients/insert_ingredients', this.state)
-                .then(response => {
-                 console.log(response)
-                 })
-               .catch(error => {
-                   console.log(error)
-                })
+                  .then(response => {
+                    console.log(response)
+                  })
+                  .catch(error => {
+                    console.log(error)
+                  })
+            
               }
 
 render() {
-        console.log(this.state);
+        console.log(this.state); 
 return (
+ 
 <div className="ingédients" >
         <h3>Vos ingrédients pour un voyage inoubliable </h3>
         <p> <img src={Idea} alt="icon" />Selectionnez jusqu'à 5 choix</p>
 
-<div className="Ingredient_list1" onClick={this.handleClick}>
+<div className="Ingredient_list1" onsubmit={this.submitHandler}>
+
         <div className="ingredient1">
         <img src={Aventurierseul}
         name="Aventurier_abord"
-        value={this.state.Aventurier_abord}
-    
+        type="image"
+        data={this.state.Aventurier_abord}
+        onClick={this.handleCheckbox}
         alt="Aventurier d'abord"
         />
         Aventurier seul
@@ -85,6 +108,7 @@ return (
         <img src={Copains}
         name="Les_copains_dabord"
         value={this.state.Les_copains_dabord}
+        onChange={this.handleCheckbox}
         alt="Les copains d'abord"
         />
         Copains d'abord
@@ -94,6 +118,7 @@ return (
         <img src={DigitalNomad}
         name="Escapade_romantique"
         value={this.state.Escapade_romantique}
+        onChange={this.handleCheckbox}
         alt="Escapade_romantique"
         />
         Digital Nomad
@@ -102,7 +127,8 @@ return (
         <div className="ingredient4">
         <img src={Ecotourisme}
         name="En_famille"
-        valu={this.state.En_famille}
+        value={this.state.En_famille}
+        onChange={this.handleCheckbox}
         alt="En_famille"
         />
          Ecotourisme
@@ -112,6 +138,7 @@ return (
         <img src={Enforet}
         name="Digita_nomad"
         value={this.state.Digita_nomad}
+        onChange={this.handleCheckbox}
         alt="Digita_nomad"
         />
         En forêt
@@ -123,7 +150,7 @@ return (
                 <img src={Festival}
                 name="Iles_Plages"
                 data={this.state.Iles_Plages}
-                onClick={this.handleClick}
+                onChange={this.handleCheckbox}
                 alt="Iles_Plages"
                 />
                 Festival
@@ -133,6 +160,7 @@ return (
                 <img src={Humanitaire}
                 name="Montagnes_Campagnes"
                 value={this.state.Montagnes_Campagnes}
+                onChange={this.handleCheckbox}
                 alt="Montagnes_Campagnes"
                 />
                 Humanitaire
@@ -142,6 +170,7 @@ return (
                 <img src={Luxe}
                 name="Safari_Animaux"
                 value={this.state.Safari_Animaux}
+                onChange={this.handleCheckbox}
                 alt="Safari_Animaux"
                 />
                 Luxe
@@ -151,6 +180,7 @@ return (
                 <img src={Montagne}
                 name="Grandes_villes"
                 value={this.state.Grandes_villes}
+                onChange={this.handleCheckbox}
                 alt="Grandes_villes"
                 />
                 Montagne
@@ -160,6 +190,7 @@ return (
                 <img src={Plage}
                 name="En_foret"
                 value={this.state.En_foret}
+                onChange={this.handleCheckbox}
                 alt="En_foret"
                 />
                 Plage
@@ -171,6 +202,7 @@ return (
                         <img src={Rencontre}
                         name="Sport_Aventures"
                         value={this.state.Sport_Aventures}
+                        onChange={this.handleCheckbox}
                         alt="Sport_Aventures"
                         />
                         Rencontre
@@ -180,6 +212,7 @@ return (
                         <img src={Romantique}
                         name="Festivals_Musique"
                         value={this.state.Festivals_Musique}
+                        onChange={this.handleCheckbox}
                         alt="Festivals_Musique"
                         />
                         Romantique
@@ -189,6 +222,7 @@ return (
                         <img src={Sacados}
                         name="Plaisir_culinaire"
                         value={this.state.Plaisir_culinaire}
+                        onChange={this.handleCheckbox}
                         alt="Plaisir_culinaire"
                         />
                         Sacados
@@ -198,6 +232,17 @@ return (
                         <img src={Ville}
                         name="Histoire_Culture"
                         value={this.state.Histoire_Culture}
+                        onChange={this.handleCheckbox}
+                        alt="Histoire_Culture"
+                        />
+                        Ville
+                        </div>
+
+                        <div className="ingredient15">
+                        <img src={Ville}
+                        name="Histoire_Culture"
+                        value={this.state.Histoire_Culture}
+                        onChange={this.handleCheckbox}
                         alt="Histoire_Culture"
                         />
                         Ville
@@ -209,6 +254,7 @@ return (
                                 <img src={Spiritualité}
                                 name="Spiritualité"
                                 value={this.state.Spiritualite}
+                                onChange={this.handleCheckbox}
                                 alt="Spiritualité"
                                 />
                                 Spiritualité
@@ -218,6 +264,7 @@ return (
                                 <img src={Sportaventure}
                                 name="Humanitaire"
                                 value={this.state.Humanitaire}
+                                onChange={this.handleCheckbox}
                                 alt="Humanitaire"
                                 />
                                 Sportaventure
@@ -227,6 +274,7 @@ return (
                                 <img src={Plaisirculinaire}
                                 name="Ecotourise"
                                 value= {this.state.Ecotourise}
+                                onChange={this.handleCheckbox}
                                 alt="Ecotourise"
                                 />
                                 Plaisirculinaire
@@ -249,14 +297,7 @@ return (
                                 />
                                 Romantique
                                 </div>
-                                <div className="ingredient19">
-                                <img src={Romantique}
-                                name="Rencontres_d_exceptions"
-                                value={this.state.Rencontres_d_exceptions}
-                                alt="Rencontres_d_exceptions"
-                                />
-                                Romantique
-                                </div>
+                               
                         </div>
 
 </div>
