@@ -1,39 +1,39 @@
-// $x: 30px;
-// $y: 30px;
-// $bordRadius: 100px;
-// $border: solid;
-// $colorRing: black;
-// $margLeft: -20px;
-// $margTop: -5px;
-// $borderWidthRings: 1px;
-// $shadow: 0 0 2em black;
+$ColorFont: #2C404D;
+$colorbackground: #2C404D;
+$colorBorder: #1BA2A2;
 
-// .Rings{
-//   display: flex;
-//   justify-content: center;
-// }
+.ContainertitleRecentlyPublished {
+    display: grid;
+    grid-template-columns: 62% 1.7% 1% 35%;
+    padding-left: 3%;
+    align-items: center;
 
+    .titleRecentlyPublished {
+        color: $ColorFont;
+        padding-bottom: 1%;
+        
+    }
+}
 
-// @mixin RingsMixin ($x, $y, $bordRadius, $border, $borderWidthRings, $colorRing, $shadow, $margLeft, $margTop) {
-//     width : $x ;
-//     height : $y ;   
-//     border-radius: $bordRadius;
-//     border: $border;
-//     border-width: $borderWidthRings;
-//     color: $colorRing;
-//     box-shadow: $shadow;
-//     margin-left: $margLeft;
-//     margin-top: $margTop;
-// }
+.TitlepublishedBorder {
+    display: grid;
+    grid-template-columns: 65% 35%;
+    padding-left: 3%;
+
+    .TitlepublishedBorderBottom {
+        border-block-end: solid 1px $colorbackground;
+    }
+}
 
 .item1RecentlyPublished {
     display: grid;
     grid-template-columns: 35% 15% 15% 15%;
-    grid-template-rows: 15vh 15vh;
-    grid-template-areas: "published1 published2 published3"
-"published1 published4 published5";
+    grid-template-rows: 16vh 16vh;
+    grid-template-areas: "published1 published2 published3" 
+    "published1 published4 published5";
     grid-auto-flow: row; 
     padding-left: 3%;
+    margin-top: 1%;
 }
 
 .latestPublishedVideo1  {
@@ -42,15 +42,36 @@
         img {
             height: 100%;
             width: 100%;
+            filter: brightness(60%);
+            -webkit-filter: brightness(60%);
+        }
+        .titleVideo {
+            position: relative;
+            top: -60px;
+            color: white;
+            padding-left: 2%;
+            font-size: 22px;
+            font-weight: bold;
         }
 }
 
 .latestPublishedVideo2  {
     grid-area: published2;
+    padding-right: 1%;
     padding-bottom: 1%;
     img {
         height: 100%;
         width: 100%;
+        filter: brightness(60%);
+        -webkit-filter: brightness(60%);
+    }
+    .titleVideo {
+        position: relative;
+        top: -40px;
+        color: white;
+        padding-left: 2%;
+        font-size: 12px;
+        font-weight: bold;
     }
 
 }
@@ -58,9 +79,20 @@
 .latestPublishedVideo3  {
     grid-area: published3;
     padding-bottom: 1%;
+    padding-left: 1%;
     img {
         height: 100%;
         width: 100%;
+        filter: brightness(60%);
+        -webkit-filter: brightness(60%);
+    }
+    .titleVideo {
+        position: relative;
+        top: -40px;
+        color: white;
+        padding-left: 2%;
+        font-size: 12px;
+        font-weight: bold;
     }
     
 }
@@ -68,9 +100,20 @@
 .latestPublishedVideo4  {
     grid-area: published4;
     padding-top: 1%;
+    padding-right: 1%;
     img {
         height: 100%;
         width: 100%;
+        filter: brightness(60%);
+        -webkit-filter: brightness(60%);
+    }
+    .titleVideo {
+        position: relative;
+        top: -40px;
+        color: white;
+        padding-left: 2%;
+        font-size: 12px;
+        font-weight: bold;
     }
     
 }
@@ -78,9 +121,111 @@
 .latestPublishedVideo5  {
     grid-area: published5;
     padding-top: 1%;
+    padding-left: 1%;
     img {
         height: 100%;
         width: 100%;
+        filter: brightness(60%);
+        -webkit-filter: brightness(60%);
+    }
+    .titleVideo {
+        position: relative;
+        top: -40px;
+        color: white;
+        padding-left: 2%;
+        font-size: 12px;
+        font-weight: bold;
     }
     
+}
+
+.marginUncover {
+    margin-top:2%;
+}
+
+.imageUncover {
+display: grid;
+grid-template-columns: 33% 33%;
+grid-template-rows: 37vh 37vh;
+grid-template-areas: "Uncover1 Uncover2" 
+"Uncover3 Uncover4";
+padding-left: 3%;
+margin-top: 1%;
+
+    .UncoverBorder1 {
+        grid-area: Uncover1;
+        padding-right: 1%;
+        img {
+            height: 100%;
+            width: 100%;
+            filter: brightness(60%);
+            -webkit-filter: brightness(60%);
+        }
+        .titleUncover {
+            position: relative;
+            top: -215px;
+            color: white;
+
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+        }
+    }
+}
+
+.UncoverBorder2 {
+    grid-area: Uncover2;
+    padding-left: 1%;
+    img {
+        height: 100%;
+        width: 100%;
+        filter: brightness(60%);
+        -webkit-filter: brightness(60%);
+    }
+    .titleUncover {
+        position: relative;
+        top: -215px;
+        color: white;
+        font-size: 40px;
+        font-weight: bold;
+        text-align: center;
+    }
+}
+
+.UncoverBorder3 {
+    grid-area: Uncover3;
+    padding-right: 1%;
+    img {
+        height: 100%;
+        width: 100%;
+        filter: brightness(60%);
+        -webkit-filter: brightness(60%);
+    }
+    .titleUncover {
+        position: relative;
+        top: -215px;
+        color: white;
+        font-size: 40px;
+        font-weight: bold;
+        text-align: center;
+    }
+}
+
+.UncoverBorder4 {
+    grid-area: Uncover4;
+    padding-left: 1%;
+    img {
+        height: 100%;
+        width: 100%;
+        filter: brightness(60%);
+        -webkit-filter: brightness(60%);
+    }
+    .titleUncover {
+        position: relative;
+        top: -215px;
+        color: white;
+        font-size: 40px;
+        font-weight: bold;
+        text-align: center;
+    }
 }
