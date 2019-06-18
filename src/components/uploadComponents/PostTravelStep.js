@@ -4,6 +4,11 @@ import './PostTravelStep.css'
 import Village from '../../Images-tripitto/Icon/etape/active/village.png';
 import Weather from '../../Images-tripitto/Icon/etape/meteo/nuagegris.png';
 import Car from '../../Images-tripitto/Icon/transport/voiture.png';
+import Moto from '../../Images-tripitto/Icon/Voyage/Moto.png';
+import  Bike from '../../Images-tripitto/Icon/Voyage/velo.png';
+import  Feet from '../../Images-tripitto/Icon/Voyage/Pieds.png';
+import  Taxi from '../../Images-tripitto/Icon/transport/taxi.png';
+import  Bus from '../../Images-tripitto/Icon/Voyage/Bus.png';
 
 // UPLOAD PAGE 2 / TRAVEL STEP
 // ALLOW TO INSERT DATA IN "TRAVEL STEP" TABLE
@@ -77,126 +82,111 @@ render() {
             {/* <input type="text" name="way_get_around" value={way_get_around} onChange={this.changeHandler} /> */}
             <div className="allButtons">
             <div className="buttonStyle">
-              <button className="favorite_style" type="button"><img className="car" src={Car} alt="car"/>Voiture</button>
+              <button className="favorite_style" type="button"><img className="moto" src={Car} alt="car"/>Voiture</button>
             </div>
             <div className="buttonStyle">
-              <button className="favorite_style" type="button">Moto</button>
+              <button className="favorite_style" type="button"><img className="moto" src={Moto} alt="moto"/>Moto</button>
             </div>
             <div className="buttonStyle">
-            < button className="favorite_style" type="button">Vélo</button>
+            < button className="favorite_style" type="button"><img className="bike" src={Bike} alt="bike"/>Vélo</button>
             </div>
             <div className="buttonStyle">
-              <button className="favorite_style" type="button">A pied</button>
+              <button className="favorite_style" type="button"><img className="feet" src={Feet} alt="feet"/>A pied</button>
             </div>
             <div className="buttonStyle">
-              <button className="favorite_style" type="button">Taxi</button>
+              <button className="favorite_style" type="button"><img className="taxi" src={Taxi} alt="taxi"/>Taxi</button>
             </div>
             <div className="buttonStyle"> 
-              <button className="favorite_style" type="button">Transport en commun</button>
+              <button className="favorite_style" type="button"><img className="bus" src={Bus} alt="bus"/>Transport en commun</button>
             </div>
           </div>
           </div>  
           <div  className="astuce">
-            <p>Astuce à ajouter sur le moyen de déplacement</p>
-            <input type="text" name="way_get_around_comment" value={way_get_around_comment} onChange={this.changeHandler} />
+            {/* <p>Astuce à ajouter sur le moyen de déplacement</p> */}
+            <input type="text" name="way_get_around_comment" value={way_get_around_comment} onChange={this.changeHandler} placeholder="Une astuce à ajouter" className="astuce1"/>
           </div>
           <div className="district">
-            
-            <p>Meilleurs quartier ou habiter1</p>
-            <input type="text" name="district1" value={district1} onChange={this.changeHandler} />
-            <p>Meilleurs quartier ou habiter2</p>
-            <input type="text" name="travedistrict2l_type" value={district2} onChange={this.changeHandler} />
-            <p>Meilleurs quartier ou habiter3</p>
-            <input type="text" name="district3" value={district3} onChange={this.changeHandler} />
+            <p>Meilleurs quartier ou habiter</p>
+            <input type="text" name="district1" value={district1} onChange={this.changeHandler} className="dist1" placeholder="Quartier Latin"/>
+            <input type="text" name="travedistrict2l_type" value={district2} onChange={this.changeHandler} className="dist2" placeholder="Le Marais"/>
+            <input type="text" name="district3" value={district3} onChange={this.changeHandler} className="dist3" placeholder="Montmartre"/>
           </div>
           <div className="comment">
             <p>Un commentaire à ajouter sur le quartier ou habiter</p>
-            <input type="text" name="district_comment" value={district_comment} onChange={this.changeHandler} />
+            <input type="text" name="district_comment" value={district_comment} onChange={this.changeHandler} className="comment1" placeholder="Un commentaire à rajouter"/>
           </div>
           <div className="accomodation">
             <div>
             <p >Un hébergement à recommander</p>
-            <input type="text" name="accomodation1" value={accomodation1} onChange={this.changeHandler} />
+            <input type="text" name="accomodation1" value={accomodation1} onChange={this.changeHandler} className="link" placeholder="Mama Shelter"/>
+            
+            <input type="text" name="accomodation_link1" value={accomodation_link1} onChange={this.changeHandler} className="acco1"/>
+            <a href="#" >+ Ajouter lien web</a>
             </div>
-            <div className="accomodation_link">
-            <p>Ajouter lien web</p>
-            <input type="text" name="accomodation_link1" value={accomodation_link1} onChange={this.changeHandler} />
-          </div>
+            {/* <div className="accomodation_link">
+            
+          </div> */}
           <div>
             <p>Un hébergement à recommander2</p>
-            <input type="text" name="accomodation2" value={accomodation2} onChange={this.changeHandler} />
+            <input type="text" name="accomodation2" value={accomodation2} onChange={this.changeHandler} className="link" placeholder="OFF Paris Seine"/>
+          
+            <input type="text" name="accomodation_link2" value={accomodation_link2} onChange={this.changeHandler} className="acco2"/>
+            <a >Ajouter lien web2</a>
           </div>
-          <div>
-            <p>Ajouter lien web2</p>
-            <input type="text" name="accomodation_link2" value={accomodation_link2} onChange={this.changeHandler} />
-          </div>
+          {/* <div>
+            
+          </div> */}
           <div>
             <p>Un hébergement à recommander3</p>
-            <input type="text" name="accomodation3" value={accomodation3} onChange={this.changeHandler} />
+            <input type="text" name="accomodation3" value={accomodation3} onChange={this.changeHandler} className="link" placeholder="Hôtel Saint-Marc ***"/>
+           
+            <input type="text" name="accomodation_link3" value={accomodation_link3} onChange={this.changeHandler} className="acco3"/>
+            <a>Ajouter lien web3</a>
           </div>
-          <div>
-            <p>Ajouter lien web3</p>
-            <input type="text" name="accomodation_link3" value={accomodation_link3} onChange={this.changeHandler} />
+          {/* <div>
+            
+          </div> */}
           </div>
-          </div>
-          
           <div className="restaurant">
-            <div>
             <p>Vos restaurants favoris</p>
-            <input type="text" name="restaurant1" value={restaurant1} onChange={this.changeHandler} />
-            </div>
-            <div>
-            <p>Vos restaurants favoris2</p>
-            <input type="text" name="restaurant2" value={restaurant2} onChange={this.changeHandler} />
-          </div>
-          <div>
-            <p>Vos restaurants favoris3</p>
-            <input type="text" name="restaurant3" value={restaurant3} onChange={this.changeHandler} />
-          </div>
+            <input type="text" name="restaurant1" value={restaurant1} onChange={this.changeHandler} className="rest" placeholder="Brasserie Barbes"/>
+            {/* <p>Vos restaurants favoris2</p> */}
+            <input type="text" name="restaurant2" value={restaurant2} onChange={this.changeHandler} className="rest" placeholder="Terasse Hôtel Montmartre"/>
+            {/* <p>Vos restaurants favoris3</p> */}
+            <input type="text" name="restaurant3" value={restaurant3} onChange={this.changeHandler} className="rest" placeholder="Chez Fernand"/>
           </div>
 
             <div className="bar">
-              <div>
             <p>Meilleurs lieux pour faire la fete</p>
-            <input type="text" name="bar1" value={bar1} onChange={this.changeHandler} />
-            </div>
-            <div>
-            <p>Meilleurs lieux pour faire la fete2</p>
-            <input type="text" name="bar2" value={bar2} onChange={this.changeHandler} />
-          </div>
-          <div>
-            <p>Meilleurs lieux pour faire la fete3</p>
-            <input type="text" name="bar3" value={bar3} onChange={this.changeHandler} />
-          </div>
+            <p className="bar2">Pensez aux bars, rooftop, boîtes de nuit etc...</p>
+            <input type="text" name="bar1" value={bar1} onChange={this.changeHandler} className="bar1" placeholder="Little Red Door"/>
+            {/* <p>Meilleurs lieux pour faire la fete2</p> */}
+            <input type="text" name="bar2" value={bar2} onChange={this.changeHandler} className="bar1" placeholder="La Mazcaleria"/>
+            {/* <p>Meilleurs lieux pour faire la fete3</p> */}
+            <input type="text" name="bar3" value={bar3} onChange={this.changeHandler} className="bar1" placeholder="Le Perchoir"/>
           </div>
           
           <div className="must_visit"> 
-          <div>
             <p>Les incontournables à visiter</p>
-            <input type="text" name="must_visit1" value={must_visit1} onChange={this.changeHandler} />
-          </div>
-          <div>
-            <p>Les incontournables à visiter2</p>
-            <input type="text" name="must_visit2" value={must_visit2} onChange={this.changeHandler} />
-          </div>
-          <div>
-            <p>Les incontournables à visiter3</p>
-            <input type="text" name="must_visit3" value={must_visit3} onChange={this.changeHandler} />
-          </div>
+            <p className="bar2">Pensez aux musées, site historique, parcs, marchés, plages, point de vue...</p>
+            <input type="text" name="must_visit1" value={must_visit1} onChange={this.changeHandler} className="visit" placeholder="Château de Versailles"/>
+            {/* <p>Les incontournables à visiter2</p> */}
+            <input type="text" name="must_visit2" value={must_visit2} onChange={this.changeHandler} className="visit" placeholder="Sacrée Coeur"/>
+            {/* <p>Les incontournables à visiter3</p> */}
+            <input type="text" name="must_visit3" value={must_visit3} onChange={this.changeHandler} className="visit" placeholder="Musée D'Orsay"/>
+
           </div>
           <div className="sportActivity">
-            <div>
             <p>Les activités sportives à ne pas manquer</p>
-            <input type="text" name="sport_activity1" value={sport_activity1} onChange={this.changeHandler} />
-          </div>
-          <div>
-            <p>Les activités sportives à ne pas manquer2</p>
-            <input type="text" name="sport_activity2" value={sport_activity2} onChange={this.changeHandler} />
-          </div>
-          <div>
-            <p>Les activités sportives à ne pas manquer3</p>
-            <input type="text" name="sport_activity3" value={sport_activity3} onChange={this.changeHandler} />
-          </div>
+            <select className="choice">
+            <option selected></option>
+            <option type="text" name="sport_activity1" value={sport_activity1} onChange={this.changeHandler} >Football</option>
+           
+            {/* <p>Les activités sportives à ne pas manquer2</p> */}
+            <option type="text" name="sport_activity2" value={sport_activity2} onChange={this.changeHandler} >Natation</option>
+            {/* <p>Les activités sportives à ne pas manquer3</p> */}
+            <option type="text" name="sport_activity3" value={sport_activity3} onChange={this.changeHandler}>Tennis</option>
+            </select>
           </div>
           <div className="sportActivityComment">
             <p>Une adresse d'activité sportive à partager</p>
