@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 // import PutTravelInformation from '../../components/UploadComponents/PutTravelInformation';
 // import DeleteTravelInformation from '../../components/UploadComponents/DeleteTravelInformation';
 import PostTravelInformation from '../../components/uploadComponents/PostTravelInformation';
-import Navbar from '../../components/Navbar';
-import Footer from '../../components/Footer';
+// import Navbar from '../../components/Navbar';
+// import Footer from '../../components/Footer';
 
 
 
@@ -14,9 +14,7 @@ class UploadInformation extends Component {
       <>
         {/* <h1>Affichage de la table travel information :</h1>
         <GetTravelInformation /> */}
-        <Navbar />
         <PostTravelInformation />
-        <Footer />
         {/* <h1>Modification de la table travel information :</h1>
         <PutTravelInformation /> */}
         {/* <h1>Suppression des données de la table Travel information</h1>

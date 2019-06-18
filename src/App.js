@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
+import { Route, BrowserRouter, Switch } from 'react-router-dom';
+
 import UploadInformation from './screen/UploadPage/UploadTravelInformation';
-// import { Route, Switch } from 'react-router-dom';
-
-// import UploadVideo from './screen/UploadPage/UploadVideo';
-
-
-// import TestProfilEnum from './screen/TestProfilEnum';
-// import ProfilDescription from './screen/ProfilDescription/ProfilDescription';
+import UploadVideo from './screen/UploadPage/UploadVideo';
 // import UploadTravelStep from './screen/UploadPage/UploadTravelStep';
-// import UploadPage from './screen/UploadPage';
-// import Home from './screen/Home';
 
+
+// import ProfilDescription from './screen/ProfilDescription/ProfilDescription';
+// import Home from './screen/Home';
 // import PlayVideo from './screen/PlayVideo';
+
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 
 
@@ -20,28 +20,31 @@ class App extends Component {
     return (
       <>
 
-      {/* <TestProfilEnum /> */}
-        {/* <ProfilDescription /> */}
-
+        <Navbar />
+        {/* <UploadTravelStep /> */}
         {/* <UploadVideo /> */}
-
         <UploadInformation />
 
-        {/* <UploadTravelStep /> */}
-        {/* <Home /> */}
-        {/* <UploadPage /> */}
 
+        {/* <Home /> */}
         {/* <PlayVideo /> */}
-
-        {/* <Switch>
-        <Route exact path="/" component={PlayVideo}/>
-        </Switch> */}
         {/* <Home /> */}
-        {/* <UploadPage /> */}
-        {/* <Switch>
-          <Route exact path="/" component={Home} />
-        </Switch> */}
+        {/* <ProfilDescription /> */}
+        <Footer />
       </>
+
+
+
+      // <BrowserRouter>
+      //   <div>
+      //     <Switch>
+      //       <Route path="/" component={UploadVideo} exact></Route>
+      //       <Route path="/uploadInformation" component={UploadInformation} ></Route>
+      //       <Route component={Error}></Route>
+      //     </Switch>
+      //   </div>
+      // </BrowserRouter>
+
     )
   }
 }

@@ -28,82 +28,287 @@ input {
 .grid {
   background-color: #F4F4F4;
   display: grid;
-  grid-template-columns: 30% 20% 20% 20% 10%;
+  grid-template-columns: 15% 5% 15% 15% 15% 15% 20%;
   grid-template-rows: 15% 15% 15% 15% 15% 10% 15%;
-  grid-template-areas:  
-    "video_link empty empty empty empty"
-    "video_link continent country . ."
-    "video_link month duration . ."
-    ". step step step ."
-    ". currency accomodation activities ."
-    ". travel_type travel_type travel_type ."
-    ". temp save preview next "
-  ;
+
 }
 
 
+
+/* Style of the page */
+
 .video {
-  width: 80%;
+  position: absolute;
+  margin-top: 2%;
+  margin-left: 1%;
+  width: 16%;
+  height: 25%;
+  box-shadow: 10px 5px 5px grey;
+}
+
+.video_link {
+  grid-column: 1;
+  grid-row: 1 / span 3;
 }
 
 .empty {
-  grid-area: empty;
+  grid-column: 1 / span 6;
+  margin-top: 10%;
 }
 
 .continent {
-  grid-area: continent;
+  margin-left: 30%;
+  grid-row: 3;
+  grid-column: 3;
+}
+.input-continent {
+  width: 150%;
+  height: 30%;
 }
 
 .country {
-  grid-area: country;
+  grid-row: 3;
+  grid-column: 5;
+}
+.input-country {
+  width: 110%;
+  height: 30%;
 }
 
+
+.moreCountry {
+  grid-row: 3;
+  grid-column: 6 / span 7;
+  margin-top: 5%;
+  margin-left: 20%;
+}
+.world {
+  grid-row: 3;
+  grid-column: 6 / span 7;
+  margin-top: 10%;
+  margin-left: 20%;
+}
+
+
+.title-month {
+  grid-row: 4;
+  grid-column: 3;
+  margin-left: 30%;
+  margin-top: 20%;
+}
 .month {
-  grid-area: month;
+grid-row: 5;
+grid-column: 3;
+margin-bottom: 10%;
+margin-left: 30%;
+}
+.input-month {
+  width: 100%;
+  height: 100%;
 }
 
+
+.title-duration {
+  grid-row: 4;
+  grid-column: 5;
+  margin-top: 20%;
+}
 .duration {
-  grid-area: duration;
+  grid-row: 5;
+  grid-column: 5;
+  margin-top: 3px;
+}
+.input-duration {
+  width: 50px;
+}
+.day {
+  grid-row: 5;
+  grid-column: 5;
+  margin-top: -5%;
+  margin-left: 30%;
 }
 
 .step {
-  grid-area: step;
+  grid-row: 6;
+  grid-column: 3 / span 4;
+  margin-left: 7.5%;
+}
+.input-step {
+  width: 77%;
 }
 
-.currency {
-  grid-area: currency;
+
+.euros {
+  grid-row: 7;
+  grid-column: 3;
+  margin-top: 15%;
+  margin-left: 28%;
 }
 
+.dollar {
+  grid-row: 7;
+  grid-column: 3;
+  margin-top: 15%;
+  margin-left: 70%;
+}
+
+
+.title-accomodation{
+  grid-row: 7;
+  grid-column: 4;
+  margin-top: 11%;
+  margin-left: 50%;
+}
 .accomodation {
-  grid-area: accomodation;
+  grid-row: 7;
+  grid-column: 5;
+  margin-top: 17%;
+}
+.input-accomodation {
+  width: 20%;
 }
 
-.activities {
-  grid-area: activities;
+
+.title-activities {
+  grid-row: 7;
+  grid-column: 5;
+  margin-left: 45%;
+  margin-top: 12%;
 }
+.activities {
+  grid-row: 7;
+  grid-column: 5 / span 6;
+  margin-left: 30%;
+  margin-top: 5%;
+}
+.input-activities {
+  width: 7%;
+}
+
+
+.title-type {
+  grid-row: 8;
+  grid-column: 3 / span 5;
+  margin-left: 6%;
+}
+
 
 .travel_type {
-  grid-area: travel_type;
+  grid-row: 9;
+  grid-column: 3;
+  margin-left: 30%;
+  margin-top: 5%;
+  border: 2px solid #C2C2C2;
+  height: 40%;
+  width: 70%;
+  border-radius: 5px;
+}
+.title-enum1 {
+  grid-row: 9;
+  grid-column: 3;
+  margin-left: 55%;
+  font-size: 90%;
+  margin-top: 2%;
 }
 
-.temp {
-  grid-area: temp;
+
+.travel_type2 {
+  grid-row: 9;
+  grid-column: 4;
+  margin-left: 10%;
+  margin-top: 5%;
+  border: 2px solid #C2C2C2;
+  height: 40%;
+  width: 70%;
+  border-radius: 5px;
+}
+.title-enum2 {
+  grid-row: 9;
+  grid-column: 4;
+  margin-left: 40%;
+  font-size: 90%;
+  margin-top: 2%;
+}
+
+.travel_type3 {
+  grid-row: 9;
+  grid-column: 5;
+  margin-top: 5%;
+  border: 2px solid #C2C2C2;
+  height: 40%;
+  width: 70%;
+  border-radius: 5px;
+}
+.title-enum3 {
+  grid-row: 9;
+  grid-column: 5;
+  margin-left: 30%;
+  font-size: 90%;
+  margin-top: 2%;
+}
+
+.travel_type4 {
+  grid-row: 9;
+  grid-column: 6;
+  margin-top: 5%;
+  border: 2px solid #C2C2C2;
+  height: 40%;
+  width: 80%;
+  border-radius: 5px;
+}
+.travel_type4 img {
+  margin-top: 2%;
+}
+
+.title-enum4 {
+  grid-row: 9;
+  grid-column: 6;
+  margin-left: 25%;
+  font-size: 90%;
+  margin-top: 2%;
+}
+
+
+
+
+
+.fk-temp {
+  grid-column: 3;
+  grid-row: 10;
+  margin-left: 27%;
+  margin-bottom: 10%;
+  padding-bottom: 20%;
 }
 
 .save {
-  grid-area: save;
-  width: 70%;
-  height: 25%;
+  grid-row: 9;
+  grid-column: 4;
+  margin-left: 80%;
+  margin-top: 40%;
+  width: 60%;
+  height: 30%;
+  border-color: #00C9D4;
+  color: #00C9D4;
 }
 
 .preview {
-  grid-area: preview;
-  width: 70%;
-  height: 25%;
+  grid-row: 9;
+  grid-column: 5;
+  margin-left: 50%;
+  margin-top: 40%;
+  width: 60%;
+  height: 30%;
+  border-color: #00C9D4;
+  color: #00C9D4;
 }
 
 .next {
-  grid-area: next;
-  width: 70%;
-  height: 25%;
+  grid-row: 9;
+  grid-column: 6;
+  margin-left: 20%;
+  margin-top: 40%;
+  width: 60%;
+  height: 30%;
+  background-color: #00C9D4;
+  color: white;
 }

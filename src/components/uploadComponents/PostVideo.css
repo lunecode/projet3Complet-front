@@ -23,6 +23,10 @@ input {
   border-radius: 5px;
 }
 
+textarea {
+  border-radius: 5px;
+  resize:none;
+}
 
 
 
@@ -37,7 +41,6 @@ input {
   min-height: 100vh;
   /* grid-auto-rows: minmax(100px, auto); */  
 }
-
 
 
 
@@ -89,7 +92,6 @@ margin-left: 0;
   grid-row: 3;
   grid-column: 3 / 6;
   padding-left: 5%;
-  height: 200px;
 }
 .input-description {
   width: 93%;

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import { NavLink } from 'react-router-dom'
 
 import './PostVideo.css'
 import UploadIcon from '../../Images-tripitto/Icon/Upload-Video.png'
@@ -51,7 +52,8 @@ class PostVideo extends Component {
 
             <div className="title">
               <p>Titre*</p>
-              <input className="input-title" placeholder="Escapade romantique dans la ville des lumières" type='text' name="video_title" value={video_title} onChange={this.changeHandler} />
+              <textarea placeholder="" name="title" rows="2" cols="134"></textarea>
+              {/* <input className="input-title" placeholder="Escapade romantique dans la ville des lumières" type='text' name="video_title" value={video_title} onChange={this.changeHandler} /> */}
             </div>
 
 
@@ -59,7 +61,9 @@ class PostVideo extends Component {
 
             <div className="description">
               <p>Description</p>
-              <input className="input-description" placeholder="Une description qui donne envie, très envie" type='text' name="video_description" value={video_description} onChange={this.changeHandler} />
+              <textarea placeholder="Une description qui donne envie, très envie" name="description" rows="8" cols="135"></textarea>
+              <br></br>
+              {/* <input className="input-description" placeholder="Une description qui donne envie, très envie" type='text' name="video_description" value={video_description} onChange={this.changeHandler} /> */}
             </div>
 
 
@@ -121,7 +125,7 @@ class PostVideo extends Component {
             </div>
 
             <div className="next-div">
-              <button className="next-button" type="button">SUIVANT</button>
+              <button className="next-button" type="button"><NavLink exact to="/uploadInformation"> SUIVANT</NavLink></button>
             </div>
 
             <div className="submit-div">

@@ -2,25 +2,53 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Youtube from 'react-youtube';
 
+import { NavLink } from 'react-router-dom'
 
+import family from '../../Images-tripitto/Icon/Aventurier/en famille.png'
+import couple from '../../Images-tripitto/Icon/Aventurier/en couple.png'
+import friend from '../../Images-tripitto/Icon/Aventurier/entre ami.png'
+import alone from '../../Images-tripitto/Icon/Aventurier/seul.png'
 import './PostTravelInformation.css';
 
 
 // UPLOAD PAGE 2 / TRAVEL INFORMATION
 // ALLOW TO INSERT DATA IN "TRAVEL INFORMATION" TABLE
-// TEST OK
 
 
 // MUST SEE FOR THE "TRAVEL_TYPE" COLUMN TO CHANGE TYPE TO ENUM ON NOT VARCHAR ==> DONE, NEED INFORM OTHER TO DO THE CHANGE
 
-// REVIEW THE TRAVEL_STEP AND TRAVEL_INFORMATION TABLES AS THE TRAVEL_INFORMATION TABLE COLUMNS:
-// CURRENCY, ACCOMODATION_BUDGET, ACTIVITIES_BUDGET, TRAVEL_TYPE ARE BASED ON ITINERARY FROM THE TRAVEL_STEP TABLE
+// ALTER TABLE FOR DELETE "DEPARTURE_YEAR" COLUMN ==> DONE, NEED INFORM OTHER TO DO THE CHANGE
+
+// MORE THAN A COUNTRY AND WORLD TOUR VISIBLE IN FRONT BUT DOES NOT INTERACT WITH THE BDD
 
 
 class PostTravelInformation extends Component {
   state = {
-    videos: []
+    videos: [],
+    travel_type: 0
   }
+
+
+
+  type1 = () => {
+    this.setState({ travel_type: 1 })
+  }
+
+  type2 = () => {
+    this.setState({ travel_type: 2 })
+  }
+
+
+  type3 = () => {
+    this.setState({ travel_type: 3 })
+  }
+
+
+  type4 = () => {
+    this.setState({ travel_type: 4 })
+  }
+
+
 
   changeHandler = (e) => {
     this.setState({ [e.target.name]: e.target.value })
@@ -31,6 +59,7 @@ class PostTravelInformation extends Component {
     this.setState({ videos: res.data })
     console.log(this.state.videos)
   }
+
   componentDidMount() {
     this.getVideo()
   }
@@ -46,92 +75,182 @@ class PostTravelInformation extends Component {
         console.log(error)
       })
 
+
+
   }
+
 
   render() {
     let i = 1
-    const { continent, countries, departure_month, departure_year, travel_duration, nb_step, currency, accomodation_budget, activities_budget, travel_type, general_video_id_general_video } = this.state
+    const { continent, countries, travel_duration, departure_month, nb_step, currency, accomodation_budget, activities_budget, travel_type, general_video_id_general_video, } = this.state
     return (
-      <form onSubmit={this.submitHandler}>
-        <div className='grid'>
 
+      <>
+        {this.state.videos.map(item => (
+          <div className="video_link" key={i++}>
+            <Youtube className="video" videoId={item.video_link} onReady={this._onReady}
+            />
+          </div>
+        ))}
 
+        <form onSubmit={this.submitHandler}>
+          <div className='grid'>
 
-          {this.state.videos.map(item => (
-            <div className="video_link" key={i++}>
-              <Youtube className="video" videoId={item.video_link} onReady={this._onReady}
-              />
+            <div className='empty'></div>
+
+            <div className="continent">
+              <p>Destination*</p>
+              <input className="input-continent" type='text' name="continent" placeholder='continent' value={continent} onChange={this.changeHandler} />
             </div>
-          ))}
 
-          <div className='empty'></div>
+            <div className="country">
+              <p>Pays</p>
+              <input className="input-country" type='text' name="countries" placeholder="country" value={countries} onChange={this.changeHandler} />
+            </div>
+
+            <div className="moreCountry">
+              <input type="checkbox" id="moreCountry" name="moreCountry" />
+              <label for="moreCountry">Plus d'un pays </label>
+            </div>
+
+            <div className="world">
+              <input type="checkbox" id="world" name="world" />
+              <label for="world">Tour du monde </label>
+            </div>
+
+            <div className="title-month">
+              <p>Date de départ*</p>
+            </div>
+            <div className="month">
+              <input className="input-month" type="date" min="1990-01-01" max="2050-01-01" name="departure_month" value={departure_month} onChange={this.changeHandler} />
+
+              {/* <input className="input-month" type='text' name="departure_month" value={departure_month} onChange={this.changeHandler} /> */}
+            </div>
 
 
 
-          <div className="continent">
-            <p>Destination</p>
-            <input className="input-continent" type='text' name="continent" placeholder='continent' value={continent} onChange={this.changeHandler} />
-          </div>
 
-          <div className="country">
-            <p>Pays</p>
-            <input className="input-country" type='text' name="countries" placeholder="country" value={countries} onChange={this.changeHandler} />
-          </div>
+            <div className="title-duration">
+              <p>Durée du voyage*</p>
+            </div>
+            <div className="duration">
+              <input className="input-duration" type='number' name="travel_duration" value={travel_duration} onChange={this.changeHandler} />
+            </div>
 
-          <div className="month">
-            <p>Mois de départ*</p>
-            <input type="date" min="1990-01-01" max="2050-01-01" name="the_date" />
-            {/* <input className="input-month" type='text' name="departure_month" value={departure_month} onChange={this.changeHandler} /> */}
-          </div>
+            <div className="day">
+              <p>jours</p>
+            </div>
+
+            <div className="step">
+              <p>Itinéraire*</p>
+              <input className="input-step" type='number' name="nb_step" value={nb_step} onChange={this.changeHandler} />
+            </div>
 
 
-          {/* <div className="">
-              <p>Année de départ</p>
-              <input type='number' name="departure_year" value={departure_year} onChange={this.changeHandler} />
+
+
+
+
+
+
+
+            <div className="euros">
+              <input className="input-euros" type="checkbox" id="euros" name="euros" />
+              <label for="euros"> € </label>
+            </div>
+
+            <div className="dollar">
+              <input type="checkbox" id="dollar" name="dollar" />
+              <label for="dollar"> $ </label>
+            </div>
+
+            {/* <div className="currency">
+              <p>Devise</p>
+              <input className="input-currency" type="text" name="currency" value={currency} onChange={this.changeHandler} />
             </div> */}
 
-          <div className="duration">
-            <p>Durée du voyage*</p>
-            <input className="input-duration" type='number' name="travel_duration" value={travel_duration} onChange={this.changeHandler} />
+
+
+
+            <div className="title-accomodation">
+              <p>Budget logement</p>
+            </div>
+
+            <div className="accomodation">
+
+              <input className="input-accomodation" type="number" name="accomodation_budget" value={accomodation_budget} onChange={this.changeHandler} />
+            </div>
+
+
+            <div className="title-activities">
+              <p>Repas et activités</p>
+            </div>
+            <div className="activities">
+
+              <input className="input-activities" type="number" name="activities_budget" value={activities_budget} onChange={this.changeHandler} />
+            </div>
+
+
+
+
+            <div className="title-type">
+              <p>Type de voyage</p>
+            </div>
+
+            <input className="input-travel_type" type="hidden" name="travel_type" value={this.state.travel_type} onChange={this.changeHandler} />
+
+
+
+            <div className="travel_type">
+              <img onClick={this.type1} src={family}></img>
+            </div>
+
+            <div className='title-enum1'>
+              <p>En famille</p>
+            </div>
+
+            <div className="travel_type2">
+              <img onClick={this.type2} src={couple}></img>
+            </div>
+            <div className='title-enum2'>
+              <p>En couple</p>
+            </div>
+
+            <div className="travel_type3">
+              <img onClick={this.type3} src={friend}></img>
+            </div>
+            <div className='title-enum3'>
+              <p>Entre amis</p>
+            </div>
+
+            <div className="travel_type4">
+              <img onClick={this.type4} src={alone}></img>
+            </div>
+            <div className='title-enum4'>
+              <p>Aventurier seul</p>
+            </div>
+
+
+
+
+            <div className="fk-temp">
+              <p>Clé étrangère de l'id général video*</p>
+              <input className="input-temp" type="number" name="general_video_id_general_video" value={general_video_id_general_video} onChange={this.changeHandler} />
+            </div>
+
+            <button className="save" type="submit">ENREGISTRER</button>
+{/* 
+            <button className="save" type="submit"><p span className="title-save">ENREGISTRER</p></button> */}
+
+            <button className="preview" type="button">PRECEDENT</button>
+
+            {/* <button className="preview" type="button"><NavLink exact to="/">PRECEDENT</NavLink></button> */}
+
+            <button className="next" type="button">SUIVANT</button>
           </div>
+        </form>
 
-          <div className="step">
-            <p>Itinéraire*</p>
-            <input className="input-step" type='number' name="nb_step" value={nb_step} onChange={this.changeHandler} />
-          </div>
-
-          <div className="currency">
-            <p>Devise</p>
-            <input className="input-currency" type="text" name="currency" value={currency} onChange={this.changeHandler} />
-          </div>
-
-          <div className="accomodation">
-            <p>Budget logement</p>
-            <input className="input-accomodation" type="number" name="accomodation_budget" value={accomodation_budget} onChange={this.changeHandler} />
-          </div>
-
-          <div className="activities">
-            <p>Repas et activités</p>
-            <input className="input-activities" type="number" name="activities_budget" value={activities_budget} onChange={this.changeHandler} />
-          </div>
-
-          <div className="travel_type">
-            <p>Type de voyage</p>
-            <input className="input-travel_type" type="text" name="travel_type" value={travel_type} onChange={this.changeHandler} />
-          </div>
-
-          <div className="temp">
-            <p>Clé étrangère de Id général video</p>
-            <input className="input-temp" type="number" name="general_video_id_general_video" value={general_video_id_general_video} onChange={this.changeHandler} />
-          </div>
-
-          <button className="save" type="submit">ENREGISTRER</button>
-
-          <button className="preview" type="button">PRECEDENT</button>
-
-          <button className="next" type="button">SUIVANT</button>
-        </div>
-      </form>
+      </>
 
     )
   }

@@ -120,7 +120,7 @@ class GetVideo extends Component {
             <div className="cover-picture">
               <img className="uploadIconCover" src={UploadIcon} alt="upload icon"></img>
               <p>Photo de couverture</p>
-              <img className="picture-size"  src={item.cover_picture} width="90%" ></img>
+              <img className="picture-size"  src={item.cover_picture} width="90%" alt={item.video_title} ></img>
             </div>
 
             <div className="temp">
