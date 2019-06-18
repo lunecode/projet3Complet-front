@@ -1,17 +1,16 @@
 import React, { Component } from 'react';
-import PostProfilInfo from '../components/ProfilComponents/PostProfilInfo';
 
+import PostSecurityProfil from '../components/ProfilComponents/PostSecurityProfil'
 // import PutProfilInfo from '../components/ProfilComponents/PutProfilInfo';
 import Footer from'../components/Footer';
 import Navbar from '../components/Navbar';
 
-class ProfilPage extends Component {
+class SecurityProfil extends Component {
   render() {
     return (
       <>
         <Navbar />
-        <PostProfilInfo />
-
+        <PostSecurityProfil />
         {/* <p>Modification des données de la table profil pour profilInfo</p>
         <PutProfilInfo /> */}
         <Footer />   
@@ -21,4 +20,4 @@ class ProfilPage extends Component {
 }
 
 
-export default ProfilPage;
+export default SecurityProfil;
