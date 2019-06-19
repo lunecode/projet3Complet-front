@@ -8,45 +8,7 @@ import Photographevidéaste from "../../Images-tripitto/imageProfil/Photographe&
 import Blogueurdevoyage from "../../Images-tripitto/imageProfil/Bloggeurdevoyage.png"
 import Idea from "../../Images-tripitto/Icon/Idea.png"
 
-class PostEnumProfil extends Component {
-  state = {
-    profil:""
-  }
-
-  changeHandler =(e)=>{
-    this.setState({
- [e.target.name]: e.target.value
-    })
-  }
-
-  submitHandler = e => {
-    e.preventDefault()
-    console.log(this.state)
-    axios.post('http://localhost:3000/profil/insert_profil', this.state)
-    .then(response => {
-    console.log(response)
-    })
-    .catch(error => {
-    console.log(error)
-    })   
-    }
-
-  profil1 = () => {
-    this.setState({ profil: 1 })
-  }
-  profil2 = () => {
-    this.setState({ profil: 2 })
-  }
-  profil3 = () => {
-    this.setState({ profil: 3 })
-  }
-  profil4 = () => {
-    this.setState({ profil: 4 })
-  }
-
-  render() {
-
-    console.log(this.state);
+const PostEnumProfil=(props)=>{
 
     return (
 <div className="Profil_inscription">
@@ -56,11 +18,10 @@ class PostEnumProfil extends Component {
         <h4>Vous êtes plutôt</h4>
         </div>
 
-<form className="Profil_Pictures" type="hidden" name="profil" onSubmit={this.submitHandler} value={this.state.profil} onChange={this.changeHandler}>
-       
+<form className="Profil_Pictures" type="hidden" name="profil" onSubmit={props.submitHandler} value={props.profil} onChange={props.changeHandler}>
         <div className="Profil_picture1">
         <img src={Passionnedevoyage}
-        onClick={this.profil1}
+        onClick={props.profil1}
         alt="Passioné de voyage"
         />
         Passionné de voyage
@@ -69,7 +30,7 @@ class PostEnumProfil extends Component {
 
         <div className="Profil_picture2">
         <img src={Créateurdecontenu}
-        onClick={this.profil2}
+        onClick={props.profil2}
         alt="Créateur de contenu"
         />
         Créateur de contenu
@@ -78,7 +39,7 @@ class PostEnumProfil extends Component {
 
         <div className="Profil_picture3">
         <img src={Blogueurdevoyage}
-        onClick={this.profil3}
+        onClick={props.profil3}
         alt="Blogueur de voyage"
         />
         Blogueur de voyage
@@ -87,7 +48,7 @@ class PostEnumProfil extends Component {
 
         <div className="Profil_picture4">
         <img src={Photographevidéaste}
-        onClick={this.Enum4}
+        onClick={props.profil4}
         alt="Photograph & vidéaste"
         />
         Photograph & vidéaste
@@ -95,16 +56,15 @@ class PostEnumProfil extends Component {
 
         <div className="Profil_picture5">
         <img src={Autre}
-           onClick={this.profil4}
+         onClick={props.profil5}
         alt="L"
         />
         Autre
         </div>
- {/* <button type="submit" >submit</button>  */}
    </form>
 </div>
     );
-  }
+
 }
 
 

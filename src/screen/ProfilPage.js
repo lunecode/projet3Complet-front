@@ -6,6 +6,7 @@ import PostProfilInfo from '../components/ProfilComponents/PostProfilInfo';
 import PostEnumProfil from '../components/ProfilComponents/PostEnumProfil';
 
 
+
 class ProfilPage extends Component {
   render() {
     return (
