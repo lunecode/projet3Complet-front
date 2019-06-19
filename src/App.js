@@ -6,13 +6,13 @@ import React, { Component } from 'react';
 // import TestProfilEnum from './screen/TestProfilEnum';
 // import ProfilDescription from './screen/ProfilDescription/ProfilDescription';
 // import UploadInformation from './screen/UploadPage/UploadTravelInformation';
-import UploadTravelStep from './screen/UploadPage/UploadTravelStep';
+// import UploadTravelStep from './screen/UploadPage/UploadTravelStep';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 // import UploadPage from './screen/UploadPage';
 // import Home from './screen/Home';
 
-// import PlayVideo from './screen/PlayVideo';
+import PlayVideo from './screen/PlayVideo';
 
 
 
@@ -20,18 +20,18 @@ class App extends Component {
   render() {
     return (
       <>
-      <Navbar/>
+      {/* <Navbar/> */}
       {/* <TestProfilEnum /> */}
         {/* <ProfilDescription /> */}
 
         {/* <UploadVideo /> */}
 
         {/* <UploadInformation /> */}
-        <UploadTravelStep />
+        {/* <UploadTravelStep /> */}
         {/* <Home /> */}
         {/* <UploadPage /> */}
 
-        {/* <PlayVideo /> */}
+        <PlayVideo />
 
         {/* <Switch>
         <Route exact path="/" component={PlayVideo}/>
@@ -41,7 +41,7 @@ class App extends Component {
         {/* <Switch>
           <Route exact path="/" component={Home} />
         </Switch> */}
-        <Footer/>
+        {/* <Footer/> */}
       </>
     )
   }

@@ -1,5 +1,6 @@
 .container_globalTravel{
     background-color:#F4F4F4;
+    
 }
 
 
@@ -23,7 +24,7 @@
     background-color: white;
     color: #313F4F;
     padding: 5%;
-    font-size:19px;
+    /* font-size:19px; */
 }
 
 .border{
@@ -77,4 +78,18 @@
 .Museum{
     width: 30px;
     
+}
+
+.sport{
+  
+    width:30px;
+
+}
+
+.love{
+    margin-right: 2%;
+}
+
+.comment_sport{
+    margin-left: 6%;
 }
