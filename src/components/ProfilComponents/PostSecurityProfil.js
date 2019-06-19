@@ -52,11 +52,10 @@ class PostSecurityProfil extends Component {
       .catch(error => {
         console.log(error)
       })
-
   }
 
   render() {
-    const { profil_link, lastname, firstname, email, identity, password, password_forget, type, position, inscription_date, inscription_type, profile_picture, nb_countries_visited, birth_date, location, pseudo } = this.state
+    const { profil_link, lastname, firstname, email, identity, password, password_forget, password_forget1,type, position, inscription_date, inscription_type, profile_picture, nb_countries_visited, birth_date, location, pseudo } = this.state
     return (
       <div className="bloc-page-profil">
         <div className="membres-profil">
@@ -88,17 +87,17 @@ class PostSecurityProfil extends Component {
               </div>
               <div className="bloc-mdp">
                 <p>Mettre à jour votre mot de passe</p>
-                <div>
-                  <label htmlFor="password" className="field-mdp">Mot de passe</label>
+                <div className="mdp-form">
+                  <label htmlFor="password" className="field-mdp">Mot de passe actuel</label>
                   <input type="text" name="password" value={password} onChange={this.changeHandler} />
                 </div>
-                <div>
+                <div  className="mdp-form">
                   <label htmlFor="password_forget" className="field-mdp">Nouveau mot de passe</label>
                   <input type="text" name="password_forget" value={password_forget} onChange={this.changeHandler} />
                 </div>
-                <div>
-                  <label htmlFor="password_forget" className="field-mdp">Confirmer nouveau mot de passe</label>
-                  <input type="text" name="password_forget" value={password_forget} onChange={this.changeHandler} />
+                <div  className="mdp-form">
+                  <label htmlFor="password_forget_check" className="field-mdp">Confirmer nouveau mot de passe</label>
+                  <input type="text" name="password_forget_check" value={password_forget1} onChange={this.changeHandler} />
                 </div>
                 <div className="btn-save-security">
                   <button>SAUVEGARDER</button>
@@ -199,6 +198,7 @@ class PostSecurityProfil extends Component {
           <div className="off-account">
             <button> DESACTIVER MON COMPTE TEMPORAIREMENT</button>
           </div>
+          <p className="account-finally">Pour supprimer définitivement  votre compte et les données associés, <u>contactez-nous</u></p>
         </div>
       </div>
     )

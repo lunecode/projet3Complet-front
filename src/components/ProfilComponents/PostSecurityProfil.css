@@ -31,7 +31,7 @@ Alignement des deux grand bloc  */
   width:70px;
   height:70px;
   margin-top:10px;
-  padding-left:10px;
+  margin-right:13px;
 }
 /* Profil menu */
 .profil-menu{
@@ -80,7 +80,7 @@ Grid pour profil info */
 .mail-info {
     display: flex;
     flex-direction: row;
-    margin-bottom:40px;
+    margin-bottom:60px;
 }
 
 .title-mail{
@@ -98,10 +98,20 @@ Grid pour profil info */
 .bloc-mdp{
     margin-left:-10px;
 }
-
-.field-mdp{
-  vertical-align: top;
+.bloc-mdp p{
+  font-size:18px;
+  padding-bottom:20px;
 }
+
+.mdp-form{
+  display:flex;
+
+}
+.field-mdp{
+  width: 300px;
+ 
+}
+
 .bloc-mdp input{
     width: 500px;
     padding:10px;
@@ -109,8 +119,6 @@ Grid pour profil info */
     border:1px solid #d3d3d3;
     font-style:italic;
     margin-bottom:30px;
-
-
 }
 .bloc-mdp div{
     padding-left:0;
@@ -126,24 +134,34 @@ Grid pour profil info */
     color:white;
     border:none;
 }
+.btn-save-security button:hover{
+  background: linear-gradient(to right, #3ed8dd 37%,#39cad7 53%,#35c1d4 100%);
+}
 /* gestion cookies */
 .bloc-cookies{
     width: 70%;
     margin:auto;
     padding-left:350px;
-    
 }
 .cookiespolicy{
   display:flex;
   flex-direction: row;
 
 }
+.cookiespolicy p{
+  margin-right:10px;
+  margin-top:-12px;
+}
+.linkcookies{
+  color:#333333;
+  line-height: 0px;
+}
 .off-account button{
-    width: 500px;
-    padding: 10px;
+    width: 63%;
+    padding: 13px;
     border:1px solid #a7a7a7;
-    margin-top:20px;
-    margin-bottom:20px;
+    margin-top:40px;
+    margin-bottom:30px;
 }
 
  /* The switch - the box around the slider */
@@ -152,6 +170,10 @@ Grid pour profil info */
     display: inline-block;
     width: 60px;
     height: 34px;
+    right:480px;
+    top:-30px;
+    margin-left: auto;
+
   }
   
   /* Hide default HTML checkbox */
@@ -200,11 +222,13 @@ Grid pour profil info */
     transform: translateX(26px);
   }
   
-  /* Rounded sliders */
-  .slider.round {
-    border-radius: 34px;
+
+  .bloc-security input:focus{
+    background:#e9eff1;
+    border:1px solid #30b1ce;
   }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  } 
+  .account-finally{
+    padding-bottom:10vh;
+    margin-top:0;
+    font-size:15px;
+  }

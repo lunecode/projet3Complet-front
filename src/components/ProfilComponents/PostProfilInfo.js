@@ -109,12 +109,14 @@ class PostProfilInfo extends Component {
             <div className="profil-bloc-3">
               <div className='field-profil-checkbox'>
                 <label htmlFor="identity" className="field-title-identity">Identité</label>
-                <label htmlFor="lui">Lui</label>
-                <input type="checkbox" id="lui" name="is_checked_him" value={identity} checked={this.state.is_checked_him} onChange={this.handleCheckbox} className="field-profil-checkbox" />
-                <label htmlFor="elle">Elle</label>
-                <input type="checkbox" id="elle" name="is_checked_her" value={identity} checked={this.state.is_checked_her} onChange={this.handleCheckbox} />
-                <label htmlFor="equipe">Equipe</label>
-                <input type="checkbox" id="equipe" name="is_checked_team" value={identity} checked={this.state.is_checked_team} onChange={this.handleCheckbox} />
+                <div className="identity-field">
+                  <label htmlFor="lui">Lui</label>
+                  <input type="checkbox" id="lui" name="is_checked_him" value={identity} checked={this.state.is_checked_him} onChange={this.handleCheckbox} className="field-profil-checkbox" />
+                  <label htmlFor="elle">Elle</label>
+                  <input type="checkbox" id="elle" name="is_checked_her" value={identity} checked={this.state.is_checked_her} onChange={this.handleCheckbox} />
+                  <label htmlFor="equipe">Equipe</label>
+                  <input type="checkbox" id="equipe" name="is_checked_team" value={identity} checked={this.state.is_checked_team} onChange={this.handleCheckbox} />
+                </div>
               </div>
               <div>
                 <label htmlFor="birth_date">Date de naissance</label>
@@ -127,9 +129,9 @@ class PostProfilInfo extends Component {
             </div>
           
           </form>
-       
-      
-        
+
+
+
         </div>
        
         </div>
