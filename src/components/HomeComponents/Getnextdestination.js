@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import YouTube from 'react-youtube';
-import './Getnextdestination.css'
+import './Getnextdestination.css';
+
+import leftHome from '../../Images-tripitto/Icon/leftHome.png'
+import RightHome from '../../Images-tripitto/Icon/RightHome.png'
 
 
 
@@ -9,6 +12,7 @@ class Getnextdestination extends Component {
     state = {
         nextpicture : [],
         videos: [],
+        bestplan: 1,
     };
 
     
@@ -22,9 +26,22 @@ class Getnextdestination extends Component {
         this.setState({ videos: res.data })
         console.log(this.state.videos)
     }
+
+    selectbestplan = () => {
+        this.setState({ BestPlan: +5 })
+        console.log(this.state.BestPlan)
+    }
+
+    selectbestplanBack = () => {
+        this.setState({ BestPlan: -5 })
+        console.log(this.state.BestPlan)
+    }
+
     componentDidMount() {
         this.getnextvideo()
         this.getbestplan()
+        this.selectbestplan()
+        this.selectbestplanBack()
     }
 
     render() {
@@ -38,7 +55,7 @@ let c = 1
         <section className='nextdestination'>
                 <div className='container_nextdestination_title'>
                     <h2 >PROJETEZ-VOUS DANS VOTRE PROCHAINE DESTINATION</h2>
-                </div>   
+                </div>
                 <div class="wrapper-nextpicture">
                 {this.state.nextpicture.map(nextpicture => (
                     <div className={"divpictureNext" + i} key={i++}>
@@ -53,12 +70,24 @@ let c = 1
         <section className="bestplan">
             <div className='container_bestplan_title'>
                 <h2 className="title_best_plan">AVEC UN MAXIMUM DE BONS PLANS</h2>
-            </div>      
- 
+            </div>
+            <div>
+                <img onClick={this.selectbestplan} className="leftHome" src={leftHome} alt=""></img>
+            </div>
+            <div>
+                <img onClick={this.selectbestplanBack} className="rightHome" src={RightHome} alt=""></img>
+            </div>
+        </section> 
             <div class="container_bestplan">
                 {this.state.videos.map(video => (
                     <div className={"divVideoPLan" + c} key={c++}>
-                            <img src={video.cover_picture} alt={video.number_tips} className='picture_bestplan'/>
+                            <img src={video.cover_picture} className='picture_bestplan'/>
+                            <div className='container_title_bestplan_numbertips'>
+                            <p className='title_bestplan_numbertips'>+{video.number_tips}%</p>
+                            </div>
+                            <div className='container_title_bestplan_video_duration'>
+                            <p className='title_bestplan_video_duration'>{video.video_duration}</p>
+                            </div>
                             <p className='title_bestplan_title'>{video.video_title}</p>
                             <p className='title_bestplan_countries'>{video.countries}</p>
                             <p className='title_bestplan_user'>{video.video_user}</p>
@@ -66,10 +95,15 @@ let c = 1
                     </div> 
                 ))}
             </div> 
-        </section>    
+         
+
             </>
+
+
         )
     }
 }
+
+
 
 export default Getnextdestination;

@@ -44,7 +44,8 @@ h2 {
         grid-template-areas: "nextpictureimg1 nextpictureimg2 nextpictureimg4" 
         "nextpictureimg1 nextpictureimg3 nextpictureimg5";
         padding-left: 3.5%;
-        margin-bottom: 3%;
+        margin-bottom: 1%;
+        background-color:#2C404D;
      }
 
 .divpictureNext1{
@@ -183,7 +184,10 @@ display: none;
 /***************************SECTION BEST PLAN ********************************/
 /*****************************************************************************/
 .bestplan{
-    margin-bottom: 20%;
+    margin-bottom: -1%;
+    display: grid;
+    grid-template-columns: 62% 1.7% 1% 35%;
+    align-items: center;
 }
 .container_bestplan {
 display: grid;
@@ -194,7 +198,7 @@ grid-template-areas: "divVideoPLan1 divVideoPLan2"
 grid-gap: 1.5vw;
 padding-left: 3.5%;
 margin-top: 1%;
-margin-bottom: 10%;
+margin-bottom: 20%;
 }
 
 .divVideoPLan1{
@@ -228,11 +232,43 @@ margin-bottom: 20%;
     margin-top: 20%;
 }
     
-
 .picture_bestplan{
     height: 100%;
     width: 100%;
     margin-bottom: -3%;
+}
+
+.container_title_bestplan_numbertips{
+position: absolute;
+background-color: black;
+margin-left: 1.5%;
+}
+.title_bestplan_numbertips{
+    color:white;
+    margin-bottom: 46%;
+    margin-top:-580%;
+    font-size: 1.60vh;
+    font-family: 'Roboto';
+    font-weight: bold;
+    background-color: black;
+    color: rgb(52, 131, 43);
+    padding:2px;
+}
+.container_title_bestplan_video_duration{
+    position: absolute;
+    background-color: black;
+    margin-left: 28%;
+    }
+.title_bestplan_video_duration{
+    color:white;
+    margin-bottom: 46%;
+    margin-top:-565%;
+    font-size: 1.60vh;
+    font-family: 'Roboto';
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    padding:2px;
 }
 
 .title_bestplan_title{
@@ -241,6 +277,7 @@ margin-bottom: 20%;
     font-size: 2.75vh;
     color:#2C404D;
     margin-bottom: -2.25%;
+    
 }
 .title_bestplan_countries{
     font-family: 'Lora';
@@ -261,3 +298,18 @@ margin-bottom: 20%;
     margin-top: -12.5%;
     margin-left: 20%;
 }
+
+
+        .title_best_plan {
+        color: #2C404D;;
+        padding-bottom: 1%;
+        /* display: grid; */
+        /* grid-template-columns: 62% 1.7% 1% 35%; */
+        align-items: center;
+        border-block-end: solid 1px #2C404D;
+        font-size: 2vh;
+        font-weight: bold;
+        font-family: 'Roboto';
+    }
+
+
