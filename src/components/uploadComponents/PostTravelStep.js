@@ -47,18 +47,20 @@ render() {
   return (
     
       <form onSubmit={this.submitHandler}>
-       
+       <div className="postBody">
         <div className="grid">
         <h1>Itinéraire</h1>
           
           <div className="videoUser">
           <div className="bandeau">
-            <p className="bandeau1">100% Mise en ligne des video</p>
-         
+            <span  className="bandeau1">100% Mise en ligne des video</span>
+          </div>
+          <div>
           <img src="https://image.noelshack.com/fichiers/2019/25/2/1560880724-tripitto.png" alt="Avatar"  />
           </div>
           <div className="container">
           <h4>Travel with Tripitto</h4>
+          <h5>Spécifications</h5>
           <li>Taille maximum</li>
           <li>Durée de la video</li>
           <li>Résolution</li>
@@ -71,8 +73,8 @@ render() {
 
 
           <span className="border_travel"><img className="weather" src={Weather} alt="weather"/><img src={Village} alt="village"/><span className="duration">5 j</span></span>
-          <p>Fozzano</p>
-            {/* <p>Numero de l'itinéraire</p>
+          <p className="nameDuration">Fozzano</p>
+            <p>Numero de l'itinéraire</p>
             <input type='number' name="step_number" value={step_number} onChange={this.changeHandler} />
             <p>Nom de l'étape</p>
             <input type='text' name="step_name" value={step_name} onChange={this.changeHandler} />
@@ -81,7 +83,7 @@ render() {
             <span>Nbre de jours de l'étape</span>
             <input type='number' name="step_duration" value={step_duration} onChange={this.changeHandler} />
             <span>Météo de l'étape</span>
-            <input type='text' name="step_weather" value={step_weather} onChange={this.changeHandler} /> */}
+            <input type='text' name="step_weather" value={step_weather} onChange={this.changeHandler} />
             <div className="transport">
             <p>Moyen de transport entre chaque itineraire</p>
             <input type='text' name="step_transport" value={step_transport} onChange={this.changeHandler} />
@@ -89,7 +91,7 @@ render() {
             </div>
             <div className="way">
             <span>Meilleurs moyen de se déplacer dans l'étape</span>
-            {/* <input type="text" name="way_get_around" value={way_get_around} onChange={this.changeHandler} /> */}
+            <input type="text" name="way_get_around" value={way_get_around} onChange={this.changeHandler} />
             <div className="allButtons">
             <div className="buttonStyle">
               <button className="favorite_style" type="button"><img className="car" src={Car} alt="car"/>Voiture</button>
@@ -190,7 +192,6 @@ render() {
             <select className="choice">
             <option selected></option>
             <option type="text" name="sport_activity1" value={sport_activity1} onChange={this.changeHandler} >Football</option>
-           
             {/* <p>Les activités sportives à ne pas manquer2</p> */}
             <option type="text" name="sport_activity2" value={sport_activity2} onChange={this.changeHandler} >Natation</option>
             {/* <p>Les activités sportives à ne pas manquer3</p> */}
@@ -199,23 +200,40 @@ render() {
           </div>
           <div className="sportActivityComment">
             <p>Une adresse d'activité sportive à partager</p>
-            <input type="text" name="sport_activity_comment" value={sport_activity_comment} onChange={this.changeHandler} />
+            <input type="text" name="sport_activity_comment" value={sport_activity_comment} onChange={this.changeHandler} className="comment1" placeholder="Une adresse à partager"/>
           </div>
           <div className="crushUser">
             <p>Un coup de coeur à partager</p>
-            <input type="text" name="crush" value={crush} onChange={this.changeHandler} />
+            <input type="text" name="crush" value={crush} onChange={this.changeHandler} className="comment1" placeholder="Pensez à votre meilleur souvenir de voyage sur cette étape"/>
           </div>
           <div className="advice">
             <p>Des conseils à partager ?</p>
-            <input type="text" name="advice" value={advice} onChange={this.changeHandler} />
+            <input type="text" name="advice" value={advice} onChange={this.changeHandler} className="comment1" placeholder="Achetez vos entrées théâtres ou musées en ligne"/>
           </div>
           <div className="button">
             <button type="submit">Submit</button>
             <p>Fk de l'Id de general_video</p>
             <input type="text" name="general_video_id_general_video" value={general_video_id_general_video} onChange={this.changeHandler} />
+            <div>
+              <button className="button1">VOIR ETAPE SUIVANTE</button>
+            </div>
+          </div>
+          <div className="button2">
+              <div className="styleBut">
+                <button className="but1">ENREGISTRER</button>
+              </div>
+              <div className="styleBut">
+                <button className="but1">PRECEDENT</button>
+              </div>
+             <div className="styleBut">
+                <button className="but2">PUBLIER</button>
+              </div> 
+          </div>
+          
           </div>
           </div>
       </form>
+      
    
   )
 }
