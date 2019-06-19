@@ -6,7 +6,7 @@ import './HomeComponentsPart3.scss'
 import leftHome from '../../Images-tripitto/Icon/leftHome.png'
 import RightHome from '../../Images-tripitto/Icon/RightHome.png'
 import normal from '../../Images-tripitto/Icon/Voyage/normal.png'
-import Rectangle from '../../Images-tripitto/Icon/Voyage/Rectangle.png'
+// import Rectangle from '../../Images-tripitto/Icon/Voyage/Rectangle.png'
 import User from '../../Images-tripitto/Icon/User/User.png'
 
 // Permet l'affichage des données pour un test de la table " General_video "
@@ -124,8 +124,9 @@ class Display extends Component {
                     <div className="TitlepublishedBorderBottom"></div>
                 </section>  
                 <section className="imageUncover">
+                    
                     <div className="UncoverBorder1">
-                        <img  src={normal} alt="asie-oceanie"></img>
+                        <img src={normal} alt="asie-oceanie"></img>
                         <p className="titleUncover">Asie-oceanie</p>
                     </div>
 
@@ -135,7 +136,7 @@ class Display extends Component {
                     </div>
 
                     <div className="UncoverBorder3">
-                        <img src={Rectangle} alt=""></img>
+                        <img src={normal} alt=""></img>
                         <p className="titleUncover">AFRIQUE</p>
                     </div>
 

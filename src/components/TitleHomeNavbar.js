@@ -16,18 +16,18 @@ class TitleHomeNavbar extends Component {
                 <h1>PROJETEZ-VOUS DANS VOTRE PROCHAINE DESTINATION</h1>
             </div>
             <div>
-                <NavLink><img className="rsNavbar" src={fbWhite} alt={fbWhite}></img></NavLink>
+                <NavLink exact to="/"><img className="rsNavbar" src={fbWhite} alt={fbWhite}></img></NavLink>
             </div>
             <div>
-            <NavLink><img className="rsNavbar" src={instaWhite} alt={instaWhite}></img></NavLink>
+            <NavLink exact to="/"><img className="rsNavbar" src={instaWhite} alt={instaWhite}></img></NavLink>
             </div>
             <div>
-            <NavLink><img className="rsNavbar" src={YoutubeWhite} alt={YoutubeWhite}></img></NavLink>
+            <NavLink exact to="/"><img className="rsNavbar" src={YoutubeWhite} alt={YoutubeWhite}></img></NavLink>
             </div>
             <div>
-            <NavLink><img className="rsNavbar" src={share} alt={share}></img></NavLink>
+            <NavLink exact to="/"><img className="rsNavbar" src={share} alt={share}></img></NavLink>
             </div>
-        </div>    
+        </div>   
         </>
         )
     }

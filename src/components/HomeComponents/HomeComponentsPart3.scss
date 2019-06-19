@@ -153,6 +153,11 @@ grid-template-areas: "Uncover1 Uncover2"
 padding-left: 3%;
 margin-top: 1%;
 
+    img:hover,.UncoverBorder1 img:hover {
+        filter: opacity(70%);
+        -webkit-filter: opacity(70%);
+    }
+
     .UncoverBorder1 {
         grid-area: Uncover1;
         padding-right: 1%;
@@ -166,7 +171,6 @@ margin-top: 1%;
             position: relative;
             top: -215px;
             color: white;
-
             font-size: 40px;
             font-weight: bold;
             text-align: center;
