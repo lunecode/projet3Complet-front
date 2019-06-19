@@ -7,6 +7,7 @@ import leftHome from '../../Images-tripitto/Icon/leftHome.png'
 import RightHome from '../../Images-tripitto/Icon/RightHome.png'
 import normal from '../../Images-tripitto/Icon/Voyage/normal.png'
 import Rectangle from '../../Images-tripitto/Icon/Voyage/Rectangle.png'
+import User from '../../Images-tripitto/Icon/User/User.png'
 
 // Permet l'affichage des données pour un test de la table " General_video "
 
@@ -156,6 +157,69 @@ class Display extends Component {
                     </div>
                     <div>
                         <img className="rightHome" src={RightHome} alt=""></img>
+                    </div>
+                </section>
+
+                <section className="ContainerVideaste">
+                    <div className="videaste1">
+                    <div className="borderVideaste">
+                        <img src={User} alt=""></img>
+                            <div className="centerVideaste">
+                                {this.state.videastes.map(videaste => (
+                                <div className="videastes" key={videaste.id_profil}>
+                                    <p><strong>{videaste.lastname} {videaste.firstname}</strong></p>
+                                    <p>{videaste.location}</p>
+                                    <p>(Numbers) Video</p>
+                                </div> 
+                                ))}
+                                <button className="buttonVideaste">S'ABONNER</button>
+                            </div> 
+                        </div> 
+                    </div>
+                    <div className="videaste2">
+                    <div className="borderVideaste">
+                        <img src={User} alt=""></img>
+                            <div className="centerVideaste">
+                                {this.state.videastes.map(videaste => (
+                                <div className="videastes" key={videaste.id_profil}>
+                                    <p><strong>{videaste.lastname} {videaste.firstname}</strong></p>
+                                    <p>{videaste.location}</p>
+                                    <p>(Numbers) Video</p>
+                                </div> 
+                                ))}
+                                <button className="buttonVideaste">S'ABONNER</button>
+                            </div> 
+                        </div> 
+                    </div>
+                    <div className="videaste3">
+                    <div className="borderVideaste">
+                        <img src={User} alt=""></img>
+                            <div className="centerVideaste">
+                                {this.state.videastes.map(videaste => (
+                                <div className="videastes" key={videaste.id_profil}>
+                                    <p><strong>{videaste.lastname} {videaste.firstname}</strong></p>
+                                    <p>{videaste.location}</p>
+                                    <p>(Numbers) Video</p>
+                                </div> 
+                                ))}
+                                <button className="buttonVideaste">S'ABONNER</button>
+                            </div> 
+                        </div> 
+                    </div>
+                    <div className="videaste4">
+                    <div className="borderVideaste">
+                        <img src={User} alt=""></img>
+                            <div className="centerVideaste">
+                                {this.state.videastes.map(videaste => (
+                                <div className="videastes" key={videaste.id_profil}>
+                                    <p><strong>{videaste.lastname} {videaste.firstname}</strong></p>
+                                    <p>{videaste.location}</p>
+                                    <p>(Numbers) Video</p>
+                                </div> 
+                                ))}
+                                <button className="buttonVideaste">S'ABONNER</button>
+                            </div> 
+                        </div> 
                     </div>
                 </section>
                 

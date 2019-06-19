@@ -1,3 +1,5 @@
+$colorButton: #5dd8dc;
+
 .container_nav {
     align-items: center;
     background-color: #2C404D;
@@ -89,7 +91,7 @@
                 
             }
             .buttonNavbar {
-                background-color: #1BA2A2;
+                background-color: $colorButton;
                 color: white;
                 font-size: 16px;
                 padding: 8px 25px;
