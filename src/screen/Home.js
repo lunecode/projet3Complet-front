@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import HomeComponents from '../components/UploadComponents/HomeComponents';
+// import HomeComponents from '../components/UploadComponents/HomeComponents';
 import Getnextdestination from '../components/HomeComponents/Getnextdestination';
+// import HomeComponents from '../components/HomeComponents/HomeComponentsPart3';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
@@ -11,7 +12,7 @@ class Home extends Component {
             <>
             <Navbar />
             <Getnextdestination />
-            <HomeComponents />
+            {/* <HomeComponents /> */}
             <Footer />
             </>
         )
