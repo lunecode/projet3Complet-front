@@ -7,7 +7,7 @@ import UploadTravelStep from './screen/UploadPage/UploadTravelStep';
 
 
 // import ProfilDescription from './screen/ProfilDescription/ProfilDescription';
-// import Home from './screen/Home';
+import Home from './screen/Home';
 // import PlayVideo from './screen/PlayVideo';
 
 import Navbar from './components/Navbar';
@@ -18,28 +18,15 @@ import Footer from './components/Footer';
 class App extends Component {
   render() {
     return (
-      // <>
-
-      //   <Navbar />
-      //   <UploadTravelStep />
-      //   <UploadVideo />
-      //   <UploadInformation />
 
 
-      //   <Home />
-      //   <PlayVideo />
-      //   <Home />
-      //   <ProfilDescription />
-      //   <Footer />
-      // </>
-
-
-
+<>
       <BrowserRouter>
         <div>
           <Navbar />
           <Switch>
-            <Route path="/" component={UploadVideo} exact></Route>
+            <Route path="/" component={Home} exact></Route>
+      <Route path="/uploadVideo" component={UploadVideo} ></Route>
             <Route path="/uploadInformation" component={UploadInformation} ></Route>
             <Route path="/uploadTravelStep" component={UploadTravelStep} ></Route>
             <Route component={Error}></Route>
@@ -47,6 +34,7 @@ class App extends Component {
           <Footer />
         </div>
       </BrowserRouter>
+      </>
 
     )
   }
