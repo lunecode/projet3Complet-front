@@ -12,14 +12,20 @@ import './PostTravelInformation.css';
 
 
 // UPLOAD PAGE 2 / TRAVEL INFORMATION
+// PAGE 55 TO 64 OF THE INVISION PAGE
+
 // ALLOW TO INSERT DATA IN "TRAVEL INFORMATION" TABLE
 
-
 // MUST SEE FOR THE "TRAVEL_TYPE" COLUMN TO CHANGE TYPE TO ENUM ON NOT VARCHAR ==> DONE, NEED INFORM OTHER TO DO THE CHANGE
+
 
 // ALTER TABLE FOR DELETE "DEPARTURE_YEAR" COLUMN ==> DONE, NEED INFORM OTHER TO DO THE CHANGE
 
 // MORE THAN A COUNTRY AND WORLD TOUR VISIBLE IN FRONT BUT DOES NOT INTERACT WITH THE BDD
+
+// NB_STEP NOT FINISH
+
+
 
 
 class PostTravelInformation extends Component {
@@ -28,41 +34,34 @@ class PostTravelInformation extends Component {
     travel_type: 0
   }
 
-
-
   type1 = () => {
     this.setState({ travel_type: 1 })
   }
-
   type2 = () => {
     this.setState({ travel_type: 2 })
   }
-
-
   type3 = () => {
     this.setState({ travel_type: 3 })
   }
-
-
   type4 = () => {
     this.setState({ travel_type: 4 })
   }
-
 
 
   changeHandler = (e) => {
     this.setState({ [e.target.name]: e.target.value })
   }
 
+
   getVideo = async () => {
     const res = await axios.get('http://localhost:3000/general_video/get_general_video')
     this.setState({ videos: res.data })
     console.log(this.state.videos)
   }
-
   componentDidMount() {
     this.getVideo()
   }
+
 
   submitHandler = e => {
     e.preventDefault()
@@ -74,18 +73,17 @@ class PostTravelInformation extends Component {
       .catch(error => {
         console.log(error)
       })
-
-
-
   }
 
 
   render() {
     let i = 1
-    const { continent, countries, travel_duration, departure_month, nb_step, currency, accomodation_budget, activities_budget, travel_type, general_video_id_general_video, } = this.state
+    const { continent, countries, travel_duration, departure_month, nb_step, accomodation_budget, activities_budget, general_video_id_general_video, } = this.state
     return (
 
       <>
+
+
         {this.state.videos.map(item => (
           <div className="video_link" key={i++}>
             <Youtube className="video" videoId={item.video_link} onReady={this._onReady}
@@ -93,8 +91,11 @@ class PostTravelInformation extends Component {
           </div>
         ))}
 
+
+
+
         <form onSubmit={this.submitHandler}>
-          <div className='grid'>
+          <div className='grid_postInformation'>
 
             <div className='empty'></div>
 
@@ -123,9 +124,10 @@ class PostTravelInformation extends Component {
             </div>
             <div className="month">
               <input className="input-month" type="date" min="1990-01-01" max="2050-01-01" name="departure_month" value={departure_month} onChange={this.changeHandler} />
-
-              {/* <input className="input-month" type='text' name="departure_month" value={departure_month} onChange={this.changeHandler} /> */}
             </div>
+
+
+
 
 
 
@@ -142,7 +144,7 @@ class PostTravelInformation extends Component {
             </div>
 
             <div className="step">
-              <p>Itinéraire*</p>
+              <p>Itinéraire</p>
               <input className="input-step" type='number' name="nb_step" value={nb_step} onChange={this.changeHandler} />
             </div>
 
@@ -151,36 +153,23 @@ class PostTravelInformation extends Component {
 
 
 
-
-
-
             <div className="euros">
-              <input className="input-euros" type="checkbox" id="euros" name="euros" />
-              <label for="euros"> € </label>
+              <input type="checkbox" name="currency" value='€' onChange={this.changeHandler} />
+              <label for="currency"> € </label>
             </div>
 
             <div className="dollar">
-              <input type="checkbox" id="dollar" name="dollar" />
-              <label for="dollar"> $ </label>
+              <input type="checkbox" name="currency" value='$' onChange={this.changeHandler} />
+              <label for="currency"> $ </label>
             </div>
-
-            {/* <div className="currency">
-              <p>Devise</p>
-              <input className="input-currency" type="text" name="currency" value={currency} onChange={this.changeHandler} />
-            </div> */}
-
-
-
 
             <div className="title-accomodation">
               <p>Budget logement</p>
             </div>
 
             <div className="accomodation">
-
               <input className="input-accomodation" type="number" name="accomodation_budget" value={accomodation_budget} onChange={this.changeHandler} />
             </div>
-
 
             <div className="title-activities">
               <p>Repas et activités</p>
@@ -193,42 +182,32 @@ class PostTravelInformation extends Component {
 
 
 
+
+
+
             <div className="title-type">
               <p>Type de voyage</p>
             </div>
 
             <input className="input-travel_type" type="hidden" name="travel_type" value={this.state.travel_type} onChange={this.changeHandler} />
 
-
-
-            <div className="travel_type">
-              <img onClick={this.type1} src={family}></img>
-            </div>
-
-            <div className='title-enum1'>
+            <div className="travel_type" onClick={this.type1}>
+              <img src={family}></img>
               <p>En famille</p>
             </div>
-
-            <div className="travel_type2">
-              <img onClick={this.type2} src={couple}></img>
-            </div>
-            <div className='title-enum2'>
+            <div className="travel_type2" onClick={this.type2}>
+              <img src={couple}></img>
               <p>En couple</p>
             </div>
-
-            <div className="travel_type3">
-              <img onClick={this.type3} src={friend}></img>
-            </div>
-            <div className='title-enum3'>
+            <div className="travel_type3" onClick={this.type3}>
+              <img src={friend}></img>
               <p>Entre amis</p>
             </div>
-
-            <div className="travel_type4">
-              <img onClick={this.type4} src={alone}></img>
-            </div>
-            <div className='title-enum4'>
+            <div className="travel_type4" onClick={this.type4}>
+              <img src={alone}></img>
               <p>Aventurier seul</p>
             </div>
+
 
 
 
@@ -239,19 +218,16 @@ class PostTravelInformation extends Component {
             </div>
 
             <button className="save" type="submit">ENREGISTRER</button>
-{/* 
-            <button className="save" type="submit"><p span className="title-save">ENREGISTRER</p></button> */}
 
             <button className="preview" type="button">PRECEDENT</button>
 
+            <button className="next" type="button">SUIVANT</button>
+
             {/* <button className="preview" type="button"><NavLink exact to="/">PRECEDENT</NavLink></button> */}
 
-            <button className="next" type="button">SUIVANT</button>
           </div>
         </form>
-
       </>
-
     )
   }
 }

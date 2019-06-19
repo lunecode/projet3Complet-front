@@ -3,7 +3,9 @@ import axios from 'axios'
 import { NavLink } from 'react-router-dom'
 
 import './PostVideo.css'
+
 import UploadIcon from '../../Images-tripitto/Icon/Upload-Video.png'
+import CoverIcon from '../../Images-tripitto/Icon/Upload Image.png'
 
 
 
@@ -39,7 +41,7 @@ class PostVideo extends Component {
     return (
       <div>
         <form onSubmit={this.submitHandler}>
-          <div className='grid'>
+          <div className='grid_postVideo'>
 
             <div className="empty">
             </div>
@@ -52,7 +54,7 @@ class PostVideo extends Component {
 
             <div className="title">
               <p>Titre*</p>
-              <textarea placeholder="" name="title" rows="2" cols="134"></textarea>
+              <textarea placeholder="Escapade romantique dans la ville des lumières" name="title" rows="2" cols="134"></textarea>
               {/* <input className="input-title" placeholder="Escapade romantique dans la ville des lumières" type='text' name="video_title" value={video_title} onChange={this.changeHandler} /> */}
             </div>
 
@@ -114,7 +116,7 @@ class PostVideo extends Component {
 
 
             <div className="cover-picture">
-              <img className="uploadIconCover" src={UploadIcon} alt="upload icon"></img>
+              <img className="uploadIconCover" src={CoverIcon} alt="upload icon"></img>
               <p>Photo de couverture</p>
               <input className="input-cover" type='text' name="cover_picture" value={cover_picture} onChange={this.changeHandler} />
             </div>
@@ -124,13 +126,17 @@ class PostVideo extends Component {
               <input type="text" name="profil_id_profil" value={profil_id_profil} onChange={this.changeHandler} />
             </div>
 
+            <div className="submit-div">
+              <button className="submit-button" type="submit">ENREGISTRER</button>
+            </div>
+
             <div className="next-div">
               <button className="next-button" type="button"><NavLink exact to="/uploadInformation"> SUIVANT</NavLink></button>
             </div>
 
-            <div className="submit-div">
-              <button className="submit-button" type="submit">ENREGISTRER</button>
-            </div>
+
+
+            
 
           </div>
         </form>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import { NavLink } from 'react-router-dom'
 
-// import PostVideo from '../../components/uploadComponents/PostVideo';
+import PostVideo from '../../components/uploadComponents/PostVideo';
 // import Navbar from '../../components/Navbar';
 // import Footer from '../../components/Footer';
 
@@ -26,7 +26,7 @@ class UploadVideo extends Component {
         {/* <h1>Insertion de données dans la table general_video</h1> */}
         
         {/* <Navbar /> */}
-        {/* <PostVideo /> */}
+        <PostVideo />
         {/* <Footer /> */}
 
         {/* <h1>Modification de données dans la table general_video</h1>

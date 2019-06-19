@@ -22,8 +22,8 @@ class App extends Component {
 
         <Navbar />
         {/* <UploadTravelStep /> */}
-        {/* <UploadVideo /> */}
-        <UploadInformation />
+        <UploadVideo />
+        {/* <UploadInformation /> */}
 
 
         {/* <Home /> */}

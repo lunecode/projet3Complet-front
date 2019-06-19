@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 import './Footer.scss'
 
+
 import About from '../Images-tripitto/Icon/Footer/Infos.png';
 import WhatToDo from '../Images-tripitto/Icon/Footer/WhatToDo.png';
 import Advice from '../Images-tripitto/Icon/Footer/Conseils.png';
@@ -12,6 +13,7 @@ import Love from '../Images-tripitto/Icon/Footer/Love.png';
 import langFR from '../Images-tripitto/Icons/Drapeau-FR.png';
 import langEN from '../Images-tripitto/Icons/Drapeau-EN.png';
 import Path from '../Images-tripitto/Icon/Footer/Path2.png';
+
 
 
 class Footer extends Component {
@@ -38,12 +40,12 @@ selectLanguage = () => {
         <div class="item-a">
             <h3>Tripitto en quelques mots</h3>
                 <p>
-                    Guide de voyage en vidéo, vous découvrez par Tripitto des destintions avec les yeux de voyageurs 
+                    Guide de voyage en vidéo, vous découvrez par Tripitto des destinations avec les yeux de voyageurs 
                     passionés. Ils vous confieront leurs secrets pour vous amener à vous projeter, décider et 
                     planifier votre prochain voyage.
                 </p>
                 <p>
-                    Attention ! Risque d'addiction au site, de déconcetration au bureu et d'achat compulsif de billets 
+                    Attention ! Risque d'addiction au site, de déconcentration au bureau et d'achat compulsif de billets 
                     d'avions... Embarquez dans la communauté !
                 </p>
         </div>
@@ -74,11 +76,11 @@ selectLanguage = () => {
         <div class="item-d">
             <h3>Votre avis nous importe</h3>
                 <p>
-                    Que le site it été le rayon de soleil de votre journée ou qu'un bug vous ai fait enrager, 
+                    Que le site ait été le rayon de soleil de votre journée ou qu'un bug vous ai fait enrager, 
                     nous souhaitons vous entendre.
                 </p>
                 <p>
-                    Défoulez-vous en nous prtageant votre enthousiasme (même exagéré), vos cris de frustation ou humbes avis.
+                    Défoulez-vous en nous partageant votre enthousiasme (même exagéré), vos cris de frustation ou humbes avis.
                 </p>
                 <button className="button-footer">ENVOYER UN AVIS</button>
         </div>  
