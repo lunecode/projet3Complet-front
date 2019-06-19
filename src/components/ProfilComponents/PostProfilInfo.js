@@ -87,7 +87,7 @@ class PostProfilInfo extends Component {
               <h2>Profil</h2>
               <div className='field-profil-picture-bloc'>
                 <input type='text' name="profile_picture" value={profile_picture} onChange={this.changeHandler} placeholder='Profil Picture' className='field-profil-picture' />
-                <label htmlFor="profile_picture">Modifier l'image</label>
+                <p>Modifier l'image</p>
                 <p>Format JPG ou JPEG.Une résolution de 600px par 600px est recommandé</p>
               </div>
             </div>
@@ -98,7 +98,7 @@ class PostProfilInfo extends Component {
               </div>
               <div>
                 <label htmlFor="location">Location</label>
-                <input type="text" name="location" value={location} onChange={this.changeHandler} placeholder='Ou lendroit ou nous avons le plus de chance de vous croisé' className='field-profil-bloc-2' />
+                <input type="text" name="location" value={location} onChange={this.changeHandler} placeholder="Ou l'endroit ou nous avons le plus de chance de vous croisé" className='field-profil-bloc-2'/>
               </div>
               <div>
                 <label htmlFor="profil_link">Lien de votre profil tripitto</label>
@@ -164,10 +164,9 @@ class PostProfilInfo extends Component {
           <div>
             <label htmlFor="firstname">Firstname</label>
             <input type="text" name="firstname" value={firstname} onChange={this.changeHandler} />
-          </div>
-         
+          </div> 
           <button type="submit">Submit</button>
-         </div>  */}
+            */}
           </form>
 
 

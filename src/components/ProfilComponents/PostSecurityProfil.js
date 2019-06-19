@@ -93,7 +93,7 @@ class PostSecurityProfil extends Component {
                 </div>
                 <div  className="mdp-form">
                   <label htmlFor="password_forget" className="field-mdp">Nouveau mot de passe</label>
-                  <input type="text" name="password_forget" value={password_forget} onChange={this.changeHandler} />
+                  <input type="text" name="password_forget" value={password_forget} onChange={this.changeHandler}  />
                 </div>
                 <div  className="mdp-form">
                   <label htmlFor="password_forget_check" className="field-mdp">Confirmer nouveau mot de passe</label>

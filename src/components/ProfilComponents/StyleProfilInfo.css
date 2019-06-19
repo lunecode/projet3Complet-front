@@ -55,6 +55,7 @@ Alignement des deux grand bloc  */
 .profil-menu a:hover{
     color:#2eaecd;
 }
+
 /* 
 Grid pour profil info */
 .grid-profil-info{
@@ -74,7 +75,7 @@ Grid pour profil info */
 /* champs input */
 .grid-profil-info label{
    display: block;
-    width: 200px;
+    width: 300px;
     padding-top:5px;
 }
 
@@ -133,12 +134,11 @@ Grid pour profil info */
     padding-top:5px;
     
 }
-
+.identity-field{
+    padding-left:0;
+}
 .field-profil-checkbox label{
     display:inline; 
-}
-[type='checkbox']:checked + label::before{
-    background-color:blue;
 }
 .field-profil-bloc-3{
     float:left;
@@ -148,10 +148,13 @@ Grid pour profil info */
     border:1px solid #d3d3d3;
     font-style:italic;
 }
+.field-profil-bloc-3:focus{
+    background:#e9eff1;
+    border:1px solid #30b1ce;
+}
 .profil-bloc-3 input{
     margin-bottom:20px;
 }
-
 /* Reseaux sociaux */
 .bloc-social-profil{
     width: 70%;
