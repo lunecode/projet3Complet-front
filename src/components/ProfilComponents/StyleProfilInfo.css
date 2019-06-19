@@ -31,7 +31,7 @@ Alignement des deux grand bloc  */
     width:70px;
     height:70px;
     margin-top:10px;
-    padding-left:10px;
+    margin-right:13px;
 }
 /* Profil menu */
 .profil-menu{
@@ -72,8 +72,8 @@ Grid pour profil info */
     font-size:22px;
 }
 /* champs input */
-label{
-    display:block;
+.grid-profil-info label{
+   display: block;
     width: 200px;
     padding-top:5px;
 }
@@ -110,6 +110,10 @@ label{
     border:1px solid #d3d3d3;
     font-style:italic;
 }
+.field-profil-bloc-2:focus{
+    background:#e9eff1;
+    border:1px solid #30b1ce;
+}
 .profil-bloc-2 input{
   margin-bottom:20px;
 }
@@ -129,6 +133,7 @@ label{
     padding-top:5px;
     
 }
+
 .field-profil-checkbox label{
     display:inline; 
 }
@@ -198,4 +203,5 @@ label{
    border:none;
    
 }
+
 

@@ -11,7 +11,7 @@ class ProfilPage extends Component {
       <>
         <Navbar />
         <PostProfilInfo />
-
+          
         {/* <p>Modification des données de la table profil pour profilInfo</p>
         <PutProfilInfo /> */}
         <Footer />   

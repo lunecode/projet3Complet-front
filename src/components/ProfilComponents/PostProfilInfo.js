@@ -60,7 +60,7 @@ class PostProfilInfo extends Component {
   }
 
   render() {
-    const { profil_link,youtube_link, website_link, facebook_link, instagram_link, lastname, firstname, email, identity, password, password_forget, type, position, inscription_date, inscription_type, profile_picture, nb_countries_visited, birth_date, location, pseudo } = this.state
+    const { profil_link, youtube_link, website_link, facebook_link, instagram_link, lastname, firstname, email, identity, password, password_forget, type, position, inscription_date, inscription_type, profile_picture, nb_countries_visited, birth_date, location, pseudo } = this.state
     return (
       <div className="bloc-page-profil">
         <div className="membres-profil">
@@ -109,12 +109,14 @@ class PostProfilInfo extends Component {
             <div className="profil-bloc-3">
               <div className='field-profil-checkbox'>
                 <label htmlFor="identity" className="field-title-identity">Identité</label>
-                <label htmlFor="lui">Lui</label>
-                <input type="checkbox" id="lui" name="is_checked_him" value={identity} checked={this.state.is_checked_him} onChange={this.handleCheckbox} className="field-profil-checkbox" />
-                <label htmlFor="elle">Elle</label>
-                <input type="checkbox" id="elle" name="is_checked_her" value={identity} checked={this.state.is_checked_her} onChange={this.handleCheckbox} />
-                <label htmlFor="equipe">Equipe</label>
-                <input type="checkbox" id="equipe" name="is_checked_team" value={identity} checked={this.state.is_checked_team} onChange={this.handleCheckbox} />
+                <div className="identity-field">
+                  <label htmlFor="lui">Lui</label>
+                  <input type="checkbox" id="lui" name="is_checked_him" value={identity} checked={this.state.is_checked_him} onChange={this.handleCheckbox} className="field-profil-checkbox" />
+                  <label htmlFor="elle">Elle</label>
+                  <input type="checkbox" id="elle" name="is_checked_her" value={identity} checked={this.state.is_checked_her} onChange={this.handleCheckbox} />
+                  <label htmlFor="equipe">Equipe</label>
+                  <input type="checkbox" id="equipe" name="is_checked_team" value={identity} checked={this.state.is_checked_team} onChange={this.handleCheckbox} />
+                </div>
               </div>
               <div>
                 <label htmlFor="birth_date">Date de naissance</label>
@@ -167,39 +169,39 @@ class PostProfilInfo extends Component {
           <button type="submit">Submit</button>
          </div>  */}
           </form>
-       
-      
-        
+
+
+
         </div>
         <div className="bloc-social-profil">
           <h2 className="title-social-profil">Mes réseaux sociaux</h2>
-          <img src={iconIdea} alt="icon facebook " className="icon-social-idea"/>
+          <img src={iconIdea} alt="icon facebook " className="icon-social-idea" />
           <p>Pour developper votre communité digital</p>
           <div className="social-network-profil">
             <div>
-              <img src={iconFacebook} alt="icon facebook "/>
-              <input type="text" name="facebook_link" value={facebook_link} onChange={this.changeHandler} placeholder="Facebook" className="field-social"/>
+              <img src={iconFacebook} alt="icon facebook " />
+              <input type="text" name="facebook_link" value={facebook_link} onChange={this.changeHandler} placeholder="Facebook" className="field-social" />
             </div>
             <div>
-              <img src={iconInsta} alt="icon instagram "/>
-              <input type="text" name="instagram_link" value={instagram_link} onChange={this.changeHandler}placeholder="Instagram" className="field-social" />
+              <img src={iconInsta} alt="icon instagram " />
+              <input type="text" name="instagram_link" value={instagram_link} onChange={this.changeHandler} placeholder="Instagram" className="field-social" />
             </div>
             <div>
-            <img src={iconYoutube} alt="icon youtube"/>
-              <input type="text" name="youtube_link" value={youtube_link} onChange={this.changeHandler}placeholder="Youtube" className="field-social"/>
+              <img src={iconYoutube} alt="icon youtube" />
+              <input type="text" name="youtube_link" value={youtube_link} onChange={this.changeHandler} placeholder="Youtube" className="field-social" />
             </div>
             <div>
-            <img src={iconAutreLien} alt="icon link"/>
-              <input type="text" name="website_link" value={website_link} onChange={this.changeHandler}placeholder="Autre lien ou blog"className="field-social"/>
+              <img src={iconAutreLien} alt="icon link" />
+              <input type="text" name="website_link" value={website_link} onChange={this.changeHandler} placeholder="Autre lien ou blog" className="field-social" />
             </div>
           </div>
-         <div className="save-btn">
-          <button>SAUVEGARDER</button>
+          <div className="save-btn">
+            <button>SAUVEGARDER</button>
           </div>
         </div>
-        </div>
-        )
-      }
-    
-    }
-    export default PostProfilInfo
+      </div>
+    )
+  }
+
+}
+export default PostProfilInfo
