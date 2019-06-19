@@ -120,7 +120,7 @@ class PostProfilInfo extends Component {
               </div>
               <div>
                 <label htmlFor="birth_date">Date de naissance</label>
-                <input type="text" name="birth_date" value={birth_date} onChange={this.changeHandler} placeholder='1997/02/02' className='field-profil-bloc-3' />
+                <input type="text" name="birth_date" value={birth_date} onChange={this.changeHandler} placeholder='02/02/1988' className='field-profil-bloc-3' />
               </div>
               <div>
                 <label htmlFor="nb_contries_visited">Nombre de pays visités</label>

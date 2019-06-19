@@ -31,8 +31,8 @@ selectLanguage = () => {
         return (
         <>
 <footer>
-    <section class="containerFooter">
-        <div class="item-a">
+    <section className="containerFooter">
+        <div className="item-a">
             <h3>Tripitto en quelques mots</h3>
                 <p>
                     Guide de voyage en vidéo, vous découvrez par Tripitto des destintions avec les yeux de voyageurs 
@@ -44,19 +44,19 @@ selectLanguage = () => {
                     d'avions... Embarquez dans la communauté !
                 </p>
         </div>
-        <div class="item-b">
+        <div className="item-b">
         <img src={About} alt="info"></img>
                     <p>
                         À propos de Tripitto
                     </p>
                     <div className="item-bMargin">
-                        <img class="item-bImage"  src={WhatToDo} alt="interogation"></img>
+                        <img className="item-bImage"  src={WhatToDo} alt="interogation"></img>
                         <p>
                             Que faire sur Tripitto ?
                         </p>
                 </div>
         </div>
-            <div class="item-c">
+            <div className="item-c">
                 <img src={Advice} alt="info"></img>
                     <p>
                         Nos conseils <br></br>pour vos vidéos
@@ -68,7 +68,7 @@ selectLanguage = () => {
                         </p>
                 </div>
             </div>
-        <div class="item-d">
+        <div className="item-d">
             <h3>Votre avis nous importe</h3>
                 <p>
                     Que le site it été le rayon de soleil de votre journée ou qu'un bug vous ai fait enrager, 
@@ -81,26 +81,26 @@ selectLanguage = () => {
         </div>  
     </section>
     <section className="allRightsReserved">
-        <div class="item-a-allRightsReserved">
+        <div className="item-a-allRightsReserved">
             <p>©2019 Tripitto. Tous droits réservés. Fait avec</p>
         </div>
-        <div class="item-b-allRightsReserved">
+        <div className="item-b-allRightsReserved">
             <img className="love" src={Love} alt="love"></img>
         </div>
-        <div class="item-c-allRightsReserved">
+        <div className="item-c-allRightsReserved">
             <p>
                 à Paris,FR
             </p>
         </div>
-        <div class="item-d-allRightsReserved">
+        <div className="item-d-allRightsReserved">
             <p>
                 Contact/Confidentialité/Conditions
             </p>
         </div>
-        <div class="item-e-allRightsReserved">
+        <div className="item-e-allRightsReserved">
             <img onClick={this.selectLanguage}src={this.state.flag} alt="flag"></img>
         </div>
-        <div class="item-f-allRightsReserved">
+        <div className="item-f-allRightsReserved">
             <img onClick={this.selectLanguage}src={Path} alt="f"></img>
         </div>
     </section>

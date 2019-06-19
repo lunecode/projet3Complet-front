@@ -8,16 +8,16 @@ import Notification from '../Images-tripitto/Icon/Notifications.png';
 class Navbar extends Component {
     render () {
         return (
-            <>
-                <header>
+            <div>
+            <header>
                     <nav className="container_nav">
                         <div className="containerNavLeft">
                             <div className="divLogoTripitto">
                                 <img className="logoTripitto" src={Logo}alt="logo tripitto"></img>
                             </div>
                             <htmlform method="GET" action="rechercher" className="Search">
-                                <input class="inputNav" type="text" placeholder="Voyager..."></input>
-                                <img class="icone-loupe"src={Search}alt="Search"></img>
+                                <input className="inputNav" type="text" placeholder="Voyager..."></input>
+                                <img className="icone-loupe"src={Search}alt="Search"></img>
                             </htmlform>
                             <ul className="ulNav">
                                 <li>VIDÉOS</li>
@@ -33,7 +33,7 @@ class Navbar extends Component {
                         </div>
                     </nav>
                 </header>
-            </>
+            </div>
         )
     }
 }
