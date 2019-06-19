@@ -241,7 +241,7 @@ margin-top: 1%;
     text-align: center;
     
     .borderVideaste {
-        border: solid $colorBorder;
+        border: solid 1px $colorBorder;
         border-radius: 5px;
 
         img {
@@ -271,20 +271,20 @@ margin-top: 1%;
 
 .videaste1 {
     grid-area: videaste1;
-    padding-right: 1%;
+    padding-right: 2%;
 }
 
 .videaste2 {
     grid-area: videaste2;
-    padding-right: 1%;
+    padding-right: 2%;
 }
 
 .videaste3 {
     grid-area: videaste3;
-    padding-right: 1%;
+    padding-right: 2%;
 }
 
 .videaste4 {
     grid-area: videaste4;
-    padding-right: 1%;
+    padding-right: 2%;
 }
