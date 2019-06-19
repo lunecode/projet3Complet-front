@@ -8,7 +8,6 @@ import Festival from '../../Images-tripitto/Icon/Ingredients/Festival.png'
 import Humanitaire from '../../Images-tripitto/Icon/Ingredients/Humanitaire.png'
 import Luxe from '../../Images-tripitto/Icon/Ingredients/Luxe.png'
 import Montagne from '../../Images-tripitto/Icon/Ingredients/Montagne.png'
-import Plage from '../../Images-tripitto/Icon/Ingredients/Plage.png'
 import Rencontre from '../../Images-tripitto/Icon/Ingredients/Rencontre.png'
 import Romantique from '../../Images-tripitto/Icon/Ingredients/Romantique.png'
 import Sacados from '../../Images-tripitto/Icon/Ingredients/Sacados.png'
@@ -34,6 +33,11 @@ class PostIngedients extends Component {
                 ingredients:0
 
         }
+        changeHandler =(e)=>{
+          this.setState({
+       [e.target.name]: e.target.value
+          })
+        }
         submitHandler = e => {
         e.preventDefault()
         console.log(this.state)
@@ -45,6 +49,7 @@ class PostIngedients extends Component {
         console.log(error)
         })   
         }
+        
               Enum1 = () => {
                 this.setState({ ingredients: 1 })
               }
@@ -109,23 +114,23 @@ class PostIngedients extends Component {
               Enum21= () => {
                 this.setState({ ingredients: 21})
               }
-
              
                 
 render() {
-        
+console.log(this.state);
+
 return (
 
 <div className="ingédients" >
-       <input className="input-travel_type" type="hidden" name="travel_type" value={this.state.ingredients} onChange={this.changeHandler} />
         <h3>Vos ingrédients pour un voyage inoubliable </h3>
         <p> <img src={Idea} alt="icon" />Selectionnez jusqu'à 5 choix</p>
 
-<div className="Ingredient_list1">
+<form className="globale" onSubmit={this.submitHandler}>  
+  <input className="I" type="hidden" name="ingredients" value={this.state.ingredients} onChange={this.changeHandler} />
+   <div className="Ingredient_list1">
 
         <div className="ingredient1">
         <img src={Aventurierseul}
-        name="Aventurier_abord"
         onClick={this.Enum1}
         alt="Aventurier d'abord"
         />
@@ -134,7 +139,6 @@ return (
 
         <div className="ingredient2">
         <img src={Copains}
-        name="Les_copains_dabord"
         onClick={this.Enum2}
         alt="Les copains d'abord"
         />
@@ -143,7 +147,6 @@ return (
                 
         <div className="ingredient3">
         <img src={Romantique}
-        name="Escapade_romantique"
         onClick={this.Enum3}
         alt="Escapade_romantique"
         />
@@ -152,7 +155,6 @@ return (
 
         <div className="ingredient4">
         <img src={En_famille}
-        name="En_famille"
         onClick={this.Enum4}
         alt="En_famille"
         />
@@ -161,7 +163,7 @@ return (
 
         <div className="ingredient5">
         <img src={DigitalNomad}
-        name="Digita_nomad"
+     
         onClick={this.Enum5}
         alt="Digita_nomad"
         />
@@ -172,7 +174,7 @@ return (
        <div className="Ingredient_list2">
                 <div className="ingredient6">
                 <img src={plage}
-                name="Iles_Plages"
+               
                 onClick={this.Enum6}
                 alt="Iles_Plages"
                 />
@@ -181,7 +183,7 @@ return (
 
                 <div className="ingredient9">
                 <img src={Montagne}
-                name="Grandes_villes"
+               
                 onClick={this.Enum7}
                 alt="Grandes_villes"
                 />
@@ -190,7 +192,7 @@ return (
 
                 <div className="ingredient8">
                 <img src={Safari}
-                name="Safari_Animaux"
+                
                 onClick={this.Enum8}
                 alt="Safari_Animaux"
                 />
@@ -199,7 +201,7 @@ return (
 
                 <div className="ingredient15">
                 <img src={Ville}
-                name="Histoire_Culture"
+             
                 onClick={this.Enum9}
                 alt="Histoire_Culture"
                 />
@@ -208,7 +210,7 @@ return (
 
                 <div className="ingredient7">
                 <img src={Enforet}
-                name="En_foret"
+                
                 onClick={this.Enum10}
                 alt="En foret"
                 />
@@ -219,7 +221,7 @@ return (
 
                 <div className="Ingredient_list3"> <div className="ingredient7">
                 <img src={Sportaventure}
-                name="Sport_Aventures"
+              
                 onClick={this.Enum11}
                 alt="Montagnes_Campagnes"
                 />
@@ -228,7 +230,7 @@ return (
 
                 <div className="ingredient9">
                 <img src={Festival}
-                name="Sport_Aventures"
+                
                 onClick={this.Enum12}
                 alt="Grandes_villes"
                 />
@@ -237,7 +239,7 @@ return (
 
                 <div className="ingredient10">
                 <img src={Plaisirculinaire}
-                name="En_foret"
+               
                 onClick={this.Enum13}
                 alt="En_foret"
                 />
@@ -246,7 +248,7 @@ return (
 
                 <div className="ingredient11">
                 <img src={histoireCulture}
-                name="histoire_Culture"
+               
                 onClick={this.Enum14}
                 alt="Histoire_Culture"
                 />
@@ -255,7 +257,7 @@ return (
                 
                 <div className="ingredient16">
                 <img src={Spiritualité}
-                name="Spiritualité"
+              
                 onClick={this.Enum15}
                 alt="Spiritualité"
                 />
@@ -268,7 +270,7 @@ return (
  
            <div className="ingredient17">
                 <img src={Humanitaire}
-                name="Humanitaire"
+               
                 onClick={this.Enum16}
                 alt="Humanitaire"
                 />
@@ -277,7 +279,7 @@ return (
 
                 <div className="ingredient15">
                 <img src={Ecotourisme}
-                name="Ecotourisme"
+                
                 onClick={this.Enum17}
                 alt="Ecotourisme"
                 />
@@ -286,7 +288,7 @@ return (
 
                 <div className="ingredient18">
                 <img src={Plaisirculinaire}
-                name="Ecotourise"
+              
                 onClick={this.Enum18}
                 alt="Ecotourise"
                 />
@@ -295,7 +297,7 @@ return (
 
                 <div className="ingredient19">
                 <img src={Luxe}
-                name="Luxe"
+                
                 onClick={this.Enum19}
                 alt="Luxe"
                 />
@@ -304,7 +306,7 @@ return (
 
                 <div className="ingredient19">
                 <img src={Sacados}
-                name="En_sac_dos"
+               
                 onClick={this.Enum20}
                 alt="En_sac_dos"
                 />
@@ -313,7 +315,7 @@ return (
 
                 <div className="ingredient19">
                 <img src={Rencontre}
-                name="En_sac_dos"
+                
                 onClick={this.Enum21}
                 alt="En_sac_dos"
                 />
@@ -321,7 +323,8 @@ return (
                 </div>
                                
         </div>
-
+        {/* <button type="submit" >submit</button> */}
+</form>
 </div>
 
 );

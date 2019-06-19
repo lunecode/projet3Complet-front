@@ -6,10 +6,6 @@ import PostProfilInfo from '../components/ProfilComponents/PostProfilInfo';
 import PostEnumProfil from '../components/ProfilComponents/PostEnumProfil';
 
 
-// import PutProfilInfo from '../components/ProfilComponents/PutProfilInfo';
-import Footer from'../components/Footer';
-import Navbar from '../components/Navbar';
-
 class ProfilPage extends Component {
   render() {
     return (

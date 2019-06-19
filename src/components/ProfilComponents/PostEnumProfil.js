@@ -10,38 +10,57 @@ import Idea from "../../Images-tripitto/Icon/Idea.png"
 
 class PostEnumProfil extends Component {
   state = {
-    profil: {
-      Passionnedevoyage: "Passionné de voyage",
-      Créateurdecontenu: "Créateur de contenu",
-      PhotographeVidéaste: "Photographe & Vidéaste",
-      Blogueurvoyage: "Blogueur voyage",
-      Autre: "Autre"
-    }
+    profil:""
   }
-  handleClick = (profil) => {
+
+  changeHandler =(e)=>{
+    this.setState({
+ [e.target.name]: e.target.value
+    })
+  }
+
+  submitHandler = e => {
+    e.preventDefault()
+    console.log(this.state)
     axios.post('http://localhost:3000/profil/insert_profil', this.state)
-      .then(response => {
-        console.log({ response })
-      })
-      .catch(error => {
-        console.log({ error })
-      })
+    .then(response => {
+    console.log(response)
+    })
+    .catch(error => {
+    console.log(error)
+    })   
+    }
+
+  profil1 = () => {
+    this.setState({ profil: 1 })
+  }
+  profil2 = () => {
+    this.setState({ profil: 2 })
+  }
+  profil3 = () => {
+    this.setState({ profil: 3 })
+  }
+  profil4 = () => {
+    this.setState({ profil: 4 })
   }
 
   render() {
+
+    console.log(this.state);
+
     return (
 <div className="Profil_inscription">
-
         <div className="Titre">
         <h3>Dites en un peu plus sur vous</h3>
         <p> <img src={Idea} alt="icon" />Cela apparaitra sur votre page de profil visible par tous</p>
         <h4>Vous êtes plutôt</h4>
         </div>
 
-  <div className="Profil_Pictures">
+<form className="Profil_Pictures" type="hidden" name="profil" onSubmit={this.submitHandler} value={this.state.profil} onChange={this.changeHandler}>
+       
         <div className="Profil_picture1">
-        <img onClick={() => this.handleClick("Passionné de voyage")} src={Passionnedevoyage}
-        name="Passionnédevoyage"
+        <img src={Passionnedevoyage}
+        onClick={this.profil1}
         alt="Passioné de voyage"
         />
         Passionné de voyage
@@ -49,8 +68,8 @@ class PostEnumProfil extends Component {
 
 
         <div className="Profil_picture2">
-        <img onClick={() => this.handleClick("Créateur de contenu")} src={Créateurdecontenu}
-        name="Créateurdecontenu"
+        <img src={Créateurdecontenu}
+        onClick={this.profil2}
         alt="Créateur de contenu"
         />
         Créateur de contenu
@@ -58,8 +77,8 @@ class PostEnumProfil extends Component {
 
 
         <div className="Profil_picture3">
-        <img onClick={() => this.handleClick("Blogueur de voyage")} src={Blogueurdevoyage}
-        name="Blogueurdevoyage"
+        <img src={Blogueurdevoyage}
+        onClick={this.profil3}
         alt="Blogueur de voyage"
         />
         Blogueur de voyage
@@ -67,25 +86,23 @@ class PostEnumProfil extends Component {
 
 
         <div className="Profil_picture4">
-        <img onClick={() => this.handleClick("Photograph & vidéaste")} src={Photographevidéaste}
-        name="Photographvidéaste"
+        <img src={Photographevidéaste}
+        onClick={this.Enum4}
         alt="Photograph & vidéaste"
         />
         Photograph & vidéaste
         </div>
 
         <div className="Profil_picture5">
-        <img onClick={() => this.handleClick("Autre")} src={Autre}
-        name="Autre"
+        <img src={Autre}
+           onClick={this.profil4}
         alt="L"
         />
         Autre
         </div>
-
-
-
-        </div>
-      </div>
+ {/* <button type="submit" >submit</button>  */}
+   </form>
+</div>
     );
   }
 }

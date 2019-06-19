@@ -2,12 +2,12 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import './StyleProfilInfo.css'
 
-import iconFacebook from '../../Images-tripitto/Icon/social/icon-fb.png'
-import iconInsta from '../../Images-tripitto/Icon/social/icon-insta.png'
-import iconYoutube from '../../Images-tripitto/Icon/social/icon-youtube.png'
-import iconIdea from '../../Images-tripitto/Icon/Idea.png'
-import iconLink from '../../Images-tripitto/Icon/social/link.png'
-import iconAutreLien from '../../Images-tripitto/Icon/social/icon-autre-lien.png'
+// import iconFacebook from '../../Images-tripitto/Icon/social/icon-fb.png'
+// import iconInsta from '../../Images-tripitto/Icon/social/icon-insta.png'
+// import iconYoutube from '../../Images-tripitto/Icon/social/icon-youtube.png'
+// import iconIdea from '../../Images-tripitto/Icon/Idea.png'
+// import iconLink from '../../Images-tripitto/Icon/social/link.png'
+// import iconAutreLien from '../../Images-tripitto/Icon/social/icon-autre-lien.png'
 
 class PostProfilInfo extends Component {
   state = {
@@ -60,7 +60,7 @@ class PostProfilInfo extends Component {
   }
 
   render() {
-    const { profil_link,youtube_link, website_link, facebook_link, instagram_link, lastname, firstname, email, identity, password, password_forget, type, position, inscription_date, inscription_type, profile_picture, nb_countries_visited, birth_date, location, pseudo } = this.state
+    const { profil_link,identity, profile_picture, nb_countries_visited, birth_date, location, pseudo } = this.state
     return (
       <div className="bloc-page-profil">
         <div className="membres-profil">

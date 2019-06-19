@@ -8,8 +8,8 @@ import Notification from '../Images-tripitto/Icon/Notifications.png';
 class Navbar extends Component {
     render () {
         return (
-            <>
-                <header>
+            <div>
+            <header>
                     <nav className="container_nav">
                         <div className="containerNavLeft">
                             <div className="divLogoTripitto">
@@ -33,7 +33,7 @@ class Navbar extends Component {
                         </div>
                     </nav>
                 </header>
-            </>
+            </div>
         )
     }
 }

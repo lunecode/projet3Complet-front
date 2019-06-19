@@ -17,7 +17,7 @@ class App extends Component {
              <Route exact path="/" component={ProfilPage}/>
            <Route exact path="/uploadvideo" component={UploadVideo} />
           <Route exact path="/UploadPage" component={UploadPage}/>
-         <Route exact path="/Ingrédients" component={Ingrédients}/>
+          <Route exact path="/Ingrédients" component={Ingrédients}/>
           <Route exact path="/Home" component={Home}/>
 
             </div>
