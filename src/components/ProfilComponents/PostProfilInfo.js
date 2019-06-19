@@ -3,9 +3,7 @@ import axios from 'axios'
 import './StyleProfilInfo.css'
 
 
-  const PostProfilInfo =(props)=>{
-    console.log(props);
-    
+  const PostProfilInfo =(props)=>{ 
     return (
       <div className="bloc-page-profil">
         <div className="membres-profil">
