@@ -51,11 +51,8 @@ let b = 1
 let c = 1 
         return (
             <>
-    {/****************************** SECTION NEXT DESTINATION ***************************** */}
+    {/****************************** SECTION NEXT DESTINATION******************************* */}
         <section className='nextdestination'>
-                <div className='container_nextdestination_title'>
-                    <h2 >PROJETEZ-VOUS DANS VOTRE PROCHAINE DESTINATION</h2>
-                </div>
                 <div class="wrapper-nextpicture">
                 {this.state.nextpicture.map(nextpicture => (
                     <div className={"divpictureNext" + i} key={i++}>

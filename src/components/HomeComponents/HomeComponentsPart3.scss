@@ -1,6 +1,7 @@
 $ColorFont: #2C404D;
 $colorbackground: #2C404D;
 $colorBorder: #1BA2A2;
+$colorButton: #5dd8dc;
 
 .ContainertitleRecentlyPublished {
     display: grid;
@@ -228,4 +229,62 @@ margin-top: 1%;
         font-weight: bold;
         text-align: center;
     }
+}
+
+.ContainerVideaste {
+    display: grid;
+    grid-template-columns: 16.5% 16.5% 16.5% 16.5%;
+    grid-template-rows: 37vh;
+    grid-template-areas: "videaste1 videaste2 videaste3 videaste4";
+    margin-left: 3%;
+    margin-top: 3%;
+    text-align: center;
+    
+    .borderVideaste {
+        border: solid 1px $colorBorder;
+        border-radius: 5px;
+
+        img {
+            position: relative;
+            top: -30px;
+        }
+        
+        p {
+            text-transform: capitalize;
+        }
+
+        .centerVideaste {
+            align-items: flex-end;
+            margin-top: -40px;
+        }
+
+        .buttonVideaste {
+            margin-bottom: 20px;
+            margin-top: 5px;
+            background-color: $colorButton;
+            color: white;
+            font-size: 13px;
+            padding: 11px 50px;
+        }
+    }
+}
+
+.videaste1 {
+    grid-area: videaste1;
+    padding-right: 2%;
+}
+
+.videaste2 {
+    grid-area: videaste2;
+    padding-right: 2%;
+}
+
+.videaste3 {
+    grid-area: videaste3;
+    padding-right: 2%;
+}
+
+.videaste4 {
+    grid-area: videaste4;
+    padding-right: 2%;
 }

@@ -1,0 +1,15 @@
+$colorbackground: #2C404D;
+
+.containerTitleHomeNavbar {
+    color: rgba(255, 255, 255, 0.609);
+    display: grid;
+    grid-template-columns: 85% 3.5% 3.5% 3.5% 3.5%;
+    font-size: 9px;
+    padding-left: 3%;
+    align-items: center;
+    background-color: $colorbackground;
+
+    .rsNavbar:hover{
+        opacity: 0.4;
+    }
+}

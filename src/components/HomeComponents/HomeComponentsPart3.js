@@ -7,6 +7,7 @@ import leftHome from '../../Images-tripitto/Icon/leftHome.png'
 import RightHome from '../../Images-tripitto/Icon/RightHome.png'
 import normal from '../../Images-tripitto/Icon/Voyage/normal.png'
 import Rectangle from '../../Images-tripitto/Icon/Voyage/Rectangle.png'
+import User from '../../Images-tripitto/Icon/User/User.png'
 
 // Permet l'affichage des données pour un test de la table " General_video "
 
@@ -15,33 +16,47 @@ class Display extends Component {
         videos: [],
         discoveredVideo : [],
         videastes: [],
+        RecentlyPublished: 1,
     };
 
 
     getRecentlyPublished = async () => {
-        const res = await axios.get('http://localhost:3000/video/play_video')
+        const res = await axios.get('http://localhost:3000/general_video/get_general_video')
         const recentlyPubVideo = res.data.slice(res.data.length - 5)
         this.setState({ videos: recentlyPubVideo })
         console.log('getRecentlyPublished', this.state.videos)
     }
 
     getdiscovered = async () => {
-        const res = await axios.get('http://localhost:3000/video/play_video')
+        const res = await axios.get('http://localhost:3000/general_video/get_general_video')
         this.setState({ discoveredVideo: res.data })
         console.log(this.state.discoveredVideo)
     }
 
     getVideastes = async () => {
-        const res = await axios.get('http://localhost:3000/profil/get_profil')
+        const res = await axios.get('http://localhost:3000/profil/get_profil_videaste_home')
         this.setState({ videastes: res.data })
         console.log(this.state.videastes)
     }
-    
+
+    selectRecentlyPublished = () => {
+        this.setState({ RecentlyPublished: +5 })
+        console.log(this.state.RecentlyPublished)
+    }
+
+    selectRecentlyPublishedBack = () => {
+        this.setState({ RecentlyPublished: -5 })
+        console.log(this.state.RecentlyPublished)
+    }
+
     componentDidMount() {
         this.getRecentlyPublished()
         this.getdiscovered()
         this.getVideastes()
+        this.selectRecentlyPublished()
+        this.selectRecentlyPublishedBack()
     }
+    
     
     render() {
         let i = 1
@@ -61,10 +76,10 @@ class Display extends Component {
         </h4>
     </div>
     <div>
-        <img className="leftHome" src={leftHome} alt=""></img>
+        <img onClick={this.selectRecentlyPublishedBack} className="leftHome" src={leftHome} alt=""></img>
     </div>
     <div>
-        <img className="rightHome"src={RightHome} alt=""></img>
+        <img onClick={this.selectRecentlyPublished} className="rightHome"src={RightHome} alt=""></img>
     </div>
     
 </section>
@@ -92,22 +107,6 @@ class Display extends Component {
             ))}
         </div>
     </section>
-            
-            {/* <div className="videoContainer">
-                
-            </div>  
-                <div className="imagesContainer">
-                    
-                </div>
-            <div className="videastesContainer">
-                {this.state.videastes.map(videaste => (
-                    <div className="videastes" key={videaste.id_profil}>
-                        <p>{videaste.lastname} {videaste.firstname}</p>
-                        <p>{videaste.location}</p>
-                        <p>(Numbers) Video</p>
-                    </div> 
-                    ))}
-            </div> */}
             <div className="marginUncover"></div>
                 <section className="ContainertitleRecentlyPublished">
                     <div>
@@ -148,7 +147,7 @@ class Display extends Component {
                 
                 <div className="marginUncover"></div>
                 <section className="ContainertitleRecentlyPublished">
-                    <div>
+                    <div className="marginVidaste">
                         <h4 className="titleRecentlyPublished">VIDÉASTES</h4>
                     </div>
                     <div>
@@ -156,6 +155,71 @@ class Display extends Component {
                     </div>
                     <div>
                         <img className="rightHome" src={RightHome} alt=""></img>
+                    </div>
+                </section>
+                <section className="TitlepublishedBorder">
+                    <div className="TitlepublishedBorderBottom"></div>
+                </section> 
+                <section className="ContainerVideaste">
+                    <div className="videaste1">
+                    <div className="borderVideaste">
+                        <img src={User} alt=""></img>
+                            <div className="centerVideaste">
+                                {this.state.videastes.map(videaste => (
+                                <div className="videastes" key={videaste.id_profil}>
+                                    <p><strong>{videaste.lastname} {videaste.firstname}</strong></p>
+                                    <p>{videaste.location}</p>
+                                    <p>(Numbers) Video</p>
+                                </div> 
+                                ))}
+                                <button className="buttonVideaste">S'ABONNER</button>
+                            </div> 
+                        </div> 
+                    </div>
+                    <div className="videaste2">
+                    <div className="borderVideaste">
+                        <img src={User} alt=""></img>
+                            <div className="centerVideaste">
+                                {this.state.videastes.map(videaste => (
+                                <div className="videastes" key={videaste.id_profil}>
+                                    <p><strong>{videaste.lastname} {videaste.firstname}</strong></p>
+                                    <p>{videaste.location}</p>
+                                    <p>(Numbers) Video</p>
+                                </div> 
+                                ))}
+                                <button className="buttonVideaste">S'ABONNER</button>
+                            </div> 
+                        </div> 
+                    </div>
+                    <div className="videaste3">
+                    <div className="borderVideaste">
+                        <img src={User} alt=""></img>
+                            <div className="centerVideaste">
+                                {this.state.videastes.map(videaste => (
+                                <div className="videastes" key={videaste.id_profil}>
+                                    <p><strong>{videaste.lastname} {videaste.firstname}</strong></p>
+                                    <p>{videaste.location}</p>
+                                    <p>(Numbers) Video</p>
+                                </div> 
+                                ))}
+                                <button className="buttonVideaste">S'ABONNER</button>
+                            </div> 
+                        </div> 
+                    </div>
+                    <div className="videaste4">
+                    <div className="borderVideaste">
+                        <img src={User} alt=""></img>
+                            <div className="centerVideaste">
+                                {this.state.videastes.map(videaste => (
+                                <div className="videastes" key={videaste.id_profil}>
+                                    <p><strong>{videaste.lastname} {videaste.firstname}</strong></p>
+                                    <p>{videaste.location}</p>
+                                    <p>(Numbers) Video</p>
+                                </div> 
+                                ))}
+                                <button className="buttonVideaste">S'ABONNER</button>
+                            </div> 
+                        </div> 
                     </div>
                 </section>
                 
