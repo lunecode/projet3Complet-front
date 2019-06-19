@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Route, BrowserRouter, Switch } from 'react-router-dom';
 
-import UploadInformation from './screen/UploadPage/UploadTravelInformation';
-import UploadVideo from './screen/UploadPage/UploadVideo';
-// import UploadTravelStep from './screen/UploadPage/UploadTravelStep';
+// import UploadInformation from './screen/UploadPage/UploadTravelInformation';
+// import UploadVideo from './screen/UploadPage/UploadVideo';
+import UploadTravelStep from './screen/UploadPage/UploadTravelStep';
 
 
 // import ProfilDescription from './screen/ProfilDescription/ProfilDescription';
@@ -21,8 +21,8 @@ class App extends Component {
       <>
 
         <Navbar />
-        {/* <UploadTravelStep /> */}
-        <UploadVideo />
+        <UploadTravelStep />
+        {/* <UploadVideo /> */}
         {/* <UploadInformation /> */}
 
 

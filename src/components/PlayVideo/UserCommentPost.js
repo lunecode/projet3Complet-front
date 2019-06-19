@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import './UserCommentPost.css';
+import Picture from '../../Images-tripitto/Icon/User/hover.png';
 
 // Permet d'inserer des données pour un test dans la table "comment"
 
@@ -31,10 +33,11 @@ submitHandler = e => {
 render() {
     const { comment, profil_id_profil, popularity_id_popularity, general_video_id_general_video } = this.state
     return (
-    <div>
+    <div className="container_post">
         <form onSubmit={this.submitHandler}>
-            <div>
-                Comment:<input type='text' name="comment" value={comment} onChange={this.changeHandler} />
+            <div className="myComment">
+            <div className="comment">
+            <img className="pictureuser" src={Picture} alt= "pictureuser"/>Comment:<textarea className="userComment" type='text' name="comment" value={comment} onChange={this.changeHandler} placeholder="Ajouter un commentaire..." rows="1" cols="90"/>
             </div>
             <div>
             profil_id_profil:<input type="text" name="profil_id_profil" value={profil_id_profil} onChange={this.changeHandler} />
@@ -42,7 +45,9 @@ render() {
             general_video_id_general_video:<input type="text" name="general_video_id_general_video" value={general_video_id_general_video} onChange={this.changeHandler} />
             </div>
             <button type="submit">Submit</button>
+            </div>
         </form>
+        
     </div>
   )
 }

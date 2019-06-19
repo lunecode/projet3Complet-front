@@ -32,11 +32,13 @@ class Video extends Component {
   }
 
   componentDidMount() {
+
     this.getVideo()
     this.getPopularity()
   }
 
 render() {
+    // const { filterVideo } = this.props;
     const opts = {
         height: '490',
         width: '850',

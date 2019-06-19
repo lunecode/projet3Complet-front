@@ -29,15 +29,15 @@ class PlayVideo extends Component {
         <TravelInfo />
         {/* <p>Affichage des informations détaillées concernant le road trip</p> */}
         <DetailledInfo />
-        {/* <p>Permet de reccuperer les commentaires sous la video</p> */}
-        <UserCommentGet />
-        {/* <p>Permet d'inserer des commentaires sous la videos</p> */}
+        <p>Permet d'inserer des commentaires sous la videos</p>
         <UserCommentPost />
-        {/* <p>Permet de  modifier des commentaires sous la video</p> */}
+        <p>Permet de reccuperer les commentaires sous la video</p>
+        <UserCommentGet />
+        <p>Permet de  modifier des commentaires sous la video</p>
         <UserCommentPut /> 
-        {/* <p>Permet de supprimer les commentaires sous la video</p> */}
+        <p>Permet de supprimer les commentaires sous la video</p>
         <UserCommentDelete />
-        {/* <p>Permet de reccupérer les videos de l'user dans la page "lecture video"</p> */}
+        <p>Permet de reccupérer les videos de l'user dans la page "lecture video"</p>
         <AllVideoUser />
         <Footer/>
       </>
