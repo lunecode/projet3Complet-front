@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Route, BrowserRouter, Switch } from 'react-router-dom';
 
-// import UploadInformation from './screen/UploadPage/UploadTravelInformation';
-// import UploadVideo from './screen/UploadPage/UploadVideo';
+import UploadInformation from './screen/UploadPage/UploadTravelInformation';
+import UploadVideo from './screen/UploadPage/UploadVideo';
 import UploadTravelStep from './screen/UploadPage/UploadTravelStep';
 
 
@@ -18,32 +18,35 @@ import Footer from './components/Footer';
 class App extends Component {
   render() {
     return (
-      <>
+      // <>
 
-        <Navbar />
-        <UploadTravelStep />
-        {/* <UploadVideo /> */}
-        {/* <UploadInformation /> */}
-
-
-        {/* <Home /> */}
-        {/* <PlayVideo /> */}
-        {/* <Home /> */}
-        {/* <ProfilDescription /> */}
-        <Footer />
-      </>
+      //   <Navbar />
+      //   <UploadTravelStep />
+      //   <UploadVideo />
+      //   <UploadInformation />
 
 
+      //   <Home />
+      //   <PlayVideo />
+      //   <Home />
+      //   <ProfilDescription />
+      //   <Footer />
+      // </>
 
-      // <BrowserRouter>
-      //   <div>
-      //     <Switch>
-      //       <Route path="/" component={UploadVideo} exact></Route>
-      //       <Route path="/uploadInformation" component={UploadInformation} ></Route>
-      //       <Route component={Error}></Route>
-      //     </Switch>
-      //   </div>
-      // </BrowserRouter>
+
+
+      <BrowserRouter>
+        <div>
+          <Navbar />
+          <Switch>
+            <Route path="/" component={UploadVideo} exact></Route>
+            <Route path="/uploadInformation" component={UploadInformation} ></Route>
+            <Route path="/uploadTravelStep" component={UploadTravelStep} ></Route>
+            <Route component={Error}></Route>
+          </Switch>
+          <Footer />
+        </div>
+      </BrowserRouter>
 
     )
   }

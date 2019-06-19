@@ -167,7 +167,7 @@ class PostTravelInformation extends Component {
               <p>Budget logement</p>
             </div>
 
-            <div className="accomodation">
+            <div className="accomodation_information">
               <input className="input-accomodation" type="number" name="accomodation_budget" value={accomodation_budget} onChange={this.changeHandler} />
             </div>
 
@@ -219,11 +219,10 @@ class PostTravelInformation extends Component {
 
             <button className="save" type="submit">ENREGISTRER</button>
 
-            <button className="preview" type="button">PRECEDENT</button>
+            <button className="preview" type="button"><NavLink exact to="/">PRECEDENT</NavLink></button>
 
-            <button className="next" type="button">SUIVANT</button>
+            <button className="next" type="button"><NavLink exact to="/uploadTravelStep">SUIVANT</NavLink></button>
 
-            {/* <button className="preview" type="button"><NavLink exact to="/">PRECEDENT</NavLink></button> */}
 
           </div>
         </form>
