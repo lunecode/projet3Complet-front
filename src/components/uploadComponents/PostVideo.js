@@ -1,8 +1,11 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import { NavLink } from 'react-router-dom'
 
 import './PostVideo.css'
+
 import UploadIcon from '../../Images-tripitto/Icon/Upload-Video.png'
+import CoverIcon from '../../Images-tripitto/Icon/Upload Image.png'
 
 
 
@@ -19,6 +22,7 @@ class PostVideo extends Component {
   changeHandler = (e) => {
     this.setState({ [e.target.name]: e.target.value })
   }
+
 
   submitHandler = e => {
     e.preventDefault()
@@ -37,26 +41,35 @@ class PostVideo extends Component {
     return (
       <div>
         <form onSubmit={this.submitHandler}>
-          <div className='grid'>
+          <div className='grid_postVideo'>
 
             <div className="empty">
             </div>
 
             <div className="upload-link">
-              <img className="uploadIcon" src={UploadIcon} alt="upload icon"></img>
+              <img className="uploadIconVideo" src={UploadIcon} alt="upload icon"></img>
               <p>Lien de la vidéo</p>
               <input className="input-upload" type='text' name="video_link" value={video_link} onChange={this.changeHandler} />
             </div>
 
             <div className="title">
               <p>Titre*</p>
-              <input className="input-title" placeholder="Escapade romantique dans la ville des lumières" type='text' name="video_title" value={video_title} onChange={this.changeHandler} />
+              <textarea placeholder="Escapade romantique dans la ville des lumières" name="title" rows="2" cols="134"></textarea>
+              {/* <input className="input-title" placeholder="Escapade romantique dans la ville des lumières" type='text' name="video_title" value={video_title} onChange={this.changeHandler} /> */}
             </div>
+
+
+
 
             <div className="description">
               <p>Description</p>
-              <input className="input-description" placeholder="Une description qui donne envie, très envie" type='text' name="video_description" value={video_description} onChange={this.changeHandler} />
+              <textarea placeholder="Une description qui donne envie, très envie" name="description" rows="8" cols="135"></textarea>
+              <br></br>
+              {/* <input className="input-description" placeholder="Une description qui donne envie, très envie" type='text' name="video_description" value={video_description} onChange={this.changeHandler} /> */}
             </div>
+
+
+
 
             <div className="title-equipment1">
               <p>Equipement utilisés pour filmer</p>
@@ -103,17 +116,27 @@ class PostVideo extends Component {
 
 
             <div className="cover-picture">
+              <img className="uploadIconCover" src={CoverIcon} alt="upload icon"></img>
               <p>Photo de couverture</p>
-              <input type='text' name="cover_picture" value={cover_picture} onChange={this.changeHandler} />
+              <input className="input-cover" type='text' name="cover_picture" value={cover_picture} onChange={this.changeHandler} />
             </div>
 
             <div className="temp">
               <p>Profil_id ( obligatoire )</p>
               <input type="text" name="profil_id_profil" value={profil_id_profil} onChange={this.changeHandler} />
             </div>
+
             <div className="submit-div">
-              <button className="submit" type="submit">Submit</button>
+              <button className="submit-button" type="submit">ENREGISTRER</button>
             </div>
+
+            <div className="next-div">
+              <button className="next-button" type="button"><NavLink exact to="/uploadInformation"> SUIVANT</NavLink></button>
+            </div>
+
+
+
+            
 
           </div>
         </form>
@@ -123,3 +146,5 @@ class PostVideo extends Component {
 }
 
 export default PostVideo
+
+

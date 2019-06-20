@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+// import { NavLink } from 'react-router-dom'
 
 import PostVideo from '../../components/uploadComponents/PostVideo';
-import Navbar from '../../components/Navbar';
-import Footer from '../../components/Footer';
+// import Navbar from '../../components/Navbar';
+// import Footer from '../../components/Footer';
 
-import GetVideo from '../../components/uploadComponents/GetVideo';
+// import GetVideo from '../../components/uploadComponents/GetVideo';
+
 // import PutVideo from '../../components/uploadComponents/PutVideo';
 // import DeleteVideo from '../../components/uploadComponents/DeleteVideo';
 // import TestContinentCountry from '../../components/uploadComponents/TestContinentCountry';
@@ -18,12 +20,14 @@ class UploadVideo extends Component {
       {/* <TestContinentCountry /> */}
 
         {/* <h1>Affichage de la table general_video :</h1> */}
-        {/* <GetVideo /> */}
-
+        {/* <Navbar />
+        <GetVideo />
+        <Footer /> */}
         {/* <h1>Insertion de données dans la table general_video</h1> */}
-        <Navbar />
+        
+        {/* <Navbar /> */}
         <PostVideo />
-        <Footer />
+        {/* <Footer /> */}
 
         {/* <h1>Modification de données dans la table general_video</h1>
         <PutVideo /> */}

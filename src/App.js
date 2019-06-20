@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
-// import { Route, Switch } from 'react-router-dom';
+import { Route, BrowserRouter, Switch } from 'react-router-dom';
 
-// import UploadVideo from './screen/UploadPage/UploadVideo';
+import UploadInformation from './screen/UploadPage/UploadTravelInformation';
+import UploadVideo from './screen/UploadPage/UploadVideo';
+import UploadTravelStep from './screen/UploadPage/UploadTravelStep';
 
-// import TestProfilEnum from './screen/TestProfilEnum';
+
 // import ProfilDescription from './screen/ProfilDescription/ProfilDescription';
-// import UploadInformation from './screen/UploadPage/UploadTravelInformation';
-// import UploadTravelStep from './screen/UploadPage/UploadTravelStep';
-import Footer from './components/Footer';
-import Navbar from './components/Navbar';
-// import UploadPage from './screen/UploadPage';
-// import Home from './screen/Home';
+import Home from './screen/Home';
+// import PlayVideo from './screen/PlayVideo';
 
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import PlayVideo from './screen/PlayVideo';
 
 
@@ -19,30 +19,25 @@ import PlayVideo from './screen/PlayVideo';
 class App extends Component {
   render() {
     return (
-      <>
-      <Navbar/>
-      {/* <TestProfilEnum /> */}
-        {/* <ProfilDescription /> */}
 
-        {/* <UploadVideo /> */}
 
-        {/* <UploadInformation /> */}
-        {/* <UploadTravelStep /> */}
-        {/* <Home /> */}
-        {/* <UploadPage /> */}
-
-        <PlayVideo />
-
-        {/* <Switch>
-        <Route exact path="/" component={PlayVideo}/>
-        </Switch> */}
-        {/* <Home /> */}
-        {/* <UploadPage /> */}
-        {/* <Switch>
-          <Route exact path="/" component={Home} />
-        </Switch> */}
-        <Footer/>
+<>
+      <BrowserRouter>
+        <div>
+          <Navbar />
+          <Switch>
+            <Route path="/" component={Home} exact></Route>
+      <Route path="/uploadVideo" component={UploadVideo} ></Route>
+            <Route path="/uploadInformation" component={UploadInformation} ></Route>
+            <Route path="/uploadTravelStep" component={UploadTravelStep} ></Route>
+            <Route path="/playVideo" component={PlayVideo} ></Route>
+            <Route component={Error}></Route>
+          </Switch>
+          <Footer />
+        </div>
+      </BrowserRouter>
       </>
+
     )
   }
 }

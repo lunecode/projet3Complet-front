@@ -21,22 +21,21 @@ class PlayVideo extends Component {
       <>
         {/* <Navbar/> */}
         {/* <p>Affichage des informations de la video : </p> */}
-        <Video  />
+        <Video/>
         {/* <p>Affichage des informations concernant la popularité de la vidéo</p> */}
         <PopularityVideo />
         {/* <p>Affichage des noms et prénoms du propriétaire de la video</p> */}
         <UserNameFirstname />
         {/* <p>Affichage des informations concernants relatives au parcours de l'utilisateur en vacance</p> */}
+
         <TravelInfo />
-        {/* <p>Affichage des informations détaillées concernant le road trip</p> */}
-        
-        {/* <p>Permet de reccupérer les videos de l'user dans la page "lecture video"</p> */}
-        <div className="container_AllUservideo">
         <DetailledInfo />
         <AllVideoUser />
         
-        </div>
+        {/* <p>Affichage des informations détaillées concernant le road trip</p> */}
         
+        {/* <p>Permet de reccupérer les videos de l'user dans la page "lecture video"</p> */}
+       
         <p>Permet d'inserer des commentaires sous la videos</p>
         <UserCommentPost />
         <p>Permet de reccuperer les commentaires sous la video</p>

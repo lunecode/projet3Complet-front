@@ -22,15 +22,16 @@
     
 }
 
-.countryName{
+.countryTravel{
     font-size: 35px;
     color: white;
     font-weight: bold;
     margin-right: 3%;
+    
 }
 
-.month{
-    font-size: 16px;
+.year1{
+    font-size: 23px;
     /* margin-right: 1%; */
     
 }
