@@ -4,7 +4,7 @@ import Youtube from 'react-youtube';
 
 import { NavLink } from 'react-router-dom'
 
-import family from '../../Images-tripitto/Icon/Aventurier/en famille.png'
+import family from '../../Images-tripitto/Icon/Aventurier/En_famille.png'
 import couple from '../../Images-tripitto/Icon/Aventurier/en couple.png'
 import friend from '../../Images-tripitto/Icon/Aventurier/entre ami.png'
 import alone from '../../Images-tripitto/Icon/Aventurier/seul.png'
