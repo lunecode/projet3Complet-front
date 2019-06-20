@@ -7,12 +7,12 @@ import PostEnumProfil from '../components/ProfilComponents/PostEnumProfil';
 import PostBioProfil from '../components/ProfilComponents/PostBioProfil';
 import PostIngedients from '../components/ProfilComponents/PostIngedients';
 import Socialprofil from '../components/ProfilComponents/Socialprofil';
-import "./Ingredient.scss"
- import  "../components/ProfilComponents/StyleProfilInfo.css"
+import "./Profil.scss"
+import  "../components/ProfilComponents/StyleProfilInfo.css"
  import axios from "axios"
 
 
-class Ingrédients extends Component {
+class Profil extends Component{
   submitHandler = e => {
   e.preventDefault()
   console.log(this.state)
@@ -147,7 +147,6 @@ class Ingrédients extends Component {
         {...this.state} 
         changeHandler={this.changeHandler}
         />
-
         <PostIngedients 
          {...this.state}
          Enum1={this.Enum1}
@@ -194,4 +193,4 @@ class Ingrédients extends Component {
 }
 
 
-export default Ingrédients;
+export default Profil;

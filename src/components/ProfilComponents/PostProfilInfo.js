@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import './StyleProfilInfo.css'
-
+import { BrowserRouter as Router, Route,NavLink } from 'react-router-dom'
 
   const PostProfilInfo =(props)=>{ 
     return (
@@ -15,15 +15,40 @@ import './StyleProfilInfo.css'
         </div>
         <div className='position-bloc'>
           <div className='profil-menu'>
-            <ul>
-              <li><a href="lienprofil">Profil</a></li>
-              <li><a href="lienvideo">Video</a></li>
-              <li><a href="lienabonnement">Abonnements</a></li>
-              <li><a href="lienabonnes">Abonnés</a></li>
-              <li><a href="liennotifications">Notifications</a></li>
-              <li><a href="liensecurite">Sécurité</a></li>
-              <li><a href="lienmettreaniveau">Mettre à niveau</a></li>
-            </ul>
+          <ul>
+         
+         <li>
+             <NavLink
+             className="nav" 
+             to="/Profil" exact>profil</NavLink>
+           </li>
+           <li>
+           <NavLink 
+            to="/Video" exact >Video</NavLink>
+           </li>
+           <li>
+           <NavLink 
+            to="/Abonnements" exact >Abonnements</NavLink>
+           </li>
+           <li>
+           <NavLink 
+          
+            to="/Abonnés" exact >Abonnés</NavLink>
+           </li>
+           <li>
+           <NavLink 
+            to="/Notifications" exact >Notifications</NavLink>
+           </li>
+           <li>
+           <NavLink 
+            to="/Security" exact >Sécurité</NavLink>
+           </li>
+           <li>
+           <NavLink 
+            to="/Mettre_à_niveau" exact >Mettre à niveau</NavLink>
+           </li>
+           </ul>
+  
           </div>
           {/* <form onSubmit={this.submitHandler} className="grid-profil-info"> */}
            <form className="grid-profil-info"> 
