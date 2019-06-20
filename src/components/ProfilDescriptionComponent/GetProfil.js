@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import './GetProfil.css';
+import './GetProfil.scss';
 
 // Allow to display data from " profil " table
 
@@ -22,23 +22,24 @@ class GetProfil extends Component {
         return (
           <>
             {this.state.profil.map(item => (
-            <li key={item.id_profil}>
-            <div>
-             <img src={item.profile_picture} alt="profil_pic" />
+            <div key={item.id_profil} className="container">
+            <div className="profil_column_1">
+             <img src={item.profile_picture} alt="profil_pic" className="profilpic"/>
              <p>10 vidéos</p>
              <p>54 abonnés</p>
              <p>{item.nb_countries_visited} pays visités</p>
              </div>
-             <div><p>{item.firstname} {item.lastname}</p>
-             <p>{item.type}</p>
+             <div className="profil_column_2">
+             {/* Remplacer Créateur de contenu par item.type? */}
+             <p><h1>{item.firstname} {item.lastname}</h1> | Créateur de contenu</p>
              <p>{item.location}</p>
              <p>{item.bio}</p>  
              </div>           
-            </li>
+            </div>
           ))}
           <div>
-          <button>Message</button>
-          <button>Modifier profil</button>
+          <button>MESSAGE</button>
+          <button>MODIFIER LE PROFIL</button>
           </div>
           </>
      )
