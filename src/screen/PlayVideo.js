@@ -27,10 +27,20 @@ class PlayVideo extends Component {
         {/* <p>Affichage des noms et prénoms du propriétaire de la video</p> */}
         <UserNameFirstname />
         {/* <p>Affichage des informations concernants relatives au parcours de l'utilisateur en vacance</p> */}
-
+        <div className="container_three">
+        <div className="tr">
         <TravelInfo />
         <DetailledInfo />
+        </div>
+        <div className="all">
         <AllVideoUser />
+        </div>
+       
+        </div>
+        
+        
+        
+        
         
         {/* <p>Affichage des informations détaillées concernant le road trip</p> */}
         

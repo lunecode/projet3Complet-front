@@ -18,11 +18,9 @@
     width:90%;
     margin: 0 auto;
     padding-bottom: 5%;
-    
-    
 }
 
-.countryTravel{
+.countryName1{
     font-size: 35px;
     color: white;
     font-weight: bold;
@@ -30,8 +28,13 @@
     
 }
 
+.month1 {
+    
+    font-size: 20px;
+    }
+
 .year1{
-    font-size: 23px;
+    font-size: 20px;
     /* margin-right: 1%; */
     
 }
@@ -59,3 +62,7 @@
 .budget{
     font-size: 12px;
 }
+
+/* .container_travel img{
+    width:30px;
+} */

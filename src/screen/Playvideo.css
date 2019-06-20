@@ -1,1 +1,12 @@
+.container_three{
+    display: flex;
+    justify-content: space-between;
+}
 
+.tr{
+    width:80%;
+}
+
+.all{
+    width:20%;
+}
