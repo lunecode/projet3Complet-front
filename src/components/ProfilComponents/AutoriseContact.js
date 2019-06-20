@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Idea from "../../Images-tripitto/Icon/Idea.png"
 import './StyleProfilInfo.css'
 import './AutoriseContact.scss'

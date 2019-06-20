@@ -192,19 +192,19 @@ class PostTravelInformation extends Component {
             <input className="input-travel_type" type="hidden" name="travel_type" value={this.state.travel_type} onChange={this.changeHandler} />
 
             <div className="travel_type" onClick={this.type1}>
-              <img src={family}></img>
+              <img src={family} alt="En famille"></img>
               <p>En famille</p>
             </div>
             <div className="travel_type2" onClick={this.type2}>
-              <img src={couple}></img>
+              <img src={couple} alt="En couple"></img>
               <p>En couple</p>
             </div>
             <div className="travel_type3" onClick={this.type3}>
-              <img src={friend}></img>
+              <img src={friend} alt="Entre amis"></img>
               <p>Entre amis</p>
             </div>
             <div className="travel_type4" onClick={this.type4}>
-              <img src={alone}></img>
+              <img src={alone} alt="Aventurier seul"></img>
               <p>Aventurier seul</p>
             </div>
 

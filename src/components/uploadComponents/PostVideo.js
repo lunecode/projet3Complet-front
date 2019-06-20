@@ -37,7 +37,7 @@ class PostVideo extends Component {
   }
 
   render() {
-    const { video_link, video_title, profil_id_profil, video_description, equipment, link_equipment, equipment2, link_equipment2, equipment3, link_equipment3, cover_picture } = this.state
+    const { video_link,profil_id_profil, equipment, link_equipment, equipment2, link_equipment2, equipment3, link_equipment3, cover_picture } = this.state
     return (
       <div>
         <form onSubmit={this.submitHandler}>
@@ -133,10 +133,6 @@ class PostVideo extends Component {
             <div className="next-div">
               <button className="next-button" type="button"><NavLink exact to="/uploadInformation"> SUIVANT</NavLink></button>
             </div>
-
-
-
-            
 
           </div>
         </form>
