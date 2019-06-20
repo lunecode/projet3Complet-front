@@ -3,29 +3,16 @@
     src: url("../../fonts/roboto/Roboto-Regular.ttf");
     font-weight: normal;
     font-style: normal;
-}     
+}   
 
-.container_post{
+
+.container_delete{
     background-color: #F4F4F4;
     font-family: 'Roboto', sans-serif;
     margin-bottom: 2%;
-
 }
 
-.myComment{
+.delete_input{
     width:75%;
     margin-left: 5%;
 }
-
-.userComment{
-    border-left: none;
-    border-right: none;
-    border-top: none;
-    background-color: #F4F4F4;
-    border-bottom: 1px solid gray;
-}
-
-textarea{
-    resize: none;
-}
-

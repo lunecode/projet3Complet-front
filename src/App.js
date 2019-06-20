@@ -20,7 +20,7 @@ class App extends Component {
   render() {
     return (
       <>
-      {/* <Navbar/> */}
+      <Navbar/>
       {/* <TestProfilEnum /> */}
         {/* <ProfilDescription /> */}
 
@@ -41,7 +41,7 @@ class App extends Component {
         {/* <Switch>
           <Route exact path="/" component={Home} />
         </Switch> */}
-        {/* <Footer/> */}
+        <Footer/>
       </>
     )
   }

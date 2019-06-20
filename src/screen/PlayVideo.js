@@ -9,8 +9,9 @@ import UserCommentPost from '../components/PlayVideo/UserCommentPost';
 import UserCommentPut from '../components/PlayVideo/UserCommentPut';
 import UserCommentDelete from '../components/PlayVideo/UserCommentDelete';
 import AllVideoUser from '../components/PlayVideo/AllVideoUser';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+// import Navbar from '../components/Navbar';
+// import Footer from '../components/Footer';
+import './Playvideo.css';
 
 
 
@@ -18,7 +19,7 @@ class PlayVideo extends Component {
   render() {
     return (
       <>
-        <Navbar/>
+        {/* <Navbar/> */}
         {/* <p>Affichage des informations de la video : </p> */}
         <Video  />
         {/* <p>Affichage des informations concernant la popularité de la vidéo</p> */}
@@ -28,7 +29,14 @@ class PlayVideo extends Component {
         {/* <p>Affichage des informations concernants relatives au parcours de l'utilisateur en vacance</p> */}
         <TravelInfo />
         {/* <p>Affichage des informations détaillées concernant le road trip</p> */}
+        
+        {/* <p>Permet de reccupérer les videos de l'user dans la page "lecture video"</p> */}
+        <div className="container_AllUservideo">
         <DetailledInfo />
+        <AllVideoUser />
+        
+        </div>
+        
         <p>Permet d'inserer des commentaires sous la videos</p>
         <UserCommentPost />
         <p>Permet de reccuperer les commentaires sous la video</p>
@@ -37,9 +45,8 @@ class PlayVideo extends Component {
         <UserCommentPut /> 
         <p>Permet de supprimer les commentaires sous la video</p>
         <UserCommentDelete />
-        <p>Permet de reccupérer les videos de l'user dans la page "lecture video"</p>
-        <AllVideoUser />
-        <Footer/>
+{/*         
+        <Footer/> */}
       </>
     )
   }

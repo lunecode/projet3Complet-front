@@ -65,13 +65,12 @@
     
     display: flex;
     justify-content: flex-end;
-  
     
     
 }
 
 .pictureUser img{
-    width:60px;
+    width:76px;
 }
 /* .video_info img{
     width: 52px;
@@ -97,4 +96,29 @@
 
 .username{
     margin-top:2%;
+}
+
+.suscribe{
+    background-color: #39C3D8;
+    color: white;
+    padding: 1%;
+    width: 17%;
+    border: 1px solid #39C3D8;
+    
+}
+
+.container_suscribe{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1%;
+
+}
+
+.suscribe:hover{
+    background-color: white;
+    color: #39C3D8;
+    padding: 1%;
+    width: 17%;
+    border: 1px solid #39C3D8;
+    
 }

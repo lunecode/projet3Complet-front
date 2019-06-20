@@ -39,8 +39,8 @@ render() {
         <div key={item.id_comment}>
             {/* <li>{item.profile_picture}</li> */}
             <img className="pictureuser" src={Picture} alt= "pictureuser"/>
-            <span>{item.action_date_comment}</span>
-            <span>{item.author_comment}</span>
+            <span>{item.author_comment}  </span>
+            <span>{item.action_date_comment}  </span>
             <div className="comment">{item.comment}
             </div>
         </div>

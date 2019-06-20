@@ -52,13 +52,9 @@
     margin-left: 2%;
 }
 
-
-
-
 .bed{
 
     width:26px;
-
 }
 
 .food{
@@ -77,13 +73,10 @@
 
 .Museum{
     width: 30px;
-    
+
 }
-
 .sport{
-  
     width:30px;
-
 }
 
 .love{
@@ -93,3 +86,8 @@
 .comment_sport{
     margin-left: 6%;
 }
+
+.idea{
+    margin-right: 2%;
+}
+

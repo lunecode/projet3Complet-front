@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
 
 import './Navbar.scss'
 import Logo from '../Images-tripitto/Logo/B&W.png';

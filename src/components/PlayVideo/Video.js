@@ -73,7 +73,10 @@ render() {
             <div className="userVideo">
             <div className="pictureUser">
               <img className="pictureUser" src={item.cover_picture} alt="equipment_picture"></img>
-              <span className="username">{item.lastname} {item.firstname}</span>
+              <p className="username">{item.lastname} {item.firstname}</p>
+              </div>
+              <div className="container_suscribe">
+                <button className="suscribe">S'ABONNER</button>
               </div>
             </div>
             
