@@ -178,6 +178,15 @@ margin-top: 1%;
     }
 }
 
+.leftHome {
+    pointer-events: all;
+}
+
+.leftHomeDisable {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
 .UncoverBorder2 {
     grid-area: Uncover2;
     padding-left: 1%;

@@ -16,15 +16,37 @@ class Display extends Component {
         videos: [],
         discoveredVideo : [],
         videastes: [],
-        RecentlyPublished: 1,
+        RecentlyPublished: [],
+        offset: 0
     };
 
-
     getRecentlyPublished = async () => {
-        const res = await axios.get('http://localhost:3000/general_video/get_general_video')
-        const recentlyPubVideo = res.data.slice(res.data.length - 5)
+        const res = await axios.get(`http://localhost:3000/general_video/get_general_video_limite/${this.state.offset}`)
+        const recentlyPubVideo = res.data
         this.setState({ videos: recentlyPubVideo })
-        console.log('getRecentlyPublished', this.state.videos)
+        console.log('getRecentlyPublishedlimit', this.state.videos)
+
+    }
+    getRecentlyPublishedlimit = () => {
+        this.setState({offset: this.state.offset + 5}, async ()=> {
+            const res = await axios.get(`http://localhost:3000/general_video/get_general_video_limite/${this.state.offset}`)
+            const recentlyPubVideo = res.data
+            this.setState({ videos: recentlyPubVideo }, ()=>{
+                console.log(this.state.videos);
+                
+            })
+        })
+    }
+
+    getRecentlyPublishedlimitBack = () => {
+        this.setState({offset: this.state.offset - 5}, async ()=> {
+            const res = await axios.get(`http://localhost:3000/general_video/get_general_video_limite/${this.state.offset}`)
+            const recentlyPubVideo = res.data
+            this.setState({ videos: recentlyPubVideo }, ()=>{
+                console.log(this.state.videos);
+                
+            })
+        })
     }
 
     getdiscovered = async () => {
@@ -39,22 +61,10 @@ class Display extends Component {
         console.log(this.state.videastes)
     }
 
-    selectRecentlyPublished = () => {
-        this.setState({ RecentlyPublished: +5 })
-        console.log(this.state.RecentlyPublished)
-    }
-
-    selectRecentlyPublishedBack = () => {
-        this.setState({ RecentlyPublished: -5 })
-        console.log(this.state.RecentlyPublished)
-    }
-
     componentDidMount() {
         this.getRecentlyPublished()
         this.getdiscovered()
         this.getVideastes()
-        this.selectRecentlyPublished()
-        this.selectRecentlyPublishedBack()
     }
     
     
@@ -76,10 +86,10 @@ class Display extends Component {
         </h4>
     </div>
     <div>
-        <img onClick={this.selectRecentlyPublishedBack} className="leftHome" src={leftHome} alt=""></img>
+        <img onClick={this.getRecentlyPublishedlimitBack} className={this.state.offset === 0 ? "leftHomeDisable" : "leftHome"} src={leftHome} alt=""></img>
     </div>
     <div>
-        <img onClick={this.selectRecentlyPublished} className="rightHome"src={RightHome} alt=""></img>
+        <img onClick={this.getRecentlyPublishedlimit} className="rightHome"src={RightHome} alt=""></img>
     </div>
     
 </section>
@@ -99,7 +109,6 @@ class Display extends Component {
         </div> */}
         <div className="item1RecentlyPublished">
             {this.state.videos.reverse().map(image => (
-                
                 <div className={"latestPublishedVideo" + i} key={i++}>
                     <img src={image.cover_picture} alt={image.video_title}></img>
                     <p className="titleVideo">{image.video_title}</p>
@@ -119,7 +128,6 @@ class Display extends Component {
                         <img className="rightHome" src={RightHome} alt=""></img>
                     </div>
                 </section>
-
                 <section className="TitlepublishedBorder">
                     <div className="TitlepublishedBorderBottom"></div>
                 </section>  
