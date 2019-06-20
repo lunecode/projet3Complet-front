@@ -35,6 +35,11 @@ $colorButton: #5dd8dc;
     grid-auto-flow: row; 
     padding-left: 3%;
     margin-top: 1%;
+
+        img:hover {
+            filter: brightness(100%);
+            -webkit-filter: brightness(100%);
+        }
 }
 
 .latestPublishedVideo1  {
