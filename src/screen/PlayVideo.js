@@ -36,7 +36,7 @@ class PlayVideo extends Component {
         <div className="all">
         <AllVideoUser />
         </div>
-       
+    
         </div>
         
         
