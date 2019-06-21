@@ -19,8 +19,8 @@ componentDidMount() {
 
 render() {
     const opts = {
-        height: '250',
-        width: '250',
+        height: '200',
+        width: '200',
         playerVars: { // https://developers.google.com/youtube/player_parameters
         autoplay: 0
         }
@@ -29,18 +29,27 @@ render() {
     return (
     <>
         {this.state.video.map(item => (
-        <li key={item.id_profil}>
-            <li>{item.firstname}</li>
-            <li>{item.lastname}</li>
-            <li>{item.video_title}</li>
+          
+        <div className="allVideoUser">
+           {/* <h4> {item.lastname} {item.firstname}</h4>  */}
+        <div className="youtubeVid">
+        <YouTube  videoId={item.video_link} opts={opts} onReady={this._onReady}/>
+        </div>
+        
+        
+        <div className="containerAllVideoUser">
+        <div key={item.id_profil}>
+            <h4>{item.video_title}</h4>
             {/* video youtube a inserer  */}
-            <div className="allVideoUser">
-            <YouTube  videoId={item.video_link} opts={opts} onReady={this._onReady}/>
-            </div>
-            <li>{item.video_description}</li>
-            <li>{item.profil_id_profil}</li>
-        </li>
+            
+            <p>{item.video_description}</p>
+            <p>{item.profil_id_profil}</p>
+        </div>
+        </div>
+        
+        </div>
         ))}
+        
     </>
     )
     }

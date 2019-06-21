@@ -1,12 +1,28 @@
 .container_three{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .tr{
-    width:80%;
+    width:60%;
 }
 
 .all{
-    width:20%;
+    width:40%;
 }
+
+.container_all{
+    background-color: #F4F4F4;
+}
+
+.allVideoUser{
+    display: flex;
+    margin-top: 5%;
+    
+}
+
+.containerAllVideoUser{
+    margin-left: 5%;
+
+}
+

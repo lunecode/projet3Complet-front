@@ -19,6 +19,7 @@ class PlayVideo extends Component {
   render() {
     return (
       <>
+        <div className="container_all">
         {/* <Navbar/> */}
         {/* <p>Affichage des informations de la video : </p> */}
         <Video/>
@@ -56,6 +57,7 @@ class PlayVideo extends Component {
         <UserCommentDelete />
 {/*         
         <Footer/> */}
+        </div>
       </>
     )
   }
