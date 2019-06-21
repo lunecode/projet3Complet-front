@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom';
+
 import './Navbar.scss'
 import Logo from '../Images-tripitto/Logo/B&W.png';
 import Search from '../Images-tripitto/Icons/Search-White.png';
@@ -13,22 +15,22 @@ class Navbar extends Component {
                     <nav className="container_nav">
                         <div className="containerNavLeft">
                             <div className="divLogoTripitto">
-                                <img className="logoTripitto" src={Logo}alt="logo tripitto"></img>
+                            <NavLink exact to="/"><img className="logoTripitto" src={Logo}alt="logo tripitto"></img></NavLink>
                             </div>
-                            <htmlform method="GET" action="rechercher" className="Search">
+                            <form method="GET" action="rechercher" className="Search">
                                 <input className="inputNav" type="text" placeholder="Voyager..."></input>
                                 <img className="icone-loupe"src={Search}alt="Search"></img>
-                            </htmlform>
+                            </form>
                             <ul className="ulNav">
-                                <li>VIDÉOS</li>
-                                <li>VIDÉASTES</li>
+                                <li><NavLink exact to="/">VIDÉOS</NavLink></li>
+                                <li><NavLink exact to="/">VIDÉASTES</NavLink></li>
                             </ul>
                         </div>
                         <div className="containerNavRight">
-                            <ul>
-                                <li><img className="logoAvatar" src={Avatar}  alt="logo tripitto"></img></li>
+                            <ul className="Ulbutton">
+                                <li><NavLink exact to="/profil"><img className="logoAvatar" src={Avatar}  alt="logo tripitto"></img></NavLink></li>
                                 <li><img className="notification" src={Notification}alt="logo notification"></img></li>
-                                <li><button className="buttonNavbar">PUBLIER</button></li>
+                                <li><NavLink exact to="/uploadVideo"><button className="buttonNavbar">PUBLIER</button></NavLink></li>
                             </ul>
                         </div>
                     </nav>

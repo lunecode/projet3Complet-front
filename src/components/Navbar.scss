@@ -1,3 +1,5 @@
+$colorButton: #5dd8dc;
+
 .container_nav {
     align-items: center;
     background-color: #2C404D;
@@ -17,7 +19,7 @@
             text-align: center;
         }
         
-        htmlform {
+        .Search {
             position: relative;
             width: 30%;
                 
@@ -48,6 +50,22 @@
             width: 30%;
         }
     }
+.ulNav a {
+    color: white;
+    text-decoration: none;
+}
+
+.ulNav a:hover {
+    opacity: 0.6;
+}
+
+.divLogoTripitto a:hover{
+    opacity: 0.6;
+}
+
+.Ulbutton .buttonNavbar:hover {
+    opacity: 0.6;
+}
     
 
         .containerNavRight {
@@ -73,7 +91,7 @@
                 
             }
             .buttonNavbar {
-                background-color: #1BA2A2;
+                background-color: $colorButton;
                 color: white;
                 font-size: 16px;
                 padding: 8px 25px;

@@ -75,6 +75,7 @@ Grid pour profil info */
    display: block;
     width: 300px;
     padding-top:5px;
+
 }
 
 .field-profil-picture-bloc{
@@ -85,11 +86,11 @@ Grid pour profil info */
     margin:15px;
     width: 200px;
     text-align: center;
+   
 }
 .field-profil-picture-bloc p{
     width: 135px;
     font-size:12px;
-    color:#d3D3D3;
     margin-left:20px;
 }
 .field-profil-picture{
@@ -133,7 +134,7 @@ Grid pour profil info */
     
 }
 .identity-field{
-    padding-left:0;
+    padding-left:0!important;
 }
 .field-profil-checkbox label{
     display:inline; 
@@ -161,10 +162,12 @@ Grid pour profil info */
     padding-bottom:10vh;
 }
 .bloc-social-profil p{
-    color: #333333;;
+    color: #333333;
+   margin-top:0;
 }
 .title-social-profil{
    font-size:22px;
+   margin-bottom:0px;
 }
 .social-network-profil{
     display: flex;
@@ -199,6 +202,8 @@ Grid pour profil info */
 /*Bouton sauvegarder */
 .save-btn{
    text-align: right;
+   background-color: #f4F4F4;
+ 
 }
 .save-btn button{
    padding: 10px;

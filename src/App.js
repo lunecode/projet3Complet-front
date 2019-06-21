@@ -1,35 +1,46 @@
 import React, { Component } from 'react';
-import UploadPage from './screen/UploadPage';
-import ProfilPage from './screen/ProfilPage';
-import UploadVideo  from './screen/UploadVideo';
-import { BrowserRouter as Router, Route } from 'react-router-dom'
-import Ingrédients from './screen/Ingredient';
-// import UploadPage from './screen/UploadPage';
+import Security from './screen/Security';
+import Profil from './screen/Profil';
+import { Route, BrowserRouter, Switch } from 'react-router-dom';
+
+import UploadInformation from './screen/UploadPage/UploadTravelInformation';
+import UploadVideo from './screen/UploadPage/UploadVideo';
+import UploadTravelStep from './screen/UploadPage/UploadTravelStep';
+
+
+// import ProfilDescription from './screen/ProfilDescription/ProfilDescription';
 import Home from './screen/Home';
+// import PlayVideo from './screen/PlayVideo';
+
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+
 
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <Router>
-            <div>
-             <Route exact path="/" component={ProfilPage}/>
-           <Route exact path="/uploadvideo" component={UploadVideo} />
-          <Route exact path="/UploadPage" component={UploadPage}/>
-          <Route exact path="/Ingrédients" component={Ingrédients}/>
-          <Route exact path="/Home" component={Home}/>
 
-            </div>
-        </Router>
-       
-       
-     
-      </div>
-      
+
+<>
+      <BrowserRouter>
+        <div>
+          <Navbar />
+          <Switch>
+            <Route path="/" component={Home} exact></Route>
+            <Route path="/Profil" component={Profil}/>
+            <Route path="/Security" component={Security}/>
+            <Route path="/uploadVideo" component={UploadVideo} ></Route>
+            <Route path="/uploadInformation" component={UploadInformation} ></Route>
+            <Route path="/uploadTravelStep" component={UploadTravelStep} ></Route>
+            <Route component={Error}></Route>
+          </Switch>
+          <Footer />
+        </div>
+      </BrowserRouter>
+      </>
     )
   }
 }
-
 
 export default App;

@@ -1,5 +1,6 @@
+import React from 'react';
+
 import Aventurierseul from '../../Images-tripitto/Icon/Ingredients/Aventurierseul.png'
-import React, { Component } from 'react';
 import Copains from '../../Images-tripitto/Icon/Ingredients/Copains.png'
 import DigitalNomad from '../../Images-tripitto/Icon/Ingredients/DigitalNomad.png'
 import Ecotourisme from '../../Images-tripitto/Icon/Ingredients/Ecotourisme.png'
@@ -38,8 +39,8 @@ const PostIngedients = (props) => {
                                                         onClick={props.Enum1}
                                                         alt="Aventurier d'abord"
                                                 />
-                                               <p>Aventurier seul</p>
-                                        </div>
+                                               <p> Aventurier seul</p>
+        </div>
 
                                         <div className="ingredient2">
                                                 <img src={Copains}
