@@ -8,9 +8,7 @@ import './StyleProfilInfo.css'
 
 
 const Socialprofil=(props)=>{
-
-        return (
-           
+        return (  
              <div className="bloc-social-profil" >
           <h5 className="title-social-profil">Mes réseaux sociaux</h5>
           <img src={iconIdea} alt="icon facebook " className="icon-social-idea"/>
@@ -34,8 +32,6 @@ const Socialprofil=(props)=>{
             </div>
           </div>
         </div>    
-            
-            
         );
 }
 

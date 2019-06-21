@@ -55,7 +55,6 @@ Alignement des deux grand bloc  */
 .profil-menu a:hover{
     color:#2eaecd;
 }
-
 /* 
 Grid pour profil info */
 .grid-profil-info{
@@ -63,7 +62,6 @@ Grid pour profil info */
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;    
  
-
 }
 .grid-profil-info div{
     padding-left:20px;
@@ -187,6 +185,10 @@ Grid pour profil info */
     border:1px solid #d3d3d3;
     font-style:italic;
     text-align: center;
+}
+.field-social:focus{
+    background:#e9eff1;
+    border:1px solid #30b1ce;
 }
 .icon-social-idea{
     float: left;

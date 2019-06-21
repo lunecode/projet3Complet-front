@@ -151,7 +151,7 @@ class Ingrédients extends Component {
         <PostIngedients 
          {...this.state}
          Enum1={this.Enum1}
-         Enum2={this.Enumé}
+         Enum2={this.Enum2}
          Enum3={this.Enum3}
          Enum4={this.Enum4}
          Enum5={this.Enum5}

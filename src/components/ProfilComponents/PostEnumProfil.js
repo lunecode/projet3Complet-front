@@ -24,7 +24,7 @@ const PostEnumProfil=(props)=>{
         onClick={props.profil1}
         alt="Passioné de voyage"
         />
-        Passionné de voyage
+        <p>Passionné de voyage</p>
         </div>
 
 
@@ -33,7 +33,7 @@ const PostEnumProfil=(props)=>{
         onClick={props.profil2}
         alt="Créateur de contenu"
         />
-        Créateur de contenu
+       <p>Créateur de contenu</p>
         </div>
 
 
@@ -42,7 +42,7 @@ const PostEnumProfil=(props)=>{
         onClick={props.profil3}
         alt="Blogueur de voyage"
         />
-        Blogueur de voyage
+        <p>Blogueur de voyage</p>
         </div>
 
 
@@ -51,7 +51,7 @@ const PostEnumProfil=(props)=>{
         onClick={props.profil4}
         alt="Photograph & vidéaste"
         />
-        Photograph & vidéaste
+        <p>Photograph & vidéaste</p>
         </div>
 
         <div className="Profil_picture5">
@@ -59,7 +59,7 @@ const PostEnumProfil=(props)=>{
          onClick={props.profil5}
         alt="L"
         />
-        Autre
+       <p>Autre</p>  
         </div>
    </form>
 </div>
