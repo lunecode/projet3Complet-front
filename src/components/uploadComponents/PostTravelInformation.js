@@ -30,7 +30,7 @@ import './PostTravelInformation.css';
 
 class PostTravelInformation extends Component {
   state = {
-    videos: [],
+    // videos: [],
     travel_type: 0
   }
 
@@ -53,14 +53,14 @@ class PostTravelInformation extends Component {
   }
 
 
-  getVideo = async () => {
-    const res = await axios.get('http://localhost:3000/general_video/get_general_video')
-    this.setState({ videos: res.data })
-    console.log(this.state.videos)
-  }
-  componentDidMount() {
-    this.getVideo()
-  }
+  // getVideo = async () => {
+  //   const res = await axios.get('http://localhost:3000/general_video/get_general_video')
+  //   this.setState({ videos: res.data })
+  //   console.log(this.state.videos)
+  // }
+  // componentDidMount() {
+  //   this.getVideo()
+  // }
 
 
   submitHandler = e => {
@@ -83,13 +83,13 @@ class PostTravelInformation extends Component {
 
       <>
 
-
+{/* 
         {this.state.videos.map(item => (
           <div className="video_link" key={i++}>
             <Youtube className="video" videoId={item.video_link} onReady={this._onReady}
             />
           </div>
-        ))}
+        ))} */}
 
 
 

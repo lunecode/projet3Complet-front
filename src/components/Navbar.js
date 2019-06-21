@@ -28,9 +28,9 @@ class Navbar extends Component {
                         </div>
                         <div className="containerNavRight">
                             <ul className="Ulbutton">
-                                <li><img className="logoAvatar" src={Avatar}  alt="logo tripitto"></img></li>
+                                <li><NavLink exact to="/profil"><img className="logoAvatar" src={Avatar}  alt="logo tripitto"></img></NavLink></li>
                                 <li><img className="notification" src={Notification}alt="logo notification"></img></li>
-                                <li><button className="buttonNavbar">PUBLIER</button></li>
+                                <li><NavLink exact to="/uploadVideo"><button className="buttonNavbar">PUBLIER</button></NavLink></li>
                             </ul>
                         </div>
                     </nav>
