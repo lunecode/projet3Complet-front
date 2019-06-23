@@ -43,7 +43,7 @@ render() {
             <span>{item.action_date_comment}  </span>
             <div className="comment">{item.comment}
             {/* <button></button> */}
-            <hr  className="borderBottom"/>
+            {/* <hr  className="borderBottom"/> */}
             </div>
         </div>
         
@@ -59,7 +59,6 @@ render() {
         <span>{item.author_comment}</span>
         <span>{item.comment}</span>
         </div>
-        
         </div>
         ))}
         
