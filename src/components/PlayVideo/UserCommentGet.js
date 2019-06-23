@@ -42,9 +42,13 @@ render() {
             <span>{item.author_comment}  </span>
             <span>{item.action_date_comment}  </span>
             <div className="comment">{item.comment}
+            {/* <button></button> */}
+            <hr  className="borderBottom"/>
             </div>
         </div>
+        
         </div>
+       
    ))}
         
         {this.state.picture.map(item => (
@@ -55,6 +59,7 @@ render() {
         <span>{item.author_comment}</span>
         <span>{item.comment}</span>
         </div>
+        
         </div>
         ))}
         

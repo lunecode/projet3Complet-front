@@ -19,8 +19,8 @@ componentDidMount() {
 
 render() {
     const opts = {
-        height: '200',
-        width: '200',
+        height: '150',
+        width: '150',
         playerVars: { // https://developers.google.com/youtube/player_parameters
         autoplay: 0
         }

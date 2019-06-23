@@ -25,6 +25,10 @@
     border-bottom: 1px solid gray;
 }
 
+.pictureuser{
+    margin-right: 1%;
+}
+
 textarea{
     resize: none;
 }

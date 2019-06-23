@@ -17,6 +17,7 @@ import Share from '../../Images-tripitto/Icon/Share.png';
 class Video extends Component {
   state = {
     videos: [],
+    popularity: []
   };
 
   getVideo = async () => {
@@ -27,8 +28,8 @@ class Video extends Component {
 
   getPopularity = async () => {
     const res = await axios.get('http://localhost:3000/popularity/get_popularity_liked_general_video')
-    this.setState({ videos: res.data })
-    console.log(this.state.videos)
+    this.setState({ popularity: res.data })
+    console.log(this.state.popularity)
   }
 
   componentDidMount() {
@@ -47,8 +48,9 @@ render() {
         }
       };
     return (
+      
     <>
-        {this.state.videos.map(item => (
+        {this.state.videos.filter(item => item.id_general_video == 1).map(item => (
         <div className="container_video">
         <div key={item.id_general_video}>
           <div className="video_user">
@@ -57,13 +59,16 @@ render() {
           <div className="video_info">
             <div className="title_video">{item.video_title} <span><img className="play" src={Play} alt="play"/>{item.nb_views}</span><span className="number_tips"><img className="numberTips" src={NumberTips} alt="number tips"/>{item.number_tips}</span>
             </div>
-            
-            <div className="likeComment">
-              <span><img src={Love} alt= "love"/>     {item.nb_like_popularity}</span> 
-              <span> <img src={Comment} alt="comment"/>{item.nb_comment_popularity}</span><span> <img className="share" src={Add} alt="share"/> {item.nb_playlist_included}</span> <span> <img src={Share} alt="Share"/>{item.nb_share}
-              </span>
+            {this.state.popularity.map(item => (
+               <div className="likeComment">
+               <span><img src={Love} alt= "love"/>     {item.nb_like_popularity}</span> 
+               <span> <img src={Comment} alt="comment"/>{item.nb_comment_popularity}</span><span> <img className="share" src={Add} alt="share"/> {item.nb_playlist_included}</span> <span> <img src={Share} alt="Share"/>{item.nb_share}
+               </span>
+ 
+             </div>
 
-            </div>
+            ))}
+           
             <div className="test" >
             <p><span className="loading">Ajouté le {item.loading_time} -</span><span className="status"><i>{item.video_status}</i></span> </p>
             <p className="text">{item.video_description}</p>
