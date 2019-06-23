@@ -26,7 +26,7 @@ class GetVideo extends Component {
     this.setState({ videos: res.data })
     console.log(this.state.videos)
   }
-  componentDidMount() {
+  componentDidMount(){
     this.getVideo()
   }
 
