@@ -28,7 +28,7 @@ class Display extends Component {
 
     }
     getRecentlyPublishedlimit = () => {
-        this.setState({offset: this.state.offset + 5}, async ()=> {
+        this.setState({offset: this.state.offset + 10}, async ()=> {
             const res = await axios.get(`http://localhost:3000/general_video/get_general_video_limite/${this.state.offset}`)
             const recentlyPubVideo = res.data
             this.setState({ videos: recentlyPubVideo },)
@@ -36,7 +36,7 @@ class Display extends Component {
     }
 
     getRecentlyPublishedlimitBack = () => {
-        this.setState({offset: this.state.offset - 5}, async ()=> {
+        this.setState({offset: this.state.offset - 10}, async ()=> {
             const res = await axios.get(`http://localhost:3000/general_video/get_general_video_limite/${this.state.offset}`)
             const recentlyPubVideo = res.data
             this.setState({ videos: recentlyPubVideo },)
@@ -49,7 +49,7 @@ class Display extends Component {
     }
 
     getVideasteLimit = () => {
-        this.setState({offsetVideaste: this.state.offsetVideaste + 4}, async ()=> {
+        this.setState({offsetVideaste: this.state.offsetVideaste + 8}, async ()=> {
             const res = await axios.get(`http://localhost:3000/profil/get_profil_videaste_home/${this.state.offsetVideaste}`)
             const videastesLimite = res.data
             this.setState({ videastes: videastesLimite },)
@@ -57,7 +57,7 @@ class Display extends Component {
     }
 
     getVideasteLimitBack = () => {
-        this.setState({offsetVideaste: this.state.offsetVideaste - 4}, async ()=> {
+        this.setState({offsetVideaste: this.state.offsetVideaste - 8}, async ()=> {
             const res = await axios.get(`http://localhost:3000/profil/get_profil_videaste_home/${this.state.offsetVideaste}`)
             const videastesLimite = res.data
             this.setState({ videastes: videastesLimite },)
