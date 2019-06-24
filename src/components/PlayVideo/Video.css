@@ -62,7 +62,6 @@
 .pictureUser{
 
     border-radius: 50%;
-    
     display: flex;
     justify-content: flex-end;
     
@@ -87,7 +86,7 @@
 }
 
 .nameUser{
-    float: right;
+    /* float: right; */
     padding-top: 4%;
     display: flex;
     padding-left: 2%;
@@ -102,23 +101,33 @@
     background-color: #39C3D8;
     color: white;
     padding: 1%;
-    width: 17%;
     border: 1px solid #39C3D8;
-    
+    padding: 15%;
+  
 }
 
 .container_suscribe{
     display: flex;
     justify-content: flex-end;
-    margin-top: 1%;
+    margin-top: 2%;
+    margin-left: 5%;
+    height: 10%;
+    
+    
 
 }
 
 .suscribe:hover{
     background-color: white;
     color: #39C3D8;
-    padding: 1%;
-    width: 17%;
+    padding: 15%;
+   
     border: 1px solid #39C3D8;
     
+}
+
+.userVideo{
+    display: flex;
+    justify-content: flex-end;
+   
 }
