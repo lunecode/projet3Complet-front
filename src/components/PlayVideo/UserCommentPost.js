@@ -38,7 +38,7 @@ render() {
             <div className="myComment">
             <img className="pictureuser" src={Picture} alt= "pictureuser"/>
             <div className="comment">
-            <textarea className="userComment" type='text' name="comment" value={comment} onChange={this.changeHandler} placeholder="Ajouter un commentaire..." rows="1" cols="105"/>
+            <textarea className="userComment" type='text' name="comment" value={comment} onChange={this.changeHandler} placeholder="Ajouter un commentaire..." rows="1" cols="80"/>
             </div>
             <div>
             profil_id_profil:<input type="text" name="profil_id_profil" value={profil_id_profil} onChange={this.changeHandler} />

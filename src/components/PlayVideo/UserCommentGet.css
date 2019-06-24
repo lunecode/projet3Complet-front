@@ -10,7 +10,7 @@
     background-color: #F4F4F4;
     font-family: 'Roboto', sans-serif;
     padding-left: 5%;
-    width:80%;
+    width:65%;
     padding-bottom: 2%;
     
     
@@ -32,11 +32,11 @@
     
 }
 
-.editcomment image:hover {
+/* .editcomment image:hover {
    
-} 
+}  */
 
-.userComment{
+/* .userComment{
     width:100%;
-}
+} */
 
