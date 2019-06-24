@@ -17,7 +17,8 @@ class Display extends Component {
         discoveredVideo : [],
         videastes: [],
         RecentlyPublished: [],
-        offset: 0
+        offset: 0,
+        offsetVideaste: 0
     };
 
     getRecentlyPublished = async () => {
@@ -43,8 +44,24 @@ class Display extends Component {
     }
 
     getVideastes = async () => {
-        const res = await axios.get('http://localhost:3000/profil/get_profil_videaste_home')
+        const res = await axios.get(`http://localhost:3000/profil/get_profil_videaste_home/${this.state.offsetVideaste}`)
         this.setState({ videastes: res.data })
+    }
+
+    getVideasteLimit = () => {
+        this.setState({offset: this.state.offsetVideaste + 4}, async ()=> {
+            const res = await axios.get(`http://localhost:3000/profil/get_profil_videaste_home/${this.state.offsetVideaste}`)
+            const videastesLimite = res.data
+            this.setState({ videastes: videastesLimite },)
+        })
+    }
+
+    getVideasteLimitBack = () => {
+        this.setState({offset: this.state.offsetVideaste - 4}, async ()=> {
+            const res = await axios.get(`http://localhost:3000/profil/get_profil_videaste_home/${this.state.offsetVideaste}`)
+            const videastesLimite = res.data
+            this.setState({ videastes: videastesLimite },)
+        })
     }
 
     componentDidMount() {
@@ -137,11 +154,11 @@ class Display extends Component {
                         <h4 className="titleRecentlyPublished">VIDÉASTES</h4>
                     </div>
                     <div>
-                        <img className="leftHome" src={leftHome} alt=""></img>
+                        <img onClick={this.getVideasteLimitBack} className={this.state.offsetVideaste === 0 ? "leftHomeDisable" : "leftHome"} src={leftHome} alt=""></img>
                     </div>
                     <div>
-                        <img className="rightHome" src={RightHome} alt=""></img>
-                    </div>
+                        <img onClick={this.getVideasteLimit} className="rightHome" src={RightHome} alt=""></img>
+                    </div>   
                 </section>
                 <section className="TitlepublishedBorder">
                     <div className="TitlepublishedBorderBottom"></div>
