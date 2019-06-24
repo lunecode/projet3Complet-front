@@ -55,12 +55,12 @@ class Getnextdestination extends Component {
                 <section className='nextdestination'>
                     <div class="wrapper-nextpicture">
                         <div className='container_arrow'>
-                            <div>
+                            
                                 <img onClick={this.selectbestplan} className="leftarrow" src={arrow} alt=""></img>
-                            </div>
-                            <div>
+                            
+                          
                                 <img onClick={this.selectbestplanBack} className="rightarrow" src={arrow} alt=""></img>
-                            </div>
+                            
                         </div>
                         {this.state.nextpicture.map(nextpicture => (
                             <div className={"divpictureNext" + i} key={i++}>
@@ -69,10 +69,27 @@ class Getnextdestination extends Component {
                                 <p className={"p" + b} key={b++}>{nextpicture.countries}</p>
                             </div>
                         ))}
-                        
-                    </div>
 
+                    </div>
                 </section>
+
+                {/****************************** CONTRIBUTORS  ***************************** */}
+                    {/* <section className="Contributors">
+                    <div className='container_contributors_title'>
+                        <h2 className="title_contributors">Merci à nos contributeurs</h2>
+                    </div>
+                    <ul>
+                        <li>Marco Polo</li>
+                        <li>Marco Polo</li>
+                        <li>Marco Polo</li>
+                        <li>Marco Polo</li>
+                        <li>Marco Polo</li>
+                        <li>Marco Polo</li>
+                        <li>Marco Polo</li>
+                    </ul>
+                </section> */}
+            
+            
                 {/****************************** SECTION BEST PLAN  ***************************** */}
                 <section className="bestplan">
                     <div className='container_bestplan_title'>
@@ -98,10 +115,25 @@ class Getnextdestination extends Component {
                             <p className='title_bestplan_title'>{video.video_title}</p>
                             <p className='title_bestplan_countries'>{video.countries}</p>
                             <p className='title_bestplan_user'>{video.video_user}</p>
-                            <p className='title_bestplan_nbviews'>{video.nb_views}</p>
+                            <p className='title_bestplan_nbviews'>{video.nb_views} vues</p>
                         </div>
                     ))}
+                    {/* <div className='container_contributors_title'>
+                        <h2 className="title_contributors">Merci à nos contributeurs</h2>
+                    </div>
+                    <ul>
+                        <li>Marco Polo</li>
+                        <li>Marco Polo</li>
+                        <li>Marco Polo</li>
+                        <li>Marco Polo</li>
+                        <li>Marco Polo</li>
+                        <li>Marco Polo</li>
+                        <li>Marco Polo</li>
+                    </ul> */}
                 </div>
+
+
+            
             </>
         )
     }
