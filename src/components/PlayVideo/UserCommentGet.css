@@ -10,12 +10,30 @@
     background-color: #F4F4F4;
     font-family: 'Roboto', sans-serif;
     padding-left: 5%;
+    width:80%;
+    padding-bottom: 2%;
+    
     
 }
 
-/* .borderBottom{
-    border: 1px solid gray;
-    width: 20%;
-    
+.comment{
+    width:70%; 
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid lightgray;
+   
+} 
 
-} */
+
+
+.editcomment{
+    display:flex;
+    justify-content: space-between;
+    
+}
+
+.editcomment image:hover {
+   
+} 
+
+

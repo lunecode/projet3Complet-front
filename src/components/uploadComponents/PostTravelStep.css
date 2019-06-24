@@ -326,9 +326,6 @@
     margin: 1%;
 }
 
-.sportActivity{
-
-}
 
 .choice{
     width:90%;
@@ -390,5 +387,6 @@
     padding: 8px;
     border: 1px solid #39BFD7;
     width:150px;
+    text-decoration: none;
 }
 
