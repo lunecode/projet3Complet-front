@@ -87,25 +87,20 @@ selectLanguage = () => {
     </section>
     <section className="allRightsReserved">
         <div className="item-a-allRightsReserved">
-            <p>©2019 Tripitto. Tous droits réservés. Fait avec</p>
-        </div>
-        <div className="item-b-allRightsReserved">
-            <img className="love" src={Love} alt="love"></img>
-        </div>
-        <div className="item-c-allRightsReserved">
             <p>
+                ©2019 Tripitto. Tous droits réservés. Fait avec
+                <img className="love" src={Love} alt="love"></img>
                 à Paris,FR
             </p>
+            
+        </div>
+        <div className="item-c-allRightsReserved">
+            <p>Contact/Confidentialité/Conditions</p>
         </div>
         <div className="item-d-allRightsReserved">
-            <p>
-                Contact/Confidentialité/Conditions
-            </p>
-        </div>
-        <div className="item-e-allRightsReserved">
             <img onClick={this.selectLanguage}src={this.state.flag} alt="flag"></img>
         </div>
-        <div className="item-f-allRightsReserved">
+        <div className="item-e-allRightsReserved">
             <img onClick={this.selectLanguage}src={Path} alt="f"></img>
         </div>
     </section>
