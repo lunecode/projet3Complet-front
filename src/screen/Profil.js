@@ -11,6 +11,9 @@ import axios from "axios"
 
 
 class Profil extends Component {
+  state={
+    profil:""
+  }
   submitHandler = e => {
     e.preventDefault()
     console.log(this.state)
@@ -124,7 +127,7 @@ class Profil extends Component {
     return (
       <div className="pageprofil" >
 
-        <form   onsSubmit={this.fileUploadHandler}>
+        <form  onSubmit={this.submitHandler}>
           <PostProfilInfo
             {...this.state}
             handleCheckbox={this.handleCheckbox}
@@ -182,7 +185,6 @@ class Profil extends Component {
             {...this.state}
             changeHandler={this.changeHandler}
           />
-
           <div className="save-btn">
             <button type="submit" >SAUVEGARDER</button>
           </div>

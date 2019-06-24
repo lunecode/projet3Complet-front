@@ -42,7 +42,10 @@ textarea {
   grid-column: 2 / 7; 
 }
 
-
+video {
+  width: 100%;
+  height: auto;
+}
 
 .upload-link {
   border: solid 2px;

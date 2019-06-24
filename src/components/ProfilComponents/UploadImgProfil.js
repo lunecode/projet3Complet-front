@@ -4,16 +4,13 @@ import './UploadImgProfil.scss'
 
 class IploadImgProfil extends Component {
   state={
-    video_link:"",
+    profil_link:"",
   }
 
-  fileSelectedHandler= e=>{
-      this.setState({ [e.target.name]: e.target.value})
-  }
   fileUploadHandler =(e)=>{
       e.preventDefault()
       console.log(this.state)
-      axios.post('http://localhost:3000/general_video/insert_general_video', this.state)
+      axios.post('http://localhost:3000/profil/insert_profil', this.state)
         .then(response => {
           console.log(response)
         })
@@ -27,8 +24,8 @@ let files=e.target.files;
 let reader=new FileReader();
 reader.readAsDataURL(files[0]);
 reader.onload=(e)=>{
-this.setState({video_link : e.target.result}, ()=> {
-  console.log("video data",this.state.video_link)
+this.setState({profil_link : e.target.result}, ()=> {
+  console.log("video data",this.state.profil_link)
 })
 }
 }
@@ -40,17 +37,15 @@ return fd.get('a');
 }
 
   render() {
-    const data=this.state.video_link
+    const data=this.state.profil_link
 console.log(this.state);
       return (
           <div className="UploadVideo"> 
-          <input type='file' name="video_link" 
+          <input type='file' name="profil_link" 
                  onChange={this.handelchange}
               />
 {/* <video preload="" src={`${data}`} type="video/mp4"></video>   */}
-
-
-               <img className="imageprofil" src={this.video_link} alt=""/><img src={`${data}`} width="100%" height="100%" />
+               <img src={`${data}`} width="100%" height="100%" />
               <button onClick={this.fileUploadHandler}>Télécharger</button> 
           
 {/* <GetVideo />  */}

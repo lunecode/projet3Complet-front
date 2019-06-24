@@ -3,7 +3,7 @@ import './StyleProfilInfo.css'
 import { NavLink } from 'react-router-dom'
 
 import UploadImgProfil from '../../components/ProfilComponents/UploadImgProfil.js';
-import PostVideo from '../uploadComponents/PostVideo';
+
 
 const PostProfilInfo = (props) => {
 
@@ -53,7 +53,7 @@ const PostProfilInfo = (props) => {
 
         </div>
         {/* <form onSubmit={this.submitHandler} className="grid-profil-info"> */}
-        <form className="grid-profil-info">
+        <form  className="grid-profil-info">
           <div>
             <h2>Profil</h2>
             <div className='field-profil-picture-bloc'>
