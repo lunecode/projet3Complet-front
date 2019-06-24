@@ -49,7 +49,7 @@ class Display extends Component {
     }
 
     getVideasteLimit = () => {
-        this.setState({offset: this.state.offsetVideaste + 4}, async ()=> {
+        this.setState({offsetVideaste: this.state.offsetVideaste + 4}, async ()=> {
             const res = await axios.get(`http://localhost:3000/profil/get_profil_videaste_home/${this.state.offsetVideaste}`)
             const videastesLimite = res.data
             this.setState({ videastes: videastesLimite },)
@@ -57,7 +57,7 @@ class Display extends Component {
     }
 
     getVideasteLimitBack = () => {
-        this.setState({offset: this.state.offsetVideaste - 4}, async ()=> {
+        this.setState({offsetVideaste: this.state.offsetVideaste - 4}, async ()=> {
             const res = await axios.get(`http://localhost:3000/profil/get_profil_videaste_home/${this.state.offsetVideaste}`)
             const videastesLimite = res.data
             this.setState({ videastes: videastesLimite },)
@@ -92,7 +92,7 @@ class Display extends Component {
         <img onClick={this.getRecentlyPublishedlimitBack} className={this.state.offset === 0 ? "leftHomeDisable" : "leftHome"} src={leftHome} alt=""></img>
     </div>
     <div>
-        <img onClick={this.getRecentlyPublishedlimit} className="rightHome"src={RightHome} alt=""></img>
+        <img onClick={this.getRecentlyPublishedlimit} className={this.state.offset === 10 ? "leftHomeDisable" : "rightHome"} src={RightHome} alt=""></img>
     </div>
     
 </section>
@@ -157,7 +157,7 @@ class Display extends Component {
                         <img onClick={this.getVideasteLimitBack} className={this.state.offsetVideaste === 0 ? "leftHomeDisable" : "leftHome"} src={leftHome} alt=""></img>
                     </div>
                     <div>
-                        <img onClick={this.getVideasteLimit} className="rightHome" src={RightHome} alt=""></img>
+                        <img onClick={this.getVideasteLimit} className={this.state.offsetVideaste === 4 ? "leftHomeDisable" : "rightHome"} src={RightHome} alt=""></img>
                     </div>   
                 </section>
                 <section className="TitlepublishedBorder">
