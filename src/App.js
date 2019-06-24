@@ -28,7 +28,6 @@ class App extends Component {
       <BrowserRouter>
         <div>
           <Navbar />
-          <TestPostVideo />
           <Switch>
             <Route path="/" component={Home} exact></Route>
             <Route path="/Profil" component={Profil}/>

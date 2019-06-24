@@ -118,16 +118,18 @@ class Profil extends Component {
     this.setState({ ingredients: 21 })
   }
 
+  
 
   render() {
     return (
       <div className="pageprofil" >
 
-        <form onSubmit={this.submitHandler}>
+        <form   onsSubmit={this.fileUploadHandler}>
           <PostProfilInfo
             {...this.state}
             handleCheckbox={this.handleCheckbox}
             changeHandler={this.changeHandler}
+          
           />
 
           <PostEnumProfil
@@ -141,8 +143,10 @@ class Profil extends Component {
           />
 
           <PostBioProfil
+
             {...this.state}
-            changeHandler={this.changeHandler}
+            changeHandler={this.changeHandler} 
+          
           />
           <PostIngedients
             {...this.state}

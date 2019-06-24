@@ -9,8 +9,8 @@ const PostBioProfil =(props)=>{
           <h3>Bio </h3>
             <textarea type='text' name="bio" value={props.bio} onChange={props.changeHandler}
             placeholder="Parlez de votre personnalité de vaoyageur
-            et vos talents de vidéaste ou photohtaphe 
-            Rébélez-nous la partoe de globe que vous connaissez la mieux.
+            et vos talents de vidéaste ou photohtaphe .
+            Rébélez-nous la partie de globe que vous connaissez la mieux.
             Avouez votre plus grad rêve de voyageur "/>
 
           </div>

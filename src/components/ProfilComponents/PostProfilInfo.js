@@ -2,7 +2,10 @@ import React from 'react'
 import './StyleProfilInfo.css'
 import { NavLink } from 'react-router-dom'
 
+import UploadImgProfil from '../../components/ProfilComponents/UploadImgProfil';
+
 const PostProfilInfo = (props) => {
+  
   return (
     <div className="bloc-page-profil">
       <div className="membres-profil">
@@ -15,7 +18,6 @@ const PostProfilInfo = (props) => {
       <div className='position-bloc'>
         <div className='profil-menu'>
           <ul>
-
             <li>
               <NavLink
                 className="nav"
@@ -54,14 +56,7 @@ const PostProfilInfo = (props) => {
           <div>
             <h2>Profil</h2>
             <div className='field-profil-picture-bloc'>
-              <input type='text' name="profile_picture"
-                value={props.profile_picture}
-                onChange={props.changeHandler}
-                placeholder='Profil Picture'
-                className='field-profil-picture' />
-
-              <p htmlFor="profile_picture">Modifier l'image</p>
-              <p>Format JPG ou JPEG.Une résolution de 600px par 600px est recommandé</p>
+              <UploadImgProfil />
             </div>
           </div>
           <div className="profil-bloc-2">
