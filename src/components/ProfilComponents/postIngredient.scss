@@ -36,8 +36,9 @@
         height: 8em;
         display: flex;
         margin-right: 18Vh;
-        :hover{
-            border: 1px solid rgb(76, 185, 209)
+        :focus{
+            outline: 1px solid rgb(76, 185, 209);
+           
             }
          
         div{

@@ -14,6 +14,8 @@ import Home from './screen/Home';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import TestPostVideo from './components/uploadComponents/TestPostVideo';
+
 
 
 
@@ -26,6 +28,7 @@ class App extends Component {
       <BrowserRouter>
         <div>
           <Navbar />
+          <TestPostVideo />
           <Switch>
             <Route path="/" component={Home} exact></Route>
             <Route path="/Profil" component={Profil}/>
