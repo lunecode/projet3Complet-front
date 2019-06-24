@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import './Getnextdestination.css';
 
+import arrow from '../../pictures/arrow.png'
 import leftHome from '../../Images-tripitto/Icon/leftHome.png'
 import RightHome from '../../Images-tripitto/Icon/RightHome.png'
 
@@ -59,6 +60,14 @@ class Getnextdestination extends Component {
                 {/****************************** SECTION NEXT DESTINATION******************************* */}
                 <section className='nextdestination'>
                     <div class="wrapper-nextpicture">
+                        <div className='container_arrow'>
+                            <div>
+                                <img onClick={this.selectbestplan} className="leftarrow" src={arrow} alt=""></img>
+                            </div>
+                            <div>
+                                <img onClick={this.selectbestplanBack} className="rightarrow" src={arrow} alt=""></img>
+                            </div>
+                        </div>
                         {this.state.nextpicture.map(nextpicture => (
                             <div className={"divpictureNext" + i} key={i++}>
                                 <img src={nextpicture.cover_picture} className={"nextpictureimg" + a} key={a++} />
@@ -66,7 +75,9 @@ class Getnextdestination extends Component {
                                 <p className={"p" + b} key={b++}>{nextpicture.countries}</p>
                             </div>
                         ))}
+                        
                     </div>
+
                 </section>
                 {/****************************** SECTION BEST PLAN  ***************************** */}
                 <section className="bestplan">
