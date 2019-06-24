@@ -143,6 +143,9 @@ Grid pour profil info */
     margin:auto;
     padding-left:350px;
 }
+.bloc-cookies h2{
+    margin-left:0;
+}
 .cookiespolicy{
   display:flex;
   flex-direction: row;

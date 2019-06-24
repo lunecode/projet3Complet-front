@@ -36,9 +36,7 @@ class ProfilRoutes extends Component {
             handleCheckbox={this.handleCheckbox}
             changeHandler={this.changeHandler}
           />
-          <div className="save-btn">
-            <button type="submit" >SAUVEGARDER</button>
-          </div>
+      
         </form>
       </div>
     )

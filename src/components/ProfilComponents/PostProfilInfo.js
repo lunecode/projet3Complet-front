@@ -19,7 +19,7 @@ const PostProfilInfo = (props) => {
             <li>
               <NavLink
                 className="nav"
-                to="/Profil" exact>profil</NavLink>
+                to="/Profil" exact>Profil</NavLink>
             </li>
             <li>
               <NavLink
@@ -60,7 +60,7 @@ const PostProfilInfo = (props) => {
                 placeholder='Profil Picture'
                 className='field-profil-picture' />
 
-              <label htmlFor="profile_picture">Modifier l'image</label>
+              <p htmlFor="profile_picture">Modifier l'image</p>
               <p>Format JPG ou JPEG.Une résolution de 600px par 600px est recommandé</p>
             </div>
           </div>
@@ -71,7 +71,7 @@ const PostProfilInfo = (props) => {
             </div>
             <div>
               <label htmlFor="location">Location</label>
-              <input type="text" name="location" value={props.location} onChange={props.changeHandler} placeholder='Ou lendroit ou nous avons le plus de chance de vous croisé' className='field-profil-bloc-2' />
+              <input type="text" name="location" value={props.location} onChange={props.changeHandler} placeholder="Ou l'endroit ou nous avons le plus de chance de vous croisé" className="field-profil-bloc-2" />
             </div>
             <div>
               <label htmlFor="profil_link">Lien de votre profil tripitto</label>

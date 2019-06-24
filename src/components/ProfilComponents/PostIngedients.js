@@ -39,7 +39,7 @@ const PostIngedients = (props) => {
                                                         onClick={props.Enum1}
                                                         alt="Aventurier d'abord"
                                                 />
-                                                Aventurier seul
+                                               <p> Aventurier seul</p>
         </div>
 
                                         <div className="ingredient2">
@@ -47,24 +47,24 @@ const PostIngedients = (props) => {
                                                         onClick={props.Enum2}
                                                         alt="Les copains d'abord"
                                                 />
-                                                Copains d'abord
-        </div>
+                                                <p>Les copains d'abord</p> 
+                                        </div>
 
                                         <div className="ingredient3">
                                                 <img src={Romantique}
                                                         onClick={props.Enum3}
                                                         alt="Escapade_romantique"
                                                 />
-                                                Escapade romantique
-        </div>
+                                                <p>Escapade romantique</p>
+                                        </div>
 
                                         <div className="ingredient4">
                                                 <img src={En_famille}
                                                         onClick={props.Enum4}
                                                         alt="En_famille"
                                                 />
-                                                En famille
-        </div>
+                                                <p>En famille</p>
+                                        </div>
 
                                         <div className="ingredient5">
                                                 <img src={DigitalNomad}
@@ -72,8 +72,8 @@ const PostIngedients = (props) => {
                                                         onClick={props.Enum5}
                                                         alt="Digita_nomad"
                                                 />
-                                                Digita nomad
-        </div>
+                                                <p>Digita nomad</p>
+                                        </div>
                                 </div>
 
                                 <div className="Ingredient_list2">
@@ -83,16 +83,16 @@ const PostIngedients = (props) => {
                                                         onClick={props.Enum6}
                                                         alt="Iles_Plages"
                                                 />
-                                                Iles & Plages
-                </div>
+                                               <p>Iles & Plages</p> 
+                                </div>
 
                                         <div className="ingredient9">
                                                 <img src={Montagne}
                                                         onClick={props.Enum7}
                                                         alt="Grandes_villes"
                                                 />
-                                                Montagne
-                </div>
+                                               <p> Montagne & Camgagnes</p>
+                                        </div>
 
                                         <div className="ingredient8">
                                                 <img src={Safari}
@@ -100,27 +100,24 @@ const PostIngedients = (props) => {
                                                         onClick={props.Enum8}
                                                         alt="Safari_Animaux"
                                                 />
-                                                Safari & Animaux
-                </div>
-
+                                                <p>Safari & Animaux</p>
+                                        </div>
                                         <div className="ingredient15">
                                                 <img src={Ville}
 
                                                         onClick={props.Enum9}
                                                         alt="Histoire_Culture"
                                                 />
-                                                Grande Ville
-                </div>
-
+                                                <p>Grande Ville</p>
+                                        </div>
                                         <div className="ingredient7">
                                                 <img src={Enforet}
 
                                                         onClick={props.Enum10}
                                                         alt="En foret"
                                                 />
-                                                En foret
-                </div>
-
+                                               <p>En foret</p> 
+                                        </div>
                                 </div>
 
                                 <div className="Ingredient_list3"> <div className="ingredient7">
@@ -129,8 +126,8 @@ const PostIngedients = (props) => {
                                                 onClick={props.Enum11}
                                                 alt="Montagnes_Campagnes"
                                         />
-                                        Sport & Aventures
-                </div>
+                                        <p>Sport & Aventures</p>
+                                </div>
 
                                         <div className="ingredient9">
                                                 <img src={Festival}
@@ -138,8 +135,8 @@ const PostIngedients = (props) => {
                                                         onClick={props.Enum12}
                                                         alt="Grandes_villes"
                                                 />
-                                                Festivals & Musique
-                </div>
+                                               <p>Festivals & Musique</p> 
+                                        </div>
 
                                         <div className="ingredient10">
                                                 <img src={Plaisirculinaire}
@@ -147,8 +144,8 @@ const PostIngedients = (props) => {
                                                         onClick={props.Enum13}
                                                         alt="En_foret"
                                                 />
-                                                Plaisir culinaire
-                </div>
+                                                <p>Plaisir culinaire</p>
+                                         </div>
 
                                         <div className="ingredient11">
                                                 <img src={histoireCulture}
@@ -156,8 +153,8 @@ const PostIngedients = (props) => {
                                                         onClick={props.Enum14}
                                                         alt="Histoire_Culture"
                                                 />
-                                                Histoire_Culture
-                </div>
+                                                <p>Histoire & Culture</p>
+                                        </div>
 
                                         <div className="ingredient16">
                                                 <img src={Spiritualité}
@@ -165,8 +162,8 @@ const PostIngedients = (props) => {
                                                         onClick={props.Enum15}
                                                         alt="Spiritualité"
                                                 />
-                                                Spiritualité
-                </div>
+                                                <p>Spiritualité</p>
+                                        </div>
                                 </div>
 
 
@@ -178,8 +175,8 @@ const PostIngedients = (props) => {
                                                         onClick={props.Enum16}
                                                         alt="Humanitaire"
                                                 />
-                                                Humanitaire
-                </div>
+                                               <p>Humanitaire</p>  
+                                        </div>
 
                                         <div className="ingredient15">
                                                 <img src={Ecotourisme}
@@ -187,8 +184,8 @@ const PostIngedients = (props) => {
                                                         onClick={props.Enum17}
                                                         alt="Ecotourisme"
                                                 />
-                                                Ecotourisme
-                </div>
+                                                <p>Ecotourisme</p>
+                                        </div>
 
                                         <div className="ingredient18">
                                                 <img src={Plaisirculinaire}
@@ -196,8 +193,8 @@ const PostIngedients = (props) => {
                                                         onClick={props.Enum18}
                                                         alt="Ecotourise"
                                                 />
-                                                Plaisirculinaire
-                </div>
+                                               <p>Plaisir culinaire</p> 
+                                        </div>
 
                                         <div className="ingredient19">
                                                 <img src={Luxe}
@@ -205,8 +202,8 @@ const PostIngedients = (props) => {
                                                         onClick={props.Enum19}
                                                         alt="Luxe"
                                                 />
-                                                Luxe
-                </div>
+                                                <p>Luxe</p>
+                                        </div>
 
                                         <div className="ingredient19">
                                                 <img src={Sacados}
@@ -214,8 +211,8 @@ const PostIngedients = (props) => {
                                                         onClick={props.Enum20}
                                                         alt="En_sac_dos"
                                                 />
-                                                Sac a dos
-                </div>
+                                                <p>Sac a dos</p>
+                                        </div>
 
                                         <div className="ingredient19">
                                                 <img src={Rencontre}
@@ -223,8 +220,8 @@ const PostIngedients = (props) => {
                                                         onClick={props.Enum21}
                                                         alt="En_sac_dos"
                                                 />
-                                                Sac a dos
-                </div>
+                                               <p>Rencontre d'exeptions</p>
+                                         </div>
 
                                 </div>
                                 {/* <button type="submit" >submit</button> */}

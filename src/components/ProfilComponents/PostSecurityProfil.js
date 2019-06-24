@@ -22,7 +22,7 @@ const PostSecurityProfil = (props) => {
             <li>
               <NavLink
                 className="nav"
-                to="/Profil" exact>profil</NavLink>
+                to="/Profil" exact>Profil</NavLink>
             </li>
             <li>
               <NavLink
