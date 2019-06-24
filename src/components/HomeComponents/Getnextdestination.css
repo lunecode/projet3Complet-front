@@ -28,25 +28,39 @@
     font-family: 'Roboto';
 }
 
-h2 {
-
- font-size: 2vh;
- margin-left: 3.5vw;
+.container_arrow{
+    display: grid;
+    grid-template-columns: 200% 20%;
+    margin-top: -55%;
+    margin-left: -9%;
+    align-items: center;
 }
+.leftarrow{
+height: 8vh;
+transform: rotate(90deg);
 
-
+}
+.rightarrow{
+height: 8vh;
+transform: rotate(-90deg);
+/* margin-left: 185vh; */
+}
 .wrapper-nextpicture {
     
         display: grid;
-        grid-template-columns:43% 24% 24%;
+        grid-template-columns:46% 25% 25%;
         grid-template-rows: 25vh 25vh;
         grid-auto-flow: row;
         grid-template-areas: "nextpictureimg1 nextpictureimg2 nextpictureimg4" 
         "nextpictureimg1 nextpictureimg3 nextpictureimg5";
         padding-left: 3.5%;
         margin-bottom: 1%;
-        background-color:#2C404D;
+        background:
+        linear-gradient(180deg, rgba(44, 64, 77, 0.89), rgba(219, 213, 213, 0) 60.71%),
+        linear-gradient(127deg, rgba(44, 64, 77, 0.589), rgba(0,255,0,0) 70.71%),
+        linear-gradient(336deg, rgba(44, 64, 77, 0.692), rgba(0,0,255,0) 70.71%);
      }
+
 
 .divpictureNext1{
     grid-area:nextpictureimg1;
@@ -54,6 +68,7 @@ h2 {
 .divpictureNext1 img{
     height: 100%;
     width: 100%;
+    
 }
 .nextpictureimg1{
     height: 50vh;
@@ -68,7 +83,7 @@ h2 {
     height: 100%;
     width: 100%;
 }
-.nextpictureimg2{
+.nextpictureimg2 {
     height: 25vh;
     width: 100%;
 
@@ -186,12 +201,14 @@ display: none;
 .bestplan{
     margin-bottom: -1%;
     display: grid;
-    grid-template-columns: 62% 1.7% 1% 35%;
+    grid-template-columns: 65% 1.7% 1% 35%;
     align-items: center;
+    padding-left: 3.5%;
+
 }
 .container_bestplan {
 display: grid;
-grid-template-columns: 33% 33%;
+grid-template-columns: 31.75% 31.75%;
 grid-template-rows: 32vh 32vh;
 grid-template-areas: "divVideoPLan1 divVideoPLan2" 
 "divVideoPLan3 divVideoPLan4";
@@ -257,7 +274,7 @@ margin-left: 1.5%;
 .container_title_bestplan_video_duration{
     position: absolute;
     background-color: black;
-    margin-left: 28%;
+    margin-left: 26.75%;
     }
 .title_bestplan_video_duration{
     color:white;
