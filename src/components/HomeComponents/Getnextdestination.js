@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-import YouTube from 'react-youtube';
+// import YouTube from 'react-youtube';
 import './Getnextdestination.css';
 
 import leftHome from '../../Images-tripitto/Icon/leftHome.png'
@@ -53,7 +53,7 @@ let c = 1
             <>
     {/****************************** SECTION NEXT DESTINATION******************************* */}
         <section className='nextdestination'>
-                <div class="wrapper-nextpicture">
+                <div className="wrapper-nextpicture">
                 {this.state.nextpicture.map(nextpicture => (
                     <div className={"divpictureNext" + i} key={i++}>
                             <img src={nextpicture.cover_picture} className={"nextpictureimg" + a} key={a++}/>
@@ -75,7 +75,7 @@ let c = 1
                 <img onClick={this.selectbestplanBack} className="rightHome" src={RightHome} alt=""></img>
             </div>
         </section> 
-            <div class="container_bestplan">
+            <div className="container_bestplan">
                 {this.state.videos.map(video => (
                     <div className={"divVideoPLan" + c} key={c++}>
                             <img src={video.cover_picture} className='picture_bestplan'/>
