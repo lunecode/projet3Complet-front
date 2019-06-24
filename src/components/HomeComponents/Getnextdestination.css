@@ -20,8 +20,7 @@
 .container_nextdestination_title {
     align-items: center;
     background-color: #2C404D;
-    display: flex;
-    justify-content: space-between;
+
     flex-flow: row nowrap;
     color: white;
     width: 100%;
@@ -201,7 +200,7 @@ display: none;
 .bestplan{
     margin-bottom: -1%;
     display: grid;
-    grid-template-columns: 65% 1.7% 1% 35%;
+    grid-template-columns: 62% 1.7% 1% 35%;
     align-items: center;
     padding-left: 3.5%;
 
@@ -312,7 +311,7 @@ margin-left: 1.5%;
     font-family: 'Lora';
     font-size: 2vh;
     color:rgba(152, 158, 158, 0.918);
-    margin-top: -12.5%;
+    margin-top: -13%;
     margin-left: 20%;
 }
 
@@ -329,4 +328,30 @@ margin-left: 1.5%;
         font-family: 'Roboto';
     }
 
-
+/***************************CONTRIBUTORS********************************/
+/*****************************************************************************/
+    /* .Contributors{
+        display: grid;
+        grid-template-columns: 87%;
+        margin-left:65%;
+        align-items: center;
+        padding-left: 3.5%;
+        margin-bottom: -2.75%;
+    }
+    .container_contributors_title {
+    align-items: center;
+    border-block-end: solid 1px #2C404D;
+    text-align: center;
+  
+    }
+    
+    .title_contributors {
+        color: #2C404D;;
+       
+        display: grid;
+        grid-template-columns: 62% 1.7% 1% 35%;
+       
+        font-size: 2vh;
+        font-weight: bold;
+        font-family: 'Roboto';
+    } */
