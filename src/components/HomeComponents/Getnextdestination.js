@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-// import YouTube from 'react-youtube';
 import './Getnextdestination.css';
 
 import leftHome from '../../Images-tripitto/Icon/leftHome.png'
@@ -10,16 +9,16 @@ import RightHome from '../../Images-tripitto/Icon/RightHome.png'
 
 class Getnextdestination extends Component {
     state = {
-        nextpicture : [],
+        nextpicture: [],
         videos: [],
         bestplan: 1,
     };
 
-    
+
     getnextvideo = async () => {
         const res = await axios.get('http://localhost:3000/popularity/get_popularity_liked_general_video_travel_information')
         this.setState({ nextpicture: res.data })
-        console.log (this.state.nextpicture)
+        console.log(this.state.nextpicture)
     }
     getbestplan = async () => {
         const res = await axios.get('http://localhost:3000/popularity/get_popularity_liked_general_video_travel_information2')
@@ -45,10 +44,10 @@ class Getnextdestination extends Component {
     }
 
     render() {
-let i = 1
-let a = 1
-let b = 1 
-let c = 1 
+        let i = 1
+        let a = 1
+        let b = 1
+        let c = 1
         return (
             <>
     {/****************************** SECTION NEXT DESTINATION******************************* */}
@@ -80,23 +79,19 @@ let c = 1
                     <div className={"divVideoPLan" + c} key={c++}>
                             <img src={video.cover_picture} className='picture_bestplan'/>
                             <div className='container_title_bestplan_numbertips'>
-                            <p className='title_bestplan_numbertips'>+{video.number_tips}%</p>
+                                <p className='title_bestplan_numbertips'>+{video.number_tips}%</p>
                             </div>
                             <div className='container_title_bestplan_video_duration'>
-                            <p className='title_bestplan_video_duration'>{video.video_duration}</p>
+                                <p className='title_bestplan_video_duration'>{video.video_duration}</p>
                             </div>
                             <p className='title_bestplan_title'>{video.video_title}</p>
                             <p className='title_bestplan_countries'>{video.countries}</p>
                             <p className='title_bestplan_user'>{video.video_user}</p>
                             <p className='title_bestplan_nbviews'>{video.nb_views}</p>
-                    </div> 
-                ))}
-            </div> 
-         
-
+                        </div>
+                    ))}
+                </div>
             </>
-
-
         )
     }
 }
