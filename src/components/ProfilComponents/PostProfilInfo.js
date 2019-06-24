@@ -2,10 +2,11 @@ import React from 'react'
 import './StyleProfilInfo.css'
 import { NavLink } from 'react-router-dom'
 
-import PostVideo from '../../components/uploadComponents/PostVideo';
+import UploadImgProfil from '../../components/ProfilComponents/UploadImgProfil.js';
+import PostVideo from '../uploadComponents/PostVideo';
 
 const PostProfilInfo = (props) => {
-  
+
   return (
     <div className="bloc-page-profil">
       <div className="membres-profil">
@@ -56,7 +57,7 @@ const PostProfilInfo = (props) => {
           <div>
             <h2>Profil</h2>
             <div className='field-profil-picture-bloc'>
-              <PostVideo />
+              <UploadImgProfil />
             </div>
           </div>
           <div className="profil-bloc-2">

@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
 import axios from "axios"
-import './UploadImgProfil.scss'
 
 
-class IploadImgProfil extends Component {
+class PostVideo extends Component {
     state={
       video_link:"",
-
-
     }
 
     fileSelectedHandler= e=>{
@@ -41,19 +38,27 @@ blob2file=(blobData)=> {
   fd.set('a', blobData);
   return fd.get('a');
 }
-render() {
-const data=this.state.video_link
+
+    render() {
+      const data=this.state.video_link
   console.log(this.state);
         return (
-            <div classNeme="UploadImage">  
-            <img className="imageprofil" src={this.video_link} alt=""/><img src={`${data}`} />
-            <input type='file' name="video_link" type="hidden" 
-                onChange={this.handelchange}
+            <div> 
+            <input type='file' name="video_link" 
+                   onChange={this.handelchange}
                 />
-                
+
+{/* <video preload="" src={`${data}`}></video> */}
+{/* 
+<video src={`${data}`}>
+  <source src={`${data}`} type="application/x-mpegurl"/>
+</video> */}
+
+
+                 <img className="imageprofil" src={this.video_link} alt=""/><img src={`${data}`}/>
                 <button onClick={this.fileUploadHandler}>Télécharger</button> 
             
-
+ {/* <GetVideo />  */}
             </div>
 
 
@@ -63,4 +68,4 @@ const data=this.state.video_link
  }
 
 
-export default IploadImgProfil;
+export default PostVideo;

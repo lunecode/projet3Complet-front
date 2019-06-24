@@ -5,8 +5,6 @@ import GetVideo from './GetVideo';
 class PostVideo extends Component {
     state={
       video_link:"",
-
-
     }
 
     fileSelectedHandler= e=>{
@@ -43,17 +41,18 @@ blob2file=(blobData)=> {
 
     render() {
       const data=this.state.video_link
-
   console.log(this.state);
         return (
             <div> 
-            <input type='file' name="video_link"
-            
-                onChange={this.handelchange}
+            <input type='file' name="video_link" 
+                   onChange={this.handelchange}
                 />
-                 <img className="imageprofil" src={this.video_link} alt=""/><img src={`${data}`} width="100%" height="100%"/>
+ <video preload="" src={`${data}`} type="video/mp4"></video>  
+
+
+                 {/* <img className="imageprofil" src={this.video_link} alt=""/><img src={`${data}`}/>
                 <button onClick={this.fileUploadHandler}>Télécharger</button> 
-            
+             */}
  {/* <GetVideo />  */}
             </div>
 
