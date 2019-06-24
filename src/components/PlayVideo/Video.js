@@ -50,7 +50,7 @@ render() {
     return (
       
     <>
-        {this.state.videos.filter(item => item.id_general_video == 1).map(item => (
+        {this.state.videos.filter(item => item.id_general_video === 1).map(item => (
         <div className="container_video">
         <div key={item.id_general_video}>
           <div className="video_user">

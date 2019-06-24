@@ -6,7 +6,7 @@ import './PostTravelStep.css'
 import Village from '../../Images-tripitto/Icon/etape/active/village.png';
 import Weather from '../../Images-tripitto/Icon/etape/meteo/nuagegris.png';
 import Car from '../../Images-tripitto/Icon/transport/voiture.png';
-import Moto from '../../Images-tripitto/Icon/Voyage/Moto.png';
+import Moto from '../../Images-tripitto/Voyages/moto.png';
 import Bike from '../../Images-tripitto/Icon/Voyage/velo.png';
 import Feet from '../../Images-tripitto/Icon/Voyage/Pieds.png';
 import Taxi from '../../Images-tripitto/Icon/transport/taxi.png';
