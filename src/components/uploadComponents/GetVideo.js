@@ -7,15 +7,6 @@ import UploadIcon from '../../Images-tripitto/Icon/Upload-Video.png'
 
 
 
-
-// UPLOAD PAGE 1 / VIDEO AND DESCRIPTION
-// ALLOW TO DISPLAY DATA FROM "GENERAL_VIDEO" TABLE
-// TEST NOK
-
-
-
-
-
 class GetVideo extends Component {
   state = {
     videos: [],
@@ -37,8 +28,7 @@ class GetVideo extends Component {
         {this.state.videos.map(item => (
           <li key={item.id_general_video}>
             <p>{item.video_title}</p>
-   
-            <img src={item.cover_picture} alt={item.video_title}></img>
+            <img src={item.video_link} alt={item.video_title}></img>
             <p>{item.profil_id_profil}</p>
           </li>
         ))}

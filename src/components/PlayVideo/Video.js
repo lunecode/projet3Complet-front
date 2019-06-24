@@ -11,7 +11,6 @@ import Share from '../../Images-tripitto/Icon/Share.png';
 
 
 
-
 // Permet l'affichage des données pour un test de la table " General_video "
 
 class Video extends Component {
@@ -57,7 +56,6 @@ render() {
           <div className="video_info">
             <div className="title_video">{item.video_title} <span><img className="play" src={Play} alt="play"/>{item.nb_views}</span><span className="number_tips"><img className="numberTips" src={NumberTips} alt="number tips"/>{item.number_tips}</span>
             </div>
-            
             <div className="likeComment">
               <span><img src={Love} alt= "love"/>     {item.nb_like_popularity}</span> 
               <span> <img src={Comment} alt="comment"/>{item.nb_comment_popularity}</span><span> <img className="share" src={Add} alt="share"/> {item.nb_playlist_included}</span> <span> <img src={Share} alt="Share"/>{item.nb_share}
