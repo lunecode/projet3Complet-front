@@ -35,6 +35,11 @@ $colorButton: #5dd8dc;
     grid-auto-flow: row; 
     padding-left: 3%;
     margin-top: 1%;
+
+        img:hover {
+            filter: brightness(100%);
+            -webkit-filter: brightness(100%);
+        }
 }
 
 .latestPublishedVideo1  {
@@ -153,6 +158,11 @@ grid-template-areas: "Uncover1 Uncover2"
 padding-left: 3%;
 margin-top: 1%;
 
+    img:hover,.UncoverBorder1 img:hover {
+        filter: opacity(70%);
+        -webkit-filter: opacity(70%);
+    }
+
     .UncoverBorder1 {
         grid-area: Uncover1;
         padding-right: 1%;
@@ -166,12 +176,20 @@ margin-top: 1%;
             position: relative;
             top: -215px;
             color: white;
-
             font-size: 40px;
             font-weight: bold;
             text-align: center;
         }
     }
+}
+
+.leftHome {
+    pointer-events: all;
+}
+
+.leftHomeDisable {
+    opacity: 0.5;
+    pointer-events: none;
 }
 
 .UncoverBorder2 {
@@ -235,7 +253,7 @@ margin-top: 1%;
     display: grid;
     grid-template-columns: 16.5% 16.5% 16.5% 16.5%;
     grid-template-rows: 37vh;
-    grid-template-areas: "videaste1 videaste2 videaste3 videaste4";
+    grid-template-areas: "v1 v2 v3 v4";
     margin-left: 3%;
     margin-top: 3%;
     text-align: center;
@@ -269,22 +287,22 @@ margin-top: 1%;
     }
 }
 
-.videaste1 {
-    grid-area: videaste1;
+.videastes1 {
+    grid-area: v1;
     padding-right: 2%;
 }
 
-.videaste2 {
-    grid-area: videaste2;
+.videastes2 {
+    grid-area: v2;
     padding-right: 2%;
 }
 
-.videaste3 {
-    grid-area: videaste3;
+.videastes3 {
+    grid-area: v3;
     padding-right: 2%;
 }
 
-.videaste4 {
-    grid-area: videaste4;
+.videastes4 {
+    grid-area: v4;
     padding-right: 2%;
 }

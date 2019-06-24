@@ -4,7 +4,7 @@ import Youtube from 'react-youtube';
 
 import { NavLink } from 'react-router-dom'
 
-import family from '../../Images-tripitto/Icon/Aventurier/en famille.png'
+import family from '../../Images-tripitto/Icon/Aventurier/En_famille.png'
 import couple from '../../Images-tripitto/Icon/Aventurier/en couple.png'
 import friend from '../../Images-tripitto/Icon/Aventurier/entre ami.png'
 import alone from '../../Images-tripitto/Icon/Aventurier/seul.png'
@@ -30,7 +30,7 @@ import './PostTravelInformation.css';
 
 class PostTravelInformation extends Component {
   state = {
-    videos: [],
+    // videos: [],
     travel_type: 0
   }
 
@@ -53,14 +53,14 @@ class PostTravelInformation extends Component {
   }
 
 
-  getVideo = async () => {
-    const res = await axios.get('http://localhost:3000/general_video/get_general_video')
-    this.setState({ videos: res.data })
-    console.log(this.state.videos)
-  }
-  componentDidMount() {
-    this.getVideo()
-  }
+  // getVideo = async () => {
+  //   const res = await axios.get('http://localhost:3000/general_video/get_general_video')
+  //   this.setState({ videos: res.data })
+  //   console.log(this.state.videos)
+  // }
+  // componentDidMount() {
+  //   this.getVideo()
+  // }
 
 
   submitHandler = e => {
@@ -83,13 +83,13 @@ class PostTravelInformation extends Component {
 
       <>
 
-
+{/* 
         {this.state.videos.map(item => (
           <div className="video_link" key={i++}>
             <Youtube className="video" videoId={item.video_link} onReady={this._onReady}
             />
           </div>
-        ))}
+        ))} */}
 
 
 
@@ -192,19 +192,19 @@ class PostTravelInformation extends Component {
             <input className="input-travel_type" type="hidden" name="travel_type" value={this.state.travel_type} onChange={this.changeHandler} />
 
             <div className="travel_type" onClick={this.type1}>
-              <img src={family}></img>
+              <img src={family} alt="En famille"></img>
               <p>En famille</p>
             </div>
             <div className="travel_type2" onClick={this.type2}>
-              <img src={couple}></img>
+              <img src={couple} alt="En couple"></img>
               <p>En couple</p>
             </div>
             <div className="travel_type3" onClick={this.type3}>
-              <img src={friend}></img>
+              <img src={friend} alt="Entre amis"></img>
               <p>Entre amis</p>
             </div>
             <div className="travel_type4" onClick={this.type4}>
-              <img src={alone}></img>
+              <img src={alone} alt="Aventurier seul"></img>
               <p>Aventurier seul</p>
             </div>
 

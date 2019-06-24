@@ -12,9 +12,9 @@ class Home extends Component {
         return (
             <>
                 {/* <Navbar /> */}
-                <TitleHomeNavbar />
+                {/* <TitleHomeNavbar /> */}
                 <Getnextdestination />
-                <HomeComponents />
+                {/* <HomeComponents /> */}
                 {/* <Footer /> */}
             </>
         )

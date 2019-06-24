@@ -6,7 +6,11 @@ import './PostTravelStep.css'
 import Village from '../../Images-tripitto/Icon/etape/active/village.png';
 import Weather from '../../Images-tripitto/Icon/etape/meteo/nuagegris.png';
 import Car from '../../Images-tripitto/Icon/transport/voiture.png';
+<<<<<<< HEAD
 import Moto from '../../Images-tripitto/Voyages/moto.png';
+=======
+import Moto from '../../Images-tripitto/Voyages/Moto.png';
+>>>>>>> 1b2e9bfdf9b08c2d31a02c8edf5cd8ca56a6d3fd
 import Bike from '../../Images-tripitto/Icon/Voyage/velo.png';
 import Feet from '../../Images-tripitto/Icon/Voyage/Pieds.png';
 import Taxi from '../../Images-tripitto/Icon/transport/taxi.png';
@@ -23,13 +27,13 @@ import Bus from '../../Images-tripitto/Icon/Voyage/Bus.png';
 
 class PostTravelStep extends Component {
   state = {
-
-
   }
+
 
   changeHandler = (e) => {
     this.setState({ [e.target.name]: e.target.value })
   }
+
 
   submitHandler = e => {
     e.preventDefault()
@@ -41,9 +45,9 @@ class PostTravelStep extends Component {
       .catch(error => {
         console.log(error)
       })
-
   }
 
+  
   render() {
     const { step_number, step_name, step_type, step_duration, step_weather, step_transport, way_get_around, way_get_around_comment, district1, district2, district3, district_comment, accomodation1, accomodation2, accomodation3, accomodation_link1, accomodation_link2, accomodation_link3, restaurant1, restaurant2, restaurant3, bar1, bar2, bar3, must_visit1, must_visit2, must_visit3, sport_activity1, sport_activity2, sport_activity3, sport_activity_comment, crush, advice, general_video_id_general_video } = this.state
     return (
@@ -235,8 +239,6 @@ class PostTravelStep extends Component {
           </div>
         </div>
       </form>
-
-
     )
   }
 }

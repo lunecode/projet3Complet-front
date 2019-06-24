@@ -1,6 +1,9 @@
 .App {
   text-align: center;
 }
+.profiliA{
+  background-color: rgb(244, 244, 244);
+}
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
