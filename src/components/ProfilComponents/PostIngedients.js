@@ -187,14 +187,7 @@ const PostIngedients = (props) => {
                                                 <p>Ecotourisme</p>
                                         </div>
 
-                                        <div className="ingredient18">
-                                                <img src={Plaisirculinaire}
-
-                                                        onClick={props.Enum18}
-                                                        alt="Ecotourise"
-                                                />
-                                               <p>Plaisir culinaire</p> 
-                                        </div>
+                                
 
                                         <div className="ingredient19">
                                                 <img src={Luxe}

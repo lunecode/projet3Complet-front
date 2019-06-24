@@ -83,12 +83,12 @@ const PostProfilInfo = (props) => {
             <div className='field-profil-checkbox'>
               <label htmlFor="identity" className="field-title-identity">Identité</label>
               <div className="identity-field">
-                <label htmlFor="lui">Lui</label>
                 <input type="checkbox" id="lui" name="is_checked_him" value={props.identity} checked={props.is_checked_him} onChange={props.handleCheckbox} className="field-profil-checkbox" />
-                <label htmlFor="elle">Elle</label>
+                <label htmlFor="lui">Lui</label>
                 <input type="checkbox" id="elle" name="is_checked_her" value={props.identity} checked={props.is_checked_her} onChange={props.handleCheckbox} />
-                <label htmlFor="equipe">Equipe</label>
+                <label htmlFor="elle">Elle</label>
                 <input type="checkbox" id="equipe" name="is_checked_team" value={props.identity} checked={props.is_checked_team} onChange={props.handleCheckbox} />
+                <label htmlFor="equipe">Equipe</label>
               </div>
             </div>
             <div>
