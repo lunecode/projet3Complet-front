@@ -2,13 +2,37 @@ import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom';
 
 import './Navbar.scss'
+import Modal from './Modal';
+import './Modal.scss'
+
 import Logo from '../Images-tripitto/Logo/B&W.png';
 import Search from '../Images-tripitto/Icons/Search-White.png';
 import Avatar from '../Images-tripitto/Icon/User/normal.png';
 import Notification from '../Images-tripitto/Icon/Notifications.png';
 
 class Navbar extends Component {
+state = {
+    isModalOpen: false,
+}
+
+openModal =() => {
+    this.setState( { isModalOpen: true} )
+console.log(this.state.isModalOpen);
+
+}
+
+closeModal = () => {
+    this.setState( { isModalOpen: false } )
+    console.log(this.state.isModalOpen);
+}
+
+componentDidMount() {
+    this.openModal()
+    this.closeModal()
+}
+
     render () {
+        const { isModalOpen } = this.state
         return (
             <>
                 <header>
@@ -30,11 +54,14 @@ class Navbar extends Component {
                             <ul className="Ulbutton">
                                 <li><img className="logoAvatar" src={Avatar}  alt="logo tripitto"></img></li>
                                 <li><img className="notification" src={Notification}alt="logo notification"></img></li>
-                                <li><button className="buttonNavbar">PUBLIER</button></li>
+                                <li><button onClick={this.openModal} className="buttonNavbar">PUBLIER</button></li>
                             </ul>
                         </div>
-                    </nav>
+                    </nav> 
                 </header>
+                <div className="containerModal">
+                    <Modal isOpen={isModalOpen} onClose={this.closeModal}/>
+                </div>
             </>
         )
     }
