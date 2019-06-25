@@ -7,10 +7,10 @@ import Country from '../../components/json/Country.json'
 // THIS CODE DISPLAY ALL THE CONTINENT AND COUNTRY BUT NOT FILTER THE COUNTRY IN RELATION WITH THE CONTINENT
 
 
-export default class TestContinentCountry extends Component {
+export default class ContinentList extends Component {
   state = {
     continent: Continent,
-    country: Country
+    // country: Country
   }
 
 
@@ -30,7 +30,7 @@ export default class TestContinentCountry extends Component {
 
 
 
-        <div>
+        {/* <div>
           <label for="Country"></label>
           <select id="Country">
             <option value="">Pays</option>
@@ -38,7 +38,7 @@ export default class TestContinentCountry extends Component {
               <option>{item.country}</option>
             ))}
           </select>
-        </div>
+        </div> */}
 
 
         {/* <div>
