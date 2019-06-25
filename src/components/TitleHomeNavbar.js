@@ -15,16 +15,16 @@ class TitleHomeNavbar extends Component {
                 <h1>PROJETEZ-VOUS DANS VOTRE PROCHAINE DESTINATION</h1>
             </div>
             <div>
-                <a href="https://fr-fr.facebook.com" target="_blank"><img className="rsNavbar" src={fbWhite} alt={fbWhite}></img></a>
+                <a href="https://fr-fr.facebook.com" target="_blank noopener noreferrer"><img className="rsNavbar" src={fbWhite} alt={fbWhite}></img></a>
             </div>
             <div>
-                <a href="https://www.instagram.com/?hl=fr" target="_blank"><img className="rsNavbar" src={instaWhite} alt={instaWhite}></img></a>
+                <a href="https://www.instagram.com/?hl=fr" target="_blank noopener noreferrer"><img className="rsNavbar" src={instaWhite} alt={instaWhite}></img></a>
             </div>
             <div>
-                <a href="https://www.youtube.com/" target="_blank"><img className="rsNavbar" src={YoutubeWhite} alt={YoutubeWhite}></img></a>
+                <a href="https://www.youtube.com/" target="_blank noopener noreferrer"><img className="rsNavbar" src={YoutubeWhite} alt={YoutubeWhite}></img></a>
             </div>
             <div>
-            <a href="https://fr-fr.facebook.com" target="_blank"><img className="rsNavbar" src={share} alt={share}></img></a>
+            <a href="https://fr-fr.facebook.com" target="_blank noopener noreferrer"><img className="rsNavbar" src={share} alt={share}></img></a>
             </div>
         </div>   
         </>

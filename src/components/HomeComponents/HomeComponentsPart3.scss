@@ -252,8 +252,9 @@ margin-top: 1%;
 .ContainerVideaste {
     display: grid;
     grid-template-columns: 16.5% 16.5% 16.5% 16.5%;
-    grid-template-rows: 37vh;
-    grid-template-areas: "v1 v2 v3 v4";
+    grid-template-rows: 31vh;
+    grid-template-areas: "v1 v2 v3 v4"
+    "v5 v6 v7 v8";
     margin-left: 3%;
     margin-top: 3%;
     margin-bottom: 3%;
@@ -270,6 +271,7 @@ margin-top: 1%;
         
         p {
             text-transform: capitalize;
+            margin-top: -10px;
         }
 
         .centerVideaste {
@@ -305,5 +307,25 @@ margin-top: 1%;
 
 .videastes4 {
     grid-area: v4;
+    padding-right: 2%;
+}
+
+.videastes5 {
+    grid-area: v5;
+    padding-right: 2%;
+}
+
+.videastes6 {
+    grid-area: v6;
+    padding-right: 2%;
+}
+
+.videastes7 {
+    grid-area: v7;
+    padding-right: 2%;
+}
+
+.videastes8 {
+    grid-area: v8;
     padding-right: 2%;
 }
