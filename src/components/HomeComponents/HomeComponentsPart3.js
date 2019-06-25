@@ -28,7 +28,7 @@ class Display extends Component {
 
     }
     getRecentlyPublishedlimit = () => {
-        this.setState({offset: this.state.offset + 10}, async ()=> {
+        this.setState({offset: this.state.offset + 5}, async ()=> {
             const res = await axios.get(`http://localhost:3000/general_video/get_general_video_limite/${this.state.offset}`)
             const recentlyPubVideo = res.data
             this.setState({ videos: recentlyPubVideo },)
@@ -36,7 +36,7 @@ class Display extends Component {
     }
 
     getRecentlyPublishedlimitBack = () => {
-        this.setState({offset: this.state.offset - 10}, async ()=> {
+        this.setState({offset: this.state.offset - 5}, async ()=> {
             const res = await axios.get(`http://localhost:3000/general_video/get_general_video_limite/${this.state.offset}`)
             const recentlyPubVideo = res.data
             this.setState({ videos: recentlyPubVideo },)
@@ -92,7 +92,7 @@ class Display extends Component {
         <img onClick={this.getRecentlyPublishedlimitBack} className={this.state.offset === 0 ? "leftHomeDisable" : "leftHome"} src={leftHome} alt=""></img>
     </div>
     <div>
-        <img onClick={this.getRecentlyPublishedlimit} className={this.state.offset === 20 ? "leftHomeDisable" : "rightHome"} src={RightHome} alt=""></img>
+        <img onClick={this.getRecentlyPublishedlimit} className={this.state.offset === 10 ? "leftHomeDisable" : "rightHome"} src={RightHome} alt=""></img>
     </div>
     
 </section>
