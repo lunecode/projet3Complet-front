@@ -4,6 +4,8 @@ import Getnextdestination from '../components/HomeComponents/Getnextdestination'
 import HomeComponents from '../components/HomeComponents/HomeComponentsPart3';
 import TitleHomeNavbar from '../components/TitleHomeNavbar';
 
+import './Home.css'
+
 
 class Home extends Component {
     render() {

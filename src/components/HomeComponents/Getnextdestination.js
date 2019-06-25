@@ -20,7 +20,7 @@ class Getnextdestination extends Component {
 
 
     getnextvideo = async () => {
-        const res = await axios.get('http://localhost:3000/popularity/get_popularity_liked_general_video_travel_information')
+        const res = await axios.get('http://localhost:3000/general_video/get_general_video_home')
         this.setState({ nextpicture: res.data })
         console.log(this.state.nextpicture)
     }
