@@ -91,3 +91,19 @@
     margin-right: 2%;
 }
 
+.buttonTrip{
+    background-color: white;
+    width:200px;
+    padding:1%;
+    text-align: center;
+    color:#F94C3D;
+    font-size: 12px;
+    font-weight: 500;
+    border: 1px solid #F94C3D;
+    
+}
+
+.tripButton{
+    display: flex;
+    justify-content: flex-end;
+}

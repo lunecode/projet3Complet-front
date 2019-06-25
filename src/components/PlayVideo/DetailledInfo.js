@@ -92,6 +92,10 @@ render() {
                     <p className="comment_sport">{item.sport_activity_comment}</p>
                     <p><img className="love" src={Love} alt="love"></img>{item.crush}</p>
                     <p ><img className="idea" src={Idea} alt="idea"></img>{item.advice}</p>
+                    <div className="tripButton">
+                    <button className="buttonTrip">VOIR ETAPE SUIVANTE</button>
+                    </div>
+                    
                 </div>
             </div>
         </div>

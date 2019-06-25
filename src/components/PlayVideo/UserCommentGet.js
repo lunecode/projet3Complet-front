@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import './UserCommentGet.css';
 import Picture from '../../Images-tripitto/Icon/User/hover.png';
-import EditCom from '../../Images-tripitto/Icon/Edit.png';
+// import EditCom from '../../Images-tripitto/Icon/Edit.png';
 
 
 
 class UserCommentGet extends Component {
     state = {
     comment: [],
-    picture: [],
+    picture: []
 };
 
 getComment = async () => {
@@ -49,8 +49,9 @@ render() {
                 </div>
                 </div>
             </div>
+            
         </div>
-   ))}
+))}
         
         {this.state.picture.map(item => (
         <div className="container_get1">

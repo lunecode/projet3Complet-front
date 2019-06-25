@@ -31,13 +31,16 @@ render() {
     const { id_comment } = this.state
     return (
     <div className="container_delete">
-        <form onSubmit={this.submitHandler}>
+        {/* <form onSubmit={this.submitHandler}>
             <div className="delete_input">
             id_comment:<input type="text" name="id_comment" value={id_comment} onChange={this.changeHandler} />
             <button type="submit">Submit</button>
             </div>
            
-        </form>
+        </form> */}
+        <div className="commentButton">
+                <button className="buttonComment">VOIR PLUS</button>
+            </div>
     </div>
   )
 }
