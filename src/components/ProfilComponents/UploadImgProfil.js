@@ -10,7 +10,7 @@ class IploadImgProfil extends Component {
   fileUploadHandler =(e)=>{
       e.preventDefault()
       console.log(this.state)
-      axios.post('http://localhost:3000/profil/uploaddufichie', this.state)
+      axios.post('http://localhost:3000/profil/insert_profil', this.state)
         .then(response => {
           console.log(response)
         })
@@ -18,24 +18,37 @@ class IploadImgProfil extends Component {
           console.log(error)
         })  
   }
-
-  changeHandler = (e) => {
-    this.setState({ [e.target.name]: e.target.value })
-  }
   
+handelchange=(e)=>{
+let files=e.target.files;
+let reader=new FileReader();
+reader.readAsDataURL(files[0]);
+reader.onload=(e)=>{
+this.setState({profil_link : e.target.result}, ()=> {
+  console.log("video data",this.state.profil_link)
+})
+}
+}
 
-
+blob2file=(blobData)=> {
+const fd = new FormData();
+fd.set('a', blobData);
+return fd.get('a');
+}
 
   render() {
-
+    const data=this.state.profil_link
 console.log(this.state);
       return (
           <div className="UploadVideo"> 
-  
-         <form method="POST" enctype="multipart/form-data" action="uploaddufichier">
-    <input type="file"  name="profil_link" value={this.state.profil_link} onChange={this.changeHandler}/>
-    <button onSubmit={this.fileUploadHandler}> envoyer </button>
-</form>
+          <input type='file' name="profil_link" 
+                 onChange={this.handelchange}
+              />
+{/* <video preload="" src={`${data}`} type="video/mp4"></video>   */}
+               <img src={`${data}`} width="100%" height="100%" className="img-profil-after" />
+              <button onClick={this.fileUploadHandler}>Télécharger</button> 
+          
+{/* <GetVideo />  */}
           </div>
 
 

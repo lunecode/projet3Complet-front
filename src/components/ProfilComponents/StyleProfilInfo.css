@@ -138,6 +138,7 @@ Grid pour profil info */
 }
 .field-profil-checkbox label{
     display:inline; 
+    margin-right:20px;
 }
 .field-profil-bloc-3{
     float:left;

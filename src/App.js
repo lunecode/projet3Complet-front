@@ -14,7 +14,7 @@ import Home from './screen/Home';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import TestPostVideo from './components/uploadComponents/TestPostVideo';
+
 
 
 

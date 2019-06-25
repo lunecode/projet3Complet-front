@@ -4,16 +4,21 @@ margin-right:40px;
     .imageprofil{
         width:100%;
         height:100%;
-      border-radius:50%;
-     
-    }
+        background:url('https://cdn3.iconfinder.com/data/icons/glyphicon/64/profil-512.png')no-repeat;
+    } 
+        .img-profil-after{
+          border-radius:50%;
+          height: 120px;
+          width:  120px;
+          border:none;
+        }
+    
     input{
       width:110px;
-    
-       
+ 
     }
      button{
-            margin-top:40px; 
+            margin-top:20px; 
             border:1px solid #d3d3d3;
             padding:10px;
             width:120px;
