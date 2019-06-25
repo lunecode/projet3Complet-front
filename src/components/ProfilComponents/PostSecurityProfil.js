@@ -63,15 +63,15 @@ const PostSecurityProfil = (props) => {
               <p>Mettre à jour votre mot de passe</p>
               <div className="mdp-form">
                 <label htmlFor="password" className="field-mdp">Mot de passe actuel</label>
-                <input type="text" name="password" value={props.password} onChange={props.changeHandler} />
+                <input type="password" name="password" value={props.password} onChange={props.changeHandler} />
               </div>
               <div className="mdp-form">
                 <label htmlFor="password_forget" className="field-mdp">Nouveau mot de passe</label>
-                <input type="text" name="password_forget" value={props.password_forget} onChange={props.changeHandler} />
+                <input type="password" name="password_forget" value={props.password_forget} onChange={props.changeHandler} />
               </div>
               <div className="mdp-form">
                 <label htmlFor="password_forget_check" className="field-mdp">Confirmer nouveau mot de passe</label>
-                <input type="text" name="New_password" value={props.New_password} onChange={props.changeHandler} />
+                <input type="password" name="New_password" value={props.New_password} onChange={props.changeHandler} />
               </div>
               <div className="btn-save-security">
                 <button>SAUVEGARDER</button>

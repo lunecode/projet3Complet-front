@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom'
 
 import UploadImgProfil from '../../components/ProfilComponents/UploadImgProfil';
 
+
 const PostProfilInfo = (props) => {
   
   return (
