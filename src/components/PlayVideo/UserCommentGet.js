@@ -42,15 +42,14 @@ render() {
                 <img className="pictureuser" src={Picture} alt= "pictureuser"/>
                 <span>{item.author_comment}  </span>
                 <span>{item.action_date_comment}  </span>
-            <div className="comment">{item.comment}
+                <div className="comment">{item.comment}
             {/* <button></button> */}
-            <div className="editcomment">
-                <img className="editcom" src={EditCom} alt="edit comment" />
+                <div className="editcomment">
+                    <img className="editcom"  alt="" />
+                </div>
+                </div>
             </div>
-                
-            </div>
-            </div>
-            </div>
+        </div>
    ))}
         
         {this.state.picture.map(item => (

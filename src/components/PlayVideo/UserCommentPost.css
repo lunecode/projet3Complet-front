@@ -11,12 +11,13 @@
     margin-bottom: 2%;
     width:100%;
     
-
 }
 
 .myComment{
     width:75%;
     margin-left: 5%;
+   
+
 }
 
 .userComment{
@@ -24,7 +25,7 @@
     border-right: none;
     border-top: none;
     background-color: #F4F4F4;
-    border-bottom: 1px solid gray;
+    border-bottom: 2px solid gray;
 }
 
 .pictureuser{

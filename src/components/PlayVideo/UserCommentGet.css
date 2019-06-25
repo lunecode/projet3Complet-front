@@ -24,16 +24,23 @@
 
 } 
 
-
-
 .editcomment{
     display:flex;
     justify-content: space-between;
-    
+}
+
+.editcomment{
+    width:22px;
+    height:22px;
+    background-image: none;
+}
+
+.editcomment:hover{
+    background-image: url("https://image.noelshack.com/fichiers/2019/26/2/1561451530-edit.png");
 }
 
 /* .editcomment image:hover {
-   
+
 }  */
 
 /* .userComment{
