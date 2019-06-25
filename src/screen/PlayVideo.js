@@ -35,6 +35,9 @@ class PlayVideo extends Component {
         </div>
         <div className="all">
         <AllVideoUser />
+        <div className="commentButtonVideo">
+                <button className="buttonCommentVid">VOIR PLUS</button>
+            </div>
         </div>
         </div>
         {/* <p>Affichage des informations détaillées concernant le road trip</p> */}
