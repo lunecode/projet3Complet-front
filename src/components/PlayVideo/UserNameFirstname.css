@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet');
+
+@import url('https://fonts.googleapis.com/css?family=Lora|Roboto&display=swap" rel="stylesheet');
+
+.container_name{
+    width: 90%;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.username{
+    color: #313F4F;
+    font-size: 18px;
+    font-weight: bold;
+    /* float: right; */
+   
+    font-family: 'Roboto', sans-serif;
+}
