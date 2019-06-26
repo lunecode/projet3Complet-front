@@ -127,7 +127,7 @@ class PostVideo extends Component {
             </div>
 
             <div className="next-div">
-              <button className="next-button" type="button"><NavLink exact to="/uploadInformation"> SUIVANT</NavLink></button>
+            <NavLink exact to="/uploadInformation"><button className="next-button" type="button"> SUIVANT</button></NavLink>
             </div>
 
 

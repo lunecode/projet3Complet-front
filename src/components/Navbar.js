@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import './Navbar.scss'
 import Logo from '../Images-tripitto/Logo/B&W.png';
 import Search from '../Images-tripitto/Icons/Search-White.png';
-import Avatar from '../Images-tripitto/Icon/User/avatar_defaut-1.png';
+import Avatar from '../Images-tripitto/Icon/User/normal.png';
 import Notification from '../Images-tripitto/Icon/Notifications.png';
 
 class Navbar extends Component {

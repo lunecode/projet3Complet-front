@@ -51,31 +51,34 @@ $colorBorder: #1BA2A2;
         width: 100%;
         height: 40%;
     }
+    .item-d .button-footer:hover {
+    opacity: 0.6;
+    }
 }
+
+
 
 .allRightsReserved {
     display: grid;
-    grid-template-columns: 23.5% 1.6% 50% 19% 3% 2%;
+    grid-template-columns: 56% 38% 3% 3%;
     grid-template-rows: 50px;
-    grid-auto-flow: row;
     background-color: $colorbackground; 
     color: white;
     border-block-end: solid #3e5b6e;
     padding-left: 1%;
+    align-items: center;
 
     .love  {
-        margin-top: 17px;
+        position: relative;
+        top: 5px;
     }
 }
 
+.item-c-allRightsReserved {
+    text-align: end;
+    padding-right: 15px;
+}
+
 .item-e-allRightsReserved {
-    margin-top: 15px;
-}
-
-.item-f-allRightsReserved {
-    margin-top: 15px;
-}
-
-.item-d .button-footer:hover {
-    opacity: 0.6;
+    padding-bottom: 8px;
 }

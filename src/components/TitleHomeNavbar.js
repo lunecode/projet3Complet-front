@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { NavLink } from 'react-router-dom';
 
 import './TitleHomeNavbar.scss'
 import fbWhite from '../Images-tripitto/Icon/social/fb_white.png'
@@ -16,18 +15,18 @@ class TitleHomeNavbar extends Component {
                 <h1>PROJETEZ-VOUS DANS VOTRE PROCHAINE DESTINATION</h1>
             </div>
             <div>
-                <NavLink><img className="rsNavbar" src={fbWhite} alt={fbWhite}></img></NavLink>
+                <a href="https://fr-fr.facebook.com" target="_blank noopener noreferrer"><img className="rsNavbar" src={fbWhite} alt={fbWhite}></img></a>
             </div>
             <div>
-            <NavLink><img className="rsNavbar" src={instaWhite} alt={instaWhite}></img></NavLink>
+                <a href="https://www.instagram.com/?hl=fr" target="_blank noopener noreferrer"><img className="rsNavbar" src={instaWhite} alt={instaWhite}></img></a>
             </div>
             <div>
-            <NavLink><img className="rsNavbar" src={YoutubeWhite} alt={YoutubeWhite}></img></NavLink>
+                <a href="https://www.youtube.com/" target="_blank noopener noreferrer"><img className="rsNavbar" src={YoutubeWhite} alt={YoutubeWhite}></img></a>
             </div>
             <div>
-            <NavLink><img className="rsNavbar" src={share} alt={share}></img></NavLink>
+            <a href="https://fr-fr.facebook.com" target="_blank noopener noreferrer"><img className="rsNavbar" src={share} alt={share}></img></a>
             </div>
-        </div>    
+        </div>   
         </>
         )
     }
