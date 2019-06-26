@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 
 import Lock from "../Images-tripitto/Icon/Lock.png"
+import ButtonFull from "../Images-tripitto/Buttons/white/Full.png"
+import ButtonGoogle from "../Images-tripitto/Buttons/Colored/Google.png"
+
 
 class Modal extends Component {
 
@@ -32,6 +35,20 @@ class Modal extends Component {
                         </div>
                         <div>
                             <p className="lockModal"><img src={Lock} alt=""></img>Mot de passe oublié</p>
+                        </div>
+                    </div>
+                    <div className="containerIs-open4">
+                        <div>
+                            <img src={ButtonFull} alt="button connexion"></img>
+                        </div>
+                        <div>
+                            <p>ou</p>
+                        </div>
+                        <div>
+                            <img src={ButtonGoogle} alt="button google connexion"></img>
+                        </div>
+                        <div className="register">
+                            <p>Vous n'avez pas de compte ? <span>s'inscrire</span></p>
                         </div>
                     </div>
                 </div>
