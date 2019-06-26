@@ -3,13 +3,14 @@ const initState={
    count:0 ,
    Asma:"salut"
 }
+
 //je l'attribut a la state qui va être importer
 const reducer =(state=initState, action)=>{
     if(action.type=='Add'){
-        return {Asma: state.Asma="malika"}
+        return {...state, Asma: state.Asma="malika"}
     }
     if(action.type=='delete'){
-        return {Asma:state.count="saadiya" }
+        return {...state, Asma:state.count="saadiya" }
     }
     return state;
 

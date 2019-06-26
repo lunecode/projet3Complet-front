@@ -1,8 +1,7 @@
 import React from 'react';
 import Idea from "../../Images-tripitto/Icon/Idea.png"
-import './StyleProfilInfo.css'
+import './PostProfilInfo.css'
 import './AutoriseContact.scss'
-
 
 const AutoriseContact=(props)=>{
         return (

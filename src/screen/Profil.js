@@ -6,7 +6,7 @@ import PostBioProfil from '../components/ProfilComponents/PostBioProfil';
 import PostIngedients from '../components/ProfilComponents/PostIngedients';
 import Socialprofil from '../components/ProfilComponents/Socialprofil';
 import "./Profil.scss"
-import "../components/ProfilComponents/StyleProfilInfo.css"
+import "../components/ProfilComponents/PostProfilInfo.css"
 import axios from "axios"
 
 

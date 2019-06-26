@@ -1,5 +1,5 @@
 import React from 'react'
-import './StyleProfilInfo.css'
+import './PostProfilInfo.css'
 import { NavLink } from 'react-router-dom'
 
 import UploadImgProfil from '../../components/ProfilComponents/UploadImgProfil.js';

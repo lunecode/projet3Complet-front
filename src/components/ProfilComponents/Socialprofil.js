@@ -4,7 +4,7 @@ import iconInsta from '../../Images-tripitto/Icon/social/icon-insta.png'
 import iconYoutube from '../../Images-tripitto/Icon/social/icon-youtube.png'
 import iconIdea from '../../Images-tripitto/Icon/Idea.png'
 import iconAutreLien from '../../Images-tripitto/Icon/social/icon-autre-lien.png'
-import './StyleProfilInfo.css'
+import './PostProfilInfo.css'
 
 
 const Socialprofil = (props) => {
