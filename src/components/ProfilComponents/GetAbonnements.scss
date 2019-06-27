@@ -1,6 +1,6 @@
 .following-block{
     width: 70%;
-    padding-bottom:20vh;
+    padding-bottom:16vh;
     div{
         padding-left:20px;
         h2{
@@ -13,6 +13,20 @@
             flex-direction: row;
             .tri-following{
                  width: 100px;
+                 &:hover .filter-menu{
+                     display: block;
+                 }
+                 .filter-menu{
+                    padding: 0;
+                    margin: 0;
+                    list-style: none;
+                    display:none;
+                    width: 200px;
+                    background-color:white;
+                    li{
+                        padding:10px;
+                    }
+                 }
             }
             .search-bar-following{
                 padding-top:15px;
@@ -106,5 +120,13 @@
       
    
         }
+    }
+    .bloc-plus{
+        text-align:center;
+        margin-top:20px;
+          button{
+              background:none;
+              border:none;
+          }
     }
 }

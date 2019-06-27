@@ -13,21 +13,20 @@ import image4 from '../../Images-tripitto/iconAbonnements/img-following-4.jpg'
 import image5 from '../../Images-tripitto/iconAbonnements/img-following-5.jpg'
 import iconSearch from '../../Images-tripitto/Icon/TRAILING ICON.png'
 import iconPlus from '../../Images-tripitto/Icon/Plus.png'
-
 import iconArrow from '../../Images-tripitto/iconAbonnements/icon-arrow.png'
 
-class GetAbonnements extends Component {
+class GetFollower extends Component {
     state = {
-        Following: [],
+        Follower: [],
     };
 
-    getFollowing = async () => {
-        const res = await axios.get('http://localhost:3000/following/get_following')
-        this.setState({ Following: res.data })
-        console.log(this.state.Following)
+    getFollower = async () => {
+        const res = await axios.get('http://localhost:3000/following/get_follower')
+        this.setState({ Follower: res.data })
+        console.log(this.state.Follower)
     }
     componentDidMount() {
-        this.getFollowing()
+        this.getFollower()
     }
 
     render() {
@@ -87,18 +86,18 @@ class GetAbonnements extends Component {
                         </div>
                         <form className="following-block">
                             <div>
-                                <h2>Abonnements (35)</h2>
+                                <h2>Abonnés (129)</h2>
                                 <div className="search-following">
-                                    <p className='tri-following'>Trier par 
+                                    <p className='tri-following'>Trier par
                                     <ul class='filter-menu'>
                                     <li>Date d'abonnement</li>
                                     <li>Nom</li>
                                     </ul>
-                                    </p>
+                                     </p>
                                     <button><img src={iconArrow} alt='icon fleche' width="20px" height="20px"/></button>
                                     <div className='search-bar-following'>
                                         <button type='submit'><img src={iconSearch} alt='icon search' /></button>
-                                        <input type="text" name="" value="" placeholder="Retrouver un abonnement" />
+                                        <input type="text" name="" value="" placeholder="Retrouver un abonné" />
 
                                     </div>
                                 </div>
@@ -108,11 +107,11 @@ class GetAbonnements extends Component {
                                             <img src={image2} alt='profilpicture 2' />
                                         </div>
                                         <div>
-                                            <h3>Ethan Evans</h3>
+                                            <h3>Jeremias del Pozo</h3>
 
                                             <div>
                                                 <p>6 videos</p>
-                                                <p>Vous êtes abonné depuis 25 jours</p>
+                                                <p>Abonné a vos aventures depuis 27 jours</p>
                                             </div>
                                         </div>
                                         <div>
@@ -124,11 +123,11 @@ class GetAbonnements extends Component {
                                             <img src={image1} alt='profilpicture 1' />
                                         </div>
                                         <div>
-                                            <h3>Malin Quist</h3>
+                                            <h3>Alicia Stinger</h3>
 
                                             <div>
                                                 <p>6 videos</p>
-                                                <p>Vous êtes abonné depuis 25 jours</p>
+                                                <p>Abonné a vos aventures depuis 27 jours</p>
                                             </div>
                                         </div>
                                         <div>
@@ -144,7 +143,7 @@ class GetAbonnements extends Component {
 
                                             <div>
                                                 <p>6 videos</p>
-                                                <p>Vous êtes abonné depuis 25 jours</p>
+                                                <p>Abonné a vos aventures depuis 27 jours</p>
                                             </div>
                                         </div>
                                         <div>
@@ -156,11 +155,11 @@ class GetAbonnements extends Component {
                                             <img src={image4} alt='profilpicture 4' />
                                         </div>
                                         <div>
-                                            <h3>Faadhi Al Rahman</h3>
+                                            <h3>Daisy Murphy</h3>
 
                                             <div>
                                                 <p>6 videos</p>
-                                                <p>Vous êtes abonné depuis 25 jours</p>
+                                                <p>Abonné a vos aventures depuis 27 jours</p>
                                             </div>
                                         </div>
                                         <div>
@@ -176,17 +175,18 @@ class GetAbonnements extends Component {
 
                                             <div>
                                                 <p>6 videos</p>
-                                                <p>Vous êtes abonné depuis 25 jours</p>
+                                                <p>Abonné a vos aventures depuis 27 jours</p>
                                             </div>
                                         </div>
                                         <div>
                                             <button>Abonné</button>
                                         </div>
                                     </div>
-                                    <div className='bloc-plus'>
-                                <button><img src={iconPlus} /></button>
-                                  </div>     
+                                           
                                 </div>
+                            </div>
+                            <div className='bloc-plus'>
+                                <button><img src={iconPlus} /></button>
                             </div>
                         </form>
                     </div>
@@ -197,4 +197,4 @@ class GetAbonnements extends Component {
     }
 }
 
-export default GetAbonnements;
+export default GetFollower;

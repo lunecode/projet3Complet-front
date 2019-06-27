@@ -8,6 +8,7 @@ import UploadVideo from './screen/UploadPage/UploadVideo';
 import UploadTravelStep from './screen/UploadPage/UploadTravelStep';
 import Notifications from './screen/Notifications'
 import Abonnements from './screen/Abonnements'
+import Abonne from './screen/Abonne'
 // import ProfilDescription from './screen/ProfilDescription/ProfilDescription';
 import Home from './screen/Home';
 // import PlayVideo from './screen/PlayVideo';
@@ -36,6 +37,7 @@ class App extends Component {
             <Route path="/uploadInformation" component={UploadInformation} ></Route>
             <Route path="/uploadTravelStep" component={UploadTravelStep} ></Route>
             <Route path="/Abonnements" component={Abonnements} ></Route>
+            <Route path="/Abonnés" component={Abonne} ></Route>
             <Route component={Error}></Route>
           </Switch>
           <Footer />
