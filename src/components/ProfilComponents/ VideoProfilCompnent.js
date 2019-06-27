@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import YouTube from 'react-youtube';
 import { NavLink } from 'react-router-dom'
+import iconSearch from '../../Images-tripitto/Icon/TRAILING ICON.png'
+
 
 class  VideoProfilCompnent extends Component {
     state = {
@@ -26,7 +28,8 @@ class  VideoProfilCompnent extends Component {
         }
       };
         return (
-            <div>
+
+<div className="VideoProfil">
   <div className="membres-profil">
         <img src="https://images.pexels.com/photos/814499/pexels-photo-814499.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500" alt="pictures profil" />
         <div className="membres-profil-detail">
@@ -68,12 +71,24 @@ class  VideoProfilCompnent extends Component {
             </li>
           </ul>
         </div>
-        
+
+        <div><h3>Video(5)</h3></div>
+
+       <div className="body"> <div className="countainer"><input type="text" maxlength= "12" placeholder="Search..." class="searchbar"/>
+  <img src="https://images-na.ssl-images-amazon.com/images/I/41gYkruZM2L.png" alt="Magnifying Glass" className="button"></img>
+   </div>
+</div>
+
         {this.state.videos.map(item => (
         <div className="container_video">
         <div key={item.id_general_video}>
           <div className="video_user">
-            <YouTube  videoId={item.video_link} opts={opts} onReady={this._onReady}/>
+            <YouTube  videoId={item.video_link} opts={opts} onReady={this._onReady}
+            width="320px" height="100px"/>
+          </div>
+          <div className="video_user">
+            <YouTube  videoId={item.video_link} opts={opts} onReady={this._onReady} 
+            width="320" height="240"/>
           </div>
           <div className="video_user">
             <YouTube  videoId={item.video_link} opts={opts} onReady={this._onReady}/>
@@ -84,16 +99,11 @@ class  VideoProfilCompnent extends Component {
           <div className="video_user">
             <YouTube  videoId={item.video_link} opts={opts} onReady={this._onReady}/>
           </div>
-          <div className="video_user">
-            <YouTube  videoId={item.video_link} opts={opts} onReady={this._onReady}/>
-          </div>
-          
         </div>
-
-        </div>
+     </div>
         ))}
-    )
-    }
+   
+   
     </div>
             </div>
         );
