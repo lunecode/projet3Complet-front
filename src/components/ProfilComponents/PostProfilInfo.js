@@ -34,7 +34,6 @@ const PostProfilInfo = (props) => {
             </li>
             <li>
               <NavLink
-
                 to="/Abonnés" exact >Abonnés</NavLink>
             </li>
             <li>

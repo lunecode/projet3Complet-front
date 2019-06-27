@@ -1,0 +1,150 @@
+.notification-block{
+    width: 70%;
+    padding-bottom:20vh;
+    div{
+        padding-left:20px;
+    
+        h2{
+            margin:0 20px;
+            font-size:22px;
+            padding-bottom:30px;
+        }
+        .bloc-langage-pref{
+            display: flex;
+            flex-direction: row;
+            .title-language-pref{
+                    width: 390px;
+            }
+            .field-language{
+                padding-top:15px;
+                input{
+                    margin-left:20px;
+                }
+            }
+           
+        }
+        .bloc-notifications{
+            p{
+                font-size:20px;
+                padding-bottom:16px;
+            }
+            h4{
+            font-size:18px;
+            }
+            .bloc-notifications-item{
+                display:flex;
+                flex-direction:row;
+                padding-left:0;
+                h3{
+                    font-size:15px;
+                    
+                }
+                button switch
+                .switch{
+                    position: relative;
+                    display: inline-block;
+                    width: 60px;
+                    height: 34px;
+                    right:453px;
+                    top:9px;
+                    margin-left: auto;
+                    input{
+                        opacity: 0;
+                        width: 0;
+                        height: 0;
+                        &:checked + .slider {
+                            background-color: #30b1ce;
+                            &:before{
+                                -webkit-transform: translateX(26px);
+                                -ms-transform: translateX(26px);
+                                transform: translateX(26px);
+                            }
+                          }
+                    }
+                 
+                }
+                .slider{
+                    position: absolute;
+                    cursor: pointer;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: #ccc;
+                    -webkit-transition: .4s;
+                    transition: .4s;
+                    
+                    &:before{
+                        position: absolute;
+                        content: "";
+                        height: 26px;
+                        width: 26px;
+                        left: 4px;
+                        bottom: 4px;
+                        background-color: white;
+                        -webkit-transition: .4s;
+                        transition: .4s;
+                    }
+                }
+                
+            }
+            .notification_team{
+             padding-left:0;
+               h4{
+                font-size:18px;
+                padding-bottom:10px;
+               }
+                div{
+                    display: flex;
+                    flex-direction: row;
+                    padding-left:0;
+
+                    .text-newsletter{
+                 
+                        position: relative;
+                        top:38px;
+                        right:160px;
+                      
+                        img{
+                            width: 20px;
+                            height: 40%;
+                        }
+                        p{
+                            width: 540px;
+                            font-size:14px;
+                            margin-top:0;
+                           
+                        }
+                    }
+                    h3{
+                        
+                        font-size:15px;
+                    
+                    }
+                    .switch{
+                        position: relative;
+                        display: inline-block;
+                        width: 60px;
+                        height: 34px;
+                        right:453px;
+                        top:14px;
+                        margin-left: auto;
+                    }
+                }
+            }
+            .btn-notification{
+                text-align: center;
+                button{
+                padding: 10px;
+                width: 150px;
+                background: linear-gradient(to right, #3ed8dd 37%,#39cad7 53%,#35c1d4 100%);
+                color:white;
+                border:none;
+                position: relative;
+                top:70px;
+                left:100px;
+                }
+            }
+        }
+    }
+}

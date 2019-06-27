@@ -53,8 +53,7 @@ class IploadImgProfil extends Component {
                   />
                    <img className="imageprofil" src={this.video_link} alt=""/><img src={`${data}`} width="100%" height="100%" className="img-profil-after" />
                   <button onClick={this.fileUploadHandler}>Télécharger</button> 
-              
-
+            
               </div>
   
   
