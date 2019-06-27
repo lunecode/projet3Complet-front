@@ -4,6 +4,17 @@ import { NavLink } from 'react-router-dom'
 
 import './PostVideo.css'
 
+
+
+
+// UPLOAD PAGE 1 / VIDEO AND DESCRIPTION
+// ALLOW TO INSERT DATA IN "GENERAL_VIDEO" TABLE
+// TEST OK
+
+
+
+import './PostVideo.css'
+
 import UploadIcon from '../../Images-tripitto/Icon/Upload-Video.png'
 import CoverIcon from '../../Images-tripitto/Icon/Upload Image.png'
 

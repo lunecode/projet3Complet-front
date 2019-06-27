@@ -39,17 +39,24 @@ class IploadImgProfil extends Component {
     //permet d'afficher la photo
     const data = this.state.profil_link
     console.log(this.state);
-    return (
-      <div className="UploadVideo">
-        <input type='file' name="profil_link"
-          onChange={this.handelchange}
-        />
-        <img src={`${data}`} width="100%" height="100%" className="img-profil-after" />
-        <button onClick={this.fileUploadHandler}>Télécharger</button>
-      </div>
-    )
-  }
-}
+          return (
+              <div className="UploadVideo"> 
+              <input type='file' name="video_link"
+              
+                  onChange={this.handelchange}
+                  />
+                   <img className="imageprofil" src={this.video_link} alt=""/><img src={`${data}`} width="100%" height="100%" className="img-profil-after" />
+                  <button onClick={this.fileUploadHandler}>Télécharger</button> 
+            
+              </div>
+  
+  
+          )
+  
+         }   
+   }
+  
+  
 
 
 export default IploadImgProfil;

@@ -127,12 +127,11 @@ class Profil extends Component {
     return (
       <div className="pageprofil" >
 
-        <form  onSubmit={this.submitHandler}>
+        <form  onsSubmit={this.fileUploadHandler}>
           <PostProfilInfo
             {...this.state}
             handleCheckbox={this.handleCheckbox}
-            changeHandler={this.changeHandler}
-          
+            changeHandler={this.changeHandler}       
           />
 
           <PostEnumProfil
@@ -154,7 +153,7 @@ class Profil extends Component {
           <PostIngedients
             {...this.state}
             Enum1={this.Enum1}
-            Enum2={this.Enumé}
+            Enum2={this.Enum2}
             Enum3={this.Enum3}
             Enum4={this.Enum4}
             Enum5={this.Enum5}

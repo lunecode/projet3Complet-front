@@ -3,11 +3,14 @@ import axios from 'axios'
 import YouTube from 'react-youtube';
 import { NavLink } from 'react-router-dom'
 import iconSearch from '../../Images-tripitto/Icon/TRAILING ICON.png'
-
+import iconArrow from '../../Images-tripitto/iconAbonnements/icon-arrow.png'
+import "./VideoProfilCompnent.scss"
 
 class  VideoProfilCompnent extends Component {
+
     state = {
         videos: [],
+   
       };
       componentDidMount() {
         this.getVideo()
@@ -23,65 +26,97 @@ class  VideoProfilCompnent extends Component {
     const opts = {
         height: '490',
         width: '850',
-        playerVars: { // https://developers.google.com/youtube/player_parameters
+        playerVars: { 
           autoplay: 0
         }
       };
+      const { options, value } = this.state;
         return (
 
-<div className="VideoProfil">
-  <div className="membres-profil">
-        <img src="https://images.pexels.com/photos/814499/pexels-photo-814499.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500" alt="pictures profil" />
-        <div className="membres-profil-detail">
-          <h4>Julien Mbappé</h4>
-          <p>Membre depuis le 20/02/2019</p>
-        </div>
+<div className="VideoProfilCompnent">
+      <div className="membres-profil">
+      <img src="https://images.pexels.com/photos/814499/pexels-photo-814499.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500" alt="pictures profil" />
+      <div className="membres-profil-detail">
+      <h4>Julien Mbappé</h4>
+      <p>Membre depuis le 20/02/2019</p>
       </div>
-      <div className='position-bloc'>
-        <div className='profil-menu'>
-          <ul>
+      </div>
+
+    <div className='position-bloc'>
+       <div className='profil-menu'>
+            <ul>
             <li>
-              <NavLink
-                className="nav"
-                to="/Profil" exact>Profil</NavLink>
+            <NavLink
+            className="nav"
+            to="/Profil" exact>Profil</NavLink>
             </li>
             <li>
-              <NavLink
-                to="/Video" exact >Video</NavLink>
+            <NavLink
+            to="/Video" exact >Video</NavLink>
             </li>
             <li>
-              <NavLink
-                to="/Abonnements" exact >Abonnements</NavLink>
+            <NavLink
+            to="/Abonnements" exact >Abonnements</NavLink>
             </li>
             <li>
-              <NavLink
-                to="/Abonnés" exact >Abonnés</NavLink>
-               </li>
-               <li>
-              <NavLink
-                to="/Notifications" exact >Notifications</NavLink>
+            <NavLink
+            to="/Abonnés" exact >Abonnés</NavLink>
             </li>
             <li>
-              <NavLink
-                to="/Security" exact >Sécurité</NavLink>
+            <NavLink
+            to="/Notifications" exact >Notifications</NavLink>
             </li>
             <li>
-              <NavLink
-                to="/Mettre_à_niveau" exact >Mettre à niveau</NavLink>
+            <NavLink
+            to="/Security" exact >Sécurité</NavLink>
             </li>
-          </ul>
+            <li>
+            <NavLink
+            to="/Mettre_à_niveau" exact >Mettre à niveau</NavLink>
+            </li>
+            </ul>
         </div>
 
-        <div><h3>Video(5)</h3></div>
+        {/*** les video *****/}
+        {/* {this.state.videos.map(item => ( */}
+        <div className="grid-profil-info">
+  <div><h3>Video(5)</h3></div>
+   <div className="filter">   
+       <select class="w3-select" name="option">
+    <option value="" disabled selected>triez par</option>
+    <option value="1">Date de publication'</option>
+    <option value="2">Status</option>
+    <option value="3">Popularité</option>
+    <option value="3">Titre</option>
+  </select>
+       </div> 
 
-       <div className="body"> <div className="countainer"><input type="text" maxlength= "12" placeholder="Search..." class="searchbar"/>
-  <img src="https://images-na.ssl-images-amazon.com/images/I/41gYkruZM2L.png" alt="Magnifying Glass" className="button"></img>
-   </div>
+       <div className="wrap">
+       <div  className="A" id="cover">
+  <form>
+    <div className="global">
+     
+   <div className="searchBar"> 
+   <input className="inputAsma" type="text" name="city"
+    placeholder="Search City..."/> 
+
+
+     <span className="buttonSearsh" type="submit">
+          <img  src={iconArrow} alt='icon fleche' width="20px" height="20px"/>
+        </span>
+    </div>
+      <div className="searchBar" id="s-cover">
+      
+        
+      </div>
+    </div>
+  </form>
+</div>
 </div>
 
-        {this.state.videos.map(item => (
-        <div className="container_video">
-        <div key={item.id_general_video}>
+     
+
+        {/* <div key={item.id_general_video}>
           <div className="video_user">
             <YouTube  videoId={item.video_link} opts={opts} onReady={this._onReady}
             width="320px" height="100px"/>
@@ -101,9 +136,9 @@ class  VideoProfilCompnent extends Component {
           </div>
         </div>
      </div>
-        ))}
-   
-   
+        ))} */}
+        {/* ********** */}
+   </div>
     </div>
             </div>
         );
