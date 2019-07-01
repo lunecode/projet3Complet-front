@@ -19,8 +19,6 @@
        
                         }
 
-           
-
         }
 
   /*Resize the wrap to see the search bar change!*/
@@ -60,10 +58,41 @@
                        
                      }
 
-                 }  
+                 } 
+                 
                 }
                   
-                    
+                    .infos{
+                   display:flex;
+                   flex-direction: row;
+                     
+                     .A{
+                      padding-right:6vh 
+                     }
+                     .B{
+                      padding-right:6vh 
+                     }
+                     .C{
+                      margin-top: -1vh;
+                     } 
+                   
+                 
+                 } 
+                 .icons_video{
+                    border: 1px solid rgb(221, 221, 221);
+                   .img1{
+                      padding-right:3vh ;
+                   }
+                   .img2{
+                    padding-right:3vh ;
+                 }
+                 .img3{
+                  padding-right:3vh ;
+                }
+                 
+                 
+                  
+                 }
                  
                 }
 

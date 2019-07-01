@@ -5,12 +5,19 @@ import { NavLink } from 'react-router-dom'
 import iconSearch from '../../Images-tripitto/Icon/TRAILING ICON.png'
 import iconArrow from '../../Images-tripitto/iconAbonnements/icon-arrow.png'
 import "./VideoProfilCompnent.scss"
+import Partager from '../../Images-tripitto/Icon_Vidéo/Partager.png'
+import Delete from '../../Images-tripitto/Icon_Vidéo/Delete.png'
+import modification from '../../Images-tripitto/Icon_Vidéo/modification.png'
+import Vue from '../../Images-tripitto/Icon_Vidéo/Vue.png'
+import pourcentage from '../../Images-tripitto/Icon_Vidéo/pourcentage.png'
 
 class  VideoProfilCompnent extends Component {
 
     state = {
         videos: [],
-   
+        vue:0,
+        vu:""
+
       };
       componentDidMount() {
         this.getVideo()
@@ -21,6 +28,20 @@ class  VideoProfilCompnent extends Component {
         this.setState({ videos: res.data })
         console.log(this.state.videos)
       }
+
+  changeHandler = (e) => {
+    this.setState({ [e.target.name]: e.target.value })
+  }
+
+
+
+      getVue= (e)=>{
+      e.preventDefault()
+      this.setState({
+      vue:this.state.vue + 1
+      })
+      }
+    
     render() {
 // const { filterVideo } = this.props;
     const opts = {
@@ -31,6 +52,7 @@ class  VideoProfilCompnent extends Component {
         }
       };
       const { options, value } = this.state;
+      console.log(this.state.vu);
         return (
 
 <div className="VideoProfilCompnent">
@@ -76,9 +98,8 @@ class  VideoProfilCompnent extends Component {
             </li>
             </ul>
         </div>
-
         {/*** les video *****/}
-      
+    
         <div className="grid-profil-info">
   <div><h3>Video(5)</h3></div>
    <div className="filter">   
@@ -96,18 +117,14 @@ class  VideoProfilCompnent extends Component {
             <button type='submit'><img src={iconSearch} alt='icon search' /></button>
             <input type="text" name="" value="" placeholder="Retrouver un abonné" />
         </div>
-</div>
-</div>
-
-
+     </div>
+  </div>
  </div>
-
-
-
+ 
 {/* /les videdo  */}
 <div className="list_videos">
 {this.state.videos.map(item => (
-   <div key={item.id_general_video}>
+   <div key={item.id_general_video} onClick={this.getVue} >
           <div className="video_user1">
             <div className="status_durée">
             <div className="status1">
@@ -117,12 +134,22 @@ class  VideoProfilCompnent extends Component {
             <p className="durée">12:45</p>
             </div>
             </div>
-            
             <YouTube className="V" videoId={item.video_link} opts={opts}  onReady={this._onReady} />
             <h3>Dans es profondeur du canyon</h3>
-            <h4>USA</h4>
-            <p>0 VUES</p>
-            <p>Il y a un jour</p>
+
+           <div className="infos">
+            <p className="A"> {this.state.vue} VUES</p>
+            <p className="B">Il y a un jour</p>
+            <p className="C"> <img src={pourcentage} alt=""/></p>
+            </div>
+
+            <div className="icons_video"> 
+
+            <img  className="img1" src={modification} alt=""/> 
+            <img className="img2"src={Partager} alt=""/>  
+            <img className="img3"src={Vue} alt=""/> 
+            <img className="img4"src={Delete} alt=""/> 
+            </div>
           </div>
           
         </div> 

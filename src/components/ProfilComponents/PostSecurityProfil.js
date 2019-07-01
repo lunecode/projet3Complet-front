@@ -84,7 +84,7 @@ const PostSecurityProfil = (props) => {
         <h2>Cookies</h2>
         <p>J'accepte l'utlisation de cookies non essentiels.</p>
         <div className="cookiespolicy">
-          <p><img src={iconIdea} alt="icon conseil" /></p>
+          <p> </p>
           <a href="linkcookiestripitto" className="linkcookies">Politiques de cookies tripitto</a>
           <label class="switch">
             <input type="checkbox" />
