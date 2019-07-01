@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import { NavLink } from 'react-router-dom';
 import './GetAbonnements.scss'
-
-
-
 // image
 import image1 from '../../Images-tripitto/iconAbonnements/img-following-1.jpg'
 import image2 from '../../Images-tripitto/iconAbonnements/img-following-2.jpg'

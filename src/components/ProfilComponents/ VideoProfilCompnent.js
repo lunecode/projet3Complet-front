@@ -78,7 +78,7 @@ class  VideoProfilCompnent extends Component {
         </div>
 
         {/*** les video *****/}
-        {/* {this.state.videos.map(item => ( */}
+      
         <div className="grid-profil-info">
   <div><h3>Video(5)</h3></div>
    <div className="filter">   
@@ -91,56 +91,52 @@ class  VideoProfilCompnent extends Component {
   </select>
        </div> 
 
-       <div className="wrap">
-       <div  className="A" id="cover">
-  <form>
-    <div className="global">
-     
-   <div className="searchBar"> 
-   <input className="inputAsma" type="text" name="city"
-    placeholder="Search City..."/> 
-
-
-     <span className="buttonSearsh" type="submit">
-          <img  src={iconArrow} alt='icon fleche' width="20px" height="20px"/>
-        </span>
-    </div>
-      <div className="searchBar" id="s-cover">
-      
-        
-      </div>
-    </div>
-  </form>
-</div>
-</div>
-
-     
-
-        {/* <div key={item.id_general_video}>
-          <div className="video_user">
-            <YouTube  videoId={item.video_link} opts={opts} onReady={this._onReady}
-            width="320px" height="100px"/>
-          </div>
-          <div className="video_user">
-            <YouTube  videoId={item.video_link} opts={opts} onReady={this._onReady} 
-            width="320" height="240"/>
-          </div>
-          <div className="video_user">
-            <YouTube  videoId={item.video_link} opts={opts} onReady={this._onReady}/>
-          </div>
-          <div className="video_user">
-            <YouTube  videoId={item.video_link} opts={opts} onReady={this._onReady}/>
-          </div>
-          <div className="video_user">
-            <YouTube  videoId={item.video_link} opts={opts} onReady={this._onReady}/>
-          </div>
+       <div className="searsh">
+        <div className='search-bar-following'>
+            <button type='submit'><img src={iconSearch} alt='icon search' /></button>
+            <input type="text" name="" value="" placeholder="Retrouver un abonné" />
         </div>
-     </div>
-        ))} */}
-        {/* ********** */}
-   </div>
-    </div>
+</div>
+</div>
+
+
+ </div>
+
+
+
+{/* /les videdo  */}
+<div className="list_videos">
+{this.state.videos.map(item => (
+   <div key={item.id_general_video}>
+          <div className="video_user1">
+            <div className="status_durée">
+            <div className="status1">
+            <p className="status">En attente d'approbation</p>
             </div>
+            <div className="durée1" >
+            <p className="durée">12:45</p>
+            </div>
+            </div>
+            
+            <YouTube className="V" videoId={item.video_link} opts={opts}  onReady={this._onReady} />
+            <h3>Dans es profondeur du canyon</h3>
+            <h4>USA</h4>
+            <p>0 VUES</p>
+            <p>Il y a un jour</p>
+          </div>
+          
+        </div> 
+         ))} 
+     </div>
+      
+
+  
+
+
+
+
+
+    </div>
         );
     }
 }
