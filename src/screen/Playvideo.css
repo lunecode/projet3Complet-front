@@ -27,20 +27,21 @@
 }
 
 .accomodation{
-   width: 100%;
+    width: 100%;
     
     
 }
 
 .buttonCommentVid{
     background-color: white;
-    width: 100%;
-    padding:2%;
+    width: 150px;
+    padding:4%;
     text-align: center;
     color:#59cce0;
-    font-size: 12px;
-    font-weight: 500;
+    font-size: 14px;
+    /* font-weight: 500; */
     border: 2px solid #59cce0;
+    margin-left: 6%;;
 }
 
 .commentButtonVideo{
@@ -51,11 +52,11 @@
 
 .buttonCommentVid:hover{
     background-color:#59cce0;
-    width: 100%;
-    padding:2%;
+    width: 150px;
+    padding:4%;
     text-align: center;
     color:white;
-    font-size: 12px;
-    font-weight: 500;
+    font-size: 14px;
+    /* font-weight: 500; */
     border: 2px solid #59cce0;
 }
