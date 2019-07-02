@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import './UserCommentGet.css';
 import Picture from '../../Images-tripitto/Icon/User/hover.png';
-// import EditCom from '../../Images-tripitto/Icon/Edit.png';
+import EditCom from '../../Images-tripitto/Icon/Edit.png';
 
 
 
@@ -37,7 +37,7 @@ render() {
     <>
         {this.state.comment.map(item => (
             <div className="container_get">
-                <div key={item.id_comment}>
+                <div  key={item.id_comment}>
             {/* <li>{item.profile_picture}</li> */}
                 <img className="pictureuser" src={Picture} alt= "pictureuser"/>
                 <span>{item.author_comment}  </span>
@@ -45,7 +45,7 @@ render() {
                 <div className="comment">{item.comment}
             {/* <button></button> */}
                 <div className="editcomment">
-                    <img className="editcom"  alt="" />
+                    <img className="editcom" src={EditCom} alt="pic modify" />
                 </div>
                 </div>
             </div>

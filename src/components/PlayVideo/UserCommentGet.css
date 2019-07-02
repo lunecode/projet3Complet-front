@@ -20,17 +20,17 @@
 }
 
 .comment{
-    width:40%; 
+    width:100%; 
     display: flex;
     justify-content: space-between;
     /* border-bottom: 2px solid lightgray; */
 
 } 
 
-.editcomment{
+/* .editcomment{
     display:flex;
     justify-content: space-between;
-}
+} */
 
 .editcomment{
     width:22px;
@@ -40,11 +40,16 @@
 
 .editcomment:hover{
     background-image: url("https://image.noelshack.com/fichiers/2019/26/2/1561451530-edit.png");
+  
 }
 
-/* .editcomment image:hover {
+.editcom {
+    display: none;
+} 
 
-}  */
+.editcom:hover{
+    width:100%;
+}
 
 /* .userComment{
     width:100%;
