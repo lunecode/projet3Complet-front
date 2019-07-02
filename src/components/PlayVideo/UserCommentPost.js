@@ -38,12 +38,12 @@ render() {
             <div className="myComment">
             <img className="pictureuser" src={Picture} alt= "pictureuser"/>
             <div className="comment">
-            <textarea className="userComment" type='text' name="comment" value={comment} onChange={this.changeHandler} placeholder="Ajouter un commentaire..." rows="1" cols="80"/>
+            <textarea className="userComment" type='text' name="comment" value={comment} onChange={this.changeHandler} placeholder="Ajouter un commentaire..." rows="(" cols="80"/>
             </div>
             <div>
-            {/* profil_id_profil:<input type="text" name="profil_id_profil" value={profil_id_profil} onChange={this.changeHandler} />
+            profil_id_profil:<input type="text" name="profil_id_profil" value={profil_id_profil} onChange={this.changeHandler} />
             popularity_id_popularity:<input type="text" name="popularity_id_popularity" value={popularity_id_popularity} onChange={this.changeHandler} />
-            general_video_id_general_video:<input type="text" name="general_video_id_general_video" value={general_video_id_general_video} onChange={this.changeHandler} /> */}
+            general_video_id_general_video:<input type="text" name="general_video_id_general_video" value={general_video_id_general_video} onChange={this.changeHandler} />
             </div>
             <button type="submit">Submit</button>
             </div>

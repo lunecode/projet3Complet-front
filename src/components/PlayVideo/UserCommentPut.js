@@ -35,7 +35,7 @@ render() {
     return (
     <div className="container_put">
         <form onSubmit={this.submitHandler}>
-            {/* <div className="comment_put">
+            <div className="comment_put">
             <div>
                 <input type='text' name="comment" value={comment} onChange={this.changeHandler} />
             </div>
@@ -46,7 +46,7 @@ render() {
             general_video_id_general_video:<input type="text" name="general_video_id_general_video" value={general_video_id_general_video} onChange={this.changeHandler} />
             </div>
             <button type="submit">Submit</button>
-            </div> */}
+            </div>
         </form>
     </div>
   )
