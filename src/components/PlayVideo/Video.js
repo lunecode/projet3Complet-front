@@ -58,7 +58,7 @@ render() {
           </div>
           <div className="video_info">
             <div className="title_video">{item.video_title} <span><img className="play" src={Play} alt="play"/>{item.nb_views}</span><span className="number_tips"><img className="numberTips" src={NumberTips} alt="number tips"/>{item.number_tips}</span>
-            <div><button className="buttonCommentVid">MODIFIER</button>
+            <div><button className="buttonCommentVideo">MODIFIER</button>
             </div>
             </div>
             {this.state.popularity.map(item => (
