@@ -11,7 +11,7 @@ class Modal extends Component {
         const { isOpen, onClose } = this.props;
         return (
             <>
-                <div className={isOpen ? 'modal modal--is-open' : 'modal'}>
+                <div className={isOpen ? 'modal--is-open' : 'modal'}>
                     <div className="containerIs-open">
                         <div>
                             <h5 className="ConnexionModal">Connexion</h5>
@@ -31,7 +31,7 @@ class Modal extends Component {
                     </div>
                     <div className="containerIs-open3">
                         <div>
-                            <p className="checkBoxModal"><input type="checkbox" name="checkMe" id="checkMe" />Se souvenir de moi</p>
+                            <p><input className="checkBoxModal" type="checkbox" name="checkMe" id="checkMe" />Se souvenir de moi</p>
                         </div>
                         <div>
                             <p className="lockModal"><img src={Lock} alt=""></img>Mot de passe oublié</p>
