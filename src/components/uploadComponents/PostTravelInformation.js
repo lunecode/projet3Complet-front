@@ -34,6 +34,7 @@ import ContinentList from '../json/Continent.json'
 class PostTravelInformation extends Component {
   state = {
     travel_type: 0,
+    // idGeneralVideo: []
     // continent: ContinentList
   }
 
@@ -56,11 +57,8 @@ class PostTravelInformation extends Component {
   }
 
 
-
-
   submitHandlerInformation = e => {
     e.preventDefault()
-    console.log(this.state)
     axios.post('http://localhost:3000/travel_information/insert_travelinformation', this.state)
       .then(response => {
         console.log(response)
@@ -70,14 +68,23 @@ class PostTravelInformation extends Component {
       })
   }
 
+  // getIdVideo = async () => {
+  //   const res = await axios.get('http://localhost:3000/general_video/get_id_general_video')
+  //   this.setState({ idGeneralVideo: res.data[0] })
+  //   console.log(this.state.idGeneralVideo)
+  //   }
+  //   componentDidMount() {
+  //     this.getIdVideo()
+  //   }
 
 
 
 
   render() {
     let i = 1
+    // let id = this.state.idGeneralVideo.id_general_video
+    // console.log(id)
     const { continent, countries, travel_duration, departure_month, nb_step, accomodation_budget, activities_budget, general_video_id_general_video, continent_id_continent } = this.state
-    console.log(this.state.continent)
 
     return (
 
@@ -200,7 +207,7 @@ class PostTravelInformation extends Component {
               <p>Type de voyage</p>
             </div>
 
-            <input className="input-travel_type" type="hidden" name="travel_type" value={this.state.travel_type} onChange={this.changeHandler} />
+            <input className="input-travel_type" type="text" name="travel_type" value={this.state.travel_type} onChange={this.changeHandler} />
 
             <div className="travel_type" onClick={this.type1}>
               <img src={family} alt="En famille"></img>
@@ -235,12 +242,20 @@ class PostTravelInformation extends Component {
             </div>
 
 
-            <button className="save" type="submit">ENREGISTRER</button>
 
-            <button className="preview" type="button"><NavLink exact to="/">PRECEDENT</NavLink></button>
 
-            <button className="next" type="button"><NavLink exact to="/uploadTravelStep">SUIVANT</NavLink></button>
+            <div className="save_button">
+              <button className="save" type="submit" >ENREGISTRER</button>
+            </div>
 
+
+            <div className="preview_div_info">
+              <NavLink exact to="/uploadVideo"><button className="preview" type="button">PRECEDENT</button></NavLink>
+            </div>
+
+            <div className="next_div_info">
+              <NavLink exact to="/uploadTravelStep"><button className="next" type="button">SUIVANT</button></NavLink>
+            </div>
 
           </div>
         </form>
