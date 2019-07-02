@@ -58,14 +58,17 @@ render() {
           </div>
           <div className="video_info">
             <div className="title_video">{item.video_title} <span><img className="play" src={Play} alt="play"/>{item.nb_views}</span><span className="number_tips"><img className="numberTips" src={NumberTips} alt="number tips"/>{item.number_tips}</span>
+            <div><button className="buttonCommentVideo">Modifier</button>
+            </div>
             </div>
             {this.state.popularity.map(item => (
-               <div className="likeComment">
-               <span><img src={Love} alt= "love"/>     {item.nb_like_popularity}</span> 
-               <span> <img src={Comment} alt="comment"/>{item.nb_comment_popularity}</span><span> <img className="share" src={Add} alt="share"/> {item.nb_playlist_included}</span> <span> <img src={Share} alt="Share"/>{item.nb_share}
-               </span>
+              <div className="likeComment">
+              <span><img src={Love} alt= "love"/>     {item.nb_like_popularity}</span> 
+              <span> <img src={Comment} alt="comment"/>{item.nb_comment_popularity}</span><span> <img className="share" src={Add} alt="share"/> {item.nb_playlist_included}</span> <span> <img src={Share} alt="Share"/>{item.nb_share}
+            
+            </span>
  
-             </div>
+            </div>
 
             ))}
            
@@ -78,9 +81,10 @@ render() {
             <div className="userVideo">
             <div className="pictureUser">
               <img className="pictureUser" src={item.cover_picture} alt="equipment_picture"></img>
-              <p className="username">{item.lastname} {item.firstname}</p>
+              
               </div>
               <div className="container_suscribe">
+              <p className="username">{item.video_user} </p>
                 <button className="suscribe">S'ABONNER</button>
               </div>
             </div>
