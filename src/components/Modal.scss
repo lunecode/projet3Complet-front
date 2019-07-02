@@ -1,0 +1,120 @@
+$colorbackground: #2C404D;
+$colorBackgroundModal: #45adcd;
+
+
+.modal {
+    display: none;
+}
+
+.modal.modal--is-open {
+    display: block;
+    border: 1px inset $colorBackgroundModal;
+    box-shadow: 0px 2px 2px 2px $colorBackgroundModal;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 5%;
+    color: black;
+    background-color: white;
+}
+
+.containerModal {
+    position: absolute;
+    margin: 0.1% 0% 0% 35% ;
+    width: 28%;
+}
+
+.containerIs-open {
+    display: grid;
+    grid-template-columns: 97% 3%;
+    grid-template-rows: 50px ;
+    align-items: center;
+
+    button {
+        position: relative;
+        color: $colorbackground;
+        margin-left: -15px;
+        top: -15px;
+    }
+
+    button:hover {
+        background-color: $colorBackgroundModal;
+        border: solid $colorBackgroundModal;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .divButtonModal{
+        background-color: $colorBackgroundModal;
+        padding: 16px 0;
+    }
+
+    .ConnexionModal {
+        background-color: $colorBackgroundModal;
+        padding: 17px 0;
+        color: white;
+        font-size: 16px;
+    }
+}
+
+.containerIs-open2 {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50px 50px;
+    align-items: center;
+    text-align: center;
+    margin-top: 25px;
+
+    #mail {
+        width: 70%;
+        height: 30px;
+        padding-left: 12px;
+        color: $colorbackground;
+        font-size: 14px;
+    }
+}
+
+.containerIs-open3 {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 70px;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    margin-left: 30px;
+
+    input {
+        margin-right: 10px;
+    }
+
+    .lockModal img {
+        position: absolute;
+        margin-left: -28px;
+        margin-top: -5px;
+    }
+}
+
+.containerIs-open4 {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 40px 40px 40px 40px;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+    color: grey;
+
+    img:hover {
+        opacity: 0.5;
+    }
+
+    .register {
+        margin-top: 10px;
+    }
+
+    .register span {
+        color: $colorBackgroundModal;
+    }
+
+    span:hover {
+        opacity: 0.5;
+    }
+}
