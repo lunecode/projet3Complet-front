@@ -3,8 +3,6 @@ import axios from 'axios'
 import { NavLink } from 'react-router-dom';
 import './GetAbonnements.scss'
 
-
-
 // image
 import image1 from '../../Images-tripitto/iconAbonnements/img-following-1.jpg'
 import image2 from '../../Images-tripitto/iconAbonnements/img-following-2.jpg'
@@ -13,6 +11,7 @@ import image4 from '../../Images-tripitto/iconAbonnements/img-following-4.jpg'
 import image5 from '../../Images-tripitto/iconAbonnements/img-following-5.jpg'
 import iconSearch from '../../Images-tripitto/Icon/TRAILING ICON.png'
 import iconPlus from '../../Images-tripitto/Icon/Plus.png'
+
 
 import iconArrow from '../../Images-tripitto/iconAbonnements/icon-arrow.png'
 
@@ -95,7 +94,6 @@ class GetAbonnements extends Component {
                                     <li>Nom</li>
                                     </ul>
                                     </p>
-                                    <button><img src={iconArrow} alt='icon fleche' width="20px" height="20px"/></button>
                                     <div className='search-bar-following'>
                                         <button type='submit'><img src={iconSearch} alt='icon search' /></button>
                                         <input type="text" name="" value="" placeholder="Retrouver un abonnement" />
