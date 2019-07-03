@@ -18,13 +18,13 @@ state = {
 
 openModal =() => {
     this.setState( { isModalOpen: true} )
-console.log(this.state.isModalOpen);
+// console.log(this.state.isModalOpen);
 
 }
 
 closeModal = () => {
     this.setState( { isModalOpen: false } )
-    console.log(this.state.isModalOpen);
+    // console.log(this.state.isModalOpen);
 }
 
 // openModalForgottenPassword =() => {

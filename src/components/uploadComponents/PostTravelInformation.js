@@ -9,7 +9,7 @@ import couple from '../../Images-tripitto/Icon/Aventurier/en couple.png'
 import friend from '../../Images-tripitto/Icon/Aventurier/entre ami.png'
 import alone from '../../Images-tripitto/Icon/Aventurier/seul.png'
 import './PostTravelInformation.css';
-import ContinentList from '../json/Continent.json'
+// import ContinentList from '../json/Continent.json'
 // import CountryList from '../json/Country.json'
 
 
@@ -34,7 +34,7 @@ import ContinentList from '../json/Continent.json'
 class PostTravelInformation extends Component {
   state = {
     travel_type: 0,
-    // idGeneralVideo: []
+    idGeneralVideo: ''
     // continent: ContinentList
   }
 
@@ -68,34 +68,26 @@ class PostTravelInformation extends Component {
       })
   }
 
-  // getIdVideo = async () => {
-  //   const res = await axios.get('http://localhost:3000/general_video/get_id_general_video')
-  //   this.setState({ idGeneralVideo: res.data[0] })
-  //   console.log(this.state.idGeneralVideo)
-  //   }
-  //   componentDidMount() {
-  //     this.getIdVideo()
-  //   }
-
+  getIdVideo = async () => {
+    const res = await axios.get('http://localhost:3000/general_video/get_id_general_video')
+    this.setState({ idGeneralVideo: res.data[0] })
+    console.log(this.state.idGeneralVideo.id_general_video)
+    }
+    componentDidMount() {
+      this.getIdVideo()
+    }
 
 
 
   render() {
-    let i = 1
-    // let id = this.state.idGeneralVideo.id_general_video
-    // console.log(id)
-    const { continent, countries, travel_duration, departure_month, nb_step, accomodation_budget, activities_budget, general_video_id_general_video, continent_id_continent } = this.state
-
+    // let i = 1
+    const { countries, travel_duration, departure_month, nb_step, accomodation_budget, activities_budget } = this.state
+    const id = this.state.idGeneralVideo.id_general_video
     return (
-
       <>
-
-
         <form onSubmit={this.submitHandlerInformation}>
           <div className='grid_postInformation'>
-
             <div className='empty'></div>
-
 
             {/* {this.state.videos.map(item => (
           <li key={item.id_general_video}>
@@ -109,8 +101,6 @@ class PostTravelInformation extends Component {
         ))} */}
 
 
-
-
             {/* <div className="continent">
               <p>Destination*</p>
               <input className="input-continent" type='text' name="continent" placeholder='continent' value={continent} onChange={this.changeHandler} />
@@ -121,22 +111,18 @@ class PostTravelInformation extends Component {
               <input className="input-continent" type='text' name="continent" placeholder='continent' />
             </div>
 
-
             <div className="country">
               <p>Pays</p>
               <input className="input-country" type='text' name="countries" placeholder="country" value={countries} onChange={this.changeHandler} />
             </div>
-
             <div className="moreCountry">
               <input type="checkbox" id="moreCountry" name="moreCountry" />
               <label for="moreCountry">Plus d'un pays </label>
             </div>
-
             <div className="world">
               <input type="checkbox" id="world" name="world" />
               <label for="world">Tour du monde </label>
             </div>
-
             <div className="title-month">
               <p>Date de départ*</p>
             </div>
@@ -145,70 +131,48 @@ class PostTravelInformation extends Component {
             </div>
 
 
-
-
-
-
-
             <div className="title-duration">
               <p>Durée du voyage*</p>
             </div>
             <div className="duration">
               <input className="input-duration" type='number' name="travel_duration" value={travel_duration} onChange={this.changeHandler} />
             </div>
-
             <div className="day">
               <p>jours</p>
             </div>
-
             <div className="step">
               <p>Itinéraire</p>
               <input className="input-step" type='number' name="nb_step" value={nb_step} onChange={this.changeHandler} />
             </div>
 
 
-
-
-
-
             <div className="euros">
               <input type="checkbox" name="currency" value='€' onChange={this.changeHandler} />
               <label for="currency"> € </label>
             </div>
-
             <div className="dollar">
               <input type="checkbox" name="currency" value='$' onChange={this.changeHandler} />
               <label for="currency"> $ </label>
             </div>
-
             <div className="title-accomodation">
               <p>Budget logement</p>
             </div>
-
             <div className="accomodation_information">
               <input className="input-accomodation" type="number" name="accomodation_budget" value={accomodation_budget} onChange={this.changeHandler} />
             </div>
-
             <div className="title-activities">
               <p>Repas et activités</p>
             </div>
             <div className="activities">
-
               <input className="input-activities" type="number" name="activities_budget" value={activities_budget} onChange={this.changeHandler} />
             </div>
-
-
-
-
 
 
 
             <div className="title-type">
               <p>Type de voyage</p>
             </div>
-
             <input className="input-travel_type" type="text" name="travel_type" value={this.state.travel_type} onChange={this.changeHandler} />
-
             <div className="travel_type" onClick={this.type1}>
               <img src={family} alt="En famille"></img>
               <p>En famille</p>
@@ -227,36 +191,26 @@ class PostTravelInformation extends Component {
             </div>
 
 
-
-
-
             <div className="fk-video">
               <p>Clé étrangère de l'id général video*</p>
-              <input className="input-temp" type="number" name="general_video_id_general_video" value={general_video_id_general_video} onChange={this.changeHandler} />
+              <input className="input-temp" type="number" name="general_video_id_general_video" value={id} onChange={this.changeHandler} />
             </div>
-
             <div className="fk-continent">
               <p>Clé étrangère de l'id du continent*</p>
               <p>1 - Autres, 2 - Afrique, 3 - Amerique, 4 - Asie - Oceanie, 5 - Europe</p>
-              <input className="input-temp" type="number" name="continent_id_continent" value={continent_id_continent} onChange={this.changeHandler} />
+              <input className="input-temp" type="number" name="continent_id_continent" value={this.continent} onChange={this.changeHandler} />
             </div>
-
-
 
 
             <div className="save_button">
               <button className="save" type="submit" >ENREGISTRER</button>
             </div>
-
-
             <div className="preview_div_info">
-              <NavLink exact to="/uploadVideo"><button className="preview" type="button">PRECEDENT</button></NavLink>
+              <NavLink to="/uploadVideo"><button className="preview" type="button">PRECEDENT</button></NavLink>
             </div>
-
             <div className="next_div_info">
-              <NavLink exact to="/uploadTravelStep"><button className="next" type="button">SUIVANT</button></NavLink>
+              <NavLink to="/uploadTravelStep"><button className="next" type="button">SUIVANT</button></NavLink>
             </div>
-
           </div>
         </form>
       </>

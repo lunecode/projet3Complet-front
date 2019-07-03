@@ -23,17 +23,22 @@ class DetailledInfo extends Component {
 getDetailledInfo = async () => {
     const res = await axios.get('http://localhost:3000/travel_step/get_travelstep')
     this.setState({ detailledInfo: res.data })
-    console.log(this.state.detailledInfo)
+    // console.log(this.state.detailledInfo)
 }
 componentDidMount() {
     this.getDetailledInfo()
 }
 
 render() {
+
+    const url = window.location.href;
+        const idVideo = url.slice(32)
+        console.log(idVideo) 
     
     return (
     <>
-        {this.state.detailledInfo.map(item => (
+    {this.state.detailledInfo.filter(item => item.general_video_id_general_video == idVideo ) 
+        .map(item => (
         <div className="container_globalTravel">
         <div className="container_info" key={item.id_travel_step}>
             <div className="container_detailled">
@@ -84,8 +89,7 @@ render() {
                     <li>{item.must_visit6}</li> */}
                     <p><img className="sport" src={Sport} alt="sport"></img>
                     <span className="museum">{item.sport_activity1 }</span> | <span className="museum1">{item.sport_activity2 }</span> | <span className="museum1">{item.sport_activity3 }</span></p>
-                   
-                   
+
                     {/* <li>{item.sport_activity4 }</li>
                     <li>{item.sport_activity5 }</li>
                     <li>{item.sport_activity6}</li> */}
@@ -94,8 +98,7 @@ render() {
                     <p ><img className="idea" src={Idea} alt="idea"></img>{item.advice}</p>
                     <div className="tripButton">
                     <button className="buttonTrip">VOIR ETAPE SUIVANTE</button>
-                    </div>
-                    
+                    </div>                    
                 </div>
             </div>
         </div>

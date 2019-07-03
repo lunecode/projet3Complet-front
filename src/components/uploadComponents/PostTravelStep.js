@@ -23,6 +23,7 @@ import Bus from '../../Images-tripitto/Icon/Voyage/Bus.png';
 
 class PostTravelStep extends Component {
   state = {
+    idGeneralVideo: ''
   }
 
 
@@ -43,9 +44,20 @@ class PostTravelStep extends Component {
       })
   }
 
+  getIdVideo = async () => {
+    const res = await axios.get('http://localhost:3000/general_video/get_id_general_video')
+    this.setState({ idGeneralVideo: res.data[0] })
+    console.log(this.state.idGeneralVideo.id_general_video)
+    }
+    componentDidMount() {
+      this.getIdVideo()
+    }
+
+
   
   render() {
-    const { step_number, step_name, step_type, step_duration, step_weather, step_transport, way_get_around, way_get_around_comment, district1, district2, district3, district_comment, accomodation1, accomodation2, accomodation3, accomodation_link1, accomodation_link2, accomodation_link3, restaurant1, restaurant2, restaurant3, bar1, bar2, bar3, must_visit1, must_visit2, must_visit3, sport_activity1, sport_activity2, sport_activity3, sport_activity_comment, crush, advice, general_video_id_general_video } = this.state
+    const id = this.state.idGeneralVideo.id_general_video
+    const { step_number, step_name, step_type, step_duration, step_weather, step_transport, way_get_around, way_get_around_comment, district1, district2, district3, district_comment, accomodation1, accomodation2, accomodation3, accomodation_link1, accomodation_link2, accomodation_link3, restaurant1, restaurant2, restaurant3, bar1, bar2, bar3, must_visit1, must_visit2, must_visit3, sport_activity1, sport_activity2, sport_activity3, sport_activity_comment, crush, advice } = this.state
     return (
 
       <form onSubmit={this.submitHandler}>
@@ -215,20 +227,20 @@ class PostTravelStep extends Component {
             <div className="button">
               <button type="submit">Submit</button>
               <p>Fk de l'Id de general_video</p>
-              <input type="text" name="general_video_id_general_video" value={general_video_id_general_video} onChange={this.changeHandler} />
+              <input type="text" name="general_video_id_general_video" value={id} />
               <div>
                 <button className="button1">VOIR ETAPE SUIVANTE</button>
               </div>
             </div>
             <div className="button2">
               <div className="styleBut">
-                <button className="but1">ENREGISTRER</button>
+                <button className="but1" type="submit" >ENREGISTRER</button>
               </div>
               <div className="styleBut">
               <NavLink exact to="./uploadInformation"><button className="but1">PRECEDENT</button></NavLink>
               </div>
               <div className="styleBut">
-                <button className="but2">PUBLIER</button>
+                <button className="but2" type="submit" >PUBLIER</button>
               </div>
             </div>
 
