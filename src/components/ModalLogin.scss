@@ -2,11 +2,11 @@ $colorbackground: #2C404D;
 $colorBackgroundModal: #45adcd;
 
 
-.modalPasseword {
+.modalLogin {
     display: none;
 }
 
-.modalPasseword--is-open {
+.modalLogin--is-open {
     display: block;
     border: 1px inset $colorBackgroundModal;
     box-shadow: 0px 2px 2px 2px $colorBackgroundModal;
@@ -17,11 +17,12 @@ $colorBackgroundModal: #45adcd;
     background-color: white;
 }
 
-.containerPassword {
+.containerLogin {
     display: grid;
     grid-template-columns: 97% 3%;
     grid-template-rows: 50px ;
     align-items: center;
+    margin-bottom: 35px;
 
     button {
         position: relative;
@@ -36,13 +37,12 @@ $colorBackgroundModal: #45adcd;
         padding-top: 0px;
         padding-bottom: 0px;
     }
-
-    .divButtonModalPassword{
+    .divButtonModalLogin{
         background-color: $colorBackgroundModal;
         padding: 16px 0;
     }
 
-    .ConnexionModalPassword {
+    .ConnexionModalLogin {
         background-color: $colorBackgroundModal;
         padding: 17px 0;
         color: white;
@@ -50,14 +50,14 @@ $colorBackgroundModal: #45adcd;
     }
 }
 
-.containerPassword2 {
+.containerLogin2 {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 50px 50px 50px 50px;
+    grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px ;
     align-items: center;
     margin-bottom: 30px;
 
-    #mail {
+    .LoginInput {
         width: 70%;
         height: 30px;
         padding-left: 12px;
@@ -65,23 +65,20 @@ $colorBackgroundModal: #45adcd;
         font-size: 14px;
         margin-bottom: 20px;
     }
-
-    .buttonPassword {
-        width: 74%;
-        height: 33px;
-        padding-left: 12px;
-        color: white;
-        font-size: 14px; 
-        background-color: $colorBackgroundModal;
+    .LoginChecbox input {
+        margin-right: 10px;
     }
 
-    .buttonPassword2 {
-        width: 74%;
-        height: 33px;
-        padding-left: 12px;
-        color: $colorBackgroundModal;
-        font-size: 14px; 
-        border: 1px inset $colorBackgroundModal;
-        box-shadow: 0.5px 0.5px 0.5px 0.5px $colorBackgroundModal;
+    .LoginChecbox {
+        font-size: 12px;
+    }
+
+    .CgvLogin {
+        font-size: 11px;
+        color: gray;
+        margin: 0 30px;
+        text-align: start;
+        border-block-start: solid rgba(177, 176, 176, 0.301) 2px;
     }
 }
+
