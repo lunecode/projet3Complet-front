@@ -337,8 +337,9 @@ class  VideoProfilCompnent extends Component {
 {this.state.videos.map(item => (
    <div key={item.id_general_video}  >
        <div className="video_user1">
-       <div className="upload_video">
+       <div className="upload_video" type="file">
          <img src ={upload} alt="upload"/>
+         <p>Ajouter une nouvelle video</p>
          </div>
           </div>
           </div>   

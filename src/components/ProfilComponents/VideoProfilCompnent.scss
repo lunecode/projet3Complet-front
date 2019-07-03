@@ -41,6 +41,7 @@ margin-bottom: 8vh;
 
 }
 .bloc_2_video_3{
+
   display: flex;
 flex-direction:row;
 margin-left: 26vw;
@@ -56,7 +57,17 @@ margin-bottom: 8vh;
                   width: 381px;
                   border: 15px  rgb(229, 229, 229);
                   .upload_video{
+                    background-color:#f4f4f4;
                     height: 459px;
+                    p{
+                      font-style: italic;
+                      color:rgb(168, 168, 168);
+                      text-align: center;
+                      margin-top: -15vh;
+                    }
+                    img{
+                      margin: 35%;
+                    }
                   }
       
               .status_durée{
@@ -103,6 +114,7 @@ margin-bottom: 8vh;
               
               .imagescreen{
                 margin-top: -5vh;
+                
                 img{
                   height: 230px;
                   width: 381px;
