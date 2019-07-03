@@ -30,11 +30,12 @@ componentDidMount() {
 }
 
 render() {
+    let i = 1;
     
     return (
     <>
         {this.state.detailledInfo.map(item => (
-        <div className="container_globalTravel">
+        <div className="container_globalTravel" key={i++}>
         <div className="container_info" key={item.id_travel_step}>
             <div className="container_detailled">
                 <div className="container_trip">

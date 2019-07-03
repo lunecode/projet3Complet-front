@@ -32,11 +32,11 @@ componentDidMount() {
 
 
 render() {
-    
+    let i = 1;
     return (
     <>
         {this.state.comment.map(item => (
-            <div className="container_get">
+            <div className="container_get" key={i++}>
                 <div  key={item.id_comment}>
             {/* <li>{item.profile_picture}</li> */}
                 <img className="pictureuser" src={Picture} alt= "pictureuser"/>
@@ -54,7 +54,7 @@ render() {
 ))}
         
         {this.state.picture.map(item => (
-        <div className="container_get1">
+        <div className="container_get1" key={i++}>
         <div key={item.id_comment}>
         <span>{item.profile_picture}</span>
         <span>{item.action_date_comment}</span>

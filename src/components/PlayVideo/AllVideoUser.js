@@ -18,6 +18,9 @@ componentDidMount() {
 }
 
 render() {
+
+    let i = 1;
+    
     const opts = {
         height: '150',
         width: '150',
@@ -30,7 +33,7 @@ render() {
     <>
         {this.state.video.map(item => (
           
-        <div className="allVideoUser">
+        <div className="allVideoUser" key={i++}>
            {/* <h4> {item.lastname} {item.firstname}</h4>  */}
         <div className="youtubeVid">
         <YouTube  videoId={item.video_link} opts={opts} onReady={this._onReady}/>

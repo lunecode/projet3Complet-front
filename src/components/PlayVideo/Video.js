@@ -40,7 +40,7 @@ class Video extends Component {
   }
 
 render() {
-  
+    let i = 1;
     const opts = {
         height: '490',
         width: '850',
@@ -51,8 +51,9 @@ render() {
     return (
       
     <>
-        {this.state.videos.filter(item => item.id_general_video === 2 ).map(item => (
-        <div className="container_video">
+        {this.state.videos.filter(item => item.id_general_video === 1 ).map(item => (
+         
+        <div className="container_video" key={i++}>
         <div key={item.id_general_video}>
           <div className="video_user">
             <YouTube  videoId={item.video_link} opts={opts} onReady={this._onReady}/>
@@ -63,7 +64,7 @@ render() {
             </div>
             </div>
             {this.state.popularity.map(item => (
-              <div className="likeComment">
+              <div className="likeComment" key={i++}>
               <span><img src={Love} alt= "love"/>     {item.nb_like_popularity}</span> 
               <span> <img src={Comment} alt="comment"/>{item.nb_comment_popularity}</span><span> <img className="share" src={Add} alt="share"/> {item.nb_playlist_included}</span> <span> <img src={Share} alt="Share"/>{item.nb_share}
             </span>
