@@ -105,8 +105,8 @@ class  VideoProfilCompnent extends Component {
         {/*** les video *****/}
     
         <div className="grid-profil-info">
-  <div><h3>Video(5)</h3></div>
-   <div className="filter">   
+    <div><h3>Video(5)</h3></div>
+    <div className="filter">   
        <select class="w3-select" name="option">
     <option value="" disabled selected>triez par</option>
     <option value="1">Date de publication'</option>
