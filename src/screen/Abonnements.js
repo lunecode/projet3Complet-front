@@ -27,6 +27,7 @@ class Abonnements extends Component {
       <div>
         <form onSubmit={this.submitHandler}>
           <GetAbonnements 
+          
             {...this.state}
             changeHandler={this.changeHandler}
           />

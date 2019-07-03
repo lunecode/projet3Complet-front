@@ -75,37 +75,37 @@ class  VideoProfilCompnent extends Component {
 
     <div className='position-bloc'>
        <div className='profil-menu'>
-            <ul>
+       <ul>
             <li>
-            <NavLink
-            className="nav"
-            to="/Profil" exact>Profil</NavLink>
+              <NavLink
+                className="nav"
+                to="/Profil" exact>Profil</NavLink>
             </li>
             <li>
-            <NavLink
-            to="/Video" exact >Video</NavLink>
+              <NavLink
+                to="/Video" exact >Video</NavLink>
             </li>
             <li>
-            <NavLink
-            to="/Abonnements" exact >Abonnements</NavLink>
+              <NavLink
+                to="/Abonnements" exact >Abonnements</NavLink>
             </li>
             <li>
-            <NavLink
-            to="/Abonnés" exact >Abonnés</NavLink>
+              <NavLink
+                to="/Abonnés" exact >Abonnés</NavLink>
+               </li>
+               <li>
+              <NavLink
+                to="/Notifications" exact >Notifications</NavLink>
             </li>
             <li>
-            <NavLink
-            to="/Notifications" exact >Notifications</NavLink>
+              <NavLink
+                to="/Security" exact >Sécurité</NavLink>
             </li>
             <li>
-            <NavLink
-            to="/Security" exact >Sécurité</NavLink>
+              <NavLink
+                to="/Mettre_à_niveau" exact >Mettre à niveau</NavLink>
             </li>
-            <li>
-            <NavLink
-            to="/Mettre_à_niveau" exact >Mettre à niveau</NavLink>
-            </li>
-            </ul>
+          </ul>
         </div>
         {/*** les video *****/}
     

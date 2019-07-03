@@ -29,7 +29,6 @@ class App extends Component {
           <Switch>
             <Route path="/" component={Home} exact></Route>
             <Route path="/Profil" component={Profil}/>
-            <Route path="/Security" component={Security}/>
             <Route path="/Video" component={Video}/>
             <Route path="/uploadVideo" component={UploadVideo} ></Route>
             <Route path="/Notifications" component={Notifications} ></Route>
@@ -37,6 +36,8 @@ class App extends Component {
             <Route path="/uploadTravelStep" component={UploadTravelStep} ></Route>
             <Route path="/Abonnements" component={Abonnements} ></Route>
             <Route path="/Abonnés" component={Abonne} ></Route>
+            <Route path="/Security" component={Security} ></Route>
+            
             <Route component={Error}></Route>
           </Switch>
           <Footer />

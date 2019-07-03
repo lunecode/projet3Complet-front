@@ -31,21 +31,19 @@
             }
             .search-bar-following{
                 padding-top:15px;
-                float: right;
+                margin-right: 4vw;
+
                 button{
                     background: none;
-                    padding:10px;
                     border-right:none;
                     border-bottom:1px solid #31b5cf;
                     border-top:1px solid #31b5cf;
                     border-left:1px solid #31b5cf;
                     border-radius:none;
-                    padding: 6px 10px;
                     margin-top: 8px;
                     font-size: 17px;
                     cursor: pointer;
-                    position: relative;
-                    left:22px;
+                    left:25px;
                     top:2px;
                 }
                 input{
@@ -54,9 +52,9 @@
                     border-right:1px solid #31b5cf;
                     border-bottom:1px solid #31b5cf;
                     border-left:none;
-                    padding:12px;
+                    padding:14px;
                     background: none;
-                    width: 300px;  
+                    width: 200px;  
                 } 
             }
         button{
@@ -73,6 +71,7 @@
         .bloc-following{
             margin-top:30px;
             .bloc-notifications-item{
+              
                 display:flex;
                 flex-direction:row;
                 padding-left:0;
@@ -92,14 +91,16 @@
                         margin:0;
                         padding-top:20px;
                     }
-                    div{
-                        display:flex;
+                    .info_follower{
+                      display:flex;
                         flex-direction: row;
                         padding-left:0;
-                        p{
-                            padding-right:30px;
-                        }
+                     
+                      
                     }
+                    }
+                    
+                      
               
                     button{
                         width: 150px;
@@ -109,15 +110,14 @@
                         color:#30b1ce;
                         text-transform: uppercase;
                         box-shadow: 7px 10px 7px -11px rgba(199,199,199,1);
-                        position: relative;
-                        left:500px;
+                       margin-left:20vw;
                         margin-top:20px;
                     }
                 }
        
                                
                 
-            }
+            
       
    
         }

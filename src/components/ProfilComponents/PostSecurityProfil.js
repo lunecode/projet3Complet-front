@@ -17,39 +17,39 @@ const PostSecurityProfil = (props) => {
       </div>
       <div className='position-bloc'>
         <div className='profil-menu'>
-          <ul>
+                    <ul>
 
-            <li>
-              <NavLink
-                className="nav"
-                to="/Profil" exact>Profil</NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/Video" exact >Video</NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/Video" exact >Abonnements</NavLink>
-            </li>
-            <li>
-              <NavLink
+                    <li>
+                    <NavLink
+                    className="nav"
+                    to="/Profil" exact>Profil</NavLink>
+                    </li>
+                    <li>
+                    <NavLink
+                    to="/Video" exact >Video</NavLink>
+                    </li>
+                    <li>
+                    <NavLink
+                    to="/Abonnements" exact >Abonnements</NavLink>
+                    </li>
+                    <li>
+                    <NavLink
 
-                to="/Video" exact >Abonnés</NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/Video" exact >Notifications</NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/Video" exact >Sécurité</NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/Video" exact >Mettre à niveau</NavLink>
-            </li>
-          </ul>
+                    to="/Abonnés" exact >Abonnés</NavLink>
+                    </li>
+                    <li>
+                    <NavLink
+                    to="/Notifications" exact >Notifications</NavLink>
+                    </li>
+                    <li>
+                    <NavLink
+                    to="/Securite" exact >Sécurité</NavLink>
+                    </li>
+                    <li>
+                    <NavLink
+                    to="/Video" exact >Mettre à niveau</NavLink>
+                    </li>
+                    </ul>
         </div>
         <form className="grid-profil-info">
           <div className="bloc-security">
