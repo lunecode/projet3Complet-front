@@ -15,6 +15,8 @@ import pourcentage60 from '../../Images-tripitto/Icon_Vidéo/pourcentage60.png'
 
 import vinise from '../../Images-tripitto/Icon_Vidéo/vinise.png'
 
+import upload from '../../Images-tripitto/Icon_Vidéo/upload.png'
+
 import img1 from '../../Images-tripitto/Icon_Vidéo/img1.png'
 import img2 from '../../Images-tripitto/Icon_Vidéo/img2.png'
 import img3 from '../../Images-tripitto/Icon_Vidéo/img3.png'
@@ -209,6 +211,7 @@ class  VideoProfilCompnent extends Component {
 
      {/* /*****************************************$ */}
 
+     <div className="bloc_2_video_2">
 {/* /bloc video 3 */}
 <div className="list_videos">
 {this.state.videos.map(item => (
@@ -284,10 +287,64 @@ class  VideoProfilCompnent extends Component {
           </div>   
          ))} 
      </div>
-      
+     </div> 
       
 
 
+
+  {/* *************************************$$ */}
+     <div className="bloc_2_video_3">
+{/* /bloc video 3 */}
+<div className="list_videos">
+{this.state.videos.map(item => (
+   <div key={item.id_general_video}  >
+       <div className="video_user1">
+            <div className="status_durée">
+            <div className="status1">
+            <p className="status_Masquée">Masquée</p>
+            </div>
+            <div className="durée1" >
+            <p className="durée">03:56</p>
+            </div>
+         </div>
+
+       <div className="imagescreen"><img src={img2} alt=""/></div>
+
+       <div className="countery"> 
+            <h3>Extréme Xest Caoest</h3>
+            <p className="countery_p">SHOWREEL</p>
+            </div> 
+       <div className="infos">
+            <p className="A"> 1903 vues</p>
+            <p className="B">.</p>
+            <p className="C">Il y a 3 mois</p>
+            <p className="D"> <img src={pourcentage80} alt=""/></p>
+            </div>
+       <div className="icons_video"> 
+            <img  className="img1" src={modification} alt=""/> 
+            <img className="img2"src={Partager} alt=""/>  
+            <img className="img3"src={Vue} alt=""/> 
+            <img className="img4"src={Delete} alt=""/> 
+            </div>
+          </div>
+          </div>   
+         ))} 
+     </div>
+
+
+     {/* /bloc video 4*/}
+<div className="list_videos">
+{this.state.videos.map(item => (
+   <div key={item.id_general_video}  >
+       <div className="video_user1">
+       <div className="upload_video">
+         <img src ={upload} alt="upload"/>
+         </div>
+          </div>
+          </div>   
+         ))} 
+     </div>
+     </div> 
 
     </div>
         );
