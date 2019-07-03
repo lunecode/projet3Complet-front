@@ -10,6 +10,10 @@ import Delete from '../../Images-tripitto/Icon_Vidéo/Delete.png'
 import modification from '../../Images-tripitto/Icon_Vidéo/modification.png'
 import Vue from '../../Images-tripitto/Icon_Vidéo/Vue.png'
 import pourcentage from '../../Images-tripitto/Icon_Vidéo/pourcentage.png'
+import img1 from '../../Images-tripitto/Icon_Vidéo/img1.png'
+import img2 from '../../Images-tripitto/Icon_Vidéo/img2.png'
+import img3 from '../../Images-tripitto/Icon_Vidéo/img3.png'
+import img4 from '../../Images-tripitto/Icon_Vidéo/img4.png'
 
 class  VideoProfilCompnent extends Component {
 
@@ -120,7 +124,7 @@ class  VideoProfilCompnent extends Component {
      </div>
   </div>
  </div>
- 
+
 {/* /les videdo  */}
 <div className="list_videos">
 {this.state.videos.map(item => (
@@ -134,33 +138,31 @@ class  VideoProfilCompnent extends Component {
             <p className="durée">12:45</p>
             </div>
             </div>
-            <YouTube className="V" videoId={item.video_link} opts={opts}  onReady={this._onReady} />
-            <h3>Dans es profondeur du canyon</h3>
+            <div className="imagescreen"><img src={img1} alt=""/></div>
 
+          <div className="countery"> 
+            <h3> Dans es profondeur du canyon</h3>
+            <p className="countery_p">USA</p>
+         </div> 
            <div className="infos">
             <p className="A"> {this.state.vue} VUES</p>
-            <p className="B">Il y a un jour</p>
-            <p className="C"> <img src={pourcentage} alt=""/></p>
+            <p className="B">.</p>
+            <p className="C">Il y a un jour</p>
+            <p className="D"> <img src={pourcentage} alt=""/></p>
             </div>
-
             <div className="icons_video"> 
-
             <img  className="img1" src={modification} alt=""/> 
             <img className="img2"src={Partager} alt=""/>  
             <img className="img3"src={Vue} alt=""/> 
             <img className="img4"src={Delete} alt=""/> 
             </div>
           </div>
+          </div>
           
-        </div> 
+       
          ))} 
      </div>
       
-
-  
-
-
-
 
 
     </div>
