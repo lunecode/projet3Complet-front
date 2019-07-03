@@ -16,6 +16,7 @@ import Share from '../../Images-tripitto/Icon/Share.png';
 
 class Video extends Component {
   state = {
+  
     videos: [],
     popularity: []
   };
@@ -39,7 +40,7 @@ class Video extends Component {
   }
 
 render() {
-    // const { filterVideo } = this.props;
+  
     const opts = {
         height: '490',
         width: '850',
@@ -50,7 +51,7 @@ render() {
     return (
       
     <>
-        {this.state.videos.filter(item => item.id_general_video === 1).map(item => (
+        {this.state.videos.filter(item => item.id_general_video === 2 ).map(item => (
         <div className="container_video">
         <div key={item.id_general_video}>
           <div className="video_user">
@@ -65,13 +66,10 @@ render() {
               <div className="likeComment">
               <span><img src={Love} alt= "love"/>     {item.nb_like_popularity}</span> 
               <span> <img src={Comment} alt="comment"/>{item.nb_comment_popularity}</span><span> <img className="share" src={Add} alt="share"/> {item.nb_playlist_included}</span> <span> <img src={Share} alt="Share"/>{item.nb_share}
-            
             </span>
- 
             </div>
 
             ))}
-           
             <div className="test" >
             <p><span className="loading">Ajouté le {item.loading_time} -</span><span className="status"><i>{item.video_status}</i></span> </p>
             <p className="text">{item.video_description}</p>
