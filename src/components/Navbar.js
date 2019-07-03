@@ -2,17 +2,42 @@ import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom';
 
 import './Navbar.scss'
+import Modal from './Modal';
+import './Modal.scss'
+
 import Logo from '../Images-tripitto/Logo/B&W.png';
 import Search from '../Images-tripitto/Icons/Search-White.png';
-import Avatar from '../Images-tripitto/Icon/User/avatar_defaut-1.png';
-
+import Avatar from '../Images-tripitto/Icon/User/normal.png';
+import Notification from '../Images-tripitto/Icon/Notifications.png';
 import NotificationPopup from './HomeComponents/NotificationPopup';
 
 class Navbar extends Component {
+state = {
+    isModalOpen: false,
+    // ForgottenPassword: false,
+}
+
+openModal =() => {
+    this.setState( { isModalOpen: true} )
+console.log(this.state.isModalOpen);
+
+}
+
+closeModal = () => {
+    this.setState( { isModalOpen: false } )
+    console.log(this.state.isModalOpen);
+}
+
+componentDidMount() {
+    this.openModal()
+    this.closeModal()
+}
+
     render () {
+        const { isModalOpen } = this.state
         return (
-            <div>
-            <header>
+            <>
+                <header>
                     <nav className="container_nav">
                         <div className="containerNavLeft">
                             <div className="divLogoTripitto">
@@ -29,14 +54,18 @@ class Navbar extends Component {
                         </div>
                         <div className="containerNavRight">
                             <ul className="Ulbutton">
-                                <li><NavLink exact to="/profil"><img className="logoAvatar" src={Avatar}  alt="logo tripitto"></img></NavLink></li>
+                             <li><NavLink exact to="/Profil"><img className="logoAvatar" src={Avatar}alt="logo tripitto"></img></NavLink></li>  
                                 <li><NotificationPopup /></li>
-                                <li><NavLink exact to="/uploadVideo"><button className="buttonNavbar">PUBLIER</button></NavLink></li>
+                                <li><button onClick={this.openModal} className="buttonNavbar">PUBLIER</button></li>
                             </ul>
                         </div>
-                    </nav>
+                    </nav> 
                 </header>
-            </div>
+                <div className="containerModal">
+                    <Modal isOpen={isModalOpen} onClose={this.closeModal}/>
+                    {/* <Modal isOpenForgottenPassword={ForgottenPassword} onCloseForgottenPassword={this.closeModalForgottenPassword} /> */}
+                </div>
+            </>
         )
     }
 }
