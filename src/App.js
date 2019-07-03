@@ -14,6 +14,7 @@ import Home from './screen/Home';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import PlayVideo from './screen/PlayVideo';
 
 
 
@@ -33,6 +34,7 @@ class App extends Component {
             <Route path="/uploadVideo" component={UploadVideo} ></Route>
             <Route path="/uploadInformation" component={UploadInformation} ></Route>
             <Route path="/uploadTravelStep" component={UploadTravelStep} ></Route>
+            <Route path="/playVideo" component={PlayVideo} ></Route>
             <Route component={Error}></Route>
           </Switch>
           <Footer />

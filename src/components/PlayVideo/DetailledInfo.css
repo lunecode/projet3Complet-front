@@ -1,5 +1,6 @@
 .container_globalTravel{
     background-color:#F4F4F4;
+    
 }
 
 
@@ -23,14 +24,14 @@
     background-color: white;
     color: #313F4F;
     padding: 5%;
-    font-size:19px;
+    /* font-size:19px; */
 }
 
 .border{
     border-bottom:2px solid #313F4F;
 }
 
-.weather, .step{
+.weather, .step1{
     padding-bottom: 2%;
 }
 
@@ -51,13 +52,9 @@
     margin-left: 2%;
 }
 
-
-
-
 .bed{
 
     width:26px;
-
 }
 
 .food{
@@ -76,5 +73,37 @@
 
 .Museum{
     width: 30px;
+
+}
+.sport{
+    width:30px;
+}
+
+.love{
+    margin-right: 2%;
+}
+
+.comment_sport{
+    margin-left: 6%;
+}
+
+.idea{
+    margin-right: 2%;
+}
+
+.buttonTrip{
+    background-color: white;
+    width:200px;
+    padding:1%;
+    text-align: center;
+    color:#F94C3D;
+    font-size: 12px;
+    font-weight: 500;
+    border: 1px solid #F94C3D;
     
+}
+
+.tripButton{
+    display: flex;
+    justify-content: flex-end;
 }
