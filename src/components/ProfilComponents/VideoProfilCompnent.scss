@@ -1,6 +1,6 @@
 .VideoProfilCompnent{
   background-color: #f4F4F4;
-  margin:0;
+
 
 .position-bloc{
    .grid-profil-info{
@@ -23,15 +23,24 @@
 
 /*Resize the wrap to see the search bar change!*/
     } 
+          .bloc_2_video{
+            display: flex;
+      flex-direction:row;
+      margin-left: 26vw;
+      margin-top: -40vh;
+   
+}
+   
     .list_videos{ 
-          margin-left: 40vh;
-              .video_user1{
+      
+        margin-right: 5vw;
+            .video_user1{
                   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
                   background-color:rgb(249, 249, 249);
                   width: 381px;
                   border: 15px  rgb(229, 229, 229);
-                     
-               .status_durée{
+      
+              .status_durée{
                  position: relative;
                  bottom: -1vh;
                  left: 1vw;

@@ -124,6 +124,7 @@ class  VideoProfilCompnent extends Component {
   </div>
  </div>
 
+<div className="bloc_2_video">
 {/* /bloc video 1 */}
 <div className="list_videos">
 {this.state.videos.map(item => (
@@ -204,7 +205,7 @@ class  VideoProfilCompnent extends Component {
          ))} 
      </div>
 
-
+</div>
 
      {/* /*****************************************$ */}
 
