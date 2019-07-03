@@ -43,7 +43,11 @@ class  VideoProfilCompnent extends Component {
     this.setState({ [e.target.name]: e.target.value })
   }
 
-
+  removeDummy=() =>{
+    var elem = document.getElementById('dummy');
+    elem.parentNode.removeChild(elem);
+    return false;
+  }
 
    
     
@@ -128,7 +132,7 @@ class  VideoProfilCompnent extends Component {
 
 <div className="bloc_2_video">
 {/* /bloc video 1 */}
-<div className="list_videos">
+<div className="list_videos" id ="dummy">
 {this.state.videos.map(item => (
    <div key={item.id_general_video}>
           <div className="video_user1">
@@ -157,7 +161,7 @@ class  VideoProfilCompnent extends Component {
             <img  className="img1" src={modification} alt=""/> 
             <img className="img2"src={Partager} alt=""/>  
             <img className="img3"src={Vue} alt=""/> 
-            <img className="img4"src={Delete} alt=""/> 
+            <button onClick={this.removeDummy}><img className="img4"src={Delete} alt=""/> </button> 
             </div>
           </div>
           </div>
@@ -171,7 +175,7 @@ class  VideoProfilCompnent extends Component {
       {/* /*****************************************$ */}
 
 {/* /bloc video 2 */}
-<div className="list_videos">
+<div className="list_videos" id ="dummy">
 {this.state.videos.map(item => (
    <div key={item.id_general_video}  >
        <div className="video_user1">
@@ -200,7 +204,7 @@ class  VideoProfilCompnent extends Component {
             <img  className="img1" src={modification} alt=""/> 
             <img className="img2"src={Partager} alt=""/>  
             <img className="img3"src={Vue} alt=""/> 
-            <img className="img4"src={Delete} alt=""/> 
+            <button onClick={this.removeDummy}><img className="img4"src={Delete} alt=""/> </button> 
             </div>
           </div>
           </div>   
@@ -213,7 +217,7 @@ class  VideoProfilCompnent extends Component {
 
      <div className="bloc_2_video_2">
 {/* /bloc video 3 */}
-<div className="list_videos">
+<div className="list_videos" id ="dummy">
 {this.state.videos.map(item => (
    <div key={item.id_general_video}  >
        <div className="video_user1">
@@ -242,7 +246,7 @@ class  VideoProfilCompnent extends Component {
             <img  className="img1" src={modification} alt=""/> 
             <img className="img2"src={Partager} alt=""/>  
             <img className="img3"src={Vue} alt=""/> 
-            <img className="img4"src={Delete} alt=""/> 
+            <button onClick={this.removeDummy}><img className="img4"src={Delete} alt=""/> </button> 
             </div>
           </div>
           </div>   
@@ -251,7 +255,7 @@ class  VideoProfilCompnent extends Component {
 
 
      {/* /bloc video 4*/}
-<div className="list_videos">
+<div className="list_videos" id ="dummy">
 {this.state.videos.map(item => (
    <div key={item.id_general_video}  >
        <div className="video_user1">
@@ -281,7 +285,7 @@ class  VideoProfilCompnent extends Component {
             <img  className="img1" src={modification} alt=""/> 
             <img className="img2"src={Partager} alt=""/>  
             <img className="img3"src={Vue} alt=""/> 
-            <img className="img4"src={Delete} alt=""/> 
+            <button onClick={this.removeDummy}><img className="img4"src={Delete} alt=""/> </button> 
             </div>
           </div>
           </div>   
@@ -295,7 +299,7 @@ class  VideoProfilCompnent extends Component {
   {/* *************************************$$ */}
      <div className="bloc_2_video_3">
 {/* /bloc video 3 */}
-<div className="list_videos">
+<div className="list_videos" id ="dummy">
 {this.state.videos.map(item => (
    <div key={item.id_general_video}  >
        <div className="video_user1">
@@ -324,7 +328,8 @@ class  VideoProfilCompnent extends Component {
             <img  className="img1" src={modification} alt=""/> 
             <img className="img2"src={Partager} alt=""/>  
             <img className="img3"src={Vue} alt=""/> 
-            <img className="img4"src={Delete} alt=""/> 
+
+            <button onClick={this.removeDummy}><img className="img4"src={Delete} alt=""/> </button> 
             </div>
           </div>
           </div>   
@@ -337,7 +342,7 @@ class  VideoProfilCompnent extends Component {
 {this.state.videos.map(item => (
    <div key={item.id_general_video}  >
        <div className="video_user1">
-       <div className="upload_video" type="file">
+       <div className="upload_video">
          <img src ={upload} alt="upload"/>
          <p>Ajouter une nouvelle video</p>
          </div>
