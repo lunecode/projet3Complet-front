@@ -5,10 +5,15 @@ import Lock from "../Images-tripitto/Icon/Lock.png"
 import ButtonFull from "../Images-tripitto/Buttons/white/Full.png"
 import ButtonGoogle from "../Images-tripitto/Buttons/Colored/Google.png"
 
+
+
+
+// LOGIN OK THE TOKEN IS RECEIVED BUT NEED TO SEE WHAT HAPPEN AFTER
+
 const onSubmit = e => {
     e.preventDefault()
     axios
-        .post('http://localhost:3030/auth/login', {
+        .post('http://localhost:3000/login/login', {
             email: e.target.email.value,
             password: e.target.password.value
         })
@@ -24,7 +29,7 @@ const protectedRoute = () => {
     const token = localStorage.getItem('token')
     axios({
         method: 'POST',
-        url: 'http://localhost:3030/auth/protected',
+        url: 'http://localhost:3000/login/protected',
         headers: {
             'Autorization': `Bearer ${token}`,
         }
@@ -54,7 +59,7 @@ class Modal extends Component {
         return (
             <>
             <form onSubmit={onSubmit}>
-                <div className={isOpen ? 'modal modal--is-open' : 'modal'}>
+                <div className={isOpen ? 'modal--is-open' : 'modal'}>
                     <div className="containerIs-open">
                         <div>
                             <h5 className="ConnexionModal">Connexion</h5>
@@ -74,7 +79,7 @@ class Modal extends Component {
                     </div>
                     <div className="containerIs-open3">
                         <div>
-                            <p className="checkBoxModal"><input type="checkbox" name="checkMe" id="checkMe" />Se souvenir de moi</p>
+                            <p><input className="checkBoxModal" type="checkbox" name="checkMe" id="checkMe" />Se souvenir de moi</p>
                         </div>
                         <div>
                             <p className="lockModal"><img src={Lock} alt=""></img>Mot de passe oublié</p>

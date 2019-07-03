@@ -13,6 +13,7 @@ import Notification from '../Images-tripitto/Icon/Notifications.png';
 class Navbar extends Component {
 state = {
     isModalOpen: false,
+    // ForgottenPassword: false,
 }
 
 openModal =() => {
@@ -26,13 +27,25 @@ closeModal = () => {
     console.log(this.state.isModalOpen);
 }
 
+// openModalForgottenPassword =() => {
+//     this.setState( { ForgottenPassword: true} )
+// console.log(this.state.ForgottenPassword);
+// }
+
+// closeModalForgottenPassword = () => {
+//     this.setState( { ForgottenPassword: false } )
+//     console.log(this.state.ForgottenPassword);
+// }
+
 componentDidMount() {
     this.openModal()
     this.closeModal()
+    // this.openModalForgottenPassword()
+    // this.closeModalForgottenPassword()
 }
 
     render () {
-        const { isModalOpen } = this.state
+        const { isModalOpen, ForgottenPassword } = this.state
         return (
             <div>
             <header>
@@ -61,6 +74,7 @@ componentDidMount() {
                 </header>
                 <div className="containerModal">
                     <Modal isOpen={isModalOpen} onClose={this.closeModal}/>
+                    {/* <Modal isOpenForgottenPassword={ForgottenPassword} onCloseForgottenPassword={this.closeModalForgottenPassword} /> */}
                 </div>
             </div>
         )
