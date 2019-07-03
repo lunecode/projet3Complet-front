@@ -9,7 +9,6 @@
 .container_get{
     background-color: #F4F4F4;
     font-family: 'Roboto', sans-serif;
-    
     margin-left: 5%;
     width:45%;
     padding-bottom: 2%;
@@ -41,7 +40,7 @@
 
 .editcomment:hover{
     background-image: url("https://image.noelshack.com/fichiers/2019/26/2/1561451530-edit.png");
-  
+
 }
 
 .editcom {
