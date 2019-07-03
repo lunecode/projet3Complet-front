@@ -27,25 +27,13 @@ closeModal = () => {
     console.log(this.state.isModalOpen);
 }
 
-// openModalForgottenPassword =() => {
-//     this.setState( { ForgottenPassword: true} )
-// console.log(this.state.ForgottenPassword);
-// }
-
-// closeModalForgottenPassword = () => {
-//     this.setState( { ForgottenPassword: false } )
-//     console.log(this.state.ForgottenPassword);
-// }
-
 componentDidMount() {
     this.openModal()
     this.closeModal()
-    // this.openModalForgottenPassword()
-    // this.closeModalForgottenPassword()
 }
 
     render () {
-        const { isModalOpen, ForgottenPassword } = this.state
+        const { isModalOpen } = this.state
         return (
             <>
                 <header>
