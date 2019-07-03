@@ -225,7 +225,7 @@ class PostTravelStep extends Component {
                 <button className="but1">ENREGISTRER</button>
               </div>
               <div className="styleBut">
-                <button className="but1"><NavLink exact to="./uploadInformation">PRECEDENT</NavLink></button>
+              <NavLink exact to="./uploadInformation"><button className="but1">PRECEDENT</button></NavLink>
               </div>
               <div className="styleBut">
                 <button className="but2">PUBLIER</button>
