@@ -10,6 +10,11 @@ import Delete from '../../Images-tripitto/Icon_Vidéo/Delete.png'
 import modification from '../../Images-tripitto/Icon_Vidéo/modification.png'
 import Vue from '../../Images-tripitto/Icon_Vidéo/Vue.png'
 import pourcentage from '../../Images-tripitto/Icon_Vidéo/pourcentage.png'
+import pourcentage80 from '../../Images-tripitto/Icon_Vidéo/pourcentage80.png'
+import pourcentage60 from '../../Images-tripitto/Icon_Vidéo/pourcentage60.png'
+
+import vinise from '../../Images-tripitto/Icon_Vidéo/vinise.png'
+
 import img1 from '../../Images-tripitto/Icon_Vidéo/img1.png'
 import img2 from '../../Images-tripitto/Icon_Vidéo/img2.png'
 import img3 from '../../Images-tripitto/Icon_Vidéo/img3.png'
@@ -19,8 +24,7 @@ class  VideoProfilCompnent extends Component {
 
     state = {
         videos: [],
-        vue:0,
-        vu:""
+    
 
       };
       componentDidMount() {
@@ -39,12 +43,7 @@ class  VideoProfilCompnent extends Component {
 
 
 
-      getVue= (e)=>{
-      e.preventDefault()
-      this.setState({
-      vue:this.state.vue + 1
-      })
-      }
+   
     
     render() {
 // const { filterVideo } = this.props;
@@ -125,10 +124,10 @@ class  VideoProfilCompnent extends Component {
   </div>
  </div>
 
-{/* /les videdo  */}
+{/* /bloc video 1 */}
 <div className="list_videos">
 {this.state.videos.map(item => (
-   <div key={item.id_general_video} onClick={this.getVue} >
+   <div key={item.id_general_video}>
           <div className="video_user1">
             <div className="status_durée">
             <div className="status1">
@@ -146,7 +145,7 @@ class  VideoProfilCompnent extends Component {
             <p className="countery_p">USA</p>
          </div> 
            <div className="infos">
-            <p className="A"> {this.state.vue} vues</p>
+            <p className="A"> 0 vues</p>
             <p className="B">.</p>
             <p className="C">Il y a un jour</p>
             <p className="D"> <img src={pourcentage} alt=""/></p>
@@ -160,10 +159,133 @@ class  VideoProfilCompnent extends Component {
           </div>
           </div>
           
-       
+  
          ))} 
      </div>
       
+
+
+      {/* /*****************************************$ */}
+
+{/* /bloc video 2 */}
+<div className="list_videos">
+{this.state.videos.map(item => (
+   <div key={item.id_general_video}  >
+       <div className="video_user1">
+            <div className="status_durée">
+            <div className="status1">
+            <p className="status_enligne">En ligne</p>
+            </div>
+            <div className="durée1" >
+            <p className="durée">08:36</p>
+            </div>
+         </div>
+
+       <div className="imagescreen"><img src={img3} alt=""/></div>
+
+       <div className="countery"> 
+            <h3>Perdu dans le sahara</h3>
+            <p className="countery_p">Mauritanie</p>
+            </div> 
+       <div className="infos">
+            <p className="A"> 1903 vues</p>
+            <p className="B">.</p>
+            <p className="C">Il y a 3 mois</p>
+            <p className="D"> <img src={pourcentage80} alt=""/></p>
+            </div>
+       <div className="icons_video"> 
+            <img  className="img1" src={modification} alt=""/> 
+            <img className="img2"src={Partager} alt=""/>  
+            <img className="img3"src={Vue} alt=""/> 
+            <img className="img4"src={Delete} alt=""/> 
+            </div>
+          </div>
+          </div>   
+         ))} 
+     </div>
+
+
+
+     {/* /*****************************************$ */}
+
+{/* /bloc video 3 */}
+<div className="list_videos">
+{this.state.videos.map(item => (
+   <div key={item.id_general_video}  >
+       <div className="video_user1">
+            <div className="status_durée">
+            <div className="status1">
+            <p className="status_refusé">Non adaptée</p>
+            </div>
+            <div className="durée1" >
+            <p className="durée">03:56</p>
+            </div>
+         </div>
+
+       <div className="imagescreen"><img src={img4} alt=""/></div>
+
+       <div className="countery"> 
+            <h3>Extréme Xest Caoest</h3>
+            <p className="countery_p">Mauritanie</p>
+            </div> 
+       <div className="infos">
+            <p className="A"> 1903 vues</p>
+            <p className="B">.</p>
+            <p className="C">Il y a 3 mois</p>
+            <p className="D"> <img src={pourcentage60} alt=""/></p>
+            </div>
+       <div className="icons_video"> 
+            <img  className="img1" src={modification} alt=""/> 
+            <img className="img2"src={Partager} alt=""/>  
+            <img className="img3"src={Vue} alt=""/> 
+            <img className="img4"src={Delete} alt=""/> 
+            </div>
+          </div>
+          </div>   
+         ))} 
+     </div>
+
+
+     {/* /bloc video 4*/}
+<div className="list_videos">
+{this.state.videos.map(item => (
+   <div key={item.id_general_video}  >
+       <div className="video_user1">
+            <div className="status_durée">
+            <div className="status1">
+            <p className="status_Brouillon">Brouillon</p>
+            </div>
+            <div className="durée1" >
+            <p className="durée">03:56</p>
+            </div>
+         </div>
+
+       <div className="imagescreen"><img src={vinise} alt=""/></div>
+
+       <div className="countery"> 
+            <h3>Souvenir de Venise</h3>
+            <p className="countery_p">Italie</p>
+            </div> 
+       <div className="infos">
+            <p className="A"> 0 vues</p>
+            <p className="B">.</p>
+            <p className="C">Il y a 1 mois</p>
+            <p className="D"> <img src={pourcentage60} alt=""/></p>
+            </div>
+
+       <div className="icons_video"> 
+            <img  className="img1" src={modification} alt=""/> 
+            <img className="img2"src={Partager} alt=""/>  
+            <img className="img3"src={Vue} alt=""/> 
+            <img className="img4"src={Delete} alt=""/> 
+            </div>
+          </div>
+          </div>   
+         ))} 
+     </div>
+      
+      
+
 
 
     </div>
