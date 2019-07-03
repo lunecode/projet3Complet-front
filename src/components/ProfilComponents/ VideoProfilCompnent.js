@@ -138,6 +138,7 @@ class  VideoProfilCompnent extends Component {
             <p className="durée">12:45</p>
             </div>
             </div>
+
             <div className="imagescreen"><img src={img1} alt=""/></div>
 
           <div className="countery"> 
@@ -145,7 +146,7 @@ class  VideoProfilCompnent extends Component {
             <p className="countery_p">USA</p>
          </div> 
            <div className="infos">
-            <p className="A"> {this.state.vue} VUES</p>
+            <p className="A"> {this.state.vue} vues</p>
             <p className="B">.</p>
             <p className="C">Il y a un jour</p>
             <p className="D"> <img src={pourcentage} alt=""/></p>

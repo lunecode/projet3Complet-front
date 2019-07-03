@@ -33,13 +33,16 @@
                      
                .status_durée{
                  position: relative;
-                      bottom: -6vh;
+                 bottom: -1vh;
+                 left: 1vw;
+                 font-style: italic;
+                 font-size: 14px;
                     .status1{
                   background-color:black;
                   width: 50%;
                       .status{
                          color:rgb(219, 156, 58);
-                          margin-left:6px;
+                         text-align: center;
 
                           }
                }    
@@ -50,17 +53,23 @@
                   width: 18%;
                     .durée{
                       color:white;
-                      margin-left:6px; 
+                      text-align: center; 
                    }
                } 
-               
               }
-
+              .imagescreen{
+                margin-top: -5vh;
+                img{
+                  height: 230px;
+                  width: 381px;
+                }
+              }
                   .infos{
                     font-style: italic;
                     color:rgb(168, 168, 168);
                     font-size: 15px;
                     margin-left: 2vh;
+                    margin-top: -2vh;
                    display:flex;
                    flex-direction: row;
                    
