@@ -17,6 +17,7 @@ import './Playvideo.css';
 
 class PlayVideo extends Component {
   render() {
+
     return (
       <>
         <div className="container_all">
@@ -43,7 +44,7 @@ class PlayVideo extends Component {
         {/* <p>Affichage des informations détaillées concernant le road trip</p> */}
         
         {/* <p>Permet de reccupérer les videos de l'user dans la page "lecture video"</p> */}
-       
+
         {/* <p>Permet d'inserer des commentaires sous la videos</p> */}
         <UserCommentPost />
         {/* <p>Permet de reccuperer les commentaires sous la video</p> */}

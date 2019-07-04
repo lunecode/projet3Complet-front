@@ -39,16 +39,6 @@ const protectedRoute = () => {
         })
 }
 
-const Login = ({ email, id, password }) => {
-    return <div>
-        <form onSubmit={onSubmit}>
-            <input type="email" name="email" placeholder='email' />
-            <input type="password" name="password" placeholder="password" />
-            <button onClick={() => protectedRoute()}>Connexion</button>
-            {/* <button>Connexion</button> */}
-        </form>
-    </div>
-}
 
 
 

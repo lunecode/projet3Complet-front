@@ -14,7 +14,7 @@ class UserNameFirstname extends Component {
 getName = async () => {
     const res = await axios.get('http://localhost:3000/profil/get_profil')
     this.setState({ name: res.data })
-    console.log(this.state.name)
+    // console.log(this.state.name)
 }
 componentDidMount() {
     this.getName()

@@ -8,6 +8,7 @@ import EditCom from '../../Images-tripitto/Icon/Edit.png';
 
 class UserCommentGet extends Component {
     state = {
+    idComment: '',
     comment: [],
     picture: []
 };
@@ -15,13 +16,13 @@ class UserCommentGet extends Component {
 getComment = async () => {
     const res = await axios.get('http://localhost:3000/comment/get_comment')
     this.setState({ comment: res.data })
-    console.log(this.state.comment)
+    // console.log(this.state.comment)
 }
 
 getProfil = async () => {
     const res = await axios.get('http://localhost:3000/profil/get_profil')
     this.setState({ picture: res.data })
-    console.log(this.state.picture)
+    // console.log(this.state.picture)
 }
 
 componentDidMount() {
@@ -33,10 +34,16 @@ componentDidMount() {
 
 render() {
     let i = 1;
+
+
+    const url = window.location.href;
+    const idComment = url.slice(32)
+    console.log(idComment)
     return (
     <>
-        {this.state.comment.map(item => (
-            <div className="container_get" key={i++}>
+        {this.state.comment.filter(item => 
+            item.id_comment === idComment).map( item => (
+                <div className="container_get" key={i++}>
                 <div  key={item.id_comment}>
             {/* <li>{item.profile_picture}</li> */}
                 <img className="pictureuser" src={Picture} alt= "pictureuser"/>
@@ -48,11 +55,9 @@ render() {
                     <img className="editcom" src={EditCom} alt="pic modify" />
                 </div>
                 </div>
-            </div>
-            
+            </div> 
         </div>
 ))}
-        
         {this.state.picture.map(item => (
         <div className="container_get1" key={i++}>
         <div key={item.id_comment}>

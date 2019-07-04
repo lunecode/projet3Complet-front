@@ -16,7 +16,7 @@ import Share from '../../Images-tripitto/Icon/Share.png';
 
 class Video extends Component {
   state = {
-  
+  idVideo: '',
     videos: [],
     popularity: []
   };
@@ -24,19 +24,24 @@ class Video extends Component {
   getVideo = async () => {
     const res = await axios.get('http://localhost:3000/general_video/get_general_video')
     this.setState({ videos: res.data })
-    console.log(this.state.videos)
+
   }
+
+
+
 
   getPopularity = async () => {
     const res = await axios.get('http://localhost:3000/popularity/get_popularity_liked_general_video')
     this.setState({ popularity: res.data })
-    console.log(this.state.popularity)
+    // console.log(this.state.popularity)
   }
 
-  componentDidMount() {
 
+
+  componentDidMount() {
     this.getVideo()
     this.getPopularity()
+    
   }
 
 render() {
@@ -48,12 +53,17 @@ render() {
           autoplay: 0
         }
       };
+
+      const url = window.location.href;
+      const idVideo = url.slice(32)
+      console.log(idVideo)
+
     return (
-      
     <>
-        {this.state.videos.filter(item => item.id_general_video === 1 ).map(item => (
-         
-        <div className="container_video" key={i++}>
+
+
+        {this.state.videos.filter(item => item.id_general_video === idVideo ).map(item => (
+        <div className="container_video">
         <div key={item.id_general_video}>
           <div className="video_user">
             <YouTube  videoId={item.video_link} opts={opts} onReady={this._onReady}/>
@@ -63,6 +73,9 @@ render() {
             <div><button className="buttonCommentVideo">MODIFIER</button>
             </div>
             </div>
+
+
+            
             {this.state.popularity.map(item => (
               <div className="likeComment" key={i++}>
               <span><img src={Love} alt= "love"/>     {item.nb_like_popularity}</span> 
