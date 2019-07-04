@@ -1,5 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component} from 'react';
 import { NavLink } from 'react-router-dom';
+
+
 
 import './Navbar.scss'
 import Modal from './Modal';
@@ -10,6 +12,8 @@ import Search from '../Images-tripitto/Icons/Search-White.png';
 import Avatar from '../Images-tripitto/Icon/User/avatar_defaut-1.png';
 
 import NotificationPopup from './HomeComponents/NotificationPopup';
+
+
 
 class Navbar extends Component {
 state = {
@@ -60,9 +64,24 @@ componentDidMount() {
                                 <img className="icone-loupe"src={Search}alt="Search"></img>
                             </form>
                             <ul className="ulNav">
-                                <li><NavLink exact to="/">VIDÉOS</NavLink></li>
+                                <li><NavLink exact to="/">VIDÉOS 
+                                    <div class="dropdown">
+                                        <i class="fa fa-caret-down"></i>
+                                    <div class="dropdown-content">
+                                    <a href="#">AFRIQUE</a>
+                                    <a href="#">ASIE-OCEANIE</a>
+                                    <a href="#">EUROPE</a>
+                                    <a href="#">AMERIQUE</a>
+                                    <a href="#">AUTRES</a>
+                                    </div>
+                                </div></NavLink></li>
+                                
                                 <li><NavLink exact to="/">VIDÉASTES</NavLink></li>
+                                
+                                
+
                             </ul>
+
                         </div>
                         <div className="containerNavRight">
                             <ul className="Ulbutton">
