@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Youtube from 'react-youtube';
 
 import { NavLink } from 'react-router-dom'
 
-import family from '../../Images-tripitto/Icon/Aventurier/en famille.png'
+
+import family from '../../Images-tripitto/Icon/Aventurier/En_famille.png'
 import couple from '../../Images-tripitto/Icon/Aventurier/en couple.png'
 import friend from '../../Images-tripitto/Icon/Aventurier/entre ami.png'
 import alone from '../../Images-tripitto/Icon/Aventurier/seul.png'
 import './PostTravelInformation.css';
+import ContinentList from '../json/Continent.json'
+// import CountryList from '../json/Country.json'
+
 
 
 // UPLOAD PAGE 2 / TRAVEL INFORMATION
@@ -30,8 +33,8 @@ import './PostTravelInformation.css';
 
 class PostTravelInformation extends Component {
   state = {
-    videos: [],
-    travel_type: 0
+    travel_type: 0,
+    // continent: ContinentList
   }
 
   type1 = () => {
@@ -53,17 +56,9 @@ class PostTravelInformation extends Component {
   }
 
 
-  getVideo = async () => {
-    const res = await axios.get('http://localhost:3000/general_video/get_general_video')
-    this.setState({ videos: res.data })
-    console.log(this.state.videos)
-  }
-  componentDidMount() {
-    this.getVideo()
-  }
 
 
-  submitHandler = e => {
+  submitHandlerInformation = e => {
     e.preventDefault()
     console.log(this.state)
     axios.post('http://localhost:3000/travel_information/insert_travelinformation', this.state)
@@ -76,33 +71,49 @@ class PostTravelInformation extends Component {
   }
 
 
+
+
+
   render() {
     let i = 1
-    const { continent, countries, travel_duration, departure_month, nb_step, accomodation_budget, activities_budget, general_video_id_general_video, } = this.state
+    const { continent, countries, travel_duration, departure_month, nb_step, accomodation_budget, activities_budget, general_video_id_general_video, continent_id_continent } = this.state
+    console.log(this.state.continent)
+
     return (
 
       <>
 
 
-        {this.state.videos.map(item => (
-          <div className="video_link" key={i++}>
-            <Youtube className="video" videoId={item.video_link} onReady={this._onReady}
-            />
-          </div>
-        ))}
-
-
-
-
-        <form onSubmit={this.submitHandler}>
+        <form onSubmit={this.submitHandlerInformation}>
           <div className='grid_postInformation'>
 
             <div className='empty'></div>
 
-            <div className="continent">
+
+            {/* {this.state.videos.map(item => (
+          <li key={item.id_general_video}>
+            <p>{item.video_title}</p>
+            <Youtube videoId={item.video_link} onReady={this._onReady} />
+            <p>{item.video_description}</p>
+            <p>{item.equipment}</p>
+            <img src={item.cover_picture} alt={item.video_title}></img>
+            <p>{item.profil_id_profil}</p>
+          </li>
+        ))} */}
+
+
+
+
+            {/* <div className="continent">
               <p>Destination*</p>
               <input className="input-continent" type='text' name="continent" placeholder='continent' value={continent} onChange={this.changeHandler} />
+            </div> */}
+
+            <div className="continent">
+              <p>Destination*</p>
+              <input className="input-continent" type='text' name="continent" placeholder='continent' />
             </div>
+
 
             <div className="country">
               <p>Pays</p>
@@ -192,19 +203,19 @@ class PostTravelInformation extends Component {
             <input className="input-travel_type" type="hidden" name="travel_type" value={this.state.travel_type} onChange={this.changeHandler} />
 
             <div className="travel_type" onClick={this.type1}>
-              <img src={family}></img>
+              <img src={family} alt="En famille"></img>
               <p>En famille</p>
             </div>
             <div className="travel_type2" onClick={this.type2}>
-              <img src={couple}></img>
+              <img src={couple} alt="En couple"></img>
               <p>En couple</p>
             </div>
             <div className="travel_type3" onClick={this.type3}>
-              <img src={friend}></img>
+              <img src={friend} alt="Entre amis"></img>
               <p>Entre amis</p>
             </div>
             <div className="travel_type4" onClick={this.type4}>
-              <img src={alone}></img>
+              <img src={alone} alt="Aventurier seul"></img>
               <p>Aventurier seul</p>
             </div>
 
@@ -212,10 +223,17 @@ class PostTravelInformation extends Component {
 
 
 
-            <div className="fk-temp">
+            <div className="fk-video">
               <p>Clé étrangère de l'id général video*</p>
               <input className="input-temp" type="number" name="general_video_id_general_video" value={general_video_id_general_video} onChange={this.changeHandler} />
             </div>
+
+            <div className="fk-continent">
+              <p>Clé étrangère de l'id du continent*</p>
+              <p>1 - Autres, 2 - Afrique, 3 - Amerique, 4 - Asie - Oceanie, 5 - Europe</p>
+              <input className="input-temp" type="number" name="continent_id_continent" value={continent_id_continent} onChange={this.changeHandler} />
+            </div>
+
 
             <button className="save" type="submit">ENREGISTRER</button>
 

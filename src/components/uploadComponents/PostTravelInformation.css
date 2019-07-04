@@ -297,8 +297,15 @@ margin-left: 30%;
 /***********************/
 
 
-.fk-temp {
+.fk-video {
   grid-column: 3;
+  grid-row: 10;
+  margin-left: 27%;
+  margin-bottom: 10%;
+  padding-bottom: 20%;
+}
+.fk-continent {
+  grid-column: 4;
   grid-row: 10;
   margin-left: 27%;
   margin-bottom: 10%;

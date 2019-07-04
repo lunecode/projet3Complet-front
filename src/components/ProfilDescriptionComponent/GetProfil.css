@@ -1,0 +1,90 @@
+.profilpic {
+    overflow:hidden;
+    border-radius:50%;
+    width:140px;
+    height:140px;
+}
+
+.global_part_1 {
+    width: 85vw;
+    margin: 47px auto 0;
+    border-bottom: 1px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.profil_column_1 {
+    padding-top: 12px;
+    text-align: center;
+    color: #344854;
+    font-family: 'Roboto', sans-serif;
+}
+
+.profil_column_2 {
+    padding-left: 3vw;
+}
+
+.identity {
+    display: flex;
+}
+.name {
+    padding-right: 2vw;
+    margin-bottom:0;
+}
+.span {
+    padding-right: 2vw;
+    padding-top: 2vh;
+    font-size: 35px;
+}
+.traveler_type {
+    padding-top: 1vh;
+    /* margin: 70px auto 0; */
+
+}
+.localisation {
+    margin: 0;
+}
+.iconlocalisation {
+    width: 12px;
+    padding-right: 1vw; 
+}
+.icon_general {
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.iconitem {
+    /* margin-right: 4vw;
+    border-radius:50%;
+    padding : 12px;
+    box-shadow: 1px 1px 4px #1BA2A2; */
+}
+.texticon {
+    opacity:0;
+}
+
+.profil_column_2:hover .texticon {
+    visibility: visible;
+    border: #344854;
+    opacity:1;
+}
+
+.iconProfil {
+    width: 40px;
+    margin-right: 4vw;
+    border-radius:50%;
+    padding : 15px;
+    box-shadow: 1px 1px 4px #1BA2A2;
+}
+
+ /* .generalprofil {
+     width: 100%;
+     height: 2000px;
+  } */
+
+.videocover {
+    width: 50%;
+    height: 50%;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap');

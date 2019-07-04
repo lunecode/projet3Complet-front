@@ -4,14 +4,14 @@ import { NavLink } from 'react-router-dom';
 import './Navbar.scss'
 import Logo from '../Images-tripitto/Logo/B&W.png';
 import Search from '../Images-tripitto/Icons/Search-White.png';
-import Avatar from '../Images-tripitto/Icon/User/avatar_defaut-1.png';
+import Avatar from '../Images-tripitto/Icon/User/normal.png';
 import Notification from '../Images-tripitto/Icon/Notifications.png';
 
 class Navbar extends Component {
     render () {
         return (
-            <>
-                <header>
+            <div>
+            <header>
                     <nav className="container_nav">
                         <div className="containerNavLeft">
                             <div className="divLogoTripitto">
@@ -28,14 +28,14 @@ class Navbar extends Component {
                         </div>
                         <div className="containerNavRight">
                             <ul className="Ulbutton">
-                                <li><img className="logoAvatar" src={Avatar}  alt="logo tripitto"></img></li>
+                                <li><NavLink exact to="/profil"><img className="logoAvatar" src={Avatar}  alt="logo tripitto"></img></NavLink></li>
                                 <li><img className="notification" src={Notification}alt="logo notification"></img></li>
-                                <li><button className="buttonNavbar">PUBLIER</button></li>
+                                <li><NavLink exact to="/uploadVideo"><button className="buttonNavbar">PUBLIER</button></NavLink></li>
                             </ul>
                         </div>
                     </nav>
                 </header>
-            </>
+            </div>
         )
     }
 }
