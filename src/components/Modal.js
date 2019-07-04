@@ -44,8 +44,6 @@ const protectedRoute = () => {
 }
 
 
-
-
 class Modal extends Component {
     state = {
         ModalForgottenPassword: false,
@@ -82,13 +80,11 @@ class Modal extends Component {
         this.closeModalLogin()
     }
 
-    render() {
+    render () { 
         const { isOpen, onClose } = this.props;
         const { ModalForgottenPassword, ModalCreateLogin } = this.state
         return (
-
             <>
-            <form onSubmit={onSubmit}>
                 <div className={isOpen ? 'modal--is-open' : 'modal'}>
                     <div className="containerIs-open">
                         <div>
@@ -100,11 +96,11 @@ class Modal extends Component {
                     </div>
                     <div className="containerIs-open2">
                         <div className="divInputModal">
-                            <input type="email" name="email" placeholder="Adresse email"></input>
-
+                                <input type="text" name="mail" id="mail" placeholder="Adresse email"></input>
+                                
                         </div>
                         <div className="divInputModal" >
-                            <input type="password" name="password" placeholder="Mot de passe"></input>
+                                <input type="text" name="mail" id="mail" placeholder="Mot de passe"></input>
                         </div>
                     </div>
                     <div className="containerIs-open3">
@@ -117,7 +113,7 @@ class Modal extends Component {
                     </div>
                     <div className="containerIs-open4">
                         <div>
-                        <button onClick={() => protectedRoute()}><img src={ButtonFull} alt="button connexion"></img></button>
+                            <img src={ButtonFull} alt="button connexion"></img>
                         </div>
                         <div>
                             <p>ou</p>
@@ -134,7 +130,6 @@ class Modal extends Component {
                 <ForgottenPassword isOpen2={ModalForgottenPassword} onClose2={this.closeModalForgottenPassword} />
                 <ModalLogin isOpen3={ModalCreateLogin} onClose3={this.closeModalLogin} />
                 </div>
-                </form>
             </>
         )
     }
