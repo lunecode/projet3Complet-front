@@ -171,7 +171,6 @@ class  VideoProfilCompnent extends Component {
      </div>
       
 
-
       {/* /*****************************************$ */}
 
 {/* /bloc video 2 */}

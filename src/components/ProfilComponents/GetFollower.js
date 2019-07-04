@@ -107,7 +107,7 @@ class GetFollower extends Component {
                                             <h3>Jeremias del Pozo</h3>
 
                                             <div>
-                                                <p>6 videos</p>
+                                               
                                                 <p>Abonné a vos aventures depuis 27 jours</p>
                                             </div>
                                         </div>
@@ -123,7 +123,7 @@ class GetFollower extends Component {
                                             <h3>Alicia Stinger</h3>
 
                                             <div>
-                                                <p>6 videos</p>
+                                            
                                                 <p>Abonné a vos aventures depuis 27 jours</p>
                                             </div>
                                         </div>
@@ -139,7 +139,7 @@ class GetFollower extends Component {
                                             <h3>Chineze Afemuna</h3>
 
                                             <div>
-                                                <p>6 videos</p>
+                                            
                                                 <p>Abonné a vos aventures depuis 27 jours</p>
                                             </div>
                                         </div>
@@ -155,7 +155,7 @@ class GetFollower extends Component {
                                             <h3>Daisy Murphy</h3>
 
                                             <div>
-                                                <p>6 videos</p>
+                                                
                                                 <p>Abonné a vos aventures depuis 27 jours</p>
                                             </div>
                                         </div>
@@ -171,7 +171,7 @@ class GetFollower extends Component {
                                             <h3>Sua Hua</h3>
 
                                             <div>
-                                                <p>6 videos</p>
+                                                
                                                 <p>Abonné a vos aventures depuis 27 jours</p>
                                             </div>
                                         </div>
