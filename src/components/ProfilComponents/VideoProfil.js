@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-import YouTube from 'react-youtube';
 import { NavLink } from 'react-router-dom'
 import iconSearch from '../../Images-tripitto/Icon/TRAILING ICON.png'
 import iconArrow from '../../Images-tripitto/iconAbonnements/icon-arrow.png'
@@ -21,15 +20,13 @@ import img1 from '../../Images-tripitto/Icon_Vidéo/img1.png'
 import img2 from '../../Images-tripitto/Icon_Vidéo/img2.png'
 import img3 from '../../Images-tripitto/Icon_Vidéo/img3.png'
 import img4 from '../../Images-tripitto/Icon_Vidéo/img4.png'
-import ModalDeleteVideo from './ModalDeleteVideo';
 
-class  VideoProfilCompnent extends Component {
 
+class VideoProfil extends Component {
     state = {
         videos: [],
-    
-
       };
+
       componentDidMount() {
         this.getVideo()
       }
@@ -43,30 +40,16 @@ class  VideoProfilCompnent extends Component {
   changeHandler = (e) => {
     this.setState({ [e.target.name]: e.target.value })
   }
+  // removeDummy=() =>{
+  //   var elem = document.getElementById('dummy');
+  //   elem.parentNode.removeChild(elem);
+  //   return false;
+  // }
 
-  removeDummy=() =>{
-    var elem = document.getElementById('dummy');
-    elem.parentNode.removeChild(elem);
-    return false;
-  }
-
-   
-    
-    render() {
-// const { filterVideo } = this.props;
-    const opts = {
-        height: '490',
-        width: '850',
-        playerVars: { 
-          autoplay: 0
-        }
-      };
-      const { options, value } = this.state;
-      console.log(this.state.vu);
+    render(){
         return (
-
 <div className="VideoProfilCompnent">
-<ModalDeleteVideo/>
+
       <div className="membres-profil">
       <img src="https://images.pexels.com/photos/814499/pexels-photo-814499.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500" alt="pictures profil" />
       <div className="membres-profil-detail">
@@ -110,7 +93,7 @@ class  VideoProfilCompnent extends Component {
           </ul>
         </div>
         {/*** les video *****/}
-    
+  
         <div className="grid-profil-info">
     <div><h3>Video(5)</h3></div>
     <div className="filter">   
@@ -214,7 +197,6 @@ class  VideoProfilCompnent extends Component {
      </div>
 
 </div>
-
      {/* /*****************************************$ */}
 
      <div className="bloc_2_video_2">
@@ -359,4 +341,4 @@ class  VideoProfilCompnent extends Component {
     }
 }
 
-export default  VideoProfilCompnent;
+export default VideoProfil;
