@@ -4,8 +4,6 @@ import { NavLink } from 'react-router-dom'
 
 import './PostVideo.css'
 
-import UploadIcon from '../../Images-tripitto/Icon/Upload-Video.png'
-import CoverIcon from '../../Images-tripitto/Icon/Upload Image.png'
 
 
 
@@ -16,6 +14,16 @@ import CoverIcon from '../../Images-tripitto/Icon/Upload Image.png'
 
 
 
+import './PostVideo.css'
+
+import UploadIcon from '../../Images-tripitto/Icon/Upload-Video.png'
+import CoverIcon from '../../Images-tripitto/Icon/Upload Image.png'
+
+
+
+// UPLOAD PAGE 1 / VIDEO AND DESCRIPTION
+// ALLOW TO INSERT DATA IN "GENERAL_VIDEO" TABLE
+// TEST OK
 class PostVideo extends Component {
   state = {
   }
@@ -23,7 +31,6 @@ class PostVideo extends Component {
   changeHandler = (e) => {
     this.setState({ [e.target.name]: e.target.value })
   }
-
 
   submitHandler = e => {
     e.preventDefault()
@@ -38,7 +45,7 @@ class PostVideo extends Component {
   }
 
   render() {
-    const { video_link,profil_id_profil, video_title, equipment, link_equipment, equipment2, link_equipment2, equipment3, link_equipment3, cover_picture } = this.state
+    const { video_link, video_title, profil_id_profil, video_description, equipment, link_equipment, equipment2, link_equipment2, equipment3, link_equipment3, cover_picture } = this.state
     return (
       <div>
         <form onSubmit={this.submitHandler}>
@@ -55,7 +62,7 @@ class PostVideo extends Component {
 
             <div className="title">
               <p>Titre*</p>
-              <textarea placeholder="Escapade romantique dans la ville des lumières" name="title" rows="2" cols="134" name="video_title" value={video_title} onChange={this.changeHandler}> </textarea>
+              <textarea placeholder="Escapade romantique dans la ville des lumières" name="title" rows="2" cols="134"></textarea>
               {/* <input className="input-title" placeholder="Escapade romantique dans la ville des lumières" type='text' name="video_title" value={video_title} onChange={this.changeHandler} /> */}
             </div>
 
@@ -135,6 +142,7 @@ class PostVideo extends Component {
             <NavLink exact to="/uploadInformation"><button className="next-button" type="button"> SUIVANT</button></NavLink>
             </div>
 
+
           </div>
         </form>
       </div>
@@ -143,5 +151,3 @@ class PostVideo extends Component {
 }
 
 export default PostVideo
-
-

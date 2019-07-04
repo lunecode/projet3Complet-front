@@ -17,39 +17,39 @@ const PostSecurityProfil = (props) => {
       </div>
       <div className='position-bloc'>
         <div className='profil-menu'>
-          <ul>
+                    <ul>
 
-            <li>
-              <NavLink
-                className="nav"
-                to="/Profil" exact>Profil</NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/Video" exact >Video</NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/Video" exact >Abonnements</NavLink>
-            </li>
-            <li>
-              <NavLink
+                    <li>
+                    <NavLink
+                    className="nav"
+                    to="/Profil" exact>Profil</NavLink>
+                    </li>
+                    <li>
+                    <NavLink
+                    to="/Video" exact >Video</NavLink>
+                    </li>
+                    <li>
+                    <NavLink
+                    to="/Abonnements" exact >Abonnements</NavLink>
+                    </li>
+                    <li>
+                    <NavLink
 
-                to="/Video" exact >Abonnés</NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/Video" exact >Notifications</NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/Video" exact >Sécurité</NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/Video" exact >Mettre à niveau</NavLink>
-            </li>
-          </ul>
+                    to="/Abonnés" exact >Abonnés</NavLink>
+                    </li>
+                    <li>
+                    <NavLink
+                    to="/Notifications" exact >Notifications</NavLink>
+                    </li>
+                    <li>
+                    <NavLink
+                    to="/Securite" exact >Sécurité</NavLink>
+                    </li>
+                    <li>
+                    <NavLink
+                    to="/Video" exact >Mettre à niveau</NavLink>
+                    </li>
+                    </ul>
         </div>
         <form className="grid-profil-info">
           <div className="bloc-security">
@@ -63,15 +63,15 @@ const PostSecurityProfil = (props) => {
               <p>Mettre à jour votre mot de passe</p>
               <div className="mdp-form">
                 <label htmlFor="password" className="field-mdp">Mot de passe actuel</label>
-                <input type="text" name="password" value={props.password} onChange={props.changeHandler} />
+                <input type="password" name="password" value={props.password} onChange={props.changeHandler} />
               </div>
               <div className="mdp-form">
                 <label htmlFor="password_forget" className="field-mdp">Nouveau mot de passe</label>
-                <input type="text" name="password_forget" value={props.password_forget} onChange={props.changeHandler} />
+                <input type="password" name="password_forget" value={props.password_forget} onChange={props.changeHandler} />
               </div>
               <div className="mdp-form">
                 <label htmlFor="password_forget_check" className="field-mdp">Confirmer nouveau mot de passe</label>
-                <input type="text" name="New_password" value={props.New_password} onChange={props.changeHandler} />
+                <input type="password" name="New_password" value={props.New_password} onChange={props.changeHandler} />
               </div>
               <div className="btn-save-security">
                 <button>SAUVEGARDER</button>
@@ -84,7 +84,7 @@ const PostSecurityProfil = (props) => {
         <h2>Cookies</h2>
         <p>J'accepte l'utlisation de cookies non essentiels.</p>
         <div className="cookiespolicy">
-          <p><img src={iconIdea} alt="icon conseil" /></p>
+          <p> </p>
           <a href="linkcookiestripitto" className="linkcookies">Politiques de cookies tripitto</a>
           <label class="switch">
             <input type="checkbox" />

@@ -5,6 +5,10 @@ import Lock from "../Images-tripitto/Icon/Lock.png"
 import ButtonFull from "../Images-tripitto/Buttons/white/Full.png"
 import ButtonGoogle from "../Images-tripitto/Buttons/Colored/Google.png"
 
+import ForgottenPassword from './ForgottenPassword'
+import './ForgottenPassword.scss'
+import ModalLogin from './ModalLogin'
+import './ModalLogin.scss'
 
 
 
@@ -43,10 +47,46 @@ const protectedRoute = () => {
 
 
 class Modal extends Component {
+    state = {
+        ModalForgottenPassword: false,
+        ModalCreateLogin: false,
+    }
+
+    openModalForgottenPassword =() => {
+        this.setState( { ModalForgottenPassword: true} )
+        this.props.onClose()
+    console.log(this.state.ModalForgottenPassword);
+    }
+    
+    closeModalForgottenPassword = () => {
+        this.setState( { ModalForgottenPassword: false } )
+        console.log(this.state.ModalForgottenPassword);
+    }
+
+    openModalLogin =() => {
+        this.setState( { ModalCreateLogin: true} )
+        this.props.onClose()
+    console.log(this.state.ModalCreateLogin);
+    }
+    
+    closeModalLogin = () => {
+        this.setState( { ModalCreateLogin: false } )
+        console.log(this.state.ModalCreateLogin);
+    }
+
+
+    componentDidMount() {
+        this.openModalForgottenPassword()
+        this.closeModalForgottenPassword()
+        this.openModalLogin()
+        this.closeModalLogin()
+    }
 
     render() {
         const { isOpen, onClose } = this.props;
+        const { ModalForgottenPassword, ModalCreateLogin } = this.state
         return (
+
             <>
             <form onSubmit={onSubmit}>
                 <div className={isOpen ? 'modal--is-open' : 'modal'}>
@@ -72,7 +112,7 @@ class Modal extends Component {
                             <p><input className="checkBoxModal" type="checkbox" name="checkMe" id="checkMe" />Se souvenir de moi</p>
                         </div>
                         <div>
-                            <p className="lockModal"><img src={Lock} alt=""></img>Mot de passe oublié</p>
+                            <p onClick={this.openModalForgottenPassword} className="lockModal"><img src={Lock} alt=""></img>Mot de passe oublié</p>
                         </div>
                     </div>
                     <div className="containerIs-open4">
@@ -86,9 +126,13 @@ class Modal extends Component {
                             <img src={ButtonGoogle} alt="button google connexion"></img>
                         </div>
                         <div className="register">
-                            <p>Vous n'avez pas de compte ? <span>s'inscrire</span></p>
+                            <p>Vous n'avez pas de compte ? <span onClick={this.openModalLogin}>s'inscrire</span></p>
                         </div>
                     </div>
+                </div>
+                <div>
+                <ForgottenPassword isOpen2={ModalForgottenPassword} onClose2={this.closeModalForgottenPassword} />
+                <ModalLogin isOpen3={ModalCreateLogin} onClose3={this.closeModalLogin} />
                 </div>
                 </form>
             </>
