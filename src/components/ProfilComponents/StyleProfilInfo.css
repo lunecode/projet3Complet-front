@@ -131,13 +131,13 @@ Grid pour profil info */
     display:block;
     width: 200px;
     padding-top:5px;
-    
 }
 .identity-field{
     padding-left:0!important;
 }
 .field-profil-checkbox label{
     display:inline; 
+    margin-right:20px;
 }
 .field-profil-bloc-3{
     float:left;
@@ -211,6 +211,9 @@ Grid pour profil info */
    background: linear-gradient(to right, #3ed8dd 37%,#39cad7 53%,#35c1d4 100%);
    color:white;
    border:none;
+   position: relative;
+   right:450px;
+   bottom:40px; 
    
 }
 

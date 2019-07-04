@@ -7,8 +7,9 @@ import './Modal.scss'
 
 import Logo from '../Images-tripitto/Logo/B&W.png';
 import Search from '../Images-tripitto/Icons/Search-White.png';
-import Avatar from '../Images-tripitto/Icon/User/normal.png';
-import Notification from '../Images-tripitto/Icon/Notifications.png';
+import Avatar from '../Images-tripitto/Icon/User/avatar_defaut-1.png';
+
+import NotificationPopup from './HomeComponents/NotificationPopup';
 
 class Navbar extends Component {
 state = {
@@ -66,8 +67,8 @@ componentDidMount() {
                         <div className="containerNavRight">
                             <ul className="Ulbutton">
                                 <li><NavLink exact to="/profil"><img className="logoAvatar" src={Avatar}  alt="logo tripitto"></img></NavLink></li>
-                                <li><img className="notification" src={Notification}alt="logo notification"></img></li>
-                                <li><button onClick={this.openModal} className="buttonNavbar">PUBLIER</button></li>
+                                <li><NotificationPopup /></li>
+                                <li><NavLink exact to="/uploadVideo"><button className="buttonNavbar">PUBLIER</button></NavLink></li>
                             </ul>
                         </div>
                     </nav> 

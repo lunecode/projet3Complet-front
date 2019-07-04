@@ -2,13 +2,14 @@
     background-color: rgb(244, 244, 244);
     margin-left: 45vh;
 
-    .Bio input{
-    border:12% black;
-	padding:6vh 50vh;
-    background:rgb(255, 255, 255)
-
+    .Bio {
+        textarea{
+            width: 70%;
+            height: 80px;
+            padding:10px;
+            border:1px solid #d3d3d3;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size:15px;
+        }
     }
-   
-
- 
 }
