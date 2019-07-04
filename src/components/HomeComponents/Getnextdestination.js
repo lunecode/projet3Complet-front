@@ -73,6 +73,10 @@ class Getnextdestination extends Component {
         let a = 1
         let b = 1
         let c = 1
+
+        const url = window.location.href;
+        const idVideo = url.slice(32)
+
         return (
             <>
                 {/****************************** SECTION NEXT DESTINATION******************************* */}
@@ -87,7 +91,8 @@ class Getnextdestination extends Component {
                         </div>
                         {this.state.nextpicture.map(nextpicture => (
                             <div className={"divpictureNext" + i} key={i++}>
-                                <img src={nextpicture.cover_picture} className={"nextpictureimg" + a} key={a++} />
+                                <NavLink to={`/playvideo/${nextpicture.id_general_video}`} ><img src={nextpicture.cover_picture} className={"nextpictureimg" + a} key={a++} /></NavLink>
+                                {/* <img src={nextpicture.cover_picture} className={"nextpictureimg" + a} key={a++} /> */}
                                 <p className={"p" + b} key={b++}>{nextpicture.video_title}</p> <br />
                                 <p className={"p" + b} key={b++}>{nextpicture.countries}</p>
                             </div>

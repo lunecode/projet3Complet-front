@@ -13,7 +13,7 @@ import iconSearch from '../../Images-tripitto/Icon/TRAILING ICON.png'
 import iconPlus from '../../Images-tripitto/Icon/Plus.png'
 
 
-import iconArrow from '../../Images-tripitto/iconAbonnements/icon-arrow.png'
+// import iconArrow from '../../Images-tripitto/iconAbonnements/icon-arrow.png'
 
 class GetAbonnements extends Component {
     state = {
