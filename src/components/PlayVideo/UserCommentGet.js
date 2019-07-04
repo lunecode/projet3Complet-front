@@ -8,7 +8,7 @@ import EditCom from '../../Images-tripitto/Icon/Edit.png';
 
 class UserCommentGet extends Component {
     state = {
-    idComment: '',
+    
     comment: [],
     picture: []
 };
@@ -41,8 +41,7 @@ render() {
     console.log(idComment)
     return (
     <>
-        {this.state.comment.filter(item => 
-            item.id_comment === idComment).map( item => (
+        {this.state.comment.map(item =>  (
                 <div className="container_get" key={i++}>
                 <div  key={item.id_comment}>
             {/* <li>{item.profile_picture}</li> */}

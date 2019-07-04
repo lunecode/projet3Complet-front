@@ -22,16 +22,14 @@ class TravelInfo extends Component {
 
     render() {
 
-        const url = window.location.href;
-        const idVideo = url.slice(32)
-        console.log(idVideo)
+        // const url = window.location.href;
+        // const idVideo = url.slice(32)
+        // console.log(idVideo)
 
         return (
             <>
 
-                {this.state.travel.filter(item => item.general_video_id_general_video === idVideo)
-
-                    .map(item => (
+                {this.state.travel.map(item => (
                         <div className="container_travel" key={item.id_travel_information}>
                             <div className="travel">
                                 <p className="countryName1">{item.countries} <span className="month1">{item.departure_month}</span> <span className="year1">{item.departure_year} - </span><span className="duration">{item.travel_duration} jours</span></p>
@@ -39,8 +37,7 @@ class TravelInfo extends Component {
                                 <span className="accomodation1"> <img className="alone" src={Alone} alt="seul" />   <span className="travelAlone">{item.travel_type}</span> | <img className="house" src={House} alt="house" /><span>  Logement {item.accomodation_budget}</span>  <span className="currency">{item.currency}</span> | <img className="mug" src={Mug} alt="mug" /><span>   Repas et activités {item.activities_budget}</span>  <span>{item.currency}</span> <span className="budget">(Budget par jour et par personne)</span></span>
                             </div>
                         </div>
-                    ))
-                }
+                    ))}
     </>
         )
     }

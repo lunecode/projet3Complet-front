@@ -74,8 +74,8 @@ class Getnextdestination extends Component {
         let b = 1
         let c = 1
 
-        const url = window.location.href;
-        const idVideo = url.slice(32)
+        // const url = window.location.href;
+        // const idVideo = url.slice(32)
 
         return (
             <>

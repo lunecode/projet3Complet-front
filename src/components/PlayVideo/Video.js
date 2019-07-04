@@ -59,9 +59,7 @@ class Video extends Component {
 
     return (
     <>
-
-
-        {this.state.videos.filter(item => item.id_general_video === idVideo).map(item => (
+        {this.state.videos.filter(item => item.id_general_video === 1).map(item => (
           <div className="container_video">
             <div key={item.id_general_video}>
               <div className="video_user">
@@ -72,9 +70,6 @@ class Video extends Component {
                   <div><button className="buttonCommentVideo">MODIFIER</button>
                   </div>
                 </div>
-
-
-
                 {this.state.popularity.map(item => (
                   <div className="likeComment">
                     <span><img src={Love} alt="love" />     {item.nb_like_popularity}</span>
