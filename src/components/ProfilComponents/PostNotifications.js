@@ -5,8 +5,8 @@ import IconProfil from '../../Images-tripitto/Icon/User/normal.png'
 import iconIdea from '../../Images-tripitto/Icon/Idea.png'
 import iconFrance from '../../Images-tripitto/Icons/Drapeau-FR.png';
 import iconEN from '../../Images-tripitto/Icons/Drapeau-EN.png';
-
 import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom'
+
 
 const PostNotifications = (props) => {
     return (

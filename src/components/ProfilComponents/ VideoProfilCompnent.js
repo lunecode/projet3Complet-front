@@ -21,6 +21,7 @@ import img1 from '../../Images-tripitto/Icon_Vidéo/img1.png'
 import img2 from '../../Images-tripitto/Icon_Vidéo/img2.png'
 import img3 from '../../Images-tripitto/Icon_Vidéo/img3.png'
 import img4 from '../../Images-tripitto/Icon_Vidéo/img4.png'
+import ModalDeleteVideo from './ModalDeleteVideo';
 
 class  VideoProfilCompnent extends Component {
 
@@ -65,6 +66,7 @@ class  VideoProfilCompnent extends Component {
         return (
 
 <div className="VideoProfilCompnent">
+<ModalDeleteVideo/>
       <div className="membres-profil">
       <img src="https://images.pexels.com/photos/814499/pexels-photo-814499.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500" alt="pictures profil" />
       <div className="membres-profil-detail">

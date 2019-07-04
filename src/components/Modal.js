@@ -23,7 +23,6 @@ class Modal extends Component {
         console.log(this.state.ModalForgottenPassword);
     }
 
-
     componentDidMount() {
         this.openModalForgottenPassword()
         this.closeModalForgottenPassword()
@@ -33,6 +32,7 @@ class Modal extends Component {
         const { isOpen, onClose } = this.props;
         const { ModalForgottenPassword } = this.state
         return (
+
             <>
                 <div className={isOpen ? 'modal--is-open' : 'modal'}>
                     <div className="containerIs-open">
@@ -75,8 +75,8 @@ class Modal extends Component {
                         </div>
                     </div>
                 </div>
-                <div>
-                <ForgottenPassword isOpen2={ModalForgottenPassword} onClose2={this.closeModalForgottenPassword} />
+            <div>
+        <ForgottenPassword isOpen2={ModalForgottenPassword} onClose2={this.closeModalForgottenPassword} />
                 </div>
             </>
         )
