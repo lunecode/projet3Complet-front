@@ -19,9 +19,10 @@ class Navbar extends Component {
         // ForgottenPassword: false,
     }
 
-    openModal = () => {
-        this.setState({ isModalOpen: true })
-        // console.log(this.state.isModalOpen);
+openModal =() => {
+    this.setState( { isModalOpen: true} )
+console.log(this.state.isModalOpen);
+return 
 
     }
 
