@@ -17,7 +17,12 @@ const PostEnumProfil = (props) => {
                 <h4>Vous êtes plutôt</h4>
             </div>
 
-            <form className="Profil_Pictures" type="hidden" name="profil" onSubmit={props.submitHandler} value={props.profil} onChange={props.changeHandler}>
+            <form className="Profil_Pictures" type="hidden" 
+            name="profil" 
+              onSubmit={props.submitHandler} 
+               value={props.profil} 
+               onChange={props.changeHandler}>
+
                 <div className="Profil_picture1">
                     <img src={Passionnedevoyage}
                         onClick={props.profil1}

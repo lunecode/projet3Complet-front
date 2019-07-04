@@ -16,7 +16,7 @@ import Safari from '../../Images-tripitto/Icon/Ingredients/Safari.png'
 import Ville from '../../Images-tripitto/Icon/Ingredients/Ville.png'
 import Spiritualité from '../../Images-tripitto/Icon/Ingredients/Spiritualité.png'
 import Sportaventure from '../../Images-tripitto/Icon/Ingredients/Sportaventure.png'
-import En_famille from '../../Images-tripitto/Icon/Aventurier/En_famille.png'
+import En_famille from '../../Images-tripitto/Icon/Ingredients/en_famille.png'
 import plage from '../../Images-tripitto/Icon/Ingredients/Aventurier/plage.png'
 import histoireCulture from '../../Images-tripitto/Icon/Ingredients/histoirCulture.png'
 import Plaisirculinaire from '../../Images-tripitto/Icon/Ingredients/Plaisirculinaire.png'
@@ -24,9 +24,9 @@ import Idea from "../../Images-tripitto/Icon/Idea.png"
 import "./postIngredient.scss"
 
 const PostIngedients = (props) => {
+        
         return (
-
-                <div className="ingédients" >
+            <div className="ingédients" >
                         <h3>Vos ingrédients pour un voyage inoubliable </h3>
                         <p> <img src={Idea} alt="icon" />Selectionnez jusqu'à 5 choix</p>
 
@@ -187,14 +187,7 @@ const PostIngedients = (props) => {
                                                 <p>Ecotourisme</p>
                                         </div>
 
-                                        <div className="ingredient18">
-                                                <img src={Plaisirculinaire}
-
-                                                        onClick={props.Enum18}
-                                                        alt="Ecotourise"
-                                                />
-                                               <p>Plaisir culinaire</p> 
-                                        </div>
+                                
 
                                         <div className="ingredient19">
                                                 <img src={Luxe}

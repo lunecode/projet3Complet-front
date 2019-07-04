@@ -3,8 +3,8 @@
     src: url("../../fonts/roboto/Roboto-Regular.ttf");
     font-weight: normal;
     font-style: normal;
-       
-   }
+
+}
 
 .container_travel{
     /* margin-top: 3%; */
@@ -14,23 +14,32 @@
     font-family: 'Roboto', sans-serif;
 }
 
+.container_travel img{
+    /* width:35px; */
+    height:100%;
+}
+
 .travel{
     width:90%;
     margin: 0 auto;
     padding-bottom: 5%;
-    
-    
 }
 
-.countryName{
+.countryName1{
     font-size: 35px;
     color: white;
     font-weight: bold;
     margin-right: 3%;
+    
 }
 
-.month{
-    font-size: 16px;
+.month1 {
+    
+    font-size: 20px;
+    }
+
+.year1{
+    font-size: 20px;
     /* margin-right: 1%; */
     
 }
@@ -40,7 +49,7 @@
     font-weight: normal;
 }
 
-.accomodation{
+.accomodation1{
     color: white;
 
 }
@@ -58,3 +67,7 @@
 .budget{
     font-size: 12px;
 }
+
+/* .container_travel img{
+    width:30px;
+} */

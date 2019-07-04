@@ -6,11 +6,14 @@ import PostBioProfil from '../components/ProfilComponents/PostBioProfil';
 import PostIngedients from '../components/ProfilComponents/PostIngedients';
 import Socialprofil from '../components/ProfilComponents/Socialprofil';
 import "./Profil.scss"
-import "../components/ProfilComponents/StyleProfilInfo.css"
+import "../components/ProfilComponents/PostProfilInfo.css"
 import axios from "axios"
 
 
 class Profil extends Component {
+  state={
+   
+  }
   submitHandler = e => {
     e.preventDefault()
     console.log(this.state)
@@ -118,16 +121,17 @@ class Profil extends Component {
     this.setState({ ingredients: 21 })
   }
 
+  
 
   render() {
     return (
       <div className="pageprofil" >
 
-        <form onSubmit={this.submitHandler}>
+        <form  onsSubmit={this.fileUploadHandler}>
           <PostProfilInfo
             {...this.state}
             handleCheckbox={this.handleCheckbox}
-            changeHandler={this.changeHandler}
+            changeHandler={this.changeHandler}       
           />
 
           <PostEnumProfil
@@ -141,13 +145,15 @@ class Profil extends Component {
           />
 
           <PostBioProfil
+
             {...this.state}
-            changeHandler={this.changeHandler}
+            changeHandler={this.changeHandler} 
+          
           />
           <PostIngedients
             {...this.state}
             Enum1={this.Enum1}
-            Enum2={this.Enumé}
+            Enum2={this.Enum2}
             Enum3={this.Enum3}
             Enum4={this.Enum4}
             Enum5={this.Enum5}
@@ -178,7 +184,6 @@ class Profil extends Component {
             {...this.state}
             changeHandler={this.changeHandler}
           />
-
           <div className="save-btn">
             <button type="submit" >SAUVEGARDER</button>
           </div>

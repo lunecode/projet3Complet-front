@@ -42,7 +42,10 @@ textarea {
   grid-column: 2 / 7; 
 }
 
-
+video {
+  width: 100%;
+  height: auto;
+}
 
 .upload-link {
   border: solid 2px;
@@ -236,8 +239,8 @@ resize: none;
 .submit-button {
   background-color: #00C9D4;
   color: white;
-  height: 100%;
-  width: 100%;
+  height: 4vh;
+  width: 7vw;
   font-size: 0.8rem;
 }
 
@@ -255,7 +258,7 @@ resize: none;
 .next-button {
   border-color: #00C9D4;
   color: #00C9D4; 
-  height: 90%;
-  width: 90%;
+  height: 4vh;
+  width: 7vw;
 }
 

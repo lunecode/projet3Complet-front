@@ -1,8 +1,12 @@
 import React from 'react'
-import './StyleProfilInfo.css'
+import './PostProfilInfo.css'
 import { NavLink } from 'react-router-dom'
+import UploadImgProfil from '../../components/ProfilComponents/UploadImgProfil.js';
+
+
 
 const PostProfilInfo = (props) => {
+
   return (
     <div className="bloc-page-profil">
       <div className="membres-profil">
@@ -15,7 +19,6 @@ const PostProfilInfo = (props) => {
       <div className='position-bloc'>
         <div className='profil-menu'>
           <ul>
-
             <li>
               <NavLink
                 className="nav"
@@ -31,10 +34,9 @@ const PostProfilInfo = (props) => {
             </li>
             <li>
               <NavLink
-
                 to="/Abonnés" exact >Abonnés</NavLink>
-            </li>
-            <li>
+               </li>
+               <li>
               <NavLink
                 to="/Notifications" exact >Notifications</NavLink>
             </li>
@@ -50,18 +52,11 @@ const PostProfilInfo = (props) => {
 
         </div>
         {/* <form onSubmit={this.submitHandler} className="grid-profil-info"> */}
-        <form className="grid-profil-info">
+        <form  className="grid-profil-info">
           <div>
             <h2>Profil</h2>
             <div className='field-profil-picture-bloc'>
-              <input type='text' name="profile_picture"
-                value={props.profile_picture}
-                onChange={props.changeHandler}
-                placeholder='Profil Picture'
-                className='field-profil-picture' />
-
-              <p htmlFor="profile_picture">Modifier l'image</p>
-              <p>Format JPG ou JPEG.Une résolution de 600px par 600px est recommandé</p>
+              <UploadImgProfil />
             </div>
           </div>
           <div className="profil-bloc-2">
@@ -83,12 +78,12 @@ const PostProfilInfo = (props) => {
             <div className='field-profil-checkbox'>
               <label htmlFor="identity" className="field-title-identity">Identité</label>
               <div className="identity-field">
-                <label htmlFor="lui">Lui</label>
                 <input type="checkbox" id="lui" name="is_checked_him" value={props.identity} checked={props.is_checked_him} onChange={props.handleCheckbox} className="field-profil-checkbox" />
-                <label htmlFor="elle">Elle</label>
+                <label htmlFor="lui">Lui</label>
                 <input type="checkbox" id="elle" name="is_checked_her" value={props.identity} checked={props.is_checked_her} onChange={props.handleCheckbox} />
-                <label htmlFor="equipe">Equipe</label>
+                <label htmlFor="elle">Elle</label>
                 <input type="checkbox" id="equipe" name="is_checked_team" value={props.identity} checked={props.is_checked_team} onChange={props.handleCheckbox} />
+                <label htmlFor="equipe">Equipe</label>
               </div>
             </div>
             <div>

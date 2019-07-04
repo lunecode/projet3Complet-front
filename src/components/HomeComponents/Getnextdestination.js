@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios'
+
+import { NavLink } from 'react-router-dom';
+
 import './Getnextdestination.scss';
 
 import leftarrow from '../../pictures/arrow_left.png'
