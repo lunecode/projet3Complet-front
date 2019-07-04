@@ -51,7 +51,6 @@
 .container_nextdestination_title {
     align-items: center;
     background-color: #2C404D;
-
     flex-flow: row nowrap;
     color: white;
     width: 100%;
@@ -73,7 +72,7 @@
         linear-gradient(180deg, rgba(44, 64, 77, 0.89), rgba(219, 213, 213, 0) 60.71%),
         linear-gradient(127deg, rgba(44, 64, 77, 0.589), rgba(0,255,0,0) 70.71%),
         linear-gradient(336deg, rgba(44, 64, 77, 0.692), rgba(0,0,255,0) 70.71%);
-            
+        
         img {
             filter: brightness(60%);
             -webkit-filter: brightness(60%)
@@ -487,3 +486,5 @@ margin-left: 1.5%;
         pointer-events: none;
         margin-left: -280%;
     }
+
+/************** TEST  *******/
