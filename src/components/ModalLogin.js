@@ -31,19 +31,19 @@ class ModalLogin extends Component {
                         <p className="LoginChecbox"><input type="checkbox" ></input>Je souhaite recevoir la newletter de Tripitto</p>
                         </div>
                         <div>
-                            <button className="buttonPassword">ENVOYER</button>
+                            <button className="buttonLogin1">S'inscrire</button>
                         </div>
                         <div>
-                            <p>OU</p>
+                            <p className="pOuLogin">ou</p>
                         </div>
                         <div>
-                            <button className="buttonPassword2">ANNULER</button>
+                            <p className="pGoogleButton"><span>G</span><button className="buttonLogin2">S'inscrire avec Google</button></p> 
                         </div>
                         <div className="CgvLogin">
                             <p>En créant un compte j'accepte les Conditions Générales d'utilisation de Tripitto</p>
                         </div>
                         <div>
-                            <p>Vous avez déjà un compte ? <span>Se connecter</span></p>
+                            <p className="LoginToTheSite">Vous avez déjà un compte ? <span>Se connecter</span></p>
                         </div>
 
                     </div>

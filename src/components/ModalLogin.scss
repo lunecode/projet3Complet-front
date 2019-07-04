@@ -53,7 +53,7 @@ $colorBackgroundModal: #45adcd;
 .containerLogin2 {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px ;
+    grid-template-rows: 50px 50px 50px 50px 30px 40px 40px 60px 60px 10px ;
     align-items: center;
     margin-bottom: 30px;
 
@@ -71,6 +71,7 @@ $colorBackgroundModal: #45adcd;
 
     .LoginChecbox {
         font-size: 12px;
+        margin-bottom: 40px;
     }
 
     .CgvLogin {
@@ -79,6 +80,50 @@ $colorBackgroundModal: #45adcd;
         margin: 0 30px;
         text-align: start;
         border-block-start: solid rgba(177, 176, 176, 0.301) 2px;
+    }
+
+    .buttonLogin1 {
+        border: solid $colorBackgroundModal 1px;
+        box-shadow: 0.5px 0.5px 0.5px 0.5px $colorBackgroundModal;
+        width: 74%;
+        height: 33px;
+        padding-left: 12px;
+        color: $colorBackgroundModal;
+        font-size: 14px; 
+    }
+    .buttonLogin2 {
+        width: 74%;
+        height: 33px;
+        color: white;
+        font-size: 14px; 
+        background-image: linear-gradient(to right,  #ee9d519f, #ee5e51);
+        margin-bottom: 15px;
+        margin-right: 16px;
+    }
+
+    .pGoogleButton span {
+        color: white;
+        position: relative;
+        left: 65px;
+        top: 3px;
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    .buttonLogin1:hover, .pGoogleButton:hover{
+        opacity: 0.6;
+    }
+
+    .pOuLogin {
+        color: gray;
+    }
+
+    .LoginToTheSite span {
+        color:  $colorBackgroundModal;
+    }
+    .LoginToTheSite {
+        color: gray;
+        font-size: 14px;
     }
 }
 

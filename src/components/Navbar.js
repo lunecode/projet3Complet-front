@@ -19,6 +19,7 @@ state = {
 openModal =() => {
     this.setState( { isModalOpen: true} )
 console.log(this.state.isModalOpen);
+return 
 
 }
 
