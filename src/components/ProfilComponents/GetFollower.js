@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import { NavLink } from 'react-router-dom';
 import './GetAbonnements.scss'
-
-
-
 // image
 import image1 from '../../Images-tripitto/iconAbonnements/img-following-1.jpg'
 import image2 from '../../Images-tripitto/iconAbonnements/img-following-2.jpg'
@@ -50,39 +47,37 @@ class GetFollower extends Component {
                     </div>
                     <div className='position-bloc'>
                         <div className='profil-menu'>
-                            <ul>
-
-                                <li>
-                                    <NavLink
-                                        className="nav"
-                                        to="/Profil" exact>Profil</NavLink>
-                                </li>
-                                <li>
-                                    <NavLink
-                                        to="/Video" exact >Video</NavLink>
-                                </li>
-                                <li>
-                                    <NavLink
-                                        to="/Abonnements" exact >Abonnements</NavLink>
-                                </li>
-                                <li>
-                                    <NavLink
-
-                                        to="/Abonnés" exact >Abonnés</NavLink>
-                                </li>
-                                <li>
-                                    <NavLink
-                                        to="/Notifications" exact >Notifications</NavLink>
-                                </li>
-                                <li>
-                                    <NavLink
-                                        to="/Securite" exact >Sécurité</NavLink>
-                                </li>
-                                <li>
-                                    <NavLink
-                                        to="/Video" exact >Mettre à niveau</NavLink>
-                                </li>
-                            </ul>
+                        <ul>
+            <li>
+              <NavLink
+                className="nav"
+                to="/Profil" exact>Profil</NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/Video" exact >Video</NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/Abonnements" exact >Abonnements</NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/Abonnés" exact >Abonnés</NavLink>
+               </li>
+               <li>
+              <NavLink
+                to="/Notifications" exact >Notifications</NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/Security" exact >Sécurité</NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/Mettre_à_niveau" exact >Mettre à niveau</NavLink>
+            </li>
+          </ul>
                         </div>
                         <form className="following-block">
                             <div>
@@ -109,8 +104,8 @@ class GetFollower extends Component {
                                         <div>
                                             <h3>Jeremias del Pozo</h3>
 
-                                            <div>
-                                                <p>6 videos</p>
+                                            <div className="info_follower">
+                                            
                                                 <p>Abonné a vos aventures depuis 27 jours</p>
                                             </div>
                                         </div>
@@ -125,8 +120,8 @@ class GetFollower extends Component {
                                         <div>
                                             <h3>Alicia Stinger</h3>
 
-                                            <div>
-                                                <p>6 videos</p>
+                                            <div className="info_follower">
+                                               
                                                 <p>Abonné a vos aventures depuis 27 jours</p>
                                             </div>
                                         </div>
@@ -141,8 +136,8 @@ class GetFollower extends Component {
                                         <div>
                                             <h3>Chineze Afemuna</h3>
 
-                                            <div>
-                                                <p>6 videos</p>
+                                            <div className="info_follower">
+                                               
                                                 <p>Abonné a vos aventures depuis 27 jours</p>
                                             </div>
                                         </div>
@@ -157,8 +152,8 @@ class GetFollower extends Component {
                                         <div>
                                             <h3>Daisy Murphy</h3>
 
-                                            <div>
-                                                <p>6 videos</p>
+                                            <div className="info_follower">
+                                               
                                                 <p>Abonné a vos aventures depuis 27 jours</p>
                                             </div>
                                         </div>
@@ -173,8 +168,8 @@ class GetFollower extends Component {
                                         <div>
                                             <h3>Sua Hua</h3>
 
-                                            <div>
-                                                <p>6 videos</p>
+                                            <div className="info_follower">
+                                               
                                                 <p>Abonné a vos aventures depuis 27 jours</p>
                                             </div>
                                         </div>

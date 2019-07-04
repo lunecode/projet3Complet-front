@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Security from './screen/Security';
 import Profil from './screen/Profil';
+import Video from './screen/Video';
 import { Route, BrowserRouter, Switch } from 'react-router-dom';
-
 import UploadInformation from './screen/UploadPage/UploadTravelInformation';
 import UploadVideo from './screen/UploadPage/UploadVideo';
 import UploadTravelStep from './screen/UploadPage/UploadTravelStep';
@@ -11,8 +11,6 @@ import Abonnements from './screen/Abonnements'
 import Abonne from './screen/Abonne'
 // import ProfilDescription from './screen/ProfilDescription/ProfilDescription';
 import Home from './screen/Home';
-// import PlayVideo from './screen/PlayVideo';
-
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import PlayVideo from './screen/PlayVideo';
@@ -32,7 +30,7 @@ class App extends Component {
           <Switch>
             <Route path="/" component={Home} exact></Route>
             <Route path="/Profil" component={Profil}/>
-            <Route path="/Security" component={Security}/>
+            <Route path="/Video" component={Video}/>
             <Route path="/uploadVideo" component={UploadVideo} ></Route>
             <Route path="/Notifications" component={Notifications} ></Route>
             <Route path="/uploadInformation" component={UploadInformation} ></Route>
@@ -40,6 +38,8 @@ class App extends Component {
             <Route path="/playVideo" component={PlayVideo} ></Route>
             <Route path="/Abonnements" component={Abonnements} ></Route>
             <Route path="/Abonnés" component={Abonne} ></Route>
+            <Route path="/Security" component={Security} ></Route>
+            
             <Route component={Error}></Route>
           </Switch>
           <Footer />

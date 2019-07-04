@@ -4,8 +4,6 @@ import { NavLink } from 'react-router-dom'
 
 import './PostVideo.css'
 
-import UploadIcon from '../../Images-tripitto/Icon/Upload-Video.png'
-import CoverIcon from '../../Images-tripitto/Icon/Upload Image.png'
 
 
 
@@ -16,6 +14,16 @@ import CoverIcon from '../../Images-tripitto/Icon/Upload Image.png'
 
 
 
+import './PostVideo.css'
+
+import UploadIcon from '../../Images-tripitto/Icon/Upload-Video.png'
+import CoverIcon from '../../Images-tripitto/Icon/Upload Image.png'
+
+
+
+// UPLOAD PAGE 1 / VIDEO AND DESCRIPTION
+// ALLOW TO INSERT DATA IN "GENERAL_VIDEO" TABLE
+// TEST OK
 class PostVideo extends Component {
   state = {
   }
@@ -23,7 +31,6 @@ class PostVideo extends Component {
   changeHandler = (e) => {
     this.setState({ [e.target.name]: e.target.value })
   }
-
 
   submitHandler = e => {
     e.preventDefault()
@@ -135,9 +142,6 @@ class PostVideo extends Component {
             <NavLink exact to="/uploadInformation"><button className="next-button" type="button"> SUIVANT</button></NavLink>
             </div>
 
-
-
-            
 
           </div>
         </form>
