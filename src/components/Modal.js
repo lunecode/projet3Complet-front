@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import axios from 'axios';
+// import axios from 'axios';
 
 import Lock from "../Images-tripitto/Icon/Lock.png"
 import ButtonFull from "../Images-tripitto/Buttons/white/Full.png"
@@ -14,34 +14,34 @@ import './ModalLogin.scss'
 
 // LOGIN OK THE TOKEN IS RECEIVED BUT NEED TO SEE WHAT HAPPEN AFTER
 
-const onSubmit = e => {
-    e.preventDefault()
-    axios
-        .post('http://localhost:3000/login/login', {
-            email: e.target.email.value,
-            password: e.target.password.value
-        })
-        .then(res => {
-            console.log(res)
-            localStorage.setItem('token', res.headers["x-access-token"])
-            console.log('token', localStorage.getItem('token'))
-        })
-}
+// const onSubmit = e => {
+//     e.preventDefault()
+//     axios
+//         .post('http://localhost:3000/login/login', {
+//             email: e.target.email.value,
+//             password: e.target.password.value
+//         })
+//         .then(res => {
+//             console.log(res)
+//             localStorage.setItem('token', res.headers["x-access-token"])
+//             console.log('token', localStorage.getItem('token'))
+//         })
+// }
 
 
-const protectedRoute = () => {
-    const token = localStorage.getItem('token')
-    axios({
-        method: 'POST',
-        url: 'http://localhost:3000/login/protected',
-        headers: {
-            'Autorization': `Bearer ${token}`,
-        }
-    })
-        .then(res => {
-            console.log(res) // Rajouter les redirections si le token est validé
-        })
-}
+// const protectedRoute = () => {
+//     const token = localStorage.getItem('token')
+//     axios({
+//         method: 'POST',
+//         url: 'http://localhost:3000/login/protected',
+//         headers: {
+//             'Autorization': `Bearer ${token}`,
+//         }
+//     })
+//         .then(res => {
+//             console.log(res) // Rajouter les redirections si le token est validé
+//         })
+// }
 
 
 class Modal extends Component {
