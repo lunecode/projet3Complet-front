@@ -6,7 +6,7 @@ import './AllVideoUser.css';
 class AllVideoUser extends Component {
     state = {
     video: [],
-};
+}; 
 
 getVideo = async () => {
     const res = await axios.get('http://localhost:3000/profil/get_video_user')
