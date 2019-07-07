@@ -51,12 +51,12 @@ const PostProfilInfo = (props) => {
           </ul>
 
         </div>
-        {/* <form onSubmit={this.submitHandler} className="grid-profil-info"> */}
         <form  className="grid-profil-info">
           <div>
             <h2>Profil</h2>
             <div className='field-profil-picture-bloc'>
-              <UploadImgProfil />
+
+              <UploadImgProfil {...props} />
             </div>
           </div>
           <div className="profil-bloc-2">

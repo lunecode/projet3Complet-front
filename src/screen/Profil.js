@@ -27,6 +27,7 @@ class Profil extends Component {
   }
 
   handleCheckbox = (e) => {
+    e.preventDefault()
     const target = e.target;
     const value = target.type === 'checkbox' ? target.checked : target.value;
     const name = target.name;
@@ -120,18 +121,35 @@ class Profil extends Component {
   Enum21 = () => {
     this.setState({ ingredients: 21 })
   }
-
+//ouvrir le fichier et le convertir  en binair
+handelchange = (e) => {
+  let files = e.target.files;
+  let reader = new FileReader();
+  reader.readAsDataURL(files[0]);
+  reader.onload = (e) => {
+    this.setState({ profil_link: e.target.result }, () => {
+      console.log("video data", this.state.profil_link)
+    })
+  }
+}
+//convertir en binair
+blob2file = (blobData) => {
+  const fd = new FormData();
+  fd.set('a', blobData);
+  return fd.get('a');
+}
   
 
   render() {
     return (
       <div className="pageprofil" >
-
-        <form  onsSubmit={this.fileUploadHandler}>
+        <form  onSubmit={this.submitHandler}>
           <PostProfilInfo
             {...this.state}
             handleCheckbox={this.handleCheckbox}
-            changeHandler={this.changeHandler}       
+            changeHandler={this.changeHandler} 
+            handelchange={this.handelchange} 
+            blob2file={this.blob2file }     
           />
 
           <PostEnumProfil
@@ -145,11 +163,10 @@ class Profil extends Component {
           />
 
           <PostBioProfil
-
             {...this.state}
             changeHandler={this.changeHandler} 
-          
           />
+
           <PostIngedients
             {...this.state}
             Enum1={this.Enum1}
@@ -184,6 +201,7 @@ class Profil extends Component {
             {...this.state}
             changeHandler={this.changeHandler}
           />
+
           <div className="save-btn">
             <button type="submit" >SAUVEGARDER</button>
           </div>
