@@ -32,7 +32,6 @@ render() {
     return (
     <>
         {this.state.video.map(item => (
-          
         <div className="allVideoUser" key={i++}>
            {/* <h4> {item.lastname} {item.firstname}</h4>  */}
         <div className="youtubeVid">

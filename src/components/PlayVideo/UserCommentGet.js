@@ -39,9 +39,9 @@ render() {
     const url = window.location.href;
     const idComment = url.slice(32)
     console.log(idComment)
-    return (
+    return (  
     <>
-        {this.state.comment.filter(item =>item.id_comment === 1 ).map(item =>(
+        {this.state.comment.filter(item =>item.id_comment === 1).map(item =>(
                 <div className="container_get" key={i++}>
                 <div  key={item.id_comment}>
             {/* <li>{item.profile_picture}</li> */}
