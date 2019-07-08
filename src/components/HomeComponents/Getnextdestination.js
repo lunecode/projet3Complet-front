@@ -56,14 +56,10 @@ class Getnextdestination extends Component {
         this.setState({ videos: Bestplan },)
     })
     }
-
-
     componentDidMount() {
         this.getnextvideo()
         this.getbestplan()
-
     }
-
     render() {
         let i = 1
         let a = 1
