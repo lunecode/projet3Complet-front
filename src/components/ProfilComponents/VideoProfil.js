@@ -19,22 +19,7 @@ import img3 from '../../Images-tripitto/Icon_Vidéo/img3.png'
 import img4 from '../../Images-tripitto/Icon_Vidéo/img4.png'
 
 class VideoProfil extends Component {
-    state = {
-        videos: [],
-      };
-      // componentDidMount() {
-      //   this.getVideo()
-      // }
 
-      // getVideo = async () => {
-      //   const res = await axios.get('http://localhost:3000/general_video/get_general_video_limite1/1')
-      //   this.setState({ videos: res.data })
-      //   console.log(this.state.videos)
-      // }
-
-  // changeHandler = (e) => {
-  //   this.setState({ [e.target.name]: e.target.value })
-  // }
   removeDummy=() =>{
     var elem = document.getElementById('dummy');
     elem.parentNode.removeChild(elem);

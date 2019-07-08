@@ -138,6 +138,12 @@ blob2file = (blobData) => {
   fd.set('a', blobData);
   return fd.get('a');
 }
+
+myFunction=(e)=>{
+  
+  const x = document.getElementById("myImg").src;
+  document.getElementById("demo").innerHTML = x;
+}
   
 
   render() {
@@ -149,9 +155,10 @@ blob2file = (blobData) => {
             handleCheckbox={this.handleCheckbox}
             changeHandler={this.changeHandler} 
             handelchange={this.handelchange} 
-            blob2file={this.blob2file }     
+            blob2file={this.blob2file }  
+            myFunction={this.myFunction}   
           />
-
+      
           <PostEnumProfil
             {...this.state}
             profil1={this.profil1}

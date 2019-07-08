@@ -24,3 +24,27 @@ const IploadImgProfil=(props)=> {
   
 
 export default IploadImgProfil;
+// import React, { Component } from 'react';
+
+// class UploadImgProfil extends Component {
+//    state = {
+//           image: null
+//         }
+     
+//       handleChange=(event) =>{
+//         this.setState({
+//           image: URL.createObjectURL(event.target.files[0])}) 
+//       }
+//       render() {
+        
+          
+//         return (
+//           <div>
+//             <input type="file" onChange={this.handleChange}/>
+//             <img src={this.state.image} />
+//           </div>
+//         );
+//       }
+//     }
+
+// export default UploadImgProfil;
