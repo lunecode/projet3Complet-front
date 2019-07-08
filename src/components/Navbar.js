@@ -53,8 +53,8 @@ return
                             <ul className="ulNav">
                                 <li><NavLink exact to="/">VIDÉOS
                                     <div class="dropdown">
-                                        <i class="fa fa-caret-down"></i>
-                                        <div class="dropdown-content">
+                                        <i className="fa fa-caret-down"></i>
+                                        <div className="dropdown-content">
                                             <a href="#">AFRIQUE</a>
                                             <a href="#">ASIE-OCEANIE</a>
                                             <a href="#">EUROPE</a>

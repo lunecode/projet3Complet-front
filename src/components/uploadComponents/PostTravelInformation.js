@@ -10,7 +10,7 @@ import friend from '../../Images-tripitto/Icon/Aventurier/entre ami.png'
 import alone from '../../Images-tripitto/Icon/Aventurier/seul.png'
 import './PostTravelInformation.css';
 // import ContinentList from '../json/Continent.json'
-// import CountryList from '../json/Country.json'
+import CountryList from '../json/Country.json'
 
 
 
@@ -35,7 +35,6 @@ class PostTravelInformation extends Component {
   state = {
     travel_type: 0,
     idGeneralVideo: ''
-    // continent: ContinentList
   }
 
   type1 = () => {
@@ -72,17 +71,20 @@ class PostTravelInformation extends Component {
     const res = await axios.get('http://localhost:3000/general_video/get_id_general_video')
     this.setState({ idGeneralVideo: res.data[0] })
     console.log(this.state.idGeneralVideo.id_general_video)
-    }
-    componentDidMount() {
-      this.getIdVideo()
-    }
+  }
+  componentDidMount() {
+    this.getIdVideo()
+  }
 
 
 
   render() {
-    // let i = 1
-    const { countries, travel_duration, departure_month, nb_step, accomodation_budget, activities_budget } = this.state
+    let i = 1
+    const { continent, countries, travel_duration, departure_month, nb_step, accomodation_budget, activities_budget } = this.state
     const id = this.state.idGeneralVideo.id_general_video
+    const country = CountryList.map((item) => 
+    <option key={item.id}>{item.country}</option>)
+
     return (
       <>
         <form onSubmit={this.submitHandlerInformation}>
@@ -107,14 +109,45 @@ class PostTravelInformation extends Component {
             </div> */}
 
             <div className="continent">
-              <p>Destination*</p>
-              <input className="input-continent" type='text' name="continent" placeholder='continent' />
+              <label>
+                Destination :
+              <select value={continent} onChange={this.changeHandler}>
+                  <option value="Autres">Autres</option>
+                  <option value="Afrique">Afrique</option>
+                  <option value="Amerique">Amerique</option>
+                  <option value="Asie-Océanie">Asie-Océanie</option>
+                  <option value="Europe">Europe</option>
+                </select>
+              </label>
             </div>
 
+
+
             <div className="country">
+                  <select>
+                    {country}
+                    {/* <option value={item.country}></option> */}
+                  </select>
+            </div>
+
+
+            {/* {country.map(item => (
+              <li key={i++}>
+                <p>{item.country}</p>
+              </li>
+            ))} */}
+
+            {/* <div className="continent">
+              <p>Destination*</p>
+              <input className="input-continent" type='text' name="continent" placeholder='continent' />
+            </div>  */}
+
+            {/* <div className="country">
               <p>Pays</p>
               <input className="input-country" type='text' name="countries" placeholder="country" value={countries} onChange={this.changeHandler} />
-            </div>
+            </div> */}
+
+
             <div className="moreCountry">
               <input type="checkbox" id="moreCountry" name="moreCountry" />
               <label for="moreCountry">Plus d'un pays </label>
@@ -172,7 +205,12 @@ class PostTravelInformation extends Component {
             <div className="title-type">
               <p>Type de voyage</p>
             </div>
-            <input className="input-travel_type" type="text" name="travel_type" value={this.state.travel_type} onChange={this.changeHandler} />
+
+
+            {/* THIS INPUT RECEIVED THE ID OF THE TRAVEL TYPE ENUM, ITS HIDDEN FOR THE FRONT */}
+            <input className="input-travel_type" type="hidden" name="travel_type" value={this.state.travel_type} onChange={this.changeHandler} />
+
+
             <div className="travel_type" onClick={this.type1}>
               <img src={family} alt="En famille"></img>
               <p>En famille</p>
@@ -191,10 +229,16 @@ class PostTravelInformation extends Component {
             </div>
 
 
+
+{/* THIS INPUT ALLOW TO CAPTURE THE ID OF THE VIDEO ASSOCIATE WITH THE INFORMATION OF THIS PAGE */}
+
             <div className="fk-video">
-              <p>Clé étrangère de l'id général video*</p>
-              <input className="input-temp" type="number" name="general_video_id_general_video" value={id} onChange={this.changeHandler} />
+              {/* <p>Clé étrangère de l'id général video*</p> */}
+              <input className="input-temp" type="hidden" name="general_video_id_general_video" value={id} onChange={this.changeHandler} />
             </div>
+
+
+
             <div className="fk-continent">
               <p>Clé étrangère de l'id du continent*</p>
               <p>1 - Autres, 2 - Afrique, 3 - Amerique, 4 - Asie - Oceanie, 5 - Europe</p>

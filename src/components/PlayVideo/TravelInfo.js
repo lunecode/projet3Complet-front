@@ -29,7 +29,7 @@ class TravelInfo extends Component {
         return (
             <>
 
-                {this.state.travel.filter(item => item.general_video_id_general_video == idVideo)
+                {this.state.travel.filter(item => item.general_video_id_general_video === idVideo)
 
                     .map(item => (
                         <div className="container_travel" key={item.id_travel_information}>
