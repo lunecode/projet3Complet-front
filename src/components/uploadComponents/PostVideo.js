@@ -1,28 +1,11 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { NavLink } from 'react-router-dom'
-
 import './PostVideo.css'
-
-
-
-
-// UPLOAD PAGE 1 / VIDEO AND DESCRIPTION
-// ALLOW TO INSERT DATA IN "GENERAL_VIDEO" TABLE
-// TEST OK
-
-
-
 import './PostVideo.css'
-
 import UploadIcon from '../../Images-tripitto/Icon/Upload-Video.png'
 import CoverIcon from '../../Images-tripitto/Icon/Upload Image.png'
 
-
-
-// UPLOAD PAGE 1 / VIDEO AND DESCRIPTION
-// ALLOW TO INSERT DATA IN "GENERAL_VIDEO" TABLE
-// TEST OK
 class PostVideo extends Component {
   state = {
   }
@@ -44,7 +27,7 @@ class PostVideo extends Component {
   }
 
   render() {
-    const { video_link, video_title, profil_id_profil, video_description, equipment, link_equipment, equipment2, link_equipment2, equipment3, link_equipment3, cover_picture } = this.state
+    const {video_link, profil_id_profil,equipment, link_equipment, equipment2, link_equipment2, equipment3, link_equipment3, cover_picture } = this.state
     return (
       <div>
         <form onSubmit={this.submitHandler}>

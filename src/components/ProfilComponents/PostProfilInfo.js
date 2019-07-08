@@ -2,7 +2,7 @@ import React from 'react'
 import './PostProfilInfo.css'
 import { NavLink } from 'react-router-dom'
 import UploadImgProfil from '../../components/ProfilComponents/UploadImgProfil.js';
-import ModalDeleteVideo from '../../components/ProfilComponents/ModalDeleteVideo.js';
+
 
 
 

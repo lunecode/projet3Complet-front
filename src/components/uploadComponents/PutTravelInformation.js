@@ -35,6 +35,7 @@ changeHandler = (e) => {
 }
 
 
+
 submitHandler = e => {
   e.preventDefault()
   console.log(this.state)
@@ -45,7 +46,6 @@ submitHandler = e => {
     .catch(error => {
       console.log(error)
     })
-
 }
 
 render() {

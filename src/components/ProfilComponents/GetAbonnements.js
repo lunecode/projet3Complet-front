@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import { NavLink } from 'react-router-dom';
 import './GetAbonnements.scss'
-
-// image
 import image1 from '../../Images-tripitto/iconAbonnements/img-following-1.jpg'
 import image2 from '../../Images-tripitto/iconAbonnements/img-following-2.jpg'
 import image3 from '../../Images-tripitto/iconAbonnements/img-following-3.jpg'
@@ -12,8 +10,6 @@ import image5 from '../../Images-tripitto/iconAbonnements/img-following-5.jpg'
 import iconSearch from '../../Images-tripitto/Icon/TRAILING ICON.png'
 import iconPlus from '../../Images-tripitto/Icon/Plus.png'
 
-
-import iconArrow from '../../Images-tripitto/iconAbonnements/icon-arrow.png'
 
 class GetAbonnements extends Component {
     state = {
@@ -32,14 +28,6 @@ class GetAbonnements extends Component {
     render() {
         return (
             <>
-                {/* {this.state.Following.map(item => (
-          <li key={item.id_following}>
-          {item.following_user}
-          {item.firstname}
-          {item.pseudo}
-      
-        </li>
-        ))} */}
                 <div className="bloc-page-profil">
                     <div className="membres-profil">
                         <img src="https://i.ytimg.com/vi/BfCwN4iy6T8/maxresdefault.jpg" alt="pictures profil" />
@@ -180,7 +168,7 @@ class GetAbonnements extends Component {
                                         </div>
                                     </div>
                                     <div className='bloc-plus'>
-                                <button><img src={iconPlus} /></button>
+                                <button><img src={iconPlus} alt="img"/></button>
                                   </div>     
                                 </div>
                             </div>

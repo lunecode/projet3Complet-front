@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Navbar.scss'
 import Modal from './Modal';
@@ -6,33 +6,33 @@ import './Modal.scss'
 import Logo from '../Images-tripitto/Logo/B&W.png';
 import Search from '../Images-tripitto/Icons/Search-White.png';
 import Avatar from '../Images-tripitto/Icon/User/normal.png';
-import Notification from '../Images-tripitto/Icon/Notifications.png';
 import NotificationPopup from './HomeComponents/NotificationPopup';
-import ModalDeleteVideo from './ProfilComponents/ModalDeleteVideo';
+
 
 class Navbar extends Component {
-state = {
-    isModalOpen: false,
-    // ForgottenPassword: false,
-}
+    state = {
+        isModalOpen: false,
+        // ForgottenPassword: false,
+    }
 
 openModal =() => {
     this.setState( { isModalOpen: true} )
 console.log(this.state.isModalOpen);
+return 
 
-}
+    }
 
-closeModal = () => {
-    this.setState( { isModalOpen: false } )
-    console.log(this.state.isModalOpen);
-}
+    closeModal = () => {
+        this.setState({ isModalOpen: false })
+        // console.log(this.state.isModalOpen);
+    }
 
-componentDidMount() {
-    this.openModal()
-    this.closeModal()
-}
+    componentDidMount() {
+        this.openModal()
+        this.closeModal()
+    }
 
-    render () {
+    render() {
         const { isModalOpen } = this.state
         return (
             <>
@@ -40,31 +40,47 @@ componentDidMount() {
                     <nav className="container_nav">
                         <div className="containerNavLeft">
                             <div className="divLogoTripitto">
-                            <NavLink exact to="/"><img className="logoTripitto" src={Logo}alt="logo tripitto"></img></NavLink>
+                                <NavLink exact to="/"><img className="logoTripitto" src={Logo} alt="logo tripitto"></img></NavLink>
                             </div>
                             <form method="GET" action="rechercher" className="Search">
                                 <input className="inputNav" type="text" placeholder="Voyager..."></input>
-                                <img className="icone-loupe"src={Search}alt="Search"></img>
+                                <img className="icone-loupe" src={Search} alt="Search"></img>
                             </form>
                             <ul className="ulNav">
-                                <li><NavLink exact to="/">VIDÉOS</NavLink></li>
+                                <li><NavLink exact to="/">VIDÉOS
+                                    <div class="dropdown">
+                                        <i class="fa fa-caret-down"></i>
+                                        <div class="dropdown-content">
+                                            <a href="#">AFRIQUE</a>
+                                            <a href="#">ASIE-OCEANIE</a>
+                                            <a href="#">EUROPE</a>
+                                            <a href="#">AMERIQUE</a>
+                                            <a href="#">AUTRES</a>
+                                        </div>
+                                    </div></NavLink></li>
+
                                 <li><NavLink exact to="/">VIDÉASTES</NavLink></li>
+
+
+
                             </ul>
+
                         </div>
                         <div className="containerNavRight">
                             <ul className="Ulbutton">
-                             <li><NavLink exact to="/Profil"><img className="logoAvatar" src={Avatar}alt="logo tripitto"></img></NavLink></li>  
+                                <li><NavLink exact to="/Profil"><img className="logoAvatar" src={Avatar} alt="logo tripitto"></img></NavLink></li>
                                 <li><NotificationPopup /></li>
                                 <li><button onClick={this.openModal} className="buttonNavbar">PUBLIER</button></li>
                             </ul>
                         </div>
-                    </nav> 
+                    </nav>
                 </header>
                 <div className="containerModal">
-                    <Modal isOpen={isModalOpen} onClose={this.closeModal}/>
+                    <Modal isOpen={isModalOpen} onClose={this.closeModal} />
                     {/* <Modal isOpenForgottenPassword={ForgottenPassword} onCloseForgottenPassword={this.closeModalForgottenPassword} /> */}
                 </div>
-             
+
+
             </>
         )
     }

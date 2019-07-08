@@ -12,7 +12,6 @@ import axios from "axios"
 
 class Profil extends Component {
   state={
-   
   }
   submitHandler = e => {
     e.preventDefault()

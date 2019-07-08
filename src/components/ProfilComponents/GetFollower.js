@@ -181,7 +181,7 @@ class GetFollower extends Component {
                                 </div>
                             </div>
                             <div className='bloc-plus'>
-                                <button><img src={iconPlus} /></button>
+                                <button><img src={iconPlus} alt="img" /></button>
                             </div>
                         </form>
                     </div>

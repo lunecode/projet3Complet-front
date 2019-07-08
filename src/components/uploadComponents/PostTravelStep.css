@@ -42,16 +42,7 @@
     font-weight: normal;
 }
 
-.videoUser{
-    grid-column-start: 1;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    box-shadow: 0 4px 8px 0 #e7a50c33;
-    transition: 0.3s;
-    font-family: 'Lora', sans-serif;
-    
-    
-}
+
 
 .videoUser:hover{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -336,7 +327,6 @@
 }
 
 
-
 .choice{
     width:90%;
 }
@@ -364,7 +354,7 @@
 
 .button2{
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 
    
 }
@@ -397,5 +387,6 @@
     padding: 8px;
     border: 1px solid #39BFD7;
     width:150px;
+    text-decoration: none;
 }
 

@@ -1,9 +1,6 @@
 import React from 'react'
 import './PostSecurityProfil.css'
-
-import IconProfil from '../../Images-tripitto/Icon/User/normal.png'
-import iconIdea from '../../Images-tripitto/Icon/Idea.png'
-import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom'
+import { BrowserRouter as  NavLink } from 'react-router-dom'
 
 const PostSecurityProfil = (props) => {
   return (

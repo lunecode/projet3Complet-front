@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import axios from 'axios'
 import { NavLink } from 'react-router-dom'
 import iconSearch from '../../Images-tripitto/Icon/TRAILING ICON.png'
-import iconArrow from '../../Images-tripitto/iconAbonnements/icon-arrow.png'
 import "./VideoProfil.scss"
 import Partager from '../../Images-tripitto/Icon_Vidéo/Partager.png'
 import Delete from '../../Images-tripitto/Icon_Vidéo/Delete.png'

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import './UserCommentDelete.css';
 
 // Permet d'inserer des données pour un test dans la table "comment"
 
@@ -29,13 +30,17 @@ submitHandler = e => {
 render() {
     const { id_comment } = this.state
     return (
-    <div>
+    <div className="container_delete">
         <form onSubmit={this.submitHandler}>
-            <div>
+            <div className="delete_input">
             id_comment:<input type="text" name="id_comment" value={id_comment} onChange={this.changeHandler} />
-            </div>
             <button type="submit">Submit</button>
+            </div>
+           
         </form>
+        <div className="commentButton">
+                <button className="buttonComment">VOIR PLUS</button>
+            </div>
     </div>
   )
 }

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+ import React, { Component } from 'react';
 
 class ModalDeleteVideo extends Component {
   render() {
@@ -9,5 +9,4 @@ class ModalDeleteVideo extends Component {
     );
   }
 }
-
-export default ModalDeleteVideo;
+ export default ModalDeleteVideo;

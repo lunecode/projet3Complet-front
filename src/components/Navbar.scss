@@ -52,6 +52,9 @@ $colorButton: #5dd8dc;
     }
 .ulNav a {
     color: white;
+    font-weight: bold;
+    font-family: 'Robotoregular';
+    font-size: 0.85vw;
     text-decoration: none;
 }
 
@@ -101,7 +104,78 @@ $colorButton: #5dd8dc;
     }
 
 
-// *************************MODAL***************************
+    .dropdown-menu:hover{
+        transform: scale(1.19);
+        transition: 1s;
+      }
 
 
 
+/* *********test */
+// .navbar {
+//     overflow: hidden;
+//     background-color: #333;
+//   }
+  
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .dropdown {
+    float: left;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .dropdown {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    z-index: 1;
+    
+  }
+  
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #c71515;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 140px 160px;
+    margin-top:2.30%;
+    z-index: 1;
+    
+  }
+  
+  .dropdown-content a {
+    float: none;
+    position: absolute;
+    color: black;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    z-index: 1;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+    position: absolute;
+    z-index: 1;
+  
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+    z-index: 1;
+
+  }
