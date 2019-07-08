@@ -35,6 +35,9 @@ class PostTravelInformation extends Component {
     continent_id_continent: ''
   }
 
+
+  // ALLOW TO GIVE THE ID OF THE ENUM
+
   type1 = () => {
     this.setState({ travel_type: 1 })
   }
@@ -48,7 +51,7 @@ class PostTravelInformation extends Component {
     this.setState({ travel_type: 4 })
   }
 
-
+// ALLOW TO GIVE THE ID OF THE CONTINENT WHEN SELECTED
 
   continentID = (e) => {
     if (e.target.value === 'AUTRES') {
@@ -65,14 +68,9 @@ class PostTravelInformation extends Component {
   }
 
 
-
-
   changeHandler = (e) => {
     this.setState({ [e.target.name]: e.target.value })
   }
-
-
-
 
 
   submitHandlerInformation = e => {
@@ -84,27 +82,25 @@ class PostTravelInformation extends Component {
       .catch(error => {
         console.log(error)
       })
-      }
-  
-
-
+      } 
 
 
 
   render() {
-    // let i = 1
+    // INITIALIZE THE STATE FOR THE FORM
     const { countries, travel_duration, departure_month, nb_step, accomodation_budget, activities_budget } = this.state
 
+
+    // ALLOW TO ACCES CONTINENT JSON
     const continent = ContinentList.map((item) => 
     <option key={item.id}>{item.continent}</option>)
 
-
+    // ALLOW TO ACCESS COUNTRY JSON
     const country = CountryList.map((item) =>
       <option key={item.id}>{item.country}</option>)
 
+    // ALLOW TO ASSOCIATE THE ID OF THE VIDEO TO THE TRAVEL INFORMATION
     const url = window.location.href.slice(40);
-
-
     this.state.general_video_id_general_video = url
 
     return (
@@ -144,13 +140,6 @@ class PostTravelInformation extends Component {
                 {country}
               </select>
             </div>
-
-
-            {/* <div className="continent">
-              <p>Destination*</p>
-              <input className="input-continent" type='text' name="continent" placeholder='continent' />
-            </div>  */}
-
 
 
             <div className="moreCountry">
@@ -213,7 +202,7 @@ class PostTravelInformation extends Component {
 
 
             {/* THIS INPUT RECEIVED THE ID OF THE TRAVEL TYPE ENUM, ITS HIDDEN FOR THE FRONT */}
-            <input className="input-travel_type" type="text" name="travel_type" value={this.state.travel_type} onChange={this.changeHandler} />
+            <input className="input-travel_type" type="hidden" name="travel_type" value={this.state.travel_type} onChange={this.changeHandler} />
 
 
             <div className="travel_type" onClick={this.type1}>
@@ -236,18 +225,15 @@ class PostTravelInformation extends Component {
 
 
             {/* THIS INPUT ALLOW TO CAPTURE THE ID OF THE VIDEO ASSOCIATE WITH THE INFORMATION OF THIS PAGE */}
-
             <div className="fk-video">
-              {/* <p>Clé étrangère de l'id général video*</p> */}
-              {/* <input className="input-temp" type="text" name="general_video_id_general_video" value={getID} onChange={this.changeHandler} /> */}
-              <input className="input-temp" type="text" name="general_video_id_general_video" value={this.state.general_video_id_general_video} onChange={this.changeHandler} />
+              <input className="input-temp" type="hidden" name="general_video_id_general_video" value={this.state.general_video_id_general_video} onChange={this.changeHandler} />
             </div>
 
 
 
+              {/* THIS INPUT ALLOW TO CAPTURE THE ID OF THE CONTINENT SELECTED BY THE USERS */}
             <div className="fk-continent">
-              <p>Clé étrangère de l'id du continent*</p>
-              <p>1 - Autres, 2 - Afrique, 3 - Amerique, 4 - Asie - Oceanie, 5 - Europe</p>
+              {/* <p>1 - Autres, 2 - Afrique, 3 - Amerique, 4 - Asie - Oceanie, 5 - Europe</p> */}
               <input className="input-temp" type="number" name="continent_id_continent" value={this.state.continent_id_continent} onChange={this.changeHandler} />
             </div>
 
@@ -256,7 +242,7 @@ class PostTravelInformation extends Component {
               <button className="save" type="submit" >ENREGISTRER</button>
             </div>
             <div className="preview_div_info">
-              <NavLink to="/uploadVideo"><button className="preview" type="button">PRECEDENT</button></NavLink>
+              <NavLink to={`/uploadVideo/${this.props}`}><button className="preview" type="button">PRECEDENT</button></NavLink>
             </div>
             <div className="next_div_info">
               <NavLink to="/uploadTravelStep"><button className="next" type="button">SUIVANT</button></NavLink>

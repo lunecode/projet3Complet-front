@@ -6,6 +6,7 @@ import './PostVideo.css'
 
 import UploadIcon from '../../Images-tripitto/Icon/Upload-Video.png'
 import CoverIcon from '../../Images-tripitto/Icon/Upload Image.png'
+import AboutVideo from '../../Images-tripitto/AboutVideo.PNG'
 
 
 
@@ -26,7 +27,7 @@ class PostVideo extends Component {
   }
 
   changeHandlerYoutube = (e) => {
-    this.setState({ [e.target.name]: e.target.value.slice(32)})
+    this.setState({ [e.target.name]: e.target.value.slice(32) })
   }
 
   submitHandler = e => {
@@ -43,18 +44,18 @@ class PostVideo extends Component {
 
   render() {
     const { video_title, video_link, video_description, profil_id_profil, equipment, link_equipment, equipment2, link_equipment2, equipment3, link_equipment3, cover_picture } = this.state
-    
+
     return (
       <div>
         <form onSubmit={this.submitHandler}>
           <div className='grid_postVideo'>
 
-            <div className="empty">
-            </div>
+            <img src={AboutVideo} className="AboutVideo" />
+
 
             <div className="upload-link">
               <img className="uploadIconVideo" src={UploadIcon} alt="upload icon"></img>
-              <p>Lien de la vidéo</p>
+              <p>Lien de la vidéo Youtube</p>
               <input className="input-upload" type='text' name="video_link" value={video_link} onChange={this.changeHandlerYoutube} />
             </div>
 
@@ -66,9 +67,13 @@ class PostVideo extends Component {
 
             <div className="description">
               <p>Description</p>
-              <textarea rows="8" cols="135" placeholder="Une description qui donne envie, très envie" type="text" name="video_description" value={video_description} onChange={this.changeHandler} />
+              <textarea rows="6" cols="134" placeholder="Une description qui donne envie, très envie" type="text" name="video_description" value={video_description} onChange={this.changeHandler} />
             </div>
 
+            <div className="showreel">
+              <input type="checkbox" />
+              <label> Cette vidéo est un showreel qui présente mon portfolio vidéo</label>
+            </div>
 
             <div className="title-equipment1">
               <p>Equipement utilisés pour filmer</p>
@@ -130,9 +135,7 @@ class PostVideo extends Component {
             </div>
 
             <div className="next-div">
-            <NavLink to={`/uploadInformation/${this.props.idVideo}`}><button className="next" type="button">SUIVANT</button></NavLink>
-
-            {/* <NavLink to="/uploadInformation"><button className="next-button" type="button"> SUIVANT</button></NavLink> */}
+              <NavLink to={`/uploadInformation/${this.props.idVideo}`}><button className="next-button" type="button">SUIVANT</button></NavLink>
             </div>
 
 
