@@ -43,6 +43,7 @@ class PostVideo extends Component {
 
   render() {
     const { video_title, video_link, video_description, profil_id_profil, equipment, link_equipment, equipment2, link_equipment2, equipment3, link_equipment3, cover_picture } = this.state
+    
     return (
       <div>
         <form onSubmit={this.submitHandler}>
@@ -129,7 +130,9 @@ class PostVideo extends Component {
             </div>
 
             <div className="next-div">
-            <NavLink to="/uploadInformation"><button className="next-button" type="button"> SUIVANT</button></NavLink>
+            <NavLink to={`/uploadInformation/${this.props.idVideo}`}><button className="next" type="button">SUIVANT</button></NavLink>
+
+            {/* <NavLink to="/uploadInformation"><button className="next-button" type="button"> SUIVANT</button></NavLink> */}
             </div>
 
 

@@ -3,13 +3,12 @@ import axios from 'axios';
 
 import { NavLink } from 'react-router-dom'
 
-
 import family from '../../Images-tripitto/Icon/Aventurier/En_famille.png'
 import couple from '../../Images-tripitto/Icon/Aventurier/en couple.png'
 import friend from '../../Images-tripitto/Icon/Aventurier/entre ami.png'
 import alone from '../../Images-tripitto/Icon/Aventurier/seul.png'
 import './PostTravelInformation.css';
-// import ContinentList from '../json/Continent.json'
+import ContinentList from '../json/Continent.json'
 import CountryList from '../json/Country.json'
 
 
@@ -20,7 +19,6 @@ import CountryList from '../json/Country.json'
 // ALLOW TO INSERT DATA IN "TRAVEL INFORMATION" TABLE
 
 // MUST SEE FOR THE "TRAVEL_TYPE" COLUMN TO CHANGE TYPE TO ENUM ON NOT VARCHAR ==> DONE, NEED INFORM OTHER TO DO THE CHANGE
-
 
 // ALTER TABLE FOR DELETE "DEPARTURE_YEAR" COLUMN ==> DONE, NEED INFORM OTHER TO DO THE CHANGE
 
@@ -33,8 +31,8 @@ import CountryList from '../json/Country.json'
 
 class PostTravelInformation extends Component {
   state = {
-    travel_type: 0,
-    idGeneralVideo: ''
+    general_video_id_general_video: '',
+    continent_id_continent: ''
   }
 
   type1 = () => {
@@ -51,9 +49,30 @@ class PostTravelInformation extends Component {
   }
 
 
+
+  continentID = (e) => {
+    if (e.target.value === 'AUTRES') {
+      this.setState({ continent_id_continent: 1 })
+    } else if (e.target.value === 'AFRIQUE') {
+      this.setState({ continent_id_continent: 2 })
+    } else if (e.target.value === 'AMERIQUE') {
+      this.setState({ continent_id_continent: 3 })
+    } else if (e.target.value === 'ASIE-OCEANIE') {
+      this.setState({ continent_id_continent: 4 })
+    } else if (e.target.value === 'EUROPE') {
+      this.setState({ continent_id_continent: 5 })
+    }
+  }
+
+
+
+
   changeHandler = (e) => {
     this.setState({ [e.target.name]: e.target.value })
   }
+
+
+
 
 
   submitHandlerInformation = e => {
@@ -65,31 +84,35 @@ class PostTravelInformation extends Component {
       .catch(error => {
         console.log(error)
       })
-  }
+      }
+  
 
-  getIdVideo = async () => {
-    const res = await axios.get('http://localhost:3000/general_video/get_id_general_video')
-    this.setState({ idGeneralVideo: res.data[0] })
-    console.log(this.state.idGeneralVideo.id_general_video)
-  }
-  componentDidMount() {
-    this.getIdVideo()
-  }
+
 
 
 
   render() {
-    let i = 1
-    const { continent, countries, travel_duration, departure_month, nb_step, accomodation_budget, activities_budget } = this.state
-    const id = this.state.idGeneralVideo.id_general_video
-    const country = CountryList.map((item) => 
-    <option key={item.id}>{item.country}</option>)
+    // let i = 1
+    const { countries, travel_duration, departure_month, nb_step, accomodation_budget, activities_budget } = this.state
+
+    const continent = ContinentList.map((item) => 
+    <option key={item.id}>{item.continent}</option>)
+
+
+    const country = CountryList.map((item) =>
+      <option key={item.id}>{item.country}</option>)
+
+    const url = window.location.href.slice(40);
+
+
+    this.state.general_video_id_general_video = url
 
     return (
       <>
         <form onSubmit={this.submitHandlerInformation}>
           <div className='grid_postInformation'>
             <div className='empty'></div>
+
 
             {/* {this.state.videos.map(item => (
           <li key={item.id_general_video}>
@@ -103,20 +126,12 @@ class PostTravelInformation extends Component {
         ))} */}
 
 
-            {/* <div className="continent">
-              <p>Destination*</p>
-              <input className="input-continent" type='text' name="continent" placeholder='continent' value={continent} onChange={this.changeHandler} />
-            </div> */}
-
-            <div className="continent">
+            <div className="continent" onClick={this.continentID}>
               <label>
                 Destination :
-              <select value={continent} onChange={this.changeHandler}>
-                  <option value="Autres">Autres</option>
-                  <option value="Afrique">Afrique</option>
-                  <option value="Amerique">Amerique</option>
-                  <option value="Asie-Océanie">Asie-Océanie</option>
-                  <option value="Europe">Europe</option>
+                <select name="continent" >
+                  <option>continent</option>
+                  {continent}
                 </select>
               </label>
             </div>
@@ -124,28 +139,18 @@ class PostTravelInformation extends Component {
 
 
             <div className="country">
-                  <select>
-                    {country}
-                    {/* <option value={item.country}></option> */}
-                  </select>
+              <select name="countries" value={countries} onChange={this.changeHandler}>
+                <option>Pays</option>
+                {country}
+              </select>
             </div>
 
-
-            {/* {country.map(item => (
-              <li key={i++}>
-                <p>{item.country}</p>
-              </li>
-            ))} */}
 
             {/* <div className="continent">
               <p>Destination*</p>
               <input className="input-continent" type='text' name="continent" placeholder='continent' />
             </div>  */}
 
-            {/* <div className="country">
-              <p>Pays</p>
-              <input className="input-country" type='text' name="countries" placeholder="country" value={countries} onChange={this.changeHandler} />
-            </div> */}
 
 
             <div className="moreCountry">
@@ -208,7 +213,7 @@ class PostTravelInformation extends Component {
 
 
             {/* THIS INPUT RECEIVED THE ID OF THE TRAVEL TYPE ENUM, ITS HIDDEN FOR THE FRONT */}
-            <input className="input-travel_type" type="hidden" name="travel_type" value={this.state.travel_type} onChange={this.changeHandler} />
+            <input className="input-travel_type" type="text" name="travel_type" value={this.state.travel_type} onChange={this.changeHandler} />
 
 
             <div className="travel_type" onClick={this.type1}>
@@ -230,11 +235,12 @@ class PostTravelInformation extends Component {
 
 
 
-{/* THIS INPUT ALLOW TO CAPTURE THE ID OF THE VIDEO ASSOCIATE WITH THE INFORMATION OF THIS PAGE */}
+            {/* THIS INPUT ALLOW TO CAPTURE THE ID OF THE VIDEO ASSOCIATE WITH THE INFORMATION OF THIS PAGE */}
 
             <div className="fk-video">
               {/* <p>Clé étrangère de l'id général video*</p> */}
-              <input className="input-temp" type="hidden" name="general_video_id_general_video" value={id} onChange={this.changeHandler} />
+              {/* <input className="input-temp" type="text" name="general_video_id_general_video" value={getID} onChange={this.changeHandler} /> */}
+              <input className="input-temp" type="text" name="general_video_id_general_video" value={this.state.general_video_id_general_video} onChange={this.changeHandler} />
             </div>
 
 
@@ -242,7 +248,7 @@ class PostTravelInformation extends Component {
             <div className="fk-continent">
               <p>Clé étrangère de l'id du continent*</p>
               <p>1 - Autres, 2 - Afrique, 3 - Amerique, 4 - Asie - Oceanie, 5 - Europe</p>
-              <input className="input-temp" type="number" name="continent_id_continent" value={this.continent} onChange={this.changeHandler} />
+              <input className="input-temp" type="number" name="continent_id_continent" value={this.state.continent_id_continent} onChange={this.changeHandler} />
             </div>
 
 

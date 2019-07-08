@@ -50,47 +50,47 @@ class GetAbonnements extends Component {
                     </div>
                     <div className='position-bloc'>
                         <div className='profil-menu'>
-                        <ul>
-            <li>
-              <NavLink
-                className="nav"
-                to="/Profil" exact>Profil</NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/Video" exact >Video</NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/Abonnements" exact >Abonnements</NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/Abonnés" exact >Abonnés</NavLink>
-               </li>
-               <li>
-              <NavLink
-                to="/Notifications" exact >Notifications</NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/Security" exact >Sécurité</NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/Mettre_à_niveau" exact >Mettre à niveau</NavLink>
-            </li>
-          </ul>
+                            <ul>
+                                <li>
+                                    <NavLink
+                                        className="nav"
+                                        to="/Profil" exact>Profil</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink
+                                        to="/Video" exact >Video</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink
+                                        to="/Abonnements" exact >Abonnements</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink
+                                        to="/Abonnés" exact >Abonnés</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink
+                                        to="/Notifications" exact >Notifications</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink
+                                        to="/Security" exact >Sécurité</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink
+                                        to="/Mettre_à_niveau" exact >Mettre à niveau</NavLink>
+                                </li>
+                            </ul>
                         </div>
                         <form className="following-block">
                             <div>
                                 <h2>Abonnements (35)</h2>
                                 <div className="search-following">
-                                    <p className='tri-following'>Trier par 
+                                    <p className='tri-following'>Trier par
                                     <ul class='filter-menu'>
-                                    <li>Date d'abonnement</li>
-                                    <li>Nom</li>
-                                    </ul>
+                                            <li>Date d'abonnement</li>
+                                            <li>Nom</li>
+                                        </ul>
                                     </p>
                                     <div className='search-bar-following'>
                                         <button type='submit'><img src={iconSearch} alt='icon search' /></button>
@@ -180,8 +180,8 @@ class GetAbonnements extends Component {
                                         </div>
                                     </div>
                                     <div className='bloc-plus'>
-                                <button><img src={iconPlus} /></button>
-                                  </div>     
+                                        <button><img src={iconPlus} alt='icon' /></button>
+                                    </div>
                                 </div>
                             </div>
                         </form>
