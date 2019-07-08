@@ -44,14 +44,14 @@ class PostTravelStep extends Component {
       })
   }
 
-  getIdVideo = async () => {
-    const res = await axios.get('http://localhost:3000/general_video/get_id_general_video')
-    this.setState({ idGeneralVideo: res.data[0] })
-    console.log(this.state.idGeneralVideo.id_general_video)
-    }
-    componentDidMount() {
-      this.getIdVideo()
-    }
+  // getIdVideo = async () => {
+  //   const res = await axios.get('http://localhost:3000/general_video/get_id_general_video')
+  //   this.setState({ idGeneralVideo: res.data[0] })
+  //   console.log(this.state.idGeneralVideo.id_general_video)
+  //   }
+  //   componentDidMount() {
+  //     this.getIdVideo()
+  //   }
 
 
   
@@ -61,11 +61,13 @@ class PostTravelStep extends Component {
     return (
 
       <form onSubmit={this.submitHandler}>
+
+
         <div className="postBody">
-          <div className="grid">
+          <div className="grid_travel_step">
             <h1>Itinéraire</h1>
 
-            <div className="videoUser">
+            {/* <div className="videoUser">
               <div className="bandeau">
                 <span className="bandeau1">100% Mise en ligne des video</span>
               </div>
@@ -80,9 +82,10 @@ class PostTravelStep extends Component {
                 <li>Résolution</li>
                 <li>Format de vidéo supportés</li>
               </div>
-            </div>
-            {/*          
-          this field will allow to select certain options concerning the travel with buttons */}
+            </div> */}
+            
+            
+            {/* this field will allow to select certain options concerning the travel with buttons */}
             <div className="travel">
 
 
