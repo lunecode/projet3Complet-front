@@ -22,14 +22,14 @@ class TravelInfo extends Component {
 
     render() {
 
-        // const url = window.location.href;
-        // const idVideo = url.slice(32)
-        // console.log(idVideo)
+        const url = window.location.href;
+        const idTravel = url.slice(32)
+        console.log(idTravel)
 
         return (
             <>
 
-                {this.state.travel.map(item => (
+                {this.state.travel.filter(item =>  item.id_travel_information == idTravel).map( item => (
                         <div className="container_travel" key={item.id_travel_information}>
                             <div className="travel">
                                 <p className="countryName1">{item.countries} <span className="month1">{item.departure_month}</span> <span className="year1">{item.departure_year} - </span><span className="duration">{item.travel_duration} jours</span></p>
