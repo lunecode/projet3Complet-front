@@ -125,8 +125,8 @@ class VideoProfil extends Component {
             <img  className="img1" src={modification} alt=""/> 
             <img className="img2"src={Partager} alt=""/>  
             <img className="img3"src={Vue} alt=""/> 
-           <div className="img3"><ModalDeleteVideo /></div> 
-            {/* <button onClick={this.removeDummy}><img className="img4"src={Delete} alt=""/> </button>  */}
+           <ModalDeleteVideo /> 
+            {/* <button onClick={this.removeDummy}><img className="img4"src={Delete} alt=""/></button>  */}
             </div>
           </div>
          

@@ -29,15 +29,24 @@ componentDidMount() {
 }
   render() {
     
-    return (
+    return ( 
+      <div className="as">
+      
+      <div className="modale_delete_open"><button onClick={this.openModalSecurity}><img src={Delete} alt=""/></button></div>
       <div className="Modal_delete_video">
-        <button onClick={this.openModalSecurity}><img className="img4"src={Delete} alt=""/></button>
         <div className={this.state.isModalSecurityOpen ?'affichage-block':'display-none'} >
-          <button onClick={this.removeDummy}>Removeeee</button></div>
-        <div>
-        <button onClick={this.closeModalSecurity}>close</button>
+        <div className="alerte_info">Etes-vous sûre de vouloir supprimer votre vidéo ?</div>
+        <p className="description_alerte">Votre vidéo et tous les bons plans partagés seront
+        définitivement supprimées. Confirmer la suppresion en renseignant votre mot de passe.
+        </p>
+        
+        <input placeholder="Mot de passe"/>
+      <div className="buttons_confirmer_annuler">
+       <div className="button_confirmer"><button onClick={this.closeModalSecurity}>ANNULER</button></div> 
+      <div className="button_annuler"> <button onClick={this.removeDummy}>CONFIRMER</button></div>
       </div>
-
+</div>
+      </div>
       </div>
     );
   }
