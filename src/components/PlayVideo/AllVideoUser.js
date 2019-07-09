@@ -21,9 +21,7 @@ render() {
 
     let i = 1;
 
-    const url = window.location.href;
-    const idVidUser = url.slice(32)
-    console.log(idVidUser)
+    
     
     const opts = {
         height: '150',
@@ -32,17 +30,20 @@ render() {
         autoplay: 0
         }
     };
+
+    const url = window.location.href;
+    const idVidUser = url.slice(32)
+    console.log(idVidUser);
     
     return (
     <>
-        {this.state.video.filter(item => item.id_general_video == idVidUser).map(item =>(
+        {this.state.video.map(item =>  (
         <div className="allVideoUser" key={i++}>
            {/* <h4> {item.lastname} {item.firstname}</h4>  */}
         <div className="youtubeVid">
         <YouTube  videoId={item.video_link} opts={opts} onReady={this._onReady}/>
+
         </div>
-        
-        
         <div className="containerAllVideoUser">
         <div key={item.id_profil}>
             <h4>{item.video_title}</h4>

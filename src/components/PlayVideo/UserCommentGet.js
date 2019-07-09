@@ -35,7 +35,6 @@ componentDidMount() {
 render() {
     let i = 1;
 
-
     const url = window.location.href;
     const idComment = url.slice(32)
     console.log(idComment)
