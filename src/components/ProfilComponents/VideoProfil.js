@@ -3,10 +3,9 @@ import { NavLink } from 'react-router-dom'
 import iconSearch from '../../Images-tripitto/Icon/TRAILING ICON.png'
 import "./VideoProfil.scss"
 import ModalDeleteVideo from '../../components/ProfilComponents/ModalDeleteVideo.js';
+import ModalHidevide from '../../components/ProfilComponents/ModalHidevideo.js';
 import Partager from '../../Images-tripitto/Icon_Vidéo/Partager.png'
-import Delete from '../../Images-tripitto/Icon_Vidéo/Delete.png'
 import modification from '../../Images-tripitto/Icon_Vidéo/modification.png'
-import Vue from '../../Images-tripitto/Icon_Vidéo/Vue.png'
 import pourcentage from '../../Images-tripitto/Icon_Vidéo/pourcentage.png'
 import pourcentage80 from '../../Images-tripitto/Icon_Vidéo/pourcentage80.png'
 import pourcentage60 from '../../Images-tripitto/Icon_Vidéo/pourcentage60.png'
@@ -123,10 +122,8 @@ class VideoProfil extends Component {
             <div className="icons_video"> 
             <img  className="img1" src={modification} alt=""/> 
             <img className="img2"src={Partager} alt=""/>  
-            <img className="img3"src={Vue} alt=""/> 
-            <div><ModalDeleteVideo /> </div>
-           
-            {/* <button onClick={this.removeDummy}><img className="img4"src={Delete} alt=""/></button>  */}
+            <ModalHidevide />
+            <ModalDeleteVideo />
             </div>
           </div>
          
@@ -166,7 +163,7 @@ class VideoProfil extends Component {
        <div className="icons_video"> 
             <img  className="img1" src={modification} alt=""/> 
             <img className="img2" src={Partager} alt=""/>  
-            <img className="img3"src={Vue} alt=""/> 
+           <ModalHidevide />
             <ModalDeleteVideo />
             </div>
           </div>
@@ -207,7 +204,7 @@ class VideoProfil extends Component {
        <div className="icons_video"> 
             <img  className="img1" src={modification} alt=""/> 
             <img className="img2"src={Partager} alt=""/>  
-            <img className="img3"src={Vue} alt=""/> 
+            <ModalHidevide />
             <ModalDeleteVideo />
             {/* <button onClick={this.removeDummy}><img className="img4"src={Delete} alt=""/> </button>  */}
             </div>
@@ -247,8 +244,7 @@ class VideoProfil extends Component {
        <div className="icons_video"> 
             <img  className="img1" src={modification} alt=""/> 
             <img className="img2"src={Partager} alt=""/>  
-            <img className="img3"src={Vue} alt=""/> 
-            {/* <button onClick={this.removeDummy}><img className="img4"src={Delete} alt=""/> </button>  */}
+            <ModalHidevide />
             <ModalDeleteVideo />
             </div>
           </div>
@@ -291,9 +287,7 @@ class VideoProfil extends Component {
        <div className="icons_video"> 
             <img  className="img1" src={modification} alt=""/> 
             <img className="img2"src={Partager} alt=""/>  
-            <img className="img3"src={Vue} alt=""/> 
-{/*
-            <button onClick={this.removeDummy}><img className="img4"src={Delete} alt=""/> </button>  */}
+            <ModalHidevide />
             <ModalDeleteVideo />
             </div>
           </div>
