@@ -105,7 +105,6 @@ class PostVideo extends Component {
 
 
             <div className="title-equipment3">
-
             </div>
             <div className="equipment3">
               <input className="input-equipment3" placeholder="IPhone X" type='text' name="equipment3" value={equipment3} onChange={this.changeHandler} />

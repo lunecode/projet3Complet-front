@@ -38,29 +38,35 @@ textarea {
   margin-top: 3vh;
 }
 
-video {
-  width: 100%;
-  height: auto;
-}
 
 .upload-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   border: solid 2px;
   border-color: #ed6256;
   box-shadow: 10px 5px 5px grey;
   grid-column: 1 / span 2;
   grid-row: 1 / span 3;
-  padding-left: 15%;
-  margin-top: 15%;
-  margin-left: 10%;
-  height: 45vh;
-}
-.input-upload{
-  width: 80%;
-  margin-left: 0;
+  margin-top: 10%;
+  margin-left: 20%;
+  height: 30vh;
+  width: 13vw;
+  justify-content: center;
 }
 .uploadIconVideo {
-  padding-top: 10%;
-  padding-left: 35%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10%;
+  height: 10%;
+}
+.upload-link p {
+  margin-left: auto;
+  margin-right: auto;
+}
+.upload-link .input-upload{
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
@@ -83,8 +89,6 @@ video {
   grid-row: 2;
   grid-column: 3 / 6;
   padding-left: 5%;
-  margin-top: -4vh;
-
 }
 .input-description {
   width: 93%;
@@ -98,7 +102,7 @@ resize: none;
   grid-row: 3;
   grid-column: 3 / span 6;
   margin-left: 2.8vw;
-  margin-top: -3vh;
+  margin-top: 2vh;
 }
 
 
@@ -107,14 +111,13 @@ resize: none;
   grid-row: 4;
   grid-column: 3;
   margin-left: 14%;
-  margin-top: -5vh;
 }
 
 .equipment1 {
   grid-row: 5;
   grid-column: 3;
   margin-left: 14%;
-  height: 10vh;
+  height: 5vh;
 }
 .input-equipment {
   height: 40%;
@@ -124,20 +127,18 @@ resize: none;
   grid-row: 6;
   grid-column: 3;
   margin-left: 14%;
-  margin-top: -6vh;
+  margin-top: -2vh;
 }
 .link1 {
-  grid-row: 7;
+  grid-row: 6;
   grid-column: 3;
   margin-left: 14%;
-  margin-bottom: 3vh;
+  margin-top: 3vh;
 }
 .input-link {
   height: 2vh;
   width: 80%;
 }
-
-
 
 
 
@@ -158,12 +159,13 @@ resize: none;
   grid-row: 6;
   grid-column: 4;
   margin-left: 4%;
-  margin-top: -6vh;
+  margin-top: -2vh;
 }
 .link2 {
-  grid-row: 7;
+  grid-row: 6;
   grid-column: 4;
   margin-left: 4%;
+  margin-top: 3vh;
 }
 .input-link2 {
   height: 2vh;
@@ -189,11 +191,12 @@ resize: none;
 .title-link3 {
   grid-row: 6;
   grid-column: 5;
-  margin-top: -6vh;
+  margin-top: -2vh;
 }
 .link3 {
-  grid-row: 7;
+  grid-row: 6;
   grid-column: 5;
+  margin-top: 3vh;
 }
 .input-link3 {
   height: 2vh;
@@ -214,8 +217,9 @@ resize: none;
   grid-row: 8;
   grid-column: 3;
   height: 25vh;
-  width: 70%;
+  width: 12vw;
   margin-left: 14%;
+  margin-top: 5vh;
 }
 .cover-picture img {
   margin-top: 5vh;;
@@ -239,7 +243,6 @@ resize: none;
   justify-content: center;
   margin-left: 50%;
   margin-right: 14%;
-  /* margin-top: 24vh; */
   min-width: 40%;
   padding-left: 50%;
   padding-bottom: 5vh;
@@ -261,7 +264,6 @@ resize: none;
   justify-content: center;
   margin-left: 50%;
   margin-right: 14%;
-  /* margin-bottom: 1vh; */
   min-width: 40%;
   padding-bottom: 5vh;
 }
