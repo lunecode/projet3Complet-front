@@ -81,7 +81,6 @@ return
                 </header>
                 <div className="containerModal">
                     <Modal isOpen={isModalOpen} onClose={this.closeModal} />
-                    {/* <Modal isOpenForgottenPassword={ForgottenPassword} onCloseForgottenPassword={this.closeModalForgottenPassword} /> */}
                 </div>
 
 
