@@ -15,7 +15,7 @@ import Share from '../../Images-tripitto/Icon/Share.png';
 
 class Video extends Component {
   state = {
-    idVideo: [],
+    idVideo: '',
     videos: [],
     popularity: []
   };
@@ -54,15 +54,13 @@ class Video extends Component {
       }
     };
 
-     
-
-    const url = window.location.href;
+    const url = window.location.href; 
     const idVideo = url.slice(32)
     console.log(idVideo)
 
     return (
     <>
-        {this.state.videos.filter(item => item.id_general_video === 1).map(item => (
+        {this.state.videos.filter(item => item.id_general_video == idVideo).map(item => (
           <div className="container_video" key={i++}>
             <div key={item.id_general_video}>
               <div className="video_user">
