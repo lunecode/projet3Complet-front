@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
+
+import ForgottenPassword2 from './ForgottenPassword2'
+import './ForgottenPassword.scss'
+
 // import axios from 'axios';
 
 import Lock from "../Images-tripitto/Icon/Lock.png"
 import ButtonFull from "../Images-tripitto/Buttons/white/Full.png"
 import ButtonGoogle from "../Images-tripitto/Buttons/Colored/Google.png"
 
-import ForgottenPassword from './ForgottenPassword'
-import './ForgottenPassword.scss'
-import ModalLogin from './ModalLogin'
-import './ModalLogin.scss'
+
 
 
 
@@ -44,56 +45,34 @@ import './ModalLogin.scss'
 // }
 
 
-class Modal extends Component {
+class Modal2 extends Component {
     state = {
-        ModalForgottenPassword: false,
-        ModalCreateLogin: false,
+        ModalForgottenPassword2: false,
     }
 
-    openModalForgottenPassword =() => {
-        this.setState( { ModalForgottenPassword: true} )
-        this.props.onClose()
-        // if (this.state.ModalForgottenPassword === true) {
-        //     return this.state.isModalOpen === false
-        // }console.log(this.state.isModalOpen);
+    openModalForgottenPassword2 =() => {
+        this.setState( { ModalForgottenPassword2: true} )
+        this.props.onClose4()
+    console.log(this.state.ModalForgottenPassword2);
     }
     
-    closeModalForgottenPassword = () => {
-        this.setState( { ModalForgottenPassword: false } )
-        console.log(this.state.ModalForgottenPassword);
-    }
-
-    openModalLogin =() => {
-        this.setState( { ModalCreateLogin: true} )
-        this.props.onClose()
-    console.log(this.state.ModalCreateLogin);
-    }
-    
-    closeModalLogin = () => {
-        this.setState( { ModalCreateLogin: false } )
-        console.log(this.state.ModalCreateLogin);
-    }
-
-
-    componentDidMount() {
-        this.openModalForgottenPassword()
-        this.closeModalForgottenPassword()
-        this.openModalLogin()
-        this.closeModalLogin()
+    closeModalForgottenPassword2 = () => {
+        this.setState( { ModalForgottenPassword2: false } )
+        console.log(this.state.ModalForgottenPassword2);
     }
 
     render () { 
-        const { isOpen, onClose } = this.props;
-        const { ModalForgottenPassword, ModalCreateLogin } = this.state
+        const { isOpen4, onClose4 } = this.props;
+        const { ModalForgottenPassword2 } = this.state
         return (
             <>
-                <div className={isOpen ? 'modal--is-open' : 'modal'}>
+                <div className={isOpen4 ? 'modal--is-open' : 'modal'}>
                     <div className="containerIs-open">
                         <div>
                             <h5 className="ConnexionModal">Connexion</h5>
                         </div>
                         <div className="divButtonModal">
-                            <button onClick={onClose}>X</button>
+                            <button onClick={onClose4}>X</button>
                         </div>
                     </div>
                     <div className="containerIs-open2">
@@ -110,7 +89,7 @@ class Modal extends Component {
                             <p><input className="checkBoxModal" type="checkbox" name="checkMe" id="checkMe" />Se souvenir de moi</p>
                         </div>
                         <div>
-                            <p onClick={this.openModalForgottenPassword} className="lockModal"><img src={Lock} alt=""></img>Mot de passe oublié</p>
+                            <p onClick={this.openModalForgottenPassword2} className="lockModal"><img src={Lock} alt=""></img>Mot de passe oublié</p>
                         </div>
                     </div>
                     <div className="containerIs-open4">
@@ -123,18 +102,12 @@ class Modal extends Component {
                         <div>
                             <img src={ButtonGoogle} alt="button google connexion"></img>
                         </div>
-                        <div className="register">
-                            <p>Vous n'avez pas de compte ? <span onClick={this.openModalLogin}>s'inscrire</span></p>
-                        </div>
                     </div>
                 </div>
-                <div>
-                <ForgottenPassword isOpen2={ModalForgottenPassword} onClose2={this.closeModalForgottenPassword} />
-                <ModalLogin isOpen3={ModalCreateLogin} onClose3={this.closeModalLogin} />
-                </div>
+                <ForgottenPassword2 isOpen5={ModalForgottenPassword2} onClose5={this.closeModalForgottenPassword2} />
             </>
         )
     }
 }
 
-export default Modal
+export default Modal2
