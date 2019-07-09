@@ -144,7 +144,6 @@ myFunction=(e)=>{
   document.getElementById("demo").innerHTML = x;
 }
   
-
   render() {
     return (
       <div className="pageprofil" >

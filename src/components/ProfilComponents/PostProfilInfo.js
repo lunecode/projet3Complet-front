@@ -4,10 +4,7 @@ import { NavLink } from 'react-router-dom'
 import UploadImgProfil from '../../components/ProfilComponents/UploadImgProfil.js';
 
 
-
-
 const PostProfilInfo = (props) => {
-
   return (
     <div className="bloc-page-profil">
       <div className="membres-profil">

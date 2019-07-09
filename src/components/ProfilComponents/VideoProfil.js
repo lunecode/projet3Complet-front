@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom'
 import iconSearch from '../../Images-tripitto/Icon/TRAILING ICON.png'
 import "./VideoProfil.scss"
+import ModalDeleteVideo from '../../components/ProfilComponents/ModalDeleteVideo.js';
 import Partager from '../../Images-tripitto/Icon_Vidéo/Partager.png'
 import Delete from '../../Images-tripitto/Icon_Vidéo/Delete.png'
 import modification from '../../Images-tripitto/Icon_Vidéo/modification.png'
@@ -18,11 +19,11 @@ import img4 from '../../Images-tripitto/Icon_Vidéo/img4.png'
 
 class VideoProfil extends Component {
 
-  removeDummy=() =>{
-    var elem = document.getElementById('dummy');
-    elem.parentNode.removeChild(elem);
-    return false;
-  }
+//   removeDummy=() =>{
+//     var elem = document.getElementById('dummy');
+//     elem.parentNode.removeChild(elem);
+//     return false;
+//   }
 
     render(){
         return (
@@ -124,11 +125,13 @@ class VideoProfil extends Component {
             <img  className="img1" src={modification} alt=""/> 
             <img className="img2"src={Partager} alt=""/>  
             <img className="img3"src={Vue} alt=""/> 
-            <button onClick={this.removeDummy}><img className="img4"src={Delete} alt=""/> </button> 
+           <div className="img3"><ModalDeleteVideo /></div> 
+            {/* <button onClick={this.removeDummy}><img className="img4"src={Delete} alt=""/> </button>  */}
             </div>
           </div>
+         
           </div>
-          
+           
   
         
      </div>
@@ -292,6 +295,7 @@ class VideoProfil extends Component {
             <img className="img3"src={Vue} alt=""/> 
 
             <button onClick={this.removeDummy}><img className="img4"src={Delete} alt=""/> </button> 
+            <ModalDeleteVideo />
             </div>
           </div>
           </div>   
@@ -309,8 +313,7 @@ class VideoProfil extends Component {
          <p>Ajouter une nouvelle video</p>
          </div>
           </div>
-          </div>   
-        
+          </div>     
      </div>
      </div> 
 
