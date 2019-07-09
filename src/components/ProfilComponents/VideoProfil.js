@@ -97,7 +97,6 @@ class VideoProfil extends Component {
 <div className="bloc_2_video">
 {/* /bloc video 1 */}
 <div className="list_videos" id ="dummy">
-
    <div>
           <div className="video_user1">
             <div className="status_durée">
@@ -125,15 +124,14 @@ class VideoProfil extends Component {
             <img  className="img1" src={modification} alt=""/> 
             <img className="img2"src={Partager} alt=""/>  
             <img className="img3"src={Vue} alt=""/> 
-           <ModalDeleteVideo /> 
+            <div><ModalDeleteVideo /> </div>
+           
             {/* <button onClick={this.removeDummy}><img className="img4"src={Delete} alt=""/></button>  */}
             </div>
           </div>
          
           </div>
            
-  
-        
      </div>
       
 
@@ -142,7 +140,6 @@ class VideoProfil extends Component {
 
 {/* /bloc video 2 */}
 <div className="list_videos" id ="dummy">
-
    <div>
        <div className="video_user1">
             <div className="status_durée">
@@ -165,12 +162,12 @@ class VideoProfil extends Component {
             <p className="B">.</p>
             <p className="C">Il y a 3 mois</p>
             <p className="D"> <img src={pourcentage80} alt=""/></p>
-            </div>
+       </div>
        <div className="icons_video"> 
             <img  className="img1" src={modification} alt=""/> 
-            <img className="img2"src={Partager} alt=""/>  
+            <img className="img2" src={Partager} alt=""/>  
             <img className="img3"src={Vue} alt=""/> 
-            <button onClick={this.removeDummy}><img className="img4"src={Delete} alt=""/> </button> 
+            <ModalDeleteVideo />
             </div>
           </div>
           </div>   
@@ -211,7 +208,8 @@ class VideoProfil extends Component {
             <img  className="img1" src={modification} alt=""/> 
             <img className="img2"src={Partager} alt=""/>  
             <img className="img3"src={Vue} alt=""/> 
-            <button onClick={this.removeDummy}><img className="img4"src={Delete} alt=""/> </button> 
+            <ModalDeleteVideo />
+            {/* <button onClick={this.removeDummy}><img className="img4"src={Delete} alt=""/> </button>  */}
             </div>
           </div>
           </div>   
@@ -250,7 +248,8 @@ class VideoProfil extends Component {
             <img  className="img1" src={modification} alt=""/> 
             <img className="img2"src={Partager} alt=""/>  
             <img className="img3"src={Vue} alt=""/> 
-            <button onClick={this.removeDummy}><img className="img4"src={Delete} alt=""/> </button> 
+            {/* <button onClick={this.removeDummy}><img className="img4"src={Delete} alt=""/> </button>  */}
+            <ModalDeleteVideo />
             </div>
           </div>
           </div>   
@@ -293,13 +292,12 @@ class VideoProfil extends Component {
             <img  className="img1" src={modification} alt=""/> 
             <img className="img2"src={Partager} alt=""/>  
             <img className="img3"src={Vue} alt=""/> 
-
-            <button onClick={this.removeDummy}><img className="img4"src={Delete} alt=""/> </button> 
+{/*
+            <button onClick={this.removeDummy}><img className="img4"src={Delete} alt=""/> </button>  */}
             <ModalDeleteVideo />
             </div>
           </div>
           </div>   
-        
      </div>
 
 

@@ -1,6 +1,6 @@
  import React, { Component } from 'react';
  import './ModalDeleteVideo.scss'
- 
+ import "./VideoProfil.scss"
  import Delete from '../../Images-tripitto/Icon_Vidéo/Delete.png'
 
 class ModalDeleteVideo extends Component {
@@ -30,20 +30,22 @@ componentDidMount() {
   render() {
     
     return ( 
-      <div className="as">
-      
-      <div className="modale_delete_open"><button onClick={this.openModalSecurity}><img src={Delete} alt=""/></button></div>
+      <div className="container-modal_video">
+      <button onClick={this.openModalSecurity}>
+        <img className="img4" src={Delete} alt=""/></button>
+
       <div className="Modal_delete_video">
         <div className={this.state.isModalSecurityOpen ?'affichage-block':'display-none'} >
-        <div className="alerte_info">Etes-vous sûre de vouloir supprimer votre vidéo ?</div>
+        <div className="alerte_info">Etes-vous sûre de vouloir supprimer votre vidéo ?
+      </div>
         <p className="description_alerte">Votre vidéo et tous les bons plans partagés seront
         définitivement supprimées. Confirmer la suppresion en renseignant votre mot de passe.
         </p>
         
-        <input placeholder="Mot de passe"/>
+        <input placeholder="Mot de passe" type="password"/>
       <div className="buttons_confirmer_annuler">
-       <div className="button_confirmer"><button onClick={this.closeModalSecurity}>ANNULER</button></div> 
-      <div className="button_annuler"> <button onClick={this.removeDummy}>CONFIRMER</button></div>
+       <div className="button_confirmer"onClick={this.closeModalSecurity}><button >ANNULER</button></div> 
+      <div className="button_annuler"onClick={this.removeDummy}><button >CONFIRMER</button></div>
       </div>
 </div>
       </div>
