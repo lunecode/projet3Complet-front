@@ -1,17 +1,39 @@
 import React, { Component } from 'react'
 
+import Modal from './Modal';
+import './Modal.scss'
+
 
 class ModalLogin extends Component {
 
-    // openFirstModal = () => {
-    //     this.props.openModalLogin()
-    //     this.closeModal() 
-    // }
+    state = {
+        isModalOpen: false,
+    }
+
+openFirstModal = () => {
+    this.openModal() 
+}
 
 
+openModal =() => {
+    this.setState( { isModalOpen: true} )
+console.log(this.state.isModalOpen);
+return 
+    }
+
+    closeModal = () => {
+        this.setState({ isModalOpen: false })
+        // console.log(this.state.isModalOpen);
+    }
+
+    componentDidMount() {
+        this.openModal()
+        this.closeModal()
+    }
 
     render () {
         const { isOpen3, onClose3 } = this.props;
+        const { isModalOpen } = this.state
         return (
             <>
             <div className={isOpen3 ? 'modalLogin--is-open' : 'modalLogin'}>
@@ -52,12 +74,15 @@ class ModalLogin extends Component {
                             <p>En créant un compte j'accepte les Conditions Générales d'utilisation de Tripitto</p>
                         </div>
                         <div>
-                            <p className="LoginToTheSite">Vous avez déjà un compte ? <span>Se connecter</span></p>
+                            <p className="LoginToTheSite">Vous avez déjà un compte ? <span onClick={this.openModal}>Se connecter</span></p>
                         </div>
 
                     </div>
 
             </div>
+            <div className="containerModal">
+                    <Modal isOpen={isModalOpen} onClose={this.closeModal} />
+                </div>
             </>
         )
     }
