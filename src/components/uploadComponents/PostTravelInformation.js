@@ -7,14 +7,15 @@ import family from '../../Images-tripitto/Icon/Aventurier/En_famille.png'
 import couple from '../../Images-tripitto/Icon/Aventurier/en couple.png'
 import friend from '../../Images-tripitto/Icon/Aventurier/entre ami.png'
 import alone from '../../Images-tripitto/Icon/Aventurier/seul.png'
-import AboutVideo2 from '../../Images-tripitto/AboutVideo2.PNG'
-import uploadVideoCard1 from '../../Images-tripitto/uploadVideoCard1.PNG'
-import itinerary_nb from '../../Images-tripitto/itinerary_nb.PNG'
+import AboutVideo2 from '../../Images-tripitto/imgUploadVideo/AboutVideo2.PNG'
+import uploadVideoCard3 from '../../Images-tripitto/imgUploadVideo/uploadVideoCard3.PNG'
+import itinerary_nb from '../../Images-tripitto/imgUploadVideo/itinerary_nb.PNG'
 
 import './PostTravelInformation.css';
 
 import ContinentList from '../json/Continent.json'
 import CountryList from '../json/Country.json'
+import { emptyStatement } from '@babel/types';
 
 
 
@@ -44,6 +45,11 @@ class PostTravelInformation extends Component {
   // ALLOW TO GIVE THE ID OF THE ENUM
 
   type1 = () => {
+    // ALLOW TO DISPLAY A BORDER WHEN WE CLIC ON THE IMG
+    // const images = document.querySelectorAll(".travel_type");
+    // images.forEach(function(i) {i.addEventListener("click", function(event) {
+    // i.classList.toggle("selected");
+    // })});
     this.setState({ travel_type: 1 })
   }
   type2 = () => {
@@ -69,6 +75,8 @@ class PostTravelInformation extends Component {
       this.setState({ continent_id_continent: 4 })
     } else if (e.target.value === 'EUROPE') {
       this.setState({ continent_id_continent: 5 })
+    } else if (e.target.value === 'Continent') {
+      this.setState({ continent_id_continent: emptyStatement })
     }
   }
 
@@ -119,7 +127,7 @@ class PostTravelInformation extends Component {
             </div>
 
 
-            <img src={uploadVideoCard1} className="uploadVideoCard"></img>
+            <img src={uploadVideoCard3} className="uploadVideoCard"></img>
 
 
             <div className="continent" onClick={this.continentID}>
@@ -215,6 +223,7 @@ class PostTravelInformation extends Component {
 
 
             {/* THIS INPUT RECEIVED THE ID OF THE TRAVEL TYPE ENUM, ITS HIDDEN FOR THE FRONT */}
+            
             <input className="input-travel_type" type="hidden" name="travel_type" value={this.state.travel_type} onChange={this.changeHandler} />
 
             <div className="travel_type" onClick={this.type1}>
@@ -233,6 +242,7 @@ class PostTravelInformation extends Component {
               <img src={alone} alt="Aventurier seul"></img>
               <p>Aventurier seul</p>
             </div>
+
 
 
 
@@ -258,10 +268,10 @@ class PostTravelInformation extends Component {
               <button className="save" type="submit" >ENREGISTRER</button>
             </div>
             <div className="preview_div_info">
-              <NavLink to={`/uploadVideo/${this.props}`}><button className="preview" type="button">PRECEDENT</button></NavLink>
+              <NavLink to={`/uploadVideo/${this.state.general_video_id_general_video}`}><button className="preview" type="button">PRECEDENT</button></NavLink>
             </div>
             <div className="next_div_info">
-              <NavLink to="/uploadTravelStep"><button className="next" type="button">SUIVANT</button></NavLink>
+              <NavLink to={`/uploadTravelStep/${this.state.general_video_id_general_video}`}><button className="next" type="button">SUIVANT</button></NavLink>
             </div>
           </div>
         </form>

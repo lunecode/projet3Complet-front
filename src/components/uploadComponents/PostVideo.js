@@ -6,7 +6,7 @@ import './PostVideo.css'
 
 import UploadIcon from '../../Images-tripitto/Icon/Upload-Video.png'
 import CoverIcon from '../../Images-tripitto/Icon/Upload Image.png'
-import AboutVideo from '../../Images-tripitto/AboutVideo.PNG'
+import AboutVideo from '../../Images-tripitto/imgUploadVideo/AboutVideo.PNG'
 
 
 

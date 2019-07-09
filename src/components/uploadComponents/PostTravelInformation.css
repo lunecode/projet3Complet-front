@@ -1,5 +1,4 @@
 /* style of the Upload page / travel_information*/
-/* page 55 to 64 of the invision page */
 
 
 @font-face {
@@ -29,11 +28,11 @@ input {
 
 
 .uploadVideoCard {
-  border: solid 1px #e67a14;
   grid-column: 1;
   grid-row: 1 / span 3;
   margin-top: 2vh;
   margin-left: 5vw;
+  box-shadow: 10px 5px 5px grey;
 }
 
 
@@ -237,7 +236,9 @@ margin-top: -9vh;
 .travel_type p {
   font-size: 1rem;
 }
-
+.travel_type.selected {
+  border: solid 1px blue;
+}
 
 
 
@@ -258,6 +259,9 @@ margin-top: -9vh;
 .travel_type2 p {
   font-size: 1rem;
   z-index: 1;
+}
+.travel_type2.selected {
+  border: solid 1px blue;
 }
 
 
