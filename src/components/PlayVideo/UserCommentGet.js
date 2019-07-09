@@ -41,7 +41,7 @@ render() {
     console.log(idComment)
     return (  
     <>
-        {this.state.comment.filter(item =>item.id_comment === 1).map(item =>(
+        {this.state.comment.filter(item =>item.id_comment <= 25).map(item =>(
                 <div className="container_get" key={i++}>
                 <div  key={item.id_comment}>
             {/* <li>{item.profile_picture}</li> */}
