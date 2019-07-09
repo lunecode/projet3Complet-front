@@ -121,6 +121,11 @@ $colorBackgroundModal: #45adcd;
     .LoginToTheSite span {
         color:  $colorBackgroundModal;
     }
+
+    .LoginToTheSite span:hover {
+        opacity: 0.6;
+    }
+
     .LoginToTheSite {
         color: gray;
         font-size: 14px;

@@ -1,6 +1,15 @@
 import React, { Component } from 'react'
 
+
 class ModalLogin extends Component {
+
+    // openFirstModal = () => {
+    //     this.props.openModalLogin()
+    //     this.closeModal() 
+    // }
+
+
+
     render () {
         const { isOpen3, onClose3 } = this.props;
         return (
