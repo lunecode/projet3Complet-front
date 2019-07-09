@@ -9,7 +9,7 @@ import './Modal.scss'
 import Logo from '../Images-tripitto/Logo/B&W.png';
 import Search from '../Images-tripitto/Icons/Search-White.png';
 import Avatar from '../Images-tripitto/Icon/User/normal.png';
-import Notification from '../Images-tripitto/Icon/Notifications.png';
+// import Notification from '../Images-tripitto/Icon/Notifications.png';
 import NotificationPopup from './HomeComponents/NotificationPopup';
 import ModalDeleteVideo from './ProfilComponents/ModalDeleteVideo';
 
@@ -74,7 +74,7 @@ return
                                 <li><NavLink exact to="/Profil"><img className="logoAvatar" src={Avatar} alt="logo tripitto"></img></NavLink></li>
                                 <li className="notification"><NotificationPopup /></li>
                                 <li><button onClick={this.openModal} className={this.state.isModalOpen === false ? "buttonNavbarConnexion" : "buttonNavbarConnexionNone"}>SE CONNECTER</button></li>
-                                <li><button onClick={this.openModal} className="buttonNavbar">PUBLIER</button></li>
+                                <li><button onClick={this.openModal} className={this.state.isModalOpen === false ? "buttonNavbarChange" : "buttonNavbar"}>PUBLIER</button></li>
                             </ul>
                         </div>
                     </nav>

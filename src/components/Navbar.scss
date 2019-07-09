@@ -102,15 +102,24 @@ $colorButton: #5dd8dc;
                 padding: 9px 25px;
                 border: none;
             }
+            .buttonNavbarChange {
+                background-color: #2C404D;
+                border: solid 1px #1BA2A2;
+                box-shadow: 0.3px 0.3px 0.3px 0.3px #1BA2A2;;
+                color: $colorButton;
+                font-size: 16px;
+                padding: 8px 25px;
+            }
             
             button.buttonNavbarConnexion {
                 border: none;
+                box-shadow: 0.3px 0.3px 0.3px 0.3px #1BA2A2;
                 color: white;
                 position: relative;
                 background-color: $colorButton;
                 font-size: 16px;
-                padding: 9px 25px;
-                right: 80px;
+                padding: 9px 12px;
+                right: 60px;
                 width: 130%;
             }
                 .buttonNavbarConnexionNone{
