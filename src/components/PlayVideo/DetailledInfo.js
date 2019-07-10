@@ -31,11 +31,16 @@ componentDidMount() {
 
 render() {
     let i = 1;
+
+    const url = window.location.href; 
+    const idDetailledVideo = url.slice(32)
+    console.log(idDetailledVideo)
     
     return (
     <>
-        {this.state.detailledInfo.map(item => (
+        {this.state.detailledInfo.filter(item =>  item.id_travel_step == idDetailledVideo).map (item =>(
         <div className="container_globalTravel" key={i++}>
+        <div key={item.id_travel_step}>
         <div className="container_info" key={item.id_travel_step}>
             <div className="container_detailled">
                 <div className="container_trip">
@@ -46,7 +51,7 @@ render() {
                     <span>{item.step_name}</span>
                     <span>{item.step_type}</span>
                     <span>{item.step_duration}</span>
-                    <p>Se déplacer en {item.step_transport} <img src={Moto} alt="village"/> <span className="location">Louez avant votre arrivée sur le site des compagnies internationales.</span> 
+                    <p>Se déplacer en {item.step_transport}  <span className="location">Louez avant votre arrivée sur le site des compagnies internationales.</span> 
                     </p>
                     <p> Plutôt habiter vers Mayan  ou Taynan </p>
                     <p>
@@ -97,6 +102,7 @@ render() {
                     </div>                    
                 </div>
             </div>
+        </div>
         </div>
         </div>
         ))}

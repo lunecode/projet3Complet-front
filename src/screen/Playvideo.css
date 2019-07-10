@@ -16,14 +16,13 @@
 }
 
 .contvid{
-    display: flex;
-    
-    
+    display: flex; 
+    width:100%;
 }
 
 .youtubeVid{
-    padding: 2%;
-    width:100%;
+    /* padding: 2%; */
+    width:80%;
 }
 
 .containerAllVideoUser{
