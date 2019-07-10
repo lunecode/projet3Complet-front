@@ -107,8 +107,7 @@ class VideoProfil extends Component {
             </div>
             </div>
 
-            <div className="imagescreen"><img src={img1} alt=""/></div>
-
+<div className="imagescreen"><img src={img1} alt=""/></div>
           <div className="countery"> 
             <h3> Dans es profondeur du canyon</h3>
             <p className="countery_p">USA</p>
@@ -118,10 +117,11 @@ class VideoProfil extends Component {
             <p className="B">.</p>
             <p className="C">Il y a un jour</p>
             <p className="D"> <img src={pourcentage} alt=""/></p>
-            </div>
+          </div>
             <div className="icons_video"> 
             <img  className="img1" src={modification} alt=""/> 
             <img className="img2"src={Partager} alt=""/>  
+
             <ModalHidevide />
             <ModalDeleteVideo />
             </div>

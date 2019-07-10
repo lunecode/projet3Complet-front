@@ -37,7 +37,7 @@ class GetFollower extends Component {
                     </div>
                     <div className='position-bloc'>
                         <div className='profil-menu'>
-                            <ul>
+                            <ul> 
                                 <li>
                                     <NavLink
                                         className="nav"
@@ -88,8 +88,6 @@ class GetFollower extends Component {
                                 </div>
                                 <div className="bloc-follower">
                                     {this.state.Follower.map(item => (
-
-
                                         <div className="bloc-follower-item">
                                             <div className="bloc-follower-info">
                                                 <div>

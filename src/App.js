@@ -11,7 +11,7 @@ import UploadTravelStep from './screen/UploadPage/UploadTravelStep';
 import Notifications from './screen/Notifications'
 import Abonnements from './screen/Abonnements'
 import Abonne from './screen/Abonne'
-// import ProfilDescription from './screen/ProfilDescription/ProfilDescription';
+import ProfilDescription from './screen/ProfilDescription/ProfilDescription';
 import Home from './screen/Home';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -35,6 +35,7 @@ class App extends Component {
             <Route path="/Notifications" exact component={Notifications} ></Route>
             <Route path="/Security" exact component={Security} ></Route>
                      {/* ***** */}
+            <Route path="/ProfilDescription" component={ProfilDescription} ></Route>
             <Route path="/uploadVideo" component={UploadVideo} ></Route>
             <Route path="/uploadInformation" component={UploadInformation} ></Route>
             <Route path="/uploadTravelStep" component={UploadTravelStep} ></Route>
