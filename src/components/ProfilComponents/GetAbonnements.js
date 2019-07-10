@@ -102,8 +102,8 @@ class GetAbonnements extends Component {
                                                 <p>{item.following}</p>
                                             </div>
                                         </div>
-                                        <div>
-                                            <button>Abonné</button>
+                                        <div className="btn-abonnements-bloc">
+                                            <button className="btn-abonnments">Abonné</button>
                                         </div>
                                     </div>
                                     ))}
