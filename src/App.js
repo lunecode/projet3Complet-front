@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import Security from './screen/Security';
-import ProfilDescription from './screen/ProfilDescription/ProfilDescription';
+// import ProfilDescription from './screen/ProfilDescription/ProfilDescription';
 import Security from './screen/Security';
 import Profil from './screen/Profil';
 import Video from './screen/Video';
@@ -18,10 +18,6 @@ import Footer from './components/Footer';
 import PlayVideo from './screen/PlayVideo';
 
 
-
-
-
-
 class App extends Component {
   render() {
     return (
@@ -30,11 +26,15 @@ class App extends Component {
         <div>
           <Navbar />
           <Switch>
-            <Route path="/" component={Home} exact></Route>
-            <Route path="/Profil" component={Profil}/>
-            <Route path="/ProfilDescription" component={ProfilDescription} ></Route>
-            <Route path="/Security" component={Security}/>
-            <Route path="/Video" component={Video}/>
+             {/* les routes de page Profil */}
+            <Route path="/" exact component={Home}  ></Route>
+            <Route path="/Profil" exact component={Profil}></Route>
+            <Route path="/Video" exact component={Video}></Route>
+            <Route path="/Abonnements"exact component={Abonnements} ></Route>
+            <Route path="/Abonnés" exact component={Abonne} ></Route>
+            <Route path="/Notifications" exact component={Notifications} ></Route>
+            <Route path="/Security" exact component={Security} ></Route>
+                     {/* ***** */}
             <Route path="/uploadVideo" component={UploadVideo} ></Route>
             <Route path="/uploadInformation" component={UploadInformation} ></Route>
             <Route path="/uploadTravelStep" component={UploadTravelStep} ></Route>
