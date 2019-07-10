@@ -98,7 +98,7 @@ class PostTravelStep extends Component {
 
             <img className="itineraty_step" src={Itinerary_Step}></img>
 
-<div className="white_style"></div>
+            <div className="white_style"></div>
 
             {/* this field will allow to select certain options concerning the travel with buttons, not using in this version of the site*/}
 
@@ -267,13 +267,13 @@ class PostTravelStep extends Component {
 
 
 
-{/* THIS INPUT ALLOW TO CAPTURE THE ID OF THE VIDEO ASSOCIATE WITH THE INFORMATION OF THIS PAGE */}
+            {/* THIS INPUT ALLOW TO CAPTURE THE ID OF THE VIDEO ASSOCIATE WITH THE INFORMATION OF THIS PAGE */}
             <div className="fk_video_step">
-              <input type="hidden" name="general_video_id_general_video" value={this.state.general_video_id_general_video} onChange={this.changeHandler}/>
+              <input type="hidden" name="general_video_id_general_video" value={this.state.general_video_id_general_video} onChange={this.changeHandler} />
             </div>
 
 
-            
+
             <div className="button2">
               <div className="styleBut">
                 <button className="but1" type="submit" >ENREGISTRER</button>
