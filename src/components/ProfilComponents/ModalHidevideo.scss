@@ -3,8 +3,8 @@
     img{
         cursor: pointer;
     }
-.Modal_Hide_video{
 
+.Modal_Hide_video{
     top: 50%;
     left: 50%;
     margin-top: -25px;
@@ -14,8 +14,8 @@
     width:500px;
     margin-left:15%;
     bottom: 15vh;
+
           .affichage-block{
-              
                 display: block;
                 border: rgb(79, 191, 212) ;
                 box-shadow: 0px 1px 1px 1px  rgb(79, 191, 212);
@@ -36,7 +36,6 @@
 }
 
 .alerte_info_Hide{
-
     background-color: rgb(79, 191, 212);
     color:white;
     padding: 16px;
@@ -64,9 +63,11 @@ P{
     width: 100px;
     margin-right:30px;
     border:1.5px solid #f86959;
-  button{
-   color:#f86959; 
-}
+
+        button{
+        background-color: white;
+        color:#f86959; 
+         }
 
     }
 
@@ -78,6 +79,7 @@ P{
         background:none;
         cursor: pointer;
         button{
+            background-color: white;
              color:#34bed3;
         }
     }
