@@ -12,6 +12,9 @@ import ButtonGoogle from "../Images-tripitto/Buttons/Colored/Google.png"
 
 
 
+// AUTHENTIFICATION
+
+
 
 // LOGIN OK THE TOKEN IS RECEIVED BUT NEED TO SEE WHAT HAPPEN AFTER
 

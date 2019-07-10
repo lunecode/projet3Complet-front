@@ -66,7 +66,7 @@ class  VideoProfilCompnent extends Component {
         return (
 
 <div className="VideoProfilCompnent">
-<ModalDeleteVideo/>
+
       <div className="membres-profil">
       <img src="https://images.pexels.com/photos/814499/pexels-photo-814499.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500" alt="pictures profil" />
       <div className="membres-profil-detail">

@@ -47,37 +47,37 @@ class GetFollower extends Component {
                     </div>
                     <div className='position-bloc'>
                         <div className='profil-menu'>
-                        <ul>
-            <li>
-              <NavLink
-                className="nav"
-                to="/Profil" exact>Profil</NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/Video" exact >Video</NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/Abonnements" exact >Abonnements</NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/Abonnés" exact >Abonnés</NavLink>
-               </li>
-               <li>
-              <NavLink
-                to="/Notifications" exact >Notifications</NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/Security" exact >Sécurité</NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/Mettre_à_niveau" exact >Mettre à niveau</NavLink>
-            </li>
-          </ul>
+                            <ul>
+                                <li>
+                                    <NavLink
+                                        className="nav"
+                                        to="/Profil" exact>Profil</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink
+                                        to="/Video" exact >Video</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink
+                                        to="/Abonnements" exact >Abonnements</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink
+                                        to="/Abonnés" exact >Abonnés</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink
+                                        to="/Notifications" exact >Notifications</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink
+                                        to="/Security" exact >Sécurité</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink
+                                        to="/Mettre_à_niveau" exact >Mettre à niveau</NavLink>
+                                </li>
+                            </ul>
                         </div>
                         <form className="following-block">
                             <div>
@@ -85,11 +85,11 @@ class GetFollower extends Component {
                                 <div className="search-following">
                                     <p className='tri-following'>Trier par
                                     <ul class='filter-menu'>
-                                    <li>Date d'abonnement</li>
-                                    <li>Nom</li>
-                                    </ul>
-                                     </p>
-                                    <button><img src={iconArrow} alt='icon fleche' width="20px" height="20px"/></button>
+                                            <li>Date d'abonnement</li>
+                                            <li>Nom</li>
+                                        </ul>
+                                    </p>
+                                    <button><img src={iconArrow} alt='icon fleche' width="20px" height="20px" /></button>
                                     <div className='search-bar-following'>
                                         <button type='submit'><img src={iconSearch} alt='icon search' /></button>
                                         <input type="text" name="" value="" placeholder="Retrouver un abonné" />
@@ -105,7 +105,7 @@ class GetFollower extends Component {
                                             <h3>Jeremias del Pozo</h3>
 
                                             <div className="info_follower">
-                                            
+
                                                 <p>Abonné a vos aventures depuis 27 jours</p>
                                             </div>
                                         </div>
@@ -121,7 +121,7 @@ class GetFollower extends Component {
                                             <h3>Alicia Stinger</h3>
 
                                             <div className="info_follower">
-                                               
+
                                                 <p>Abonné a vos aventures depuis 27 jours</p>
                                             </div>
                                         </div>
@@ -137,7 +137,7 @@ class GetFollower extends Component {
                                             <h3>Chineze Afemuna</h3>
 
                                             <div className="info_follower">
-                                               
+
                                                 <p>Abonné a vos aventures depuis 27 jours</p>
                                             </div>
                                         </div>
@@ -153,7 +153,7 @@ class GetFollower extends Component {
                                             <h3>Daisy Murphy</h3>
 
                                             <div className="info_follower">
-                                               
+
                                                 <p>Abonné a vos aventures depuis 27 jours</p>
                                             </div>
                                         </div>
@@ -169,7 +169,7 @@ class GetFollower extends Component {
                                             <h3>Sua Hua</h3>
 
                                             <div className="info_follower">
-                                               
+
                                                 <p>Abonné a vos aventures depuis 27 jours</p>
                                             </div>
                                         </div>
@@ -177,11 +177,11 @@ class GetFollower extends Component {
                                             <button>Abonné</button>
                                         </div>
                                     </div>
-                                           
+
                                 </div>
                             </div>
                             <div className='bloc-plus'>
-                                <button><img src={iconPlus} /></button>
+                                <button><img src={iconPlus} alt="icon" /></button>
                             </div>
                         </form>
                     </div>
