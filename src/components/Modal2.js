@@ -80,11 +80,11 @@ class Modal2 extends Component {
                     </div>
                     <div className="containerIs-open2">
                         <div className="divInputModal">
-                                <input type="text" name="mail" id="mail" placeholder="Adresse email"></input>
+                                <input type="text" name="email" id="email" placeholder="Adresse email"></input>
                                 
                         </div>
                         <div className="divInputModal" >
-                                <input type="text" name="mail" id="mail" placeholder="Mot de passe"></input>
+                                <input type="text" name="password" id="password" placeholder="Mot de passe"></input>
                         </div>
                     </div>
                     <div className="containerIs-open3">

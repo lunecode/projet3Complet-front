@@ -66,12 +66,13 @@ $colorBackgroundModal: #45adcd;
     text-align: center;
     margin-top: 25px;
 
-    #mail {
+    #email, #password {
         width: 70%;
         height: 30px;
         padding-left: 12px;
         color: $colorbackground;
         font-size: 14px;
+    
     }
 }
 
