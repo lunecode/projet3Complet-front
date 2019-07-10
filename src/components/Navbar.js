@@ -1,4 +1,4 @@
-import React, { Component} from 'react';
+import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import axios from 'axios'
 import Modal from './Modal'
@@ -23,6 +23,10 @@ class Navbar extends Component {
         autres: [],
     };
 
+    openModal = () => {
+        this.setState({ isModalOpen: true })
+    }
+
     getafrique = async () => {
         const res = await axios.get('http://localhost:3000/travel_information/get_travelinformation_continent_afrique')
         const africa = res.data
@@ -37,7 +41,7 @@ class Navbar extends Component {
     closeModal = () => {
         this.setState({ isModalOpen: false })
     }
-        
+
     geteurope = async () => {
         const res = await axios.get('http://localhost:3000/travel_information/get_travelinformation_continent_europe')
         const europes = res.data
@@ -60,67 +64,67 @@ class Navbar extends Component {
         this.getamerique()
         this.getautres()
     }
-    render () {
-const { isModalOpen } = this.state
+    render() {
+        const { isModalOpen } = this.state
         return (
             <div>
-            <header>
+                <header>
                     <nav className="container_nav">
                         <div className="containerNavLeft">
                             <div className="divLogoTripitto">
-                            <NavLink exact to="/"><img className="logoTripitto" src={Logo}alt="logo tripitto"></img></NavLink>
+                                <NavLink exact to="/"><img className="logoTripitto" src={Logo} alt="logo tripitto"></img></NavLink>
                             </div>
                             <form method="GET" action="rechercher" className="Search">
                                 <input className="inputNav" type="text" placeholder="Voyager..."></input>
-                                <img className="icone-loupe"src={Search}alt="Search"></img>
+                                <img className="icone-loupe" src={Search} alt="Search"></img>
                             </form>
                             <ul className="ulNav">
                                 <li><a href="#"><NavLink exact to="/">VIDÉOS</NavLink></a>
                                     <ul className="ul_list">
-                                     <div className="container_list">
-                                        <li><a href="#" className='continent_name'>AFRIQUE</a>
-                                            {this.state.afrique.map(afrique => (
-                                            <div className="container_list_afrique">
-                                            <li><p className="list_afrique">{afrique.countries}</p></li>
-                                            </div>
-                                            ))}
-                                            <button className="button_countries">...</button>
+                                        <div className="container_list">
+                                            <li><a href="#" className='continent_name'>AFRIQUE</a>
+                                                {this.state.afrique.map(afrique => (
+                                                    <div className="container_list_afrique">
+                                                        <li><p className="list_afrique">{afrique.countries}</p></li>
+                                                    </div>
+                                                ))}
+                                                <button className="button_countries">...</button>
                                             </li>
-                                        <li><a href="#" className='continent_name'>ASIE-OCEANIE</a>
-                                        {this.state.asieoceanie.map(asieoceanie => (
-                                            <div className="container_list_asieoceanie">
-                                            <li><p className="list_asieoceanie">{asieoceanie.countries}</p></li>
-                                            </div>
-                                            ))}
-                                            <button className="button_countries">...</button>
+                                            <li><a href="#" className='continent_name'>ASIE-OCEANIE</a>
+                                                {this.state.asieoceanie.map(asieoceanie => (
+                                                    <div className="container_list_asieoceanie">
+                                                        <li><p className="list_asieoceanie">{asieoceanie.countries}</p></li>
+                                                    </div>
+                                                ))}
+                                                <button className="button_countries">...</button>
                                             </li>
-                                        
-                                        <li><a href="#" className='continent_name'>EUROPE</a>
-                                        {this.state.europe.map(europe => (
-                                            <div className="container_list_europe">
-                                            <li><p className="list_europe">{europe.countries}</p></li>
-                                            </div>
-                                            ))}
-                                            <button className="button_countries">...</button>
-                                        </li>
-                                        <li><a href="#" className='continent_name'>AMERIQUE</a>
-                                        {this.state.amerique.map(amerique => (
-                                            <div className="container_list_amerique">
-                                            <li><p className="list_amerique">{amerique.countries}</p></li>
-                                            </div>
-                                            ))}
-                                            <button className="button_countries">...</button>
-                                        </li>
-                                        <li><a href="#" className='continent_name'>AUTRES</a>
-                                        {this.state.autres.map(autres => (
-                                            <div className="container_list_autres">
-                                            <li><p className="list_autres">{autres.countries}</p></li>
-                                            </div>
-                                            ))}
-                                            <button className="button_countries">...</button>
+
+                                            <li><a href="#" className='continent_name'>EUROPE</a>
+                                                {this.state.europe.map(europe => (
+                                                    <div className="container_list_europe">
+                                                        <li><p className="list_europe">{europe.countries}</p></li>
+                                                    </div>
+                                                ))}
+                                                <button className="button_countries">...</button>
                                             </li>
-                                            
-                                    </div>
+                                            <li><a href="#" className='continent_name'>AMERIQUE</a>
+                                                {this.state.amerique.map(amerique => (
+                                                    <div className="container_list_amerique">
+                                                        <li><p className="list_amerique">{amerique.countries}</p></li>
+                                                    </div>
+                                                ))}
+                                                <button className="button_countries">...</button>
+                                            </li>
+                                            <li><a href="#" className='continent_name'>AUTRES</a>
+                                                {this.state.autres.map(autres => (
+                                                    <div className="container_list_autres">
+                                                        <li><p className="list_autres">{autres.countries}</p></li>
+                                                    </div>
+                                                ))}
+                                                <button className="button_countries">...</button>
+                                            </li>
+
+                                        </div>
                                     </ul>
                                 </li>
                                 <li><NavLink exact to="/">VIDÉASTES</NavLink></li>
@@ -136,15 +140,15 @@ const { isModalOpen } = this.state
                             </ul>
                         </div>
                     </nav>
-                
-                <div className="containerModal">
-                    <Modal isOpen={isModalOpen} onClose={this.closeModal} />
-                </div>
+
+                    <div className="containerModal">
+                        <Modal isOpen={isModalOpen} onClose={this.closeModal} />
+                    </div>
 
 
                 </header>
             </div>
-            
+
         )
     }
 }
