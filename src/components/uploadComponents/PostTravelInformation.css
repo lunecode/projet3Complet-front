@@ -2,13 +2,6 @@
 /* page 55 to 64 of the invision page */
 
 
-
-
-
-
-
-
-
 @font-face {
   font-family: "Roboto-Medium";
   src: url("../fonts/Roboto/Roboto-Medium.ttf");
@@ -235,6 +228,7 @@ margin-left: 30%;
   margin-left: 30%;
   margin-top: 5%;
   width: 50%;
+  z-index: 1;
 }
 .travel_type p {
   font-size: 1rem;
@@ -255,9 +249,11 @@ margin-left: 30%;
   height: 35%;
   width: 50%;
   border-radius: 5px;
+  z-index: 1;
 }
 .travel_type2 p {
   font-size: 1rem;
+  z-index: 1;
 }
 
 
@@ -272,6 +268,7 @@ margin-left: 30%;
   width: 50%;
   border-radius: 5px;
   background-color: white;
+  z-index: 1;
 }
 .travel_type3 p {
   font-size: 1rem;
@@ -287,6 +284,7 @@ margin-left: 30%;
   height: 35%;
   width: 60%;
   border-radius: 5px;
+  z-index: 1;
 }
 .travel_type4 p {
   font-size: 1rem;
@@ -312,34 +310,38 @@ margin-left: 30%;
   padding-bottom: 20%;
 }
 
-.save {
-  grid-row: 9;
-  grid-column: 4;
-  margin-left: 80%;
-  margin-top: 40%;
-  width: 60%;
-  height: 30%;
-  border-color: #00C9D4;
-  color: #00C9D4;
-}
 
-.preview {
+
+.save_button {
   grid-row: 9;
   grid-column: 5;
-  margin-left: 50%;
-  margin-top: 40%;
-  width: 60%;
+}
+.save {
+  margin-top: 40%;  
   height: 30%;
   border-color: #00C9D4;
   color: #00C9D4;
 }
 
-.next {
+
+.preview_div_info {
   grid-row: 9;
   grid-column: 6;
-  margin-left: 20%;
-  margin-top: 40%;
-  width: 60%;
+}
+.preview {
+  margin-top: 40%;  
+  height: 30%;
+  border-color: #00C9D4;
+  color: #00C9D4;
+}
+
+
+.next_div_info {
+  grid-row: 9;
+  grid-column: 7;
+}
+.next {
+  margin-top: 40%;  
   height: 30%;
   background-color: #00C9D4;
   color: white;

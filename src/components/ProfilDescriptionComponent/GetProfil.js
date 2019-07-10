@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './GetProfil.css';
-import Pin_On from "../../Images-tripitto/Icon/Pin_ON.png";
 import { NavLink } from 'react-router-dom';
+
+// Import pictures
+import Pin_On from "../../Images-tripitto/Icon/Pin_ON.png";
+import fb from "../../Images-tripitto/Icon/social/fb.png"
+import insta from "../../Images-tripitto/Icon/social/insta.png"
+import youtube from "../../Images-tripitto/Icon/social/youtube.png"
+import link from "../../Images-tripitto/Icon/social/link.png"
 
 // Allow to display data from " profil " table
 
@@ -34,7 +40,7 @@ class GetProfil extends Component {
     return (
       <>
         <div className="generalprofil">
-          <div>
+          <div classname="essai">
             {this.state.profil.map(item => (
               <div key={item.id_profil} >
 
@@ -49,32 +55,57 @@ class GetProfil extends Component {
                     {/* Remplacer Créateur de contenu par item.type? */}
                     <div className="identity"><h2 className="name">{item.firstname} {item.lastname}</h2><span className="span">|</span><p className="traveler_type">Créateur de contenu</p></div>
                     <p className="localisation"><img src={Pin_On} alt="iconlocalisation" className="iconlocalisation" />{item.location}</p>
-                    <p>{item.bio}</p>
+                    <p className="bio">{item.bio}</p>
                     <div className="icon_general">
                       <div className="iconaventurier">
-                      <div className="iconitem">
-                        <img src="https://i.ibb.co/k5NYkbJ/Selected.png" className="iconProfil" alt="iconaventurier" />
+                        <div className="iconitemaventurier">
+                          <img src="https://i.ibb.co/k5NYkbJ/Selected.png" className="iconProfil" alt="iconaventurier" />
+                        </div>
+                        <span className="texticonaventurier">Aventurier seul</span>
                       </div>
-                      <span className="texticonaventurier">Aventurier seul</span>
+                      <div className="iconmountain">
+                        <div className="iconitemmountain">
+                          <img src="https://i.ibb.co/TBD2y8F/Montagne-Copy-2.png" className="iconProfil" alt="iconmountain" />
+                        </div>
+                        <span className="texticonmountain">Campagnes <br />& montagnes</span>
                       </div>
-                      <div><div className="iconitem">
-                        <img src="https://i.ibb.co/TBD2y8F/Montagne-Copy-2.png" className="iconProfil" alt="iconmountain" />
-                      </div><span className="texticon">Histoire & Culture</span></div>
-                      <div><div className="iconitem">
-                        <img src="https://i.ibb.co/SwFR7Tr/Festival-Copy-2.png" className="iconProfil" alt="iconmusic" />
-                      </div><span className="texticon">Histoire & Culture</span></div>
-                      <div><div className="iconitem">
-                        <img src="https://i.ibb.co/M6YmDK4/Ecotourisme-Copy-2.png" className="iconProfil" alt="iconplant" />
-                      </div><span className="texticon">Histoire & Culture</span></div>
-                      <div><div className="iconitem">
+                      <div className="iconmusic">
+                        <div className="iconitemmusic">
+                          <img src="https://i.ibb.co/SwFR7Tr/Festival-Copy-2.png" className="iconProfil" alt="iconmusic" />
+                        </div><span className="texticonmusic">Festivals</span></div>
+                      <div className="iconplant">
+                        <div className="iconitemplant">
+                          <img src="https://i.ibb.co/M6YmDK4/Ecotourisme-Copy-2.png" className="iconProfil" alt="iconplant" />
+                        </div><span className="texticonplant">Ecotourisme</span></div>
+                      <div className="iconculture"><div className="iconitemculture">
                         <img src="https://i.ibb.co/55gqM0h/Histoire-Culture-Copy-2.png" className="iconProfil" alt="iconculture" />
                       </div>
-                      <span className="texticon">Histoire & Culture</span></div>
+                        <span className="texticonculture">Histoire <br />& Culture</span></div>
                     </div>
                   </div>
                   <div className="profil_column_3">
-                    <NavLink exact to="/post_contactrequest"><button>MESSAGE</button></NavLink>
-                    <NavLink exact to="/update_profil/:id"><button >MODIFIER LE PROFIL</button></NavLink>
+                    <div className="social_general">
+                      <div className="facebook">
+                        <img src={fb} alt="facebook" className="social" />
+                      </div>
+                      <div className="instagram">
+                        <img src={insta} alt="instagram" className="social" />
+                      </div>
+                      <div className="youtube">
+                        <img src={youtube} alt="youtube" className="social" />
+                      </div>
+                      <div className="lien">
+                        <img src={link} alt="liek" className="social" />
+                      </div>
+                    </div>
+                    <div className="buttonprofil">
+                      <div className="button">
+                        <NavLink exact to="/post_contactrequest"><button className="buttonmessage">MESSAGE</button></NavLink>
+                      </div>
+                      <div className="button">
+                        <NavLink exact to="/update_profil/:id"><button className="buttonmodifyprofil">MODIFIER PROFIL</button></NavLink>
+                      </div>
+                    </div>
                   </div>
 
                 </div>
@@ -82,14 +113,14 @@ class GetProfil extends Component {
             ))}
           </div>
           <div>
-            <p>Tout</p><p>Afrique</p><p>Océanie</p><p>Autre</p>
+            <div className="continents"><p>Tout</p><p>Afrique</p><p>Océanie</p><p>Autre</p></div>
             {this.state.video.map(videos => (
               <div className="video" key={videos.id_general_video}>
                 <img src={videos.video_link} alt="videocover" className="videocover" />
-                <p>{videos.video_title}</p>
-                <p>Danemark</p>
-                <p>35 lectures</p>
-                <p>Il y a 3 semaines</p>
+                <li>{videos.video_title}</li>
+                <li>Danemark</li>
+                <li>35 lectures</li>
+                <li>Il y a 3 semaines</li>
 
               </div>
             ))}
@@ -98,6 +129,9 @@ class GetProfil extends Component {
               <button>VOIR PLUS</button>
             </div>
           </div>
+              
+
+
         </div>
       </>
     )

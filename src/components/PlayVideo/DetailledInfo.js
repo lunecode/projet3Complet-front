@@ -3,10 +3,13 @@ import axios from 'axios'
 import './DetailledInfo.css';
 import Weather from '../../Images-tripitto/Icon/etape/meteo/nuagegris.png';
 import Village from '../../Images-tripitto/Icon/etape/active/village.png';
-import Moto from '../../Images-tripitto/Icon/Voyage/moto.png';
+import Moto from '../../Images-tripitto/Icon/Voyage/Moto.png';
 import Bed from '../../Images-tripitto/Icon/hebergement.png';
 import Food from '../../Images-tripitto/Icon/Ingredients/plaisir_culinaire.png';
 import Museum from '../../Images-tripitto/Icon/Visites.png';
+import Sport from '../../Images-tripitto/Icon/sport.png';
+import Love from '../../Images-tripitto/Icon/Love.png';
+import Idea from '../../Images-tripitto/Icon/Idea.png';
 // import Oval2 from '../../Images-tripitto/Icon/Oval2.png';
 
 
@@ -20,23 +23,28 @@ class DetailledInfo extends Component {
 getDetailledInfo = async () => {
     const res = await axios.get('http://localhost:3000/travel_step/get_travelstep')
     this.setState({ detailledInfo: res.data })
-    console.log(this.state.detailledInfo)
+    // console.log(this.state.detailledInfo)
 }
 componentDidMount() {
     this.getDetailledInfo()
 }
 
 render() {
+
+    const url = window.location.href;
+        const idVideo = url.slice(32)
+        console.log(idVideo) 
     
     return (
     <>
-        {this.state.detailledInfo.map(item => (
+    {this.state.detailledInfo.filter(item => item.general_video_id_general_video == idVideo ) 
+        .map(item => (
         <div className="container_globalTravel">
         <div className="container_info" key={item.id_travel_step}>
             <div className="container_detailled">
                 <div className="container_trip">
                     <span className="border"><img className="weather" src={Weather} alt="weather"/> <img src={Village} alt="village"/> 
-                    <span className="step">{item.step_number}
+                    <span className="step1">{item.step_number}
                     </span>{item.step_weather} <span>{item.step_name}</span></span>
                     <span>{item.video_travel_step}</span>
                     <span>{item.step_name}</span>
@@ -79,15 +87,18 @@ render() {
                     <li>{item.must_visit4}</li>
                     <li>{item.must_visit5}</li>
                     <li>{item.must_visit6}</li> */}
-                    <li>{item.sport_activity1 }</li>
-                    <li>{item.sport_activity2 }</li>
-                    <li>{item.sport_activity3 }</li>
-                    <li>{item.sport_activity4 }</li>
+                    <p><img className="sport" src={Sport} alt="sport"></img>
+                    <span className="museum">{item.sport_activity1 }</span> | <span className="museum1">{item.sport_activity2 }</span> | <span className="museum1">{item.sport_activity3 }</span></p>
+
+                    {/* <li>{item.sport_activity4 }</li>
                     <li>{item.sport_activity5 }</li>
-                    <li>{item.sport_activity6}</li>
-                    <li>{item.sport_activity_comment}</li>
-                    <li>{item.crush}</li>
-                    <li>{item.advice}</li>
+                    <li>{item.sport_activity6}</li> */}
+                    <p className="comment_sport">{item.sport_activity_comment}</p>
+                    <p><img className="love" src={Love} alt="love"></img>{item.crush}</p>
+                    <p ><img className="idea" src={Idea} alt="idea"></img>{item.advice}</p>
+                    <div className="tripButton">
+                    <button className="buttonTrip">VOIR ETAPE SUIVANTE</button>
+                    </div>                    
                 </div>
             </div>
         </div>

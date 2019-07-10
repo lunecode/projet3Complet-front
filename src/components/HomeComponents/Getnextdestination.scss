@@ -7,46 +7,57 @@
     font-weight: normal;
     src: url(../fonts/Roboto/Roboto-Thin.ttf);
 }
+@font-face {
+    font-family: 'Robotoregular';
+    font-style: normal;
+    font-weight: bold;
+    src: url(../fonts/Roboto/Roboto-Regular.ttf);
+}
 
+@font-face {
+    font-family: 'Robotoregular2';
+    font-style: normal;
+    font-weight: medium;
+    src: url(../fonts/Roboto/Roboto-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'Robotolight';
+    font-style: italic;
+    font-weight: italic;
+    src: url(../fonts/Roboto/Roboto-Italic.ttf);
+}
+// @font-face {
+//     font-family: 'Roboto';
+//     font-style: normal;
+//     font-weight: regular;
+//     src: url(../fonts/Roboto/Roboto-Regular.ttf);
+// }
 @font-face {
     font-family: 'Lora';
     font-style: normal;
     font-weight: normal;
     src: url(../fonts/Lora/Lora-Regular.ttf);
 }
-
+@font-face {
+    font-family: 'Loraitalic';
+    font-style: normal;
+    font-weight: italic;
+    src: url(../fonts/Lora/Lora-Italic.ttf);
+}
 
 /***********************SECTION NEXT DESTINATION ******************************/
 /*****************************************************************************/
 .container_nextdestination_title {
     align-items: center;
     background-color: #2C404D;
-
     flex-flow: row nowrap;
     color: white;
     width: 100%;
     font-family: 'Roboto';
 }
 
-.container_arrow{
-    display: grid;
-    grid-template-columns: 200% 20%;
-    margin-top: -55%;
-    margin-left: -9%;
-    align-items: center;
-}
-.leftarrow{
-height: 8vh;
-transform: rotate(90deg);
 
-}
-
-
-.rightarrow{
-height: 8vh;
-transform: rotate(-90deg);
-/* margin-left: 185vh; */
-}
 .wrapper-nextpicture {
     
         display: grid;
@@ -61,7 +72,7 @@ transform: rotate(-90deg);
         linear-gradient(180deg, rgba(44, 64, 77, 0.89), rgba(219, 213, 213, 0) 60.71%),
         linear-gradient(127deg, rgba(44, 64, 77, 0.589), rgba(0,255,0,0) 70.71%),
         linear-gradient(336deg, rgba(44, 64, 77, 0.692), rgba(0,0,255,0) 70.71%);
-            
+        
         img {
             filter: brightness(60%);
             -webkit-filter: brightness(60%)
@@ -222,11 +233,9 @@ display: none;
 .bestplan{
     margin-bottom: -1%;
     display: grid;
-    grid-template-columns: 64% 1.7% 1% 35%;
+    grid-template-columns: 65% 1.7% 1% 10%;
     align-items: center;
     padding-left: 3.5%;
-
-
 }
 .container_bestplan {
 display: grid;
@@ -303,7 +312,7 @@ margin-left: 1.5%;
 .title_bestplan_numbertips{
     color:white;
     margin-bottom: 46%;
-    margin-top:-580%;
+    margin-top:-530%;
     font-size: 1.60vh;
     font-family: 'Roboto';
     font-weight: bold;
@@ -329,33 +338,39 @@ margin-left: 1.5%;
 }
 
 .title_bestplan_title{
-    font-family: 'Lora';
+    font-family: 'Robotoregular2';
     font-weight: bold;
-    font-size: 2.75vh;
+    font-size: 2.50vh;
     color:#2C404D;
     margin-bottom: -2.25%;
     
 }
 .title_bestplan_countries{
     font-family: 'Lora';
-    font-size: 2vh;
+    font-size: 1.90vh;
     color:#2C404D;
-    margin-bottom: -2%;
+   
 }
 .title_bestplan_user{
     font-family: 'Lora';
     font-weight: bold;
-    font-size: 2vh;
+    font-size: 1.90vh;
     color:#2C404D;
+    margin-top: -1.5%;
+ 
 }
 .title_bestplan_nbviews{
     font-family: 'Lora';
     font-size: 2vh;
     color:rgba(152, 158, 158, 0.918);
     margin-top: -13%;
-    margin-left: 30%;
-}
 
+}
+.container_nb_view{
+    margin-left: 15%;
+    margin-top: 5.5%;
+    color:#2C404D;
+}
 
 .title_best_plan {
     color: #2C404D;
@@ -364,9 +379,12 @@ margin-left: 1.5%;
     grid-template-columns: 70% 1.7% 1% 20%;
     align-items: center;
     border-block-end: solid 1px #2C404D;
-    font-size: 2vh;
+    font-size: 2.50vh;
     font-weight: bold;
-    font-family: 'Roboto';
+    font-family: 'Robotoregular';
+    letter-spacing: -1px;
+    font-stretch: extra-expanded;
+    
     }
 
 /***************************CONTRIBUTORS********************************/
@@ -378,13 +396,14 @@ margin-left: 1.5%;
         align-items: center;
         padding-left: 3.5%;
         text-align: center; 
-        margin-top: -13%;
+        margin-top: -15.25%;
         color: #2C404D;
             p{
             color: #2C404D;
-            font-family: 'Lora';
-            font-weight: medium;
-            font-size: 2vh;
+            font-family: 'Robotoregular';
+            font-weight: bold;
+            font-size: 2.25vh;
+            line-height: 100%;
              }
 }
     .title_contributors {
@@ -394,9 +413,78 @@ margin-left: 1.5%;
         width: 92%;
         font-size: 2vh;
         font-weight: italic;
-        font-family: 'Lora';
-        font-size: 2.5vh;
+        font-family: 'Loraitalic';
+        letter-spacing: 1.75px;
+        font-size: 2.75vh;
         padding-bottom: 1.5%;
         border-block-end: solid 1px #2C404D;
     } 
+    .buttonContributor{
+        margin-bottom: 20px;
+        margin-top: 5px;
+        border-color: #5dd8dc;
+        color: #5dd8dc;
+        font-size: 13px;
+        padding: 11px 120px;
+    }
+
+
+
+
+
+    .leftarrow {
+        position: absolute;
+        height: 6vh;
+        transform: rotate(90deg);
+        pointer-events: all;
+        margin-top: -14.75%;
+        margin-left: -3.5%;
+        z-index: 3;
+    }
+    .rightarrow {
+        position: absolute;
+        z-index: 3;
+        pointer-events: all;
+        height: 6vh;
+        transform: rotate(-90deg);
+        margin-top: -14.75%;
+        margin-left: 48.75%;
+        /* margin-left: 185vh; */
    
+    }
+    .leftarrowDisable {
+        position: absolute;
+        z-index: 4;
+        pointer-events: all;
+        height: 6vh;
+        transform: rotate(90deg);
+        margin-top: -14.75%;
+        margin-left: -3.5%;
+
+    }
+    .rightarrowDisable {
+            position: absolute;
+            z-index: 3;
+            pointer-events: all;
+    }
+
+    .leftHome2 {
+        pointer-events: all;
+        margin-left: -170%;
+    }
+    .rightHome2{
+        pointer-events: all;
+        margin-left: -280%;
+    }
+    .leftHomeDisable1 {
+        opacity: 0.5;
+        pointer-events: none;
+        margin-left: -170%;
+    }
+    .leftHomeDisable2 {
+        opacity: 0.5;
+        pointer-events: none;
+        margin-left: -280%;
+    }
+
+/************** TEST  *******/

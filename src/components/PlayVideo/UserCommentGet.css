@@ -4,11 +4,55 @@
     font-weight: normal;
     font-style: normal;
 
-   }
+}
 
 .container_get{
     background-color: #F4F4F4;
     font-family: 'Roboto', sans-serif;
-    padding-left: 5%;
+    
+    margin-left: 5%;
+    width:45%;
+    padding-bottom: 2%;
+    border-bottom: 2px solid lightgray;
+    padding-top: 1%;
+    
+    
 }
+
+.comment{
+    width:100%; 
+    display: flex;
+    justify-content: space-between;
+    /* border-bottom: 2px solid lightgray; */
+
+} 
+
+/* .editcomment{
+    display:flex;
+    justify-content: space-between;
+} */
+
+.editcomment{
+    width:22px;
+    height:22px;
+    background-image: none;
+    
+}
+
+.editcomment:hover{
+    background-image: url("https://image.noelshack.com/fichiers/2019/26/2/1561451530-edit.png");
+  
+}
+
+.editcom {
+    display: none;
+} 
+
+.editcom:hover{
+    width:100%;
+}
+
+/* .userComment{
+    width:100%;
+} */
 

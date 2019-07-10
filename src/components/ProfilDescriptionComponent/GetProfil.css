@@ -6,12 +6,17 @@
 }
 
 .global_part_1 {
-    width: 85vw;
-    margin: 47px auto 0;
-    border-bottom: 1px;
+    width: 83vw;
+    margin: 60px auto 0;
     justify-content: space-between;
     display: flex;
+    border-bottom:1px solid grey;
+    padding-bottom: 30px;
 }
+
+
+
+/* Profil columns */
 
 .profil_column_1 {
     padding-top: 12px;
@@ -22,6 +27,11 @@
 
 .profil_column_2 {
     padding-left: 3vw;
+    /* padding-right: 6vw; */
+}
+
+.profil_column_3 {
+    padding-left: 2vw;
 }
 
 .identity {
@@ -53,28 +63,22 @@
     flex-direction: row;
     justify-content: flex-start;
 }
-.iconitem {
+/* .iconitem {
     /* margin-right: 4vw;
     border-radius:50%;
     padding : 12px;
     box-shadow: 1px 1px 4px #1BA2A2; */
-}
-.texticon {
-    opacity:0;
-}
-
-.profil_column_2:hover .texticon {
-    visibility: visible;
-    border: #344854;
-    opacity:1;
-}
 
 .iconProfil {
-    width: 40px;
+    width: 35px;
     margin-right: 4vw;
     border-radius:50%;
     padding : 15px;
     box-shadow: 1px 1px 4px #1BA2A2;
+}
+.bio {
+    font-size:90%;
+    margin-right: 70px;
 }
 
  /* .generalprofil {
@@ -87,4 +91,109 @@
     height: 50%;
 }
 
+.texticonaventurier {
+    opacity:0;
+}
+
+.iconaventurier:hover .texticonaventurier {
+    visibility: visible;
+    border: #344854;
+    opacity:1;
+    color: #1BA2A2;
+}
+
+.texticonmountain {
+    opacity:0;
+}
+
+.iconmountain:hover .texticonmountain {
+    visibility: visible;
+    border: #344854;
+    opacity:1;
+    color: #1BA2A2;
+}
+
+.texticonmusic {
+    opacity:0;
+}
+
+.iconmusic:hover .texticonmusic {
+    visibility: visible;
+    border: #344854;
+    opacity:1;
+    color: #1BA2A2;
+}
+
+.texticonplant {
+    opacity:0;
+}
+
+.iconplant:hover .texticonplant {
+    visibility: visible;
+    border: #344854;
+    opacity:1;
+    color: #1BA2A2;
+}
+
+.texticonculture {
+    opacity:0;
+}
+
+.iconculture:hover .texticonculture {
+    visibility: visible;
+    border: #344854;
+    opacity:1;
+    color: #1BA2A2;
+}
+
+.social_general {
+    display: flex;
+    flex-direction: row;
+    margin-top: 19.92px;
+}
+
+/* .social {
+    margin-left: 1vw;
+
+} */
+.social {
+    margin-left: 17px;
+    width: 25px;
+    
+    
+    
+}
+
+.buttonprofil {
+    display: flex;
+    flex-direction: column;
+    }
+
+.buttonmessage {
+    margin-top: 5vh;
+    width: 180px;
+    display: inline-block;
+    text-align: center;
+    padding: 8px 20px;
+    color: #1BA2A2;
+    background-color: rgb(255, 255, 255); /* Green */
+    border: 1px solid ;
+
+}
+
+.buttonmodifyprofil {
+    margin-top: 2vh;
+    width: 180px;
+    display: inline-block;
+    text-align: center;
+    padding: 8px 20px;
+    background-image: linear-gradient(to right, #64dada 30%, #2e96a3 100%);
+    color: white;
+    border: none;
+
+}
+
+.continent {
+    display:flex;
+}
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap');
