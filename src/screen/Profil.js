@@ -36,7 +36,13 @@ class Profil extends Component {
   changeHandler = (e) => {
     this.setState({ [e.target.name]: e.target.value })
   }
-
+  handleOpenModal =()=> {
+    this.setState({ showModal: true });
+  }
+  
+  handleCloseModal= () =>{
+    this.setState({ showModal: false });
+  }
   //les Enumes de la table profile.//
   profil1 = () => {
     this.setState({ profil: 1 })

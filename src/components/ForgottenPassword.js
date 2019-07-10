@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 
 class ForgottenPassword extends Component {
+    
     render () {
+
         const { isOpen2, onClose2 } = this.props;
         return (
             <>

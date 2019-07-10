@@ -1,0 +1,75 @@
+.container-security-account-off{
+    position: fixed;
+    top:25%;
+    width:600px;
+    margin-left:12%;
+    z-index:1;
+  .display-block-off-account {
+    display: block;
+    border: 1px solid #34bed3;
+    box-shadow: 1px -1px 21px -3px rgba(52,190,211,1);
+    text-align: center;
+    align-items: center;
+    margin-bottom: 5%;
+    color: black;
+    background-color: white; 
+    height:380px;
+    padding-left:0!important;
+  
+    .modal-security-off-bloc-title{
+      background-color:#34bed3;
+    
+      padding:1px;
+      .security-modal-account-off{
+       font-size:16px;
+       color:white;
+    }
+  
+  }
+  .container-open-security-account-off{
+    
+    display:flex;
+    flex-direction: column;
+    .text-modal-security-off{
+   
+        p{
+            padding: 0 40px 10px 30px;
+            margin-top:0;
+        }
+    }
+
+}
+.container-open-security-account-off{
+margin-top:20px;
+
+.btn-modal-close-security-account-off{
+    padding:10px;
+    width: 400px;
+    border:1.5px solid grey;
+    background:none;
+    color:grey;
+    cursor: pointer;
+    margin-left:5vw;
+   
+}
+
+.btn-modal-confirm-security{
+  padding:10px;
+  width: 400px;
+  border:1.5px solid #34bed3;
+  background:none;
+  color:#34bed3;
+  cursor: pointer;
+  margin-left:5vw;
+  margin-bottom:3vh;
+}}
+  }
+
+  .display-none-account-off{
+    display: none;
+    
+  }
+
+ 
+ }
+ 

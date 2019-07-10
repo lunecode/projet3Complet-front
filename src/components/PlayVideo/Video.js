@@ -15,29 +15,36 @@ import Share from '../../Images-tripitto/Icon/Share.png';
 
 class Video extends Component {
   state = {
+    idVideo: '',
     videos: [],
+    popularity: []
   };
 
   getVideo = async () => {
     const res = await axios.get('http://localhost:3000/general_video/get_general_video')
     this.setState({ videos: res.data })
-    console.log(this.state.videos)
+
   }
+
+
+
 
   getPopularity = async () => {
     const res = await axios.get('http://localhost:3000/popularity/get_popularity_liked_general_video')
-    this.setState({ videos: res.data })
-    console.log(this.state.videos)
+    this.setState({ popularity: res.data })
+    // console.log(this.state.popularity)
   }
 
-  componentDidMount() {
 
+
+  componentDidMount() {
     this.getVideo()
     this.getPopularity()
+
   }
 
   render() {
-    // const { filterVideo } = this.props;
+
     const opts = {
       height: '490',
       width: '850',
@@ -45,9 +52,16 @@ class Video extends Component {
         autoplay: 0
       }
     };
+
+    const url = window.location.href;
+    const idVideo = url.slice(32)
+    console.log(idVideo)
+
     return (
-      <>
-        {this.state.videos.map(item => (
+    <>
+
+
+        {this.state.videos.filter(item => item.id_general_video == idVideo).map(item => (
           <div className="container_video">
             <div key={item.id_general_video}>
               <div className="video_user">
@@ -55,13 +69,20 @@ class Video extends Component {
               </div>
               <div className="video_info">
                 <div className="title_video">{item.video_title} <span><img className="play" src={Play} alt="play" />{item.nb_views}</span><span className="number_tips"><img className="numberTips" src={NumberTips} alt="number tips" />{item.number_tips}</span>
+                  <div><button className="buttonCommentVideo">MODIFIER</button>
+                  </div>
                 </div>
-                <div className="likeComment">
-                  <span><img src={Love} alt="love" />     {item.nb_like_popularity}</span>
-                  <span> <img src={Comment} alt="comment" />{item.nb_comment_popularity}</span><span> <img className="share" src={Add} alt="share" /> {item.nb_playlist_included}</span> <span> <img src={Share} alt="Share" />{item.nb_share}
-                  </span>
 
-                </div>
+
+
+                {this.state.popularity.map(item => (
+                  <div className="likeComment">
+                    <span><img src={Love} alt="love" />     {item.nb_like_popularity}</span>
+                    <span> <img src={Comment} alt="comment" />{item.nb_comment_popularity}</span><span> <img className="share" src={Add} alt="share" /> {item.nb_playlist_included}</span> <span> <img src={Share} alt="Share" />{item.nb_share}
+                    </span>
+                  </div>
+
+                ))}
                 <div className="test" >
                   <p><span className="loading">Ajouté le {item.loading_time} -</span><span className="status"><i>{item.video_status}</i></span> </p>
                   <p className="text">{item.video_description}</p>
@@ -71,21 +92,21 @@ class Video extends Component {
                 <div className="userVideo">
                   <div className="pictureUser">
                     <img className="pictureUser" src={item.cover_picture} alt="equipment_picture"></img>
-                    <span className="username">{item.lastname} {item.firstname}</span>
+
+                  </div>
+                  <div className="container_suscribe">
+                    <p className="username">{item.video_user} </p>
+                    <button className="suscribe">S'ABONNER</button>
                   </div>
                 </div>
-
-                {/* <a>{item.equipment}</a> */}
-
-                {/* <a>{item.video_link}</a> */}
               </div>
-            </div>
-
-          </div>
-        ))}
+              </div>
+              </div>
+              ))}
       </>
-    )
-  }
-}
-
-export default Video;
+            )
+          }
+        }
+        
+        
+        export default Video;

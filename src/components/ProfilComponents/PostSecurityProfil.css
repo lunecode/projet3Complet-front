@@ -57,17 +57,15 @@ Alignement des deux grand bloc  */
 }
 /* 
 Grid pour profil info */
-.grid-profil-info{
+.grid-security-info{
   width: 70%;
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;    
-
-
 }
-.grid-profil-info div{
-  padding-left:20px;
+.grid-security-info div{
+  padding-left:10px;
 }
-.grid-profil-info h2{
+.grid-security-info h2{
   margin:0 12px;
   font-size:22px;
 }
@@ -94,7 +92,12 @@ Grid pour profil info */
     text-decoration: none;
     color:#2eaecd;
 }
-
+.btn-security-modify{
+    border:none;
+    background: none;
+    cursor: pointer;
+    color:#2eaecd;
+}
 .bloc-mdp{
     margin-left:-10px;
 }
@@ -123,20 +126,7 @@ Grid pour profil info */
 .bloc-mdp div{
     padding-left:0;
 }
-.btn-save-security {
-    display: flex;
-    justify-content: right;
-}
-.btn-save-security button{
-    width: 150px;
-    padding: 13px;
-    background-color: #c3c3c3;
-    color:white;
-    border:none;
-}
-.btn-save-security button:hover{
-  background: linear-gradient(to right, #3ed8dd 37%,#39cad7 53%,#35c1d4 100%);
-}
+
 /* gestion cookies */
 .bloc-cookies{
     width: 70%;
@@ -159,12 +149,13 @@ Grid pour profil info */
   color:#333333;
   line-height: 0px;
 }
-.off-account button{
+.off-account .btn-desactiver-compte{
     width: 65%;
     padding: 13px;
     border:1px solid #a7a7a7;
     margin-top:40px;
     margin-bottom:30px;
+    cursor: pointer;
 }
 
  /* The switch - the box around the slider */

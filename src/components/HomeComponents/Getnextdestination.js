@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 import axios from 'axios'
+
+import { NavLink } from 'react-router-dom';
+
 import './Getnextdestination.scss';
 
-import arrow from '../../pictures/arrow.png'
+import leftarrow from '../../pictures/arrow_left.png'
+import rightarrow from '../../pictures/arrow_right.png'
 import leftHome from '../../Images-tripitto/Icon/leftHome.png'
 import RightHome from '../../Images-tripitto/Icon/RightHome.png'
 
@@ -12,42 +16,56 @@ class Getnextdestination extends Component {
     state = {
         nextpicture: [],
         videos: [],
-        bestplan: 1,
+        offset: 0,
+        offsetBestplan: 0
     };
 
 
-
-
-
     getnextvideo = async () => {
-        const res = await axios.get('http://localhost:3000/general_video/get_general_video_home')
-        this.setState({ nextpicture: res.data })
-        console.log(this.state.nextpicture)
+        const res = await axios.get('http://localhost:3000/popularity/get_popularity_liked_general_video_travel_information')
+        const Nextdestination = res.data
+        this.setState({ nextpicture: Nextdestination })
     }
-
-
+    getnextvideolimit = () => {
+    this.setState({offset: this.state.offset + 5}, async ()=> {
+        const res = await axios.get(`http://localhost:3000/popularity/get_popularity_liked_general_video_travel_information/${this.state.offset}`)
+        const Nextdestination = res.data
+        this.setState({ nextpicture: Nextdestination },)
+    })
+    }
+    getnextvideolimitBack = () => {
+    this.setState({offset: this.state.offset - 5}, async ()=> {
+        const res = await axios.get(`http://localhost:3000/popularity/get_popularity_liked_general_video_travel_information/${this.state.offset}`)
+        const Nextdestination = res.data
+        this.setState({ nextpicture: Nextdestination },)
+    })
+    }
 
     getbestplan = async () => {
         const res = await axios.get('http://localhost:3000/popularity/get_popularity_liked_general_video_travel_information2')
-        this.setState({ videos: res.data })
-        console.log(this.state.videos)
+        const Bestplan = res.data
+        this.setState({ videos: Bestplan })
+    }
+    getbestplanlimit = () => {
+    this.setState({offsetBestplan: this.state.offsetBestplan + 4}, async ()=> {
+        const res = await axios.get(`http://localhost:3000/popularity/get_popularity_liked_general_video_travel_information2/${this.state.offsetBestplan}`)
+        const Bestplan = res.data
+        this.setState({ videos: Bestplan },)
+    })
+    }
+    getbestplanlimitBack = () => {
+    this.setState({offsetBestplan: this.state.offsetBestplan - 4}, async ()=> {
+        const res = await axios.get(`http://localhost:3000/popularity/get_popularity_liked_general_video_travel_information2/${this.state.offsetBestplan}`)
+        const Bestplan = res.data
+        this.setState({ videos: Bestplan },)
+    })
     }
 
-    selectbestplan = () => {
-        this.setState({ BestPlan: +5 })
-        console.log(this.state.BestPlan)
-    }
-
-    selectbestplanBack = () => {
-        this.setState({ BestPlan: -5 })
-        console.log(this.state.BestPlan)
-    }
 
     componentDidMount() {
         this.getnextvideo()
         this.getbestplan()
-        this.selectbestplan()
-        this.selectbestplanBack()
+
     }
 
     render() {
@@ -60,10 +78,12 @@ class Getnextdestination extends Component {
                 {/****************************** SECTION NEXT DESTINATION******************************* */}
                 <section className='nextdestination'>
                     
-                    <div class="wrapper-nextpicture">
-                        <div className='container_arrow'>
-                                <img onClick={this.selectbestplan} className="leftarrow" src={arrow} alt=""></img>
-                                <img onClick={this.selectbestplanBack} className="rightarrow" src={arrow} alt=""></img>
+                    <div className="wrapper-nextpicture">
+                        <div>
+                                <img onClick={this.getnextvideolimitBack } className={this.state.offset === 0 ? "leftarrow" : "leftarrowDisable"} src={leftarrow} alt=""></img>
+                        </div>  
+                        <div>
+                                <img onClick={this.getnextvideolimit} className={this.state.offset === 10 ? "rightarrow" : "rightarrow"} src={rightarrow} alt=""></img>
                         </div>
                         {this.state.nextpicture.map(nextpicture => (
                             <div className={"divpictureNext" + i} key={i++}>
@@ -76,22 +96,22 @@ class Getnextdestination extends Component {
                     </div>
                 </section>
 
-                {/****************************** SECTION BEST PLAN  ***************************** */}
-                <section className="bestplan">
-                    <div className='container_bestplan_title'>
-                        <h2 className="title_best_plan">AVEC UN MAXIMUM DE BONS PLANS</h2>
-                    </div>
-                    <div>
-                        <img onClick={this.selectbestplan} className="leftHome" src={leftHome} alt=""></img>
-                    </div>
-                    <div>
-                        <img onClick={this.selectbestplanBack} className="rightHome" src={RightHome} alt=""></img>
-                    </div>
-                </section>
-                <div class="container_bestplan">
-                    {this.state.videos.map(video => (
-                        <div className={"divVideoPLan" + c} key={c++}>
-                            <img src={video.cover_picture} className='picture_bestplan' />
+{/****************************** SECTION BEST PLAN  ***************************** */}
+        <section className="bestplan">
+            <div className='container_bestplan_title'>
+                <h2 className="title_best_plan">AVEC UN MAXIMUM DE BONS PLANS</h2>
+            </div>
+            <div>
+                <img onClick={this.getbestplanlimitBack} className={this.state.offsetBestplan === 0 ? "leftHomeDisable1" : "leftHome2"} src={leftHome} alt=""></img>
+            </div>
+            <div>
+                <img onClick={this.getbestplanlimit} className={this.state.offsetBestplan === 16 ? "leftHomeDisable2" : "rightHome2"} src={RightHome} alt=""></img>
+            </div>
+        </section> 
+            <div className="container_bestplan">
+                {this.state.videos.map(video => (
+                    <div className={"divVideoPLan" + c} key={c++}>
+                            <img src={video.cover_picture} className='picture_bestplan'/>
                             <div className='container_title_bestplan_numbertips'>
                                 <p className='title_bestplan_numbertips'>+{video.number_tips}%</p>
                             </div>
@@ -99,9 +119,12 @@ class Getnextdestination extends Component {
                                 <p className='title_bestplan_video_duration'>{video.video_duration}</p>
                             </div>
                             <p className='title_bestplan_title'>{video.video_title}</p>
+                            
                             <p className='title_bestplan_countries'>{video.countries}</p>
-                            <p className='title_bestplan_user'>{video.video_user}</p>
-                            <p className='title_bestplan_nbviews'>{video.nb_views} vues</p>
+                            <ul className='container_nb_view'>
+                                <li><p className='title_bestplan_nbviews'>{video.nb_views} vues</p></li>
+                            </ul>
+                             <p className='title_bestplan_user'>{video.video_user}</p>
                         </div>
                     ))}
                     <div className='container_contributors_title'>
@@ -127,6 +150,8 @@ class Getnextdestination extends Component {
                         <p>Kiandra Lowe</p>
                         <p>Labeeba Almer</p>
                     </div>
+
+                    <button className="buttonContributor">VOIR PLUS</button>
                     </div>
                 </div>
 

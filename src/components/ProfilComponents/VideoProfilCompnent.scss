@@ -8,7 +8,7 @@
         margin-left: -10vw;
           margin-top: 7vh;
        .w3-select{ 
-            margin-left: -4vw;
+          
             border:12px;
             background-color: #f4F4F4;
          
@@ -16,7 +16,36 @@
            }
            //searsh
              .searsh{
-     
+               position: relative;
+               right:9vw;
+              .search-bar-following{
+                margin-left: 12vw;
+                display: flex;
+                flex-direction:row;
+              
+                button{
+                    background: none;
+                    border-right:none;
+                    border-bottom:1px solid #31b5cf;
+                    border-top:1px solid #31b5cf;
+                    border-left:1px solid #31b5cf;
+                    border-radius:none;
+                    padding: 6px 10px;
+                    font-size: 17px;
+                    cursor: pointer;
+                  
+                }
+                input{
+                    margin-left:-4px;
+                    border-top:1px solid #31b5cf;
+                    border-right:1px solid #31b5cf;
+                    border-bottom:1px solid #31b5cf;
+                    border-left:none;
+                    padding:12px;
+                    background: none;
+                    width: 200px;  
+                } 
+            }
                       }
 
       }

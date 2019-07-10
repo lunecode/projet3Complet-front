@@ -21,6 +21,7 @@ import img1 from '../../Images-tripitto/Icon_Vidéo/img1.png'
 import img2 from '../../Images-tripitto/Icon_Vidéo/img2.png'
 import img3 from '../../Images-tripitto/Icon_Vidéo/img3.png'
 import img4 from '../../Images-tripitto/Icon_Vidéo/img4.png'
+import ModalDeleteVideo from './ModalDeleteVideo';
 
 class  VideoProfilCompnent extends Component {
 
@@ -65,6 +66,7 @@ class  VideoProfilCompnent extends Component {
         return (
 
 <div className="VideoProfilCompnent">
+<ModalDeleteVideo/>
       <div className="membres-profil">
       <img src="https://images.pexels.com/photos/814499/pexels-photo-814499.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500" alt="pictures profil" />
       <div className="membres-profil-detail">
@@ -75,37 +77,37 @@ class  VideoProfilCompnent extends Component {
 
     <div className='position-bloc'>
        <div className='profil-menu'>
-            <ul>
+       <ul>
             <li>
-            <NavLink
-            className="nav"
-            to="/Profil" exact>Profil</NavLink>
+              <NavLink
+                className="nav"
+                to="/Profil" exact>Profil</NavLink>
             </li>
             <li>
-            <NavLink
-            to="/Video" exact >Video</NavLink>
+              <NavLink
+                to="/Video" exact >Video</NavLink>
             </li>
             <li>
-            <NavLink
-            to="/Abonnements" exact >Abonnements</NavLink>
+              <NavLink
+                to="/Abonnements" exact >Abonnements</NavLink>
             </li>
             <li>
-            <NavLink
-            to="/Abonnés" exact >Abonnés</NavLink>
+              <NavLink
+                to="/Abonnés" exact >Abonnés</NavLink>
+               </li>
+               <li>
+              <NavLink
+                to="/Notifications" exact >Notifications</NavLink>
             </li>
             <li>
-            <NavLink
-            to="/Notifications" exact >Notifications</NavLink>
+              <NavLink
+                to="/Security" exact >Sécurité</NavLink>
             </li>
             <li>
-            <NavLink
-            to="/Security" exact >Sécurité</NavLink>
+              <NavLink
+                to="/Mettre_à_niveau" exact >Mettre à niveau</NavLink>
             </li>
-            <li>
-            <NavLink
-            to="/Mettre_à_niveau" exact >Mettre à niveau</NavLink>
-            </li>
-            </ul>
+          </ul>
         </div>
         {/*** les video *****/}
     
