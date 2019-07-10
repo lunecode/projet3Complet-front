@@ -50,7 +50,7 @@ render() {
             {/* video youtube a inserer  */}
             
             <p>{item.video_description}</p>
-            <p>{item.profil_id_profil}</p>
+            <p>{item.profil_id_profil}</p> 
         </div>
         </div>
         
