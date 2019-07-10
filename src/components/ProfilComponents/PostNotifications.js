@@ -4,7 +4,7 @@ import './PostNotification.scss';
 import iconIdea from '../../Images-tripitto/Icon/Idea.png'
 import iconFrance from '../../Images-tripitto/Icons/Drapeau-FR.png';
 import iconEN from '../../Images-tripitto/Icons/Drapeau-EN.png';
-import { BrowserRouter as  NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 
 const PostNotifications = (props) => {
@@ -34,8 +34,7 @@ const PostNotifications = (props) => {
                 to="/Abonnements" exact >Abonnements</NavLink>
             </li>
             <li>
-              <NavLink
-                to="/Abonnés" exact >Abonnés</NavLink>
+            <NavLink to="/Abonnés" exact >Abonnés</NavLink>
                </li>
                <li>
               <NavLink

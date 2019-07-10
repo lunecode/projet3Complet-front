@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import { NavLink } from 'react-router-dom';
 import "./GetFollower.scss"
+
 // image
 
 import iconSearch from '../../Images-tripitto/Icon/TRAILING ICON.png'

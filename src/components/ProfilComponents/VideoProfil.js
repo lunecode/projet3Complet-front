@@ -1,72 +1,33 @@
 import React, { Component } from 'react';
-import axios from 'axios'
-import YouTube from 'react-youtube';
 import { NavLink } from 'react-router-dom'
 import iconSearch from '../../Images-tripitto/Icon/TRAILING ICON.png'
-import iconArrow from '../../Images-tripitto/iconAbonnements/icon-arrow.png'
-import "./VideoProfilCompnent.scss"
+import "./VideoProfil.scss"
+import ModalDeleteVideo from '../../components/ProfilComponents/ModalDeleteVideo.js';
+import ModalHidevide from '../../components/ProfilComponents/ModalHidevideo.js';
 import Partager from '../../Images-tripitto/Icon_Vidéo/Partager.png'
-import Delete from '../../Images-tripitto/Icon_Vidéo/Delete.png'
 import modification from '../../Images-tripitto/Icon_Vidéo/modification.png'
-import Vue from '../../Images-tripitto/Icon_Vidéo/Vue.png'
 import pourcentage from '../../Images-tripitto/Icon_Vidéo/pourcentage.png'
 import pourcentage80 from '../../Images-tripitto/Icon_Vidéo/pourcentage80.png'
 import pourcentage60 from '../../Images-tripitto/Icon_Vidéo/pourcentage60.png'
-
 import vinise from '../../Images-tripitto/Icon_Vidéo/vinise.png'
-
 import upload from '../../Images-tripitto/Icon_Vidéo/upload.png'
-
 import img1 from '../../Images-tripitto/Icon_Vidéo/img1.png'
 import img2 from '../../Images-tripitto/Icon_Vidéo/img2.png'
 import img3 from '../../Images-tripitto/Icon_Vidéo/img3.png'
 import img4 from '../../Images-tripitto/Icon_Vidéo/img4.png'
-import ModalDeleteVideo from './ModalDeleteVideo';
 
-class  VideoProfilCompnent extends Component {
+class VideoProfil extends Component {
 
-    state = {
-        videos: [],
-    
+//   removeDummy=() =>{
+//     var elem = document.getElementById('dummy');
+//     elem.parentNode.removeChild(elem);
+//     return false;
+//   }
 
-      };
-      componentDidMount() {
-        this.getVideo()
-      }
-
-      getVideo = async () => {
-        const res = await axios.get('http://localhost:3000/general_video/get_general_video_limite1/1')
-        this.setState({ videos: res.data })
-        console.log(this.state.videos)
-      }
-
-  changeHandler = (e) => {
-    this.setState({ [e.target.name]: e.target.value })
-  }
-
-  removeDummy=() =>{
-    var elem = document.getElementById('dummy');
-    elem.parentNode.removeChild(elem);
-    return false;
-  }
-
-   
-    
-    render() {
-// const { filterVideo } = this.props;
-    const opts = {
-        height: '490',
-        width: '850',
-        playerVars: { 
-          autoplay: 0
-        }
-      };
-      const { options, value } = this.state;
-      console.log(this.state.vu);
+    render(){
         return (
-
 <div className="VideoProfilCompnent">
-<ModalDeleteVideo/>
+
       <div className="membres-profil">
       <img src="https://images.pexels.com/photos/814499/pexels-photo-814499.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500" alt="pictures profil" />
       <div className="membres-profil-detail">
@@ -110,7 +71,7 @@ class  VideoProfilCompnent extends Component {
           </ul>
         </div>
         {/*** les video *****/}
-    
+  
         <div className="grid-profil-info">
     <div><h3>Video(5)</h3></div>
     <div className="filter">   
@@ -135,8 +96,7 @@ class  VideoProfilCompnent extends Component {
 <div className="bloc_2_video">
 {/* /bloc video 1 */}
 <div className="list_videos" id ="dummy">
-{this.state.videos.map(item => (
-   <div key={item.id_general_video}>
+   <div>
           <div className="video_user1">
             <div className="status_durée">
             <div className="status1">
@@ -162,14 +122,13 @@ class  VideoProfilCompnent extends Component {
             <div className="icons_video"> 
             <img  className="img1" src={modification} alt=""/> 
             <img className="img2"src={Partager} alt=""/>  
-            <img className="img3"src={Vue} alt=""/> 
-            <button onClick={this.removeDummy}><img className="img4"src={Delete} alt=""/> </button> 
+            <ModalHidevide />
+            <ModalDeleteVideo />
             </div>
           </div>
+         
           </div>
-          
-  
-         ))} 
+           
      </div>
       
 
@@ -177,8 +136,7 @@ class  VideoProfilCompnent extends Component {
 
 {/* /bloc video 2 */}
 <div className="list_videos" id ="dummy">
-{this.state.videos.map(item => (
-   <div key={item.id_general_video}  >
+   <div>
        <div className="video_user1">
             <div className="status_durée">
             <div className="status1">
@@ -200,27 +158,26 @@ class  VideoProfilCompnent extends Component {
             <p className="B">.</p>
             <p className="C">Il y a 3 mois</p>
             <p className="D"> <img src={pourcentage80} alt=""/></p>
-            </div>
+       </div>
        <div className="icons_video"> 
             <img  className="img1" src={modification} alt=""/> 
-            <img className="img2"src={Partager} alt=""/>  
-            <img className="img3"src={Vue} alt=""/> 
-            <button onClick={this.removeDummy}><img className="img4"src={Delete} alt=""/> </button> 
+            <img className="img2" src={Partager} alt=""/>  
+           <ModalHidevide />
+            <ModalDeleteVideo />
             </div>
           </div>
           </div>   
-         ))} 
+        
      </div>
 
 </div>
-
      {/* /*****************************************$ */}
 
      <div className="bloc_2_video_2">
 {/* /bloc video 3 */}
 <div className="list_videos" id ="dummy">
-{this.state.videos.map(item => (
-   <div key={item.id_general_video}  >
+
+   <div>
        <div className="video_user1">
             <div className="status_durée">
             <div className="status1">
@@ -246,19 +203,20 @@ class  VideoProfilCompnent extends Component {
        <div className="icons_video"> 
             <img  className="img1" src={modification} alt=""/> 
             <img className="img2"src={Partager} alt=""/>  
-            <img className="img3"src={Vue} alt=""/> 
-            <button onClick={this.removeDummy}><img className="img4"src={Delete} alt=""/> </button> 
+            <ModalHidevide />
+            <ModalDeleteVideo />
+            {/* <button onClick={this.removeDummy}><img className="img4"src={Delete} alt=""/> </button>  */}
             </div>
           </div>
           </div>   
-         ))} 
+        
      </div>
 
 
      {/* /bloc video 4*/}
 <div className="list_videos" id ="dummy">
-{this.state.videos.map(item => (
-   <div key={item.id_general_video}  >
+
+   <div>
        <div className="video_user1">
             <div className="status_durée">
             <div className="status1">
@@ -285,12 +243,12 @@ class  VideoProfilCompnent extends Component {
        <div className="icons_video"> 
             <img  className="img1" src={modification} alt=""/> 
             <img className="img2"src={Partager} alt=""/>  
-            <img className="img3"src={Vue} alt=""/> 
-            <button onClick={this.removeDummy}><img className="img4"src={Delete} alt=""/> </button> 
+            <ModalHidevide />
+            <ModalDeleteVideo />
             </div>
           </div>
           </div>   
-         ))} 
+        
      </div>
      </div> 
       
@@ -301,8 +259,8 @@ class  VideoProfilCompnent extends Component {
      <div className="bloc_2_video_3">
 {/* /bloc video 3 */}
 <div className="list_videos" id ="dummy">
-{this.state.videos.map(item => (
-   <div key={item.id_general_video}  >
+
+   <div>
        <div className="video_user1">
             <div className="status_durée">
             <div className="status1">
@@ -328,28 +286,25 @@ class  VideoProfilCompnent extends Component {
        <div className="icons_video"> 
             <img  className="img1" src={modification} alt=""/> 
             <img className="img2"src={Partager} alt=""/>  
-            <img className="img3"src={Vue} alt=""/> 
-
-            <button onClick={this.removeDummy}><img className="img4"src={Delete} alt=""/> </button> 
+            <ModalHidevide />
+            <ModalDeleteVideo />
             </div>
           </div>
           </div>   
-         ))} 
      </div>
 
 
      {/* /bloc video 4*/}
 <div className="list_videos">
-{this.state.videos.map(item => (
-   <div key={item.id_general_video}  >
+
+   <div>
        <div className="video_user1">
        <div className="upload_video">
          <img src ={upload} alt="upload"/>
          <p>Ajouter une nouvelle video</p>
          </div>
           </div>
-          </div>   
-         ))} 
+          </div>     
      </div>
      </div> 
 
@@ -358,4 +313,4 @@ class  VideoProfilCompnent extends Component {
     }
 }
 
-export default  VideoProfilCompnent;
+export default VideoProfil;

@@ -3,12 +3,6 @@ import { StreamApp,  NotificationDropdown } from 'react-activity-feed';
 import 'react-activity-feed/dist/index.css';
 
 
-// const Icon = () => (
-//   <img
-//     style={{ width: '30px', height: '40px' }}
-//   />
-// );
-
 
 const NotificationPopup =()=>{
   return(
@@ -22,12 +16,10 @@ const NotificationPopup =()=>{
 
   <NotificationDropdown 
     right
-    // Icon={<Icon />}
     notify
   />
   
-  
-  
+
 </StreamApp>
 
   )

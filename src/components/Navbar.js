@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-
-
-
 import './Navbar.scss'
 import Modal from './Modal';
 import './Modal.scss'

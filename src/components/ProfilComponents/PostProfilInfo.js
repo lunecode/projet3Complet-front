@@ -4,9 +4,7 @@ import { NavLink } from 'react-router-dom'
 import UploadImgProfil from '../../components/ProfilComponents/UploadImgProfil.js';
 
 
-
 const PostProfilInfo = (props) => {
-
   return (
     <div className="bloc-page-profil">
       <div className="membres-profil">
@@ -51,12 +49,13 @@ const PostProfilInfo = (props) => {
           </ul>
 
         </div>
-        {/* <form onSubmit={this.submitHandler} className="grid-profil-info"> */}
+       
         <form  className="grid-profil-info">
           <div>
             <h2>Profil</h2>
             <div className='field-profil-picture-bloc'>
-              <UploadImgProfil />
+
+              <UploadImgProfil {...props} />
             </div>
           </div>
           <div className="profil-bloc-2">
