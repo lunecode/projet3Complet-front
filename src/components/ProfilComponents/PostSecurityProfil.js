@@ -11,8 +11,6 @@ class PostSecurityProfil extends React.Component {
   
 openModalSecurity =() => {
   this.setState( { isModalSecurityOpen: true} )
-console.log(this.state.isModalSecurityOpen);
-return 
 
   }
 
