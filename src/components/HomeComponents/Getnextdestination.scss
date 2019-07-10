@@ -108,6 +108,7 @@
 .nextpictureimg2 {
     height: 25vh;
     width: 100%;
+    z-index:1;
 
 }
 
@@ -122,6 +123,7 @@
 .nextpictureimg3{
     height: 25vh;
     width: 100%;
+    z-index:1;
 }
 
 
@@ -135,6 +137,7 @@
 .nextpictureimg4{
     height: 25vh;
     width: 100%;
+    z-index:1;
 }
 
 .divpictureNext5{
@@ -147,6 +150,7 @@
 .nextpictureimg5{
     height: 25vh;
     width: 100%;
+    z-index:1;
 }
 
 
@@ -158,7 +162,7 @@
     text-align: center;
     margin-top: -21%;
     color:white;
-    z-index: 1;
+    z-index: 3;
 }
 .p2{
     position:relative;
@@ -167,7 +171,7 @@
     text-align: center;
     margin-top: -8%;
     color:white;
-    z-index: 2;
+    z-index: 3;
 }
 
 .p3{
@@ -178,7 +182,7 @@
     margin-left: 5%;
     margin-top: -11%;
     color:white;
-    z-index: 1;
+    z-index: 3;
 }
 .p4{
 display: none;
@@ -192,7 +196,7 @@ display: none;
     margin-left: 5%;
     margin-top: -11%;
     color:white;
-    z-index: 1;
+    z-index: 3;
 }
 .p6{
     display: none;
@@ -200,7 +204,7 @@ display: none;
 
 .p7{
     position:relative;
-    z-index: 1;
+    z-index: 3;
     font-family: 'Lora';
     font-size: 2vh;
     text-align: left;
@@ -213,7 +217,7 @@ display: none;
 }
 .p9{
     position:relative;
-    z-index: 1;
+    z-index: 3;
     font-family: 'Lora';
     font-size: 2vh;
     text-align: left;
@@ -223,6 +227,66 @@ display: none;
 }
 .p10{
     display: none;
+}
+
+
+.leftarrow {
+    position: absolute;
+    height: 6vh;
+    transform: rotate(90deg);
+    pointer-events: all;
+    margin-top: -14.75%;
+    margin-left: -3.5%;
+    z-index: 3;
+}
+.rightarrow {
+    position: absolute;
+    z-index: 3;
+    pointer-events: all;
+    height: 6vh;
+    transform: rotate(-90deg);
+    margin-top: -14.75%;
+    margin-left: 48.75%;
+    /* margin-left: 185vh; */
+
+}
+.leftarrowDisable {
+    position: absolute;
+    z-index: 4;
+    pointer-events: all;
+    height: 6vh;
+    transform: rotate(90deg);
+    margin-top: -14.75%;
+    margin-left: -3.5%;
+
+}
+.rightarrowDisable {
+        position: absolute;
+        z-index: 3;
+        height: 6vh;
+        transform: rotate(-90deg);
+        margin-top: -14.75%;
+        margin-left: 48.75%;
+        pointer-events: none;
+}
+
+.leftHome2 {
+    pointer-events: all;
+    margin-left: -170%;
+}
+.rightHome2{
+    pointer-events: all;
+    margin-left: -280%;
+}
+.leftHomeDisable1 {
+    opacity: 0.5;
+    pointer-events: all;
+    margin-left: -170%;
+}
+.leftHomeDisable2 {
+    opacity: 0.5;
+    pointer-events: none;
+    margin-left: -280%;
 }
 
 
@@ -312,13 +376,14 @@ margin-left: 1.5%;
 .title_bestplan_numbertips{
     color:white;
     margin-bottom: 46%;
-    margin-top:-530%;
+    margin-top:-580%;
     font-size: 1.60vh;
     font-family: 'Roboto';
     font-weight: bold;
     background-color: black;
     color: rgb(52, 131, 43);
     padding:2px;
+
 }
 .container_title_bestplan_video_duration{
     position: absolute;
@@ -328,7 +393,7 @@ margin-left: 1.5%;
 .title_bestplan_video_duration{
     color:white;
     margin-bottom: 46%;
-    margin-top:-580%;
+    margin-top:-550%;
     font-size: 1.60vh;
     font-family: 'Roboto';
     font-weight: bold;
@@ -379,9 +444,8 @@ margin-left: 1.5%;
     grid-template-columns: 70% 1.7% 1% 20%;
     align-items: center;
     border-block-end: solid 1px #2C404D;
-    font-size: 2.50vh;
-    font-weight: bold;
-    font-family: 'Robotoregular';
+    font-size: 2.2vh;
+
     letter-spacing: -1px;
     font-stretch: extra-expanded;
     
@@ -396,7 +460,7 @@ margin-left: 1.5%;
         align-items: center;
         padding-left: 3.5%;
         text-align: center; 
-        margin-top: -15.25%;
+        margin-top: -14.42%;
         color: #2C404D;
             p{
             color: #2C404D;
@@ -421,70 +485,13 @@ margin-left: 1.5%;
     } 
     .buttonContributor{
         margin-bottom: 20px;
-        margin-top: 5px;
+        margin-top: 14px;
         border-color: #5dd8dc;
         color: #5dd8dc;
         font-size: 13px;
         padding: 11px 120px;
+        background-color: #f4f4f4;
     }
 
-
-
-
-
-    .leftarrow {
-        position: absolute;
-        height: 6vh;
-        transform: rotate(90deg);
-        pointer-events: all;
-        margin-top: -14.75%;
-        margin-left: -3.5%;
-        z-index: 3;
-    }
-    .rightarrow {
-        position: absolute;
-        z-index: 3;
-        pointer-events: all;
-        height: 6vh;
-        transform: rotate(-90deg);
-        margin-top: -14.75%;
-        margin-left: 48.75%;
-        /* margin-left: 185vh; */
-   
-    }
-    .leftarrowDisable {
-        position: absolute;
-        z-index: 4;
-        pointer-events: all;
-        height: 6vh;
-        transform: rotate(90deg);
-        margin-top: -14.75%;
-        margin-left: -3.5%;
-
-    }
-    .rightarrowDisable {
-            position: absolute;
-            z-index: 3;
-            pointer-events: all;
-    }
-
-    .leftHome2 {
-        pointer-events: all;
-        margin-left: -170%;
-    }
-    .rightHome2{
-        pointer-events: all;
-        margin-left: -280%;
-    }
-    .leftHomeDisable1 {
-        opacity: 0.5;
-        pointer-events: none;
-        margin-left: -170%;
-    }
-    .leftHomeDisable2 {
-        opacity: 0.5;
-        pointer-events: none;
-        margin-left: -280%;
-    }
 
 /************** TEST  *******/

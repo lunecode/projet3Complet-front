@@ -22,7 +22,7 @@ $colorBackgroundModal: #45adcd;
     position: absolute;
     margin: 0.1% 0% 0% 35% ;
     width: 400px;
-    z-index: 1;
+    z-index:6;
 }
 
 .containerIs-open {
@@ -129,5 +129,9 @@ $colorBackgroundModal: #45adcd;
 
     span:hover {
         opacity: 0.5;
+    }
+
+    .button_connexion {
+        border: transparent;
     }
 }

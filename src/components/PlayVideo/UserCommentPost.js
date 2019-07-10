@@ -33,6 +33,7 @@ submitHandler = e => {
 render() {
     const { comment, profil_id_profil, popularity_id_popularity, general_video_id_general_video } = this.state
     return (
+    
     <div className="container_post">
         <form onSubmit={this.submitHandler}>
             <div className="myComment">

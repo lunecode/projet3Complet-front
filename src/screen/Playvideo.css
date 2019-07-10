@@ -17,12 +17,12 @@
 
 .contvid{
     display: flex; 
-    width:100%;
+    width:90%;
 }
 
 .youtubeVid{
     /* padding: 2%; */
-    width:80%;
+    width:100%;
 }
 
 .containerAllVideoUser{

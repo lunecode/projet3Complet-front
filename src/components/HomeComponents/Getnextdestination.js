@@ -22,23 +22,23 @@ class Getnextdestination extends Component {
 
 
     getnextvideo = async () => {
-        const res = await axios.get('http://localhost:3000/popularity/get_popularity_liked_general_video_travel_information')
+        const res = await axios.get('http://localhost:3000/general_video/get_general_video_nextdestination')
         const Nextdestination = res.data
         this.setState({ nextpicture: Nextdestination })
     }
     getnextvideolimit = () => {
-    this.setState({offset: this.state.offset + 5}, async ()=> {
-        const res = await axios.get(`http://localhost:3000/popularity/get_popularity_liked_general_video_travel_information/${this.state.offset}`)
-        const Nextdestination = res.data
-        this.setState({ nextpicture: Nextdestination },)
-    })
+        this.setState({ offset: this.state.offset + 5 }, async () => {
+            const res = await axios.get(`http://localhost:3000/popularity/get_popularity_liked_general_video_travel_information/${this.state.offset}`)
+            const Nextdestination = res.data
+            this.setState({ nextpicture: Nextdestination })
+        })
     }
     getnextvideolimitBack = () => {
-    this.setState({offset: this.state.offset - 5}, async ()=> {
-        const res = await axios.get(`http://localhost:3000/popularity/get_popularity_liked_general_video_travel_information/${this.state.offset}`)
-        const Nextdestination = res.data
-        this.setState({ nextpicture: Nextdestination },)
-    })
+        this.setState({ offset: this.state.offset - 5 }, async () => {
+            const res = await axios.get(`http://localhost:3000/popularity/get_popularity_liked_general_video_travel_information/${this.state.offset}`)
+            const Nextdestination = res.data
+            this.setState({ nextpicture: Nextdestination })
+        })
     }
 
     getbestplan = async () => {
@@ -47,18 +47,18 @@ class Getnextdestination extends Component {
         this.setState({ videos: Bestplan })
     }
     getbestplanlimit = () => {
-    this.setState({offsetBestplan: this.state.offsetBestplan + 4}, async ()=> {
-        const res = await axios.get(`http://localhost:3000/popularity/get_popularity_liked_general_video_travel_information2/${this.state.offsetBestplan}`)
-        const Bestplan = res.data
-        this.setState({ videos: Bestplan },)
-    })
+        this.setState({ offsetBestplan: this.state.offsetBestplan + 4 }, async () => {
+            const res = await axios.get(`http://localhost:3000/popularity/get_popularity_liked_general_video_travel_information2/${this.state.offsetBestplan}`)
+            const Bestplan = res.data
+            this.setState({ videos: Bestplan })
+        })
     }
     getbestplanlimitBack = () => {
-    this.setState({offsetBestplan: this.state.offsetBestplan - 4}, async ()=> {
-        const res = await axios.get(`http://localhost:3000/popularity/get_popularity_liked_general_video_travel_information2/${this.state.offsetBestplan}`)
-        const Bestplan = res.data
-        this.setState({ videos: Bestplan },)
-    })
+        this.setState({ offsetBestplan: this.state.offsetBestplan - 4 }, async () => {
+            const res = await axios.get(`http://localhost:3000/popularity/get_popularity_liked_general_video_travel_information2/${this.state.offsetBestplan}`)
+            const Bestplan = res.data
+            this.setState({ videos: Bestplan })
+        })
     }
 
 
@@ -81,13 +81,13 @@ class Getnextdestination extends Component {
             <>
                 {/****************************** SECTION NEXT DESTINATION******************************* */}
                 <section className='nextdestination'>
-                    
+
                     <div className="wrapper-nextpicture">
                         <div>
-                                <img onClick={this.getnextvideolimitBack } className={this.state.offset === 0 ? "leftarrow" : "leftarrowDisable"} src={leftarrow} alt=""></img>
+                                <img onClick={this.getnextvideolimitBack } className={this.state.offset === 0 ? "leftarrowDisable" : "leftarrow"} src={leftarrow} alt=""></img>
                         </div>  
                         <div>
-                                <img onClick={this.getnextvideolimit} className={this.state.offset === 10 ? "rightarrow" : "rightarrow"} src={rightarrow} alt=""></img>
+                                <img onClick={this.getnextvideolimit} className={this.state.offset === 5 ? "rightarrowDisable" : "rightarrow"} src={rightarrow} alt=""></img>
                         </div>
                         {this.state.nextpicture.map(nextpicture => (
                             <div className={"divpictureNext" + i} key={i++}>
@@ -110,7 +110,7 @@ class Getnextdestination extends Component {
                 <img onClick={this.getbestplanlimitBack} className={this.state.offsetBestplan === 0 ? "leftHomeDisable1" : "leftHome2"} src={leftHome} alt=""></img>
             </div>
             <div>
-                <img onClick={this.getbestplanlimit} className={this.state.offsetBestplan === 16 ? "leftHomeDisable2" : "rightHome2"} src={RightHome} alt=""></img>
+                <img onClick={this.getbestplanlimit} className={this.state.offsetBestplan === 8 ? "leftHomeDisable2" : "rightHome2"} src={RightHome} alt=""></img>
             </div>
         </section> 
             <div className="container_bestplan">
@@ -124,49 +124,47 @@ class Getnextdestination extends Component {
                                 <p className='title_bestplan_video_duration'>{video.video_duration}</p>
                             </div>
                             <p className='title_bestplan_title'>{video.video_title}</p>
-                            
+
                             <p className='title_bestplan_countries'>{video.countries}</p>
                             <ul className='container_nb_view'>
                                 <li><p className='title_bestplan_nbviews'>{video.nb_views} vues</p></li>
                             </ul>
-                             <p className='title_bestplan_user'>{video.video_user}</p>
+                            <p className='title_bestplan_user'>{video.video_user}</p>
                         </div>
                     ))}
                     <div className='container_contributors_title'>
                         <h2 className="title_contributors">Merci à nos contributeurs</h2>
-                    <div className='contributor_name'>
-                        <p>Adam Denisov</p>
-                        <p>Alexander Ljung</p>
-                        <p>Aneta Skodova</p>
-                        <p>Athar Malakooti</p>
-                        <p>Boniface Esanji</p>
-                        <p>Cadarion Hart</p>
-                        <p>Charles Davies</p>
-                        <p>Chioke Chinasa</p>
-                        <p>Clarke Gillebert</p>
-                        <p>Dusya Sigachoya</p>
-                        <p>Faadi Arache</p>
-                        <p>Fyodor Dyzenhkov</p>
-                        <p>Heather Clarke</p>
-                        <p>Homoru Yunosuke</p>
-                        <p>Ivan Polo</p>
-                        <p>Jafaros Long</p>
-                        <p>Jesus Banuelos</p>
-                        <p>Kiandra Lowe</p>
-                        <p>Labeeba Almer</p>
-                    </div>
+                        <div className='contributor_name'>
+                            <p>Adam Denisov</p>
+                            <p>Alexander Ljung</p>
+                            <p>Aneta Skodova</p>
+                            <p>Athar Malakooti</p>
+                            <p>Boniface Esanji</p>
+                            <p>Cadarion Hart</p>
+                            <p>Charles Davies</p>
+                            <p>Chioke Chinasa</p>
+                            <p>Clarke Gillebert</p>
+                            <p>Dusya Sigachoya</p>
+                            <p>Faadi Arache</p>
+                            <p>Fyodor Dyzenhkov</p>
+                            <p>Heather Clarke</p>
+                            <p>Homoru Yunosuke</p>
+                            <p>Ivan Polo</p>
+                            <p>Jafaros Long</p>
+                            <p>Jesus Banuelos</p>
+                            <p>Kiandra Lowe</p>
+                            <p>Labeeba Almer</p>
+                        </div>
 
-                    <button className="buttonContributor">VOIR PLUS</button>
+                        <button className="buttonContributor">VOIR PLUS</button>
                     </div>
                 </div>
 
 
-            
+
             </>
         )
-    }
+    } 
 }
-
-
 
 export default Getnextdestination;

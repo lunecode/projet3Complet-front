@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
 
+
+
+// MOT DE PASSE OUBLIE
+
 class ForgottenPassword extends Component {
     
     render () {

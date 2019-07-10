@@ -4,7 +4,7 @@ import './TravelInfo.css';
 import Alone from '../../Images-tripitto/Icon/Aventurier/seulwhite.png';
 import House from '../../Images-tripitto/Icon/logement_blc.png';
 import Mug from '../../Images-tripitto/Icon/repas_blc.png';
-
+ 
 
 class TravelInfo extends Component {
     state = {
