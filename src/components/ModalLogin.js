@@ -1,7 +1,33 @@
 import React, { Component } from 'react'
 
+import Modal2 from './Modal2';
+import './Modal.scss'
+
 class ModalLogin extends Component {
+
+    state = {
+        isModalOpe4: false,
+        // ForgottenPassword: false,
+    }
+
+openModal4 =() => {
+    this.setState( { isModalOpe4: true} )
+    this.props.onClose3()
+console.log(this.state.isModalOpe4);
+    }
+
+    closeModal4 = () => {
+        this.setState({ isModalOpe4: false })
+        // console.log(this.state.isModalOpe4);
+    }
+
+    componentDidMount() {
+        this.openModal4()
+        this.closeModal4()
+    }
+
     render () {
+        const { isModalOpe4 } = this.state
         const { isOpen3, onClose3 } = this.props;
         return (
             <>
@@ -43,12 +69,13 @@ class ModalLogin extends Component {
                             <p>En créant un compte j'accepte les Conditions Générales d'utilisation de Tripitto</p>
                         </div>
                         <div>
-                            <p className="LoginToTheSite">Vous avez déjà un compte ? <span>Se connecter</span></p>
+                            <p className="LoginToTheSite">Vous avez déjà un compte ? <span onClick={this.openModal4}>Se connecter</span></p>
                         </div>
 
                     </div>
 
             </div>
+                <Modal2 isOpen4={isModalOpe4} onClose4={this.closeModal4} />
             </>
         )
     }

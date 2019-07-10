@@ -54,7 +54,7 @@ $colorButton: #5dd8dc;
     color: white;
     font-weight: bold;
     font-family: 'Robotoregular';
-    font-size: 0.85vw;
+    font-size: 1vw;
     text-decoration: none;
 }
 
@@ -73,8 +73,9 @@ $colorButton: #5dd8dc;
 
         .containerNavRight {
             position: relative;
-            width: 20%;
-            padding-right: 2%;
+            width: 32%;
+            padding-right: 4%;
+            padding-left: 10%;
             
             ul {
                 align-items: center;
@@ -87,19 +88,43 @@ $colorButton: #5dd8dc;
             .logoAvatar {
                 border-radius: 50%;
                 height: 33px;
+                margin-left: 150px;
             }
 
             .notification {
                 height: 20px;
-                
+                margin-left: 2px;
             }
             .buttonNavbar {
                 background-color: $colorButton;
                 color: white;
                 font-size: 16px;
-                padding: 8px 25px;
+                padding: 9px 25px;
                 border: none;
             }
+            .buttonNavbarChange {
+                background-color: #2C404D;
+                border: solid 1px #1BA2A2;
+                box-shadow: 0.3px 0.3px 0.3px 0.3px #1BA2A2;;
+                color: $colorButton;
+                font-size: 16px;
+                padding: 8px 25px;
+            }
+            
+            button.buttonNavbarConnexion {
+                border: none;
+                box-shadow: 0.3px 0.3px 0.3px 0.3px #1BA2A2;
+                color: white;
+                position: relative;
+                background-color: $colorButton;
+                font-size: 16px;
+                padding: 9px 12px;
+                right: 60px;
+                width: 130%;
+            }
+                .buttonNavbarConnexionNone{
+                    display: none;
+                } 
         }
     }
 
@@ -107,7 +132,7 @@ $colorButton: #5dd8dc;
     .dropdown-menu:hover{
         transform: scale(1.19);
         transition: 1s;
-      }
+    }
 
 
 

@@ -28,7 +28,6 @@ return
 
     closeModal = () => {
         this.setState({ isModalOpen: false })
-        // console.log(this.state.isModalOpen);
     }
 
     componentDidMount() {
@@ -73,15 +72,15 @@ return
                         <div className="containerNavRight">
                             <ul className="Ulbutton">
                                 <li><NavLink exact to="/Profil"><img className="logoAvatar" src={Avatar} alt="logo tripitto"></img></NavLink></li>
-                                <li><NotificationPopup /></li>
-                                <li><button onClick={this.openModal} className="buttonNavbar">PUBLIER</button></li>
+                                <li className="notification"><NotificationPopup /></li>
+                                <li><button onClick={this.openModal} className={this.state.isModalOpen === false ? "buttonNavbarConnexion" : "buttonNavbarConnexionNone"}>SE CONNECTER</button></li>
+                                <li><button onClick={this.openModal} className={this.state.isModalOpen === false ? "buttonNavbarChange" : "buttonNavbar"}>PUBLIER</button></li>
                             </ul>
                         </div>
                     </nav>
                 </header>
                 <div className="containerModal">
                     <Modal isOpen={isModalOpen} onClose={this.closeModal} />
-                    {/* <Modal isOpenForgottenPassword={ForgottenPassword} onCloseForgottenPassword={this.closeModalForgottenPassword} /> */}
                 </div>
 
 
