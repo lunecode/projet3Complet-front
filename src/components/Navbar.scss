@@ -73,9 +73,9 @@ $colorButton: #5dd8dc;
 
         .containerNavRight {
             position: relative;
-            width: 32%;
-            padding-right: 4%;
-            padding-left: 10%;
+            width: 20%;
+            padding-right: 3%;
+            
             
             ul {
                 align-items: center;
@@ -88,7 +88,6 @@ $colorButton: #5dd8dc;
             .logoAvatar {
                 border-radius: 50%;
                 height: 33px;
-                margin-left: 150px;
             }
 
             .notification {
@@ -118,7 +117,7 @@ $colorButton: #5dd8dc;
                 position: relative;
                 background-color: $colorButton;
                 font-size: 16px;
-                padding: 9px 12px;
+                padding: 8.5px 12px;
                 right: 60px;
                 width: 130%;
             }
@@ -126,12 +125,6 @@ $colorButton: #5dd8dc;
                     display: none;
                 } 
         }
-    }
-
-
-    .dropdown-menu:hover{
-        transform: scale(1.19);
-        transition: 1s;
     }
 
 
@@ -150,7 +143,7 @@ $colorButton: #5dd8dc;
     opacity: 0;
     visibility: hidden;
     width: 200px;
-    transition: all 0.25s ease-out;
+    transition: all 0.5s ease-out;
   }
   
   .containerNavLeft li:hover .ul_list  {
