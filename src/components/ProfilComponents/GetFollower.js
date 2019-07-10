@@ -88,31 +88,75 @@ class GetFollower extends Component {
                                 <div className="bloc-follower">
                                     {this.state.Follower.map(item => (
 
+                                            <div className="info_follower">
 
-                                        <div className="bloc-follower-item">
-                                            <div className="bloc-follower-info">
-                                                <div>
-                                                    <img src={item.follower_picture} alt='profilpicture 2' />
-                                                </div>
-                                                <div>
-                                                    <h3>{item.follower_user}</h3>
+                                                <p>Abonné a vos aventures depuis 27 jours</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <button>Abonné</button>
+                                        </div>
+                                    </div>
+                                    <div className="bloc-notifications-item">
+                                        <div>
+                                            <img src={image1} alt='profilpicture 1' />
+                                        </div>
+                                        <div>
+                                            <h3>Alicia Stinger</h3>
 
-                                                    <div className="info_follower">
+                                            <div className="info_follower">
 
-                                                        <p>{item.follower}</p>
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                </div>
-                                                <button>Abonné</button>
+                                                <p>Abonné a vos aventures depuis 27 jours</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <button>Abonné</button>
+                                        </div>
+                                    </div>
+                                    <div className="bloc-notifications-item">
+                                        <div>
+                                            <img src={image3} alt='profilpicture 3' />
+                                        </div>
+                                        <div>
+                                            <h3>Chineze Afemuna</h3>
+
+                                            <div className="info_follower">
+
+                                                <p>Abonné a vos aventures depuis 27 jours</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <button>Abonné</button>
+                                        </div>
+                                    </div>
+                                    <div className="bloc-notifications-item">
+                                        <div>
+                                            <img src={image4} alt='profilpicture 4' />
+                                        </div>
+                                        <div>
+                                            <h3>Daisy Murphy</h3>
+
+                                            <div className="info_follower">
+
+                                                <p>Abonné a vos aventures depuis 27 jours</p>
                                             </div>
                                         </div>
                                     ))}
 
+                                            <div className="info_follower">
+
+                                                <p>Abonné a vos aventures depuis 27 jours</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <button>Abonné</button>
+                                        </div>
+                                    </div>
+
                                 </div>
-                                <div className='bloc-plus'>
-                                    <button><img src={iconPlus} alt='icon plus' /></button>
-                                </div>
+                            </div>
+                            <div className='bloc-plus'>
+                                <button><img src={iconPlus} alt="icon" /></button>
                             </div>
                         </form>
 

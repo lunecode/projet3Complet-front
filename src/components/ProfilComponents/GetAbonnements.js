@@ -6,6 +6,11 @@ import iconSearch from '../../Images-tripitto/Icon/TRAILING ICON.png'
 import iconPlus from '../../Images-tripitto/Icon/Plus.png'
 
 
+<<<<<<< HEAD
+=======
+// import iconArrow from '../../Images-tripitto/iconAbonnements/icon-arrow.png'
+
+>>>>>>> 9ae180024c27f773543328cc26578b1deb13bc8a
 class GetAbonnements extends Component {
     state = {
         Following: [],
@@ -34,47 +39,47 @@ class GetAbonnements extends Component {
                     </div>
                     <div className='position-bloc'>
                         <div className='profil-menu'>
-                        <ul>
-            <li>
-              <NavLink
-                className="nav"
-                to="/Profil" exact>Profil</NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/Video" exact >Video</NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/Abonnements" exact >Abonnements</NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/Abonnés" exact >Abonnés</NavLink>
-               </li>
-               <li>
-              <NavLink
-                to="/Notifications" exact >Notifications</NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/Security" exact >Sécurité</NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/Mettre_à_niveau" exact >Mettre à niveau</NavLink>
-            </li>
-          </ul>
+                            <ul>
+                                <li>
+                                    <NavLink
+                                        className="nav"
+                                        to="/Profil" exact>Profil</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink
+                                        to="/Video" exact >Video</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink
+                                        to="/Abonnements" exact >Abonnements</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink
+                                        to="/Abonnés" exact >Abonnés</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink
+                                        to="/Notifications" exact >Notifications</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink
+                                        to="/Security" exact >Sécurité</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink
+                                        to="/Mettre_à_niveau" exact >Mettre à niveau</NavLink>
+                                </li>
+                            </ul>
                         </div>
                         <form className="following-block">
                             <div>
                                 <h2>Abonnements (35)</h2>
                                 <div className="search-following">
-                                    <p className='tri-following'>Trier par 
+                                    <p className='tri-following'>Trier par
                                     <ul class='filter-menu'>
-                                    <li>Date d'abonnement</li>
-                                    <li>Nom</li>
-                                    </ul>
+                                            <li>Date d'abonnement</li>
+                                            <li>Nom</li>
+                                        </ul>
                                     </p>
                                     <div className='search-bar-following'>
                                         <button type='submit'><img src={iconSearch} alt='icon search' /></button>
@@ -106,8 +111,13 @@ class GetAbonnements extends Component {
                                     ))}
                                  
                                     <div className='bloc-plus'>
+<<<<<<< HEAD
                                 <button><img src={iconPlus} alt='icon plus' /></button>
                                   </div>     
+=======
+                                        <button><img src={iconPlus} alt='icon' /></button>
+                                    </div>
+>>>>>>> 9ae180024c27f773543328cc26578b1deb13bc8a
                                 </div>
                             </div>
                         </form>

@@ -2,9 +2,26 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { NavLink } from 'react-router-dom'
 import './PostVideo.css'
+<<<<<<< HEAD
 import './PostVideo.css'
 import UploadIcon from '../../Images-tripitto/Icon/Upload-Video.png'
 import CoverIcon from '../../Images-tripitto/Icon/Upload Image.png'
+=======
+
+import UploadIcon from '../../Images-tripitto/Icon/Upload-Video.png'
+import CoverIcon from '../../Images-tripitto/Icon/Upload Image.png'
+import AboutVideo from '../../Images-tripitto/imgUploadVideo/AboutVideo.PNG'
+
+
+
+// UPLOAD PAGE 1 / VIDEO AND DESCRIPTION
+// ALLOW TO INSERT DATA IN "GENERAL_VIDEO" TABLE
+// TEST OK
+// NEED TO SEE HOW GET THE ID OF THE PROFIL WHEN IS LOGGING
+
+
+
+>>>>>>> 9ae180024c27f773543328cc26578b1deb13bc8a
 
 class PostVideo extends Component {
   state = {
@@ -12,6 +29,10 @@ class PostVideo extends Component {
 
   changeHandler = (e) => {
     this.setState({ [e.target.name]: e.target.value })
+  }
+
+  changeHandlerYoutube = (e) => {
+    this.setState({ [e.target.name]: e.target.value.slice(32) })
   }
 
   submitHandler = e => {
@@ -27,39 +48,41 @@ class PostVideo extends Component {
   }
 
   render() {
+<<<<<<< HEAD
     const {video_link, profil_id_profil,equipment, link_equipment, equipment2, link_equipment2, equipment3, link_equipment3, cover_picture } = this.state
+=======
+    const { video_title, video_link, video_description, profil_id_profil, equipment, link_equipment, equipment2, link_equipment2, equipment3, link_equipment3, cover_picture } = this.state
+
+>>>>>>> 9ae180024c27f773543328cc26578b1deb13bc8a
     return (
       <div>
         <form onSubmit={this.submitHandler}>
           <div className='grid_postVideo'>
 
-            <div className="empty">
-            </div>
+            <img src={AboutVideo} className="AboutVideo" />
+
 
             <div className="upload-link">
               <img className="uploadIconVideo" src={UploadIcon} alt="upload icon"></img>
-              <p>Lien de la vidéo</p>
-              <input className="input-upload" type='text' name="video_link" value={video_link} onChange={this.changeHandler} />
+              <p>Lien de la vidéo Youtube</p>
+              <input className="input-upload" type='text' name="video_link" value={video_link} onChange={this.changeHandlerYoutube} />
             </div>
 
             <div className="title">
               <p>Titre*</p>
-              <textarea placeholder="Escapade romantique dans la ville des lumières" name="title" rows="2" cols="134"></textarea>
-              {/* <input className="input-title" placeholder="Escapade romantique dans la ville des lumières" type='text' name="video_title" value={video_title} onChange={this.changeHandler} /> */}
+              <textarea rows="2" cols="134" placeholder="Escapade romantique dans la ville des lumières" type='text' name="video_title" value={video_title} onChange={this.changeHandler} />
             </div>
-
-
 
 
             <div className="description">
               <p>Description</p>
-              <textarea placeholder="Une description qui donne envie, très envie" name="description" rows="8" cols="135"></textarea>
-              <br></br>
-              {/* <input className="input-description" placeholder="Une description qui donne envie, très envie" type='text' name="video_description" value={video_description} onChange={this.changeHandler} /> */}
+              <textarea rows="6" cols="134" placeholder="Une description qui donne envie, très envie" type="text" name="video_description" value={video_description} onChange={this.changeHandler} />
             </div>
 
-
-
+            <div className="showreel">
+              <input type="checkbox" />
+              <label> Cette vidéo est un showreel qui présente mon portfolio vidéo</label>
+            </div>
 
             <div className="title-equipment1">
               <p>Equipement utilisés pour filmer</p>
@@ -91,7 +114,6 @@ class PostVideo extends Component {
 
 
             <div className="title-equipment3">
-
             </div>
             <div className="equipment3">
               <input className="input-equipment3" placeholder="IPhone X" type='text' name="equipment3" value={equipment3} onChange={this.changeHandler} />
@@ -121,7 +143,7 @@ class PostVideo extends Component {
             </div>
 
             <div className="next-div">
-            <NavLink exact to="/uploadInformation"><button className="next-button" type="button"> SUIVANT</button></NavLink>
+              <NavLink to={`/uploadInformation/${this.props.idVideo}`}><button className="next-button" type="button">SUIVANT</button></NavLink>
             </div>
 
 
