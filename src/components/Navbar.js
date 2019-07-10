@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import axios from 'axios'
-import Modal from './Modal'
+import './Navbar.scss'
+import Modal from './Modal';
 import './Modal.scss'
 import Logo from '../Images-tripitto/Logo/B&W.png';
 import Search from '../Images-tripitto/Icons/Search-White.png';
@@ -12,58 +12,30 @@ import NotificationPopup from './HomeComponents/NotificationPopup';
 class Navbar extends Component {
     state = {
         isModalOpen: false,
-        afrique: [],
-        asieoceanie: [],
-        europe: [],
-        amerique: [],
-        autres: [],
-    };
-
-    openModal = () => {
-        this.setState({ isModalOpen: true })
+        // ForgottenPassword: false,
     }
 
-    getafrique = async () => {
-        const res = await axios.get('http://localhost:3000/travel_information/get_travelinformation_continent_afrique')
-        const africa = res.data
-        this.setState({ afrique: africa })
-    }
-    getasieoceanie = async () => {
-        const res = await axios.get('http://localhost:3000/travel_information/get_travelinformation_continent_asieoceanie')
-        const asiaoceania = res.data
-        this.setState({ asieoceanie: asiaoceania })
+openModal =() => {
+    this.setState( { isModalOpen: true} )
+console.log(this.state.isModalOpen);
+return 
+
     }
 
     closeModal = () => {
         this.setState({ isModalOpen: false })
+        // console.log(this.state.isModalOpen);
     }
 
-    geteurope = async () => {
-        const res = await axios.get('http://localhost:3000/travel_information/get_travelinformation_continent_europe')
-        const europes = res.data
-        this.setState({ europe: europes })
-    }
-    getamerique = async () => {
-        const res = await axios.get('http://localhost:3000/travel_information/get_travelinformation_continent_amerique')
-        const america = res.data
-        this.setState({ amerique: america })
-    }
-    getautres = async () => {
-        const res = await axios.get('http://localhost:3000/travel_information/get_travelinformation_continent_autres')
-        const other = res.data
-        this.setState({ autres: other })
-    }
     componentDidMount() {
-        this.getafrique()
-        this.getasieoceanie()
-        this.geteurope()
-        this.getamerique()
-        this.getautres()
+        this.openModal()
+        this.closeModal()
     }
+
     render() {
         const { isModalOpen } = this.state
         return (
-            <div>
+            <>
                 <header>
                     <nav className="container_nav">
                         <div className="containerNavLeft">
@@ -75,76 +47,41 @@ class Navbar extends Component {
                                 <img className="icone-loupe" src={Search} alt="Search"></img>
                             </form>
                             <ul className="ulNav">
-                                <li><a href="#"><NavLink exact to="/">VIDÉOS</NavLink></a>
-                                    <ul className="ul_list">
-                                        <div className="container_list">
-                                            <li><a href="#" className='continent_name'>AFRIQUE</a>
-                                                {this.state.afrique.map(afrique => (
-                                                    <div className="container_list_afrique">
-                                                        <li><p className="list_afrique">{afrique.countries}</p></li>
-                                                    </div>
-                                                ))}
-                                                <button className="button_countries">...</button>
-                                            </li>
-                                            <li><a href="#" className='continent_name'>ASIE-OCEANIE</a>
-                                                {this.state.asieoceanie.map(asieoceanie => (
-                                                    <div className="container_list_asieoceanie">
-                                                        <li><p className="list_asieoceanie">{asieoceanie.countries}</p></li>
-                                                    </div>
-                                                ))}
-                                                <button className="button_countries">...</button>
-                                            </li>
-
-                                            <li><a href="#" className='continent_name'>EUROPE</a>
-                                                {this.state.europe.map(europe => (
-                                                    <div className="container_list_europe">
-                                                        <li><p className="list_europe">{europe.countries}</p></li>
-                                                    </div>
-                                                ))}
-                                                <button className="button_countries">...</button>
-                                            </li>
-                                            <li><a href="#" className='continent_name'>AMERIQUE</a>
-                                                {this.state.amerique.map(amerique => (
-                                                    <div className="container_list_amerique">
-                                                        <li><p className="list_amerique">{amerique.countries}</p></li>
-                                                    </div>
-                                                ))}
-                                                <button className="button_countries">...</button>
-                                            </li>
-                                            <li><a href="#" className='continent_name'>AUTRES</a>
-                                                {this.state.autres.map(autres => (
-                                                    <div className="container_list_autres">
-                                                        <li><p className="list_autres">{autres.countries}</p></li>
-                                                    </div>
-                                                ))}
-                                                <button className="button_countries">...</button>
-                                            </li>
-
+                                <li><NavLink exact to="/">VIDÉOS
+                                    <div class="dropdown">
+                                        <i class="fa fa-caret-down"></i>
+                                        <div class="dropdown-content">
+                                            <a href="#">AFRIQUE</a>
+                                            <a href="#">ASIE-OCEANIE</a>
+                                            <a href="#">EUROPE</a>
+                                            <a href="#">AMERIQUE</a>
+                                            <a href="#">AUTRES</a>
                                         </div>
-                                    </ul>
-                                </li>
+                                    </div></NavLink></li>
+
                                 <li><NavLink exact to="/">VIDÉASTES</NavLink></li>
+
+
+
                             </ul>
 
                         </div>
                         <div className="containerNavRight">
                             <ul className="Ulbutton">
-                                <li><NavLink exact to="/Profil"><img className={this.state.isModalOpen === false ? "buttonNavbarConnexionNone" : "logoAvatar"} src={Avatar} alt="logo tripitto"></img></NavLink></li>
-                                <li className={this.state.isModalOpen === false ? "buttonNavbarConnexionNone" : "notification"}><NotificationPopup /></li>
-                                <li><button onClick={this.openModal} className={this.state.isModalOpen === false ? "buttonNavbarConnexion" : "buttonNavbarConnexionNone"}>SE CONNECTER</button></li>
-                                <li><button onClick={this.openModal} className={this.state.isModalOpen === false ? "buttonNavbarChange" : "buttonNavbar"}>PUBLIER</button></li>
+                                <li><NavLink exact to="/Profil"><img className="logoAvatar" src={Avatar} alt="logo tripitto"></img></NavLink></li>
+                                <li><NotificationPopup /></li>
+                                <li><button onClick={this.openModal} className="buttonNavbar">PUBLIER</button></li>
                             </ul>
                         </div>
                     </nav>
-
-                    <div className="containerModal">
-                        <Modal isOpen={isModalOpen} onClose={this.closeModal} />
-                    </div>
-
-
                 </header>
-            </div>
+                <div className="containerModal">
+                    <Modal isOpen={isModalOpen} onClose={this.closeModal} />
+                    {/* <Modal isOpenForgottenPassword={ForgottenPassword} onCloseForgottenPassword={this.closeModalForgottenPassword} /> */}
+                </div>
 
+
+            </>
         )
     }
 }
