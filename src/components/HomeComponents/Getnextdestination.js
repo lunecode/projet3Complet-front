@@ -22,7 +22,7 @@ class Getnextdestination extends Component {
 
 
     getnextvideo = async () => {
-        const res = await axios.get('http://localhost:3000/popularity/get_popularity_liked_general_video_travel_information')
+        const res = await axios.get('http://localhost:3000/general_video/get_general_video_nextdestination')
         const Nextdestination = res.data
         this.setState({ nextpicture: Nextdestination })
     }
@@ -81,10 +81,10 @@ class Getnextdestination extends Component {
 
                     <div className="wrapper-nextpicture">
                         <div>
-                            <img onClick={this.getnextvideolimitBack} className={this.state.offset === 0 ? "leftarrow" : "leftarrowDisable"} src={leftarrow} alt=""></img>
-                        </div>
+                                <img onClick={this.getnextvideolimitBack } className={this.state.offset === 0 ? "leftarrowDisable" : "leftarrow"} src={leftarrow} alt=""></img>
+                        </div>  
                         <div>
-                            <img onClick={this.getnextvideolimit} className={this.state.offset === 10 ? "rightarrow" : "rightarrow"} src={rightarrow} alt=""></img>
+                                <img onClick={this.getnextvideolimit} className={this.state.offset === 5 ? "rightarrowDisable" : "rightarrow"} src={rightarrow} alt=""></img>
                         </div>
                         {this.state.nextpicture.map(nextpicture => (
                             <div className={"divpictureNext" + i} key={i++}>
@@ -98,22 +98,22 @@ class Getnextdestination extends Component {
                     </div>
                 </section>
 
-                {/****************************** SECTION BEST PLAN  ***************************** */}
-                <section className="bestplan">
-                    <div className='container_bestplan_title'>
-                        <h2 className="title_best_plan">AVEC UN MAXIMUM DE BONS PLANS</h2>
-                    </div>
-                    <div>
-                        <img onClick={this.getbestplanlimitBack} className={this.state.offsetBestplan === 0 ? "leftHomeDisable1" : "leftHome2"} src={leftHome} alt=""></img>
-                    </div>
-                    <div>
-                        <img onClick={this.getbestplanlimit} className={this.state.offsetBestplan === 16 ? "leftHomeDisable2" : "rightHome2"} src={RightHome} alt=""></img>
-                    </div>
-                </section>
-                <div className="container_bestplan">
-                    {this.state.videos.map(video => (
-                        <div className={"divVideoPLan" + c} key={c++}>
-                            <img src={video.cover_picture} className='picture_bestplan' />
+{/****************************** SECTION BEST PLAN  ***************************** */}
+        <section className="bestplan">
+            <div className='container_bestplan_title'>
+                <h2 className="title_best_plan">AVEC UN MAXIMUM DE BONS PLANS</h2>
+            </div>
+            <div>
+                <img onClick={this.getbestplanlimitBack} className={this.state.offsetBestplan === 0 ? "leftHomeDisable1" : "leftHome2"} src={leftHome} alt=""></img>
+            </div>
+            <div>
+                <img onClick={this.getbestplanlimit} className={this.state.offsetBestplan === 8 ? "leftHomeDisable2" : "rightHome2"} src={RightHome} alt=""></img>
+            </div>
+        </section> 
+            <div className="container_bestplan">
+                {this.state.videos.map(video => (
+                    <div className={"divVideoPLan" + c} key={c++}>
+                            <img src={video.cover_picture} className='picture_bestplan'/>
                             <div className='container_title_bestplan_numbertips'>
                                 <p className='title_bestplan_numbertips'>+{video.number_tips}%</p>
                             </div>
