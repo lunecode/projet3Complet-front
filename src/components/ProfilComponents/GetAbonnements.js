@@ -2,18 +2,9 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import { NavLink } from 'react-router-dom';
 import './GetAbonnements.scss'
-
-// image
-import image1 from '../../Images-tripitto/iconAbonnements/img-following-1.jpg'
-import image2 from '../../Images-tripitto/iconAbonnements/img-following-2.jpg'
-import image3 from '../../Images-tripitto/iconAbonnements/img-following-3.jpg'
-import image4 from '../../Images-tripitto/iconAbonnements/img-following-4.jpg'
-import image5 from '../../Images-tripitto/iconAbonnements/img-following-5.jpg'
 import iconSearch from '../../Images-tripitto/Icon/TRAILING ICON.png'
 import iconPlus from '../../Images-tripitto/Icon/Plus.png'
 
-
-import iconArrow from '../../Images-tripitto/iconAbonnements/icon-arrow.png'
 
 class GetAbonnements extends Component {
     state = {
@@ -32,14 +23,7 @@ class GetAbonnements extends Component {
     render() {
         return (
             <>
-                {/* {this.state.Following.map(item => (
-          <li key={item.id_following}>
-          {item.following_user}
-          {item.firstname}
-          {item.pseudo}
-      
-        </li>
-        ))} */}
+              
                 <div className="bloc-page-profil">
                     <div className="membres-profil">
                         <img src="https://i.ytimg.com/vi/BfCwN4iy6T8/maxresdefault.jpg" alt="pictures profil" />
@@ -98,89 +82,31 @@ class GetAbonnements extends Component {
 
                                     </div>
                                 </div>
+                               
+                                
                                 <div className="bloc-following">
+                                {this.state.Following.map(item =>(
+
                                     <div className="bloc-notifications-item">
                                         <div>
-                                            <img src={image2} alt='profilpicture 2' />
+                                            <img src={item.following_picture} alt='profilpicture 2' />
                                         </div>
-                                        <div>
-                                            <h3>Ethan Evans</h3>
+                                        <div className="following-items">
+                                            <h3>{item.following_user}</h3>
 
                                             <div>
-                                                <p>6 videos</p>
-                                                <p>Vous êtes abonné depuis 25 jours</p>
+                                                <p>{item.following_nb_video} vidéos</p>
+                                                <p>{item.following}</p>
                                             </div>
                                         </div>
                                         <div>
                                             <button>Abonné</button>
                                         </div>
                                     </div>
-                                    <div className="bloc-notifications-item">
-                                        <div>
-                                            <img src={image1} alt='profilpicture 1' />
-                                        </div>
-                                        <div>
-                                            <h3>Malin Quist</h3>
-
-                                            <div>
-                                                <p>6 videos</p>
-                                                <p>Vous êtes abonné depuis 25 jours</p>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <button>Abonné</button>
-                                        </div>
-                                    </div>
-                                    <div className="bloc-notifications-item">
-                                        <div>
-                                            <img src={image3} alt='profilpicture 3' />
-                                        </div>
-                                        <div>
-                                            <h3>Chineze Afemuna</h3>
-
-                                            <div>
-                                                <p>6 videos</p>
-                                                <p>Vous êtes abonné depuis 25 jours</p>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <button>Abonné</button>
-                                        </div>
-                                    </div>
-                                    <div className="bloc-notifications-item">
-                                        <div>
-                                            <img src={image4} alt='profilpicture 4' />
-                                        </div>
-                                        <div>
-                                            <h3>Faadhi Al Rahman</h3>
-
-                                            <div>
-                                                <p>6 videos</p>
-                                                <p>Vous êtes abonné depuis 25 jours</p>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <button>Abonné</button>
-                                        </div>
-                                    </div>
-                                    <div className="bloc-notifications-item">
-                                        <div>
-                                            <img src={image5} alt='profilpicture 5' />
-                                        </div>
-                                        <div>
-                                            <h3>Sua Hua</h3>
-
-                                            <div>
-                                                <p>6 videos</p>
-                                                <p>Vous êtes abonné depuis 25 jours</p>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <button>Abonné</button>
-                                        </div>
-                                    </div>
+                                    ))}
+                                 
                                     <div className='bloc-plus'>
-                                <button><img src={iconPlus} /></button>
+                                <button><img src={iconPlus} alt='icon plus' /></button>
                                   </div>     
                                 </div>
                             </div>

@@ -45,7 +45,6 @@ const protectedRoute = () => {
 
 
 
-
 class Modal extends Component {
     state = {
         ModalForgottenPassword: false,

@@ -25,8 +25,8 @@ class Display extends Component {
         const res = await axios.get(`http://localhost:3000/general_video/get_general_video_limite/${this.state.offset}`)
         const recentlyPubVideo = res.data
         this.setState({ videos: recentlyPubVideo })
-
     }
+    
     getRecentlyPublishedlimit = () => {
         this.setState({offset: this.state.offset + 5}, async ()=> {
             const res = await axios.get(`http://localhost:3000/general_video/get_general_video_limite/${this.state.offset}`)
@@ -99,6 +99,7 @@ class Display extends Component {
 <section className="TitlepublishedBorder">
     <div className="TitlepublishedBorderBottom"></div>
 </section>  
+    
     
     <section className="RecentlyPublished">
         <div className="item1RecentlyPublished">

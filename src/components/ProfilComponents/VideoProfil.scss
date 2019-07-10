@@ -46,18 +46,17 @@
                     width: 200px;  
                 } 
             }
-                      }
-
+         }
       }
 
-/*Resize the wrap to see the search bar change!*/
     } 
           .bloc_2_video{
             display: flex;
       flex-direction:row;
       margin-left: 26vw;
-      margin-top: -40vh;
+      margin-top: -37vh;
       margin-bottom: 8vh;
+     
    
 }
 
@@ -66,19 +65,14 @@
 flex-direction:row;
 margin-left: 26vw;
 margin-bottom: 8vh;
-
-
 }
 .bloc_2_video_3{
-
-  display: flex;
+display: flex;
 flex-direction:row;
 margin-left: 26vw;
 margin-bottom: 8vh;
-
 }
     .list_videos{ 
-      
         margin-right: 5vw;
             .video_user1{
                   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -97,6 +91,7 @@ margin-bottom: 8vh;
                       margin-top: -15vh;
                     }
                     img{
+                      cursor: pointer;
                       margin: 35%;
                     }
                   }
@@ -133,7 +128,7 @@ margin-bottom: 8vh;
                         }
                .durée1{
                   margin-left: 36vh;
-                  margin-top: -4vh;
+                  margin-top: -4.8vh;
                   background-color:black;
                   width: 18%;
                     .durée{
@@ -144,8 +139,7 @@ margin-bottom: 8vh;
               }
               
               .imagescreen{
-                margin-top: -5vh;
-                
+                margin-top: -6vh;
                 img{
                   height: 230px;
                   width: 381px;
@@ -187,20 +181,27 @@ margin-bottom: 8vh;
 
                }
                .icons_video{
+                display:flex;
+                 flex-direction: row;
+                  border: 1px solid rgb(221, 221, 221);
                 button{
                   padding: 0px;
                  border:none;
                 }
-                  border: 1px solid rgb(221, 221, 221);
+
                  .img1{
+                cursor: pointer;
                     padding-right:3vh ;
                  }
                  .img2{
+                  cursor: pointer;
                   padding-right:3vh ;
                }
                .img3{
+                cursor: pointer;
                 padding-right:3vh ;
               }
+
     
                 
                }

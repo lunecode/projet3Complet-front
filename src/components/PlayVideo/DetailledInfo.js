@@ -10,7 +10,7 @@ import Museum from '../../Images-tripitto/Icon/Visites.png';
 import Sport from '../../Images-tripitto/Icon/sport.png';
 import Love from '../../Images-tripitto/Icon/Love.png';
 import Idea from '../../Images-tripitto/Icon/Idea.png';
-// import Oval2 from '../../Images-tripitto/Icon/Oval2.png';
+
 
 
 
@@ -37,7 +37,7 @@ render() {
     
     return (
     <>
-    {this.state.detailledInfo.filter(item => item.general_video_id_general_video == idVideo ) 
+    {this.state.detailledInfo.filter(item => item.general_video_id_general_video === idVideo ) 
         .map(item => (
         <div className="container_globalTravel">
         <div className="container_info" key={item.id_travel_step}>

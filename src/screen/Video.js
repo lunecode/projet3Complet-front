@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import VideoProfilCompnent from '../components/ProfilComponents/ VideoProfilCompnent';
+import VideoProfil from '../components/ProfilComponents/VideoProfil';
+
 
 class Video extends Component {
     render() {
         return (
             <div>
-                <VideoProfilCompnent/>
+                <VideoProfil />
             </div>
         );
     }

@@ -17,7 +17,6 @@ import './Playvideo.css';
 
 class PlayVideo extends Component {
   render() {
-
     return (
       <>
         <div className="container_all">

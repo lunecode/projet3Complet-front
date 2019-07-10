@@ -28,6 +28,7 @@ class ProfilRoutes extends Component {
     this.setState({ [e.target.name]: e.target.value })
   }
 
+
   render() {
     return (
       <div>
@@ -36,6 +37,8 @@ class ProfilRoutes extends Component {
             {...this.state}
             handleCheckbox={this.handleCheckbox}
             changeHandler={this.changeHandler}
+        
+            
           />
       
         </form>
