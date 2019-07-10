@@ -1,19 +1,19 @@
 import React, { Component } from 'react'
 
-class ForgottenPassword extends Component {
+class ForgottenPassword2 extends Component {
     
     render () {
 
-        const { isOpen2, onClose2 } = this.props;
+        const { isOpen5, onClose5 } = this.props;
         return (
             <>
-            <div className={isOpen2 ? 'modalPasseword--is-open' : 'modalPasseword'}>
+            <div className={isOpen5 ? 'modalPasseword--is-open' : 'modalPasseword'}>
                     <div className="containerPassword">
                         <div>
                             <h5 className="ConnexionModalPassword">Mot de passe oublié</h5>
                         </div>
                         <div className="divButtonModalPassword">
-                            <button onClick={onClose2}>X</button>
+                            <button onClick={onClose5}>X</button>
                         </div>
                     </div>
                     <div className="containerPassword2">
@@ -27,7 +27,7 @@ class ForgottenPassword extends Component {
                             <button className="buttonPassword">ENVOYER</button>
                         </div>
                         <div>
-                            <button onClick={onClose2} className="buttonPassword2">ANNULER</button>
+                            <button onClick={onClose5} className="buttonPassword2">ANNULER</button>
                         </div>
                     </div>
             </div>
@@ -36,4 +36,4 @@ class ForgottenPassword extends Component {
     }
 }
 
-export default ForgottenPassword
+export default ForgottenPassword2
