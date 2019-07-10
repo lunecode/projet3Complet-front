@@ -6,11 +6,6 @@ import iconSearch from '../../Images-tripitto/Icon/TRAILING ICON.png'
 import iconPlus from '../../Images-tripitto/Icon/Plus.png'
 
 
-<<<<<<< HEAD
-=======
-// import iconArrow from '../../Images-tripitto/iconAbonnements/icon-arrow.png'
-
->>>>>>> 9ae180024c27f773543328cc26578b1deb13bc8a
 class GetAbonnements extends Component {
     state = {
         Following: [],
@@ -111,13 +106,8 @@ class GetAbonnements extends Component {
                                     ))}
                                  
                                     <div className='bloc-plus'>
-<<<<<<< HEAD
                                 <button><img src={iconPlus} alt='icon plus' /></button>
                                   </div>     
-=======
-                                        <button><img src={iconPlus} alt='icon' /></button>
-                                    </div>
->>>>>>> 9ae180024c27f773543328cc26578b1deb13bc8a
                                 </div>
                             </div>
                         </form>

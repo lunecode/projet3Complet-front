@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+
 import axios from 'axios'
 import './Getnextdestination.scss';
 import leftarrow from '../../pictures/arrow_left.png'
 import rightarrow from '../../pictures/arrow_right.png'
 import leftHome from '../../Images-tripitto/Icon/leftHome.png'
 import RightHome from '../../Images-tripitto/Icon/RightHome.png'
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -80,12 +82,8 @@ class Getnextdestination extends Component {
                         </div>
                         {this.state.nextpicture.map(nextpicture => (
                             <div className={"divpictureNext" + i} key={i++}>
-<<<<<<< HEAD
-                                <img src={nextpicture.cover_picture} className={"nextpictureimg" + a} key={a++} alt="Cover"/>
-=======
                                 <NavLink to={`/playvideo/${nextpicture.id_general_video}`} ><img src={nextpicture.cover_picture} className={"nextpictureimg" + a} key={a++} /></NavLink>
                                 {/* <img src={nextpicture.cover_picture} className={"nextpictureimg" + a} key={a++} /> */}
->>>>>>> 9ae180024c27f773543328cc26578b1deb13bc8a
                                 <p className={"p" + b} key={b++}>{nextpicture.video_title}</p> <br />
                                 <p className={"p" + b} key={b++}>{nextpicture.countries}</p>
                             </div>

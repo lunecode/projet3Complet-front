@@ -2,26 +2,11 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { NavLink } from 'react-router-dom'
 import './PostVideo.css'
-<<<<<<< HEAD
-import './PostVideo.css'
-import UploadIcon from '../../Images-tripitto/Icon/Upload-Video.png'
-import CoverIcon from '../../Images-tripitto/Icon/Upload Image.png'
-=======
 
 import UploadIcon from '../../Images-tripitto/Icon/Upload-Video.png'
 import CoverIcon from '../../Images-tripitto/Icon/Upload Image.png'
 import AboutVideo from '../../Images-tripitto/imgUploadVideo/AboutVideo.PNG'
 
-
-
-// UPLOAD PAGE 1 / VIDEO AND DESCRIPTION
-// ALLOW TO INSERT DATA IN "GENERAL_VIDEO" TABLE
-// TEST OK
-// NEED TO SEE HOW GET THE ID OF THE PROFIL WHEN IS LOGGING
-
-
-
->>>>>>> 9ae180024c27f773543328cc26578b1deb13bc8a
 
 class PostVideo extends Component {
   state = {
@@ -48,12 +33,8 @@ class PostVideo extends Component {
   }
 
   render() {
-<<<<<<< HEAD
-    const {video_link, profil_id_profil,equipment, link_equipment, equipment2, link_equipment2, equipment3, link_equipment3, cover_picture } = this.state
-=======
     const { video_title, video_link, video_description, profil_id_profil, equipment, link_equipment, equipment2, link_equipment2, equipment3, link_equipment3, cover_picture } = this.state
 
->>>>>>> 9ae180024c27f773543328cc26578b1deb13bc8a
     return (
       <div>
         <form onSubmit={this.submitHandler}>
