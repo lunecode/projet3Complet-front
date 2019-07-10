@@ -39,8 +39,7 @@ class UploadImgProfil extends Component {
         return (
           <div className="UploadVideo">
             <input type="file" onChange={this.handleChange}/>
-            <img className="imageprofil" src={this.state.image} 
-            alt="videolink" width="100%" height="100%" className="img-profil-after" />
+            <img className="imageprofil" src={this.state.image} alt="videolink" width="100%" height="100%" className="img-profil-after" />
           </div>
         );
       }

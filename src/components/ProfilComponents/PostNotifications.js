@@ -1,5 +1,4 @@
 import React from 'react'
-
 import './PostNotification.scss';
 import iconIdea from '../../Images-tripitto/Icon/Idea.png'
 import iconFrance from '../../Images-tripitto/Icons/Drapeau-FR.png';
@@ -18,8 +17,8 @@ const PostNotifications = (props) => {
                 </div>
             </div>
             <div className='position-bloc'>
-                <div className='profil-menu'>
-                <ul>
+            <div className='profil-menu'>
+          <ul>
             <li>
               <NavLink
                 className="nav"
@@ -39,7 +38,7 @@ const PostNotifications = (props) => {
                <li>
               <NavLink
                 to="/Notifications" exact >Notifications</NavLink>
-            </li>
+               </li>
             <li>
               <NavLink
                 to="/Security" exact >Sécurité</NavLink>
@@ -49,7 +48,7 @@ const PostNotifications = (props) => {
                 to="/Mettre_à_niveau" exact >Mettre à niveau</NavLink>
             </li>
           </ul>
-                </div>
+        </div>
                 <form className="notification-block">
                     <div>
                         <h2>Notification</h2>

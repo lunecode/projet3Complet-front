@@ -106,7 +106,18 @@
                     }
                     
                  .btn-abonnements-bloc{
-                     
+                     .btn-abonnments{
+                    width: 150px;
+                    height:50px;
+                    border:1px solid white;
+                    background-color:white;
+                    color:#30b1ce;
+                    text-transform: uppercase;
+                    box-shadow: 7px 10px 7px -11px rgba(199,199,199,1);
+                   margin-left:20vw;
+                    margin-top:20px;
+                    cursor: pointer;
+                     }
                  }
                   
                 }
