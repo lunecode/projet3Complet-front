@@ -28,18 +28,19 @@ class App extends Component {
         <div>
           <Navbar />
           <Switch>
-            <Route path="/" component={Home} exact></Route>
-            <Route path="/Profil" component={Profil}/>
-            <Route path="/Video" component={Video}/>
+             {/* les routes de page Profil */}
+            <Route path="/" exact component={Home}  ></Route>
+            <Route path="/Profil" exact component={Profil}></Route>
+            <Route path="/Video" exact component={Video}></Route>
+            <Route path="/Abonnements"exact component={Abonnements} ></Route>
+            <Route path="/Abonnés" exact component={Abonne} ></Route>
+            <Route path="/Notifications" exact component={Notifications} ></Route>
+            <Route path="/Security" exact component={Security} ></Route>
+                     {/* ***** */}
             <Route path="/uploadVideo" component={UploadVideo} ></Route>
-            <Route path="/Notifications" component={Notifications} ></Route>
             <Route path="/uploadInformation" component={UploadInformation} ></Route>
             <Route path="/uploadTravelStep" component={UploadTravelStep} ></Route>
             <Route path="/playVideo" component={PlayVideo} ></Route>
-            <Route path="/Abonnements" component={Abonnements} ></Route>
-            <Route path="/Abonnés" component={Abonne} ></Route>
-            <Route path="/Security" component={Security} ></Route>
-            
             <Route component={Error}></Route>
           </Switch>
           <Footer />

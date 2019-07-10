@@ -19,7 +19,7 @@ const PostProfilInfo = (props) => {
           <ul>
             <li>
               <NavLink
-                className="nav"
+             className="nav"
                 to="/Profil" exact>Profil</NavLink>
             </li>
             <li>
