@@ -9,7 +9,7 @@ class AllVideoUser extends Component {
 }; 
 
 getVideo = async () => {
-    const res = await axios.get('http://localhost:3000/profil/get_video_user')
+    const res = await axios.get('http://localhost:3000/general_video/get_general_video')
     this.setState({ video: res.data })
     console.log(this.state.video)
 }
@@ -37,23 +37,21 @@ render() {
     
     return (
     <>
-        {this.state.video.map(item =>  (
+        {this.state.video.filter(item => 
+        item.id_general_video == idVidUser).map(item =>(
         <div className="allVideoUser" key={i++}>
+            <div className="contvid" key={item.id_general_video}>
            {/* <h4> {item.lastname} {item.firstname}</h4>  */}
         <div className="youtubeVid">
         <YouTube  videoId={item.video_link} opts={opts} onReady={this._onReady}/>
-
         </div>
-        <div className="containerAllVideoUser">
-        <div key={item.id_profil}>
+        <div className="userVid" key={item.id_profil}>
             <h4>{item.video_title}</h4>
             {/* video youtube a inserer  */}
-            
             <p>{item.video_description}</p>
-            <p>{item.profil_id_profil}</p> 
+            {/* <p>{item.profil_id_profil}</p>  */}
         </div>
         </div>
-        
         </div>
         ))}
         
