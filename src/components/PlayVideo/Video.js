@@ -54,12 +54,12 @@ class Video extends Component {
       }
     };
 
-    const url = window.location.href; 
+    const url = window.location.href;
     const idVideo = url.slice(32)
-   
-    
+
+
     return (
-    <>
+      <>
         {this.state.videos.filter(item => item.id_general_video == idVideo).map(item => (
           <div className="container_video" key={i++}>
             <div key={item.id_general_video}>
@@ -96,13 +96,13 @@ class Video extends Component {
                   </div>
                 </div>
               </div>
-              </div>
-              </div>
-              ))}
+            </div>
+          </div>
+        ))}
       </>
-            )
-          }
-        }
-        
-        
-        export default Video;
+    )
+  }
+}
+
+
+export default Video;

@@ -9,8 +9,8 @@ class UserCommentPost extends Component {
     state = {
         comment: '',
         general_video_id_general_video: '',
-        popularity_id_popularity: '',
-        profil_id_profil: '',
+        // popularity_id_popularity: '',
+        // profil_id_profil: '',
 }
 
 changeHandler = (e) => {
@@ -49,11 +49,11 @@ render() {
 
             <input type="hidden" name="profil_id_profil" value={profil_id_profil} onChange={this.changeHandler} />
 
+
             <input type="hidden" name="popularity_id_popularity" value={popularity_id_popularity} onChange={this.changeHandler} />
 
-            <input type="text" name="general_video_id_general_video" value={this.state.general_video_id_general_video} onChange={this.changeHandler} />
 
-            {/* <input type="text" name="general_video_id_general_video" value={general_video_id_general_video} onChange={this.changeHandler} /> */}
+            <input type="hidden" name="general_video_id_general_video" value={general_video_id_general_video} onChange={this.changeHandler} />
 
             </div>
             <button type="submit">Submit</button>

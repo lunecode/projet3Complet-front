@@ -7,9 +7,10 @@
     width:90%;
 }
 
-/* .all{
-    width:23%;
-} */
+.all{
+    width:35%;
+} 
+
 
 .container_all{
     background-color: #F4F4F4;
@@ -17,7 +18,7 @@
 
 .contvid{
     display: flex; 
-    width:90%;
+    width:100%;
 }
 
 .youtubeVid{
