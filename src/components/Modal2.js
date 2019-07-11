@@ -56,12 +56,10 @@ class Modal2 extends Component {
     openModalForgottenPassword2 =() => {
         this.setState( { ModalForgottenPassword2: true} )
         this.props.onClose4()
-    console.log(this.state.ModalForgottenPassword2);
     }
     
     closeModalForgottenPassword2 = () => {
         this.setState( { ModalForgottenPassword2: false } )
-        console.log(this.state.ModalForgottenPassword2);
     }
 
     render () { 

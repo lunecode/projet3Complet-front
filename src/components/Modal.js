@@ -47,12 +47,10 @@ class Modal extends Component {
     openModalLogin =() => {
         this.setState( { ModalCreateLogin: true} )
         this.props.onClose()
-    console.log(this.state.ModalCreateLogin);
     }
     
     closeModalLogin = () => {
         this.setState( { ModalCreateLogin: false } )
-        console.log(this.state.ModalCreateLogin);
     }
 
 
