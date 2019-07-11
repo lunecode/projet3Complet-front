@@ -11,7 +11,7 @@ class AllVideoUser extends Component {
 getVideo = async () => {
     const res = await axios.get('http://localhost:3000/general_video/get_general_video')
     this.setState({ video: res.data })
-    console.log(this.state.video)
+   
 }
 componentDidMount() {
     this.getVideo()
@@ -33,7 +33,7 @@ render() {
 
     const url = window.location.href;
     const idVidUser = url.slice(32)
-    console.log(idVidUser);
+    
     
     return (
     <>

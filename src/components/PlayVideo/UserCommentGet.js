@@ -30,14 +30,12 @@ componentDidMount() {
     this.getProfil()
 }
 
-
-
 render() {
     let i = 1;
 
     const url = window.location.href;
     const idComment = url.slice(32)
-    console.log(idComment)
+    
     return (  
     <>
         {this.state.comment.filter(item =>item.id_comment == idComment).map(item =>(

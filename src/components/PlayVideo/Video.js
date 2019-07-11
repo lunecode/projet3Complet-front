@@ -56,7 +56,7 @@ class Video extends Component {
 
     const url = window.location.href; 
     const idVideo = url.slice(32)
-    console.log(idVideo)
+   
     
     return (
     <>

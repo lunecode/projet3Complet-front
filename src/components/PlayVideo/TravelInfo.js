@@ -4,7 +4,7 @@ import './TravelInfo.css';
 import Alone from '../../Images-tripitto/Icon/Aventurier/seulwhite.png';
 import House from '../../Images-tripitto/Icon/logement_blc.png';
 import Mug from '../../Images-tripitto/Icon/repas_blc.png';
- 
+
 
 class TravelInfo extends Component {
     state = {
@@ -14,7 +14,7 @@ class TravelInfo extends Component {
     getTravel = async () => {
         const res = await axios.get('http://localhost:3000/travel_information/get_travelinformation')
         this.setState({ travel: res.data })
-        // console.log(this.state.travel)
+        
     }
     componentDidMount() {
         this.getTravel()
@@ -24,7 +24,7 @@ class TravelInfo extends Component {
 
         const url = window.location.href;
         const idTravel = url.slice(32)
-        console.log(idTravel)
+        
 
         return (
             <>

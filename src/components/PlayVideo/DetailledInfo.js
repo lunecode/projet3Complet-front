@@ -34,7 +34,7 @@ render() {
 
     const url = window.location.href; 
     const idDetailledVideo = url.slice(32)
-    console.log(idDetailledVideo)
+    
     
     return (
     <>
