@@ -68,6 +68,9 @@ class Getnextdestination extends Component {
         let b = 1
         let c = 1
 
+        // const url = window.location.href;
+        // const idVideo = url.slice(32)
+
         return (
             <>
                 {/****************************** SECTION NEXT DESTINATION******************************* */}
@@ -155,9 +158,7 @@ class Getnextdestination extends Component {
 
             </>
         )
-    }
+    } 
 }
-
-
 
 export default Getnextdestination;

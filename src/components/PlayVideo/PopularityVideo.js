@@ -26,19 +26,21 @@ componentDidMount() {
 }
 
 render() {
+
+    let i = 1;
     
     return (
     <>
-        {/* {this.state.popularity.map(item => (
-        <div className="popularity">
-            <div key={item.id_popularity}>
+        {this.state.popularity.map(item => (
+        <div className="popularity" key={i++}>
+            {/* <div key={item.id_popularity}>
                 <div className="view">                                    
                     <span><img src={Love} alt= "love"/>     {item.nb_like_popularity}</span> 
                     <span> <img src={Comment} alt="comment"/>{item.nb_comment_popularity}</span> <span><img src={Comment} alt="Comment"/> <img src={Share} alt="Share"/>{item.nb_share} </span><span><img className="share" src={Add} alt="share"/>{item.nb_playlist_included}</span>
                 </div> 
-            </div>
+            </div> */}
         </div>
-        ))} */}
+        ))}
     </>
     )
     }
