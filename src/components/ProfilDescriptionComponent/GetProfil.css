@@ -132,7 +132,7 @@
     visibility: visible;
     border: #344854;
     opacity:1;
-    color: #1BA2A2;
+    color: #1BA2A2;border-bottom: 1px solid #1BA2A2;
 }
 
 .texticonculture {
@@ -193,7 +193,31 @@
 
 }
 
-.continent {
+.continents {
     display:flex;
+    flex-direction: row;
+    width: 30vw;
+    margin: 30px auto 0;
+    justify-content: space-between;
 }
+
+.itemcontinent {
+    border-bottom: 1px solid #1BA2A2;
+    margin-bottom: -25px;
+
+}
+
+.filter{
+    margin-left: 9vw;
+    margin-top: 5vh;
+    
+}
+
+.w3-select{ 
+      
+        border:12px;
+        background-color: #f4F4F4;
+        width: 77px;
+        }   
+
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap');

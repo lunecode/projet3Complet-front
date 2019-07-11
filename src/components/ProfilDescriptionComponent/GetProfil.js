@@ -19,13 +19,13 @@ class GetProfil extends Component {
   };
 
   getProfil = async () => {
-    const res = await axios.get('http://localhost:3000/profil/get_profil')
+    const res = await axios.get('http://localhost:3000/profil/get_profil_limite1/1')
     this.setState({ profil: res.data })
     console.log(this.state.profil)
   }
 
   getVideo = async () => {
-    const res = await axios.get('http://localhost:3000/general_video/get_general_video')
+    const res = await axios.get('http://localhost:3000/general_video/get_general_video_lim/1')
     this.setState({ video: res.data })
     console.log(this.state.video)
   }
@@ -113,7 +113,16 @@ class GetProfil extends Component {
             ))}
           </div>
           <div>
-            <div className="continents"><p>Tout</p><p>Afrique</p><p>Océanie</p><p>Autre</p></div>
+            <div className="continents"><div className="itemcontinent">Tout</div ><div className="itemcontinent">Afrique</div><div className="itemcontinent">Océanie</div><div className="itemcontinent">Autre</div></div>
+            <div className="filter">
+              <select class="w3-select" name="option">
+                <option value="" disabled selected>Trier par</option>
+                <option value="1">Date de publication'</option>
+                <option value="2">Status</option>
+                <option value="3">Popularité</option>
+                <option value="3">Titre</option>
+              </select>
+            </div>
             {this.state.video.map(videos => (
               <div className="video" key={videos.id_general_video}>
                 <img src={videos.video_link} alt="videocover" className="videocover" />
@@ -129,7 +138,7 @@ class GetProfil extends Component {
               <button>VOIR PLUS</button>
             </div>
           </div>
-              
+
 
 
         </div>
