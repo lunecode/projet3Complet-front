@@ -54,7 +54,6 @@ class Navbar extends Component {
         this.getautres()
     }
     render () {
-
         return (
             <div>
             <header>
@@ -68,46 +67,46 @@ class Navbar extends Component {
                                 <img className="icone-loupe"src={Search}alt="Search"></img>
                             </form>
                             <ul className="ulNav">
-                                <li><a href="#"><NavLink exact to="/">VIDÉOS</NavLink></a>
+                                <li className='Nav_menu'><button className="button_video"><NavLink exact to="/">VIDÉOS</NavLink></button>
                                     <ul className="ul_list">
                                      <div className="container_list">
-                                        <li><a href="#" className='continent_name'>AFRIQUE</a>
+                                        <li><a href=" " className='continent_name'>AFRIQUE</a>
                                             {this.state.afrique.map(afrique => (
                                             <div className="container_list_afrique">
-                                            <li><p className="list_afrique">{afrique.countries}</p></li>
+                                            <p className="list_afrique">{afrique.countries}</p>
                                             </div>
                                             ))}
                                             <button className="button_countries">...</button>
                                             </li>
-                                        <li><a href="#" className='continent_name'>ASIE-OCEANIE</a>
+                                        <li><a href=" " className='continent_name'>ASIE-OCEANIE</a>
                                         {this.state.asieoceanie.map(asieoceanie => (
                                             <div className="container_list_asieoceanie">
-                                            <li><p className="list_asieoceanie">{asieoceanie.countries}</p></li>
+                                            <p className="list_asieoceanie">{asieoceanie.countries}</p>
                                             </div>
                                             ))}
                                             <button className="button_countries">...</button>
                                             </li>
                                         
-                                        <li><a href="#" className='continent_name'>EUROPE</a>
+                                        <li><a href=" " className='continent_name'>EUROPE</a>
                                         {this.state.europe.map(europe => (
                                             <div className="container_list_europe">
-                                            <li><p className="list_europe">{europe.countries}</p></li>
+                                            <p className="list_europe">{europe.countries}</p>
                                             </div>
                                             ))}
                                             <button className="button_countries">...</button>
                                         </li>
-                                        <li><a href="#" className='continent_name'>AMERIQUE</a>
+                                        <li><a href=" " className='continent_name'>AMERIQUE</a>
                                         {this.state.amerique.map(amerique => (
                                             <div className="container_list_amerique">
-                                            <li><p className="list_amerique">{amerique.countries}</p></li>
+                                            <p className="list_amerique">{amerique.countries}</p>
                                             </div>
                                             ))}
                                             <button className="button_countries">...</button>
                                         </li>
-                                        <li><a href="#" className='continent_name'>AUTRES</a>
+                                        <li><a href=" " className='continent_name'>AUTRES</a>
                                         {this.state.autres.map(autres => (
                                             <div className="container_list_autres">
-                                            <li><p className="list_autres">{autres.countries}</p></li>
+                                            <p className="list_autres">{autres.countries}</p>
                                             </div>
                                             ))}
                                             <button className="button_countries">...</button>
@@ -116,7 +115,7 @@ class Navbar extends Component {
                                     </div>
                                     </ul>
                                 </li>
-                                <li><NavLink exact to="/">VIDÉASTES</NavLink></li>
+                                <li><button className='button_video'><NavLink exact to="/">VIDÉASTES</NavLink></button></li>
                             </ul>
 
                         </div>

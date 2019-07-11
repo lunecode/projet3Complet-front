@@ -237,11 +237,11 @@ display: none;
     pointer-events: all;
     margin-top: -14.75%;
     margin-left: -3.5%;
-    z-index: 3;
+    z-index: 10;
 }
 .rightarrow {
     position: absolute;
-    z-index: 3;
+    z-index: 10;
     pointer-events: all;
     height: 6vh;
     transform: rotate(-90deg);
@@ -252,7 +252,7 @@ display: none;
 }
 .leftarrowDisable {
     position: absolute;
-    z-index: 4;
+    z-index: 10;
     pointer-events: all;
     height: 6vh;
     transform: rotate(90deg);
@@ -262,7 +262,7 @@ display: none;
 }
 .rightarrowDisable {
         position: absolute;
-        z-index: 3;
+        z-index: 10;
         height: 6vh;
         transform: rotate(-90deg);
         margin-top: -14.75%;

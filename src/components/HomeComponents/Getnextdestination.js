@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
 
 import './Getnextdestination.scss';
 
@@ -87,7 +87,7 @@ class Getnextdestination extends Component {
                         </div>
                         {this.state.nextpicture.map(nextpicture => (
                             <div className={"divpictureNext" + i} key={i++}>
-                                <img src={nextpicture.cover_picture} className={"nextpictureimg" + a} key={a++} />
+                                <img src={nextpicture.cover_picture} className={"nextpictureimg" + a} key={a++} alt= ''/>
                                 <p className={"p" + b} key={b++}>{nextpicture.video_title}</p> <br />
                                 <p className={"p" + b} key={b++}>{nextpicture.countries}</p>
                             </div>
@@ -111,7 +111,7 @@ class Getnextdestination extends Component {
             <div className="container_bestplan">
                 {this.state.videos.map(video => (
                     <div className={"divVideoPLan" + c} key={c++}>
-                            <img src={video.cover_picture} className='picture_bestplan'/>
+                            <img src={video.cover_picture} className='picture_bestplan' alt= ''/>
                             <div className='container_title_bestplan_numbertips'>
                                 <p className='title_bestplan_numbertips'>+{video.number_tips}%</p>
                             </div>

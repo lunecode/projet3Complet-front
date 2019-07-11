@@ -40,6 +40,7 @@ $colorButton: #5dd8dc;
                 right: 20px;
                 top: 10px;
             }
+
         }
     
         .ulNav {
@@ -56,6 +57,7 @@ $colorButton: #5dd8dc;
     font-family: 'Robotoregular';
     font-size: 0.85vw;
     text-decoration: none;
+
 }
 
 .ulNav a:hover {
@@ -70,7 +72,11 @@ $colorButton: #5dd8dc;
     opacity: 0.6;
 }
     
-
+.button_video{
+    height: 10vh;
+    border:none;
+    background:none;
+}
         .containerNavRight {
             position: relative;
             width: 20%;
@@ -102,13 +108,13 @@ $colorButton: #5dd8dc;
             }
         }
     }
-
+    
 
 
 
  
 
-/********************** test ***************/
+/********************** DROPDOWN ***************/
 
 .containerNavLeft .ulNav ul{
 
@@ -121,11 +127,11 @@ $colorButton: #5dd8dc;
     opacity: 0;
     visibility: hidden;
     width: 200px;
-    transition: all 0.25s ease-out;
+    transition: all 0.05s ease-in-out;
   }
   
   .containerNavLeft li:hover .ul_list  {
-    top: 9.25vh;
+    top: 11.55vh;
     left:2.75vw;
     opacity: 1;
     visibility: visible;
@@ -157,8 +163,6 @@ $colorButton: #5dd8dc;
             font-size:16px;
             color:white;
             background-color: #55949c;
-            background-position: bottom 50px right 100px;
-            padding:0.5vw;
             padding-left:-10vw;
             width: 60%;
             margin-left:20%;
@@ -173,6 +177,9 @@ $colorButton: #5dd8dc;
         .continent_name{
             font-size:18px;
         }
+        .continent_name:hover{
+            opacity: 0.6;
+        }
         .button_countries{
             font-size:25px;
             font-weight: bold;
@@ -185,63 +192,3 @@ $colorButton: #5dd8dc;
         }
   }
 
-
-////////////////// TESTTTT  //////////////
-
-
-
-// .containerNavLeft .ulNav ul{
-//     background-color: #2C404D;
-//     box-shadow: 0 7px 7px 0 rgba(0, 0, 0, 0.2);
-//     position: absolute;
-//     margin-top:5.5vh;
-//     margin-left:-50vw;
-//     z-index: 10;
-//     opacity: 1;
-//     visibility: hidden;
-//     transition: all 0.5s ease-out;
-//   }
-  
-//   .containerNavLeft li:hover .ul_list  {
-//     opacity: 1;
-//     visibility: visible;
-//     align-items: center;
-//     width: 92vw;
-//     margin-left:-30vw;
-
-//         li .list_afrique .list_asieoceanie .list_europe .list_autres .list_amerique{
-//             list-style: none;
-//             a{
-//                 font-size: 12px;
-//                 font-family: 'Roboto';
-//             }
-    
-//         }
-//         li{
-//             list-style: none;
-//             text-align:center;
-//         }
-//         p{
-//             font-size:16px;
-//             color:#55949c;
-//         }
-//         .container_list{
-//             display: grid;
-//             grid-template-columns:18vw 18vw 18vw 18vw 18vw ;
-//             grid-template-rows: 26vh;
-//             grid-auto-flow: row;
-//             margin-left: -5vw;
-
-//         }
-//         .continent_name{
-//             font-size:18px;
-//         }
-//         .button_countries{
-//             font-size:25px;
-//             font-weight: bold;
-//             color:#55949c;
-//             background:transparent;
-//             border:none;
-//             font-family: 'Roboto';
-//         }
-//   }
