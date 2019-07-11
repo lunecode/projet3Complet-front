@@ -16,6 +16,8 @@ import Footer from './components/Footer';
 import PlayVideo from './screen/PlayVideo';
 import Favoris from './screen/Favoris';
 
+import './App.css'
+
 
 
 

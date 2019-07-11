@@ -77,13 +77,28 @@ $colorButton: #5dd8dc;
             padding-right: 3%;
             
             
-            ul {
+            ul{
                 align-items: center;
                 display: flex;
                 flex-flow: row nowrap;
                 justify-content: space-around;
                 list-style: none;
+
+                .img_profil:hover .Sous_nemu{ 
+                   
+                 display: block;
+                    }
+
+                .Sous_nemu{
+                    list-style: none;
+                    display: none;
+            background-color: white;
+            
+                } 
+
+                 
             }
+            
             
             .logoAvatar {
                 border-radius: 50%;

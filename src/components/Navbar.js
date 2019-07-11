@@ -10,6 +10,8 @@ import Avatar from '../Images-tripitto/Icon/User/normal.png';
 // import Notification from '../Images-tripitto/Icon/Notifications.png';
 import NotificationPopup from './HomeComponents/NotificationPopup';
 import ModaldisplayProfi from './ProfilComponents/ModaldisplayProfi';
+import '../../src/components/ProfilComponents/DropDown.css'
+
 
 class Navbar extends Component {
     state = {
@@ -127,12 +129,24 @@ class Navbar extends Component {
                                 </li>
                                 <li><NavLink exact to="/">VIDÉASTES</NavLink></li>
                             </ul>
-
                         </div>
                         <div className="containerNavRight">
-                            <ul className="Ulbutton">
-                            <ModaldisplayProfi />
-                                {/* <li><NavLink exact to="/Profil"><img className={this.state.isModalOpen === false ? "buttonNavbarConnexionNone" : "logoAvatar"} src={Avatar} alt="logo tripitto"></img></NavLink></li> */}
+                        <ul className="Ulbutton" >
+                     <li  className="img_profil" onClick={isModalOpen === true ? this.closeModal : null }>
+                         
+                          <img  className={this.state.isModalOpen === false ? "buttonNavbarConnexionNone" : "logoAvatar"}
+                            src={Avatar} alt="logo tripitto">
+                                 </img>
+                                 
+                                    <ul className="Sous_nemu">
+                                    <li><NavLink className="link_DropDown" exact to="/Profil">Profil</NavLink></li>
+                                    <li><NavLink className="link_DropDown" exact to="/Profil">papa</NavLink></li>
+                                    <li><NavLink className="link_DropDown" exact to="/Profil">mama</NavLink></li>
+                                    </ul>
+
+                                    
+                                      
+                                </li> 
                                 <li className={this.state.isModalOpen === false ? "buttonNavbarConnexionNone" : "notification"}><NotificationPopup /></li>
                                 <li><button onClick={this.openModal} className={this.state.isModalOpen === false ? "buttonNavbarConnexion" : "buttonNavbarConnexionNone"}>SE CONNECTER</button></li>
                                 <li><button onClick={this.openModal} className={this.state.isModalOpen === false ? "buttonNavbarChange" : "buttonNavbar"}>PUBLIER</button></li>
