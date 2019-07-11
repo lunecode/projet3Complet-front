@@ -10,6 +10,7 @@ import AboutVideo from '../../Images-tripitto/imgUploadVideo/AboutVideo.PNG'
 
 class PostVideo extends Component {
   state = {
+    profil_id_profil : 1
   }
 
   changeHandler = (e) => {
@@ -33,7 +34,9 @@ class PostVideo extends Component {
   }
 
   render() {
-    const { video_title, video_link, video_description, profil_id_profil, equipment, link_equipment, equipment2, link_equipment2, equipment3, link_equipment3, cover_picture } = this.state
+    
+    const { video_title, video_link, video_description, equipment, link_equipment, equipment2, link_equipment2, equipment3, link_equipment3, cover_picture } = this.state
+
 
     return (
       <div>
@@ -43,10 +46,10 @@ class PostVideo extends Component {
             <img src={AboutVideo} alt="About video" className="AboutVideo" />
 
 
-            <div className="upload-link">
+            <div className="upload_link">
               <img className="uploadIconVideo" src={UploadIcon} alt="upload icon"></img>
               <p>Lien de la vidéo Youtube</p>
-              <input className="input-upload" type='text' name="video_link" value={video_link} onChange={this.changeHandlerYoutube} />
+              <input className="input_upload" type='text' name="video_link" value={video_link} onChange={this.changeHandlerYoutube} />
             </div>
 
             <div className="title">
@@ -114,9 +117,13 @@ class PostVideo extends Component {
               <input className="input-cover" type='text' name="cover_picture" value={cover_picture} onChange={this.changeHandler} />
             </div>
 
+
+{/* THIS INPUT ALLOW TO INSERT THE ID PROFIL OF THE UPLOAD VIDEO BUT IS HIDDING FOR NOW UNTIL THE LOGIN WORKS */}
             <div className="temp">
               <p>Profil_id ( obligatoire )</p>
-              <input type="text" name="profil_id_profil" value={profil_id_profil} onChange={this.changeHandler} />
+              <input type="hidden" name="profil_id_profil" value={this.state.profil_id_profil} onChange={this.changeHandler} />
+
+              {/* <input type="text" name="profil_id_profil" value={profil_id_profil} onChange={this.changeHandler} /> */}
             </div>
 
             <div className="submit-div">
