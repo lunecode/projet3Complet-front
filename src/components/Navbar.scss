@@ -83,17 +83,28 @@ $colorButton: #5dd8dc;
                 flex-flow: row nowrap;
                 justify-content: space-around;
                 list-style: none;
-
+                 position: relative;
                 .img_profil:hover .Sous_nemu{ 
                  display: block;
                     }
                 .Sous_nemu{
                     list-style: none;
                     display: none;
-            background-color: white;
-
+                    background-color: white;
+                    position: absolute;
+                    right:13vw;
+                    width:200px;
+                    height:300px;
+                    li{
+                        padding-top:30px;
+                        
+                        
+                        .link_DropDown{
+                            text-decoration: none;
+                            color:grey;
+                        }
+                    }
                 } 
-
                  
             }
             

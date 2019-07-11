@@ -1,6 +1,6 @@
 import React from 'react'
 import './ModalSaveSecurity.scss'
-import axios from 'axios'
+
 
 
 class ModalSaveSecurity extends React.Component {
@@ -52,8 +52,7 @@ class ModalSaveSecurity extends React.Component {
 
                                 <div className="container-open-security-save">
                                     
-                                        <button onClick={this.
-    closeModalSecuritySave} className="btn-modal-close-security-save">Retour</button>
+                                        <button onClick={this.closeModalSecuritySave} className="btn-modal-close-security-save">Retour</button>
 
                                 </div>
                             </div>

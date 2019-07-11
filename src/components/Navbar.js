@@ -9,7 +9,6 @@ import Search from '../Images-tripitto/Icons/Search-White.png';
 import Avatar from '../Images-tripitto/Icon/User/normal.png';
 // import Notification from '../Images-tripitto/Icon/Notifications.png';
 import NotificationPopup from './HomeComponents/NotificationPopup';
-import '../../src/components/ProfilComponents/DropDown.css'
 
 
 class Navbar extends Component {
@@ -126,7 +125,7 @@ class Navbar extends Component {
                                         </div>
                                     </ul>
                                 </li>
-                                <li><NavLink exact to="/">VIDÉASTES</NavLink></li>
+                                <li><NavLink exact to="/Videaste">VIDÉASTES</NavLink></li>
                             </ul>
                         </div>
                         <div className="containerNavRight">
@@ -138,11 +137,11 @@ class Navbar extends Component {
                                  </img>
                                  
                                     <ul className="Sous_nemu">
-                                    <li><NavLink className="link_DropDown" exact to="/Profil">Gérer mon profil</NavLink></li>
                                     <li><NavLink className="link_DropDown" exact to="/Favoris">Mes favoris</NavLink></li>
-                                    <li><NavLink className="link_DropDown" exact to="/Profil">mama</NavLink></li>
-                                    </ul>  
-                                      
+                                    <li><NavLink className="link_DropDown" exact to="/Profil">A regarder plus tard</NavLink></li>
+                                    <li><NavLink className="link_DropDown" exact to="/Profil">Gérer mon profil</NavLink></li>
+                                    <li><NavLink className="link_DropDown" exact to="/Profil">Envoyer un avis</NavLink></li>
+                                    </ul>                        
                                 </li> 
                                 <li className={this.state.isModalOpen === false ? "buttonNavbarConnexionNone" : "notification"}><NotificationPopup /></li>
                                 <li><button onClick={this.openModal} className={this.state.isModalOpen === false ? "buttonNavbarConnexion" : "buttonNavbarConnexionNone"}>SE CONNECTER</button></li>

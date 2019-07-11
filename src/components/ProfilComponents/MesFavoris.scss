@@ -19,11 +19,9 @@
     }
 
     .countainer_bloc_favoris{
-        background-color: red;
         width: 80%;
         margin-left: 10vw;
         text-align: center;
-        
        //filter
     .filter_favoris{ 
             padding-top:2vh;
@@ -43,9 +41,26 @@
         .container_bloc{
 
              .infos_Favoris{
-                 padding: 12px;
             display: flex;
             flex-direction: row;
+            }
+            .pays{
+                padding-right: 12px;
+
+            }
+            .nb_vues{
+                padding-right: 12px;
+                color:rgb(158, 158, 158);
+            }
+            .Point{
+             font-size: 40px;
+             margin-top: -1vh;
+             padding-right: 12px;
+
+            }
+           
+            .temps{
+                color:rgb(158, 158, 158); 
             }
         }
 

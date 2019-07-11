@@ -8,6 +8,13 @@ import CoverIcon from '../../Images-tripitto/Icon/Upload Image.png'
 import AboutVideo from '../../Images-tripitto/imgUploadVideo/AboutVideo.PNG'
 
 
+
+// UPLOAD PAGE 1 / VIDEO AND DESCRIPTION
+// ALLOW TO INSERT DATA IN "GENERAL_VIDEO" TABLE
+// TEST OK
+// NEED TO SEE HOW GET THE ID OF THE PROFIL WHEN IS LOGGING
+
+
 class PostVideo extends Component {
   state = {
   }

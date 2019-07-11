@@ -36,8 +36,8 @@ class MesFavoris extends Component {
             <p className="pays">Maroc</p>
             <p className="Point">.</p>
             <p className="nb_vues">35 vues</p>
-            <p className="Point_2">.</p>
-            <p className="temps">3 semaines</p>
+            <p className="Point">.</p>
+            <p className="temps">il y 3 semaines</p>
         </div>
         <p className="desciptipn_text">
             Pellentesque habitant morbi tristique senectus et netus
