@@ -20,20 +20,20 @@ class Getnextdestination extends Component {
 
 
     getnextvideo = async () => {
-        const res = await axios.get('http://localhost:3000/general_video/get_general_video_nextdestination')
+        const res = await axios.get('http://localhost:3000/travel_information/get_travelinformation_general_video')
         const Nextdestination = res.data
         this.setState({ nextpicture: Nextdestination })
     }
     getnextvideolimit = () => {
-        this.setState({ offset: this.state.offset + 5 }, async () => {
-            const res = await axios.get(`http://localhost:3000/popularity/get_popularity_liked_general_video_travel_information/${this.state.offset}`)
+        this.setState({ offset: this.state.offset + 5}, async () => {
+            const res = await axios.get(`http://localhost:3000/travel_information/get_travelinformation_general_video/${this.state.offset}`)
             const Nextdestination = res.data
             this.setState({ nextpicture: Nextdestination })
         })
     }
     getnextvideolimitBack = () => {
-        this.setState({ offset: this.state.offset - 5 }, async () => {
-            const res = await axios.get(`http://localhost:3000/popularity/get_popularity_liked_general_video_travel_information/${this.state.offset}`)
+        this.setState({ offset: this.state.offset - 5}, async () => {
+            const res = await axios.get(`http://localhost:3000/travel_information/get_travelinformation_general_video/${this.state.offset}`)
             const Nextdestination = res.data
             this.setState({ nextpicture: Nextdestination })
         })
@@ -74,12 +74,7 @@ class Getnextdestination extends Component {
                 <section className='nextdestination'>
 
                     <div className="wrapper-nextpicture">
-                        <div>
-                                <img onClick={this.getnextvideolimitBack } className={this.state.offset === 0 ? "leftarrowDisable" : "leftarrow"} src={leftarrow} alt=""></img>
-                        </div>  
-                        <div>
-                                <img onClick={this.getnextvideolimit} className={this.state.offset === 5 ? "rightarrowDisable" : "rightarrow"} src={rightarrow} alt=""></img>
-                        </div>
+
                         {this.state.nextpicture.map(nextpicture => (
                             <div className={"divpictureNext" + i} key={i++}>
                                 <NavLink to={`/playvideo/${nextpicture.id_general_video}`} ><img src={nextpicture.cover_picture} className={"nextpictureimg" + a} key={a++} /></NavLink>
@@ -90,6 +85,12 @@ class Getnextdestination extends Component {
                         ))}
 
                     </div>
+                    <div>
+                                <img onClick={this.getnextvideolimitBack } className={this.state.offset === 0 ? "leftarrowDisable" : "leftarrow"} src={leftarrow} alt=""></img>
+                        </div>  
+                        <div>
+                                <img onClick={this.getnextvideolimit} className={this.state.offset === 15 ? "rightarrowDisable" : "rightarrow"} src={rightarrow} alt=""></img>
+                        </div>
                 </section>
 
 {/****************************** SECTION BEST PLAN  ***************************** */}
