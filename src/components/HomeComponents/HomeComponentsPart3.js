@@ -2,13 +2,11 @@ import React, { Component } from 'react';
 import axios from 'axios'
 // import YouTube from 'react-youtube';
 import './HomeComponentsPart3.scss'
-
 import leftHome from '../../Images-tripitto/Icon/leftHome.png'
 import RightHome from '../../Images-tripitto/Icon/RightHome.png'
 import normal from '../../Images-tripitto/Icon/Voyage/normal.png'
 // import Rectangle from '../../Images-tripitto/Icon/Voyage/Rectangle.png'
 import User from '../../Images-tripitto/Icon/User/User.png'
-
 // Permet l'affichage des données pour un test de la table " General_video "
 
 class Display extends Component {
@@ -73,13 +71,7 @@ class Display extends Component {
     render() {
         let i = 1
         let v = 1
-        // const opts = {
-            //     height: '150',
-            //     width: '150',
-            //     playerVars: { // https://developers.google.com/youtube/player_parameters
-        //         autoplay: 0
-        //     }
-        // }
+
         
         return (
             <>
@@ -187,7 +179,6 @@ class Display extends Component {
         )
     }
 }
-
 
 
 export default Display;
