@@ -146,7 +146,7 @@ class Navbar extends Component {
                         </div>
                         <div className="containerNavRight">
                             <ul className="Ulbutton">
-                                <li><NavLink exact to="/Profil"><img className={this.state.isModalOpen === false ? "buttonNavbarConnexionNone" : "logoAvatar"} src={Avatar} alt="logo tripitto"></img></NavLink></li>
+                                <li onClick={isModalOpen === true ? this.closeModal : null }><NavLink exact to="/Profil"><img className={this.state.isModalOpen === false ? "buttonNavbarConnexionNone" : "logoAvatar"} src={Avatar} alt="logo tripitto"></img></NavLink></li>
                                 <li className={this.state.isModalOpen === false ? "buttonNavbarConnexionNone" : "notification"}><NotificationPopup /></li>
                                 <li><button onClick={this.openModal} className={this.state.isModalOpen === false ? "buttonNavbarConnexion" : "buttonNavbarConnexionNone"}>SE CONNECTER</button></li>
                                 <li><button onClick={this.openModal} className={this.state.isModalOpen === false ? "buttonNavbarChange" : "buttonNavbar"}>PUBLIER</button></li>

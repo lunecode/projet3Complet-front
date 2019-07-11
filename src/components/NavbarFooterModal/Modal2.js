@@ -56,12 +56,10 @@ class Modal2 extends Component {
     openModalForgottenPassword2 =() => {
         this.setState( { ModalForgottenPassword2: true} )
         this.props.onClose4()
-    console.log(this.state.ModalForgottenPassword2);
     }
     
     closeModalForgottenPassword2 = () => {
         this.setState( { ModalForgottenPassword2: false } )
-        console.log(this.state.ModalForgottenPassword2);
     }
 
     render () { 
@@ -80,11 +78,11 @@ class Modal2 extends Component {
                     </div>
                     <div className="containerIs-open2">
                         <div className="divInputModal">
-                                <input type="text" name="mail" id="mail" placeholder="Adresse email"></input>
+                                <input type="text" name="email" id="email" placeholder="Adresse email"></input>
                                 
                         </div>
                         <div className="divInputModal" >
-                                <input type="text" name="mail" id="mail" placeholder="Mot de passe"></input>
+                                <input type="text" name="password" id="password" placeholder="Mot de passe"></input>
                         </div>
                     </div>
                     <div className="containerIs-open3">

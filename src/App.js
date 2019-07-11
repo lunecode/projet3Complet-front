@@ -17,6 +17,8 @@ import PlayVideo from './screen/PlayVideo';
 import Footer from './components/NavbarFooterModal/Footer';
 import Navbar from './components/NavbarFooterModal/Navbar';
 
+import './App.css'
+
 
 
 
