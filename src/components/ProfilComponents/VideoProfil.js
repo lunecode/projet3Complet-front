@@ -18,12 +18,6 @@ import img4 from '../../Images-tripitto/Icon_Vidéo/img4.png'
 
 class VideoProfil extends Component {
 
-//   removeDummy=() =>{
-//     var elem = document.getElementById('dummy');
-//     elem.parentNode.removeChild(elem);
-//     return false;
-//   }
-
     render(){
         return (
 <div className="VideoProfilCompnent">
@@ -75,7 +69,7 @@ class VideoProfil extends Component {
         <div className="grid-profil-info">
     <div><h3>Video(5)</h3></div>
     <div className="filter">   
-       <select class="w3-select" name="option">
+       <select className="w3-select" name="option">
     <option value="" disabled selected>triez par</option>
     <option value="1">Date de publication'</option>
     <option value="2">Status</option>

@@ -43,12 +43,10 @@ class ModalLogin extends Component {
     openModal4 = () => {
         this.setState({ isModalOpe4: true })
         this.props.onClose3()
-        console.log(this.state.isModalOpe4);
     }
 
     closeModal4 = () => {
         this.setState({ isModalOpe4: false })
-        // console.log(this.state.isModalOpe4);
     }
 
     componentDidMount() {

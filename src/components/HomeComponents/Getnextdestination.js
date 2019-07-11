@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import axios from 'axios'
 import './Getnextdestination.scss';
 import leftarrow from '../../pictures/arrow_left.png'
