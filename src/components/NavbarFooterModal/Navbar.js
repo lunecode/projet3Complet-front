@@ -6,11 +6,11 @@ import './Modal.scss'
 
 
 import './Navbar.scss'
-import Logo from '../Images-tripitto/Logo/B&W.png';
-import Search from '../Images-tripitto/Icons/Search-White.png';
-import Avatar from '../Images-tripitto/Icon/User/normal.png';
+import Logo from '../../Images-tripitto/Logo/B&W.png';
+import Search from '../../Images-tripitto/Icons/Search-White.png';
+import Avatar from '../../Images-tripitto/Icon/User/normal.png';
 // import Notification from '../Images-tripitto/Icon/Notifications.png';
-import NotificationPopup from './HomeComponents/NotificationPopup';
+import NotificationPopup from '../HomeComponents/NotificationPopup';
 // import ModalDeleteVideo from './ProfilComponents/ModalDeleteVideo';
 
 class Navbar extends Component {
@@ -65,6 +65,10 @@ class Navbar extends Component {
         this.getautres()
     }
     render() {
+        let i = 1
+        let a = 1
+        let e = 1
+        let o = 1
         const { isModalOpen } = this.state
         return (
             <div>
@@ -84,15 +88,16 @@ class Navbar extends Component {
                                         <div className="container_list">
                                             <li><a href=" " className='continent_name'>AFRIQUE</a>
                                                 {this.state.afrique.map(afrique => (
-                                                    <div className="container_list_afrique">
-                                                        <p className="list_afrique">{afrique.countries}</p>
+                                                    <div key={i++} className="container_list_afrique">
+                                                        <p className="list_afrique">
+                                                        {afrique.countries}</p>
                                                     </div>
                                                 ))}
                                                 <button className="button_countries">...</button>
                                             </li>
                                             <li><a href=" " className='continent_name'>ASIE-OCEANIE</a>
                                                 {this.state.asieoceanie.map(asieoceanie => (
-                                                    <div className="container_list_asieoceanie">
+                                                    <div key={a++} className="container_list_asieoceanie">
                                                         <p className="list_asieoceanie">{asieoceanie.countries}</p>
                                                     </div>
                                                 ))}
@@ -101,7 +106,7 @@ class Navbar extends Component {
 
                                             <li><a href=" " className='continent_name'>EUROPE</a>
                                                 {this.state.europe.map(europe => (
-                                                    <div className="container_list_europe">
+                                                    <div key={e++} className="container_list_europe">
                                                         <p className="list_europe">{europe.countries}</p>
                                                     </div>
                                                 ))}
@@ -109,7 +114,7 @@ class Navbar extends Component {
                                             </li>
                                             <li><a href=" " className='continent_name'>AMERIQUE</a>
                                                 {this.state.amerique.map(amerique => (
-                                                    <div className="container_list_amerique">
+                                                    <div key={o++} className="container_list_amerique">
                                                         <p className="list_amerique">{amerique.countries}</p>
                                                     </div>
                                                 ))}
@@ -123,7 +128,7 @@ class Navbar extends Component {
                                                 ))}
                                                 <button className="button_countries">...</button>
                                             </li>
-                                            <li><a href="#" className='continent_name'>AUTRES</a>
+                                            <li><a href=" " className='continent_name'>AUTRES</a>
                                                 {this.state.autres.map(autres => (
                                                     <div className="container_list_autres">
                                                         <li><p className="list_autres">{autres.countries}</p></li>

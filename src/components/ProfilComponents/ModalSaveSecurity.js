@@ -1,6 +1,6 @@
 import React from 'react'
 import './ModalSaveSecurity.scss'
-import axios from 'axios'
+// import axios from 'axios'
 
 
 class ModalSaveSecurity extends React.Component {
@@ -34,8 +34,8 @@ class ModalSaveSecurity extends React.Component {
                         </div>
                         <div className="container-security-save">
                             <div className={this.state.isModalSaveSecurity ? 'display-block-save' : 'display-none-save'}>
-                                
-                    <div className="modal-security-save-bloc-title">
+
+                                <div className="modal-security-save-bloc-title">
                                     <div>
                                         <h5 className="security-modal-save">Sauvegarde</h5>
                                     </div>
@@ -44,16 +44,16 @@ class ModalSaveSecurity extends React.Component {
                                 <div className="container-open-security-save">
 
                                     <div className="text-modal-security-save">
-                                             <p>Votre mot de passe a bien été mis à jour</p> 
+                                        <p>Votre mot de passe a bien été mis à jour</p>
                                     </div>
-          
+
                                 </div>
 
 
                                 <div className="container-open-security-save">
-                                    
-                                        <button onClick={this.
-    closeModalSecuritySave} className="btn-modal-close-security-save">Retour</button>
+
+                                    <button onClick={this.
+                                        closeModalSecuritySave} className="btn-modal-close-security-save">Retour</button>
 
                                 </div>
                             </div>

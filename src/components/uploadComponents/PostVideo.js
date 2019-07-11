@@ -40,7 +40,7 @@ class PostVideo extends Component {
         <form onSubmit={this.submitHandler}>
           <div className='grid_postVideo'>
 
-            <img src={AboutVideo} className="AboutVideo" />
+            <img src={AboutVideo} alt="About video" className="AboutVideo" />
 
 
             <div className="upload-link">
