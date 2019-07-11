@@ -25,9 +25,9 @@
         text-align: center;
         
        //filter
-        .filter_favoris{ 
+    .filter_favoris{ 
             padding-top:2vh;
-        padding-bottom:5vh;
+            padding-bottom:5vh;
             max-width: 9vw;     
             .w3-select_favoris{
              border:12px;
@@ -40,11 +40,16 @@
      .bloc_1_image_decription{
         display: flex;
         flex-direction: row;
+        .container_bloc{
 
-        .infos_Favoris{
+             .infos_Favoris{
+                 padding: 12px;
             display: flex;
             flex-direction: row;
             }
+        }
+
+       
 
     }
     

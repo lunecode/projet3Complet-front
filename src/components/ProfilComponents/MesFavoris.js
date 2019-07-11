@@ -31,7 +31,7 @@ class MesFavoris extends Component {
         </div>
 
     <div className="container_bloc">
-        <h1>Couchée de soleil sur la Palemeraie de Skoura</h1>
+     <h1>Couchée de soleil sur la Palemeraie de Skoura</h1>
         <div className="infos_Favoris">
             <p className="pays">Maroc</p>
             <p className="Point">.</p>
