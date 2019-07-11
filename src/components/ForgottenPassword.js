@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
 
+
+
+// MOT DE PASSE OUBLIE
+
 class ForgottenPassword extends Component {
     
     render () {
@@ -27,7 +31,7 @@ class ForgottenPassword extends Component {
                             <button className="buttonPassword">ENVOYER</button>
                         </div>
                         <div>
-                            <button className="buttonPassword2">ANNULER</button>
+                            <button onClick={onClose2} className="buttonPassword2">ANNULER</button>
                         </div>
                     </div>
             </div>

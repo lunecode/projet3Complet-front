@@ -15,6 +15,7 @@ $colorBackgroundModal: #45adcd;
     margin-bottom: 5%;
     color: black;
     background-color: white;
+
 }
 
 .containerLogin {
@@ -27,7 +28,7 @@ $colorBackgroundModal: #45adcd;
     button {
         position: relative;
         color: $colorbackground;
-        margin-left: -15px;
+        margin-left: -30px;
         top: -15px;
     }
 
@@ -121,6 +122,11 @@ $colorBackgroundModal: #45adcd;
     .LoginToTheSite span {
         color:  $colorBackgroundModal;
     }
+
+    .LoginToTheSite span:hover {
+        opacity: 0.6;
+    }
+
     .LoginToTheSite {
         color: gray;
         font-size: 14px;

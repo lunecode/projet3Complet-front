@@ -1,5 +1,4 @@
 /* style of the Upload page / travel_information*/
-/* page 55 to 64 of the invision page */
 
 
 @font-face {
@@ -8,10 +7,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
-/* p {
-  font-family: "Roboto-Medium";
-} */
 
 
 input {
@@ -32,19 +27,12 @@ input {
 /* Style of the page */
 
 
-
-.video {
-  position: absolute;
-  margin-top: 2%;
-  margin-left: 1%;
-  width: 16%;
-  height: 25%;
-  box-shadow: 10px 5px 5px grey;
-}
-
-.video_link {
+.uploadVideoCard {
   grid-column: 1;
   grid-row: 1 / span 3;
+  margin-top: 2vh;
+  margin-left: 5vw;
+  box-shadow: 10px 5px 5px grey;
 }
 
 
@@ -52,9 +40,11 @@ input {
 /***********************/
 
 
-.empty {
-  grid-column: 1 / span 6;
+.AboutVideo2 {
+  grid-row: 1;
+  grid-column: 4;
   margin-top: 10%;
+  margin-left: 5vw;
 }
 
 /***********************/
@@ -62,34 +52,36 @@ input {
 
 .continent {
   margin-left: 30%;
-  grid-row: 3;
+  grid-row: 2;
   grid-column: 3;
 }
 .input-continent {
-  width: 150%;
-  height: 30%;
+  width: 15vw;
+  height: 5vh;
 }
 
 .country {
-  grid-row: 3;
-  grid-column: 5;
+  grid-row: 2;
+  grid-column: 4 / span 5;
+  margin-left: 15%;
+  margin-top: 2.2vh;
 }
 .input-country {
-  width: 110%;
-  height: 30%;
+  width: 15vw;
+  height: 5vh;
 }
 
 .moreCountry {
-  grid-row: 3;
-  grid-column: 6 / span 7;
+  grid-row: 2;
+  grid-column: 6;
   margin-top: 5%;
-  margin-left: 20%;
+
 }
 .world {
-  grid-row: 3;
-  grid-column: 6 / span 7;
-  margin-top: 10%;
-  margin-left: 20%;
+  grid-row: 2;
+  grid-column: 6;
+  margin-top: 5vh;
+
 }
 
 
@@ -97,41 +89,43 @@ input {
 /***********************/
 
 .title-month {
-  grid-row: 4;
+  grid-row: 3;
   grid-column: 3;
   margin-left: 30%;
-  margin-top: 20%;
+  margin-bottom: 5vh;
 }
 .month {
-grid-row: 5;
+grid-row: 4;
 grid-column: 3;
-margin-bottom: 10%;
 margin-left: 30%;
+margin-top: -9vh;
 }
 .input-month {
-  width: 100%;
-  height: 100%;
+  width: 15vw;
+  height: 5vh;
 }
 
 
 .title-duration {
-  grid-row: 4;
+  grid-row: 3;
   grid-column: 5;
-  margin-top: 20%;
+  margin-left: -35%;
 }
 .duration {
-  grid-row: 5;
+  grid-row: 4;
   grid-column: 5;
-  margin-top: 3px;
+  margin-left: -35%;
+  margin-top: -9vh;
 }
 .input-duration {
-  width: 50px;
+  width: 5vw;
+  height: 5vh;
 }
 .day {
-  grid-row: 5;
+  grid-row: 4;
   grid-column: 5;
-  margin-top: -5%;
-  margin-left: 30%;
+  margin-top: -9vh;
+  margin-left: 5%;
 }
 
 
@@ -142,15 +136,22 @@ margin-left: 30%;
 .step {
   grid-row: 6;
   grid-column: 3 / span 4;
-  margin-left: 7.5%;
+  margin-left: 6.4%;
 }
-.input-step {
-  width: 77%;
-}
+
+
 
 
 
 /***********************/
+
+
+.budget {
+  grid-row: 7;
+  grid-column: 3;
+  margin-left: 30%;
+  width: 11vw;
+}
 
 .euros {
   grid-row: 7;
@@ -171,32 +172,35 @@ margin-left: 30%;
   grid-row: 7;
   grid-column: 4;
   margin-top: 11%;
-  margin-left: 50%;
+  margin-left: 30%;
 }
 .accomodation_information {
   grid-row: 7;
   grid-column: 5;
   margin-top: 17%;
+  margin-left: -38%;
 }
 .input-accomodation {
-  width: 20%;
+  width: 3vw;
+  height: 3vh;
 }
 
 
 .title-activities {
   grid-row: 7;
   grid-column: 5;
-  margin-left: 45%;
+  margin-left: 20%;
   margin-top: 12%;
 }
 .activities {
   grid-row: 7;
   grid-column: 5 / span 6;
-  margin-left: 30%;
+  margin-left: 20%;
   margin-top: 5%;
 }
 .input-activities {
-  width: 7%;
+  width: 3vw;
+  height: 3vh;
 }
 
 
@@ -221,19 +225,20 @@ margin-left: 30%;
   border: 2px solid #C2C2C2;
   border-radius: 5px;
   display: flex;
-  grid-row: 9;
   grid-column: 3;
-  height: 35%;
+  grid-row: 9;
+  height: 5vh;
   justify-content: center;
   margin-left: 30%;
-  margin-top: 5%;
-  width: 50%;
+  width: 15vh;
   z-index: 1;
 }
 .travel_type p {
   font-size: 1rem;
 }
-
+.travel_type.selected {
+  border: solid 1px blue;
+}
 
 
 
@@ -241,33 +246,37 @@ margin-left: 30%;
   align-items: center;
   background-color: white;
   border: 2px solid #C2C2C2;
-  display: flex;
-  grid-row: 9;
-  grid-column: 4;
-  margin-left: 5%;
-  margin-top: 5%;
-  height: 35%;
-  width: 50%;
   border-radius: 5px;
+  display: flex;
+  grid-column: 4;
+  grid-row: 9;
+  height: 5vh;
+  justify-content: center;
+  margin-left: -5%;
+  width: 15vh;
   z-index: 1;
 }
 .travel_type2 p {
   font-size: 1rem;
   z-index: 1;
 }
+.travel_type2.selected {
+  border: solid 1px blue;
+}
 
 
 .travel_type3 {
   align-items: center;
-  display: flex;
-  grid-row: 9;
-  grid-column: 5;
-  margin-top: 5%;
-  border: 2px solid #C2C2C2;
-  height: 35%;
-  width: 50%;
-  border-radius: 5px;
   background-color: white;
+  border: 2px solid #C2C2C2;
+  border-radius: 5px;
+  display: flex;
+  grid-column: 5;
+  grid-row: 9;
+  height: 5vh;
+  justify-content: center;
+  margin-left: -40%;
+  width: 15vh;
   z-index: 1;
 }
 .travel_type3 p {
@@ -275,15 +284,16 @@ margin-left: 30%;
 }
 
 .travel_type4 {
-  display: flex;
   align-items: center;
-  grid-row: 9;
-  grid-column: 6;
-  margin-top: 5%;
   border: 2px solid #C2C2C2;
-  height: 35%;
-  width: 60%;
   border-radius: 5px;
+  display: flex;
+  grid-column: 6;
+  grid-row: 9;
+  height: 5vh;
+  justify-content: center;
+  margin-left: -75%;
+  width: 15vh;
   z-index: 1;
 }
 .travel_type4 p {
@@ -310,17 +320,18 @@ margin-left: 30%;
   padding-bottom: 20%;
 }
 
-
+/* ********************** */
 
 .save_button {
   grid-row: 9;
   grid-column: 5;
 }
 .save {
-  margin-top: 40%;  
-  height: 30%;
   border-color: #00C9D4;
   color: #00C9D4;
+  height: 4vh;
+  margin-top: 40%;  
+  width: 8vw;
 }
 
 
@@ -329,10 +340,12 @@ margin-left: 30%;
   grid-column: 6;
 }
 .preview {
-  margin-top: 40%;  
-  height: 30%;
   border-color: #00C9D4;
   color: #00C9D4;
+  height: 4vh;
+  margin-left: -40%; 
+  margin-top: 11.8vh;
+  width: 8vw;
 }
 
 
@@ -341,8 +354,10 @@ margin-left: 30%;
   grid-column: 7;
 }
 .next {
-  margin-top: 40%;  
-  height: 30%;
   background-color: #00C9D4;
   color: white;
+  height: 4vh;
+  margin-left: -60%; 
+  margin-top: 11.8vh; 
+  width: 8vw;
 }
