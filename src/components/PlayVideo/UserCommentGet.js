@@ -8,7 +8,7 @@ import EditCom from '../../Images-tripitto/Icon/Edit.png';
 
 class UserCommentGet extends Component {
     state = {
-    
+
     comment: [],
     picture: []
 };
@@ -16,7 +16,7 @@ class UserCommentGet extends Component {
 getComment = async () => {
     const res = await axios.get('http://localhost:3000/comment/get_comment')
     this.setState({ comment: res.data })
-    // console.log(this.state.comment)
+    console.log(this.state.comment)
 }
 
 getProfil = async () => {
@@ -34,13 +34,16 @@ render() {
     let i = 1;
 
     const url = window.location.href;
-    const idComment = url.slice(32)
+    const idVideo = url.slice(32)
+        
+
+    
     
     return (  
     <>
-        {this.state.comment.filter(item =>item.id_comment == idComment).map(item =>(
+        {this.state.comment.filter(item =>item.general_video_id_general_video == idVideo ).map(item =>(
                 <div className="container_get" key={i++}>
-                <div  key={item.id_comment}>
+                <div  key={item.video_comment}>
             {/* <li>{item.profile_picture}</li> */}
                 <img className="pictureuser" src={Picture} alt= "pictureuser"/>
                 <span>{item.author_comment}  </span>
