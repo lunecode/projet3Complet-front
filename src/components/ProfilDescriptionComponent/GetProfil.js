@@ -10,6 +10,23 @@ import insta from "../../Images-tripitto/Icon/social/insta.png"
 import youtube from "../../Images-tripitto/Icon/social/youtube.png"
 import link from "../../Images-tripitto/Icon/social/link.png"
 
+//Import pictures video
+
+import iconSearch from '../../Images-tripitto/Icon/TRAILING ICON.png'
+import ModalDeleteVideo from '../../components/ProfilComponents/ModalDeleteVideo.js';
+import ModalHidevide from '../../components/ProfilComponents/ModalHidevideo.js';
+import Partager from '../../Images-tripitto/Icon_Vidéo/Partager.png'
+import modification from '../../Images-tripitto/Icon_Vidéo/modification.png'
+import pourcentage from '../../Images-tripitto/Icon_Vidéo/pourcentage.png'
+import pourcentage80 from '../../Images-tripitto/Icon_Vidéo/pourcentage80.png'
+import pourcentage60 from '../../Images-tripitto/Icon_Vidéo/pourcentage60.png'
+import vinise from '../../Images-tripitto/Icon_Vidéo/vinise.png'
+import upload from '../../Images-tripitto/Icon_Vidéo/upload.png'
+import img1 from '../../Images-tripitto/Icon_Vidéo/img1.png'
+import img2 from '../../Images-tripitto/Icon_Vidéo/img2.png'
+import img3 from '../../Images-tripitto/Icon_Vidéo/img3.png'
+import img4 from '../../Images-tripitto/Icon_Vidéo/img4.png'
+
 // Allow to display data from " profil " table
 
 class GetProfil extends Component {
@@ -103,7 +120,7 @@ class GetProfil extends Component {
                         <NavLink exact to="/post_contactrequest"><button className="buttonmessage">MESSAGE</button></NavLink>
                       </div>
                       <div className="button">
-                        <NavLink exact to="/update_profil/:id"><button className="buttonmodifyprofil">MODIFIER PROFIL</button></NavLink>
+                        <NavLink exact to="/Profil"><button className="buttonmodifyprofil">MODIFIER PROFIL</button></NavLink>
                       </div>
                     </div>
                   </div>
@@ -123,7 +140,7 @@ class GetProfil extends Component {
                 <option value="3">Titre</option>
               </select>
             </div>
-            {this.state.video.map(videos => (
+            {/* {this.state.video.map(videos => (
               <div className="video" key={videos.id_general_video}>
                 <img src={videos.video_link} alt="videocover" className="videocover" />
                 <li>{videos.video_title}</li>
@@ -132,7 +149,166 @@ class GetProfil extends Component {
                 <li>Il y a 3 semaines</li>
 
               </div>
-            ))}
+            ))} */}
+
+<div className="bloc_2_video">
+{/* /bloc video 1 */}
+<div className="list_videos" id ="dummy">
+   <div>
+          <div className="video_user1">
+            <div className="status_durée">
+            <div className="status1">
+            <p className="status">En attente d'approbation</p>
+            </div>
+            <div className="durée1" >
+            <p className="durée">12:45</p>
+            </div>
+            </div>
+
+<div className="imagescreen"><img src={img1} alt=""/></div>
+          <div className="countery"> 
+            <h3> Dans es profondeur du canyon</h3>
+            <p className="countery_p">USA</p>
+         </div> 
+           <div className="infos">
+            <p className="A"> 0 vues</p>
+            <p className="B">.</p>
+            <p className="C">Il y a un jour</p>
+            <p className="D"> <img src={pourcentage} alt=""/></p>
+          </div>
+            <div className="icons_video"> 
+            <img  className="img1" src={modification} alt=""/> 
+            <img className="img2"src={Partager} alt=""/>  
+
+            <ModalHidevide />
+            <ModalDeleteVideo />
+            </div>
+          </div>
+         
+          </div>
+           
+     </div>
+      
+
+      {/* /*****************************************$ */}
+
+{/* /bloc video 2 */}
+<div className="list_videos" id ="dummy">
+   <div>
+       <div className="video_user1">
+            <div className="status_durée">
+            <div className="status1">
+            <p className="status_enligne">En ligne</p>
+            </div>
+            <div className="durée1" >
+            <p className="durée">08:36</p>
+            </div>
+         </div>
+
+       <div className="imagescreen"><img src={img3} alt=""/></div>
+
+       <div className="countery"> 
+            <h3>Perdu dans le sahara</h3>
+            <p className="countery_p">Mauritanie</p>
+            </div> 
+       <div className="infos">
+            <p className="A"> 1903 vues</p>
+            <p className="B">.</p>
+            <p className="C">Il y a 3 mois</p>
+            <p className="D"> <img src={pourcentage80} alt=""/></p>
+       </div>
+       <div className="icons_video"> 
+            <img  className="img1" src={modification} alt=""/> 
+            <img className="img2" src={Partager} alt=""/>  
+           <ModalHidevide />
+            <ModalDeleteVideo />
+            </div>
+          </div>
+          </div>   
+        
+     </div>
+
+</div>
+     {/* /*****************************************$ */}
+
+     <div className="bloc_2_video_2">
+{/* /bloc video 3 */}
+<div className="list_videos" id ="dummy">
+
+   <div>
+       <div className="video_user1">
+            <div className="status_durée">
+            <div className="status1">
+            <p className="status_refusé">Non adaptée</p>
+            </div>
+            <div className="durée1" >
+            <p className="durée">03:56</p>
+            </div>
+         </div>
+
+       <div className="imagescreen"><img src={img4} alt=""/></div>
+
+       <div className="countery"> 
+            <h3>Extréme Xest Caoest</h3>
+            <p className="countery_p">Mauritanie</p>
+            </div> 
+       <div className="infos">
+            <p className="A"> 1903 vues</p>
+            <p className="B">.</p>
+            <p className="C">Il y a 3 mois</p>
+            <p className="D"> <img src={pourcentage60} alt=""/></p>
+            </div>
+       <div className="icons_video"> 
+            <img  className="img1" src={modification} alt=""/> 
+            <img className="img2"src={Partager} alt=""/>  
+            <ModalHidevide />
+            <ModalDeleteVideo />
+            {/* <button onClick={this.removeDummy}><img className="img4"src={Delete} alt=""/> </button>  */}
+            </div>
+          </div>
+          </div>   
+        
+     </div>
+
+
+     {/* /bloc video 4*/}
+<div className="list_videos" id ="dummy">
+
+   <div>
+       <div className="video_user1">
+            <div className="status_durée">
+            <div className="status1">
+            <p className="status_Brouillon">Brouillon</p>
+            </div>
+            <div className="durée1" >
+            <p className="durée">03:56</p>
+            </div>
+         </div>
+
+       <div className="imagescreen"><img src={vinise} alt=""/></div>
+
+       <div className="countery"> 
+            <h3>Souvenir de Venise</h3>
+            <p className="countery_p">Italie</p>
+            </div> 
+       <div className="infos">
+            <p className="A"> 0 vues</p>
+            <p className="B">.</p>
+            <p className="C">Il y a 1 mois</p>
+            <p className="D"> <img src={pourcentage60} alt=""/></p>
+            </div>
+
+       <div className="icons_video"> 
+            <img  className="img1" src={modification} alt=""/> 
+            <img className="img2"src={Partager} alt=""/>  
+            <ModalHidevide />
+            <ModalDeleteVideo />
+            </div>
+          </div>
+          </div>   
+        
+     </div>
+     </div>
             <div>
               {/* <hr color="grey"></hr> */}
               <button>VOIR PLUS</button>

@@ -7,7 +7,6 @@ $colorBackgroundModal: #45adcd;
 }
 
 .modal--is-open {
-
     display: block;
     border: 1px inset $colorBackgroundModal;
     box-shadow: 0px 2px 2px 2px $colorBackgroundModal;
@@ -23,19 +22,20 @@ $colorBackgroundModal: #45adcd;
     position: absolute;
     margin: 0.1% 0% 0% 35% ;
     width: 400px;
+    z-index:6;
 }
 
 .containerIs-open {
     display: grid;
-    grid-template-columns: 97% 3%;
+    grid-template-columns: 94% 3% 3%;
     grid-template-rows: 50px ;
     align-items: center;
+    background-color: $colorBackgroundModal;
 
     button {
-        position: relative;
-        color: $colorbackground;
-        margin-left: -15px;
-        top: -15px;
+        border: none;
+        margin-left: -5px;
+        border-radius: 3px;
     }
 
     button:hover {
@@ -46,12 +46,10 @@ $colorBackgroundModal: #45adcd;
     }
 
     .divButtonModal{
-        background-color: $colorBackgroundModal;
-        padding: 16px 0;
+        margin-top: -25px;
     }
 
     .ConnexionModal {
-        background-color: $colorBackgroundModal;
         padding: 17px 0;
         color: white;
         font-size: 16px;
@@ -66,12 +64,13 @@ $colorBackgroundModal: #45adcd;
     text-align: center;
     margin-top: 25px;
 
-    #mail {
+    #email, #password {
         width: 70%;
         height: 30px;
         padding-left: 12px;
         color: $colorbackground;
         font-size: 14px;
+    
     }
 }
 
@@ -129,5 +128,9 @@ $colorBackgroundModal: #45adcd;
 
     span:hover {
         opacity: 0.5;
+    }
+
+    .button_connexion {
+        border: transparent;
     }
 }

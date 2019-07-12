@@ -1,17 +1,11 @@
 /* Style of upload page with grid  */
 
-/* style of all the page */
-
 @font-face {
   font-family: 'Roboto-Medium';
   src: url('../fonts/Roboto/Roboto-Medium.ttf');
   font-weight: normal;
   font-style: normal;
 }
-
-/* p {
-  font-family: 'Roboto-Medium';
-} */
 
 
 input {
@@ -38,37 +32,47 @@ textarea {
 
 /* Grid and style for elements */
 
-.empty {
-  grid-column: 2 / 7; 
+.AboutVideo {
+  grid-row: 1;
+  grid-column: 4 / 7;
+  margin-top: 3vh;
 }
 
-video {
-  width: 100%;
-  height: auto;
-}
+
+/* ************************ */
 
 .upload-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   border: solid 2px;
   border-color: #ed6256;
   box-shadow: 10px 5px 5px grey;
   grid-column: 1 / span 2;
   grid-row: 1 / span 3;
-  padding-left: 15%;
-  margin-top: 15%;
-  margin-left: 10%;
-  height: 45vh;
-}
-.input-upload{
-  width: 80%;
-  margin-left: 0;
+  margin-top: 10%;
+  margin-left: 20%;
+  height: 30vh;
+  width: 13vw;
+  justify-content: center;
 }
 .uploadIconVideo {
-  padding-top: 10%;
-  padding-left: 35%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10%;
+  height: 10%;
+}
+.upload-link p {
+  margin-left: auto;
+  margin-right: auto;
+}
+.upload-link .input-upload{
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
-
+/* ************************ */
 
 
 .title {
@@ -82,12 +86,13 @@ video {
   height: 25%;
 }
 
+/* ************************ */
+
 
 .description {
   grid-row: 2;
   grid-column: 3 / 6;
   padding-left: 5%;
-  margin-top: 2%;
 }
 .input-description {
   width: 93%;
@@ -98,34 +103,44 @@ resize: none;
 }
 
 
+/* ************************ */
 
-
-.title-equipment1 {
-  margin-left: 14%;
+.showreel {
   grid-row: 3;
-  grid-column: 3;
+  grid-column: 3 / span 6;
+  margin-left: 2.8vw;
+  margin-top: 2vh;
 }
 
-.equipment1 {
+/* ************************ */
+
+.title-equipment1 {
   grid-row: 4;
   grid-column: 3;
   margin-left: 14%;
-  height: 10vh;
+}
+
+.equipment1 {
+  grid-row: 5;
+  grid-column: 3;
+  margin-left: 14%;
+  height: 5vh;
 }
 .input-equipment {
   height: 40%;
   width: 80%;
 }
 .title-link1 {
-  margin-left: 14%;
-  grid-row: 5;
+  grid-row: 6;
   grid-column: 3;
+  margin-left: 14%;
+  margin-top: -2vh;
 }
 .link1 {
   grid-row: 6;
   grid-column: 3;
   margin-left: 14%;
-  margin-bottom: 3vh;
+  margin-top: 3vh;
 }
 .input-link {
   height: 2vh;
@@ -134,14 +149,12 @@ resize: none;
 
 
 
-
-
 .title-equipment2 {
-  grid-row: 4;
+  grid-row: 5;
   grid-column: 4;
 }
 .equipment2 {
-  grid-row: 4;
+  grid-row: 5;
   grid-column: 4;
   margin-left: 5%;
 }
@@ -150,14 +163,16 @@ resize: none;
   width: 80%;
 }
 .title-link2 {
-  grid-row: 5;
+  grid-row: 6;
   grid-column: 4;
   margin-left: 4%;
+  margin-top: -2vh;
 }
 .link2 {
   grid-row: 6;
   grid-column: 4;
   margin-left: 4%;
+  margin-top: 3vh;
 }
 .input-link2 {
   height: 2vh;
@@ -169,11 +184,11 @@ resize: none;
 
 
 .title-equipment3 {
-  grid-row: 4;
+  grid-row: 5;
   grid-column: 5;
 }
 .equipment3 {
-  grid-row: 4;
+  grid-row: 5;
   grid-column: 5;
 }
 .input-equipment3 {
@@ -181,12 +196,14 @@ resize: none;
   width: 80%;
 }
 .title-link3 {
-  grid-row: 5;
+  grid-row: 6;
   grid-column: 5;
+  margin-top: -2vh;
 }
 .link3 {
   grid-row: 6;
   grid-column: 5;
+  margin-top: 3vh;
 }
 .input-link3 {
   height: 2vh;
@@ -194,7 +211,7 @@ resize: none;
 }
 
 
-
+/* ************************ */
 
 
 .cover-picture {
@@ -204,11 +221,12 @@ resize: none;
   box-shadow: 10px 5px 5px grey;
   display: flex;
   flex-direction: column;
-  grid-row: 7;
+  grid-row: 8;
   grid-column: 3;
   height: 25vh;
-  width: 70%;
+  width: 12vw;
   margin-left: 14%;
+  margin-top: 5vh;
 }
 .cover-picture img {
   margin-top: 5vh;;
@@ -217,28 +235,32 @@ resize: none;
   width: 60%;
 }
 
+/* ************************ */
 
 .temp {
-  grid-row: 7;
+  grid-row: 8;
   grid-column: 4;
   margin-left: 4%;
 }
 
+/* ************************ */
+
 .submit-div {
   align-items: center;
   display: flex;
-  grid-row: 8;
+  grid-row: 9;
   grid-column: 4;
-  height: 4vh;
   justify-content: center;
   margin-left: 50%;
   margin-right: 14%;
   min-width: 40%;
   padding-left: 50%;
+  padding-bottom: 5vh;
 }
 .submit-button {
-  background-color: #00C9D4;
-  color: white;
+  border-color: #00C9D4;
+  background-color: #f4f4f4;
+  color: #00C9D4;
   height: 4vh;
   width: 7vw;
   font-size: 0.8rem;
@@ -247,18 +269,19 @@ resize: none;
 .next-div {
   align-items: center;
   display: flex;
-  grid-row: 8;
+  grid-row: 9;
   grid-column: 5;
-  height: 4vh;
   justify-content: center;
   margin-left: 50%;
   margin-right: 14%;
   min-width: 40%;
+  padding-bottom: 5vh;
 }
+
 .next-button {
   border-color: #00C9D4;
-  color: #00C9D4; 
+  background-color: #00C9D4;
+  color: white; 
   height: 4vh;
   width: 7vw;
 }
-

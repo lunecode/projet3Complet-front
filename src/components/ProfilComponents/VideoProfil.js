@@ -18,12 +18,6 @@ import img4 from '../../Images-tripitto/Icon_Vidéo/img4.png'
 
 class VideoProfil extends Component {
 
-//   removeDummy=() =>{
-//     var elem = document.getElementById('dummy');
-//     elem.parentNode.removeChild(elem);
-//     return false;
-//   }
-
     render(){
         return (
 <div className="VideoProfilCompnent">
@@ -75,7 +69,7 @@ class VideoProfil extends Component {
         <div className="grid-profil-info">
     <div><h3>Video(5)</h3></div>
     <div className="filter">   
-       <select class="w3-select" name="option">
+       <select className="w3-select" name="option">
     <option value="" disabled selected>triez par</option>
     <option value="1">Date de publication'</option>
     <option value="2">Status</option>
@@ -107,8 +101,7 @@ class VideoProfil extends Component {
             </div>
             </div>
 
-            <div className="imagescreen"><img src={img1} alt=""/></div>
-
+<div className="imagescreen"><img src={img1} alt=""/></div>
           <div className="countery"> 
             <h3> Dans es profondeur du canyon</h3>
             <p className="countery_p">USA</p>
@@ -118,10 +111,11 @@ class VideoProfil extends Component {
             <p className="B">.</p>
             <p className="C">Il y a un jour</p>
             <p className="D"> <img src={pourcentage} alt=""/></p>
-            </div>
+          </div>
             <div className="icons_video"> 
             <img  className="img1" src={modification} alt=""/> 
             <img className="img2"src={Partager} alt=""/>  
+
             <ModalHidevide />
             <ModalDeleteVideo />
             </div>

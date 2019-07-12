@@ -36,7 +36,7 @@ class GetFollower extends Component {
                     </div>
                     <div className='position-bloc'>
                         <div className='profil-menu'>
-                            <ul>
+                            <ul> 
                                 <li>
                                     <NavLink
                                         className="nav"
