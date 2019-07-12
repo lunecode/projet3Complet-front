@@ -39,7 +39,9 @@ class MesFavoris extends Component {
             <p className="Point">.</p>
             <p className="temps">il y 3 semaines</p>
         </div>
+       <p className="auteur">Beth Murphy</p>
         <p className="desciptipn_text">
+             
             Pellentesque habitant morbi tristique senectus et netus
             et malesuada fames ac turpis egestas. Vestibulum tortor
             quam, feugiat vitae, ultricies eget, tempor sit amet, ante.
