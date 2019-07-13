@@ -23,29 +23,63 @@
         text-align: center;
        //filter
     .filter_favoris{ 
-            padding-top:2vh;
-            padding-bottom:5vh;
-            max-width: 9vw;     
+        position: relative;
+          top:4vh;    
             .w3-select_favoris{
-             border:12px;
              background-color: #f4F4F4; 
             }
         }
 
     }
-
      .bloc_1_image_decription{
         display: flex;
         flex-direction: row;
+
+      .image_Favoris{
+
+              
+        img{
+           width: 30vw;
+            height: 37vh;
+        }
+       
+        .favoris_durée_pourcentage{
+             display: flex;
+            flex-direction: row;
+        position: relative;
+        top:6vh;
+        left:3vw;
+          
+             .durée_vidéo_favoris{
+            background-color: black;
+            color:rgb(14, 235, 132);
+            width: 4vw;
+           margin-right: 16vw;
+        
+        }
+        .pourcentage_favoris{
+             color:white;
+            background-color: black;
+           
+            width: 4vw;
+        }
+        }
+       
+      }
+    
         .container_bloc{
-            
-            .auteur{
-                padding-top:12vh;
+            .desciptipn_text{
+               margin-top: -6vh;
+               text-align: left;
+               margin-left: 1vw;
+              .auteur{
+              
                 padding-right: 38vw;
+            }  
             }
   
              .infos_Favoris{
-             padding-left: 3vw;
+             padding-left: 1vw;
             display: flex;
             flex-direction: row;
             }
