@@ -95,18 +95,39 @@ $colorButton: #5dd8dc;
                     background-color: white;
                     position: absolute;
                     right:13vw;
-                    width:200px;
-                    height:300px;
+                    width:180px;
+                    height:325px;
+                    border:1px solid #1BA2A2;
+                    padding-top: 20px;
+                    padding-left:20px;
                     li{
-                        padding-top:30px;
-                        
-                        
+                   
+                        padding-bottom:40px;
+                        padding-right:10px;
+                       
                         .link_DropDown{
                             text-decoration: none;
-                            color:grey;
+                            color:#333333;  
+                             &:hover{
+                              color:#5dd8dc;
+                          }
+                        }
+                        .btn-deconnection{
+                             border:none;
+                             padding-top:20px;
+                             padding-bottom:20px;
+                             margin-left:15px;
+                             color:red;
+                             font-weight: normal;
                         }
                     }
-            
+                    .li-btn-off{
+                        background-color:#eeeeee;
+                        margin-left:-1vw;
+                        padding-bottom:0;
+                        margin-top:-3vh;
+                    }
+                
                 } 
 
                  

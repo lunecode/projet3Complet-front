@@ -143,6 +143,8 @@ class Navbar extends Component {
                                     <li><NavLink className="link_DropDown" exact to="/Profil">A regarder plus tard</NavLink></li>
                                     <li><NavLink className="link_DropDown" exact to="/Profil">Gérer mon profil</NavLink></li>
                                     <li><NavLink className="link_DropDown" exact to="/Profil">Envoyer un avis</NavLink></li>
+                                    <li><NavLink className="link_DropDown" exact to="/Profil">Aide</NavLink></li>
+                                   <li className="li-btn-off"> <button className="btn-deconnection">Se déconnecter</button></li>
                                     </ul>                        
                                 </li> 
                                 <li className={this.state.isModalOpen === false ? "buttonNavbarConnexionNone" : "notification"}><NotificationPopup /></li>
