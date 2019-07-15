@@ -102,7 +102,8 @@ margin-top: -9vh;
 }
 .input-month {
   width: 15vw;
-  height: 5vh;
+  height: 4vh;
+  border:1px solid #d3d3d3;
 }
 
 
@@ -118,8 +119,13 @@ margin-top: -9vh;
   margin-top: -9vh;
 }
 .input-duration {
-  width: 5vw;
-  height: 5vh;
+  width: 4vw;
+  height: 4vh;
+  border:1px solid #d3d3d3;
+}
+.input-duration:focus{
+  background:#e9eff1;
+  border:1px solid #30b1ce;
 }
 .day {
   grid-row: 4;
@@ -182,9 +188,13 @@ margin-top: -9vh;
 }
 .input-accomodation {
   width: 3vw;
-  height: 3vh;
+  height: 4vh;
+  border:1px solid #d3d3d3;
 }
-
+.input-accomodation:focus{
+  background:#e9eff1;
+  border:1px solid #30b1ce;
+}
 
 .title-activities {
   grid-row: 7;
@@ -200,10 +210,14 @@ margin-top: -9vh;
 }
 .input-activities {
   width: 3vw;
-  height: 3vh;
+  height: 4vh;
+  border:1px solid #d3d3d3;
 }
 
-
+.input-activities:focus{
+  background:#e9eff1;
+  border:1px solid #30b1ce;
+}
 
 /***********************/
 
@@ -327,11 +341,14 @@ margin-top: -9vh;
   grid-column: 5;
 }
 .save {
-  border-color: #00C9D4;
+  border-image:linear-gradient(to right, #3fdadd 0%,#2fb1ce 50%,#2d90c2 100%);
+  border-image-slice:1;
+  border-width: 2px;
   color: #00C9D4;
   height: 4vh;
-  margin-top: 40%;  
+  margin-top: 42%;  
   width: 8vw;
+  cursor: pointer;
 }
 
 
@@ -340,7 +357,9 @@ margin-top: -9vh;
   grid-column: 6;
 }
 .preview {
-  border-color: #00C9D4;
+  border-image:linear-gradient(to right, #3fdadd 0%,#2fb1ce 50%,#2d90c2 100%);
+  border-image-slice:1;
+  border-width: 2px;
   color: #00C9D4;
   height: 4vh;
   margin-left: -40%; 
@@ -360,4 +379,6 @@ margin-top: -9vh;
   margin-left: -60%; 
   margin-top: 11.8vh; 
   width: 8vw;
+  border:1px solid #00C9D4;
+  cursor: pointer;
 }

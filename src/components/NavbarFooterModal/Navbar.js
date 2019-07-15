@@ -139,7 +139,7 @@ class Navbar extends Component {
                                         </div>
                                     </ul>
                                 </li>
-                                <li><NavLink exact to="/Videaste">VIDÉASTES</NavLink></li>
+                                <li className="li-videaste"><NavLink exact to="/Videaste">VIDÉASTES</NavLink></li>
                             </ul>
                         </div>
                         <div className="containerNavRight">
@@ -151,8 +151,10 @@ class Navbar extends Component {
                                  </img> 
                                     <ul className="Sous_nemu">
                                     <li><NavLink className="link_DropDown" exact to="/Favoris">Mes favoris</NavLink></li>
+ 
                                     <li><NavLink className="link_DropDown" exact to="/Profil">Gérer mon profil</NavLink></li>
                                     <li><NavLink className="link_DropDown" exact to="/Profil">Envoyer un avis</NavLink></li>
+                                    
                                    <li className="li-btn-off"> <button className="btn-deconnection">Se déconnecter</button></li>
                                     </ul>                        
                                 </li> 

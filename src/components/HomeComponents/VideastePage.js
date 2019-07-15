@@ -13,7 +13,7 @@ class VideastePage extends React.Component {
                     </div>
                     <div className="filter_favoris">
                        <select className="w3-select_favoris" name="option">
-                           <option value="" disabled selected>trier par</option>
+                           <option value="" disabled selected>Trier par</option>
                            <option value="1">Popularité</option>
                            <option value="2">Nombre de vidéos</option>
                            <option value="3">Nom de Vidéaste</option>
