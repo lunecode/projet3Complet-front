@@ -41,7 +41,7 @@ textarea {
 
 /* ************************ */
 
-.upload-link {
+.upload_link {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -56,19 +56,19 @@ textarea {
   width: 13vw;
   justify-content: center;
 }
+.upload_link p {
+  text-align: center;
+}
 .uploadIconVideo {
   margin-left: auto;
   margin-right: auto;
   width: 10%;
   height: 10%;
 }
-.upload-link p {
+.input_upload {
   margin-left: auto;
   margin-right: auto;
-}
-.upload-link .input-upload{
-  margin-left: auto;
-  margin-right: auto;
+  width: 60%;
 }
 
 

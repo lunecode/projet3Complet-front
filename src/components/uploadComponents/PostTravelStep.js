@@ -89,11 +89,11 @@ class PostTravelStep extends Component {
             <h1>Itinéraire</h1>
 
             <div className="uploadVideoCardStep">
-              <img src={uploadVideoCard3}></img>
+              <img src={uploadVideoCard3} alt="upload video"></img>
             </div>
 
             <div className="AboutVideoStep">
-              <img src={AboutVideoStep}></img>
+              <img src={AboutVideoStep} alt="About video step"></img>
             </div>
 
             <img className="itineraty_step" src={Itinerary_Step}></img>

@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 
-import Lock from "../Images-tripitto/Icon/Lock.png"
-import ButtonFull from "../Images-tripitto/Buttons/white/Full.png"
-import ButtonGoogle from "../Images-tripitto/Buttons/Colored/Google.png"
+import Lock from "../../Images-tripitto/Icon/Lock.png"
+import ButtonFull from "../../Images-tripitto/Buttons/white/Full.png"
+import ButtonGoogle from "../../Images-tripitto/Buttons/Colored/Google.png"
 
 import ForgottenPassword from './ForgottenPassword'
 import './ForgottenPassword.scss'
@@ -32,7 +32,6 @@ class Modal extends Component {
     
     closeModalForgottenPassword = () => {
         this.setState( { ModalForgottenPassword: false } )
-        console.log(this.state.ModalForgottenPassword);
     }
 
     testCloseModal = () => {
@@ -140,11 +139,11 @@ class Modal extends Component {
                         </div>
                     </div>
                 </div>
+                    </form>
                 <div>
                 <ForgottenPassword isOpen2={ModalForgottenPassword} onClose2={this.closeModalForgottenPassword} />
                 <ModalLogin isOpen3={ModalCreateLogin} onClose3={this.closeModalLogin} />
                 </div>
-                    </form>
             </>
         )
     }

@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
 import './TitleHomeNavbar.scss'
-import fbWhite from '../Images-tripitto/Icon/social/fb_white.png'
-import instaWhite from '../Images-tripitto/Icon/social/insta_white.png'
-import YoutubeWhite from '../Images-tripitto/Icon/social/youtube_white.png'
-import share from '../Images-tripitto/Icon/social/share.png'
+import fbWhite from '../../Images-tripitto/Icon/social/fb_white.png'
+import instaWhite from '../../Images-tripitto/Icon/social/insta_white.png'
+import YoutubeWhite from '../../Images-tripitto/Icon/social/youtube_white.png'
+import share from '../../Images-tripitto/Icon/social/share.png'
 
 class TitleHomeNavbar extends Component {
     render () {

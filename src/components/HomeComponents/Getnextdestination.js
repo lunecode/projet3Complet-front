@@ -16,20 +16,20 @@ class Getnextdestination extends Component {
         offsetBestplan: 0
     };
     getnextvideo = async () => {
-        const res = await axios.get('http://localhost:3000/general_video/get_general_video_nextdestination')
+        const res = await axios.get('http://localhost:3000/travel_information/get_travelinformation_general_video')
         const Nextdestination = res.data
         this.setState({ nextpicture: Nextdestination })
     }
     getnextvideolimit = () => {
-        this.setState({ offset: this.state.offset + 5 }, async () => {
-            const res = await axios.get(`http://localhost:3000/popularity/get_popularity_liked_general_video_travel_information/${this.state.offset}`)
+        this.setState({ offset: this.state.offset + 5}, async () => {
+            const res = await axios.get(`http://localhost:3000/travel_information/get_travelinformation_general_video/${this.state.offset}`)
             const Nextdestination = res.data
             this.setState({ nextpicture: Nextdestination })
         })
     }
     getnextvideolimitBack = () => {
-        this.setState({ offset: this.state.offset - 5 }, async () => {
-            const res = await axios.get(`http://localhost:3000/popularity/get_popularity_liked_general_video_travel_information/${this.state.offset}`)
+        this.setState({ offset: this.state.offset - 5}, async () => {
+            const res = await axios.get(`http://localhost:3000/travel_information/get_travelinformation_general_video/${this.state.offset}`)
             const Nextdestination = res.data
             this.setState({ nextpicture: Nextdestination })
         })
@@ -64,18 +64,16 @@ class Getnextdestination extends Component {
         let b = 1
         let c = 1
 
+        // const url = window.location.href;
+        // const idVideo = url.slice(32)
+
         return (
             <>
                 {/****************************** SECTION NEXT DESTINATION******************************* */}
                 <section className='nextdestination'>
 
                     <div className="wrapper-nextpicture">
-                        <div>
-                                <img onClick={this.getnextvideolimitBack } className={this.state.offset === 0 ? "leftarrowDisable" : "leftarrow"} src={leftarrow} alt=""></img>
-                        </div>  
-                        <div>
-                                <img onClick={this.getnextvideolimit} className={this.state.offset === 5 ? "rightarrowDisable" : "rightarrow"} src={rightarrow} alt=""></img>
-                        </div>
+
                         {this.state.nextpicture.map(nextpicture => (
                             <div className={"divpictureNext" + i} key={i++}>
                                 <NavLink to={`/playvideo/${nextpicture.id_general_video}`} ><img src={nextpicture.cover_picture} className={"nextpictureimg" + a} key={a++} /></NavLink>
@@ -86,6 +84,12 @@ class Getnextdestination extends Component {
                         ))}
 
                     </div>
+                    <div>
+                                <img onClick={this.getnextvideolimitBack } className={this.state.offset === 0 ? "leftarrowDisable" : "leftarrow"} src={leftarrow} alt=""></img>
+                        </div>  
+                        <div>
+                                <img onClick={this.getnextvideolimit} className={this.state.offset === 15 ? "rightarrowDisable" : "rightarrow"} src={rightarrow} alt=""></img>
+                        </div>
                 </section>
 
 {/****************************** SECTION BEST PLAN  ***************************** */}
@@ -103,7 +107,7 @@ class Getnextdestination extends Component {
             <div className="container_bestplan">
                 {this.state.videos.map(video => (
                     <div className={"divVideoPLan" + c} key={c++}>
-                            <img src={video.cover_picture} className='picture_bestplan' alt=""/>
+                            <img src={video.cover_picture} className='picture_bestplan' alt= ''/>
                             <div className='container_title_bestplan_numbertips'>
                                 <p className='title_bestplan_numbertips'>+{video.number_tips}%</p>
                             </div>
@@ -151,9 +155,7 @@ class Getnextdestination extends Component {
 
             </>
         )
-    }
+    } 
 }
-
-
 
 export default Getnextdestination;

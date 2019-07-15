@@ -13,11 +13,12 @@ import Abonnements from './screen/Abonnements'
 import Abonne from './screen/Abonne'
 import ProfilDescription from './screen/ProfilDescription/ProfilDescription';
 import Home from './screen/Home';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
 import PlayVideo from './screen/PlayVideo';
 import Favoris from './screen/Favoris';
 import Videaste from './screen/Videaste';
+import Footer from './components/NavbarFooterModal/Footer';
+import Navbar from './components/NavbarFooterModal/Navbar';
+
 import './App.css'
 
 
