@@ -6,9 +6,7 @@ import leftarrow from '../../pictures/arrow_left.png'
 import rightarrow from '../../pictures/arrow_right.png'
 import leftHome from '../../Images-tripitto/Icon/leftHome.png'
 import RightHome from '../../Images-tripitto/Icon/RightHome.png'
-import { NavLink } from 'react-router-dom';
-
-
+import {NavLink} from'react-router-dom'
 
 class Getnextdestination extends Component {
     state = {
@@ -17,8 +15,6 @@ class Getnextdestination extends Component {
         offset: 0,
         offsetBestplan: 0
     };
-
-
     getnextvideo = async () => {
         const res = await axios.get('http://localhost:3000/travel_information/get_travelinformation_general_video')
         const Nextdestination = res.data

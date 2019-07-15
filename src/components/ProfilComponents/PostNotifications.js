@@ -6,7 +6,6 @@ import iconEN from '../../Images-tripitto/Icons/Drapeau-EN.png';
 import { NavLink } from 'react-router-dom'
 
 
-
 const PostNotifications = (props) => {
     return (
         <div className="bloc-page-profil">
@@ -34,8 +33,7 @@ const PostNotifications = (props) => {
                 to="/Abonnements" exact >Abonnements</NavLink>
             </li>
             <li>
-              <NavLink
-                to="/Abonnés" exact >Abonnés</NavLink>
+            <NavLink to="/Abonnés" exact >Abonnés</NavLink>
                </li>
                <li>
               <NavLink

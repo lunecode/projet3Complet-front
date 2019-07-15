@@ -70,6 +70,7 @@ $colorBackgroundModal: #45adcd;
         padding-left: 12px;
         color: $colorbackground;
         font-size: 14px;
+        border:1px solid #d3d3d3
     
     }
 }
@@ -98,6 +99,7 @@ $colorBackgroundModal: #45adcd;
     .lockModal {
         font-size: 12px;
         color: $colorBackgroundModal;
+        cursor: pointer;
     }
     .lockModal:hover {
         opacity: 0.5;
@@ -113,11 +115,15 @@ $colorBackgroundModal: #45adcd;
     text-align: center;
     margin-bottom: 20px;
     color: grey;
-
-    img:hover {
+    span{
+        cursor: pointer;
+    }
+    img{
+     cursor: pointer;
+    &:hover {
         opacity: 0.5;
     }
-
+}
     .register {
         margin-top: 10px;
     }
@@ -128,6 +134,7 @@ $colorBackgroundModal: #45adcd;
 
     span:hover {
         opacity: 0.5;
+        text-decoration: underline;
     }
 
     .button_connexion {
