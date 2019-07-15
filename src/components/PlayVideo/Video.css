@@ -60,21 +60,21 @@
 
 .pictureUser{
 
-    border-radius: 50%;
+    /* border-radius: 50%; */
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
+    display: inline-block;
+    position: relative;
+    width: 90px;
+    height: 90px;
+    overflow: hidden;
+    border-radius: 50%;
     
     
 }
 
-.pictureUser img{
-    width:76px;
-}
-/* .video_info img{
-    width: 52px;
 
-} */
 .play, .share{
     width:25px;
     
@@ -103,7 +103,7 @@
     padding: 1%;
     border: 1px solid #39C3D8;
     padding: 5%;
-    width: 150px;
+    width: 223px;
   
 }
 
@@ -118,7 +118,7 @@
 .container_suscribe{
     
     margin-top: 1%;
-    margin-left: 4%;
+    padding-left: 4%;
 }
 
 
