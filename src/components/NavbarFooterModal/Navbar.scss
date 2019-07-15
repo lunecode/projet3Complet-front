@@ -25,7 +25,9 @@ $colorButton: #5dd8dc;
                 
             .inputNav {
                 background-color: #2C404D;
-                border: solid #1BA2A2;
+                border-image:linear-gradient(to right, #3ab9c0 0%,#2d9db9 50%,#208abf 100%);
+                border-image-slice: 1;
+                border-width: 2px;
                 color: white;
                 height: 30px;
                 position: relative;
@@ -40,6 +42,7 @@ $colorButton: #5dd8dc;
                 right: 20px;
                 top: 10px;
             }
+
         }
     
         .ulNav {
@@ -48,6 +51,9 @@ $colorButton: #5dd8dc;
             justify-content: space-around;
             list-style: none;
             width: 30%;
+            .li-videaste{
+              margin-top:3.7vh;
+            }
         }
     }
 .ulNav a {
@@ -56,6 +62,7 @@ $colorButton: #5dd8dc;
     font-family: 'Robotoregular';
     font-size: 1vw;
     text-decoration: none;
+
 }
 
 .ulNav a:hover {
@@ -70,7 +77,11 @@ $colorButton: #5dd8dc;
     opacity: 0.6;
 }
     
-
+.button_video{
+    height: 10vh;
+    border:none;
+    background:none;
+}
         .containerNavRight {
             position: relative;
             width: 20%;
@@ -84,6 +95,9 @@ $colorButton: #5dd8dc;
                 justify-content: space-around;
                 list-style: none;
                  position: relative;
+                 .img_profil{
+                     cursor:pointer;
+                 }
                 .img_profil:hover .Sous_nemu{ 
                  display: block;
                     }
@@ -94,7 +108,7 @@ $colorButton: #5dd8dc;
                     position: absolute;
                     right:13vw;
                     width:180px;
-                    height:325px;
+                    height:205px;
                     border:1px solid #1BA2A2;
                     padding-top: 20px;
                     padding-left:20px;
@@ -117,6 +131,7 @@ $colorButton: #5dd8dc;
                              margin-left:15px;
                              color:red;
                              font-weight: normal;
+                             cursor:pointer;
                         }
                     }
                     .li-btn-off{
@@ -146,14 +161,18 @@ $colorButton: #5dd8dc;
                 font-size: 16px;
                 padding: 9px 25px;
                 border: none;
+                cursor:pointer;
             }
             .buttonNavbarChange {
                 background-color: #2C404D;
-                border: solid 1px #1BA2A2;
+                border-image:linear-gradient(to right, #3ab9c0 0%,#2d9db9 50%,#208abf 100%);
+                border-image-slice: 1;
+                border-width: 2px;
                 box-shadow: 0.3px 0.3px 0.3px 0.3px #1BA2A2;;
                 color: $colorButton;
                 font-size: 16px;
                 padding: 8px 25px;
+                cursor:pointer;  
             }
             
             button.buttonNavbarConnexion {
@@ -166,17 +185,18 @@ $colorButton: #5dd8dc;
                 padding: 8.5px 12px;
                 right: 60px;
                 width: 130%;
+                cursor:pointer;
             }
                 .buttonNavbarConnexionNone{
                     display: none;
                 } 
         }
     }
-
+    
 
  
 
-/********************** test ***************/
+/********************** DROPDOWN ***************/
 
 .containerNavLeft .ulNav ul{
 
@@ -189,11 +209,11 @@ $colorButton: #5dd8dc;
     opacity: 0;
     visibility: hidden;
     width: 200px;
-    transition: all 0.5s ease-out;
+    transition: all 0.05s ease-in-out;
   }
   
   .containerNavLeft li:hover .ul_list  {
-    top: 9.25vh;
+    top: 11.55vh;
     left:2.75vw;
     opacity: 1;
     visibility: visible;
@@ -225,8 +245,6 @@ $colorButton: #5dd8dc;
             font-size:16px;
             color:white;
             background-color: #55949c;
-            background-position: bottom 50px right 100px;
-            padding:0.5vw;
             padding-left:-10vw;
             width: 60%;
             margin-left:20%;
@@ -241,6 +259,9 @@ $colorButton: #5dd8dc;
         .continent_name{
             font-size:18px;
         }
+        .continent_name:hover{
+            opacity: 0.6;
+        }
         .button_countries{
             font-size:25px;
             font-weight: bold;
@@ -253,63 +274,3 @@ $colorButton: #5dd8dc;
         }
   }
 
-
-////////////////// TESTTTT  //////////////
-
-
-
-// .containerNavLeft .ulNav ul{
-//     background-color: #2C404D;
-//     box-shadow: 0 7px 7px 0 rgba(0, 0, 0, 0.2);
-//     position: absolute;
-//     margin-top:5.5vh;
-//     margin-left:-50vw;
-//     z-index: 10;
-//     opacity: 1;
-//     visibility: hidden;
-//     transition: all 0.5s ease-out;
-//   }
-  
-//   .containerNavLeft li:hover .ul_list  {
-//     opacity: 1;
-//     visibility: visible;
-//     align-items: center;
-//     width: 92vw;
-//     margin-left:-30vw;
-
-//         li .list_afrique .list_asieoceanie .list_europe .list_autres .list_amerique{
-//             list-style: none;
-//             a{
-//                 font-size: 12px;
-//                 font-family: 'Roboto';
-//             }
-    
-//         }
-//         li{
-//             list-style: none;
-//             text-align:center;
-//         }
-//         p{
-//             font-size:16px;
-//             color:#55949c;
-//         }
-//         .container_list{
-//             display: grid;
-//             grid-template-columns:18vw 18vw 18vw 18vw 18vw ;
-//             grid-template-rows: 26vh;
-//             grid-auto-flow: row;
-//             margin-left: -5vw;
-
-//         }
-//         .continent_name{
-//             font-size:18px;
-//         }
-//         .button_countries{
-//             font-size:25px;
-//             font-weight: bold;
-//             color:#55949c;
-//             background:transparent;
-//             border:none;
-//             font-family: 'Roboto';
-//         }
-//   }

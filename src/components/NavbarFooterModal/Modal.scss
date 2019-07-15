@@ -115,11 +115,15 @@ $colorBackgroundModal: #45adcd;
     text-align: center;
     margin-bottom: 20px;
     color: grey;
-
-    img:hover {
+    span{
+        cursor: pointer;
+    }
+    img{
+     cursor: pointer;
+    &:hover {
         opacity: 0.5;
     }
-
+}
     .register {
         margin-top: 10px;
     }
@@ -130,9 +134,11 @@ $colorBackgroundModal: #45adcd;
 
     span:hover {
         opacity: 0.5;
+        text-decoration: underline;
     }
 
     .button_connexion {
-        border: transparent;
+        border: none;
+        background-color: transparent;
     }
 }

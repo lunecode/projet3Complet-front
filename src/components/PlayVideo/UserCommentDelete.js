@@ -16,7 +16,6 @@ changeHandler = (e) => {
 
 submitHandler = e => {
     e.preventDefault()
-    console.log(this.state)
     axios.delete(`http://localhost:3000/comment/delete_comment/${this.state.id_comment}`, this.state)
     .then(response => {
         console.log(response)

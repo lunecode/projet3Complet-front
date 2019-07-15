@@ -49,9 +49,9 @@ class PlayVideo extends Component {
         {/* <p>Permet de reccuperer les commentaires sous la video</p> */}
         <UserCommentGet />
         {/* <p>Permet de  modifier des commentaires sous la video</p> */}
-        <UserCommentPut /> 
+        {/* <UserCommentPut />  */}
         {/* <p>Permet de supprimer les commentaires sous la video</p> */}
-        <UserCommentDelete />
+        {/* <UserCommentDelete /> */}
 {/*         
         <Footer/> */}
         </div>

@@ -5,14 +5,14 @@ import { NavLink } from 'react-router-dom';
 import './Footer.scss'
 
 
-import About from '../Images-tripitto/Icon/Footer/Infos.png';
-import WhatToDo from '../Images-tripitto/Icon/Footer/WhatToDo.png';
-import Advice from '../Images-tripitto/Icon/Footer/Conseils.png';
-import CommunityRules from '../Images-tripitto/Icon/Footer/Reglement.png';
-import Love from '../Images-tripitto/Icon/Footer/Love.png';
-import langFR from '../Images-tripitto/Icons/Drapeau-FR.png';
-import langEN from '../Images-tripitto/Icons/Drapeau-EN.png';
-import Path from '../Images-tripitto/Icon/Footer/Path2.png';
+import About from '../../Images-tripitto/Icon/Footer/Infos.png';
+import WhatToDo from '../../Images-tripitto/Icon/Footer/WhatToDo.png';
+import Advice from '../../Images-tripitto/Icon/Footer/Conseils.png';
+import CommunityRules from '../../Images-tripitto/Icon/Footer/Reglement.png';
+import Love from '../../Images-tripitto/Icon/Footer/Love.png';
+import langFR from '../../Images-tripitto/Icons/Drapeau-FR.png';
+import langEN from '../../Images-tripitto/Icons/Drapeau-EN.png';
+import Path from '../../Images-tripitto/Icon/Footer/Path2.png';
 
 
 

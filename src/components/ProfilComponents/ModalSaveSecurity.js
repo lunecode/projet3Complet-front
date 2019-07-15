@@ -2,7 +2,6 @@ import React from 'react'
 import './ModalSaveSecurity.scss'
 
 
-
 class ModalSaveSecurity extends React.Component {
     state = {
         isModalSaveSecurity: false,
@@ -34,8 +33,8 @@ class ModalSaveSecurity extends React.Component {
                         </div>
                         <div className="container-security-save">
                             <div className={this.state.isModalSaveSecurity ? 'display-block-save' : 'display-none-save'}>
-                                
-                    <div className="modal-security-save-bloc-title">
+
+                                <div className="modal-security-save-bloc-title">
                                     <div>
                                         <h5 className="security-modal-save">Sauvegarde</h5>
                                     </div>
@@ -44,9 +43,9 @@ class ModalSaveSecurity extends React.Component {
                                 <div className="container-open-security-save">
 
                                     <div className="text-modal-security-save">
-                                             <p>Votre mot de passe a bien été mis à jour</p> 
+                                        <p>Votre mot de passe a bien été mis à jour</p>
                                     </div>
-          
+
                                 </div>
 
 

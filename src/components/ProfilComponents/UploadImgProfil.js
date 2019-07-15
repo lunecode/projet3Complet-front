@@ -11,14 +11,14 @@
 //                   />
 //                    <img className="imageprofil" src={props.video_link} alt="videolink"/><img src={`${data}`} alt="videolink" width="100%" height="100%" className="img-profil-after" />
 //                   <button onClick={props.fileUploadHandler}>Télécharger</button> 
-            
+
 //               </div>
-  
-  
+
+
 //           )
-  
+
 //          }   
-  
+
 
 // export default IploadImgProfil;
 import React, { Component } from 'react';

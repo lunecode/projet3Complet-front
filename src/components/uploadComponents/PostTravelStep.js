@@ -89,11 +89,11 @@ class PostTravelStep extends Component {
             <h1>Itinéraire</h1>
 
             <div className="uploadVideoCardStep">
-              <img src={uploadVideoCard3}></img>
+              <img src={uploadVideoCard3} alt="upload video"></img>
             </div>
 
             <div className="AboutVideoStep">
-              <img src={AboutVideoStep}></img>
+              <img src={AboutVideoStep} alt="About video step"></img>
             </div>
 
             <img className="itineraty_step" src={Itinerary_Step}></img>
@@ -169,7 +169,7 @@ class PostTravelStep extends Component {
               <input type="text" name="district3" value={district3} onChange={this.changeHandler} className="dist3" placeholder="Montmartre" />
             </div>
             <div className="comment">
-              <input type="text" name="district_comment" value={district_comment} onChange={this.changeHandler} className="comment1" placeholder="Un commentaire à rajouter" />
+              <input type="text" name="district_comment" value={district_comment} onChange={this.changeHandler} className="comment2" placeholder="Un commentaire à rajouter" />
             </div>
 
 
@@ -200,32 +200,32 @@ class PostTravelStep extends Component {
               <p>Vos restaurants favoris</p>
               <input type="text" name="restaurant1" value={restaurant1} onChange={this.changeHandler} className="rest" placeholder="Brasserie Barbes" />
 
-              <input type="text" name="restaurant2" value={restaurant2} onChange={this.changeHandler} className="rest" placeholder="Terasse Hôtel Montmartre" />
+              <input type="text" name="restaurant2" value={restaurant2} onChange={this.changeHandler} className="rest2" placeholder="Terasse Hôtel Montmartre" />
 
-              <input type="text" name="restaurant3" value={restaurant3} onChange={this.changeHandler} className="rest" placeholder="Chez Fernand" />
+              <input type="text" name="restaurant3" value={restaurant3} onChange={this.changeHandler} className="rest3" placeholder="Chez Fernand" />
             </div>
 
 
             <div className="bar">
               <p>Meilleurs lieux pour faire la fete</p>
-              <p className="bar2">Pensez aux bars, rooftop, boîtes de nuit etc...</p>
+              <p className="bar2-title">Pensez aux bars, rooftop, boîtes de nuit etc...</p>
               <input type="text" name="bar1" value={bar1} onChange={this.changeHandler} className="bar1" placeholder="Little Red Door" />
 
-              <input type="text" name="bar2" value={bar2} onChange={this.changeHandler} className="bar1" placeholder="La Mazcaleria" />
+              <input type="text" name="bar2" value={bar2} onChange={this.changeHandler} className="bar2" placeholder="La Mazcaleria" />
 
-              <input type="text" name="bar3" value={bar3} onChange={this.changeHandler} className="bar1" placeholder="Le Perchoir" />
+              <input type="text" name="bar3" value={bar3} onChange={this.changeHandler} className="bar3" placeholder="Le Perchoir" />
             </div>
 
 
 
             <div className="must_visit">
               <p>Les incontournables à visiter</p>
-              <p className="bar2">Pensez aux musées, site historique, parcs, marchés, plages, point de vue...</p>
+              <p className="bar2-title">Pensez aux musées, site historique, parcs, marchés, plages, point de vue...</p>
               <input type="text" name="must_visit1" value={must_visit1} onChange={this.changeHandler} className="visit" placeholder="Château de Versailles" />
 
-              <input type="text" name="must_visit2" value={must_visit2} onChange={this.changeHandler} className="visit" placeholder="Sacrée Coeur" />
+              <input type="text" name="must_visit2" value={must_visit2} onChange={this.changeHandler} className="visit2" placeholder="Sacrée Coeur" />
 
-              <input type="text" name="must_visit3" value={must_visit3} onChange={this.changeHandler} className="visit" placeholder="Musée D'Orsay" />
+              <input type="text" name="must_visit3" value={must_visit3} onChange={this.changeHandler} className="visit3" placeholder="Musée D'Orsay" />
             </div>
 
 
