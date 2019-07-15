@@ -46,9 +46,9 @@ render() {
         <YouTube  videoId={item.video_link} opts={opts} onReady={this._onReady}/>
         </div>
         <div className="userVid" key={item.id_profil}>
-            <h4>{item.video_title}</h4>
+            <p className="title_vid">{item.video_title}</p>
             {/* video youtube a inserer  */}
-            <p>{item.video_description}</p>
+            <span>{item.video_description}</span>
             {/* <p>{item.profil_id_profil}</p>  */}
         </div>
         </div>
