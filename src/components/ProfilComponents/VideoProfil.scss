@@ -1,217 +1,207 @@
 .VideoProfilCompnent{
-.position-bloc{
-
-   .grid-profil-info{
-      .filter{
-        margin-left: -10vw;
-          margin-top: 7vh;
-       .w3-select{ 
-          
-            border:12px;
-            background-color: #f4F4F4;
-         
-            }   
+  .position-bloc{
+     .grid-profil-info{
+        .filter{
+          margin-left: -10vw;
+            margin-top: 7vh;
+         .w3-select{ 
+            
+              border:12px;
+              background-color: #f4F4F4;
+           
+              }   
+             }
+             //searsh
+               .searsh{
+                 position: relative;
+                 right:9vw;
+                .search-bar-following{
+                  margin-left: 12vw;
+                  display: flex;
+                  flex-direction:row;
+                
+                  button{
+                      background: none;
+                      border-right:none;
+                      border-bottom:1px solid #31b5cf;
+                      border-top:1px solid #31b5cf;
+                      border-left:1px solid #31b5cf;
+                      border-radius:none;
+                      padding: 6px 10px;
+                      font-size: 17px;
+                      cursor: pointer;
+                    
+                  }
+                  input{
+                      margin-left:-4px;
+                      border-top:1px solid #31b5cf;
+                      border-right:1px solid #31b5cf;
+                      border-bottom:1px solid #31b5cf;
+                      border-left:none;
+                      padding:12px;
+                      background: none;
+                      width: 200px;  
+                  } 
+              }
            }
-           //searsh
-             .searsh{
-               position: relative;
-               right:9vw;
-              .search-bar-following{
-                margin-left: 12vw;
-                display: flex;
-                flex-direction:row;
-              
-                button{
-                    background: none;
-                    border-right:none;
-                    border-bottom:1px solid #31b5cf;
-                    border-top:1px solid #31b5cf;
-                    border-left:1px solid #31b5cf;
-                    border-radius:none;
-                    padding: 6px 10px;
-                    font-size: 17px;
-                    cursor: pointer;
-                  
-                }
-                input{
-                    margin-left:-4px;
-                    border-top:1px solid #31b5cf;
-                    border-right:1px solid #31b5cf;
-                    border-bottom:1px solid #31b5cf;
-                    border-left:none;
-                    padding:12px;
-                    background: none;
-                    width: 200px;  
-                } 
-            }
-         }
-      }
-
-    } 
-          .bloc_2_video{
-            display: flex;
-      flex-direction:row;
-      margin-left: 26vw;
-      margin-top: -25vh;
-      margin-bottom: 8vh;
+        }
+      } 
+            .bloc_2_video{
+              display: flex;
+        flex-direction:row;
+        margin-left: 26vw;
+        margin-top: -25vh;
+        margin-bottom: 8vh;
+       
      
-   
-}
-
-.bloc_2_video_2{
+  }
+  .bloc_2_video_2{
+    display: flex;
+  flex-direction:row;
+  margin-left: 26vw;
+  margin-bottom: 8vh;
+  }
+  .bloc_2_video_3{
   display: flex;
-flex-direction:row;
-margin-left: 26vw;
-margin-bottom: 8vh;
-}
-.bloc_2_video_3{
-display: flex;
-flex-direction:row;
-margin-left: 26vw;
-margin-bottom: 8vh;
-}
-    .list_videos{ 
-        margin-right: 5vw;
-            .video_user1{
-                  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-                  background-color:rgb(249, 249, 249);
-                  width: 381px;
-                  border: 15px  rgb(229, 229, 229);
-                  .upload_video{
-                    box-shadow: none;
-                    border: dashed rgb(220, 220, 220);
-                    background-color:#f4f4f4;
-                    height: 459px;
-                    p{
+  flex-direction:row;
+  margin-left: 26vw;
+  margin-bottom: 8vh;
+  }
+      .list_videos{ 
+          margin-right: 5vw;
+              .video_user1{
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                    background-color:rgb(249, 249, 249);
+                    width: 381px;
+                    border: 15px  rgb(229, 229, 229);
+                    .upload_video{
+                      box-shadow: none;
+                      border: dashed rgb(220, 220, 220);
+                      background-color:#f4f4f4;
+                      height: 459px;
+                      p{
+                        font-style: italic;
+                        color:rgb(168, 168, 168);
+                        text-align: center;
+                        margin-top: -15vh;
+                      }
+                      img{
+                        cursor: pointer;
+                        margin: 35%;
+                      }
+                    }
+        
+                .status_durée{
+                   position: relative;
+                   bottom: 1vh;
+                   left: 1vw;
+                   font-style: italic;
+                   font-size: 14px;
+                      .status1{
+                         background-color:black;
+                          width: 45%;
+                        .status{
+                           color:rgb(219, 156, 58);
+                           text-align: center;
+                            }
+                          }   
+                          .status_enligne{
+                            color:rgb(71, 219, 58);
+                            text-align: center;
+                          } 
+                          .status_refusé{
+                            color:rgb(219, 58, 58);
+                            text-align: center;
+                          }
+                          .status_Brouillon{
+                            color:rgb(72, 134, 214);
+                            text-align: center;
+                          }
+                          .status_Masquée{
+                            color:rgb(132, 148, 168);
+                            text-align: center;
+                          }
+                 .durée1{
+                    margin-left: 26vh;
+                    margin-top: -3.3vh;
+                    background-color:black;
+                    width: 18%;
+                      .durée{
+                        color:white;
+                        text-align: center; 
+                     }
+                 } 
+                }
+                
+                .imagescreen{
+                  margin-top: -6vh;
+                  img{
+                    height: 230px;
+                    width: 381px;
+                  }
+                }
+                    .infos{
                       font-style: italic;
                       color:rgb(168, 168, 168);
-                      text-align: center;
-                      margin-top: -15vh;
-                    }
-                    img{
-                      cursor: pointer;
-                      margin: 35%;
-                    }
+                      font-size: 15px;
+                      margin-left: 2vh;
+                      margin-top: -2vh;
+                     display:flex;
+                     flex-direction: row;
+                     
+                     .A{
+                      padding-right:2vh 
+                     }
+                     .B{
+                       font-size: 45px;
+                       color:black;
+                      padding-right:2vh;
+                      margin-top: -13px;
+                     }
+                     .C{
+                      padding-right:12vh 
+                     }
+                     
+                     .D{
+                      margin-top: -1vh;
+                     } 
+                 }
+                 .countery{
+                  margin-left: 2vh;
+                  .countery_p{
+                   color:rgb(71, 77, 82)
                   }
-      
-              .status_durée{
-                 position: relative;
-                 bottom: 1vh;
-                 left: 1vw;
-                 font-style: italic;
-                 font-size: 14px;
-                    .status1{
-                       background-color:black;
-                        width: 45%;
-                      .status{
-                         color:rgb(219, 156, 58);
-                         text-align: center;
-                          }
-                        }   
-                        .status_enligne{
-                          color:rgb(71, 219, 58);
-                          text-align: center;
-                        } 
-                        .status_refusé{
-                          color:rgb(219, 58, 58);
-                          text-align: center;
-                        }
-                        .status_Brouillon{
-                          color:rgb(72, 134, 214);
-                          text-align: center;
-                        }
-                        .status_Masquée{
-                          color:rgb(132, 148, 168);
-                          text-align: center;
-                        }
-               .durée1{
-                  margin-left: 26vh;
-                  margin-top: -3.3vh;
-                  background-color:black;
-                  width: 18%;
-                    .durée{
-                      color:white;
-                      text-align: center; 
-                   }
-               } 
-              }
-              
-              .imagescreen{
-                margin-top: -6vh;
-                img{
-                  height: 230px;
-                  width: 381px;
-                }
-              }
-                  .infos{
-                    font-style: italic;
-                    color:rgb(168, 168, 168);
-                    font-size: 15px;
-                    margin-left: 2vh;
-                    margin-top: -2vh;
-                   display:flex;
+                 }
+                 .icons_video{
+                 
+                  display:flex;
                    flex-direction: row;
-                   
-                   .A{
-                    padding-right:2vh 
+                    border: 1px solid rgb(221, 221, 221);
+                  button{
+                    padding: 0px;
+                   border:none;
+                  }
+                   .img1{
+                  cursor: pointer;
+                      padding-right:3vh ;
                    }
-                   .B{
-                     font-size: 45px;
-                     color:black;
-                    padding-right:2vh;
-                    margin-top: -13px;
-                   }
-                   .C{
-
-                    padding-right:12vh 
-                   }
-                   
-                   .D{
-                    margin-top: -1vh;
-                   } 
-               }
-
-               .countery{
-                margin-left: 2vh;
-                .countery_p{
-                 color:rgb(71, 77, 82)
-                }
-
-               }
-               .icons_video{
-               
-                display:flex;
-                 flex-direction: row;
-                  border: 1px solid rgb(221, 221, 221);
-                button{
-                  padding: 0px;
-                 border:none;
-                }
-
-                 .img1{
-                cursor: pointer;
+                   .img2{
+                    cursor: pointer;
                     padding-right:3vh ;
                  }
-                 .img2{
+                 .img3{
+                  background-color: rgb(249, 249, 249);
                   cursor: pointer;
-                  padding-right:3vh ;
-               }
-               .img3{
-                background-color: rgb(249, 249, 249);
-                cursor: pointer;
-                padding-right: 3vh;
-               
-           
-              }
-
-    
-                
-               }
-               
-              }
-
-          }
-    
-  }
-
-
+                  padding-right: 3vh;
+                 
+             
+                }
+      
+                  
+                 }
+                 
+                }
+            }
+      
+    }
+  

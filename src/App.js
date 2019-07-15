@@ -42,7 +42,7 @@ class App extends Component {
             <Route path="/Notifications" exact component={Notifications} ></Route>
             <Route path="/Security" exact component={Security} ></Route>
                      {/* ***** */}
-            <Route path="/ProfilDescription" component={ProfilDescription} ></Route>
+            <Route path="/ProfilDescription" exact component={ProfilDescription} ></Route>
             <Route path="/Favoris" component={Favoris} ></Route>
             <Route path="/uploadVideo" component={UploadVideo} ></Route>
             <Route path="/uploadInformation" component={UploadInformation} ></Route>

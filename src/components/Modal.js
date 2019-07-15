@@ -91,8 +91,7 @@ class Modal extends Component {
                 .then(res => {
                     console.log(res) // Rajouter les redirections si le token est validé
                 })
-        }
-        
+        } 
         
         return (
             <>

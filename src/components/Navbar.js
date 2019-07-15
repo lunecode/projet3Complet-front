@@ -10,8 +10,6 @@ import Avatar from '../Images-tripitto/Icon/User/normal.png';
 // import Notification from '../Images-tripitto/Icon/Notifications.png';
 import NotificationPopup from './HomeComponents/NotificationPopup';
 
-import '../../src/components/ProfilComponents/DropDown.css'
-
 
 class Navbar extends Component {
     state = {
@@ -136,8 +134,7 @@ class Navbar extends Component {
                          
                           <img  className={this.state.isModalOpen === false ? "buttonNavbarConnexionNone" : "logoAvatar"}
                             src={Avatar} alt="logo tripitto">
-                                 </img>
-                                 
+                                 </img> 
                                     <ul className="Sous_nemu">
                                     <li><NavLink className="link_DropDown" exact to="/Favoris">Mes favoris</NavLink></li>
                                     <li><NavLink className="link_DropDown" exact to="/Profil">A regarder plus tard</NavLink></li>
