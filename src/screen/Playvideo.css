@@ -9,6 +9,7 @@
 
 .all{
     width:30%;
+    padding-right: 1%;
 } 
 
 
@@ -18,6 +19,7 @@
 
 .contvid{
     display: flex; 
+   
     
 }
 

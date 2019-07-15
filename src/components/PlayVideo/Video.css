@@ -103,7 +103,7 @@
     
     border: 1px solid #39C3D8;
     padding: 4%;
-    width: 280px;
+    width: 18vw;
   
 }
 
@@ -111,6 +111,7 @@
     display: flex;
     justify-content: flex-end;
     padding-bottom: 3%;
+    padding-left: 2%;
     /* justify-content: space-around; */
   
 }
