@@ -34,13 +34,6 @@ class Modal extends Component {
         this.setState( { ModalForgottenPassword: false } )
     }
 
-    testCloseModal = () => {
-        if(localStorage.getItem('token')) {
-            // DO SOMETHING
-        } else {
-            
-        }
-    }
 
     openModalLogin =() => {
         this.setState( { ModalCreateLogin: true} )
