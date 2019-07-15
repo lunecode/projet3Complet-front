@@ -1,0 +1,59 @@
+.bloc-follower{
+    margin-top:30px;
+    .bloc-follower-item{
+      
+        display:flex;
+        flex-direction:row;
+        padding-left:0;
+        padding-bottom:20px;
+        .bloc-follower-info{
+            display: flex;
+            flex-direction: row;
+            padding-left:15px;
+        }
+        div{
+            display: flex;
+            flex-direction: column;
+         
+      
+            img{
+                width: 80px;
+                height: 80px;
+                border-radius:50%;
+            
+            }
+            h3{
+                margin:0;
+                padding-top:0;
+            }
+            .info_follower{
+              display:flex;
+                flex-direction: row;
+                padding-left:0;
+             
+              
+            }
+            }
+            
+              
+      
+            button{
+                width: 150px;
+                height:50px;
+                border:1px solid white;
+                background-color:white;
+                color:#30b1ce;
+                text-transform: uppercase;
+                box-shadow: 7px 10px 7px -11px rgba(199,199,199,1);
+               margin-left:20vw;
+                margin-top:20px;
+                cursor: pointer;
+            }
+        }
+
+                       
+        
+    
+
+
+}

@@ -1,0 +1,62 @@
+.container_three{
+    display: flex;
+    justify-content: space-around;
+}
+
+.tr{
+    width:90%;
+}
+
+.all{
+    width:35%;
+} 
+
+
+.container_all{
+    background-color: #F4F4F4;
+}
+
+.contvid{
+    display: flex; 
+    width:100%;
+}
+
+.youtubeVid{
+    /* padding: 2%; */
+    width:100%;
+}
+
+.containerAllVideoUser{
+    margin-left: 5%;
+}
+
+.accomodation{
+    width: 100%;
+
+}
+
+.buttonCommentVid{
+    background-color: white;
+    width: 100%;
+    padding:2%;
+    text-align: center;
+    color:#59cce0;
+    font-size: 12px;
+    border: 2px solid #59cce0;
+}
+
+.commentButtonVideo{
+    width:100%;
+    margin-top: 3%;
+    
+}
+
+.buttonCommentVid:hover{
+    background-color:#59cce0;
+    width: 100%;
+    padding:2%;
+    text-align: center;
+    color:white;
+    font-size: 12px;
+    border: 2px solid #59cce0;
+}

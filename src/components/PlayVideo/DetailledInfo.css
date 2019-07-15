@@ -1,0 +1,109 @@
+.container_globalTravel{
+    background-color:#F4F4F4;
+    
+}
+
+
+.container_info{
+    /* margin-top: 3%; */
+    background-color:#313F4F;
+    width: 75%;
+    box-shadow: 5px 5px 5px lightgray;
+    
+    /* padding-top: 1%; */
+}
+
+.container_detailled{
+    margin: 0 auto;
+    margin-left: 5%;
+    
+}
+
+.container_trip{
+    width: 90%;
+    background-color: white;
+    color: #313F4F;
+    padding: 5%;
+    /* font-size:19px; */
+}
+
+.border{
+    border-bottom:2px solid #313F4F;
+}
+
+.weather, .step1{
+    padding-bottom: 2%;
+}
+
+.location{
+    font-size: 13px;
+    font-style: italic;
+    color: gray;
+}
+
+.district{
+    margin-left: 4%;
+    margin-right: 4%;
+    
+}
+
+.district1{
+    margin-right: 4%;
+    margin-left: 2%;
+}
+
+.bed{
+
+    width:26px;
+}
+
+.food{
+    width: 30px;
+    
+}
+
+.museum{
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+.museum1{
+    margin-left: 2%;
+}
+
+.Museum{
+    width: 30px;
+
+}
+.sport{
+    width:30px;
+}
+
+.love{
+    margin-right: 2%;
+}
+
+.comment_sport{
+    margin-left: 6%;
+}
+
+.idea{
+    margin-right: 2%;
+}
+
+.buttonTrip{
+    background-color: white;
+    width:200px;
+    padding:1%;
+    text-align: center;
+    color:#F94C3D;
+    font-size: 12px;
+    font-weight: 500;
+    border: 1px solid #F94C3D;
+    
+}
+
+.tripButton{
+    display: flex;
+    justify-content: flex-end;
+}

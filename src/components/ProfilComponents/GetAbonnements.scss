@@ -1,0 +1,140 @@
+.following-block{
+    width: 70%;
+    padding-bottom:16vh;
+    div{
+        padding-left:20px;
+        h2{
+            margin:0 20px;
+            font-size:22px;
+            padding-bottom:30px;
+        }
+        .search-following{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .tri-following{
+                 width: 100px;
+                 &:hover .filter-menu{
+                     display: block;
+                 }
+                 .filter-menu{
+                    padding: 0;
+                    margin: 0;
+                    list-style: none;
+                    display:none;
+                    width: 200px;
+                    background-color:white;
+                    li{
+                        padding:10px;
+                    }
+                 }
+            }
+            .search-bar-following{
+                padding-top:15px;
+                margin-right: 4vw;
+
+                button{
+                    background: none;
+                    border-right:none;
+                    border-bottom:1px solid #31b5cf;
+                    border-top:1px solid #31b5cf;
+                    border-left:1px solid #31b5cf;
+                    border-radius:none;
+                    margin-top: 8px;
+                    font-size: 17px;
+                    cursor: pointer;
+                    left:25px;
+                    top:2px;
+                }
+                input{
+                    margin-right:20px;
+                    border-top:1px solid #31b5cf;
+                    border-right:1px solid #31b5cf;
+                    border-bottom:1px solid #31b5cf;
+                    border-left:none;
+                    padding:14px;
+                    background: none;
+                    width: 200px;  
+                } 
+            }
+        button{
+            width: 40px;
+            height: 43px;
+            background:none;
+            border:none;
+            position: relative;
+            top:5px;
+            right:30px;
+        }
+           
+        }
+        .bloc-following{
+            margin-top:30px;
+            .bloc-notifications-item{
+              
+                display:flex;
+                flex-direction:row;
+                padding-left:0;
+                padding-bottom:20px;
+                .following-items{
+                    display: flex;
+                    flex-direction: column;
+                    padding-left:15px;
+                }
+                div{
+                    display: flex;
+                    flex-direction: row;
+                    padding-left:0;
+                    p{
+                        padding-right:20px;
+                    }
+                    img{
+                        width: 80px;
+                        height: 80px;
+                        border-radius:50%;
+                    
+                    }
+                    h3{
+                        margin:0;
+                        padding-top:0;
+                    }
+                    .info_follower{
+                      display:flex;
+                        flex-direction: row;
+                        padding-left:0;
+                     
+                      
+                    }
+                    }
+                    
+              
+                    button{
+                        width: 150px;
+                        height:50px;
+                        border:1px solid white;
+                        background-color:white;
+                        color:#30b1ce;
+                        text-transform: uppercase;
+                        box-shadow: 7px 10px 7px -11px rgba(199,199,199,1);
+                       margin-left:30vw;
+                        margin-top:20px;
+                        cursor: pointer;
+                    }
+                }
+       
+                               
+                
+            
+      
+   
+        }
+    }
+    .bloc-plus{
+        text-align:center;
+        margin-top:20px;
+          button{
+              background:none;
+              border:none;
+          }
+    }
+}
