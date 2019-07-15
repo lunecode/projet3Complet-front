@@ -53,7 +53,7 @@ render() {
                     <span>{item.step_duration}</span>
                     <p>Se déplacer en {item.step_transport}  <span className="location">Louez avant votre arrivée sur le site des compagnies internationales.</span> 
                     </p>
-                    <p> Plutôt habiter vers Mayan  ou Taynan </p>
+                    <p> Plutôt habiter vers Mayan ou Taynan </p>
                     <p>
                         {/* <img className="oval" src={Oval2} alt="oval"/> */}
                         <img className="bed" src={Bed} alt="bed"/><span className="district1">{item.district1}</span> |

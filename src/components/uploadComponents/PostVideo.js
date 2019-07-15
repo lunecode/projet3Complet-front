@@ -120,7 +120,6 @@ class PostVideo extends Component {
 
 {/* THIS INPUT ALLOW TO INSERT THE ID PROFIL OF THE UPLOAD VIDEO BUT IS HIDDING FOR NOW UNTIL THE LOGIN WORKS */}
             <div className="temp">
-              <p>Profil_id ( obligatoire )</p>
               <input type="hidden" name="profil_id_profil" value={this.state.profil_id_profil} onChange={this.changeHandler} />
 
               {/* <input type="text" name="profil_id_profil" value={profil_id_profil} onChange={this.changeHandler} /> */}
