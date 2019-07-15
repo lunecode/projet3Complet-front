@@ -100,10 +100,10 @@
 .suscribe{
     background-color: #39C3D8;
     color: white;
-    padding: 1%;
+    
     border: 1px solid #39C3D8;
-    padding: 5%;
-    width: 223px;
+    padding: 4%;
+    width: 280px;
   
 }
 
@@ -117,8 +117,9 @@
 
 .container_suscribe{
     
-    margin-top: 1%;
-    padding-left: 4%;
+  
+    padding-left: 1%;
+    padding-bottom: 1%;
 }
 
 
