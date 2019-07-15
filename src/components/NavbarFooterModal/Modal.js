@@ -22,6 +22,35 @@ class Modal extends Component {
         ModalCreateLogin: false,
     }
 
+    onSubmitLogin = e => {
+        e.preventDefault()
+        axios
+            .post('http://localhost:3000/login/login', {
+                email: e.target.email.value,
+                password: e.target.password.value
+            })
+            .then(res => {
+                console.log(res)
+                localStorage.setItem('token', res.headers["x-access-token"])
+                console.log('token', localStorage.getItem('token'))
+            })
+    }
+    
+    
+    protectedRoute = () => {
+        const token = localStorage.getItem('token')
+        axios({
+            method: 'POST',
+            url: 'http://localhost:3000/login/protected',
+            headers: {
+                'Autorization': `Bearer ${token}`,
+            }
+        })
+            .then(res => {
+                console.log(res) // Rajouter les redirections si le token est validé
+            })
+    }
+
     openModalForgottenPassword =() => {
         this.setState( { ModalForgottenPassword: true} )
         this.props.onClose()
@@ -56,39 +85,11 @@ class Modal extends Component {
         const { isOpen, onClose } = this.props;
         const { ModalForgottenPassword, ModalCreateLogin } = this.state
 
-        const onSubmitLogin = e => {
-            e.preventDefault()
-            axios
-                .post('http://localhost:3000/login/login', {
-                    email: e.target.email.value,
-                    password: e.target.password.value
-                })
-                .then(res => {
-                    console.log(res)
-                    localStorage.setItem('token', res.headers["x-access-token"])
-                    console.log('token', localStorage.getItem('token'))
-                })
-        }
-        
-        
-        const protectedRoute = () => {
-            const token = localStorage.getItem('token')
-            axios({
-                method: 'POST',
-                url: 'http://localhost:3000/login/protected',
-                headers: {
-                    'Autorization': `Bearer ${token}`,
-                }
-            })
-                .then(res => {
-                    console.log(res) // Rajouter les redirections si le token est validé
-                })
-        }
         
         
         return (
             <>
-            <form onSubmit={onSubmitLogin}>
+            <form onSubmit={this.onSubmitLogin}>
                 <div className={isOpen ? 'modal--is-open' : 'modal'}>
                     <div className="containerIs-open">
                         <div>
@@ -120,7 +121,7 @@ class Modal extends Component {
                     </div>
                     <div className="containerIs-open4">
                         <div>
-                        <button className="button_connexion" onClick={() => protectedRoute()}><img src={ButtonFull} onClick={onClose} alt="button connexion"></img></button>
+                        <button className="button_connexion" onClick={() => this.protectedRoute()}><img src={ButtonFull} onClick={onClose} alt="button connexion"></img></button>
                         </div>
                         <div>
                             <p>ou</p>
