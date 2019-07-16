@@ -13,8 +13,6 @@ import Abonnements from './screen/Abonnements'
 import Abonne from './screen/Abonne'
 import ProfilDescription from './screen/ProfilDescription/ProfilDescription';
 import Home from './screen/Home';
-
-
 import PlayVideo from './screen/PlayVideo';
 import Favoris from './screen/Favoris';
 import Videaste from './screen/Videaste';

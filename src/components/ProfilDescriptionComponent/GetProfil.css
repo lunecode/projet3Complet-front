@@ -14,8 +14,6 @@
     padding-bottom: 30px;
 }
 
-
-
 /* Profil columns */
 
 .profil_column_1 {
@@ -31,6 +29,7 @@
 }
 
 .profil_column_3 {
+    padding-top:16vh;
     padding-left: 2vw;
 }
 
@@ -79,6 +78,7 @@
 .bio {
     font-size:90%;
     margin-right: 70px;
+    padding-bottom: 4vh;
 }
 
  /* .generalprofil {
@@ -148,8 +148,7 @@
 
 .social_general {
     display: flex;
-    flex-direction: row;
-    margin-top: 19.92px;
+    flex-direction: row; 
 }
 
 /* .social {
@@ -158,10 +157,7 @@
 } */
 .social {
     margin-left: 17px;
-    width: 25px;
-    
-    
-    
+    width: 25px; 
 }
 
 .buttonprofil {
@@ -207,141 +203,81 @@
 
 .filter{
     margin-left: 9vw;
-    margin-top: 5vh;
-    
+    margin-top: 5vh;  
 }
-
 .w3-select{ 
-      
         border:12px;
         background-color: #f4F4F4;
         width: 77px;
         }   
 
-/* CSS ASMA VIDEO */
 
-.bloc_2_video{
+    /* /css bloc description */
+ 
+    .container_blocs_description{
+        padding-bottom: 4vh;
+        display: flex;
+        flex-direction: row;
+
+    }
+.bloc_description{
+ margin-left: 10vw; 
+position: relative;
+left: 1vw;  
+ }
+
+ .durée_pourcentage{
+     position: relative;
+     bottom: -7vh;
+     left:2vw;
     display: flex;
-flex-direction:row;
-margin-left: 26vw;
-margin-top: 10vh;
-margin-bottom: 8vh;
+    flex-direction: row;
+ }
+
+ .durée_description{
+     background-color:black;
+     color:white; 
+     width: 4vw;
+     text-align: center;
+     margin-left: 23vw; 
+ }
+
+ .pourcentage_description{
+    background-color:black;
+    color:rgb(10, 194, 72); 
+    width: 3vw;
+    text-align: center;
+ }
+.picture_description img{
+    width: 33vw;
+    height: 37vh; 
+}
+.infos_Profil_description{
+    margin-top: -4vh;
+    display: flex;
+    flex-direction: row;
+}
+.pays_description{
+    padding-right: 12px;
+
+}
+.nb_vues_description{
+    padding-right: 12px;
+    color:rgb(158, 158, 158);
+}
+.Point_description{
+margin-top:-1vh;
+font-size: 40px;
+ padding-right: 12px;
 }
 
-.bloc_2_video_2{
-display: flex;
-flex-direction:row;
-margin-left: 26vw;
-margin-bottom: 8vh;
+.durée_description{
+    color:rgb(158, 158, 158); 
 }
-.bloc_2_video_3{
-display: flex;
-flex-direction:row;
-margin-left: 26vw;
-margin-bottom: 8vh;
+.name-personne{
+    margin-top:-7vh;
 }
-.list_videos{ 
-margin-right: 5vw;
-}
-.video_user1{
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-background-color:rgb(249, 249, 249);
-width: 381px;
-border: 15px  rgb(229, 229, 229);
-}
-.upload_video{
-box-shadow: none;
-border: dashed rgb(220, 220, 220);
-background-color:#f4f4f4;
-height: 459px;
-}
-/* p{
-font-style: italic;
-color:rgb(168, 168, 168);
-text-align: center;
-margin-top: -15vh;
-} */
-/* img{
-cursor: pointer;
-margin: 35%;
-} */
-          
-.status_durée{
-         position: relative;
-         bottom: -1vh;
-         left: 1vw;
-         font-style: italic;
-         font-size: 14px;
-}
-            .status1{
-               background-color:black;
-                width: 50%;}
-              .status{
-                 color:rgb(219, 156, 58);
-                 text-align: center;
-                  }
-                
-                .status_enligne{
-                  color:rgb(71, 219, 58);
-                  text-align: center;
-                } 
-                .status_refusé{
-                  color:rgb(219, 58, 58);
-                  text-align: center;
-                }
-                .status_Brouillon{
-                  color:rgb(72, 134, 214);
-                  text-align: center;
-                }
-                .status_Masquée{
-                  color:rgb(132, 148, 168);
-                  text-align: center;
-                }
-       .durée1{
-          margin-left: 36vh;
-          margin-top: -4.8vh;
-          background-color:black;
-          width: 18%;}
-            .durée{
-              color:white;
-              text-align: center; 
-           }
-       
-      
-      
-      .imagescreen{
-        margin-top: -6vh;}
-        /* img{
-          height: 230px;
-          width: 381px;
-        } */
-      
-          .infos{
-            font-style: italic;
-            color:rgb(168, 168, 168);
-            font-size: 15px;
-            margin-left: 2vh;
-            margin-top: -2vh;
-           display:flex;
-           flex-direction: row;}
-           
-           .A{
-            padding-right:2vh 
-           }
-           .B{
-             font-size: 45px;
-             color:black;
-            padding-right:2vh;
-            margin-top: -13px;
-           }
-           .C{
 
-            padding-right:12vh 
-           }
-           
-           .D{
-            margin-top: -1vh;
-           } 
        
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap');
