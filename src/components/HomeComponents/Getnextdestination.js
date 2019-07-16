@@ -14,11 +14,16 @@ class Getnextdestination extends Component {
     state = {
         nextpicture: [],
         videos: [],
+        numbertips:[],
         offset: 0,
         offsetBestplan: 0
     };
 
-
+    getnumbertips = async () => {
+        const res = await axios.get('http://localhost:3000/general_video/get_general_video_nextdestination_tauxderemplissage')
+        this.setState({ numbertips:res.data })
+        console.log(this.state.numbertips)
+    }
     getnextvideo = async () => {
         const res = await axios.get('http://localhost:3000/travel_information/get_travelinformation_general_video')
         const Nextdestination = res.data
@@ -61,6 +66,7 @@ class Getnextdestination extends Component {
     componentDidMount() {
         this.getnextvideo()
         this.getbestplan()
+        this.getnumbertips()
     }
     render() {
         let i = 1
@@ -108,12 +114,12 @@ class Getnextdestination extends Component {
                 <img onClick={this.getbestplanlimit} className={this.state.offsetBestplan === 8 ? "leftHomeDisable2" : "rightHome2"} src={RightHome} alt=""></img>
             </div>
         </section> 
-            <div className="container_bestplan">
+            <div className="container_bestplan"></div>
                 {this.state.videos.map(video => (
                     <div className={"divVideoPLan" + c} key={c++}>
                             <img src={video.cover_picture} className='picture_bestplan' alt= ''/>
                             <div className='container_title_bestplan_numbertips'>
-                                <p className='title_bestplan_numbertips'>+{video.number_tips}%</p>
+                                <p className='title_bestplan_numbertips'>+{video.tx_remplissage}%</p>
                             </div>
                             <div className='container_title_bestplan_video_duration'>
                                 <p className='title_bestplan_video_duration'>{video.video_duration}</p>
@@ -152,11 +158,16 @@ class Getnextdestination extends Component {
                         </div>
 
                         <button className="buttonContributor">VOIR PLUS</button>
-                    </div>
+
+                        {/* {this.state.numbertips.map(numbertip => (
+                        <div>
+                            <p className='title_bestplan_title'>{numbertip.tx_remplissage}</p>
+                        </div>
+                    ))} */}
                 </div>
 
 
-
+</div>
             </>
         )
     } 
