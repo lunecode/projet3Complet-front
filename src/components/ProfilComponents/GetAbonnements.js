@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom'
 import './GetAbonnements.scss'
 import iconSearch from '../../Images-tripitto/Icon/TRAILING ICON.png'
 import iconPlus from '../../Images-tripitto/Icon/Plus.png'
@@ -99,8 +99,8 @@ class GetAbonnements extends Component {
                                                 <p>{item.following}</p>
                                             </div>
                                         </div>
-                                        <div>
-                                            <button>Abonné</button>
+                                        <div className="btn-abonnements-bloc">
+                                            <button className="btn-abonnments">Abonné</button>
                                         </div>
                                     </div>
                                     ))}

@@ -6,8 +6,8 @@ import TravelInfo from '../components/PlayVideo/TravelInfo';
 import DetailledInfo from '../components/PlayVideo/DetailledInfo';
 import UserCommentGet from '../components/PlayVideo/UserCommentGet';
 import UserCommentPost from '../components/PlayVideo/UserCommentPost';
-import UserCommentPut from '../components/PlayVideo/UserCommentPut';
-import UserCommentDelete from '../components/PlayVideo/UserCommentDelete';
+// import UserCommentPut from '../components/PlayVideo/UserCommentPut';
+// import UserCommentDelete from '../components/PlayVideo/UserCommentDelete';
 import AllVideoUser from '../components/PlayVideo/AllVideoUser';
 // import Navbar from '../components/Navbar';
 // import Footer from '../components/Footer';
@@ -49,9 +49,9 @@ class PlayVideo extends Component {
         {/* <p>Permet de reccuperer les commentaires sous la video</p> */}
         <UserCommentGet />
         {/* <p>Permet de  modifier des commentaires sous la video</p> */}
-        <UserCommentPut /> 
+        {/* <UserCommentPut />  */}
         {/* <p>Permet de supprimer les commentaires sous la video</p> */}
-        <UserCommentDelete />
+        {/* <UserCommentDelete /> */}
 {/*         
         <Footer/> */}
         </div>

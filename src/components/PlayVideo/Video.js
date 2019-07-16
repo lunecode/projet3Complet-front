@@ -23,6 +23,7 @@ class Video extends Component {
   getVideo = async () => {
     const res = await axios.get('http://localhost:3000/general_video/get_general_video')
     this.setState({ videos: res.data })
+    // console.log(this.state.videos)
 
   }
 
@@ -44,6 +45,7 @@ class Video extends Component {
   }
 
   render() {
+    let i = 1;
 
     const opts = {
       height: '490',
@@ -55,14 +57,12 @@ class Video extends Component {
 
     const url = window.location.href;
     const idVideo = url.slice(32)
-    console.log(idVideo)
+
 
     return (
-    <>
-
-
-        {this.state.videos.filter(item => item.id_general_video === idVideo).map(item => (
-          <div className="container_video">
+      <>
+        {this.state.videos.filter(item => item.id_general_video == idVideo).map(item => (
+          <div className="container_video" key={i++}>
             <div key={item.id_general_video}>
               <div className="video_user">
                 <YouTube videoId={item.video_link} opts={opts} onReady={this._onReady} />
@@ -72,11 +72,8 @@ class Video extends Component {
                   <div><button className="buttonCommentVideo">MODIFIER</button>
                   </div>
                 </div>
-
-
-
                 {this.state.popularity.map(item => (
-                  <div className="likeComment">
+                  <div className="likeComment" key={i++}>
                     <span><img src={Love} alt="love" />     {item.nb_like_popularity}</span>
                     <span> <img src={Comment} alt="comment" />{item.nb_comment_popularity}</span><span> <img className="share" src={Add} alt="share" /> {item.nb_playlist_included}</span> <span> <img src={Share} alt="Share" />{item.nb_share}
                     </span>
@@ -100,13 +97,13 @@ class Video extends Component {
                   </div>
                 </div>
               </div>
-              </div>
-              </div>
-              ))}
+            </div>
+          </div>
+        ))}
       </>
-            )
-          }
-        }
-        
-        
-        export default Video;
+    )
+  }
+}
+
+
+export default Video;

@@ -64,7 +64,8 @@
     
 }
 .uploadVideoCardStep img {
-    box-shadow: 10px 5px 5px grey;
+  border:1px solid rgb(219, 86, 86);
+  box-shadow: 1px 5px 5px 5px #d8d8d8;
 }
 
 /* *************************** */
@@ -119,8 +120,11 @@
 }
 
 .astuce1{
-    width:50%;
+    width:54.3%;
     font-style: italic;    
+    border:1px solid #d3d3d3;
+    background: #f6f7f9;
+    padding:10px;
 }
 
 
@@ -134,13 +138,27 @@
     padding-left: 2%;
 }
 
-.dist1, .dist2, .dist3{
+.dist1{
     margin: 1%;
     width:200px;
     font-style: italic;
-
+    border:1px solid #d3d3d3;
+    padding:10px;
 }
-
+.dist2{
+    border:1px solid #d3d3d3;
+    background:#f4f6f7;
+    color:#a1a1a1;  
+      padding:10px;
+      margin-right:15px;
+}
+.dist3{
+    border:1px solid #d3d3d3;
+    background:#f4f6f7;
+    color:#a1a1a1;  
+      padding:10px;
+      
+}
 .comment{
     grid-column: 2;
     grid-row: 6;
@@ -149,12 +167,22 @@
 
 .comment1{
     font-style: italic;
-    width:50%;
+    width:52.4%;
     margin-top: 2vh;
-    margin-left: 3%;
+    border:1px solid #d3d3d3;
+    background: #f6f7f9;
+    padding:10px;
 }
 
-
+.comment2{
+    font-style: italic;
+    width:52.4%;
+    margin-top: 2vh;
+    margin-left:3%;
+    border:1px solid #d3d3d3;
+    background: #f6f7f9;
+    padding:10px;
+}
 /* *************************** */
 
 .accomodation_travel{
@@ -169,14 +197,25 @@
 .accomodation1step {
     margin-top: 1vh;
     margin-left: 2vw;
+    border:1px solid #d3d3d3;
+    padding:10px;
+    width:200px;
 }
 .accomodation2 {
     margin-top: 1vh;
-    margin-left: 2vw;
+    margin-left: 1vw;
+    border:1px solid #d3d3d3;
+    background:#f4f6f7;
+    color:#a1a1a1;  
+    padding:10px;
 }
 .accomodation3 {
     margin-top: 1vh;
-    margin-left: 2vw;
+    margin-left: 1vw;
+    border:1px solid #d3d3d3;
+    background:#f4f6f7;
+    color:#a1a1a1;  
+    padding:10px;
 }
 
 .accomodation_link {
@@ -185,15 +224,28 @@
     padding-left: 2vw;
 }
 .acco1 {
+    width: 200px;
     margin-top: 5vh;
+    border:1px solid #d3d3d3;
+    padding:10px;
 }
 .acco2 {
     margin-top: 5vh;
-    margin-left: 4vh;
+    margin-left: 2vh;
+    border:1px solid #d3d3d3;
+    background:#f4f6f7;
+    color:#a1a1a1;  
+    padding:10px;
+   
 }
 .acco3 {
     margin-top: 5vh;
-    margin-left: 4vh;
+    margin-left: 2vh;
+    border:1px solid #d3d3d3;
+    background:#f4f6f7;
+    color:#a1a1a1;  
+    padding:10px;
+  
 }
 
 
@@ -209,9 +261,30 @@
 .rest{
     font-style: italic;
     width:200px;
-    margin: 1%;
+    margin-left: 1%;
+    border:1px solid #d3d3d3;
+    padding:10px;
+    margin-right:18px;
 }
+.rest2{
+    font-style: italic;
+    width:223px;
 
+    border:1px solid #d3d3d3;
+    background:#f4f6f7;
+    color:#a1a1a1; 
+    padding:10px;
+    margin-right:18px;
+}
+.rest3{
+    font-style: italic;
+    width:230px;
+
+    border:1px solid #d3d3d3;
+    background:#f4f6f7;
+    color:#a1a1a1; 
+    padding:10px;
+}
 /* *************************** */
 
 .bar{
@@ -224,16 +297,39 @@
 }
 .bar .bar1 {
     margin-left: 2vw;
+    
 }
 
 .bar1{
     font-style: italic;
     width:200px;
-    margin: 1%;
+    margin-left: 1%;
+    border:1px solid #d3d3d3;
+    padding:10px;
+    margin-right: 2vh;
 }
-
 .bar2{
+    font-style: italic;
+    width:230px;
+    margin: 0%;
+    border:1px solid #d3d3d3;
+    background:#f4f6f7;
+    color:#a1a1a1; 
+    padding:10px;
+   
+}
+.bar3{
+    font-style: italic;
+    width:230px;
+    margin: 1%;
+    border:1px solid #d3d3d3;
+    background:#f4f6f7;
+    color:#a1a1a1; 
+    padding:10px;
+}
+.bar2-title{
     font-size: 10px;
+    
 }
 
 
@@ -251,7 +347,28 @@
 .visit{
     font-style: italic;
     width:200px;
-    margin: 1%;
+    margin-left: 1%;
+    border:1px solid #d3d3d3;
+    padding:10px;
+    margin-right: 1.5vh;
+}
+.visit2{
+    font-style: italic;
+    width:228px;
+    margin-right: 1.5vh;
+    border:1px solid #d3d3d3;
+    background:#f4f6f7;
+    color:#a1a1a1; 
+    padding:10px;
+}
+.visit3{
+    font-style: italic;
+    width:230px;
+ 
+    border:1px solid #d3d3d3;
+    background:#f4f6f7;
+    color:#a1a1a1; 
+    padding:10px;
 }
 /* *************************** */
 
@@ -333,5 +450,8 @@
     width:150px;
     text-decoration: none;
 }
-
+input:focus{
+    background:#e9eff1;
+    border:1px solid #30b1ce;
+}
 /* *************************** */

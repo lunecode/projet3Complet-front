@@ -101,7 +101,7 @@ class PostTravelInformation extends Component {
 
   render() {
     // INITIALIZE THE STATE FOR THE FORM
-    const { countries, travel_duration, departure_month, nb_step, accomodation_budget, activities_budget } = this.state
+    const { countries, travel_duration, departure_month, accomodation_budget, activities_budget } = this.state
 
 
     // ALLOW TO ACCES CONTINENT JSON
@@ -123,11 +123,11 @@ class PostTravelInformation extends Component {
           <div className='grid_postInformation'>
 
             <div className='AboutVideo2'>
-              <img src={AboutVideo2}></img>
+              <img src={AboutVideo2} alt="About video"></img>
             </div>
 
 
-            <img src={uploadVideoCard3} className="uploadVideoCard"></img>
+            <img src={uploadVideoCard3} alt="upload video" className="uploadVideoCard"></img>
 
 
             <div className="continent" onClick={this.continentID}>
@@ -179,7 +179,7 @@ class PostTravelInformation extends Component {
 
 
             <div className="step">
-              <img src={itinerary_nb}></img>
+              <img src={itinerary_nb} alt="itinerary number"></img>
             </div>
 
             {/* ITS THE INPUT FOR POST ITINERARY DATA TO THE DB

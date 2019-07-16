@@ -11,14 +11,11 @@
 //                   />
 //                    <img className="imageprofil" src={props.video_link} alt="videolink"/><img src={`${data}`} alt="videolink" width="100%" height="100%" className="img-profil-after" />
 //                   <button onClick={props.fileUploadHandler}>Télécharger</button> 
-            
+
 //               </div>
-  
-  
 //           )
-  
+
 //          }   
-  
 
 // export default IploadImgProfil;
 import React, { Component } from 'react';
@@ -39,8 +36,7 @@ class UploadImgProfil extends Component {
         return (
           <div className="UploadVideo">
             <input type="file" onChange={this.handleChange}/>
-            <img className="imageprofil" src={this.state.image} 
-            alt="videolink" width="100%" height="100%" className="img-profil-after" />
+            <img className="imageprofil" src={this.state.image} alt="videolink" width="100%" height="100%" className="img-profil-after" />
           </div>
         );
       }

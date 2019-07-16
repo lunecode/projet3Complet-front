@@ -56,7 +56,9 @@ margin-top:20px;
 .btn-modal-confirm-security{
   padding:10px;
   width: 400px;
-  border:1.5px solid #34bed3;
+  border-image:linear-gradient(to right, #3fdadd 0%,#2fb1ce 50%,#2d90c2 100%);
+  border-image-slice: 1;
+  border-width: 2px;
   background:none;
   color:#34bed3;
   cursor: pointer;

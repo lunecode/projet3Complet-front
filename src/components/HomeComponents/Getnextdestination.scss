@@ -61,7 +61,7 @@
 .wrapper-nextpicture {
     
         display: grid;
-        grid-template-columns:46% 25% 25%;
+        grid-template-columns:46% 25% 25% ;
         grid-template-rows: 25vh 25vh;
         grid-auto-flow: row;
         grid-template-areas: "nextpictureimg1 nextpictureimg2 nextpictureimg4" 
@@ -235,39 +235,41 @@ display: none;
     height: 6vh;
     transform: rotate(90deg);
     pointer-events: all;
-    margin-top: -14.75%;
-    margin-left: -3.5%;
-    z-index: 3;
+    margin-top: -15.75%;
+
+    z-index: 10;
 }
 .rightarrow {
     position: absolute;
-    z-index: 3;
+    z-index: 10;
     pointer-events: all;
     height: 6vh;
     transform: rotate(-90deg);
-    margin-top: -14.75%;
-    margin-left: 48.75%;
+    margin-top: -15.75%;
+    margin-left: 96.5%;
     /* margin-left: 185vh; */
 
 }
 .leftarrowDisable {
     position: absolute;
-    z-index: 4;
+    z-index: 10;
     pointer-events: all;
     height: 6vh;
     transform: rotate(90deg);
-    margin-top: -14.75%;
-    margin-left: -3.5%;
+    margin-top: -15.75%;
+    opacity:0.6;
+
 
 }
 .rightarrowDisable {
         position: absolute;
-        z-index: 3;
+        z-index: 10;
         height: 6vh;
         transform: rotate(-90deg);
-        margin-top: -14.75%;
-        margin-left: 48.75%;
+        margin-top: -15.75%;
+        margin-left: 96.5%;
         pointer-events: none;
+        opacity:0.6;
 }
 
 .leftHome2 {
@@ -376,7 +378,7 @@ margin-left: 1.5%;
 .title_bestplan_numbertips{
     color:white;
     margin-bottom: 46%;
-    margin-top:-580%;
+    margin-top:-28.5vh;
     font-size: 1.60vh;
     font-family: 'Roboto';
     font-weight: bold;

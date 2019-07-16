@@ -4,32 +4,37 @@
 }
 
 .tr{
-    width:90%;
+    width:70%;
 }
 
-/* .all{
-    width:23%;
-} */
+.all{
+    width:30%;
+    padding-right: 1%;
+} 
+
 
 .container_all{
     background-color: #F4F4F4;
 }
 
-.allVideoUser{
-    display: flex;
-    /* padding-top: 5%; */
+.contvid{
+    display: flex; 
+   
+    
+}
+
+.youtubeVid{
+    padding-right: 4%;
     
 }
 
 .containerAllVideoUser{
     margin-left: 5%;
-
 }
 
 .accomodation{
     width: 100%;
-    
-    
+
 }
 
 .buttonCommentVid{
@@ -39,7 +44,6 @@
     text-align: center;
     color:#59cce0;
     font-size: 12px;
-    /* font-weight: 500; */
     border: 2px solid #59cce0;
 }
 
@@ -56,6 +60,9 @@
     text-align: center;
     color:white;
     font-size: 12px;
-    /* font-weight: 500; */
     border: 2px solid #59cce0;
+}
+
+.title_vid{
+    font-weight: 500;
 }
