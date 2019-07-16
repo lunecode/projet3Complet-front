@@ -63,6 +63,8 @@ $colorBackgroundModal: #45adcd;
         color: $colorbackground;
         font-size: 14px;
         margin-bottom: 20px;
+        border:1px solid #d3d3d3;
+        
     }
     .LoginChecbox input {
         margin-right: 10px;
@@ -120,10 +122,13 @@ $colorBackgroundModal: #45adcd;
 
     .LoginToTheSite span {
         color:  $colorBackgroundModal;
+        cursor: pointer;
+      
     }
 
     .LoginToTheSite span:hover {
-        opacity: 0.6;
+        opacity: 0.6;  
+        text-decoration: underline;
     }
 
     .LoginToTheSite {

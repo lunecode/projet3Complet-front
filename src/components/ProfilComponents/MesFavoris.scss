@@ -1,0 +1,116 @@
+.Mes_favoris{
+margin-bottom:10vh;
+    .titre_Mes_favoris{
+        display: flex;
+        flex-direction: row;
+        background: linear-gradient(to right, #2a4854 0%,#25646c 50%,#217e83 100%,#217e83 100%);
+        padding: 2%;
+        color: white;
+        justify-content: space-between;
+        
+            h1{
+            font-size: 50px;
+            font-weight:400;
+            }
+            .number_video{
+            padding-top: 26px;
+            font-size: 25px;
+            }
+    }
+    .countainer_bloc_favoris{
+        width: 80%;
+        margin-left: 10vw;
+        text-align: left;
+        h1{
+            padding-left: 20px;
+            margin-top: 50px;
+            margin-bottom: 0;
+                    }
+       //filter
+    .filter_favoris{ 
+        position: relative;
+          top:4vh;    
+            .w3-select_favoris{
+             background-color: #f4F4F4; 
+            }
+        }
+
+    }
+     .bloc_1_image_decription{
+        display: flex;
+        flex-direction: row;
+
+      .image_Favoris{
+
+              
+        img{
+           width: 30vw;
+            height: 37vh;
+        }
+       
+        .favoris_durée_pourcentage{
+             display: flex;
+            flex-direction: row;
+        position: relative;
+        top:6vh;
+        left:3vw;
+          
+             .durée_vidéo_favoris{
+            background-color: black;
+            color:rgb(14, 235, 132);
+            width: 4vw;
+           margin-right: 16vw;
+        
+        }
+        .pourcentage_favoris{
+             color:white;
+            background-color: black;
+           
+            width: 4vw;
+        }
+        }
+       
+      }
+    
+        .container_bloc{
+            .desciptipn_text{
+               margin-top: -6vh;
+               text-align: left;
+               margin-left: 1vw;
+              .auteur{
+                padding-top: 20px;
+                padding-right: 38vw;
+            }  
+            }
+  
+             .infos_Favoris{
+             padding-left: 1vw;
+            display: flex;
+            flex-direction: row;
+            }
+            .pays{
+                padding-right: 12px;
+
+            }
+            .nb_vues{
+                padding-right: 12px;
+                color:rgb(158, 158, 158);
+            }
+            .Point{
+             font-size: 40px;
+             margin-top: -1vh;
+             padding-right: 12px;
+
+            }
+           
+            .temps{
+                color:rgb(158, 158, 158); 
+            }
+        }
+
+       
+
+    }
+    
+
+}

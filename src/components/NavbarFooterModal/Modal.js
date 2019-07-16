@@ -130,7 +130,7 @@ class Modal extends Component {
                             <img src={ButtonGoogle} alt="button google connexion"></img>
                         </div>
                         <div className="register">
-                            <p>Vous n'avez pas de compte ? <span onClick={this.openModalLogin}>s'inscrire</span></p>
+                            <p>Vous n'avez pas de compte ? <span onClick={this.openModalLogin}>S'inscrire</span></p>
                         </div>
                     </div>
                 </div>

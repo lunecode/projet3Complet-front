@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import { NavLink } from 'react-router-dom';
 import "./GetFollower.scss"
+
 // image
 
 import iconSearch from '../../Images-tripitto/Icon/TRAILING ICON.png'
@@ -87,8 +88,6 @@ class GetFollower extends Component {
                                 </div>
                                 <div className="bloc-follower">
                                     {this.state.Follower.map(item => (
-
-
                                         <div className="bloc-follower-item">
                                             <div className="bloc-follower-info">
                                                 <div>

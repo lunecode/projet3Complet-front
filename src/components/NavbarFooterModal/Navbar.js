@@ -3,8 +3,6 @@ import { NavLink } from 'react-router-dom';
 import axios from 'axios'
 import Modal from './Modal'
 import './Modal.scss'
-
-
 import './Navbar.scss'
 import Logo from '../../Images-tripitto/Logo/B&W.png';
 import Search from '../../Images-tripitto/Icons/Search-White.png';
@@ -140,13 +138,25 @@ class Navbar extends Component {
                                         </div>
                                     </ul>
                                 </li>
-                                <li><button className='button_video'><NavLink exact to="/">VIDÉASTES</NavLink></button></li>
+                                <li className="li-videaste"><NavLink exact to="/Videaste">VIDÉASTES</NavLink></li>
                             </ul>
-
                         </div>
                         <div className="containerNavRight">
-                            <ul className="Ulbutton">
-                                <li onClick={isModalOpen === true ? this.closeModal : null }><NavLink exact to="/Profil"><img className={this.state.isModalOpen === false ? "buttonNavbarConnexionNone" : "logoAvatar"} src={Avatar} alt="logo tripitto"></img></NavLink></li>
+                        <ul className="Ulbutton" >
+                     <li  className="img_profil" onClick={isModalOpen === true ? this.closeModal : null }>
+                         
+                          <img  className={this.state.isModalOpen === false ? "buttonNavbarConnexionNone" : "logoAvatar"}
+                            src={Avatar} alt="logo tripitto">
+                                 </img> 
+                                    <ul className="Sous_nemu">
+                                    <li><NavLink className="link_DropDown" exact to="/Favoris">Mes favoris</NavLink></li>
+ 
+                                    <li><NavLink className="link_DropDown" exact to="/Profil">Gérer mon profil</NavLink></li>
+                                    <li><NavLink className="link_DropDown" exact to="/Profil">Envoyer un avis</NavLink></li>
+                                    
+                                   <li className="li-btn-off"> <button className="btn-deconnection">Se déconnecter</button></li>
+                                    </ul>                        
+                                </li> 
                                 <li className={this.state.isModalOpen === false ? "buttonNavbarConnexionNone" : "notification"}><NotificationPopup /></li>
                                 <li><button onClick={this.openModal} className={this.state.isModalOpen === false ? "buttonNavbarConnexion" : "buttonNavbarConnexionNone"}>SE CONNECTER</button></li>
 
@@ -168,5 +178,7 @@ class Navbar extends Component {
         )
     }
 }
+
+
 
 export default Navbar
