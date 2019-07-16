@@ -3,6 +3,7 @@ import axios from 'axios';
 import './GetProfil.css';
 import { NavLink } from 'react-router-dom';
 
+
 //Import ingredients pictures
 
 import Selected from "../../Images-tripitto/Icon/Ingredients/Aventurier/Selected.png"
@@ -175,7 +176,6 @@ class GetProfil extends Component {
                     </div>
                     <p className="name-personne">Julien Mhapé </p>
                   </div>
-
                 </div>
                 <div className="golobal_Afrique">
                   <div className="blocs_description3"> </div>
@@ -186,7 +186,7 @@ class GetProfil extends Component {
             )
             )
             }
-            </div>
+</div>
           </div>
         </div>
       </>

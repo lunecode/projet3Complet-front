@@ -1,6 +1,7 @@
 .Display_Afrique{
     margin-bottom:10vh;
         .titre_Display_Afrique{
+
             display: flex;
             flex-direction: row;
             background: linear-gradient(to right, #2a4854 0%,#25646c 50%,#217e83 100%,#217e83 100%);
@@ -19,9 +20,10 @@
         }
 
         .countainer_bloc_Afrique{
+            
             width: 90%;
-            margin-left: 5vw;
-            text-align: left;
+            margin-left: 4vw;
+          
             h1{
                 padding-left: 20px;
                 margin-top: 50px;
@@ -36,29 +38,34 @@
                 }
             }
     .container_4_bloc{
-      
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20%;
+        grid-template-rows: 40% 300px auto;
         flex-direction: row;
+     justify-content:space-between;
+        // display: flex;
+        // justify-content: space-between;
+        // flex-direction: row;
 
  .bloc_1_image_Afrique{
+
           .image_Afrique{
              img{
-               width: 27vw;
-                height: 28vh;
+               width: 22vw;
+                height: 24vh;
             }
             .durée_pourcentage_Afrique{
                  display: flex;
                 flex-direction: row;
                 position: relative;
-                top:6vh;
-                 left:1vw;
+                 top:6vh;
+                 left:2vh;
 
             .durée_vidéo_Afrique{
                 background-color: black;
                 color:rgb(14, 235, 132);
                 width: 4vw;
-               margin-right: 16vw;
+               margin-right: 15vw;
             
             }
             .pourcentage_Afrique{
@@ -85,11 +92,11 @@
                 }
 
                 .pays_Afrique{
-                    padding-right: 9px;
+                    padding-right: 5px;
     
                 }
                 .nb_vues_Afrique{
-                    padding-right: 12px;
+                    
                     color:rgb(158, 158, 158);
                 }
                 .Point_Afrique{
@@ -100,7 +107,11 @@
                 }
                
                 .temps_Afrique{
+                   
                     color:rgb(158, 158, 158); 
+                } 
+                .auteur_Afrique{
+                    margin-top: 5vh;
                 }
             }
     
