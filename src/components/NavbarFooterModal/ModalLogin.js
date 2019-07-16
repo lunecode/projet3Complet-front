@@ -5,7 +5,7 @@ import './Modal.scss'
 
 
 
-// INSCRIPTION
+// REGISTRATION OK
 
 class ModalLogin extends Component {
 
@@ -22,15 +22,11 @@ class ModalLogin extends Component {
         this.setState({ [e.target.name]: e.target.value })
     }
 
+
     onSubmit = (e) => {
         e.preventDefault()
         axios
-            .post("http://localhost:3000/registration/registration", {
-                firstname: e.target.name.value,
-                lastname: e.target.name.value,
-                email: e.target.email.value,
-                password: e.target.password.value,
-            })
+            .post("http://localhost:3000/registration/registration", this.state )
             .then(resp => {
                 if (resp.data.error === "User already exists") {
                     console.log(resp.data.error)
@@ -39,6 +35,28 @@ class ModalLogin extends Component {
                 }
             })
     }
+
+    changeHandler = (e) => {
+        this.setState({ [e.target.name]: e.target.value })
+      }
+
+    // onSubmit = (e) => {
+    //     e.preventDefault()
+    //     axios
+    //         .post("http://localhost:3000/registration/registration", {
+    //             firstname: e.target.firstname.value,
+    //             lastname: e.target.lastname.value,
+    //             email: e.target.email.value,
+    //             password: e.target.password.value,
+    //         })
+    //         .then(resp => {
+    //             if (resp.data.error === "User already exists") {
+    //                 console.log(resp.data.error)
+    //             } else {
+    //                 console.log('inscription réussi')
+    //             }
+    //         })
+    // }
 
     openModal4 = () => {
         this.setState({ isModalOpe4: true })
@@ -57,6 +75,8 @@ class ModalLogin extends Component {
     render() {
         const { isModalOpe4 } = this.state
         const { isOpen3, onClose3 } = this.props;
+
+        const { firstname, lastname, email, password } = this.state
         return (
             <>
             <form onSubmit={this.onSubmit}>
@@ -71,16 +91,24 @@ class ModalLogin extends Component {
                     </div>
                     <div className="containerLogin2">
                         <div className="divInputModalLogin">
-                            <input className="LoginInput" type="text" name="name" placeholder="Prénom"></input>
+                            <input className="LoginInput" type="text" name="firstname"
+                            value={firstname}
+                            onChange={this.changeHandler} placeholder="Prénom"></input>
                         </div>
                         <div className="divInputModalLogin">
-                            <input className="LoginInput" type="text" name="name" placeholder="Nom"></input>
+                            <input className="LoginInput" type="text" name="lastname"
+                            value={lastname}
+                            onChange={this.changeHandler} placeholder="Nom"></input>
                         </div>
                         <div className="divInputModalLogin">
-                            <input className="LoginInput" type="email" name="email" placeholder="Adresse email"></input>
+                            <input className="LoginInput" type="email" name="email"
+                            value={email}
+                            onChange={this.changeHandler} placeholder="Adresse email"></input>
                         </div>
                         <div className="divInputModalLogin">
-                            <input className="LoginInput" type="password" name="password" placeholder="********"></input>
+                            <input className="LoginInput" type="password" name="password" 
+                            value={password}
+                            onChange={this.changeHandler} placeholder="********"></input>
                         </div>
                         <div>
                             <p className="LoginChecbox"><input type="checkbox" ></input>Je souhaite recevoir la newletter de Tripitto</p>
