@@ -150,9 +150,10 @@ class GetProfil extends Component {
                     </select>
                   </div>
                 </div>
+<div className="container_blocs_description">
             {this.state.general_video.map(item => (
               <div key={item.id_general_video} >
-                <div className="container_blocs_description">
+                <div>
                   <div className={"bloc_description" + i++}>
                     <div className="durée_pourcentage">
                       <p className="pourcentage_description">{item.number_tips}%</p>
@@ -171,10 +172,16 @@ class GetProfil extends Component {
                   </div>
 
                 </div>
+                <div className="golobal_Afrique">
+                  <div className="blocs_description3"> </div>
+                  <div className="blocs_description4"> </div>
+                  <div> </div>
+                   </div> 
               </div>
             )
             )
             }
+            </div>
           </div>
         </div>
       </>

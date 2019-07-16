@@ -220,11 +220,18 @@ display: flex;
 flex-direction: row;
 }
 
-.bloc_description{
+.bloc_description1{
 margin-left: 10vw; 
 position: relative;
 left: 1vw;  
  }
+.bloc_description2{
+    margin-left: 10vw; 
+    position: relative;
+    left: 1vw;  
+     }
+
+
 
 .durée_pourcentage{
      position: relative;
@@ -278,6 +285,17 @@ font-size: 40px;
     margin-top:-7vh;
 }
 
+
+.bloc_description3{
+    margin-left: 10vw; 
+    position: relative;
+    left: 1vw;  
+     } 
+ .bloc_description4{
+    margin-left: 10vw; 
+    position: relative;
+    left: 1vw;  
+         }
        
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap');
