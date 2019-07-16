@@ -50,9 +50,8 @@ class ModalSaveSecurity extends React.Component {
 
 
                                 <div className="container-open-security-save">
-                                    
+                    
                                         <button onClick={this.closeModalSecuritySave} className="btn-modal-close-security-save">Retour</button>
-
                                 </div>
                             </div>
 

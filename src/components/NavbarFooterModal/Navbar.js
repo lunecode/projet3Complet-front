@@ -50,11 +50,13 @@ class Navbar extends Component {
         const america = res.data
         this.setState({ amerique: america })
     }
+
     getautres = async () => {
         const res = await axios.get('http://localhost:3000/travel_information/get_travelinformation_continent_autres')
         const other = res.data
         this.setState({ autres: other })
     }
+
     componentDidMount() {
         this.getafrique()
         this.getasieoceanie()
@@ -134,7 +136,6 @@ class Navbar extends Component {
                                                 ))}
                                                 <button className="button_countries">...</button>
                                             </li>
-
                                         </div>
                                     </ul>
                                 </li>
@@ -159,8 +160,7 @@ class Navbar extends Component {
                                 </li> 
                                 <li className={this.state.isModalOpen === false ? "buttonNavbarConnexionNone" : "notification"}><NotificationPopup /></li>
                                 <li><button onClick={this.openModal} className={this.state.isModalOpen === false ? "buttonNavbarConnexion" : "buttonNavbarConnexionNone"}>SE CONNECTER</button></li>
-
-                                <NavLink to ="/uploadVideo"><li><button className={this.state.isModalOpen === false ? "buttonNavbarChange" : "buttonNavbar"}>PUBLIER</button></li></NavLink>>
+                                <NavLink to ="/uploadVideo"><li><button className={this.state.isModalOpen === false ? "buttonNavbarChange" : "buttonNavbar"}>PUBLIER</button></li></NavLink>
 
                                 {/* <li><button onClick={this.openModal} className={this.state.isModalOpen === false ? "buttonNavbarChange" : "buttonNavbar"}>PUBLIER</button></li> */}
                             </ul>
