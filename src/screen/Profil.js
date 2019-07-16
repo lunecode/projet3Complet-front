@@ -8,11 +8,14 @@ import Socialprofil from '../components/ProfilComponents/Socialprofil';
 import "./Profil.scss"
 import "../components/ProfilComponents/PostProfilInfo.css"
 import axios from "axios"
+import { truncate } from 'fs';
 
 
 class Profil extends Component {
   state={
+    
   }
+ 
   submitHandler = e => {
     e.preventDefault()
     console.log(this.state)
@@ -202,6 +205,7 @@ myFunction=(e)=>{
             Enum21={this.Enum21}
             Enum22={this.Enum22}
             changeHandler={this.changeHandler}
+      
           />
 
           <AutoriseContact

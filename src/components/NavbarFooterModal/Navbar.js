@@ -160,7 +160,7 @@ class Navbar extends Component {
                                 <li className={this.state.isModalOpen === false ? "buttonNavbarConnexionNone" : "notification"}><NotificationPopup /></li>
                                 <li><button onClick={this.openModal} className={this.state.isModalOpen === false ? "buttonNavbarConnexion" : "buttonNavbarConnexionNone"}>SE CONNECTER</button></li>
 
-                                <NavLink to ="/uploadVideo"><li><button className={this.state.isModalOpen === false ? "buttonNavbarChange" : "buttonNavbar"}>PUBLIER</button></li></NavLink>>
+                                <NavLink to ="/uploadVideo"><li><button className={this.state.isModalOpen === false ? "buttonNavbarChange" : "buttonNavbar"}>PUBLIER</button></li></NavLink>
 
                                 {/* <li><button onClick={this.openModal} className={this.state.isModalOpen === false ? "buttonNavbarChange" : "buttonNavbar"}>PUBLIER</button></li> */}
                             </ul>

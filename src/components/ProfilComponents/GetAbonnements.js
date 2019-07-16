@@ -9,8 +9,13 @@ import iconPlus from '../../Images-tripitto/Icon/Plus.png'
 class GetAbonnements extends Component {
     state = {
         Following: [],
+        visible:6
     };
-
+    loadMore=() =>{
+        this.setState((prev) => {
+          return {visible: prev.visible + 4};
+        });
+      }
     getFollowing = async () => {
         const res = await axios.get('http://localhost:3000/following/get_following')
         this.setState({ Following: res.data })
@@ -85,7 +90,7 @@ class GetAbonnements extends Component {
                                
                                 
                                 <div className="bloc-following">
-                                {this.state.Following.map(item =>(
+                                {this.state.Following.slice(0,this.state.visible).map(item =>(
 
                                     <div className="bloc-notifications-item">
                                         <div>
@@ -105,9 +110,11 @@ class GetAbonnements extends Component {
                                     </div>
                                     ))}
                                  
-                                    <div className='bloc-plus'>
-                                <button><img src={iconPlus} alt='icon plus' /></button>
-                                  </div>     
+                                 <div className='bloc-plus'>
+                                {this.state.visible < this.state.Following.length &&
+             <button onClick={this.loadMore} type="button" className="load-more"><img src={iconPlus} alt='icon Plus' /></button>
+          }
+                       </div> 
                                 </div>
                             </div>
                         </form>

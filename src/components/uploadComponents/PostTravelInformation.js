@@ -133,10 +133,12 @@ class PostTravelInformation extends Component {
             <div className="continent" onClick={this.continentID}>
               <label>
                 Destination *
+             
                 <select className="input-continent" name="continent" >
                   <option>Continent</option>
                   {continent}
                 </select>
+              
               </label>
             </div>
 

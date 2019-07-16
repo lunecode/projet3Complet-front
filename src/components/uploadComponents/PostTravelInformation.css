@@ -47,8 +47,6 @@ input {
   margin-left: 5vw;
 }
 
-/***********************/
-
 
 .continent {
   margin-left: 30%;
@@ -58,7 +56,10 @@ input {
 .input-continent {
   width: 15vw;
   height: 5vh;
+
+
 }
+
 
 .country {
   grid-row: 2;
