@@ -151,7 +151,7 @@ class GetProfil extends Component {
                   </div>
                 </div>
             {this.state.general_video.map(item => (
-              <div className={"video-picture" + i++} key={item.id_general_video} >
+              <div key={item.id_general_video} >
             
 
                 <div className="container_blocs_description">
