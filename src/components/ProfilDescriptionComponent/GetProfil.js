@@ -3,16 +3,22 @@ import axios from 'axios';
 import './GetProfil.css';
 import { NavLink } from 'react-router-dom';
 
+//Import ingredients pictures
+
+import Selected from "../../Images-tripitto/Icon/Ingredients/Aventurier/Selected.png"
+import MontagneCopy2 from "../../Images-tripitto/Icon/Ingredients/MontagneCopy2.png"
+import FestivalCopy2 from "../../Images-tripitto/Icon/Ingredients/FestivalCopy2.png"
+import EcotourismeCopy2 from "../../Images-tripitto/Icon/Ingredients/EcotourismeCopy2.png"
+import HistoireCultureCopy2 from "../../Images-tripitto/Icon/Ingredients/HistoireCultureCopy2.png"
+
+
 // Import pictures
-import Pin_On from "../../Images-tripitto/Icon/Pin_ON.png";
+import Pin_On from "../../Images-tripitto/Icon/Pin_ON.png"
 import fb from "../../Images-tripitto/Icon/social/fb.png"
 import insta from "../../Images-tripitto/Icon/social/insta.png"
 import youtube from "../../Images-tripitto/Icon/social/youtube.png"
 import link from "../../Images-tripitto/Icon/social/link.png"
-import seine from "../../Images-tripitto/image_Profil_Description/seine.png"
-import vert from "../../Images-tripitto/image_Profil_Description/vert.png"
-import depl from "../../Images-tripitto/image_Profil_Description/depl.png"
-import plage from "../../Images-tripitto/image_Profil_Description/plage.png"
+
 //Import pictures video
 
 import iconSearch from '../../Images-tripitto/Icon/TRAILING ICON.png'
@@ -38,8 +44,9 @@ class GetProfil extends Component {
     general_video: [],
   };
 
+
   getProfil = async () => {
-    const res = await axios.get('http://localhost:3000/profil/get_profil_limite1/1')
+    const res = await axios.get('http://localhost:3000/profil/get_Profil_describe')
     this.setState({ profil: res.data })
     console.log(this.state.profil)
   }
@@ -59,7 +66,6 @@ class GetProfil extends Component {
 
   render() {
     let i = 1
-
     return (
       <>
         <div className="generalprofil">
@@ -73,38 +79,37 @@ class GetProfil extends Component {
                       <p>10 vidéos</p>
                       <p>54 abonnés</p>
                       <p>{item.nb_countries_visited} pays visités</p>
-
                     </div>
                     <div className="profil_column_2">
                       {/* Remplacer Créateur de contenu par item.type? */}
                       <div className="identity"><h2 className="name">{item.firstname} {item.lastname}</h2>
                         <span className="span">|</span><p className="traveler_type">{item.type}</p></div>
                       <p className="localisation"><img src={Pin_On} alt="iconlocalisation" className="iconlocalisation" />{item.location}</p>
-                      {/* <p className="bio">{item.bio}</p> */}
+  
                       <p className="bio">{item.bio}</p>
                       <div className="icon_general">
                         <div className="iconaventurier">
                           <div className="iconitemaventurier">
-                            <img src="https://i.ibb.co/k5NYkbJ/Selected.png" className="iconProfil" alt="iconaventurier" />
+                            <img src={Selected} className="iconProfil" alt="iconaventurier" />
                           </div>
                           <span className="texticonaventurier">Aventurier seul</span>
                         </div>
                         <div className="iconmountain">
                           <div className="iconitemmountain">
-                            <img src="https://i.ibb.co/TBD2y8F/Montagne-Copy-2.png" className="iconProfil" alt="iconmountain" />
+                            <img src={MontagneCopy2} className="iconProfil" alt="iconmountain" />
                           </div>
                           <span className="texticonmountain">Campagnes <br />& montagnes</span>
                         </div>
                         <div className="iconmusic">
                           <div className="iconitemmusic">
-                            <img src="https://i.ibb.co/SwFR7Tr/Festival-Copy-2.png" className="iconProfil" alt="iconmusic" />
+                            <img src={FestivalCopy2} className="iconProfil" alt="iconmusic" />
                           </div><span className="texticonmusic">Festivals</span></div>
                         <div className="iconplant">
                           <div className="iconitemplant">
-                            <img src="https://i.ibb.co/M6YmDK4/Ecotourisme-Copy-2.png" className="iconProfil" alt="iconplant" />
+                            <img src={EcotourismeCopy2} className="iconProfil" alt="iconplant" />
                           </div><span className="texticonplant">Ecotourisme</span></div>
                         <div className="iconculture"><div className="iconitemculture">
-                          <img src="https://i.ibb.co/55gqM0h/Histoire-Culture-Copy-2.png" className="iconProfil" alt="iconculture" />
+                          <img src={HistoireCultureCopy2} className="iconProfil" alt="iconculture" />
                         </div>
                           <span className="texticonculture">Histoire <br />& Culture</span></div>
                       </div>
