@@ -50,6 +50,7 @@ class GetProfil extends Component {
     console.log(this.state.video)
   }
 
+
   componentDidMount() {
     this.getProfil()
     this.getVideo()
@@ -230,18 +231,8 @@ class GetProfil extends Component {
         </div>
  <div className="name-personne"><p>Julien Mhapé </p></div>
   </div>
-
+ </div>
 </div>
-
-</div>
-
-
-
-
-
-
-
-
       </>
     )
   }

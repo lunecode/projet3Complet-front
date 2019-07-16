@@ -86,7 +86,7 @@ class Navbar extends Component {
                                 <li className='Nav_menu'><button className="button_video"><NavLink exact to="/">VIDÉOS</NavLink></button>
                                     <ul className="ul_list">
                                         <div className="container_list">
-                                            <li><a href=" " className='continent_name'>AFRIQUE</a>
+                                       <li><NavLink className="lcontinent_name" exact to="/Afrique_video">AFRIQUE  
                                                 {this.state.afrique.map(afrique => (
                                                     <div key={i++} className="container_list_afrique">
                                                         <p className="list_afrique">
@@ -94,7 +94,8 @@ class Navbar extends Component {
                                                     </div>
                                                 ))}
                                                 <button className="button_countries">...</button>
-                                            </li>
+                                                </NavLink>
+                                         </li>
                                             <li><a href=" " className='continent_name'>ASIE-OCEANIE</a>
                                                 {this.state.asieoceanie.map(asieoceanie => (
                                                     <div key={a++} className="container_list_asieoceanie">
@@ -149,14 +150,12 @@ class Navbar extends Component {
                           <img  className={this.state.isModalOpen === false ? "buttonNavbarConnexionNone" : "logoAvatar"}
                             src={Avatar} alt="logo tripitto">
                                  </img> 
-                                    <ul className="Sous_nemu">
-                                    <li><NavLink className="link_DropDown" exact to="/Favoris">Mes favoris</NavLink></li>
- 
-                                    <li><NavLink className="link_DropDown" exact to="/Profil">Gérer mon profil</NavLink></li>
-                                    <li><NavLink className="link_DropDown" exact to="/Profil">Envoyer un avis</NavLink></li>
-                                    
-                                   <li className="li-btn-off"> <button className="btn-deconnection">Se déconnecter</button></li>
-                                    </ul>                        
+                            <ul className="Sous_nemu">
+                            <li><NavLink className="link_DropDown" exact to="/Favoris">Mes favoris</NavLink></li>
+                            <li><NavLink className="link_DropDown" exact to="/Profil">Gérer mon profil</NavLink></li>
+                            <li><NavLink className="link_DropDown" exact to="/Profil">Envoyer un avis</NavLink></li>
+                            <li className="li-btn-off"> <button className="btn-deconnection">Se déconnecter</button></li>
+                            </ul>                        
                                 </li> 
                                 <li className={this.state.isModalOpen === false ? "buttonNavbarConnexionNone" : "notification"}><NotificationPopup /></li>
                                 <li><button onClick={this.openModal} className={this.state.isModalOpen === false ? "buttonNavbarConnexion" : "buttonNavbarConnexionNone"}>SE CONNECTER</button></li>

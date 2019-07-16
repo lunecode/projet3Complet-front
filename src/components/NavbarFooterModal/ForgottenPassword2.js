@@ -1,13 +1,9 @@
 import React, { Component } from 'react'
 
 
-
 // MOT DE PASSE OUBLIE
-
 class ForgottenPassword2 extends Component {
-    
     render () {
-
         const { isOpen5, onClose5 } = this.props;
         return (
             <>
