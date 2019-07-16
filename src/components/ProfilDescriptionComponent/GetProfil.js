@@ -167,7 +167,7 @@ class GetProfil extends Component {
 
 <div className="imagescreen"><img src={img1} alt=""/></div>
           <div className="countery"> 
-            <h3> Dans es profondeur du canyon</h3>
+            <h3> Dans les profondeur du canyon</h3>
             <p className="countery_p">USA</p>
          </div> 
            <div className="infos">
