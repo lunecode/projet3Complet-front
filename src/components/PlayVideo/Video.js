@@ -23,7 +23,7 @@ class Video extends Component {
   getVideo = async () => {
     const res = await axios.get('http://localhost:3000/general_video/get_general_video')
     this.setState({ videos: res.data })
-    // console.log(this.state.videos)
+    console.log(this.state.videos)
 
   }
 
