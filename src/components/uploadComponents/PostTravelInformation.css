@@ -20,7 +20,7 @@ input {
   background-color: #F4F4F4;
   display: grid;
   grid-template-columns: 15% 5% 15% 15% 15% 15% 20%;
-  grid-template-rows: 15% 15% 15% 15% 15% 10% 15%;
+  /* grid-template-rows: 15% 15% 15% 15% 15% 10% 15%; */
 }
 
 
@@ -155,36 +155,37 @@ margin-top: -9vh;
 .budget {
   grid-row: 7;
   grid-column: 3;
-  margin-left: 30%;
+  margin-left: 4.5vw;
   width: 11vw;
+  padding-bottom: 5vh;
 }
 
 .euros {
   grid-row: 7;
   grid-column: 3;
-  margin-top: 15%;
-  margin-left: 28%;
+  margin-top: 6vh;
+  margin-left: 8vh;
 }
 
 .dollar {
   grid-row: 7;
   grid-column: 3;
-  margin-top: 15%;
-  margin-left: 70%;
+  margin-top: 6vh;
+  margin-left: 18vh;
 }
 
 
 .title-accomodation{
   grid-row: 7;
   grid-column: 4;
-  margin-top: 11%;
-  margin-left: 30%;
+  margin-top: 4vh;
+  margin-left: 4vw;
 }
 .accomodation_information {
   grid-row: 7;
   grid-column: 5;
-  margin-top: 17%;
-  margin-left: -38%;
+  margin-top: 5vh;
+  margin-left: -6vw;
 }
 .input-accomodation {
   width: 3vw;
@@ -199,14 +200,14 @@ margin-top: -9vh;
 .title-activities {
   grid-row: 7;
   grid-column: 5;
-  margin-left: 20%;
-  margin-top: 12%;
+  margin-left: 2vw;
+  margin-top: 4vh;
 }
 .activities {
   grid-row: 7;
   grid-column: 5 / span 6;
-  margin-left: 20%;
-  margin-top: 5%;
+  margin-left: 10vw;
+  margin-top: 5vh;
 }
 .input-activities {
   width: 3vw;
@@ -346,7 +347,7 @@ margin-top: -9vh;
   border-width: 2px;
   color: #00C9D4;
   height: 4vh;
-  margin-top: 42%;  
+  margin-top: 11.7vh;  
   width: 8vw;
   cursor: pointer;
 }
