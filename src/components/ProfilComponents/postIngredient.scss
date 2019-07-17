@@ -15,6 +15,10 @@
         display: flex;
 
         margin-right: 18vh;
+  
+    
+   
+     
 
         div{
 
@@ -38,10 +42,21 @@
 
      }
 
-     p{
+     .bloc-title-ingredient{
+       display:flex;
+       flex-direction:row; 
+      p{
+          img {
+              margin-right:10px;
+              margin-top:-10px;
+    
+          
+      }
+    }
+    .title-ingredient{
+      margin-top: 10px;
 
-         margin-top:2px;
-
+    }
      }
 
      .globale {

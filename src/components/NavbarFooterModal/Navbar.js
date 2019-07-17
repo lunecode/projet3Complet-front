@@ -150,12 +150,13 @@ class Navbar extends Component {
                           <img  className={this.state.isModalOpen === false ? "buttonNavbarConnexionNone" : "logoAvatar"}
                             src={Avatar} alt="logo tripitto">
                                  </img> 
-                            <ul className="Sous_nemu">
-                            <li><NavLink className="link_DropDown" exact to="/Favoris">Mes favoris</NavLink></li>
-                            <li><NavLink className="link_DropDown" exact to="/Profil">Gérer mon profil</NavLink></li>
-                            <li><NavLink className="link_DropDown" exact to="/Profil">Envoyer un avis</NavLink></li>
-                            <li className="li-btn-off"> <button className="btn-deconnection">Se déconnecter</button></li>
-                            </ul>                        
+                                    <ul className="Sous_nemu">
+                                    <li><NavLink className="link_DropDown" exact to="/Favoris">Mes favoris</NavLink></li>
+                                    <li><NavLink className="link_DropDown" exact to="/Profil">Gérer mon profil</NavLink></li>
+                                    <li><NavLink className="link_DropDown" exact to="/Profil">Envoyer un avis</NavLink></li>
+                                    
+                                   <li className="li-btn-off"> <button className="btn-deconnection">Se déconnecter</button></li>
+                                    </ul>                        
                                 </li> 
                                 <li className={this.state.isModalOpen === false ? "buttonNavbarConnexionNone" : "notification"}><NotificationPopup /></li>
                                 <li><button onClick={this.openModal} className={this.state.isModalOpen === false ? "buttonNavbarConnexion" : "buttonNavbarConnexionNone"}>SE CONNECTER</button></li>

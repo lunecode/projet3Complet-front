@@ -16,8 +16,8 @@ import axios from "axios"
 
 class Profil extends Component {
   state={
+    
   }
-
   submitHandler = e => {
     e.preventDefault()
     console.log(this.state)
@@ -196,6 +196,7 @@ class Profil extends Component {
             Enum21={this.Enum21}
             Enum22={this.Enum22}
             changeHandler={this.changeHandler}
+      
           />
 
           <AutoriseContact

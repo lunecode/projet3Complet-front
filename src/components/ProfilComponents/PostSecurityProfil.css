@@ -75,6 +75,7 @@ Grid pour profil info */
     margin-left:10px;
     
 }
+
 .mail-info {
     display: flex;
     flex-direction: row;
@@ -114,7 +115,6 @@ Grid pour profil info */
   width: 300px;
  
 }
-
 .bloc-mdp input{
     width: 500px;
     padding:10px;
@@ -131,7 +131,7 @@ Grid pour profil info */
 .bloc-cookies{
     width: 70%;
     margin:auto;
-    padding-left:350px;
+    padding-left:300px;
 }
 .bloc-cookies h2{
     margin-left:0;
@@ -150,7 +150,7 @@ Grid pour profil info */
   line-height: 0px;
 }
 .off-account .btn-desactiver-compte{
-    width: 65%;
+    width: 64%;
     padding: 13px;
     border:1px solid #a7a7a7;
     margin-top:40px;
@@ -164,7 +164,7 @@ Grid pour profil info */
     display: inline-block;
     width: 60px;
     height: 34px;
-    right:453px;
+    right:465px;
     top:-30px;
     margin-left: auto;
 

@@ -76,7 +76,7 @@ class Getnextdestination extends Component {
 
                         {this.state.nextpicture.map(nextpicture => (
                             <div className={"divpictureNext" + i} key={i++}>
-                                <NavLink to={`/playvideo/${nextpicture.id_general_video}`} ><img src={nextpicture.cover_picture} className={"nextpictureimg" + a} key={a++} /></NavLink>
+                                <NavLink to={`/playvideo/${nextpicture.id_general_video}`} ><img src={nextpicture.cover_picture} alt='video cover' className={"nextpictureimg" + a} key={a++} /></NavLink>
                                 {/* <img src={nextpicture.cover_picture} className={"nextpictureimg" + a} key={a++} /> */}
                                 <p className={"p" + b} key={b++}>{nextpicture.video_title}</p> <br />
                                 <p className={"p" + b} key={b++}>{nextpicture.countries}</p>
@@ -107,7 +107,8 @@ class Getnextdestination extends Component {
             <div className="container_bestplan">
                 {this.state.videos.map(video => (
                     <div className={"divVideoPLan" + c} key={c++}>
-                            <img src={video.cover_picture} className='picture_bestplan' alt= ''/>
+                        <NavLink to={`/playvideo/${video.id_general_video}`} ><img src={video.cover_picture} className={"nextpictureimg" + a} key={a++} className='picture_bestplan' alt= ''/></NavLink>
+                            {/* <img src={video.cover_picture} className='picture_bestplan' alt= ''/> */}
                             <div className='container_title_bestplan_numbertips'>
                                 <p className='title_bestplan_numbertips'>+{video.number_tips}%</p>
                             </div>
