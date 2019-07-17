@@ -8,7 +8,7 @@ import RightHome from '../../Images-tripitto/Icon/RightHome.png'
 import normal from '../../Images-tripitto/Icon/Voyage/normal.png'
 // import Rectangle from '../../Images-tripitto/Icon/Voyage/Rectangle.png'
 import User from '../../Images-tripitto/Icon/User/User.png'
-
+import { NavLink } from 'react-router-dom';
 // Permet l'affichage des données pour un test de la table " General_video "
 
 class Display extends Component {
@@ -105,8 +105,9 @@ class Display extends Component {
         <div className="item1RecentlyPublished">
             {this.state.videos.reverse().map(image => (
                 <div className={"latestPublishedVideo" + i} key={i++}>
-                    <img src={image.cover_picture} alt={image.video_title}></img>
+                    <NavLink to={`/playvideo/${image.id_general_video}`}><img src={image.cover_picture} alt={image.video_title}></img>
                     <p className="titleVideo">{image.video_title}</p>
+                    </NavLink>
                 </div> 
             ))}
         </div>
