@@ -15,7 +15,7 @@ import depl from "../../Images-tripitto/image_Profil_Description/depl.png"
 import plage from "../../Images-tripitto/image_Profil_Description/plage.png"
 //Import pictures video
 
-import iconSearch from '../../Images-tripitto/Icon/TRAILING ICON.png'
+
 import ModalDeleteVideo from '../../components/ProfilComponents/ModalDeleteVideo.js';
 import ModalHidevide from '../../components/ProfilComponents/ModalHidevideo.js';
 import Partager from '../../Images-tripitto/Icon_Vidéo/Partager.png'
@@ -24,9 +24,9 @@ import pourcentage from '../../Images-tripitto/Icon_Vidéo/pourcentage.png'
 import pourcentage80 from '../../Images-tripitto/Icon_Vidéo/pourcentage80.png'
 import pourcentage60 from '../../Images-tripitto/Icon_Vidéo/pourcentage60.png'
 import vinise from '../../Images-tripitto/Icon_Vidéo/vinise.png'
-import upload from '../../Images-tripitto/Icon_Vidéo/upload.png'
+
 import img1 from '../../Images-tripitto/Icon_Vidéo/img1.png'
-import img2 from '../../Images-tripitto/Icon_Vidéo/img2.png'
+
 import img3 from '../../Images-tripitto/Icon_Vidéo/img3.png'
 import img4 from '../../Images-tripitto/Icon_Vidéo/img4.png'
 

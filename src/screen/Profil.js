@@ -11,9 +11,12 @@ import "../components/ProfilComponents/PostProfilInfo.css"
 import axios from "axios"
 
 
+
 class Profil extends Component {
   state={
+    
   }
+ 
   submitHandler = e => {
     e.preventDefault()
     console.log(this.state)
@@ -203,6 +206,7 @@ myFunction=(e)=>{
             Enum21={this.Enum21}
             Enum22={this.Enum22}
             changeHandler={this.changeHandler}
+      
           />
 
           <AutoriseContact
