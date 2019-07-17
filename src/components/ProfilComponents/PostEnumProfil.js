@@ -55,9 +55,8 @@ const PostEnumProfil = (props) => {
                         onClick={props.profil4}
                         alt="Photograph & vidéaste"
                     />
-                   <p> Photograph & vidéaste</p>
-        </div>
-
+                   <p> Photographe & vidéaste</p>
+               </div>
                 <div className="Profil_picture5">
                     <img src={Autre}
                         onClick={props.profil5}

@@ -195,8 +195,8 @@ class Profil extends Component {
           />
           
           <div className="save-btn">
-          {/* <NavLink exact to="/ProfilDescription"><button type="submit" >SAUVEGARDER</button></NavLink> */}
-          <button type="submit" >SAUVEGARDER</button>
+          <NavLink exact to="/ProfilDescription"><button type="submit" >SAUVEGARDER</button></NavLink> 
+          {/* <button type="submit" >SAUVEGARDER</button> */}
           </div>
         </form>
       </div>
