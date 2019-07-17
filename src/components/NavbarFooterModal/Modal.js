@@ -20,6 +20,7 @@ class Modal extends Component {
 	state = {
 		ModalForgottenPassword: false,
 		ModalCreateLogin: false,
+		CloseModal: false,
 	}
 
 	onSubmitLogin = e => {
@@ -52,7 +53,6 @@ class Modal extends Component {
 			}
 		})
 			.then(res => {
-			// Rajouter les redirections si le token est validé
 			console.log(res)
 			})
 	}
@@ -91,7 +91,7 @@ class Modal extends Component {
 
 	render() {
 		// console.log(this.props)
-		const { isOpen, onClose } = this.props;
+		const { isOpen, onClose, test } = this.props;
 		const { ModalForgottenPassword, ModalCreateLogin } = this.state
 
 
@@ -133,7 +133,9 @@ class Modal extends Component {
 
 
 
-								<button className="button_connexion" onClick={() => this.protectedRoute()}><img src={ButtonFull} onClick={onClose} alt="button connexion"></img></button>
+								<button className="button_connexion" onClick={this.props.test}><img src={ButtonFull} onClick={onClose} alt="button connexion"></img></button>
+
+								{/* <button className="button_connexion" onClick={() => this.protectedRoute()}><img src={ButtonFull} onClick={onClose} alt="button connexion"></img></button> */}
 
 
 							</div>

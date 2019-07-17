@@ -23,22 +23,37 @@ class Navbar extends Component {
 	};
 
 
-verifyToken = () => {
-	const token = localStorage.getItem('token')
-	if (token) {
-		document.getElementById('displayLoginNone').classList.toggle('buttonNavbarConnexionNone')
+	verifyToken = () => {
+		this.setState({ isModalOpen: false })
 	}
-	// this.setState({ isModalOpen: false })
-}
+
+	// verifyToken = () => {
+	// 	const token = localStorage.getItem('token')
+	// 	if (token) {
+	// 		document.getElementById('displayLoginNone').classList.toggle('buttonNavbarConnexionNone')
+	// 	}
+	// 	this.setState({ isModalOpen: false })
+	// }
 
 
 	openModal = () => {
 		this.setState({ isModalOpen: true })
+	}
+
+
+	closeModal = () => {
+		this.setState({ isModalOpen: false })
 		const token = localStorage.getItem('token')
-		if (token) {
-			
+		if(token) {
+			this.setState({ isModalOpen: false })
+			document.getElementById('displayLoginNone').classList.toggle('buttonNavbarConnexionNone')
 		}
 	}
+
+	logout = () => {
+		localStorage.clear();
+	}
+
 
 	getafrique = async () => {
 		const res = await axios.get('http://localhost:3000/travel_information/get_travelinformation_continent_afrique')
@@ -49,10 +64,6 @@ verifyToken = () => {
 		const res = await axios.get('http://localhost:3000/travel_information/get_travelinformation_continent_asieoceanie')
 		const asiaoceania = res.data
 		this.setState({ asieoceanie: asiaoceania })
-	}
-
-	closeModal = () => {
-		this.setState({ isModalOpen: false })
 	}
 
 	geteurope = async () => {
@@ -79,10 +90,6 @@ verifyToken = () => {
 		this.getamerique()
 		this.getautres()
 	}
-
-
-
-
 
 	render() {
 		let i = 1
@@ -170,7 +177,15 @@ verifyToken = () => {
 
 
 
-								{/* Permet l'affichage de l'avatar du profil */}
+
+
+
+
+
+
+
+
+								{/* AFFICHE L'AVATAR DU PROFIL ET LE MENU */}
 
 								<li className="img_profil">
 
@@ -180,21 +195,23 @@ verifyToken = () => {
 										<li><NavLink className="link_DropDown" exact to="/Favoris">Mes favoris</NavLink></li>
 										<li><NavLink className="link_DropDown" exact to="/Profil">Gérer mon profil</NavLink></li>
 										<li><NavLink className="link_DropDown" exact to="/Profil">Envoyer un avis</NavLink></li>
-										<li className="li-btn-off"> <button className="btn-deconnection">Se déconnecter</button></li>
+										<li className="li-btn-off"> <button onClick={this.logout}  className="btn-deconnection">Se déconnecter</button></li>
 									</ul>
 								</li>
 
 
 
-
+								{/* BOUTON QUI OUVRE LA MODAL DE LOGIN */}
 								<li><button onClick={this.openModal} id="displayLoginNone" className="buttonNavbarConnexion">SE CONNECTER</button></li>
 
+
+								{/* BOUTON TEST DE LA VERIFICATION DU TOKEN */}
 								<button onClick={this.verifyToken}>Test</button>
 
 
 
 
-
+								{/* Permet l'affichage du profil ORIGINE */}
 
 								{/* <li className="img_profil" onClick={isModalOpen === true ? this.closeModal : null}>
 									<img className={this.state.isModalOpen === false ? "buttonNavbarConnexionNone" : "logoAvatar"}
@@ -220,8 +237,8 @@ verifyToken = () => {
 
 
 
-
-{/* 
+								{/* BOUTON QUI OUVRE LA MODAL DE LOGIN D'ORIGINE */}
+								{/* 
 								<li><button onClick={this.openModal} className={this.state.isModalOpen === false ? "buttonNavbarConnexion" : "buttonNavbarConnexionNone"}>SE CONNECTER</button></li> */}
 
 
@@ -232,8 +249,10 @@ verifyToken = () => {
 						</div>
 					</nav>
 
+
+					{/* COMPOSANT QUI DECLENCHE L'OUVERTURE DE LA MODAL */}
 					<div className="containerModal">
-						<Modal isOpen={isModalOpen} onClose={this.closeModal} />
+						<Modal isOpen={isModalOpen} onClose={this.closeModal} test={this.verifyToken} />
 					</div>
 
 
