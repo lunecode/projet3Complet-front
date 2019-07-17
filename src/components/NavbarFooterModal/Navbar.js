@@ -19,21 +19,8 @@ class Navbar extends Component {
 		europe: [],
 		amerique: [],
 		autres: [],
-		testModalOpen: false
 	};
 
-
-	verifyToken = () => {
-		this.setState({ isModalOpen: false })
-	}
-
-	// verifyToken = () => {
-	// 	const token = localStorage.getItem('token')
-	// 	if (token) {
-	// 		document.getElementById('displayLoginNone').classList.toggle('buttonNavbarConnexionNone')
-	// 	}
-	// 	this.setState({ isModalOpen: false })
-	// }
 
 
 	openModal = () => {
@@ -41,18 +28,58 @@ class Navbar extends Component {
 	}
 
 
-	closeModal = () => {
+	closeCrossModal = () => {
 		this.setState({ isModalOpen: false })
+	}
+
+
+	// PERMET DE CACHER LE BOUTTON CONNEXION DE LA NAVBAR SI LOGIN OK
+	hideButtonLoginToken = () => {
 		const token = localStorage.getItem('token')
 		if(token) {
-			this.setState({ isModalOpen: false })
 			document.getElementById('displayLoginNone').classList.toggle('buttonNavbarConnexionNone')
 		}
 	}
 
+
+	// PERMET D'AFFICHER LE BOUTON DE CONNEXION DE LA NAVBAR SI TOKEN ABSENT
+	displayButtonLoginToken = () => {
+		const token = localStorage.getItem('token')
+		if(!token) {
+			document.getElementById('displayLoginNone').classList.toggle('buttonNavbarConnexionNone')
+		}
+	}
+
+
+	// PERMET DE FERMER LA MODAL VIA LE BOUTON CONNEXION DU COMPOSANT DE LA MODAL SI TOKEN OK
+	closeModal = () => {
+		const token = localStorage.getItem('token')
+		if(token) {
+			this.setState({ isModalOpen: false })
+			document.getElementById('displayLoginNone').classList.toggle('buttonNavbarConnexionNone')
+		}	
+	}
+
+// PERMET L'AFFICHE DE L'IMAGE DU MENU PROFIL SI TOKEN PRESENT
+
+	displayImgProfilToken = () => {
+		const token = localStorage.getItem('token')
+		if(token) {
+			document.getElementById('displayProfilImg').classList.toggle('img_profil')
+		} else {
+		}
+	}
+
+
+	// DECONNEXION 
 	logout = () => {
 		localStorage.clear();
+		window.location.reload(false);
+		this.displayButtonLoginToken()
 	}
+
+
+
 
 
 	getafrique = async () => {
@@ -89,6 +116,8 @@ class Navbar extends Component {
 		this.geteurope()
 		this.getamerique()
 		this.getautres()
+		this.hideButtonLoginToken()
+		this.displayImgProfilToken()
 	}
 
 	render() {
@@ -187,10 +216,8 @@ class Navbar extends Component {
 
 								{/* AFFICHE L'AVATAR DU PROFIL ET LE MENU */}
 
-								<li className="img_profil">
-
+								<li id="displayProfilImg" className="img_profil_hide">
 									<img className='logoAvatar' src={Avatar} alt='logo tripitto'></img>
-
 									<ul className="Sous_nemu">
 										<li><NavLink className="link_DropDown" exact to="/Favoris">Mes favoris</NavLink></li>
 										<li><NavLink className="link_DropDown" exact to="/Profil">Gérer mon profil</NavLink></li>
@@ -206,7 +233,7 @@ class Navbar extends Component {
 
 
 								{/* BOUTON TEST DE LA VERIFICATION DU TOKEN */}
-								<button onClick={this.verifyToken}>Test</button>
+								<button onClick={this.displayImgProfilToken}>Test</button>
 
 
 
@@ -252,7 +279,7 @@ class Navbar extends Component {
 
 					{/* COMPOSANT QUI DECLENCHE L'OUVERTURE DE LA MODAL */}
 					<div className="containerModal">
-						<Modal isOpen={isModalOpen} onClose={this.closeModal} test={this.verifyToken} />
+						<Modal crossClose={this.closeCrossModal} isOpen={isModalOpen} onClose={this.closeModal} test={this.displayButtonLoginToken} />
 					</div>
 
 

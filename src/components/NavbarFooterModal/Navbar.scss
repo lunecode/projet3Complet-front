@@ -52,7 +52,7 @@ $colorButton: #5dd8dc;
             list-style: none;
             width: 30%;
             .li-videaste{
-              margin-top:3.7vh;
+                margin-top:3.7vh;
             }
         }
     }
@@ -98,6 +98,7 @@ $colorButton: #5dd8dc;
                  .img_profil{
                      cursor:pointer;
                  }
+                 
                 .img_profil:hover .Sous_nemu{ 
                  display: block;
                     }
@@ -143,7 +144,7 @@ $colorButton: #5dd8dc;
                     }
                 
                 } 
-                 
+            
             }
             
             
@@ -194,7 +195,9 @@ $colorButton: #5dd8dc;
         }
     }
     
-
+.img_profil_hide {
+    display: none;
+}
  
 
 /********************** DROPDOWN ***************/

@@ -27,9 +27,9 @@ class Modal extends Component {
 		e.preventDefault()
 		const email = e.target.email.value
 		const password = e.target.password.value
-		if (email == '' || password == '' ) {
-			alert ('Merci de renseigner les champs')
-		} else {
+		if (email == '' || password == '') {
+			alert('Merci de renseigner les champs')
+		} else  {
 			axios
 				.post('http://localhost:3000/login/login', {
 					email: e.target.email.value,
@@ -37,9 +37,15 @@ class Modal extends Component {
 				})
 				.then(res => {
 					localStorage.setItem('token', res.headers["x-access-token"])
+					window.location.reload(false);
+					this.props.test()
 					// console.log('token', localStorage.getItem('token'))
-				})
+				})				
 		}
+		// const token = localStorage.getItem('token')
+		// if (token) {			 
+		// 	this.props.test()
+		// }
 	}
 
 
@@ -53,7 +59,7 @@ class Modal extends Component {
 			}
 		})
 			.then(res => {
-			console.log(res)
+				console.log(res)
 			})
 	}
 
@@ -91,24 +97,24 @@ class Modal extends Component {
 
 	render() {
 		// console.log(this.props)
-		const { isOpen, onClose, test } = this.props;
+		const { isOpen, onClose, crossClose, test } = this.props;
 		const { ModalForgottenPassword, ModalCreateLogin } = this.state
 
 
 
 		return (
 			<>
-					<div className={isOpen ? 'modal--is-open' : 'modal'}>
-						<div className="containerIs-open">
-							<div>
-								<h5 className="ConnexionModal">Connexion</h5>
-							</div>
-							<div className="divButtonModal">
-								<button onClick={onClose}>X</button>
-							</div>
+				<div className={isOpen ? 'modal--is-open' : 'modal'}>
+					<div className="containerIs-open">
+						<div>
+							<h5 className="ConnexionModal">Connexion</h5>
 						</div>
+						<div className="divButtonModal">
+							<button onClick={crossClose}>X</button>
+						</div>
+					</div>
 
-				<form onSubmit={this.onSubmitLogin}>
+					<form onSubmit={this.onSubmitLogin}>
 						<div className="containerIs-open2">
 							<div className="divInputModal">
 								<input type="email" name="email" id="email" placeholder="Adresse email"></input>
@@ -126,14 +132,15 @@ class Modal extends Component {
 								<p onClick={this.openModalForgottenPassword} className="lockModal"><img src={Lock} alt=""></img>Mot de passe oublié</p>
 							</div>
 						</div>
-						
+
 						<div className="containerIs-open4">
 							<div>
 
 
 
+								{/* BOUTON DE CONNEXION */}
 
-								<button className="button_connexion" onClick={this.props.test}><img src={ButtonFull} onClick={onClose} alt="button connexion"></img></button>
+								<button className="button_connexion" onClick="test" ><img src={ButtonFull} alt="button connexion"></img></button>
 
 								{/* <button className="button_connexion" onClick={() => this.protectedRoute()}><img src={ButtonFull} onClick={onClose} alt="button connexion"></img></button> */}
 
@@ -154,8 +161,8 @@ class Modal extends Component {
 								<p>Vous n'avez pas de compte ? <span onClick={this.openModalLogin}>S'inscrire</span></p>
 							</div>
 						</div>
-				</form>
-					</div>
+					</form>
+				</div>
 				<div>
 					<ForgottenPassword isOpen2={ModalForgottenPassword} onClose2={this.closeModalForgottenPassword} />
 					<ModalLogin isOpen3={ModalCreateLogin} onClose3={this.closeModalLogin} />
