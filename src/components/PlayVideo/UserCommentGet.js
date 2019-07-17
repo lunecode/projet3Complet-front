@@ -16,7 +16,7 @@ class UserCommentGet extends Component {
 getComment = async () => {
     const res = await axios.get('http://localhost:3000/comment/get_comment')
     this.setState({ comment: res.data })
-    console.log(this.state.comment)
+    // console.log(this.state.comment)
 }
 
 getProfil = async () => {
