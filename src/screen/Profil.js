@@ -6,14 +6,18 @@ import PostBioProfil from '../components/ProfilComponents/PostBioProfil';
 import PostIngedients from '../components/ProfilComponents/PostIngedients';
 import Socialprofil from '../components/ProfilComponents/Socialprofil';
 import { NavLink } from 'react-router-dom';
+
+
 import "./Profil.scss"
 import "../components/ProfilComponents/PostProfilInfo.css"
 import axios from "axios"
 
 
+
 class Profil extends Component {
   state={
   }
+
   submitHandler = e => {
     e.preventDefault()
     console.log(this.state)
@@ -21,6 +25,13 @@ class Profil extends Component {
       .then(response => {
         console.log(response)
       })
+      .then( 
+        //Pour que  button submit renvoie vers la page ProfilDescription
+        this.props.history.push("/ProfilDescription"),
+        //permet de rafraichir la page pour afficher le Get
+        window.location.reload(false)
+
+     )
       .catch(error => {
         console.log(error)
       })
@@ -129,10 +140,12 @@ class Profil extends Component {
   }
 //ouvrir le fichier et le convertir  en binair
 
-  
+
+ 
   render() {
     console.log(this.state);
-    
+  
+  
     return (
       <div className="pageprofil" >
         <form  onSubmit={this.submitHandler}>
@@ -195,8 +208,10 @@ class Profil extends Component {
           />
           
           <div className="save-btn">
-          <NavLink exact to="/ProfilDescription"><button type="submit" >SAUVEGARDER</button></NavLink> 
-          {/* <button type="submit" >SAUVEGARDER</button> */}
+
+      <button type="submit" onSubmit={this.submitHandler}>SAUVEGARDER</button>  
+      {/* <NavLink to="/ProfilDescription"><button type="submit" onSubmit={this.submitHandler}>SAUVEGARDER</button></NavLink>  */}
+      {/* <button type="submit" onSubmit={this.submitHandler}  onClick={this.functionName}>SAUVEGARDER</button> */}
           </div>
         </form>
       </div>
