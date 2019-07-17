@@ -2,11 +2,9 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import './Video.css';
 import YouTube from 'react-youtube';
-import NumberTips from '../../Images-tripitto/IconVideo/Infosnbr.png';
 import Pop from '../../Images-tripitto/IconVideo/pop.png';
 import Pop2 from '../../Images-tripitto/IconVideo/pop2.png';
 import Autoplay from '../../Images-tripitto/IconVideo/autoplay.png';
-import Play from '../../Images-tripitto/Icon/Play.png';
 import Love from '../../Images-tripitto/Icon/Love.png';
 import Comment from '../../Images-tripitto/Icon/Comment.png';
 import Add from '../../Images-tripitto/Icons/Add-collection.png';
