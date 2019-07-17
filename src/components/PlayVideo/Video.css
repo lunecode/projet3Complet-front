@@ -31,6 +31,10 @@
 
 }
 
+.text{
+    width: 54%;
+}
+
 
 
 /* .container_video img{
@@ -113,7 +117,7 @@
 .userVideo{
     display: flex;
     justify-content: flex-end;
-    padding-bottom: 3%;
+    padding-bottom: 1%;
     padding-left: 2%;
     /* justify-content: space-around; */
   
@@ -168,7 +172,7 @@
 }
 
 .pop2{
-    margin-top: 6%;
+    padding-top: 6%;
 }
 
 .autoplay{
