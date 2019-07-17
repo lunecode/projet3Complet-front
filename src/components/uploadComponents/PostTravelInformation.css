@@ -191,6 +191,7 @@ margin-top: -9vh;
   width: 3vw;
   height: 4vh;
   border:1px solid #d3d3d3;
+  margin-top: -30px;
 }
 .input-accomodation:focus{
   background:#e9eff1;
@@ -213,6 +214,8 @@ margin-top: -9vh;
   width: 3vw;
   height: 4vh;
   border:1px solid #d3d3d3;
+  margin-top:-30px;
+  margin-left:10px;
 }
 
 .input-activities:focus{

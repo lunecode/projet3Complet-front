@@ -26,7 +26,7 @@ const PostIngedients = (props) => {
         return (
                 <div className="ingédients" >
                         <h3>Vos ingrédients pour un voyage inoubliable </h3>
-                        <p> <img src={Idea} alt="icon" />Selectionnez jusqu'à 5 choix</p>
+                        <div className='bloc-title-ingredient'> <p><img src={Idea} alt="icon" /></p><p className="title-ingredient">Selectionnez jusqu'à 5 choix</p></div>
 
                         <form className="globale">
                                 <input className="I" type="hidden" name="ingredients"

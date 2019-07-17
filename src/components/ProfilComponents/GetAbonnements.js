@@ -9,8 +9,12 @@ import iconPlus from '../../Images-tripitto/Icon/Plus.png'
 class GetAbonnements extends Component {
     state = {
         Following: [],
-        visible:6
+        visible:6,
+        toggleBtnFollowing:false
     };
+    showToggleBtnFollowing=()=>{
+        this.setState({toggleBtnFollowing:true})
+    }
     loadMore=() =>{
         this.setState((prev) => {
           return {visible: prev.visible + 4};
@@ -98,7 +102,6 @@ class GetAbonnements extends Component {
                                         </div>
                                         <div className="following-items">
                                             <h3>{item.following_user}</h3>
-
                                             <div>
                                                 <p>{item.following_nb_video} vidéos</p>
                                                 <p>{item.following}</p>

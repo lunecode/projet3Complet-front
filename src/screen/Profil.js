@@ -8,7 +8,7 @@ import Socialprofil from '../components/ProfilComponents/Socialprofil';
 import "./Profil.scss"
 import "../components/ProfilComponents/PostProfilInfo.css"
 import axios from "axios"
-import { truncate } from 'fs';
+
 
 
 class Profil extends Component {
