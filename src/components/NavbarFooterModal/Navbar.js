@@ -150,7 +150,6 @@ class Navbar extends Component {
                                  </img> 
                                     <ul className="Sous_nemu">
                                     <li><NavLink className="link_DropDown" exact to="/Favoris">Mes favoris</NavLink></li>
- 
                                     <li><NavLink className="link_DropDown" exact to="/Profil">Gérer mon profil</NavLink></li>
                                     <li><NavLink className="link_DropDown" exact to="/Profil">Envoyer un avis</NavLink></li>
                                     

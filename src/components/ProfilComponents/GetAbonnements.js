@@ -28,11 +28,9 @@ class GetAbonnements extends Component {
     componentDidMount() {
         this.getFollowing()
     }
-
     render() {
         return (
             <>
-              
                 <div className="bloc-page-profil">
                     <div className="membres-profil">
                         <img src="https://i.ytimg.com/vi/BfCwN4iy6T8/maxresdefault.jpg" alt="pictures profil" />
