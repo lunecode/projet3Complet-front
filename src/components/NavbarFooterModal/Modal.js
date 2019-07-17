@@ -126,14 +126,11 @@ class Modal extends Component {
 								<p onClick={this.openModalForgottenPassword} className="lockModal"><img src={Lock} alt=""></img>Mot de passe oublié</p>
 							</div>
 						</div>
+						
 						<div className="containerIs-open4">
 							<div>
 
 
-
-
-
-							{/* <button className="button_connexion"><img src={ButtonFull} onClick={onClose} alt="button connexion"></img></button> */}
 
 
 								<button className="button_connexion" onClick={() => this.protectedRoute()}><img src={ButtonFull} onClick={onClose} alt="button connexion"></img></button>

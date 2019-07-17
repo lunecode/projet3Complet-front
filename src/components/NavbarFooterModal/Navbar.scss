@@ -210,10 +210,12 @@ $colorButton: #5dd8dc;
     opacity: 0;
     visibility: hidden;
     width: 200px;
-    transition: all 0.05s ease-in-out;
-  }
-  
-  .containerNavLeft li:hover .ul_list  {
+    transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
+    transform: translateY(0%);
+    transition-delay: 0s, 0s, 0.5s;
+}
+
+    .containerNavLeft li:hover .ul_list  {
     top: 11.55vh;
     left:2.75vw;
     opacity: 1;

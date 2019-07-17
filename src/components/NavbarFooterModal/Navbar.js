@@ -19,10 +19,25 @@ class Navbar extends Component {
 		europe: [],
 		amerique: [],
 		autres: [],
+		testModalOpen: false
 	};
+
+
+verifyToken = () => {
+	const token = localStorage.getItem('token')
+	if (token) {
+		document.getElementById('displayLoginNone').classList.toggle('buttonNavbarConnexionNone')
+	}
+	// this.setState({ isModalOpen: false })
+}
+
 
 	openModal = () => {
 		this.setState({ isModalOpen: true })
+		const token = localStorage.getItem('token')
+		if (token) {
+			
+		}
 	}
 
 	getafrique = async () => {
@@ -64,12 +79,19 @@ class Navbar extends Component {
 		this.getamerique()
 		this.getautres()
 	}
+
+
+
+
+
 	render() {
 		let i = 1
 		let a = 1
 		let e = 1
 		let o = 1
 		const { isModalOpen } = this.state
+
+
 		return (
 			<div>
 				<header>
@@ -150,6 +172,30 @@ class Navbar extends Component {
 
 								{/* Permet l'affichage de l'avatar du profil */}
 
+								<li className="img_profil">
+
+									<img className='logoAvatar' src={Avatar} alt='logo tripitto'></img>
+
+									<ul className="Sous_nemu">
+										<li><NavLink className="link_DropDown" exact to="/Favoris">Mes favoris</NavLink></li>
+										<li><NavLink className="link_DropDown" exact to="/Profil">Gérer mon profil</NavLink></li>
+										<li><NavLink className="link_DropDown" exact to="/Profil">Envoyer un avis</NavLink></li>
+										<li className="li-btn-off"> <button className="btn-deconnection">Se déconnecter</button></li>
+									</ul>
+								</li>
+
+
+
+
+								<li><button onClick={this.openModal} id="displayLoginNone" className="buttonNavbarConnexion">SE CONNECTER</button></li>
+
+								<button onClick={this.verifyToken}>Test</button>
+
+
+
+
+
+
 								{/* <li className="img_profil" onClick={isModalOpen === true ? this.closeModal : null}>
 									<img className={this.state.isModalOpen === false ? "buttonNavbarConnexionNone" : "logoAvatar"}
 										src={Avatar} alt="logo tripitto">
@@ -160,8 +206,8 @@ class Navbar extends Component {
 										<li><NavLink className="link_DropDown" exact to="/Profil">Envoyer un avis</NavLink></li>
 										<li className="li-btn-off"> <button className="btn-deconnection">Se déconnecter</button></li>
 									</ul>
-								</li>
- */}
+								</li> */}
+
 
 
 
@@ -174,8 +220,9 @@ class Navbar extends Component {
 
 
 
-								<li><button onClick={this.openModal} className={this.state.isModalOpen === false ? "buttonNavbarConnexion" : "buttonNavbarConnexionNone"}>SE CONNECTER</button></li>
 
+{/* 
+								<li><button onClick={this.openModal} className={this.state.isModalOpen === false ? "buttonNavbarConnexion" : "buttonNavbarConnexionNone"}>SE CONNECTER</button></li> */}
 
 
 								{/* Permet d'afficher le bouton de publication  */}
@@ -185,9 +232,9 @@ class Navbar extends Component {
 						</div>
 					</nav>
 
-					{/* <div className="containerModal">
+					<div className="containerModal">
 						<Modal isOpen={isModalOpen} onClose={this.closeModal} />
-					</div> */}
+					</div>
 
 
 				</header>
