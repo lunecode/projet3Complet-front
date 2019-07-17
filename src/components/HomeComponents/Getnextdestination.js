@@ -107,7 +107,8 @@ class Getnextdestination extends Component {
             <div className="container_bestplan">
                 {this.state.videos.map(video => (
                     <div className={"divVideoPLan" + c} key={c++}>
-                            <img src={video.cover_picture} className='picture_bestplan' alt= ''/>
+                        <NavLink to={`/playvideo/${video.id_general_video}`} ><img src={video.cover_picture} className={"nextpictureimg" + a} key={a++} className='picture_bestplan' alt= ''/></NavLink>
+                            {/* <img src={video.cover_picture} className='picture_bestplan' alt= ''/> */}
                             <div className='container_title_bestplan_numbertips'>
                                 <p className='title_bestplan_numbertips'>+{video.number_tips}%</p>
                             </div>

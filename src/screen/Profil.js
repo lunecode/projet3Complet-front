@@ -5,6 +5,7 @@ import PostEnumProfil from '../components/ProfilComponents/PostEnumProfil';
 import PostBioProfil from '../components/ProfilComponents/PostBioProfil';
 import PostIngedients from '../components/ProfilComponents/PostIngedients';
 import Socialprofil from '../components/ProfilComponents/Socialprofil';
+import { NavLink } from 'react-router-dom';
 import "./Profil.scss"
 import "../components/ProfilComponents/PostProfilInfo.css"
 import axios from "axios"
@@ -218,7 +219,7 @@ myFunction=(e)=>{
           />
 
           <div className="save-btn">
-            <button type="submit" >SAUVEGARDER</button>
+          <NavLink exact to="/ProfilDescription"><button type="submit" >SAUVEGARDER</button></NavLink>
           </div>
         </form>
       </div>

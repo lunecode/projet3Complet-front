@@ -13,12 +13,9 @@
 //                   <button onClick={props.fileUploadHandler}>Télécharger</button> 
 
 //               </div>
-
-
 //           )
 
 //          }   
-
 
 // export default IploadImgProfil;
 import React, { Component } from 'react';
