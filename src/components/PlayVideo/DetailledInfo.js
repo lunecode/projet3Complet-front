@@ -45,8 +45,10 @@ render() {
         <div key={item.id_travel_step}>
         <div className="container_info" key={item.id_travel_step}>
             <div className="container_detailled">
-                <div className="trip">
+                <div className="trip_box">
+                <span className="trip">
                     <img className="trip" src={Trip} alt="village"/>   
+                </span>
                 </div>
                 <div className="container_trip">
                     

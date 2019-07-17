@@ -31,8 +31,17 @@
     /* font-size:19px; */
 }
 
+.trip_box{
+    background-color: #313F4F;
+    height: 57px;
+}
+
 .trip{
-   background-color: white;
+    background-color: white;
+
+}
+
+.trip_box img{
     
 }
 
