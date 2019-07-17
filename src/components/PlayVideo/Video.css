@@ -18,7 +18,11 @@
     color: #2C404D;
     font-weight: bold;
     margin-top: 3%;
+    
+    
 }
+
+
 
 .video_user {
     text-align: center;
@@ -26,6 +30,8 @@
     background-color: #232323;
 
 }
+
+
 
 /* .container_video img{
     width:60px;
@@ -154,4 +160,18 @@
 .title_video{
     display: flex;
     justify-content: flex-start;
+}
+
+.cont_video{
+    display: flex;
+    justify-content: space-between;
+}
+
+.pop2{
+    margin-top: 6%;
+}
+
+.autoplay{
+    display: flex;
+    justify-content: flex-end;
 }

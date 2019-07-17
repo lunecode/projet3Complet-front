@@ -3,6 +3,9 @@ import axios from 'axios'
 import './Video.css';
 import YouTube from 'react-youtube';
 import NumberTips from '../../Images-tripitto/IconVideo/Infosnbr.png';
+import Pop from '../../Images-tripitto/IconVideo/pop.png';
+import Pop2 from '../../Images-tripitto/IconVideo/pop2.png';
+import Autoplay from '../../Images-tripitto/IconVideo/autoplay.png';
 import Play from '../../Images-tripitto/Icon/Play.png';
 import Love from '../../Images-tripitto/Icon/Love.png';
 import Comment from '../../Images-tripitto/Icon/Comment.png';
@@ -68,8 +71,14 @@ class Video extends Component {
                 <YouTube videoId={item.video_link} opts={opts} onReady={this._onReady} />
               </div>
               <div className="video_info">
-                <div className="title_video">{item.video_title} <span><img className="play" src={Play} alt="play" />{item.nb_views}</span><span className="number_tips"><img className="numberTips" src={NumberTips} alt="number tips" />{item.number_tips}</span>
+                <div className="cont_video">
+                <div className="title_video">{item.video_title}
+                <span><img className="pop" src={Pop} alt="image_tripitto"></img></span>
                   <div><button className="buttonCommentVideo">MODIFIER</button>
+                  </div>
+                  </div>
+                  <div className="className">
+                  <span><img className="pop2" src={Pop2} alt="image_trip" ></img></span>
                   </div>
                 </div>
                 {this.state.popularity.map(item => (
@@ -95,7 +104,12 @@ class Video extends Component {
                     <p className="username">{item.video_user} </p>
                     <button className="suscribe">S'ABONNER</button>
                   </div>
+                 
                 </div>
+                <div className="autoplay">
+                  <img className="auto" src={Autoplay} alt="equipment_picture"></img>
+
+                  </div>
               </div>
             </div>
           </div>
