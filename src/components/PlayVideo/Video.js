@@ -5,6 +5,7 @@ import YouTube from 'react-youtube';
 import Pop from '../../Images-tripitto/IconVideo/pop.png';
 import Pop2 from '../../Images-tripitto/IconVideo/pop2.png';
 import Autoplay from '../../Images-tripitto/IconVideo/autoplay.png';
+import Camera from '../../Images-tripitto/IconVideo/camera.png';
 import Love from '../../Images-tripitto/Icon/Love.png';
 import Comment from '../../Images-tripitto/Icon/Comment.png';
 import Add from '../../Images-tripitto/Icons/Add-collection.png';
@@ -88,9 +89,9 @@ class Video extends Component {
 
                 ))}
                 <div className="test" >
-                  <p><span className="loading">Ajouté le {item.loading_time} -</span><span className="status"><i>{item.video_status}</i></span> </p>
+                  <div><span className="loading">Ajouté le {item.loading_time} -</span><span className="status"><i>{item.video_status}</i></span> </div>
                   <p className="text">{item.video_description}</p>
-                  <p><a href="{item.link_equipment}>" target="_blank">Go Pro Hero 6</a></p>
+                  <p><img src={Camera} alt="camera" className="camera"/><a href="{item.link_equipment}>" target="_blank" className="equip_link">Go Pro Hero 6</a></p>
 
                 </div>
                 <div className="userVideo">
