@@ -29,8 +29,7 @@ class Profil extends Component {
         //Pour que  button submit renvoie vers la page ProfilDescription
         this.props.history.push("/ProfilDescription"),
         //permet de rafraichir la page pour afficher le Get
-        window.location.reload(false)
-
+        window.location.reload(true)
      )
       .catch(error => {
         console.log(error)
