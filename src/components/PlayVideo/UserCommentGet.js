@@ -25,9 +25,20 @@ getProfil = async () => {
     // console.log(this.state.picture)
 }
 
+getCurrentDate(separator=''){
+
+    let newDate = new Date()
+    let date = newDate.getDate();
+    let month = newDate.getMonth() + 1;
+    let year = newDate.getFullYear();
+    
+    return `${date}${separator}${month<10?`0${month}`:`${month}`}${separator}${year}`
+    }
+
 componentDidMount() {
     this.getComment()
     this.getProfil()
+    this.getCurrentDate()
 }
 
 render() {
@@ -35,19 +46,31 @@ render() {
 
     const url = window.location.href;
     const idVideo = url.slice(32)
+
+    let newDate = new Date()
+    let date = newDate.getDate();
+    let month = newDate.getMonth() + 1;
+    let year = newDate.getFullYear();
+    let separator = '/'
+    
+
         
 
     
     
-    return (  
+    return ( 
     <>
         {this.state.comment.filter(item =>item.general_video_id_general_video == idVideo ).map(item =>(
                 <div className="container_get" key={i++}>
                 <div  key={item.video_comment}>
             {/* <li>{item.profile_picture}</li> */}
-                <img className="pictureuser" src={Picture} alt= "pictureuser"/>
-                <span>{item.author_comment}  </span>
-                <span>{item.action_date_comment}  </span>
+                {/* <span>{item.action_date_comment}</span> */}
+                
+                <div className="container_date"><img className="pictureuser" src={Picture} alt= "pictureuser"/>
+                <span className="author">{item.author_comment}  </span>
+                <span className="author">{date}{separator}{month<10?`0${month}`:`${month}`}{separator}{year}
+                </span>
+                </div>
                 <div className="comment">{item.comment}
             {/* <button></button> */}
                 <div className="editcomment">

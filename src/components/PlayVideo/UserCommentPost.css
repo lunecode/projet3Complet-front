@@ -36,3 +36,29 @@ textarea{
     resize: none;
 }
 
+.input-name{
+    margin-bottom: 3%;
+    width: 15%;
+    height:20px;
+    border-right:none;
+    border-left: none;
+    border-top: none;
+    padding:1%;
+    border-bottom: 1px solid #59cce0;
+    background-color: #F4F4F4;
+    
+    
+}
+
+.btn{
+    background-color: white;
+    width: 150px;
+    text-align: center;
+    color:#59cce0;
+    font-size: 15px;
+    padding:1%;
+    /* font-weight: 500; */
+    border: 1px solid #59cce0;
+    margin-top: 2%;
+
+}
