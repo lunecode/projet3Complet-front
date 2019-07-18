@@ -12,6 +12,7 @@ $colorButton: #5dd8dc;
     .titleRecentlyPublished {
         color: $ColorFont;
         margin-bottom: 1%;
+        letter-spacing: 2px;
         
     }
 }
@@ -272,6 +273,7 @@ margin-top: 1%;
         p {
             text-transform: capitalize;
             margin-top: -10px;
+            color:#2C404D;
         }
 
         .centerVideaste {
@@ -291,7 +293,11 @@ margin-top: 1%;
         }
     }
 }
-
+.borderVideaste:hover{
+    background-color:#5dd8dc4d;
+    filter: opacity(70%);
+    -webkit-filter: opacity(90%);
+}
 .videastes1 {
     grid-area: v1;
     padding-right: 2%;

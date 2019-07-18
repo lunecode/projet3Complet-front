@@ -55,9 +55,8 @@ $colorButton: #5dd8dc;
     color: white;
     font-weight: bold;
     font-family: 'Robotoregular';
-    font-size: 1vw;
+    font-size: 0.87vw;
     text-decoration: none;
-
 }
 
 .ulNav a:hover {
@@ -73,9 +72,11 @@ $colorButton: #5dd8dc;
 }
     
 .button_video{
-    height: 10vh;
+    height: 8.1vh;
+    width:8.5vw;
     border:none;
-    background:none;
+    background-color: #2C404D;
+    margin-bottom: -0.5vh;
 }
         .containerNavRight {
             position: relative;
@@ -100,6 +101,7 @@ $colorButton: #5dd8dc;
                 height: 20px;
                 margin-left: 2px;
             }
+       
             .buttonNavbar {
                 background-color: $colorButton;
                 color: white;
@@ -149,13 +151,13 @@ $colorButton: #5dd8dc;
     opacity: 0;
     visibility: hidden;
     width: 200px;
-    transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
+    transition: all 0.4s ease-in-out 0s, visibility 0s linear 0.4s;
     transform: translateY(0%);
-    transition-delay: 0s, 0s, 0.5s;
+    transition-delay: 0s, 0s, 0.8s;
   }
   
   .containerNavLeft li:hover .ul_list  {
-    top: 11.55vh;
+    top: 10vh;
     left:2.75vw;
     opacity: 1;
     visibility: visible;
@@ -178,7 +180,7 @@ $colorButton: #5dd8dc;
             text-align:center;
         }
          .list_afrique, .list_asieoceanie,.list_europe, .list_autres, .list_amerique  {
-            font-size:16px;
+            font-size:17px;
             color:#55949c;
             align-items: center;
             margin-top:9%;

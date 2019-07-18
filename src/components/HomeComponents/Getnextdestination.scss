@@ -71,15 +71,17 @@
         background:
         linear-gradient(180deg, rgba(44, 64, 77, 0.89), rgba(219, 213, 213, 0) 60.71%),
         linear-gradient(127deg, rgba(44, 64, 77, 0.589), rgba(0,255,0,0) 70.71%),
+        linear-gradient(1deg, rgba(44, 64, 77, 0.589), rgba(0,255,0,0) 70.71%),
         linear-gradient(336deg, rgba(44, 64, 77, 0.692), rgba(0,0,255,0) 70.71%);
-        
+      
         img {
-            filter: brightness(60%);
-            -webkit-filter: brightness(60%)
+            filter: brightness(70%);
+            -webkit-filter: brightness(70%)
         }
         img:hover {
             filter: opacity(70%);
             -webkit-filter: opacity(95%);
+            transition: 1s;
         }
      }
 
@@ -378,7 +380,7 @@ margin-left: 1.5%;
 .title_bestplan_numbertips{
     color:white;
     margin-bottom: 46%;
-    margin-top:-28.5vh;
+    margin-top:-28.95vh;
     font-size: 1.60vh;
     font-family: 'Roboto';
     font-weight: bold;
@@ -395,7 +397,7 @@ margin-left: 1.5%;
 .title_bestplan_video_duration{
     color:white;
     margin-bottom: 46%;
-    margin-top:-550%;
+    margin-top:-28.95vh;
     font-size: 1.60vh;
     font-family: 'Roboto';
     font-weight: bold;
@@ -404,37 +406,38 @@ margin-left: 1.5%;
     padding:2px;
 }
 
+
+
 .title_bestplan_title{
     font-family: 'Robotoregular2';
     font-weight: bold;
     font-size: 2.50vh;
     color:#2C404D;
-    margin-bottom: -2.25%;
+    margin-bottom: -1.25%;
     
 }
 .title_bestplan_countries{
-    font-family: 'Lora';
-    font-size: 1.90vh;
+    font-family: 'Roboto';
+    font-size: 1.85vh;
     color:#2C404D;
    
 }
 .title_bestplan_user{
-    font-family: 'Lora';
+    font-family: 'Roboto';
     font-weight: bold;
-    font-size: 1.90vh;
+    font-size: 1.80vh;
     color:#2C404D;
-    margin-top: -1.5%;
- 
+    margin-top: -0.5%;
 }
 .title_bestplan_nbviews{
-    font-family: 'Lora';
-    font-size: 2vh;
+    font-family: 'Roboto';
+    font-size: 1.80vh;
     color:rgba(152, 158, 158, 0.918);
     margin-top: -13%;
 
 }
 .container_nb_view{
-    margin-left: 15%;
+    margin-left: 19.5%;
     margin-top: 5.5%;
     color:#2C404D;
 }
@@ -448,10 +451,8 @@ margin-left: 1.5%;
     border-block-end: solid 1px #2C404D;
     font-size: 2.2vh;
 
-    letter-spacing: -1px;
-    font-stretch: extra-expanded;
     
-    }
+}
 
 /***************************CONTRIBUTORS********************************/
 /*****************************************************************************/
@@ -462,7 +463,7 @@ margin-left: 1.5%;
         align-items: center;
         padding-left: 3.5%;
         text-align: center; 
-        margin-top: -14.42%;
+        margin-top: -15%;
         color: #2C404D;
             p{
             color: #2C404D;
@@ -480,7 +481,7 @@ margin-left: 1.5%;
         font-size: 2vh;
         font-weight: italic;
         font-family: 'Loraitalic';
-        letter-spacing: 1.75px;
+        letter-spacing: 3px;
         font-size: 2.75vh;
         padding-bottom: 1.5%;
         border-block-end: solid 1px #2C404D;
@@ -497,3 +498,6 @@ margin-left: 1.5%;
 
 
 /************** TEST  *******/
+
+
+

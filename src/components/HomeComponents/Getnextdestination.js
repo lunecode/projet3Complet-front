@@ -63,6 +63,8 @@ class Getnextdestination extends Component {
             this.setState({ videos: Bestplan })
         })
     }
+
+
     componentDidMount() {
         this.getnextvideo()
         this.getbestplan()
@@ -74,8 +76,6 @@ class Getnextdestination extends Component {
         let b = 1
         let c = 1
 
-        // const url = window.location.href;
-        // const idVideo = url.slice(32)
 
         return (
             <>
@@ -114,7 +114,7 @@ class Getnextdestination extends Component {
                 <img onClick={this.getbestplanlimit} className={this.state.offsetBestplan === 8 ? "leftHomeDisable2" : "rightHome2"} src={RightHome} alt=""></img>
             </div>
         </section> 
-            <div className="container_bestplan"></div>
+            <div className="container_bestplan">
                 {this.state.videos.map(video => (
                     <div className={"divVideoPLan" + c} key={c++}>
                             <img src={video.cover_picture} className='picture_bestplan' alt= ''/>
@@ -127,6 +127,7 @@ class Getnextdestination extends Component {
                             <p className='title_bestplan_title'>{video.video_title}</p>
 
                             <p className='title_bestplan_countries'>{video.countries}</p>
+                        
                             <ul className='container_nb_view'>
                                 <li><p className='title_bestplan_nbviews'>{video.nb_views} vues</p></li>
                             </ul>
