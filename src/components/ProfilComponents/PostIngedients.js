@@ -114,7 +114,6 @@ const PostIngedients = (props) => {
                                         </div>
                                         <div className="ingredient7">
                                                 <img src={Enforet}
-
                                                         onClick={props.Enum10}
                                                         alt="En foret"
                                                 />
