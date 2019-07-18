@@ -1,5 +1,6 @@
 .container_globalTravel{
     background-color:#F4F4F4;
+    font-size: 15px;
     
 }
 
@@ -13,9 +14,12 @@
     /* padding-top: 1%; */
 }
 
+
+
 .container_detailled{
     margin: 0 auto;
     margin-left: 5%;
+    list-style-type: none;
     
 }
 
@@ -27,9 +31,16 @@
     /* font-size:19px; */
 }
 
-.border{
-    border-bottom:2px solid #313F4F;
+.trip_box{
+    background-color: #313F4F;
+    height: 57px;
 }
+
+.trip{
+    background-color: white;
+
+}
+
 
 .weather, .step1{
     padding-bottom: 2%;
@@ -68,7 +79,8 @@
 }
 
 .museum1{
-    margin-left: 2%;
+    margin-left: 4%;
+    margin-right: 4%;
 }
 
 .Museum{
@@ -84,7 +96,7 @@
 }
 
 .comment_sport{
-    margin-left: 6%;
+    margin-left: 8%;
 }
 
 .idea{

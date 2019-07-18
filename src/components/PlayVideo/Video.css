@@ -18,7 +18,11 @@
     color: #2C404D;
     font-weight: bold;
     margin-top: 3%;
+    
+    
 }
+
+
 
 .video_user {
     text-align: center;
@@ -26,6 +30,12 @@
     background-color: #232323;
 
 }
+
+.text{
+    width: 54%;
+}
+
+
 
 /* .container_video img{
     width:60px;
@@ -44,6 +54,12 @@
     color: gray;
 }
 
+.equip_link{
+    color: black;
+    margin-left: 1%;
+    margin-bottom: 6%;
+    
+}
 .status{
     color:#f4b642;
     font-family: 'Roboto', sans-serif;
@@ -52,7 +68,7 @@
 
 .text{
     font-size: 13px;
-    color: #6D7783;
+    color: black;
 }
 
 .pictureUser{
@@ -107,7 +123,6 @@
 .userVideo{
     display: flex;
     justify-content: flex-end;
-    padding-bottom: 3%;
     padding-left: 2%;
     /* justify-content: space-around; */
   
@@ -154,4 +169,18 @@
 .title_video{
     display: flex;
     justify-content: flex-start;
+}
+
+.cont_video{
+    display: flex;
+    justify-content: space-between;
+}
+
+.pop2{
+    padding-top: 6%;
+}
+
+.autoplay{
+    display: flex;
+    justify-content: flex-end;
 }
