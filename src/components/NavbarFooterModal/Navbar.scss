@@ -25,7 +25,9 @@ $colorButton: #5dd8dc;
                 
             .inputNav {
                 background-color: #2C404D;
-                border: solid #1BA2A2;
+                border-image:linear-gradient(to right, #3ab9c0 0%,#2d9db9 50%,#208abf 100%);
+                border-image-slice: 1;
+                border-width: 2px;
                 color: white;
                 height: 30px;
                 position: relative;
@@ -49,6 +51,10 @@ $colorButton: #5dd8dc;
             justify-content: space-around;
             list-style: none;
             width: 30%;
+           
+            .li-videaste{
+              margin-top:3.7vh;
+            }
         }
     }
 .ulNav a {
@@ -84,13 +90,66 @@ $colorButton: #5dd8dc;
             padding-right: 3%;
             
             
-            ul {
+            ul{
                 align-items: center;
                 display: flex;
                 flex-flow: row nowrap;
                 justify-content: space-around;
                 list-style: none;
+                 position: relative;
+                 .img_profil{
+                     cursor:pointer;
+                 }
+                .img_profil:hover .Sous_nemu{ 
+                 display: block;
+                    }
+                .Sous_nemu{
+                    z-index: 2;
+                    list-style: none;
+                    display: none;
+                    background-color: white;
+                    position: absolute;
+                    
+                    right:13vw;
+                    width:180px;
+                    height:205px;
+                    border:1px solid #1BA2A2;
+                    padding-top: 20px;
+                    padding-left:20px;
+                    z-index:2;
+                    li{
+                   
+                        padding-bottom:40px;
+                        padding-right:10px;
+                       
+                        .link_DropDown{
+                            text-decoration: none;
+                            color:#333333;  
+                             &:hover{
+                              color:#5dd8dc;
+                          }
+                        }
+                        .btn-deconnection{
+                             border:none;
+                             padding-top:20px;
+                             padding-bottom:20px;
+                             margin-left:15px;
+                             color:red;
+                             font-weight: normal;
+                             cursor:pointer;
+                        }
+                    }
+                    .li-btn-off{
+                        background-color:#eeeeee;
+                        margin-left:-1vw;
+                        padding-bottom:0;
+                        margin-top:-3vh;
+                    }
+                
+                } 
+                 
             }
+            
             
             .logoAvatar {
                 border-radius: 50%;
@@ -108,14 +167,18 @@ $colorButton: #5dd8dc;
                 font-size: 16px;
                 padding: 9px 25px;
                 border: none;
+                cursor:pointer;
             }
             .buttonNavbarChange {
                 background-color: #2C404D;
-                border: solid 1px #1BA2A2;
+                border-image:linear-gradient(to right, #3ab9c0 0%,#2d9db9 50%,#208abf 100%);
+                border-image-slice: 1;
+                border-width: 2px;
                 box-shadow: 0.3px 0.3px 0.3px 0.3px #1BA2A2;;
                 color: $colorButton;
                 font-size: 16px;
                 padding: 8px 25px;
+                cursor:pointer;  
             }
             
             button.buttonNavbarConnexion {
@@ -128,6 +191,7 @@ $colorButton: #5dd8dc;
                 padding: 8.5px 12px;
                 right: 60px;
                 width: 130%;
+                cursor:pointer;
             }
                 .buttonNavbarConnexionNone{
                     display: none;

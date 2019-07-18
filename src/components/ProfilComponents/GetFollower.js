@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import { NavLink } from 'react-router-dom';
 import "./GetFollower.scss"
+
 // image
 
 import iconSearch from '../../Images-tripitto/Icon/TRAILING ICON.png'
@@ -11,8 +12,13 @@ import iconArrow from '../../Images-tripitto/iconAbonnements/icon-arrow.png'
 class GetFollower extends Component {
     state = {
         Follower: [],
+        visible: 6,
     };
-
+    loadMore=() =>{
+        this.setState((prev) => {
+          return {visible: prev.visible + 4};
+        });
+      }
     getFollower = async () => {
         const res = await axios.get('http://localhost:3000/follower/get_follower')
         this.setState({ Follower: res.data })
@@ -86,12 +92,10 @@ class GetFollower extends Component {
                                     </div>
                                 </div>
                                 <div className="bloc-follower">
-                                    {this.state.Follower.map(item => (
-
-
+                                    {this.state.Follower.slice(0,this.state.visible).map(item => (
                                         <div className="bloc-follower-item">
                                             <div className="bloc-follower-info">
-                                                <div>
+                                                <div key={item.id_follower}>
                                                     <img src={item.follower_picture} alt='profilpicture 2' />
                                                 </div>
                                                 <div>
@@ -111,7 +115,9 @@ class GetFollower extends Component {
 
                                 </div>
                                 <div className='bloc-plus'>
-                                    <button><img src={iconPlus} alt='icon plus' /></button>
+                                {this.state.visible < this.state.Follower.length &&
+             <button onClick={this.loadMore} type="button" className="load-more"><img src={iconPlus} alt='icon Plus' /></button>
+          }
                                 </div>
                             </div>
                         </form>

@@ -14,8 +14,6 @@
     padding-bottom: 30px;
 }
 
-
-
 /* Profil columns */
 
 .profil_column_1 {
@@ -31,6 +29,7 @@
 }
 
 .profil_column_3 {
+    padding-top:16vh;
     padding-left: 2vw;
 }
 
@@ -79,6 +78,7 @@
 .bio {
     font-size:90%;
     margin-right: 70px;
+    padding-bottom: 4vh;
 }
 
  /* .generalprofil {
@@ -132,7 +132,7 @@
     visibility: visible;
     border: #344854;
     opacity:1;
-    color: #1BA2A2;
+    color: #1BA2A2;border-bottom: 1px solid #1BA2A2;
 }
 
 .texticonculture {
@@ -148,8 +148,7 @@
 
 .social_general {
     display: flex;
-    flex-direction: row;
-    margin-top: 19.92px;
+    flex-direction: row; 
 }
 
 /* .social {
@@ -158,10 +157,7 @@
 } */
 .social {
     margin-left: 17px;
-    width: 25px;
-    
-    
-    
+    width: 25px; 
 }
 
 .buttonprofil {
@@ -193,7 +189,92 @@
 
 }
 
-.continent {
+.continents {
     display:flex;
+    flex-direction: row;
+    width: 30vw;
+    margin: 30px auto 0;
+    justify-content: space-between;
 }
+
+.itemcontinent:active {
+    border-bottom: 1px solid #1BA2A2;
+}
+
+.filter{
+    margin-left: 9vw;
+    margin-top: 5vh;  
+}
+.w3-select{ 
+        border:12px;
+        background-color: #f4F4F4;
+        width: 77px;
+        }   
+
+
+    /* /css bloc description */
+ 
+.container_blocs_description{
+display: grid;
+grid-template-columns: 50% 50%;
+grid-template-rows: 40% 500px auto;
+flex-direction: row;
+margin-left: 10vw;
+}
+
+.durée_pourcentage{
+     position: relative;
+     top: 45px;
+     left: 4%;
+     display: flex;
+     flex-direction: row;
+ }
+ .durée_description{
+     background-color:black;
+     color:white; 
+     width: 4vw;
+     text-align: center;
+     margin-left: 23vw; 
+ }
+
+ .pourcentage_description{
+    background-color:black;
+    color:rgb(10, 194, 72); 
+    width: 3vw;
+    text-align: center;
+    position: relative;
+ }
+.picture_description img{
+    width: 33vw;
+    height: 37vh; 
+}
+.infos_Profil_description{
+    margin-top: -4vh;
+    display: flex;
+    flex-direction: row;
+}
+.pays_description{
+    padding-right: 12px;
+
+}
+.nb_vues_description{
+    padding-right: 12px;
+    color:rgb(158, 158, 158);
+}
+.Point_description{
+margin-top:-1vh;
+font-size: 40px;
+ padding-right: 12px;
+}
+
+.durée_description{
+    color:rgb(158, 158, 158); 
+}
+.name-personne{
+    margin-top:-7vh;
+}
+
+
+
+
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap');

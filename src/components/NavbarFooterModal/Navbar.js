@@ -3,8 +3,6 @@ import { NavLink } from 'react-router-dom';
 import axios from 'axios'
 import Modal from './Modal'
 import './Modal.scss'
-
-
 import './Navbar.scss'
 import Logo from '../../Images-tripitto/Logo/B&W.png';
 import Search from '../../Images-tripitto/Icons/Search-White.png';
@@ -52,11 +50,13 @@ class Navbar extends Component {
         const america = res.data
         this.setState({ amerique: america })
     }
+
     getautres = async () => {
         const res = await axios.get('http://localhost:3000/travel_information/get_travelinformation_continent_autres')
         const other = res.data
         this.setState({ autres: other })
     }
+
     componentDidMount() {
         this.getafrique()
         this.getasieoceanie()
@@ -86,7 +86,7 @@ class Navbar extends Component {
                                 <li className='Nav_menu'><button className="button_video"><NavLink exact to="/">VIDÉOS</NavLink></button>
                                     <ul className="ul_list">
                                         <div className="container_list">
-                                            <li><a href=" " className='continent_name'>AFRIQUE</a>
+                                       <li><NavLink className="lcontinent_name" exact to="/Afrique_video">AFRIQUE  
                                                 {this.state.afrique.map(afrique => (
                                                     <div key={i++} className="container_list_afrique">
                                                         <p className="list_afrique">
@@ -94,7 +94,8 @@ class Navbar extends Component {
                                                     </div>
                                                 ))}
                                                 <button className="button_countries">...</button>
-                                            </li>
+                                                </NavLink>
+                                         </li>
                                             <li><a href=" " className='continent_name'>ASIE-OCEANIE</a>
                                                 {this.state.asieoceanie.map(asieoceanie => (
                                                     <div key={a++} className="container_list_asieoceanie">
@@ -136,20 +137,33 @@ class Navbar extends Component {
                                                 ))}
                                                 <button className="button_countries">...</button>
                                             </li>
-
                                         </div>
                                     </ul>
                                 </li>
-                                <li><button className='button_video'><NavLink exact to="/">VIDÉASTES</NavLink></button></li>
+                                <li className="li-videaste"><NavLink exact to="/Videaste">VIDÉASTES</NavLink></li>
                             </ul>
-
                         </div>
                         <div className="containerNavRight">
-                            <ul className="Ulbutton">
-                                <li onClick={isModalOpen === true ? this.closeModal : null }><NavLink exact to="/Profil"><img className={this.state.isModalOpen === false ? "buttonNavbarConnexionNone" : "logoAvatar"} src={Avatar} alt="logo tripitto"></img></NavLink></li>
+                        <ul className="Ulbutton" >
+                     <li  className="img_profil" onClick={isModalOpen === true ? this.closeModal : null }>
+                         
+                          <img  className={this.state.isModalOpen === false ? "buttonNavbarConnexionNone" : "logoAvatar"}
+                            src={Avatar} alt="logo tripitto">
+                                 </img> 
+                                    <ul className="Sous_nemu">
+                                    <li><NavLink className="link_DropDown" exact to="/Favoris">Mes favoris</NavLink></li>
+                                    <li><NavLink className="link_DropDown" exact to="/Profil">Gérer mon profil</NavLink></li>
+                                    <li><NavLink className="link_DropDown" exact to="/Profil">Envoyer un avis</NavLink></li>
+                                    
+                                   <li className="li-btn-off"> <button className="btn-deconnection">Se déconnecter</button></li>
+                                    </ul>                        
+                                </li> 
                                 <li className={this.state.isModalOpen === false ? "buttonNavbarConnexionNone" : "notification"}><NotificationPopup /></li>
                                 <li><button onClick={this.openModal} className={this.state.isModalOpen === false ? "buttonNavbarConnexion" : "buttonNavbarConnexionNone"}>SE CONNECTER</button></li>
+<<<<<<< HEAD
 
+=======
+>>>>>>> d19e4bcde0a9e3af61df19cfd3321af7a54f208f
                                 <NavLink to ="/uploadVideo"><li><button className={this.state.isModalOpen === false ? "buttonNavbarChange" : "buttonNavbar"}>PUBLIER</button></li></NavLink>
 
                                 {/* <li><button onClick={this.openModal} className={this.state.isModalOpen === false ? "buttonNavbarChange" : "buttonNavbar"}>PUBLIER</button></li> */}
@@ -168,5 +182,7 @@ class Navbar extends Component {
         )
     }
 }
+
+
 
 export default Navbar

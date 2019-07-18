@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom'
 import './GetAbonnements.scss'
 import iconSearch from '../../Images-tripitto/Icon/TRAILING ICON.png'
 import iconPlus from '../../Images-tripitto/Icon/Plus.png'
@@ -9,8 +9,17 @@ import iconPlus from '../../Images-tripitto/Icon/Plus.png'
 class GetAbonnements extends Component {
     state = {
         Following: [],
+        visible:6,
+        toggleBtnFollowing:false
     };
-
+    showToggleBtnFollowing=()=>{
+        this.setState({toggleBtnFollowing:true})
+    }
+    loadMore=() =>{
+        this.setState((prev) => {
+          return {visible: prev.visible + 4};
+        });
+      }
     getFollowing = async () => {
         const res = await axios.get('http://localhost:3000/following/get_following')
         this.setState({ Following: res.data })
@@ -19,11 +28,9 @@ class GetAbonnements extends Component {
     componentDidMount() {
         this.getFollowing()
     }
-
     render() {
         return (
             <>
-              
                 <div className="bloc-page-profil">
                     <div className="membres-profil">
                         <img src="https://i.ytimg.com/vi/BfCwN4iy6T8/maxresdefault.jpg" alt="pictures profil" />
@@ -85,7 +92,7 @@ class GetAbonnements extends Component {
                                
                                 
                                 <div className="bloc-following">
-                                {this.state.Following.map(item =>(
+                                {this.state.Following.slice(0,this.state.visible).map(item =>(
 
                                     <div className="bloc-notifications-item">
                                         <div>
@@ -93,21 +100,22 @@ class GetAbonnements extends Component {
                                         </div>
                                         <div className="following-items">
                                             <h3>{item.following_user}</h3>
-
                                             <div>
                                                 <p>{item.following_nb_video} vidéos</p>
                                                 <p>{item.following}</p>
                                             </div>
                                         </div>
-                                        <div>
-                                            <button>Abonné</button>
+                                        <div className="btn-abonnements-bloc">
+                                            <button className="btn-abonnments">Abonné</button>
                                         </div>
                                     </div>
                                     ))}
                                  
-                                    <div className='bloc-plus'>
-                                <button><img src={iconPlus} alt='icon plus' /></button>
-                                  </div>     
+                                 <div className='bloc-plus'>
+                                {this.state.visible < this.state.Following.length &&
+             <button onClick={this.loadMore} type="button" className="load-more"><img src={iconPlus} alt='icon Plus' /></button>
+          }
+                       </div> 
                                 </div>
                             </div>
                         </form>
