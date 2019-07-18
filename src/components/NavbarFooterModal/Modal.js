@@ -38,14 +38,9 @@ class Modal extends Component {
 				.then(res => {
 					localStorage.setItem('token', res.headers["x-access-token"])
 					window.location.reload(false);
-					this.props.test()
 					// console.log('token', localStorage.getItem('token'))
 				})				
 		}
-		// const token = localStorage.getItem('token')
-		// if (token) {			 
-		// 	this.props.test()
-		// }
 	}
 
 
@@ -140,7 +135,9 @@ class Modal extends Component {
 
 								{/* BOUTON DE CONNEXION */}
 
-								<button className="button_connexion" onClick="test" ><img src={ButtonFull} alt="button connexion"></img></button>
+								{/* <button className="button_connexion" onClick={this.protectedRoute}><img src={ButtonFull} alt="button connexion"></img></button> */}
+
+								<button className="button_connexion" onClick={() => this.protectedRoute()}><img src={ButtonFull} alt="button connexion"></img></button>
 
 								{/* <button className="button_connexion" onClick={() => this.protectedRoute()}><img src={ButtonFull} onClick={onClose} alt="button connexion"></img></button> */}
 

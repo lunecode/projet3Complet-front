@@ -33,19 +33,46 @@ class Navbar extends Component {
 	}
 
 
+
 	// PERMET DE CACHER LE BOUTTON CONNEXION DE LA NAVBAR SI LOGIN OK
 	hideButtonLoginToken = () => {
 		const token = localStorage.getItem('token')
-		if(token) {
+		if (token) {
 			document.getElementById('displayLoginNone').classList.toggle('buttonNavbarConnexionNone')
 		}
 	}
+
+	// PERMET DE CACHER L'IMAGE DU MENU PROFIL SI TOKEN ABSENT
+	hidedisplayImgProfilToken = () => {
+		const token = localStorage.getItem('token')
+		if (!token) {
+			document.getElementById('displayProfilImg').classList.toggle('img_profil_hide')
+		}
+	}
+
+	// PERMET DE CACHER LA CLOCHE DE NOTIFICATION SI TOKEN ABSENT
+	hideDisplayBellToken = () => {
+		const token = localStorage.getItem('token')
+		if (!token) {
+			document.getElementById('displayNotification').classList.toggle('notification_hide')
+		} else {
+		}
+	}
+
+	// PERMET DE CACHER LE BOUTON DE PUBLICATION SI TOKEN ABSENT
+	hideDisplayUploadButtonToken = () => {
+		const token = localStorage.getItem('token')
+		if (!token) {
+			document.getElementById('displayUploadButton').classList.toggle('buttonNavbar_hide')
+		}
+	}
+
 
 
 	// PERMET D'AFFICHER LE BOUTON DE CONNEXION DE LA NAVBAR SI TOKEN ABSENT
 	displayButtonLoginToken = () => {
 		const token = localStorage.getItem('token')
-		if(!token) {
+		if (!token) {
 			document.getElementById('displayLoginNone').classList.toggle('buttonNavbarConnexionNone')
 		}
 	}
@@ -54,21 +81,13 @@ class Navbar extends Component {
 	// PERMET DE FERMER LA MODAL VIA LE BOUTON CONNEXION DU COMPOSANT DE LA MODAL SI TOKEN OK
 	closeModal = () => {
 		const token = localStorage.getItem('token')
-		if(token) {
+		if (token) {
 			this.setState({ isModalOpen: false })
 			document.getElementById('displayLoginNone').classList.toggle('buttonNavbarConnexionNone')
-		}	
-	}
-
-// PERMET L'AFFICHE DE L'IMAGE DU MENU PROFIL SI TOKEN PRESENT
-
-	displayImgProfilToken = () => {
-		const token = localStorage.getItem('token')
-		if(token) {
-			document.getElementById('displayProfilImg').classList.toggle('img_profil')
-		} else {
 		}
 	}
+
+
 
 
 	// DECONNEXION 
@@ -117,7 +136,9 @@ class Navbar extends Component {
 		this.getamerique()
 		this.getautres()
 		this.hideButtonLoginToken()
-		// this.displayImgProfilToken()
+		this.hidedisplayImgProfilToken()
+		this.hideDisplayBellToken()
+		this.hideDisplayUploadButtonToken()
 	}
 
 	render() {
@@ -222,7 +243,7 @@ class Navbar extends Component {
 										<li><NavLink className="link_DropDown" exact to="/Favoris">Mes favoris</NavLink></li>
 										<li><NavLink className="link_DropDown" exact to="/Profil">Gérer mon profil</NavLink></li>
 										<li><NavLink className="link_DropDown" exact to="/Profil">Envoyer un avis</NavLink></li>
-										<li className="li-btn-off"> <button onClick={this.logout}  className="btn-deconnection">Se déconnecter</button></li>
+										<li className="li-btn-off"> <button onClick={this.logout} className="btn-deconnection">Se déconnecter</button></li>
 									</ul>
 								</li>
 
@@ -233,7 +254,7 @@ class Navbar extends Component {
 
 
 								{/* BOUTON TEST DE LA VERIFICATION DU TOKEN */}
-								{/* <button onClick={this.displayImgProfilToken}>Test</button> */}
+								{/* <button onClick={this.hidedisplayImgProfilToken}>Test</button> */}
 
 
 
@@ -255,9 +276,11 @@ class Navbar extends Component {
 
 
 
+								{/* AFFICHE LA CLOCHE DE NOTIFICATION UNE FOIS CONNECTE */}
+								<li id="displayNotification" className="notification"><NotificationPopup /></li>
 
 
-								{/* Permet l'affichage de la cloche de notification une fois connecté */}
+								{/* Permet l'affichage de la cloche de notification ORIGIN */}
 								{/* <li className={this.state.isModalOpen === false ? "buttonNavbarConnexionNone" : "notification"}><NotificationPopup /></li> */}
 
 
@@ -269,7 +292,11 @@ class Navbar extends Component {
 								<li><button onClick={this.openModal} className={this.state.isModalOpen === false ? "buttonNavbarConnexion" : "buttonNavbarConnexionNone"}>SE CONNECTER</button></li> */}
 
 
-								{/* Permet d'afficher le bouton de publication  */}
+{/* AFFICHE LE BOUTON DE PUBLICATION UNE FOIS CONNECTE */}
+								<NavLink to="/uploadVideo"><li><button id="displayUploadButton" className="buttonNavbar">PUBLIER</button></li></NavLink>
+
+
+								{/* Permet d'afficher le bouton de publication origin  */}
 								{/* <NavLink to="/uploadVideo"><li><button className={this.state.isModalOpen === false ? "buttonNavbarChange" : "buttonNavbar"}>PUBLIER</button></li></NavLink> */}
 
 							</ul>
@@ -279,7 +306,7 @@ class Navbar extends Component {
 
 					{/* COMPOSANT QUI DECLENCHE L'OUVERTURE DE LA MODAL */}
 					<div className="containerModal">
-						<Modal crossClose={this.closeCrossModal} isOpen={isModalOpen} onClose={this.closeModal} test={this.displayButtonLoginToken} />
+						<Modal crossClose={this.closeCrossModal} isOpen={isModalOpen} onClose={this.closeModal} />
 					</div>
 
 
