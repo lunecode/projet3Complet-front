@@ -12,7 +12,7 @@ import axios from "axios"
 
 
 class Profil extends Component {
-  state={
+  state = {
   }
   submitHandler = e => {
     e.preventDefault()
@@ -37,11 +37,11 @@ class Profil extends Component {
   changeHandler = (e) => {
     this.setState({ [e.target.name]: e.target.value })
   }
-  handleOpenModal =()=> {
+  handleOpenModal = () => {
     this.setState({ showModal: true });
   }
-  
-  handleCloseModal= () =>{
+
+  handleCloseModal = () => {
     this.setState({ showModal: false });
   }
   //les Enumes de la table profile.//
@@ -127,43 +127,47 @@ class Profil extends Component {
   Enum21 = () => {
     this.setState({ ingredients: 21 })
   }
-//ouvrir le fichier et le convertir  en binair
-handelchange = (e) => {
-  let files = e.target.files;
-  let reader = new FileReader();
-  reader.readAsDataURL(files[0]);
-  reader.onload = (e) => {
-    this.setState({ profil_link: e.target.result }, () => {
-      console.log("video data", this.state.profil_link)
-    })
+  //ouvrir le fichier et le convertir  en binair
+  handelchange = (e) => {
+    let files = e.target.files;
+    let reader = new FileReader();
+    reader.readAsDataURL(files[0]);
+    reader.onload = (e) => {
+      this.setState({ profil_link: e.target.result }, () => {
+        // console.log("video data", this.state.profil_link)
+      })
+    }
   }
-}
-//convertir en binair
-blob2file = (blobData) => {
-  const fd = new FormData();
-  fd.set('a', blobData);
-  return fd.get('a');
-}
+  //convertir en binair
+  blob2file = (blobData) => {
+    const fd = new FormData();
+    fd.set('a', blobData);
+    return fd.get('a');
+  }
 
-myFunction=(e)=>{
-  
-  const x = document.getElementById("myImg").src;
-  document.getElementById("demo").innerHTML = x;
-}
-  
+  myFunction = (e) => {
+
+    const x = document.getElementById("myImg").src;
+    document.getElementById("demo").innerHTML = x;
+  }
+
   render() {
+
+    const url = window.location.href;
+    const idProfil = url.slice(32)
+
     return (
       <div className="pageprofil" >
-        <form  onSubmit={this.submitHandler}>
+        <form onSubmit={this.submitHandler}>
           <PostProfilInfo
             {...this.state}
             handleCheckbox={this.handleCheckbox}
-            changeHandler={this.changeHandler} 
-            handelchange={this.handelchange} 
-            blob2file={this.blob2file }  
-            myFunction={this.myFunction}   
+            changeHandler={this.changeHandler}
+            handelchange={this.handelchange}
+            blob2file={this.blob2file}
+            myFunction={this.myFunction}
           />
-      
+
           <PostEnumProfil
             {...this.state}
             profil1={this.profil1}
@@ -176,7 +180,7 @@ myFunction=(e)=>{
 
           <PostBioProfil
             {...this.state}
-            changeHandler={this.changeHandler} 
+            changeHandler={this.changeHandler}
           />
 
           <PostIngedients
@@ -215,7 +219,7 @@ myFunction=(e)=>{
           />
 
           <div className="save-btn">
-          <NavLink exact to="/ProfilDescription"><button type="submit" >SAUVEGARDER</button></NavLink>
+            <NavLink exact to="/ProfilDescription"><button type="submit" >SAUVEGARDER</button></NavLink>
           </div>
         </form>
       </div>

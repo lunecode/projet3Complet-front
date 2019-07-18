@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import axios from 'axios'
+import jwt from 'jsonwebtoken'
+
 import Modal from './Modal'
 import './Modal.scss'
 import './Navbar.scss'
@@ -19,6 +21,7 @@ class Navbar extends Component {
 		europe: [],
 		amerique: [],
 		autres: [],
+		idDecoded: ''
 	};
 
 
@@ -88,8 +91,6 @@ class Navbar extends Component {
 	}
 
 
-
-
 	// DECONNEXION 
 	logout = () => {
 		localStorage.clear();
@@ -99,7 +100,17 @@ class Navbar extends Component {
 
 
 
-
+	testDecodeToken = () => {
+		const token = localStorage.getItem('token')
+		if (token) {
+			const decoded = jwt.decode(token)
+			const idProfilDecoded = decoded.id_profil
+			this.setState({ idDecoded: idProfilDecoded })
+		}
+		// console.log(decoded)
+		// console.log(idProfilDecoded)
+		// console.log(this.state.idDecoded)
+	}
 
 	getafrique = async () => {
 		const res = await axios.get('http://localhost:3000/travel_information/get_travelinformation_continent_afrique')
@@ -139,6 +150,7 @@ class Navbar extends Component {
 		this.hidedisplayImgProfilToken()
 		this.hideDisplayBellToken()
 		this.hideDisplayUploadButtonToken()
+		this.testDecodeToken()
 	}
 
 	render() {
@@ -148,6 +160,7 @@ class Navbar extends Component {
 		let o = 1
 		const { isModalOpen } = this.state
 
+		// console.log(this.state.idDecoded)
 
 		return (
 			<div>
@@ -241,12 +254,16 @@ class Navbar extends Component {
 									<img className='logoAvatar' src={Avatar} alt='logo tripitto'></img>
 									<ul className="Sous_nemu">
 										<li><NavLink className="link_DropDown" exact to="/Favoris">Mes favoris</NavLink></li>
-										<li><NavLink className="link_DropDown" exact to="/Profil">Gérer mon profil</NavLink></li>
+
+										<NavLink to={`/Profil/${this.state.idDecoded}`} className="link_DropDown"><li>Gérer mon profil</li></NavLink>
+
 										<li><NavLink className="link_DropDown" exact to="/Profil">Envoyer un avis</NavLink></li>
 										<li className="li-btn-off"> <button onClick={this.logout} className="btn-deconnection">Se déconnecter</button></li>
 									</ul>
 								</li>
 
+
+								{/* <NavLink to={`/playvideo/${nextpicture.id_general_video}`} ><img src={nextpicture.cover_picture} className={"nextpictureimg" + a} key={a++} /></NavLink> */}
 
 
 								{/* BOUTON QUI OUVRE LA MODAL DE LOGIN */}
@@ -292,7 +309,7 @@ class Navbar extends Component {
 								<li><button onClick={this.openModal} className={this.state.isModalOpen === false ? "buttonNavbarConnexion" : "buttonNavbarConnexionNone"}>SE CONNECTER</button></li> */}
 
 
-{/* AFFICHE LE BOUTON DE PUBLICATION UNE FOIS CONNECTE */}
+								{/* AFFICHE LE BOUTON DE PUBLICATION UNE FOIS CONNECTE */}
 								<NavLink to="/uploadVideo"><li><button id="displayUploadButton" className="buttonNavbar">PUBLIER</button></li></NavLink>
 
 

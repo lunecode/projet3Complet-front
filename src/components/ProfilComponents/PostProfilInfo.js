@@ -4,7 +4,9 @@ import { NavLink } from 'react-router-dom'
 import UploadImgProfil from '../../components/ProfilComponents/UploadImgProfil.js';
 
 
+
 const PostProfilInfo = (props) => {
+
   return (
     <div className="bloc-page-profil">
       <div className="membres-profil">
@@ -19,13 +21,17 @@ const PostProfilInfo = (props) => {
           <ul>
             <li>
               <NavLink
-             className="nav"
+                className="nav"
                 to="/Profil" exact>Profil</NavLink>
             </li>
+
+
             <li>
-              <NavLink
-                to="/Video" exact >Video</NavLink>
+              <NavLink to='/Video'>Video</NavLink>
             </li>
+
+
+
             <li>
               <NavLink
                 to="/Abonnements" exact >Abonnements</NavLink>
@@ -33,8 +39,8 @@ const PostProfilInfo = (props) => {
             <li>
               <NavLink
                 to="/Abonnés" exact >Abonnés</NavLink>
-               </li>
-               <li>
+            </li>
+            <li>
               <NavLink
                 to="/Notifications" exact >Notifications</NavLink>
             </li>
@@ -49,8 +55,8 @@ const PostProfilInfo = (props) => {
           </ul>
 
         </div>
-       
-        <form  className="grid-profil-info">
+
+        <form className="grid-profil-info">
           <div>
             <h2>Profil</h2>
             <div className='field-profil-picture-bloc'>

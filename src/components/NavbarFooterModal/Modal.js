@@ -38,7 +38,7 @@ class Modal extends Component {
 				.then(res => {
 					localStorage.setItem('token', res.headers["x-access-token"])
 					window.location.reload(false);
-					// console.log('token', localStorage.getItem('token'))
+					console.log('token', localStorage.getItem('token'))
 				})				
 		}
 	}
