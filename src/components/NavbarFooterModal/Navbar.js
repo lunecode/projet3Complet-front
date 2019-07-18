@@ -26,6 +26,7 @@ class Navbar extends Component {
 
 
 
+
 	openModal = () => {
 		this.setState({ isModalOpen: true })
 	}

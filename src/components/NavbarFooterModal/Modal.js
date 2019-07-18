@@ -23,6 +23,66 @@ class Modal extends Component {
 		CloseModal: false,
 	}
 
+
+	// onSubmitLogin = e => {
+	// 	e.preventDefault()
+	// 	const email = e.target.email.value
+	// 	const password = e.target.password.value
+	// 	if (email == '' || password == '') {
+	// 		alert('Merci de renseigner les champs')
+	// 	} else  {
+	// 		axios
+	// 			.post('http://localhost:3000/login/login', {
+	// 				email: e.target.email.value,
+	// 				password: e.target.password.value
+	// 			})
+	// 			.then(res => {
+	// 				localStorage.setItem('token', res.headers["x-access-token"])
+	// 				window.location.reload(true);
+	// 				console.log('token', localStorage.getItem('token'))
+	// 			})				
+	// 	}
+	// }
+
+
+	// onSubmitLogin = e => {
+	// 	e.preventDefault()
+	// 	const email = e.target.email.value
+	// 	const password = e.target.password.value
+	// 	if (email == '' || password == '') {
+	// 		alert('Merci de renseigner les champs')
+	// 	} else {
+	// 		axios
+	// 			.post('http://localhost:3000/login/login', {
+	// 				email: e.target.email.value,
+	// 				password: e.target.password.value
+	// 			})
+	// 			.then(res => {
+	// 				localStorage.setItem('token', res.headers["x-access-token"])
+	// 				const token = localStorage.getItem('token');
+	// 				if (token) {
+	// 					axios({
+	// 						method: 'POST',
+	// 						url: 'http://localhost:3000/login/protected',
+	// 						headers: { 'Authorization': `Bearer ${token}`,}
+	// 						.then(res => {
+	// 							if (res.data.message == "Token OK") {
+	// 								localStorage.setItem('token', res.headers["x-access-token"])
+	// 								window.location.reload(true)
+	// 								console.log('token', localStorage.getItem('token'))
+	// 							} 
+	// 							else {
+	// 								console.log('error');
+	// 							}
+	// 						})
+	// 					})
+	// 				}
+	// 			})
+	// 	}
+	// };
+
+
+
 	onSubmitLogin = e => {
 		e.preventDefault()
 		const email = e.target.email.value
@@ -37,11 +97,27 @@ class Modal extends Component {
 				})
 				.then(res => {
 					localStorage.setItem('token', res.headers["x-access-token"])
-					window.location.reload(false);
-					console.log('token', localStorage.getItem('token'))
-				})				
+					const token = localStorage.getItem('token')
+					if (token) {
+						axios({
+							method: 'POST',
+							url: 'http://localhost:3000/login/protected',
+							headers: {
+								'Authorization': `Bearer ${token}`,
+							}
+						})
+						.then(res => {
+							if(res.data.message == 'Token OK') {
+								window.location.reload(true)
+							} else {
+								console.log('hahah')
+							}
+						})
+					}
+				})
 		}
 	}
+
 
 
 	protectedRoute = () => {
@@ -54,9 +130,14 @@ class Modal extends Component {
 			}
 		})
 			.then(res => {
-				console.log(res)
+				// console.log(res)
+				// console.log(res.data)
+				console.log(res.data.message)
+				if (!res.data.message == "Token OK") {
+				}
 			})
 	}
+
 
 
 
@@ -88,6 +169,7 @@ class Modal extends Component {
 		this.closeModalForgottenPassword()
 		this.openModalLogin()
 		this.closeModalLogin()
+
 	}
 
 	render() {
@@ -137,7 +219,7 @@ class Modal extends Component {
 
 								{/* <button className="button_connexion" onClick={this.protectedRoute}><img src={ButtonFull} alt="button connexion"></img></button> */}
 
-								<button className="button_connexion" onClick={() => this.protectedRoute()}><img src={ButtonFull} alt="button connexion"></img></button>
+								<button className="button_connexion"><img src={ButtonFull} alt="button connexion"></img></button>
 
 								{/* <button className="button_connexion" onClick={() => this.protectedRoute()}><img src={ButtonFull} onClick={onClose} alt="button connexion"></img></button> */}
 
