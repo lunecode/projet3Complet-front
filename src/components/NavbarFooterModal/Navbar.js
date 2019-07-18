@@ -117,7 +117,7 @@ class Navbar extends Component {
 		this.getamerique()
 		this.getautres()
 		this.hideButtonLoginToken()
-		this.displayImgProfilToken()
+		// this.displayImgProfilToken()
 	}
 
 	render() {
@@ -216,7 +216,7 @@ class Navbar extends Component {
 
 								{/* AFFICHE L'AVATAR DU PROFIL ET LE MENU */}
 
-								<li id="displayProfilImg" className="img_profil_hide">
+								<li id="displayProfilImg" className="img_profil">
 									<img className='logoAvatar' src={Avatar} alt='logo tripitto'></img>
 									<ul className="Sous_nemu">
 										<li><NavLink className="link_DropDown" exact to="/Favoris">Mes favoris</NavLink></li>
@@ -233,7 +233,7 @@ class Navbar extends Component {
 
 
 								{/* BOUTON TEST DE LA VERIFICATION DU TOKEN */}
-								<button onClick={this.displayImgProfilToken}>Test</button>
+								{/* <button onClick={this.displayImgProfilToken}>Test</button> */}
 
 
 
