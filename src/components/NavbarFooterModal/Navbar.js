@@ -27,6 +27,27 @@ class Navbar extends Component {
 
 
 
+	protectedRoute = () => {
+		const token = localStorage.getItem('token')
+		axios({
+			method: 'POST',
+			url: 'http://localhost:3000/login/protected',
+			headers: {
+				'Authorization': `Bearer ${token}`,
+			}
+		})
+			.then(res => {
+				// console.log(res)
+				// console.log(res.data)
+				console.log(res.data.message)
+				if (!res.data.message == "Token OK") {
+				}
+			})
+	}
+
+	
+
+
 	openModal = () => {
 		this.setState({ isModalOpen: true })
 	}

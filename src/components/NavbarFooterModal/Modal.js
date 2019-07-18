@@ -98,7 +98,11 @@ class Modal extends Component {
 				.then(res => {
 					localStorage.setItem('token', res.headers["x-access-token"])
 					const token = localStorage.getItem('token')
-					if (token) {
+					if (token == null) {
+						// window.location.reload(false)
+						console.log('nono')
+						
+					} else {
 						axios({
 							method: 'POST',
 							url: 'http://localhost:3000/login/protected',
@@ -112,11 +116,52 @@ class Modal extends Component {
 							} else {
 								console.log('hahah')
 							}
+							console.log(res)
 						})
 					}
 				})
 		}
 	}
+
+
+
+	// onSubmitLogin = e => {
+	// 	e.preventDefault()
+	// 	const email = e.target.email.value
+	// 	const password = e.target.password.value
+	// 	if (email == '' || password == '') {
+	// 		alert('Merci de renseigner les champs')
+	// 	} else  {
+	// 		axios
+	// 			.post('http://localhost:3000/login/login', {
+	// 				email: e.target.email.value,
+	// 				password: e.target.password.value
+	// 			})
+	// 			.then(res => {
+	// 				localStorage.setItem('token', res.headers["x-access-token"])
+	// 				const token = localStorage.getItem('token')
+	// 				if (token) {
+	// 					axios({
+	// 						method: 'POST',
+	// 						url: 'http://localhost:3000/login/protected',
+	// 						headers: {
+	// 							'Authorization': `Bearer ${token}`,
+	// 						}
+	// 					})
+	// 					.then(res => {
+	// 						if(res.data.message == 'Token OK') {
+	// 							window.location.reload(true)
+	// 						} else {
+	// 							console.log('hahah')
+	// 						}
+	// 						console.log(res)
+	// 					})
+	// 				} else {
+	// 					alert('Erreur d\'email ou de mot de passe')
+	// 				}
+	// 			})
+	// 	}
+	// }
 
 
 
