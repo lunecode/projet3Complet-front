@@ -41,6 +41,7 @@ class VideoProfil extends Component {
 		const token = localStorage.getItem('token')
 		const idProfilDecod = jwt.decode(token)
 		const idProfil = idProfilDecod.id_profil
+		console.log(idProfilDecod)
 		console.log(idProfil)
 
 		return (

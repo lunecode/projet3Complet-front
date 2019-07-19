@@ -17,13 +17,28 @@ class Profil extends Component {
   state = {
   }
  
+  // submitHandler = e => {
+  //   e.preventDefault()
+  //   console.log(this.state)
+  //   axios.post('http://localhost:3000/profil/insert_profil', this.state)
+  //     .then(response => {
+  //       console.log(response)
+  //     })
+  //     .catch(error => {
+  //       console.log(error)
+  //     })
+  // }
+
+
+
   submitHandler = e => {
     e.preventDefault()
-    const token = localStorage.getItem('token')
-    const tokenDecoded = jwt.decoded(token)
-    const idProfilDecoded = tokenDecoded.id_profil
 
-    console.log(this.state)
+    const token = localStorage.getItem('token')
+    const tokenDecoded = jwt.decode(token)
+    const idProfilDecoded = tokenDecoded.id_profil
+    console.log(idProfilDecoded)
+
     axios.put(`http://localhost:3000/profil/update_profil/${idProfilDecoded}`, this.state)
       .then(response => {
         console.log(response)
@@ -33,6 +48,26 @@ class Profil extends Component {
       })
   }
 
+
+  // submitHandler = e => {
+  //   e.preventDefault()
+  //   const token = localStorage.getItem('token')
+  //   const tokenDecoded = jwt.decoded(token)
+  //   const idProfilDecoded = tokenDecoded.id_profil
+
+  //   console.log(idProfilDecoded)
+  //   axios.put(`http://localhost:3000/profil/update_profil/${idProfilDecoded}`, this.state)
+  //     .then(response => {
+  //       console.log(response)
+  //     })
+  //     .catch(error => {
+  //       console.log(error)
+  //     })
+  // }
+
+
+
+
   handleCheckbox = (e) => {
     e.preventDefault()
     const target = e.target;
@@ -40,8 +75,6 @@ class Profil extends Component {
     const name = target.name;
     this.setState({ [name]: value });
   }
-
-
 
   changeHandler = (e) => {
     this.setState({ [e.target.name]: e.target.value })
@@ -136,40 +169,36 @@ class Profil extends Component {
   Enum21 = () => {
     this.setState({ ingredients: 21 })
   }
-  //ouvrir le fichier et le convertir  en binair
-  handelchange = (e) => {
-    let files = e.target.files;
-    let reader = new FileReader();
-    reader.readAsDataURL(files[0]);
-    reader.onload = (e) => {
-      this.setState({ profil_link: e.target.result }, () => {
-        // console.log("video data", this.state.profil_link)
-      })
-    }
-  }
-  //convertir en binair
-  blob2file = (blobData) => {
-    const fd = new FormData();
-    fd.set('a', blobData);
-    return fd.get('a');
-  }
+  // //ouvrir le fichier et le convertir  en binair
+  // handelchange = (e) => {
+  //   let files = e.target.files;
+  //   let reader = new FileReader();
+  //   reader.readAsDataURL(files[0]);
+  //   reader.onload = (e) => {
+  //     this.setState({ profil_link: e.target.result }, () => {
+  //       // console.log("video data", this.state.profil_link)
+  //     })
+  //   }
+  // }
 
-  myFunction = (e) => {
-    const x = document.getElementById("myImg").src;
-    document.getElementById("demo").innerHTML = x;
-  }
+  
+  //convertir en binair
+  // blob2file = (blobData) => {
+  //   const fd = new FormData();
+  //   fd.set('a', blobData);
+  //   return fd.get('a');
+  // }
+
+  // myFunction = (e) => {
+
+  //   const x = document.getElementById("myImg").src;
+  //   document.getElementById("demo").innerHTML = x;
+  // }
 
   render() {
-    const token = localStorage.getItem('token')
-    const tokenDecoded = jwt.decode(token)
-    const idProfilDecoded = tokenDecoded.id_profil
-    console.log(idProfilDecoded)
 
-
-
-
-    const url = window.location.href;
-    const idProfil = url.slice(32)
+    // const url = window.location.href;
+    // const idProfil = url.slice(32)
 
     return (
       <div className="pageprofil" >
@@ -179,10 +208,9 @@ class Profil extends Component {
             handleCheckbox={this.handleCheckbox}
             changeHandler={this.changeHandler}
             handelchange={this.handelchange}
-            blob2file={this.blob2file}
-            myFunction={this.myFunction}
+            // blob2file={this.blob2file}
+            // myFunction={this.myFunction}
           />
-
 
           <PostEnumProfil
             {...this.state}
@@ -236,7 +264,7 @@ class Profil extends Component {
           />
 
           <div className="save-btn">
-            <NavLink exact to="/ProfilDescription"><button type="submit" >SAUVEGARDER</button></NavLink>
+            <button type="submit" >SAUVEGARDER</button>
           </div>
         </form>
       </div>
