@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'
+
 import './DetailledInfo.css';
 // import Weather from '../../Images-tripitto/Icon/etape/meteo/nuagegris.png';
 // import Village from '../../Images-tripitto/Icon/etape/active/village.png';

@@ -6,13 +6,17 @@ import PostBioProfil from '../components/ProfilComponents/PostBioProfil';
 import PostIngedients from '../components/ProfilComponents/PostIngedients';
 import Socialprofil from '../components/ProfilComponents/Socialprofil';
 import { NavLink } from 'react-router-dom';
+
+
 import "./Profil.scss"
 import "../components/ProfilComponents/PostProfilInfo.css"
 import axios from "axios"
 
 
+
 class Profil extends Component {
   state={
+    
   }
   submitHandler = e => {
     e.preventDefault()
@@ -21,6 +25,12 @@ class Profil extends Component {
       .then(response => {
         console.log(response)
       })
+      .then( 
+        //Pour que  button submit renvoie vers la page ProfilDescription
+        this.props.history.push("/ProfilDescription"),
+        //permet de rafraichir la page pour afficher le Get
+        window.location.reload(true)
+     )
       .catch(error => {
         console.log(error)
       })
@@ -128,30 +138,13 @@ class Profil extends Component {
     this.setState({ ingredients: 21 })
   }
 //ouvrir le fichier et le convertir  en binair
-handelchange = (e) => {
-  let files = e.target.files;
-  let reader = new FileReader();
-  reader.readAsDataURL(files[0]);
-  reader.onload = (e) => {
-    this.setState({ profil_link: e.target.result }, () => {
-      console.log("video data", this.state.profil_link)
-    })
-  }
-}
-//convertir en binair
-blob2file = (blobData) => {
-  const fd = new FormData();
-  fd.set('a', blobData);
-  return fd.get('a');
-}
 
-myFunction=(e)=>{
-  
-  const x = document.getElementById("myImg").src;
-  document.getElementById("demo").innerHTML = x;
-}
-  
+
+ 
   render() {
+    console.log(this.state);
+  
+  
     return (
       <div className="pageprofil" >
         <form  onSubmit={this.submitHandler}>
@@ -160,8 +153,7 @@ myFunction=(e)=>{
             handleCheckbox={this.handleCheckbox}
             changeHandler={this.changeHandler} 
             handelchange={this.handelchange} 
-            blob2file={this.blob2file }  
-            myFunction={this.myFunction}   
+           
           />
       
           <PostEnumProfil
@@ -203,6 +195,7 @@ myFunction=(e)=>{
             Enum21={this.Enum21}
             Enum22={this.Enum22}
             changeHandler={this.changeHandler}
+      
           />
 
           <AutoriseContact
@@ -213,9 +206,12 @@ myFunction=(e)=>{
             {...this.state}
             changeHandler={this.changeHandler}
           />
-
+          
           <div className="save-btn">
-          <NavLink exact to="/ProfilDescription"><button type="submit" >SAUVEGARDER</button></NavLink>
+
+      <button type="submit" onSubmit={this.submitHandler}>SAUVEGARDER</button>  
+      {/* <NavLink to="/ProfilDescription"><button type="submit" onSubmit={this.submitHandler}>SAUVEGARDER</button></NavLink>  */}
+      {/* <button type="submit" onSubmit={this.submitHandler}  onClick={this.functionName}>SAUVEGARDER</button> */}
           </div>
         </form>
       </div>

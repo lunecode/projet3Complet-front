@@ -51,6 +51,7 @@ $colorButton: #5dd8dc;
             justify-content: space-around;
             list-style: none;
             width: 30%;
+           
             .li-videaste{
               margin-top:3.7vh;
             }
@@ -107,12 +108,14 @@ $colorButton: #5dd8dc;
                     display: none;
                     background-color: white;
                     position: absolute;
+                    
                     right:13vw;
                     width:180px;
                     height:205px;
                     border:1px solid #1BA2A2;
                     padding-top: 20px;
                     padding-left:20px;
+                    z-index:2;
                     li{
                    
                         padding-bottom:40px;

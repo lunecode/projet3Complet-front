@@ -43,8 +43,9 @@
                     margin-top: 8px;
                     font-size: 17px;
                     cursor: pointer;
-                    left:25px;
+                    left:2px;
                     top:2px;
+                    height: 47px;
                 }
                 input{
                     margin-right:20px;
@@ -118,6 +119,7 @@
                     margin-top:20px;
                     cursor: pointer;
                      }
+                 
                  }
                   
                 }
@@ -135,6 +137,7 @@
           button{
               background:none;
               border:none;
+              cursor:pointer;
           }
     }
 }
