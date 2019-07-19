@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import axios from 'axios'
 
 import './DetailledInfo.css';
-import Weather from '../../Images-tripitto/Icon/etape/meteo/nuagegris.png';
-import Village from '../../Images-tripitto/Icon/etape/active/village.png';
+// import Weather from '../../Images-tripitto/Icon/etape/meteo/nuagegris.png';
+// import Village from '../../Images-tripitto/Icon/etape/active/village.png';
+// import Moto from '../../Images-tripitto/Icon/Voyage/Moto.png';
 import Bed from '../../Images-tripitto/Icon/hebergement.png';
 import Food from '../../Images-tripitto/Icon/Ingredients/plaisir_culinaire.png';
 import Museum from '../../Images-tripitto/Icon/Visites.png';

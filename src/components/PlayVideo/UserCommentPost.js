@@ -8,6 +8,7 @@ import Picture from '../../Images-tripitto/Icon/User/hover.png';
 class UserCommentPost extends Component {
     state = {
         comment: '',
+        author_comment: '',
         general_video_id_general_video: '',
         // popularity_id_popularity: '',
         // profil_id_profil: '',
@@ -23,6 +24,7 @@ submitHandler = e => {
     axios.post('http://localhost:3000/comment/post_data_comment', this.state)
     .then(response => {
         console.log(response)
+        window.location.reload(false)
     })
     .catch(error => {
         console.log(error)
@@ -31,19 +33,23 @@ submitHandler = e => {
 }
 
 render() {
-    const { comment, profil_id_profil, popularity_id_popularity, general_video_id_general_video } = this.state
+    const { author_comment, comment, profil_id_profil, popularity_id_popularity, general_video_id_general_video } = this.state
 
     const url = window.location.href; 
     this.state.general_video_id_general_video = url.slice(32)
 
     return (
-    
+
     <div className="container_post">
         <form onSubmit={this.submitHandler}>
             <div className="myComment">
-            <img className="pictureuser" src={Picture} alt= "pictureuser"/>
+            <div className="com">
+                <img className="pictureuser" src={Picture} alt= "pictureuser"/>
+                <input className="input-name" type='text' name="author_comment" value={author_comment} onChange={this.changeHandler} placeholder="Votre nom"/>
+            </div>
             <div className="comment">
-            <textarea className="userComment" type='text' name="comment" value={comment} onChange={this.changeHandler} placeholder="Ajouter un commentaire..." rows="(" cols="80"/>
+            
+            <textarea className="userComment" type='text' name="comment" value={comment} onChange={this.changeHandler} placeholder="Ajouter un commentaire" rows="1" cols="70"/>
             </div>
             <div>
 
@@ -56,7 +62,7 @@ render() {
             <input type="hidden" name="general_video_id_general_video" value={general_video_id_general_video} onChange={this.changeHandler} />
 
             </div>
-            <button type="submit">Submit</button>
+            <button className="btn" type="submit">Submit</button>
             </div>
         </form>
         

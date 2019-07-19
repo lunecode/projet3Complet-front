@@ -22,7 +22,9 @@
     /* width:100%;  */
     display: flex;
     justify-content: space-between;
+    color: #525252;
     /* border-bottom: 2px solid lightgray; */
+    
 
 } 
 
@@ -55,3 +57,21 @@
     width:100%;
 } */
 
+.container_date{
+    margin-bottom: 2%;
+}
+
+.comment_date{
+    color: #525252;
+    font-size:14px;
+}
+
+.author{
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.display_com{
+    padding-left: 11%;
+    
+}
