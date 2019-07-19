@@ -24,6 +24,7 @@ submitHandler = e => {
     .then(response => {
         console.log(response)
     })
+    .then( window.location.reload(true))
     .catch(error => {
         console.log(error)
     })

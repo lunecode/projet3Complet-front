@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import jwt from 'jsonwebtoken'
 import AutoriseContact from '../components/ProfilComponents/AutoriseContact'
 import PostProfilInfo from '../components/ProfilComponents/PostProfilInfo'
 import PostEnumProfil from '../components/ProfilComponents/PostEnumProfil';
@@ -49,14 +50,20 @@ class Profil extends Component {
 
 
   }
+ 
+
+
   submitHandler = e => {
     e.preventDefault()
-     console.log(this.state)
-      axios.post('http://localhost:3000/profil/insert_profil', this.state)
+    const token = localStorage.getItem('token')
+    const tokenDecoded = jwt.decode(token)
+    const idProfilDecoded = tokenDecoded.id_profil
+    console.log(idProfilDecoded)
+
+    axios.put(`http://localhost:3000/profil/update_profil/${idProfilDecoded}`, this.state)
       .then(response => {
         console.log(response)
       })
-   
     //   .then( 
     //     //Pour que  button submit renvoie vers la page ProfilDescription
     //     this.props.history.push("/ProfilDescription"),
@@ -67,6 +74,26 @@ class Profil extends Component {
         console.log(error)
       })
   }
+
+
+  // submitHandler = e => {
+  //   e.preventDefault()
+  //   const token = localStorage.getItem('token')
+  //   const tokenDecoded = jwt.decoded(token)
+  //   const idProfilDecoded = tokenDecoded.id_profil
+
+  //   console.log(idProfilDecoded)
+  //   axios.put(`http://localhost:3000/profil/update_profil/${idProfilDecoded}`, this.state)
+  //     .then(response => {
+  //       console.log(response)
+  //     })
+  //     .catch(error => {
+  //       console.log(error)
+  //     })
+  // }
+
+
+
 
   handleCheckbox = (e) => {
     e.preventDefault()
@@ -79,11 +106,11 @@ class Profil extends Component {
   changeHandler = (e) => {
     this.setState({ [e.target.name]: e.target.value })
   }
-  handleOpenModal =()=> {
+  handleOpenModal = () => {
     this.setState({ showModal: true });
   }
-  
-  handleCloseModal= () =>{
+
+  handleCloseModal = () => {
     this.setState({ showModal: false });
   }
   //les Enumes de la table profile.//
@@ -221,11 +248,12 @@ class Profil extends Component {
  
   render() {
     console.log(this.state);
+ 
   
-  
+
     return (
       <div className="pageprofil" >
-        <form  onSubmit={this.submitHandler}>
+        <form onSubmit={this.submitHandler}>
           <PostProfilInfo
             {...this.state}
             handleCheckbox={this.handleCheckbox}
@@ -233,7 +261,7 @@ class Profil extends Component {
             handelchange={this.handelchange} 
            
           />
-      
+
           <PostEnumProfil
             {...this.state}
             profil1={this.profil1}
@@ -246,7 +274,7 @@ class Profil extends Component {
 
           <PostBioProfil
             {...this.state}
-            changeHandler={this.changeHandler} 
+            changeHandler={this.changeHandler}
           />
 
           <PostIngedients
@@ -296,6 +324,5 @@ class Profil extends Component {
     )
   }
 }
-
 
 export default Profil;
