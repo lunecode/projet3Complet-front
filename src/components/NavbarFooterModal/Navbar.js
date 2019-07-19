@@ -277,7 +277,7 @@ class Navbar extends Component {
 									<ul className="Sous_nemu">
 										<li><NavLink className="link_DropDown" exact to="/Favoris">Mes favoris</NavLink></li>
 
-										<NavLink to={`/Profil/${this.state.idDecoded}`} className="link_DropDown"><li>Gérer mon profil</li></NavLink>
+										<li><NavLink to='/Profil/' className="link_DropDown"><li>Gérer mon profil</li></NavLink></li>
 
 										<li><NavLink className="link_DropDown" exact to="/Profil">Envoyer un avis</NavLink></li>
 {/* 
