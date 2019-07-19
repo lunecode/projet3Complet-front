@@ -56,10 +56,6 @@ render() {
     let separator = '/'
     
 
-        
-
-    
-    
     return ( 
     <>
         {this.state.comment.filter(item =>item.general_video_id_general_video == idVideo ).map(item =>(
