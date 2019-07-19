@@ -26,7 +26,7 @@
     background-color: #F4F4F4;
     border-bottom: 2px solid gray;
     font: 16px Arial, Helvetica, sans-serif;
-    margin-left: 3%;
+    margin-left: 2%;
     /* font-size: 15px; */
 }
 
@@ -41,11 +41,9 @@ textarea{
 
 .input-name{
     margin-bottom: 3%;
-   
     margin-left: 3%;
     border:none;
     /* padding:1%; */
-    
     background-color: #F4F4F4;
 	outline: none;
 	display: block;
