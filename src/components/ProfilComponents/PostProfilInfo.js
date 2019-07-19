@@ -93,7 +93,8 @@ const PostProfilInfo = (props) => {
             </div>
             <div>
               <label htmlFor="birth_date">Date de naissance</label>
-              <input type="text" name="birth_date" value={props.birth_date} onChange={props.changeHandler} placeholder='1997/02/02' className='field-profil-bloc-3' />
+              <input  type="date" min="1990-01-01" max="2050-01-01" name="birth_date" value={props.birth_date} onChange={props.changeHandler}  />
+              {/* <input type="text" name="birth_date" value={props.birth_date} onChange={props.changeHandler} placeholder='1997/02/02' className='field-profil-bloc-3' /> */}
             </div>
             <div>
               <label htmlFor="nb_contries_visited">Nombre de pays visités</label>

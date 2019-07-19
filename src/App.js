@@ -12,6 +12,8 @@ import Notifications from './screen/Notifications'
 import Abonnements from './screen/Abonnements'
 import Abonne from './screen/Abonne'
 import ProfilDescription from './screen/ProfilDescription/ProfilDescription';
+import Afrique_video from './screen/Afrique_video.js';
+
 import Home from './screen/Home';
 import PlayVideo from './screen/PlayVideo';
 import Favoris from './screen/Favoris';
@@ -51,7 +53,10 @@ class App extends Component {
             <Route path="/playVideo" component={PlayVideo} ></Route>
             {/* Page Videaste */}
             <Route path="/Videaste" component={Videaste} ></Route> 
-            
+                 {/* ***** */}
+                {/* Afrique_video*/}
+          <Route path="/Afrique_video" component={Afrique_video} ></Route> 
+                 {/* ***** */}
             <Route component={Error}></Route>
           </Switch>
           <Footer />

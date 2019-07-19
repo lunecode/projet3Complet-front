@@ -48,16 +48,13 @@ const PostEnumProfil = (props) => {
                     />
                     <p>Blogueur de voyage</p>
         </div>
-
-
                 <div className="Profil_picture4">
                     <img src={Photographevidéaste}
                         onClick={props.profil4}
                         alt="Photograph & vidéaste"
                     />
-                   <p> Photograph & vidéaste</p>
-        </div>
-
+                   <p> Photographe & vidéaste</p>
+               </div>
                 <div className="Profil_picture5">
                     <img src={Autre}
                         onClick={props.profil5}
