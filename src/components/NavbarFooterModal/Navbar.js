@@ -280,6 +280,8 @@ class Navbar extends Component {
 										<NavLink to={`/Profil/${this.state.idDecoded}`} className="link_DropDown"><li>Gérer mon profil</li></NavLink>
 
 										<li><NavLink className="link_DropDown" exact to="/Profil">Envoyer un avis</NavLink></li>
+{/* 
+										<NavLink to="/"><li className="li-btn-off"><button onClick={this.logout} className="btn-deconnection">Se déconnecter</button></li></NavLink> */}
 										<li className="li-btn-off"> <button onClick={this.logout} className="btn-deconnection">Se déconnecter</button></li>
 									</ul>
 								</li>
