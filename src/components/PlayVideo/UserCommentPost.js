@@ -38,7 +38,7 @@ render() {
     this.state.general_video_id_general_video = url.slice(32)
 
     return (
-    
+
     <div className="container_post">
         <form onSubmit={this.submitHandler}>
             <div className="myComment">
