@@ -16,21 +16,53 @@ import axios from "axios"
 
 class Profil extends Component {
   state={
-    
+    // lastname:"",
+    // firstname:"",
+    // pseudo:"",
+    // identity:"",
+    // email:"",
+    // location:"",
+    // birth_date:"",
+    // type:"",
+    // position:"",
+    // profil_link:"",
+    // nb_countries_visited:"",
+    // profile_picture:"",
+    // profil:"",
+    // bio:"",
+    // ingredients: ["Aventurier dabord", "Les copains dabord", "Escapade romantique", "En famille", "Digital nomad", "Iles  Plages", "Montagnes  Campagnes", "Safari & Animaux", "Grandes villes", "En foret", "Sport & Aventures", "Festivals & Musique", "Plaisir culinaire", "Histoire & Culture", "Spiritualité", "Humanitaire", "Ecotourise", "luxe", "En sac à dos", "Rencontres dexceptions"],
+    // ingredients:[],
+    // // option_msg:"",
+    // facebook_link:"",
+    // instagram_link:"",
+    // website_link:"",
+    // inscription_date:"",
+    // inscription_type:"",
+    // password:"",
+    // password_forget:"",
+    // checked_option_msg:"",
+    // is_checked_her:"",
+    // is_checked_team:"",
+    // is_checked_him:"",
+    // New_password:"",
+
+
+
   }
   submitHandler = e => {
     e.preventDefault()
-    console.log(this.state)
-    axios.post('http://localhost:3000/profil/insert_profil', this.state)
+     console.log(this.state)
+      axios.post('http://localhost:3000/profil/insert_profil', this.state)
       .then(response => {
         console.log(response)
       })
-      .then( 
-        //Pour que  button submit renvoie vers la page ProfilDescription
-        this.props.history.push("/ProfilDescription"),
-        //permet de rafraichir la page pour afficher le Get
-        window.location.reload(true)
-     )
+   
+    //   .then( 
+    //     //Pour que  button submit renvoie vers la page ProfilDescription
+    //     this.props.history.push("/ProfilDescription"),
+    //     //permet de rafraichir la page pour afficher le Get
+    //     window.location.reload(true)
+    //  )
       .catch(error => {
         console.log(error)
       })
@@ -71,71 +103,117 @@ class Profil extends Component {
     this.setState({ profil: 5 })
   }
 
+
+ 
   //les Enumes ingredients//
   Enum1 = () => {
-    this.setState({ ingredients: 1 })
+    const ingredients = this.state.ingredients
+   
+    this.state.ingredients.push("Aventurier dabord")
+    this.setState({ ingredients: ingredients })
+
+    
   }
   Enum2 = () => {
-    this.setState({ ingredients: 2 })
+    const ingredients = this.state.ingredients
+    ingredients.push("Les copains dabord")
+    this.setState({ ingredients: ingredients})
   }
   Enum3 = () => {
-    this.setState({ ingredients: 3 })
+    const ingredients = this.state.ingredients
+    ingredients.push("Escapade romantique")
+    this.setState({ ingredients: ingredients })
   }
   Enum4 = () => {
-    this.setState({ ingredients: 4 })
+    const ingredients = this.state.ingredients
+    ingredients.push("En famille")
+    this.setState({ ingredients: ingredients})
   }
   Enum5 = () => {
-    this.setState({ ingredients: 5 })
+    const ingredients = this.state.ingredients
+    ingredients.push("Digital nomad")
+    this.setState({ ingredients: ingredients})
   }
   Enum6 = () => {
-    this.setState({ ingredients: 6 })
+    const ingredients = this.state.ingredients
+    ingredients.push("Iles  Plages")
+    this.setState({ ingredients: ingredients})
   }
   Enum7 = () => {
-    this.setState({ ingredients: 7 })
+    const ingredients = this.state.ingredients
+    ingredients.push("Iles  Plages")
+    this.setState({ ingredients: ingredients})
   }
   Enum8 = () => {
-    this.setState({ ingredients: 8 })
+    const ingredients = this.state.ingredients
+    ingredients.push("Montagnes  Campagnes")
+    this.setState({ ingredients: ingredients})
   }
   Enum9 = () => {
-    this.setState({ ingredients: 9 })
+    const ingredients = this.state.ingredients
+    ingredients.push("Safari & Animaux")
+    this.setState({ ingredients: ingredients})
   }
   Enum10 = () => {
-    this.setState({ ingredients: 10 })
+    const ingredients = this.state.ingredients
+    ingredients.push("Grandes villes")
+    this.setState({ ingredients: ingredients})
   }
   Enum11 = () => {
-    this.setState({ ingredients: 11 })
+    const ingredients = this.state.ingredients
+    ingredients.push("En foret")
+    this.setState({ ingredients: ingredients})
   }
-
 
   Enum12 = () => {
-    this.setState({ ingredients: 12 })
+    const ingredients = this.state.ingredients
+    ingredients.push("Sport & Aventures")
+    this.setState({ ingredients: ingredients})
   }
   Enum13 = () => {
-    this.setState({ ingredients: 13 })
+    const ingredients = this.state.ingredients
+    ingredients.push("Festivals & Musique")
+    this.setState({ ingredients: ingredients})
   }
   Enum14 = () => {
-    this.setState({ ingredients: 14 })
+    const ingredients = this.state.ingredients
+    ingredients.push("Plaisir culinaire")
+    this.setState({ ingredients: ingredients})
   }
   Enum15 = () => {
-    this.setState({ ingredients: 15 })
+    const ingredients = this.state.ingredients
+    ingredients.push("Histoire & Culture")
+    this.setState({ ingredients: ingredients})
   }
   Enum16 = () => {
-    this.setState({ ingredients: 16 })
+    const ingredients = this.state.ingredients
+    ingredients.push("Spiritualité")
+    this.setState({ ingredients: ingredients})
   }
   Enum17 = () => {
-    this.setState({ ingredients: 17 })
+    const ingredients = this.state.ingredients
+    ingredients.push("Humanitaire")
+    this.setState({ ingredients: ingredients})
   }
   Enum18 = () => {
-    this.setState({ ingredients: 18 })
+    const ingredients = this.state.ingredients
+    ingredients.push("Ecotourise")
+    this.setState({ ingredients: ingredients})
   }
   Enum19 = () => {
-    this.setState({ ingredients: 19 })
+    const ingredients = this.state.ingredients
+    ingredients.push("luxe")
+    this.setState({ ingredients: ingredients})
   }
   Enum20 = () => {
-    this.setState({ ingredients: 20 })
+    const ingredients = this.state.ingredients
+    ingredients.push("En sac à dos")
+    this.setState({ ingredients: ingredients})
   }
   Enum21 = () => {
-    this.setState({ ingredients: 21 })
+    const ingredients = this.state.ingredients
+    ingredients.push("Rencontres dexceptions")
+    this.setState({ ingredients: ingredients})
   }
 //ouvrir le fichier et le convertir  en binair
 
@@ -195,7 +273,7 @@ class Profil extends Component {
             Enum21={this.Enum21}
             Enum22={this.Enum22}
             changeHandler={this.changeHandler}
-      
+            converti={this.converti}
           />
 
           <AutoriseContact

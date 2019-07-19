@@ -27,22 +27,20 @@ const PostIngedients = (props) => {
                 <div className="ingédients" >
                         <h3>Vos ingrédients pour un voyage inoubliable </h3>
                         <div className='bloc-title-ingredient'> <p><img src={Idea} alt="icon" /></p><p className="title-ingredient">Selectionnez jusqu'à 5 choix</p></div>
-
                         <form className="globale">
                                 <input className="I" type="hidden" name="ingredients"
                                         value={props.ingredients} onChange={props.changeHandler} />
-
                                 <div className="Ingredient_list1" >
                                      
                                         <div className="ingredient1">
                                                 <img src={Aventurierseul}
                                                         onClick={props.Enum1}
+                                                      
                                                         alt="Aventurier d'abord"
                                                 />
                                                 <p> Aventurier seul</p>
                                         </div>
                                         
-
                                      
                                         <div className="ingredient2">
                                                 <img src={Copains}
@@ -216,14 +214,9 @@ const PostIngedients = (props) => {
                                                 />
                                                 <p>Rencontre d'exeptions</p>
                                         </div>
-
                                 </div>
-
                         </form>
                 </div>
-
         );
-
 }
-
 export default PostIngedients;

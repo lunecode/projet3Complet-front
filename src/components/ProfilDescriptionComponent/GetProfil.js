@@ -52,6 +52,12 @@ class GetProfil extends Component {
     console.log(this.state.profil)
   }
 
+  getProfil = async () => {
+    const res = await axios.get('http://localhost:3000/profil/get_Profil_describe')
+    this.setState({ profil: res.data })
+    console.log(this.state.profil)
+  }
+
   getVideo = async () => {
     const res = await axios.get('http://localhost:3000/general_video/get_general_video_lim/4')
     this.setState({ general_video: res.data })
@@ -84,14 +90,15 @@ class GetProfil extends Component {
                     <div className="profil_column_2">
                       {/* Remplacer Créateur de contenu par item.type? */}
                       <div className="identity"><h2 className="name">{item.firstname} {item.lastname}</h2>
-                        <span className="span">|</span><p className="traveler_type">{item.type}</p></div>
+                        <span className="span">|</span><p className="traveler_type">{item.profil}</p></div>
                       <p className="localisation"><img src={Pin_On} alt="iconlocalisation" className="iconlocalisation" />{item.location}</p>
   
                       <p className="bio">{item.bio}</p>
                       <div className="icon_general">
                         <div className="iconaventurier">
                           <div className="iconitemaventurier">
-                            <img src={Selected} className="iconProfil" alt="iconaventurier" />
+                            {/* <img src={Selected} className="iconProfil" alt="iconaventurier" /> */}
+                            <p>{item.ingredients}</p>
                           </div>
                           <span className="texticonaventurier">Aventurier seul</span>
                         </div>
