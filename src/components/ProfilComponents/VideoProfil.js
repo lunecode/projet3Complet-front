@@ -16,25 +16,31 @@ import img1 from '../../Images-tripitto/Icon_Vidéo/img1.png'
 import img2 from '../../Images-tripitto/Icon_Vidéo/img2.png'
 import img3 from '../../Images-tripitto/Icon_Vidéo/img3.png'
 import img4 from '../../Images-tripitto/Icon_Vidéo/img4.png'
+import axios from "axios"
 
 class VideoProfil extends Component {
-	state = {
-		id_Profil: '',
-	}
+     state={
+         videos_profil: [], 
+     }
+    
 
-
-	idProfilVideo = () => {
+	 getFollowing = async () => {
 		const token = localStorage.getItem('token')
-		if (token) {
-			const idToken = jwt.decode(token)
-			const idProfilDecoded = idToken.id_profil
-			this.setState = ({ id_Profil: idProfilDecoded })
-		}
-	}
+		const tokenDecoded = jwt.decode(token)
+		const idProfilDecoded = tokenDecoded.id_profil
+
+		const res = await axios.get(`http://localhost:3000/general_video/get_video_id_profil/${idProfilDecoded}`)
+		console.log(res);
+		this.setState({ videos_profil: res.data }, _ => {
+
+			console.log(this.state.videos_profil)
+		})
+}
 
 
-	componentDidMount = () => {
-		// this.idProfilVideo()
+
+	componentDidMount (){
+		this.getFollowing()
 	}
 
 	render() {
@@ -43,7 +49,6 @@ class VideoProfil extends Component {
 		const idProfil = idProfilDecod.id_profil
 		console.log(idProfilDecod)
 		console.log(idProfil)
-
 		return (
 			<div className="VideoProfilCompnent">
 
@@ -115,23 +120,35 @@ class VideoProfil extends Component {
 				</div>
 
 				<div className="bloc_2_video">
-					{/* /bloc video 1 */}
-					<div className="list_videos" id="dummy">
+                         {/* /bloc video 1 */}
+                         
+                         <div className="list_videos" id="dummy">
+                   
 						<div>
+						{this.state.videos_profil.map(item => (
 							<div className="video_user1">
 								<div className="status_durée">
 									<div className="status1">
-										<p className="status">En attente d'approbation</p>
+										<p className="status">En attente d'approbation</p> 
+										 
+											 <div> 
+											 
+												 <div> 
+										<p>{item.video_description} </p> 
+										</div>
+								
+										</div>
+											
 									</div>
 									<div className="durée1" >
-										<p className="durée">12:45</p>
+										{/* <p className="durée">{item.video_duration} </p> */}
 									</div>
 								</div>
 
-								<div className="imagescreen"><img src={img1} alt="" /></div>
+								<div className="imagescreen"><img src={item.cover_picture} alt="" /></div> 
 								<div className="countery">
 									<h3> Dans les profondeur du canyon</h3>
-									<p className="countery_p">USA</p>
+									<p className="countery_p">pappa </p>
 								</div>
 								<div className="infos">
 									<p className="A"> 0 vues</p>
@@ -147,172 +164,13 @@ class VideoProfil extends Component {
 									<ModalDeleteVideo />
 								</div>
 							</div>
-
+	)) }   
 						</div>
-
+                     
 					</div>
 
 
-					{/* /*****************************************$ */}
-
-					{/* /bloc video 2 */}
-					<div className="list_videos" id="dummy">
-						<div>
-							<div className="video_user1">
-								<div className="status_durée">
-									<div className="status1">
-										<p className="status_enligne">En ligne</p>
-									</div>
-									<div className="durée1" >
-										<p className="durée">08:36</p>
-									</div>
-								</div>
-
-								<div className="imagescreen"><img src={img3} alt="" /></div>
-
-								<div className="countery">
-									<h3>Perdu dans le sahara</h3>
-									<p className="countery_p">Mauritanie</p>
-								</div>
-								<div className="infos">
-									<p className="A"> 1903 vues</p>
-									<p className="B">.</p>
-									<p className="C">Il y a 3 mois</p>
-									<p className="D"> <img src={pourcentage80} alt="" /></p>
-								</div>
-								<div className="icons_video">
-									<img className="img1" src={modification} alt="" />
-									<img className="img2" src={Partager} alt="" />
-									<ModalHidevide />
-									<ModalDeleteVideo />
-								</div>
-							</div>
-						</div>
-
-					</div>
-
-				</div>
-				{/* /*****************************************$ */}
-
-				<div className="bloc_2_video_2">
-					{/* /bloc video 3 */}
-					<div className="list_videos" id="dummy">
-
-						<div>
-							<div className="video_user1">
-								<div className="status_durée">
-									<div className="status1">
-										<p className="status_refusé">Non adaptée</p>
-									</div>
-									<div className="durée1" >
-										<p className="durée">03:56</p>
-									</div>
-								</div>
-
-								<div className="imagescreen"><img src={img4} alt="" /></div>
-
-								<div className="countery">
-									<h3>Extréme Xest Caoest</h3>
-									<p className="countery_p">Mauritanie</p>
-								</div>
-								<div className="infos">
-									<p className="A"> 1903 vues</p>
-									<p className="B">.</p>
-									<p className="C">Il y a 3 mois</p>
-									<p className="D"> <img src={pourcentage60} alt="" /></p>
-								</div>
-								<div className="icons_video">
-									<img className="img1" src={modification} alt="" />
-									<img className="img2" src={Partager} alt="" />
-									<ModalHidevide />
-									<ModalDeleteVideo />
-									{/* <button onClick={this.removeDummy}><img className="img4"src={Delete} alt=""/> </button>  */}
-								</div>
-							</div>
-						</div>
-
-					</div>
-
-
-					{/* /bloc video 4*/}
-					<div className="list_videos" id="dummy">
-
-						<div>
-							<div className="video_user1">
-								<div className="status_durée">
-									<div className="status1">
-										<p className="status_Brouillon">Brouillon</p>
-									</div>
-									<div className="durée1" >
-										<p className="durée">03:56</p>
-									</div>
-								</div>
-
-								<div className="imagescreen"><img src={vinise} alt="" /></div>
-
-								<div className="countery">
-									<h3>Souvenir de Venise</h3>
-									<p className="countery_p">Italie</p>
-								</div>
-								<div className="infos">
-									<p className="A"> 0 vues</p>
-									<p className="B">.</p>
-									<p className="C">Il y a 1 mois</p>
-									<p className="D"> <img src={pourcentage60} alt="" /></p>
-								</div>
-
-								<div className="icons_video">
-									<img className="img1" src={modification} alt="" />
-									<img className="img2" src={Partager} alt="" />
-									<ModalHidevide />
-									<ModalDeleteVideo />
-								</div>
-							</div>
-						</div>
-
-					</div>
-				</div>
-
-
-
-
-				{/* *************************************$$ */}
-				<div className="bloc_2_video_3">
-					{/* /bloc video 3 */}
-					<div className="list_videos" id="dummy">
-
-						<div>
-							<div className="video_user1">
-								<div className="status_durée">
-									<div className="status1">
-										<p className="status_Masquée">Masquée</p>
-									</div>
-									<div className="durée1" >
-										<p className="durée">03:56</p>
-									</div>
-								</div>
-
-								<div className="imagescreen"><img src={img2} alt="" /></div>
-
-								<div className="countery">
-									<h3>Extréme Xest Caoest</h3>
-									<p className="countery_p">SHOWREEL</p>
-								</div>
-								<div className="infos">
-									<p className="A"> 1903 vues</p>
-									<p className="B">.</p>
-									<p className="C">Il y a 3 mois</p>
-									<p className="D"> <img src={pourcentage80} alt="" /></p>
-								</div>
-								<div className="icons_video">
-									<img className="img1" src={modification} alt="" />
-									<img className="img2" src={Partager} alt="" />
-									<ModalHidevide />
-									<ModalDeleteVideo />
-								</div>
-							</div>
-						</div>
-					</div>
+				
 
 
 					{/* /bloc video 4*/}

@@ -48,11 +48,7 @@ class Profil extends Component {
     // New_password:"",
 
 
-
   }
- 
-
-
   submitHandler = e => {
     e.preventDefault()
     const token = localStorage.getItem('token')
@@ -64,37 +60,38 @@ class Profil extends Component {
       .then(response => {
         console.log(response)
       })
-    //   .then( 
-    //     //Pour que  button submit renvoie vers la page ProfilDescription
-    //     this.props.history.push("/ProfilDescription"),
-    //     //permet de rafraichir la page pour afficher le Get
-    //     window.location.reload(true)
-    //  )
+      .then( 
+        //Pour que  button submit renvoie vers la page ProfilDescription
+        this.props.history.push("/ProfilDescription"),
+        //permet de rafraichir la page pour afficher le Get
+        window.location.reload(true)
+     )
       .catch(error => {
         console.log(error)
       })
   }
 
-
-  // submitHandler = e => {
-  //   e.preventDefault()
-  //   const token = localStorage.getItem('token')
-  //   const tokenDecoded = jwt.decoded(token)
-  //   const idProfilDecoded = tokenDecoded.id_profil
-
-  //   console.log(idProfilDecoded)
-  //   axios.put(`http://localhost:3000/profil/update_profil/${idProfilDecoded}`, this.state)
-  //     .then(response => {
-  //       console.log(response)
-  //     })
-  //     .catch(error => {
-  //       console.log(error)
-  //     })
-  // }
-
-
-
-
+  submitHandler = e => {
+    e.preventDefault()
+    const token = localStorage.getItem('token')
+    const tokenDecoded = jwt.decode(token)
+    const idProfilDecoded = tokenDecoded.id_profil
+    console.log(idProfilDecoded)
+    axios.get(`http://localhost:3000/profil/get_profil/${idProfilDecoded}`, this.state)
+      .then(response => {
+        console.log(response)
+      })
+      .then( 
+        //Pour que  button submit renvoie vers la page ProfilDescription
+        this.props.history.push("/ProfilDescription"),
+        //permet de rafraichir la page pour afficher le Get
+        window.location.reload(true)
+     )
+      .catch(error => {
+        console.log(error)
+      })
+  }
+  
   handleCheckbox = (e) => {
     e.preventDefault()
     const target = e.target;
