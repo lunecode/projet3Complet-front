@@ -13,7 +13,7 @@ const PostEnumProfil = (props) => {
         <div className="Profil_inscription">
             <div className="Titre">
                 <h3>Dites en un peu plus sur vous</h3>
-                <p> <img src={Idea} alt="icon" />Cela apparaitra sur votre page de profil visible par tous</p>
+                <div className="bloc-profil-type-title"><p><img src={Idea} alt="icon" /></p><p className="title-profil-enum">Cela apparaitra sur votre page de profil visible par tous</p></div>
                 <h4>Vous êtes plutôt</h4>
             </div>
 

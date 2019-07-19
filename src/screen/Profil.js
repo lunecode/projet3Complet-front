@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import jwt from 'jsonwebtoken'
 import AutoriseContact from '../components/ProfilComponents/AutoriseContact'
 import PostProfilInfo from '../components/ProfilComponents/PostProfilInfo'
 import PostEnumProfil from '../components/ProfilComponents/PostEnumProfil';
@@ -11,13 +12,19 @@ import "../components/ProfilComponents/PostProfilInfo.css"
 import axios from "axios"
 
 
+
 class Profil extends Component {
   state = {
   }
+ 
   submitHandler = e => {
     e.preventDefault()
+    const token = localStorage.getItem('token')
+    const tokenDecoded = jwt.decoded(token)
+    const idProfilDecoded = tokenDecoded.id_profil
+
     console.log(this.state)
-    axios.post('http://localhost:3000/profil/insert_profil', this.state)
+    axios.put(`http://localhost:3000/profil/update_profil/${idProfilDecoded}`, this.state)
       .then(response => {
         console.log(response)
       })
@@ -33,6 +40,8 @@ class Profil extends Component {
     const name = target.name;
     this.setState({ [name]: value });
   }
+
+
 
   changeHandler = (e) => {
     this.setState({ [e.target.name]: e.target.value })
@@ -146,12 +155,18 @@ class Profil extends Component {
   }
 
   myFunction = (e) => {
-
     const x = document.getElementById("myImg").src;
     document.getElementById("demo").innerHTML = x;
   }
 
   render() {
+    const token = localStorage.getItem('token')
+    const tokenDecoded = jwt.decode(token)
+    const idProfilDecoded = tokenDecoded.id_profil
+    console.log(idProfilDecoded)
+
+
+
 
     const url = window.location.href;
     const idProfil = url.slice(32)
@@ -167,6 +182,7 @@ class Profil extends Component {
             blob2file={this.blob2file}
             myFunction={this.myFunction}
           />
+
 
           <PostEnumProfil
             {...this.state}
@@ -207,6 +223,7 @@ class Profil extends Component {
             Enum21={this.Enum21}
             Enum22={this.Enum22}
             changeHandler={this.changeHandler}
+      
           />
 
           <AutoriseContact
