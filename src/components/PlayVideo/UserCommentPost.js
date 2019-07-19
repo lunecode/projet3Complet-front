@@ -43,11 +43,13 @@ render() {
     <div className="container_post">
         <form onSubmit={this.submitHandler}>
             <div className="myComment">
-            <img className="pictureuser" src={Picture} alt= "pictureuser"/>
-            <input className="input-name" type='text' name="author_comment" value={author_comment} onChange={this.changeHandler} placeholder="Votre nom"/>
+            <div className="com">
+                <img className="pictureuser" src={Picture} alt= "pictureuser"/>
+                <input className="input-name" type='text' name="author_comment" value={author_comment} onChange={this.changeHandler} placeholder="Votre nom"/>
+            </div>
             <div className="comment">
             
-            <textarea className="userComment" type='text' name="comment" value={comment} onChange={this.changeHandler} placeholder="Ajouter un commentaire..." rows="(" cols="80"/>
+            <textarea className="userComment" type='text' name="comment" value={comment} onChange={this.changeHandler} placeholder="Ajouter un commentaire" rows="1" cols="70"/>
             </div>
             <div>
 

@@ -10,6 +10,7 @@ class UserCommentGet extends Component {
     state = {
 
     comment: [],
+    date: [],
     picture: []
 };
 
@@ -39,6 +40,7 @@ componentDidMount() {
     this.getComment()
     this.getProfil()
     this.getCurrentDate()
+    
 }
 
 render() { 
@@ -68,10 +70,11 @@ render() {
                 
                 <div className="container_date"><img className="pictureuser" src={Picture} alt= "pictureuser"/>
                 <span className="author">{item.author_comment}  </span>
-                <span className="author">{date}{separator}{month<10?`0${month}`:`${month}`}{separator}{year}
+                <span className="comment_date">{date}{separator}{month<10?`0${month}`:`${month}`}{separator}{year}
                 </span>
                 </div>
-                <div className="comment">{item.comment}
+                <div className="comment">
+                <div className="display_com">{item.comment}</div>
             {/* <button></button> */}
                 <div className="editcomment">
                     <img className="editcom" src={EditCom} alt="pic modify" />
