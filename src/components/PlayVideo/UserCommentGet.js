@@ -41,7 +41,7 @@ componentDidMount() {
     this.getCurrentDate()
 }
 
-render() {
+render() { 
     let i = 1;
 
     const url = window.location.href;
