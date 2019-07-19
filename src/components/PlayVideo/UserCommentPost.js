@@ -24,6 +24,7 @@ submitHandler = e => {
     axios.post('http://localhost:3000/comment/post_data_comment', this.state)
     .then(response => {
         console.log(response)
+        window.location.reload(false)
     })
     .catch(error => {
         console.log(error)
