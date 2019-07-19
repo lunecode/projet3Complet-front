@@ -98,7 +98,7 @@ class Display extends Component {
         <div className="item1RecentlyPublished">
             {this.state.videos.reverse().map(image => (
                 <div className={"latestPublishedVideo" + i} key={i++}>
-                    <NavLink to={`/playvideo/${image.id_general_video}`}><img src={image.cover_picture} alt={image.video_title}></img>
+                    <NavLink to={`/playvideo/${image.id_general_video}`} className='link-destination'><img src={image.cover_picture} alt={image.video_title}></img>
                     <p className="titleVideo">{image.video_title}</p>
                     </NavLink>
                 </div> 

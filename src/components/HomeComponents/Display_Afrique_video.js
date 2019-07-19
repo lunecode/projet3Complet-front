@@ -5,23 +5,21 @@ import Marakech from '../../Images-tripitto/Icon_Vidéo/Marakech.png';
 import tanger from '../../Images-tripitto/Icon_Vidéo/tanger.png';
 import "./Display_Afrique_video.scss"
 import axios from 'axios';
-
+import {NavLink} from'react-router-dom'
 
 
 class Display_Afrique_video extends Component {
 
     state = {
 
-        general_video: [],
+        video: [],
       };
     
     
-     
-    
       getVideo = async () => {
-        const res = await axios.get('http://localhost:3000/general_video/get_Page_Afrique/1')
-        this.setState({ general_video: res.data })
-        console.log(this.state.general_video)
+        const res = await axios.get('http://localhost:3000/popularity/get_popularity_liked_general_video_travel_information_continent_afrique')
+        this.setState({ video: res.data })
+        console.log(this.state.video)
       }
     
     
@@ -29,11 +27,13 @@ class Display_Afrique_video extends Component {
         this.getVideo()
       }
     render() {
+        let a = 1
+        let c = 1
         return (
             <div className="Display_Afrique">
                 <div className="titre_Display_Afrique">
-                    <h1>Afrique / Maroc</h1>
-                    <p className="number_video_Display_Afrique">45 Vidéos</p>
+                    <h1>Afrique / </h1>
+                    <p className="number_video_Display_Afrique">3 Vidéos</p>
                 </div>
         <div className="countainer_bloc_Afrique">
                     {/* filter */}
@@ -48,12 +48,13 @@ class Display_Afrique_video extends Component {
                     </div>
 
 
-<div className="container_4_bloc">
-{this.state.general_video.map(item => (
+
+ <div className="container_4_bloc">
+ {this.state.video.map(item => (
     <div className="bloc_1_image_Afrique">
         <div className="image_Afrique"  key={item.id_general_video}>
             <div className="durée_pourcentage_Afrique">
-            <p className="durée_vidéo_Afrique">{item.number_tips}%</p>
+            <p className="durée_vidéo_Afrique">{item.tx_remplissage}%</p>
             <p className="pourcentage_Afrique" >{item.video_duration}</p>
             </div>
             <img src={item.cover_picture} alt="" />
@@ -61,47 +62,20 @@ class Display_Afrique_video extends Component {
     <div className="container_bloc_Afrique">
         <h3>{item.video_title}.</h3>
         <div className="infos_Afrique">
-            <p className="pays_Afrique">Maroc</p>
+            <p className="pays_Afrique">{item.countries}</p>
             <p className="Point_Afrique">.</p>
-            <p className="nb_vues_Afrique">35 vues</p>
+            <p className="nb_vues_Afrique">{item.nb_views} vues</p>
             <p className="Point_Afrique">.</p>
             <p className="temps_Afrique">il y 3 semaines</p>
         </div>
              <p className="desciptipn_text">
-             <p className="auteur_Afrique">Beth Murphy</p>
+             <p className="auteur_Afrique">{item.video_user}</p>
             </p>
         </div>
       </div>
       ))}
      </div>
 
-     <div className="container_4_bloc">
-{this.state.general_video.map(item => (
-    <div className="bloc_1_image_Afrique">
-        <div className="image_Afrique"  key={item.id_general_video}>
-            <div className="durée_pourcentage_Afrique">
-            <p className="durée_vidéo_Afrique">{item.number_tips}%</p>
-            <p className="pourcentage_Afrique" >{item.video_duration}</p>
-            </div>
-            <img src={item.cover_picture} alt="" />
-        </div>
-    <div className="container_bloc_Afrique">
-        <h3>{item.video_title}.</h3>
-        <div className="infos_Afrique">
-            <p className="pays_Afrique">Maroc</p>
-            <p className="Point_Afrique">.</p>
-            <p className="nb_vues_Afrique">35 vues</p>
-            <p className="Point_Afrique">.</p>
-            <p className="temps_Afrique">il y 3 semaines</p>
-        </div>
-             <p className="desciptipn_text">
-             <p className="auteur_Afrique">Beth Murphy</p>
-            </p>
-        </div>
-      </div>
-      ))}
-     </div>
- 
 
 
 

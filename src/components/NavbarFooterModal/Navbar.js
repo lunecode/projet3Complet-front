@@ -86,7 +86,7 @@ class Navbar extends Component {
                                 <li className='Nav_menu'><button className="button_video"><NavLink exact to="/">VIDÉOS</NavLink></button>
                                     <ul className="ul_list">
                                         <div className="container_list">
-                                       <li><NavLink className="lcontinent_name" exact to="/Afrique_video">AFRIQUE  
+                                       <li><NavLink className="lcontinent_name" exact to="/Afrique_video"><a href="" className='continent_name'>AFRIQUE</a>  
                                                 {this.state.afrique.map(afrique => (
                                                     <div key={i++} className="container_list_afrique">
                                                         <p className="list_afrique">
@@ -160,10 +160,6 @@ class Navbar extends Component {
                                 </li> 
                                 <li className={this.state.isModalOpen === false ? "buttonNavbarConnexionNone" : "notification"}><NotificationPopup /></li>
                                 <li><button onClick={this.openModal} className={this.state.isModalOpen === false ? "buttonNavbarConnexion" : "buttonNavbarConnexionNone"}>SE CONNECTER</button></li>
-<<<<<<< HEAD
-
-=======
->>>>>>> d19e4bcde0a9e3af61df19cfd3321af7a54f208f
                                 <NavLink to ="/uploadVideo"><li><button className={this.state.isModalOpen === false ? "buttonNavbarChange" : "buttonNavbar"}>PUBLIER</button></li></NavLink>
 
                                 {/* <li><button onClick={this.openModal} className={this.state.isModalOpen === false ? "buttonNavbarChange" : "buttonNavbar"}>PUBLIER</button></li> */}
