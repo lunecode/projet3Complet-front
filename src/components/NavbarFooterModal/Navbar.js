@@ -45,7 +45,7 @@ class Navbar extends Component {
 			})
 	}
 
-	
+
 
 
 	openModal = () => {
@@ -186,6 +186,8 @@ class Navbar extends Component {
 
 		return (
 			<div>
+
+				{/* <button onClick={crossClose} >TEST</button> */}
 				<header>
 					<nav className="container_nav">
 						<div className="containerNavLeft">
@@ -348,7 +350,7 @@ class Navbar extends Component {
 
 					{/* COMPOSANT QUI DECLENCHE L'OUVERTURE DE LA MODAL */}
 					<div className="containerModal">
-						<Modal crossClose={this.closeCrossModal} isOpen={isModalOpen} onClose={this.closeModal} />
+						<Modal crossClose={this.closeCrossModal}  isOpen={isModalOpen} onClose={this.closeModal} />
 					</div>
 
 

@@ -24,27 +24,6 @@ class Modal extends Component {
 	}
 
 
-	// onSubmitLogin = e => {
-	// 	e.preventDefault()
-	// 	const email = e.target.email.value
-	// 	const password = e.target.password.value
-	// 	if (email == '' || password == '') {
-	// 		alert('Merci de renseigner les champs')
-	// 	} else  {
-	// 		axios
-	// 			.post('http://localhost:3000/login/login', {
-	// 				email: e.target.email.value,
-	// 				password: e.target.password.value
-	// 			})
-	// 			.then(res => {
-	// 				localStorage.setItem('token', res.headers["x-access-token"])
-	// 				window.location.reload(true);
-	// 				console.log('token', localStorage.getItem('token'))
-	// 			})				
-	// 	}
-	// }
-
-
 
 	onSubmitLogin = e => {
 		e.preventDefault()
@@ -99,8 +78,6 @@ class Modal extends Component {
 			}
 		})
 			.then(res => {
-				// console.log(res)
-				// console.log(res.data)
 				console.log(res.data.message)
 				if (!res.data.message == "Token OK") {
 				}
@@ -128,6 +105,31 @@ class Modal extends Component {
 		this.props.onClose()
 	}
 
+
+	registerCloseLogin = () => {
+		this.openModalLogin()
+		this.props.crossClose()
+	}
+
+	forgetPasswordCloseLogin = () => {
+		this.openModalForgottenPassword()
+		this.props.crossClose()
+	}
+
+	// openModalLogin = () => {
+	// 		document.getElementById('modal--is-open').classList.toggle('login_close')
+	// }
+
+
+	// hideButtonLoginToken = () => {
+	// 	const token = localStorage.getItem('token')
+	// 	if (token) {
+	// 		document.getElementById('displayLoginNone').classList.toggle('buttonNavbarConnexionNone')
+	// 	}
+	// }
+
+
+
 	closeModalLogin = () => {
 		this.setState({ ModalCreateLogin: false })
 	}
@@ -143,13 +145,18 @@ class Modal extends Component {
 
 	render() {
 		// console.log(this.props)
-		const { isOpen, onClose, crossClose, test } = this.props;
+		const { isOpen, onClose, crossClose } = this.props;
 		const { ModalForgottenPassword, ModalCreateLogin } = this.state
 
 
 
 		return (
 			<>
+
+
+
+
+
 				<div className={isOpen ? 'modal--is-open' : 'modal'}>
 					<div className="containerIs-open">
 						<div>
@@ -175,7 +182,9 @@ class Modal extends Component {
 								<p><input className="checkBoxModal" type="checkbox" name="checkMe" id="checkMe" />Se souvenir de moi</p>
 							</div>
 							<div>
-								<p onClick={this.openModalForgottenPassword} className="lockModal"><img src={Lock} alt=""></img>Mot de passe oublié</p>
+
+								<p onClick={this.forgetPasswordCloseLogin} className="lockModal"><img src={Lock} alt=""></img>Mot de passe oublié</p>
+
 							</div>
 						</div>
 
@@ -195,7 +204,7 @@ class Modal extends Component {
 
 							</div>
 
-
+							{/* <button onClick={crossClose}>X</button> */}
 
 
 
@@ -206,7 +215,7 @@ class Modal extends Component {
 								<img src={ButtonGoogle} alt="button google connexion"></img>
 							</div>
 							<div className="register">
-								<p>Vous n'avez pas de compte ? <span onClick={this.openModalLogin}>S'inscrire</span></p>
+								<p>Vous n'avez pas de compte ? <span onClick={this.registerCloseLogin}>S'inscrire</span></p>
 							</div>
 						</div>
 					</form>
