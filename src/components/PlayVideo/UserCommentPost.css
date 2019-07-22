@@ -67,3 +67,16 @@ textarea{
 
 }
 
+.btn:hover{
+    background-color:#59cce0;
+    width: 150px;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    padding:1%;
+    border: 1px solid white;
+    margin-top: 2%;
+    margin-left:3%;
+
+}
+
