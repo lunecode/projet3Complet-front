@@ -25,14 +25,48 @@
     border-top: none;
     background-color: #F4F4F4;
     border-bottom: 2px solid gray;
+    font: 16px Arial, Helvetica, sans-serif;
+    margin-left: 2%;
     /* font-size: 15px; */
 }
 
 .pictureuser{
     margin-right: 1%;
+    margin-left: 3%;
 }
 
 textarea{
     resize: none;
+}
+
+.input-name{
+    margin-bottom: 3%;
+    margin-left: 3%;
+    border:none;
+    /* padding:1%; */
+    background-color: #F4F4F4;
+	outline: none;
+	display: block;
+	background: transparent;
+	font: 16px Arial, Helvetica, sans-serif;
+    height: 45px;
+    border: 0;
+    outline: 0;
+    border-bottom: 2px solid #59cce0;
+
+}
+
+.btn{
+    background-color: white;
+    width: 150px;
+    text-align: center;
+    color:#59cce0;
+    font-size: 15px;
+    padding:1%;
+    /* font-weight: 500; */
+    border: 1px solid #59cce0;
+    margin-top: 2%;
+    margin-left:3%;
+
 }
 
