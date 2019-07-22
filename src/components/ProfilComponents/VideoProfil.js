@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom'
+import axios from 'axios'
 import jwt from 'jsonwebtoken'
 import iconSearch from '../../Images-tripitto/Icon/TRAILING ICON.png'
 import "./VideoProfil.scss"
@@ -19,29 +20,41 @@ import img4 from '../../Images-tripitto/Icon_Vidéo/img4.png'
 
 class VideoProfil extends Component {
 	state = {
-		id_Profil: '',
+		videoByProfil: ''
 	}
 
 
-	idProfilVideo = () => {
+
+
+	getVideoById = async () => {
+		// e.preventDefault()
 		const token = localStorage.getItem('token')
-		if (token) {
-			const idToken = jwt.decode(token)
-			const idProfilDecoded = idToken.id_profil
-			this.setState = ({ id_Profil: idProfilDecoded })
-		}
-	}
+		const idProfilDecod = jwt.decode(token)
+		const id = idProfilDecod.id_profil
+		const res = await axios.get(`http://localhost:3000/general_video/get_video_id_profil/${id}`)
+		this.setState({ videoByProfil: res.data})
+		console.log(this.state.videoByProfil)
+		// console.log(res.data)
+  }
+
+
+	// getVideo = async () => {
+  //   const res = await axios.get('http://localhost:3000/general_video/get_general_video')
+  //   this.setState({ videos: res.data})
+  //   console.log(this.state.videos)
+  // }
+
 
 
 	componentDidMount = () => {
-		// this.idProfilVideo()
+		this.getVideoById()
 	}
 
 	render() {
-		const token = localStorage.getItem('token')
-		const idProfilDecod = jwt.decode(token)
-		const idProfil = idProfilDecod.id_profil
-		console.log(idProfil)
+		// const token = localStorage.getItem('token')
+		// const idProfilDecod = jwt.decode(token)
+		// const idProfil = idProfilDecod.id_profil
+		// console.log("idprofil: ", idProfil)
 
 		return (
 			<div className="VideoProfilCompnent">
@@ -112,6 +125,32 @@ class VideoProfil extends Component {
 						</div>
 					</div>
 				</div>
+
+
+
+
+
+	{/* {this.state.videos.map(video => (
+	<div className={"divVideoPLan" + c} key={c++}>
+		<NavLink to={`/playvideo/${video.id_general_video}`} ><img src={video.cover_picture} className={"nextpictureimg" + a} key={a++} className='picture_bestplan' alt='' /></NavLink>
+		<img src={video.cover_picture} className='picture_bestplan' alt= ''/> */}
+		{/* <div className='container_title_bestplan_numbertips'>
+			<p className='title_bestplan_numbertips'>+{video.number_tips}%</p>
+		</div>
+		<div className='container_title_bestplan_video_duration'>
+			<p className='title_bestplan_video_duration'>{video.video_duration}</p>
+		</div>
+		<p className='title_bestplan_title'>{video.video_title}</p> */}
+
+		{/* <p className='title_bestplan_countries'>{video.countries}</p>
+		<ul className='container_nb_view'>
+			<li><p className='title_bestplan_nbviews'>{video.nb_views} vues</p></li>
+		</ul>
+		<p className='title_bestplan_user'>{video.video_user}</p>
+	</div>
+))} */}
+
+
 
 				<div className="bloc_2_video">
 					{/* /bloc video 1 */}
