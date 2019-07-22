@@ -10,8 +10,7 @@ class UserCommentPost extends Component {
         comment: '',
         author_comment: '',
         general_video_id_general_video: '',
-        // popularity_id_popularity: '',
-        // profil_id_profil: '',
+        
 }
 
 changeHandler = (e) => {

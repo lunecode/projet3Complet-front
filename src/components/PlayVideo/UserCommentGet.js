@@ -17,13 +17,13 @@ class UserCommentGet extends Component {
 getComment = async () => {
     const res = await axios.get('http://localhost:3000/comment/get_comment')
     this.setState({ comment: res.data })
-    // console.log(this.state.comment)
+    
 }
 
 getProfil = async () => {
     const res = await axios.get('http://localhost:3000/profil/get_profil')
     this.setState({ picture: res.data })
-    // console.log(this.state.picture)
+   
 }
 
 getCurrentDate(separator=''){
@@ -61,8 +61,7 @@ render() {
         {this.state.comment.filter(item =>item.general_video_id_general_video == idVideo ).map(item =>(
                 <div className="container_get" key={i++}>
                 <div  key={item.video_comment}>
-            {/* <li>{item.profile_picture}</li> */}
-                {/* <span>{item.action_date_comment}</span> */}
+            
                 
                 <div className="container_date"><img className="pictureuser" src={Picture} alt= "pictureuser"/>
                 <span className="author">{item.author_comment}  </span>
