@@ -44,13 +44,7 @@ class VideoProfil extends Component {
 //supprition
 	  handleSubmit = (e)=> {	 
 		e.preventDefault()
-		// const token = localStorage.getItem('token')
-		// const tokenDecoded = jwt.decode(token)
-		// const idProfilDecoded = tokenDecoded.id_profil
 
-		//  console.log(idProfilDecoded);
-		const idd=this.state.id_general_video
-		// axios.delete(`http://localhost:3000/general_video/delete_general_video/${idProfilDecoded}`)
 		axios.delete(`http://localhost:3000/general_video/delete_general_video/`)
 		  .then(res => {
 			console.log(res);
