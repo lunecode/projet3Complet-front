@@ -3,15 +3,12 @@ import axios from 'axios';
 import './GetProfil.css';
 import { NavLink } from 'react-router-dom';
 
-
 //Import ingredients pictures
-
 import Selected from "../../Images-tripitto/Icon/Ingredients/Aventurier/Selected.png"
 import MontagneCopy2 from "../../Images-tripitto/Icon/Ingredients/MontagneCopy2.png"
 import FestivalCopy2 from "../../Images-tripitto/Icon/Ingredients/FestivalCopy2.png"
 import EcotourismeCopy2 from "../../Images-tripitto/Icon/Ingredients/EcotourismeCopy2.png"
 import HistoireCultureCopy2 from "../../Images-tripitto/Icon/Ingredients/HistoireCultureCopy2.png"
-
 
 // Import pictures
 import Pin_On from "../../Images-tripitto/Icon/Pin_ON.png"

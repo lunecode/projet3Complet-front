@@ -4,7 +4,9 @@ import "./VideoProfil.scss"
 import Delete from '../../Images-tripitto/Icon_Vidéo/Delete.png'
 
 const ModalDeleteVideo = (props) => {
-  console.log(props);
+//   const getId=this.props
+// const getIdVideo=getId.videos_profil
+  console.log(props.getFollowing);
 
   return (
     <div>

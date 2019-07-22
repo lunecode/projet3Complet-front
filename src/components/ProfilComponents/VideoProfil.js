@@ -20,8 +20,10 @@ import axios from "axios"
 
 class VideoProfil extends Component {
 	state = {
+
 		videos_profil: [],
 		isModalSecurityOpen: false,
+
 	}
 
 
@@ -34,21 +36,30 @@ class VideoProfil extends Component {
 		// console.log(res);
 		this.setState({ videos_profil: res.data }, _ => {
 			console.log(this.state.videos_profil)
+			const getId=this.state.videos_profil[0]
+			console.log(getId.id_general_video)
 		})
 	}
 
 //supprition
-	  handleSubmit = e => {
+	  handleSubmit = (e)=> {	 
 		e.preventDefault()
-		const token = localStorage.getItem('token')
-		const tokenDecoded = jwt.decode(token)
-		const idProfilDecoded = tokenDecoded.id_profil
-		console.log(idProfilDecoded);
-		axios.delete(`http://localhost:3000/general_video/delete_general_video/${idProfilDecoded}`)
+		// const token = localStorage.getItem('token')
+		// const tokenDecoded = jwt.decode(token)
+		// const idProfilDecoded = tokenDecoded.id_profil
+
+		//  console.log(idProfilDecoded);
+		const idd=this.state.id_general_video
+		// axios.delete(`http://localhost:3000/general_video/delete_general_video/${idProfilDecoded}`)
+		axios.delete(`http://localhost:3000/general_video/delete_general_video/`)
 		  .then(res => {
 			console.log(res);
 			console.log(res.data);
 		  })
+		  .then(
+	
+		)
+
 	  }
 
 
@@ -145,7 +156,9 @@ class VideoProfil extends Component {
 					{/* /bloc video 1 */}
 					<div className={"list_videos"+ i++}   >
 						{this.state.videos_profil.map(item => (
-							<div className="video_user1">
+
+							<div className="video_user1" key={item.id_general_video} >
+								<p>{item.id_general_video} </p>
 								<div className="status_durée">
 									<div className="status1">
 										<p className="status">En attente d'approbation</p>
@@ -172,6 +185,7 @@ class VideoProfil extends Component {
 									<ModalHidevide />
 							    	<ModalDeleteVideo 
 									{...this.state}
+									getFollowing={item.id_general_video}
 									openModalSecurity={this.openModalSecurity}
 									closeModalSecurity={this.closeModalSecurity}
 									handleSubmit={this.handleSubmit}/> 
