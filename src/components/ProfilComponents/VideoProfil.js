@@ -19,39 +19,62 @@ import img4 from '../../Images-tripitto/Icon_Vidéo/img4.png'
 import axios from "axios"
 
 class VideoProfil extends Component {
-     state={
-         videos_profil: [], 
-     }
-    
+	state = {
+		videos_profil: [],
+		isModalSecurityOpen: false,
+	}
 
-	 getFollowing = async () => {
+
+	getFollowing = async () => {
 		const token = localStorage.getItem('token')
 		const tokenDecoded = jwt.decode(token)
 		const idProfilDecoded = tokenDecoded.id_profil
-
+		// console.log(idProfilDecoded);
 		const res = await axios.get(`http://localhost:3000/general_video/get_video_id_profil/${idProfilDecoded}`)
-		console.log(res);
+		// console.log(res);
 		this.setState({ videos_profil: res.data }, _ => {
-
 			console.log(this.state.videos_profil)
 		})
-}
+	}
+
+//supprition
+	  handleSubmit = e => {
+		e.preventDefault()
+		const token = localStorage.getItem('token')
+		const tokenDecoded = jwt.decode(token)
+		const idProfilDecoded = tokenDecoded.id_profil
+		console.log(idProfilDecoded);
+		axios.delete(`http://localhost:3000/general_video/delete_general_video/${idProfilDecoded}`)
+		  .then(res => {
+			console.log(res);
+			console.log(res.data);
+		  })
+	  }
 
 
-
-	componentDidMount (){
+	componentDidMount(){
 		this.getFollowing()
+		this.openModalSecurity()
+		this.closeModalSecurity()	
+	}
+	openModalSecurity = () => {
+		this.setState({ isModalSecurityOpen: true })
+		// console.log(this.state.isModalSecurityOpen);
+	}
+	closeModalSecurity = () => {
+		this.setState({ isModalSecurityOpen: false })
+		// console.log(this.state.isModalOpen);
+	}
+
+	componentDidUpdate() {
+		console.log(this.state.isModalSecurityOpen);
+		
 	}
 
 	render() {
-		const token = localStorage.getItem('token')
-		const idProfilDecod = jwt.decode(token)
-		const idProfil = idProfilDecod.id_profil
-		console.log(idProfilDecod)
-		console.log(idProfil)
+    let i = 1
 		return (
 			<div className="VideoProfilCompnent">
-
 				<div className="membres-profil">
 					<img src="https://images.pexels.com/photos/814499/pexels-photo-814499.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500" alt="pictures profil" />
 					<div className="membres-profil-detail">
@@ -95,7 +118,6 @@ class VideoProfil extends Component {
 						</ul>
 					</div>
 					{/*** les video *****/}
-
 					<div className="grid-profil-info">
 						<div><h3>Video(5)</h3></div>
 						<div className="filter">
@@ -119,75 +141,61 @@ class VideoProfil extends Component {
 					</div>
 				</div>
 
-				<div className="bloc_2_video">
-                         {/* /bloc video 1 */}
-                         
-                         <div className="list_videos" id="dummy">
-                   
-						<div>
+				
+					{/* /bloc video 1 */}
+					<div className={"list_videos"+ i++}   >
 						{this.state.videos_profil.map(item => (
 							<div className="video_user1">
 								<div className="status_durée">
 									<div className="status1">
-										<p className="status">En attente d'approbation</p> 
-										 
-											 <div> 
-											 
-												 <div> 
-										<p>{item.video_description} </p> 
-										</div>
-								
-										</div>
-											
+										<p className="status">En attente d'approbation</p>
 									</div>
 									<div className="durée1" >
-										{/* <p className="durée">{item.video_duration} </p> */}
+										<p className="durée">{item.video_duration} </p>
 									</div>
 								</div>
 
-								<div className="imagescreen"><img src={item.cover_picture} alt="" /></div> 
+								<div className="imagescreen"><img src={item.cover_picture} alt="" /></div>
 								<div className="countery">
 									<h3> Dans les profondeur du canyon</h3>
-									<p className="countery_p">pappa </p>
+									<p className="countery_p">{item.contery} </p>
 								</div>
 								<div className="infos">
 									<p className="A"> 0 vues</p>
 									<p className="B">.</p>
-									<p className="C">Il y a un jour</p>
+									<p className="C">Il y a {item.loading_time} jours </p>
 									<p className="D"> <img src={pourcentage} alt="" /></p>
 								</div>
 								<div className="icons_video">
 									<img className="img1" src={modification} alt="" />
 									<img className="img2" src={Partager} alt="" />
-
 									<ModalHidevide />
-									<ModalDeleteVideo />
+							    	<ModalDeleteVideo 
+									{...this.state}
+									openModalSecurity={this.openModalSecurity}
+									closeModalSecurity={this.closeModalSecurity}
+									handleSubmit={this.handleSubmit}/> 
 								</div>
-							</div>
-	)) }   
-						</div>
-                     
+								</div>
+						))}
 					</div>
 
+			
 
-				
+				{/* /bloc video 4*/}
+				<div className="list_videos">
 
-
-					{/* /bloc video 4*/}
-					<div className="list_videos">
-
-						<div>
-							<div className="video_user1">
-								<div className="upload_video">
-									<img src={upload} alt="upload" />
-									<p>Ajouter une nouvelle video</p>
-								</div>
-							</div>
+					<div className="video_user1">
+						<div className="upload_video">
+							<img src={upload} alt="upload" />
+							<p>Ajouter une nouvelle video</p>
 						</div>
 					</div>
+
 				</div>
-
 			</div>
+
+
 		);
 	}
 }

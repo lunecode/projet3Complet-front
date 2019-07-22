@@ -10,12 +10,12 @@ class ModalHidevideo extends Component {
   }
 
 
-  openModalSecurity = () => {
+  openModalSecurity = (event) => {
     this.setState({ isModalSecurityOpen: true })
     // console.log(this.state.isModalSecurityOpen);
   }
 
-  closeModalSecurity = () => {
+  closeModalSecurity = (event) => {
     this.setState({ isModalSecurityOpen: false })
     // console.log(this.state.isModalOpen);
   }

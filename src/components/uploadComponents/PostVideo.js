@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { NavLink } from 'react-router-dom'
 import './PostVideo.css'
-
+import jwt from 'jsonwebtoken'
 import UploadIcon from '../../Images-tripitto/Icon/Upload-Video.png'
 import CoverIcon from '../../Images-tripitto/Icon/Upload Image.png'
 import AboutVideo from '../../Images-tripitto/imgUploadVideo/AboutVideo.PNG'
@@ -17,7 +17,7 @@ import AboutVideo from '../../Images-tripitto/imgUploadVideo/AboutVideo.PNG'
 
 class PostVideo extends Component {
   state = {
-    profil_id_profil : 1
+    profil_id_profil : ""
   }
 
   changeHandler = (e) => {
@@ -39,12 +39,21 @@ class PostVideo extends Component {
         console.log(error)
       })
   }
+  getIdProfil=()=>{
+    const token = localStorage.getItem('token')
+		const tokenDecoded = jwt.decode(token)
+    const idProfilDecoded = tokenDecoded.id_profil
+    this.setState({
+      profil_id_profil:idProfilDecoded
+    })
+  }
 
+  componentDidMount(){
+    this.getIdProfil()
+  }
   render() {
     
     const { video_title, video_link, video_description, equipment, link_equipment, equipment2, link_equipment2, equipment3, link_equipment3, cover_picture } = this.state
-
-
     return (
       <div>
         <form onSubmit={this.submitHandler}>

@@ -2,15 +2,10 @@ import React, { Component } from 'react'
 
 import ForgottenPassword2 from './ForgottenPassword2'
 import './ForgottenPassword.scss'
-
 // import axios from 'axios';
-
 import Lock from "../../Images-tripitto/Icon/Lock.png"
 import ButtonFull from "../../Images-tripitto/Buttons/white/Full.png"
 import ButtonGoogle from "../../Images-tripitto/Buttons/Colored/Google.png"
-
-
-
 
 // AUTHENTIFICATION
 

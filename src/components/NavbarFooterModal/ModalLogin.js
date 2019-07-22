@@ -40,24 +40,6 @@ class ModalLogin extends Component {
         this.setState({ [e.target.name]: e.target.value })
       }
 
-    // onSubmit = (e) => {
-    //     e.preventDefault()
-    //     axios
-    //         .post("http://localhost:3000/registration/registration", {
-    //             firstname: e.target.firstname.value,
-    //             lastname: e.target.lastname.value,
-    //             email: e.target.email.value,
-    //             password: e.target.password.value,
-    //         })
-    //         .then(resp => {
-    //             if (resp.data.error === "User already exists") {
-    //                 console.log(resp.data.error)
-    //             } else {
-    //                 console.log('inscription réussi')
-    //             }
-    //         })
-    // }
-
     openModal4 = () => {
         this.setState({ isModalOpe4: true })
         this.props.onClose3()
