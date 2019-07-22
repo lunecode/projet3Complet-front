@@ -4,7 +4,6 @@ import { NavLink } from 'react-router-dom'
 import jwt from 'jsonwebtoken'
 
 import './PostVideo.css'
-
 import UploadIcon from '../../Images-tripitto/Icon/Upload-Video.png'
 import CoverIcon from '../../Images-tripitto/Icon/Upload Image.png'
 import AboutVideo from '../../Images-tripitto/imgUploadVideo/AboutVideo.PNG'
@@ -44,6 +43,14 @@ class PostVideo extends Component {
         console.log(error)
       })
   }
+  getIdProfil=()=>{
+    const token = localStorage.getItem('token')
+		const tokenDecoded = jwt.decode(token)
+    const idProfilDecoded = tokenDecoded.id_profil
+    this.setState({
+      profil_id_profil:idProfilDecoded
+    })
+  }
 
   getIdProfil = () => {
     const token = localStorage.getItem('token')
@@ -68,8 +75,6 @@ class PostVideo extends Component {
     // console.log(idProfilDecoded)
     
     const { video_title, video_link, video_description, equipment, link_equipment, equipment2, link_equipment2, equipment3, link_equipment3, cover_picture } = this.state
-
-
     return (
       <div>
         <form onSubmit={this.submitHandler}>

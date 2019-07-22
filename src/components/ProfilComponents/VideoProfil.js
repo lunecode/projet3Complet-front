@@ -16,37 +16,69 @@ import img1 from '../../Images-tripitto/Icon_Vidéo/img1.png'
 import img2 from '../../Images-tripitto/Icon_Vidéo/img2.png'
 import img3 from '../../Images-tripitto/Icon_Vidéo/img3.png'
 import img4 from '../../Images-tripitto/Icon_Vidéo/img4.png'
+import axios from "axios"
 
 class VideoProfil extends Component {
 	state = {
-		id_Profil: '',
+
+		videos_profil: [],
+		isModalSecurityOpen: false,
+
 	}
 
 
-	idProfilVideo = () => {
+	getFollowing = async () => {
 		const token = localStorage.getItem('token')
-		if (token) {
-			const idToken = jwt.decode(token)
-			const idProfilDecoded = idToken.id_profil
-			this.setState = ({ id_Profil: idProfilDecoded })
-		}
+		const tokenDecoded = jwt.decode(token)
+		const idProfilDecoded = tokenDecoded.id_profil
+		// console.log(idProfilDecoded);
+		const res = await axios.get(`http://localhost:3000/general_video/get_video_id_profil/${idProfilDecoded}`)
+		// console.log(res);
+		this.setState({ videos_profil: res.data }, _ => {
+			console.log(this.state.videos_profil)
+			const getId=this.state.videos_profil[0]
+			console.log(getId.id_general_video)
+		})
+	}
+//supprition
+	  handleSubmit = (e)=> {	 
+		e.preventDefault()
+
+		axios.delete(`http://localhost:3000/general_video/delete_general_video/`)
+		  .then(res => {
+			console.log(res);
+			console.log(res.data);
+		  })
+		  .then(
+	
+		)
+
+	  }
+
+
+	componentDidMount(){
+		this.getFollowing()
+		this.openModalSecurity()
+		this.closeModalSecurity()	
+	}
+	openModalSecurity = () => {
+		this.setState({ isModalSecurityOpen: true })
+		// console.log(this.state.isModalSecurityOpen);
+	}
+	closeModalSecurity = () => {
+		this.setState({ isModalSecurityOpen: false })
+		// console.log(this.state.isModalOpen);
 	}
 
-
-	componentDidMount = () => {
-		// this.idProfilVideo()
+	componentDidUpdate() {
+		console.log(this.state.isModalSecurityOpen);
+		
 	}
 
 	render() {
-		const token = localStorage.getItem('token')
-		const idProfilDecod = jwt.decode(token)
-		const idProfil = idProfilDecod.id_profil
-		console.log(idProfilDecod)
-		console.log(idProfil)
-
+    let i = 1
 		return (
 			<div className="VideoProfilCompnent">
-
 				<div className="membres-profil">
 					<img src="https://images.pexels.com/photos/814499/pexels-photo-814499.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500" alt="pictures profil" />
 					<div className="membres-profil-detail">
@@ -90,7 +122,6 @@ class VideoProfil extends Component {
 						</ul>
 					</div>
 					{/*** les video *****/}
-
 					<div className="grid-profil-info">
 						<div><h3>Video(5)</h3></div>
 						<div className="filter">
@@ -114,222 +145,64 @@ class VideoProfil extends Component {
 					</div>
 				</div>
 
-				<div className="bloc_2_video">
+				
 					{/* /bloc video 1 */}
-					<div className="list_videos" id="dummy">
-						<div>
-							<div className="video_user1">
+					<div className={"list_videos"+ i++}   >
+						{this.state.videos_profil.map(item => (
+
+							<div className="video_user1" key={item.id_general_video} >
+								<p>{item.id_general_video} </p>
 								<div className="status_durée">
 									<div className="status1">
 										<p className="status">En attente d'approbation</p>
 									</div>
 									<div className="durée1" >
-										<p className="durée">12:45</p>
+										<p className="durée">{item.video_duration} </p>
 									</div>
 								</div>
 
-								<div className="imagescreen"><img src={img1} alt="" /></div>
+								<div className="imagescreen"><img src={item.cover_picture} alt="" /></div>
 								<div className="countery">
 									<h3> Dans les profondeur du canyon</h3>
-									<p className="countery_p">USA</p>
+									<p className="countery_p">{item.contery} </p>
 								</div>
 								<div className="infos">
 									<p className="A"> 0 vues</p>
 									<p className="B">.</p>
-									<p className="C">Il y a un jour</p>
+									<p className="C">Il y a {item.loading_time} jours </p>
 									<p className="D"> <img src={pourcentage} alt="" /></p>
 								</div>
 								<div className="icons_video">
 									<img className="img1" src={modification} alt="" />
 									<img className="img2" src={Partager} alt="" />
-
 									<ModalHidevide />
-									<ModalDeleteVideo />
+							    	<ModalDeleteVideo 
+									{...this.state}
+									getFollowing={item.id_general_video}
+									openModalSecurity={this.openModalSecurity}
+									closeModalSecurity={this.closeModalSecurity}
+									handleSubmit={this.handleSubmit}/> 
 								</div>
-							</div>
-
-						</div>
-
+								</div>
+						))}
 					</div>
 
+			
 
-					{/* /*****************************************$ */}
+				{/* /bloc video 4*/}
+				<div className="list_videos">
 
-					{/* /bloc video 2 */}
-					<div className="list_videos" id="dummy">
-						<div>
-							<div className="video_user1">
-								<div className="status_durée">
-									<div className="status1">
-										<p className="status_enligne">En ligne</p>
-									</div>
-									<div className="durée1" >
-										<p className="durée">08:36</p>
-									</div>
-								</div>
-
-								<div className="imagescreen"><img src={img3} alt="" /></div>
-
-								<div className="countery">
-									<h3>Perdu dans le sahara</h3>
-									<p className="countery_p">Mauritanie</p>
-								</div>
-								<div className="infos">
-									<p className="A"> 1903 vues</p>
-									<p className="B">.</p>
-									<p className="C">Il y a 3 mois</p>
-									<p className="D"> <img src={pourcentage80} alt="" /></p>
-								</div>
-								<div className="icons_video">
-									<img className="img1" src={modification} alt="" />
-									<img className="img2" src={Partager} alt="" />
-									<ModalHidevide />
-									<ModalDeleteVideo />
-								</div>
-							</div>
+					<div className="video_user1">
+						<div className="upload_video">
+							<img src={upload} alt="upload" />
+							<p>Ajouter une nouvelle video</p>
 						</div>
-
 					</div>
 
 				</div>
-				{/* /*****************************************$ */}
-
-				<div className="bloc_2_video_2">
-					{/* /bloc video 3 */}
-					<div className="list_videos" id="dummy">
-
-						<div>
-							<div className="video_user1">
-								<div className="status_durée">
-									<div className="status1">
-										<p className="status_refusé">Non adaptée</p>
-									</div>
-									<div className="durée1" >
-										<p className="durée">03:56</p>
-									</div>
-								</div>
-
-								<div className="imagescreen"><img src={img4} alt="" /></div>
-
-								<div className="countery">
-									<h3>Extréme Xest Caoest</h3>
-									<p className="countery_p">Mauritanie</p>
-								</div>
-								<div className="infos">
-									<p className="A"> 1903 vues</p>
-									<p className="B">.</p>
-									<p className="C">Il y a 3 mois</p>
-									<p className="D"> <img src={pourcentage60} alt="" /></p>
-								</div>
-								<div className="icons_video">
-									<img className="img1" src={modification} alt="" />
-									<img className="img2" src={Partager} alt="" />
-									<ModalHidevide />
-									<ModalDeleteVideo />
-									{/* <button onClick={this.removeDummy}><img className="img4"src={Delete} alt=""/> </button>  */}
-								</div>
-							</div>
-						</div>
-
-					</div>
-
-
-					{/* /bloc video 4*/}
-					<div className="list_videos" id="dummy">
-
-						<div>
-							<div className="video_user1">
-								<div className="status_durée">
-									<div className="status1">
-										<p className="status_Brouillon">Brouillon</p>
-									</div>
-									<div className="durée1" >
-										<p className="durée">03:56</p>
-									</div>
-								</div>
-
-								<div className="imagescreen"><img src={vinise} alt="" /></div>
-
-								<div className="countery">
-									<h3>Souvenir de Venise</h3>
-									<p className="countery_p">Italie</p>
-								</div>
-								<div className="infos">
-									<p className="A"> 0 vues</p>
-									<p className="B">.</p>
-									<p className="C">Il y a 1 mois</p>
-									<p className="D"> <img src={pourcentage60} alt="" /></p>
-								</div>
-
-								<div className="icons_video">
-									<img className="img1" src={modification} alt="" />
-									<img className="img2" src={Partager} alt="" />
-									<ModalHidevide />
-									<ModalDeleteVideo />
-								</div>
-							</div>
-						</div>
-
-					</div>
-				</div>
-
-
-
-
-				{/* *************************************$$ */}
-				<div className="bloc_2_video_3">
-					{/* /bloc video 3 */}
-					<div className="list_videos" id="dummy">
-
-						<div>
-							<div className="video_user1">
-								<div className="status_durée">
-									<div className="status1">
-										<p className="status_Masquée">Masquée</p>
-									</div>
-									<div className="durée1" >
-										<p className="durée">03:56</p>
-									</div>
-								</div>
-
-								<div className="imagescreen"><img src={img2} alt="" /></div>
-
-								<div className="countery">
-									<h3>Extréme Xest Caoest</h3>
-									<p className="countery_p">SHOWREEL</p>
-								</div>
-								<div className="infos">
-									<p className="A"> 1903 vues</p>
-									<p className="B">.</p>
-									<p className="C">Il y a 3 mois</p>
-									<p className="D"> <img src={pourcentage80} alt="" /></p>
-								</div>
-								<div className="icons_video">
-									<img className="img1" src={modification} alt="" />
-									<img className="img2" src={Partager} alt="" />
-									<ModalHidevide />
-									<ModalDeleteVideo />
-								</div>
-							</div>
-						</div>
-					</div>
-
-
-					{/* /bloc video 4*/}
-					<div className="list_videos">
-
-						<div>
-							<div className="video_user1">
-								<div className="upload_video">
-									<img src={upload} alt="upload" />
-									<p>Ajouter une nouvelle video</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
 			</div>
+
+
 		);
 	}
 }

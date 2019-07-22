@@ -11,10 +11,8 @@ import axios from 'axios';
 class Display_Afrique_video extends Component {
 
     state = {
-
         general_video: [],
       };
-    
     
      
     
@@ -23,8 +21,7 @@ class Display_Afrique_video extends Component {
         this.setState({ general_video: res.data })
         console.log(this.state.general_video)
       }
-    
-    
+
       componentDidMount() {
         this.getVideo()
       }

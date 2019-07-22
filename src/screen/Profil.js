@@ -16,43 +16,39 @@ import axios from "axios"
 
 
 class Profil extends Component {
-  state = {
-    lastname:"",
-    firstname:"",
-    pseudo:"",
-    identity:"",
-    email:"",
-    location:"",
-    birth_date:"",
-    type:"",
-    position:"",
-    profil_link:"",
-    nb_countries_visited:"",
-    profile_picture:"",
-    profil:"",
-    bio:"",
-    ingredients: ["Aventurier dabord", "Les copains dabord", "Escapade romantique", "En famille", "Digital nomad", "Iles  Plages", "Montagnes  Campagnes", "Safari & Animaux", "Grandes villes", "En foret", "Sport & Aventures", "Festivals & Musique", "Plaisir culinaire", "Histoire & Culture", "Spiritualité", "Humanitaire", "Ecotourise", "luxe", "En sac à dos", "Rencontres dexceptions"],
-    ingredients:[],
-    option_msg:"",
-    facebook_link:"",
-    instagram_link:"",
-    website_link:"",
-    inscription_date:"",
-    inscription_type:"",
-    password:"",
-    password_forget:"",
-    checked_option_msg:"",
-    is_checked_her:"",
-    is_checked_team:"",
-    is_checked_him:"",
-    New_password:"",
-
+  state={
+    // lastname:"",
+    // firstname:"",
+    // pseudo:"",
+    // identity:"",
+    // email:"",
+    // location:"",
+    // birth_date:"",
+    // type:"",
+    // position:"",
+    // profil_link:"",
+    // nb_countries_visited:"",
+    // profile_picture:"",
+    // profil:"",
+    // bio:"",
+    // ingredients: ["Aventurier dabord", "Les copains dabord", "Escapade romantique", "En famille", "Digital nomad", "Iles  Plages", "Montagnes  Campagnes", "Safari & Animaux", "Grandes villes", "En foret", "Sport & Aventures", "Festivals & Musique", "Plaisir culinaire", "Histoire & Culture", "Spiritualité", "Humanitaire", "Ecotourise", "luxe", "En sac à dos", "Rencontres dexceptions"],
+    // ingredients:[],
+    // // option_msg:"",
+    // facebook_link:"",
+    // instagram_link:"",
+    // website_link:"",
+    // inscription_date:"",
+    // inscription_type:"",
+    // password:"",
+    // password_forget:"",
+    // checked_option_msg:"",
+    // is_checked_her:"",
+    // is_checked_team:"",
+    // is_checked_him:"",
+    // New_password:"",
 
 
   }
-
-
-
   submitHandler = e => {
     e.preventDefault()
     const token = localStorage.getItem('token')
@@ -64,19 +60,38 @@ class Profil extends Component {
       .then(response => {
         console.log(response)
       })
-      //   .then( 
-      //     //Pour que  button submit renvoie vers la page ProfilDescription
-      //     this.props.history.push("/ProfilDescription"),
-      //     //permet de rafraichir la page pour afficher le Get
-      //     window.location.reload(true)
-      //  )
+      .then( 
+        //Pour que  button submit renvoie vers la page ProfilDescription
+        this.props.history.push("/ProfilDescription"),
+        //permet de rafraichir la page pour afficher le Get
+        window.location.reload(true)
+     )
       .catch(error => {
         console.log(error)
       })
   }
 
-
-
+  submitHandler = e => {
+    e.preventDefault()
+    const token = localStorage.getItem('token')
+    const tokenDecoded = jwt.decode(token)
+    const idProfilDecoded = tokenDecoded.id_profil
+    console.log(idProfilDecoded)
+    axios.get(`http://localhost:3000/profil/get_profil/${idProfilDecoded}`, this.state)
+      .then(response => {
+        console.log(response)
+      })
+      .then( 
+        //Pour que  button submit renvoie vers la page ProfilDescription
+        this.props.history.push("/ProfilDescription"),
+        //permet de rafraichir la page pour afficher le Get
+        window.location.reload(true)
+     )
+      .catch(error => {
+        console.log(error)
+      })
+  }
+  
   handleCheckbox = (e) => {
     e.preventDefault()
     const target = e.target;
