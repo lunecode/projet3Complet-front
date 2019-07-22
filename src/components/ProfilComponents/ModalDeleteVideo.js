@@ -15,7 +15,7 @@ class ModalDeleteVideo extends Component {
 
 openModalSecurity =() => {
 this.setState( { isModalSecurityOpen: true} )
-console.log(this.state.isModalSecurityOpen);
+// console.log(this.state.isModalSecurityOpen);
 }
 
 closeModalSecurity = () => {

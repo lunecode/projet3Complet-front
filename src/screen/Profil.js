@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import jwt from 'jsonwebtoken'
 import AutoriseContact from '../components/ProfilComponents/AutoriseContact'
 import PostProfilInfo from '../components/ProfilComponents/PostProfilInfo'
 import PostEnumProfil from '../components/ProfilComponents/PostEnumProfil';
@@ -15,13 +16,32 @@ import axios from "axios"
 
 
 class Profil extends Component {
-  state={
-    
+  state = {
   }
+ 
+  // submitHandler = e => {
+  //   e.preventDefault()
+  //   console.log(this.state)
+  //   axios.post('http://localhost:3000/profil/insert_profil', this.state)
+  //     .then(response => {
+  //       console.log(response)
+  //     })
+  //     .catch(error => {
+  //       console.log(error)
+  //     })
+  // }
+
+
+
   submitHandler = e => {
     e.preventDefault()
-    console.log(this.state)
-    axios.post('http://localhost:3000/profil/insert_profil', this.state)
+
+    const token = localStorage.getItem('token')
+    const tokenDecoded = jwt.decode(token)
+    const idProfilDecoded = tokenDecoded.id_profil
+    console.log(idProfilDecoded)
+
+    axios.put(`http://localhost:3000/profil/update_profil/${idProfilDecoded}`, this.state)
       .then(response => {
         console.log(response)
       })
@@ -36,6 +56,26 @@ class Profil extends Component {
       })
   }
 
+
+  // submitHandler = e => {
+  //   e.preventDefault()
+  //   const token = localStorage.getItem('token')
+  //   const tokenDecoded = jwt.decoded(token)
+  //   const idProfilDecoded = tokenDecoded.id_profil
+
+  //   console.log(idProfilDecoded)
+  //   axios.put(`http://localhost:3000/profil/update_profil/${idProfilDecoded}`, this.state)
+  //     .then(response => {
+  //       console.log(response)
+  //     })
+  //     .catch(error => {
+  //       console.log(error)
+  //     })
+  // }
+
+
+
+
   handleCheckbox = (e) => {
     e.preventDefault()
     const target = e.target;
@@ -47,11 +87,11 @@ class Profil extends Component {
   changeHandler = (e) => {
     this.setState({ [e.target.name]: e.target.value })
   }
-  handleOpenModal =()=> {
+  handleOpenModal = () => {
     this.setState({ showModal: true });
   }
-  
-  handleCloseModal= () =>{
+
+  handleCloseModal = () => {
     this.setState({ showModal: false });
   }
   //les Enumes de la table profile.//
@@ -137,25 +177,49 @@ class Profil extends Component {
   Enum21 = () => {
     this.setState({ ingredients: 21 })
   }
-//ouvrir le fichier et le convertir  en binair
+  // //ouvrir le fichier et le convertir  en binair
+  // handelchange = (e) => {
+  //   let files = e.target.files;
+  //   let reader = new FileReader();
+  //   reader.readAsDataURL(files[0]);
+  //   reader.onload = (e) => {
+  //     this.setState({ profil_link: e.target.result }, () => {
+  //       // console.log("video data", this.state.profil_link)
+  //     })
+  //   }
+  // }
 
+  
+  //convertir en binair
+  // blob2file = (blobData) => {
+  //   const fd = new FormData();
+  //   fd.set('a', blobData);
+  //   return fd.get('a');
+  // }
 
- 
+  // myFunction = (e) => {
+
+  //   const x = document.getElementById("myImg").src;
+  //   document.getElementById("demo").innerHTML = x;
+  // }
+
   render() {
-    console.log(this.state);
-  
-  
+
+    // const url = window.location.href;
+    // const idProfil = url.slice(32)
+
     return (
       <div className="pageprofil" >
-        <form  onSubmit={this.submitHandler}>
+        <form onSubmit={this.submitHandler}>
           <PostProfilInfo
             {...this.state}
             handleCheckbox={this.handleCheckbox}
-            changeHandler={this.changeHandler} 
-            handelchange={this.handelchange} 
-           
+            changeHandler={this.changeHandler}
+            handelchange={this.handelchange}
+            // blob2file={this.blob2file}
+            // myFunction={this.myFunction}
           />
-      
+
           <PostEnumProfil
             {...this.state}
             profil1={this.profil1}
@@ -168,7 +232,7 @@ class Profil extends Component {
 
           <PostBioProfil
             {...this.state}
-            changeHandler={this.changeHandler} 
+            changeHandler={this.changeHandler}
           />
 
           <PostIngedients
@@ -208,10 +272,7 @@ class Profil extends Component {
           />
           
           <div className="save-btn">
-
-      <button type="submit" onSubmit={this.submitHandler}>SAUVEGARDER</button>  
-      {/* <NavLink to="/ProfilDescription"><button type="submit" onSubmit={this.submitHandler}>SAUVEGARDER</button></NavLink>  */}
-      {/* <button type="submit" onSubmit={this.submitHandler}  onClick={this.functionName}>SAUVEGARDER</button> */}
+            <button type="submit" >SAUVEGARDER</button>
           </div>
         </form>
       </div>

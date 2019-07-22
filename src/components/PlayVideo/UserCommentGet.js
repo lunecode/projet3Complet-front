@@ -8,17 +8,17 @@ import EditCom from '../../Images-tripitto/Icon/Edit.png';
 
 class UserCommentGet extends Component {
     state = {
+    comment: [],
+    picture: []
+};
 
-        comment: [],
-        date: [],
-        picture: []
-    };
+getComment = async () => {
+    const res = await axios.get('http://localhost:3000/comment/get_comment')
+    this.setState({ comment: res.data })
+    // console.log(this.state.comment)
+}
 
-    getComment = async () => {
-        const res = await axios.get('http://localhost:3000/comment/get_comment')
-        this.setState({ comment: res.data })
 
-    }
 
     getProfil = async () => {
         const res = await axios.get('http://localhost:3000/profil/get_profil')

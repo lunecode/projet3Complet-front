@@ -17,6 +17,8 @@ $colorButton: #5dd8dc;
         .divLogoTripitto  {
             width: 20%;
             text-align: center;
+            margin-left: 3%;
+            margin-right: 3%;
         }
         
         .Search {
@@ -51,9 +53,8 @@ $colorButton: #5dd8dc;
             justify-content: space-around;
             list-style: none;
             width: 30%;
-           
             .li-videaste{
-              margin-top:3.7vh;
+                margin-top:3.7vh;
             }
         }
     }
@@ -77,7 +78,7 @@ $colorButton: #5dd8dc;
 .Ulbutton .buttonNavbar:hover {
     opacity: 0.6;
 }
-    
+
 .button_video{
     height: 10vh;
     border:none;
@@ -96,9 +97,11 @@ $colorButton: #5dd8dc;
                 justify-content: space-around;
                 list-style: none;
                  position: relative;
+                 
                  .img_profil{
                      cursor:pointer;
                  }
+                 
                 .img_profil:hover .Sous_nemu{ 
                  display: block;
                     }
@@ -110,16 +113,16 @@ $colorButton: #5dd8dc;
                     position: absolute;
                     
                     right:13vw;
-                    width:180px;
-                    height:205px;
+                    width:170px;
+                    height:260px;
                     border:1px solid #1BA2A2;
                     padding-top: 20px;
                     padding-left:20px;
                     z-index:2;
                     li{
                    
-                        padding-bottom:40px;
-                        padding-right:10px;
+                        padding: 10px;
+                       
                        
                         .link_DropDown{
                             text-decoration: none;
@@ -130,23 +133,23 @@ $colorButton: #5dd8dc;
                         }
                         .btn-deconnection{
                              border:none;
-                             padding-top:20px;
-                             padding-bottom:20px;
-                             margin-left:15px;
+                            //  padding-top:5px;
+                             padding-bottom:5px;
+                             margin-left:6px;
                              color:red;
                              font-weight: normal;
                              cursor:pointer;
                         }
                     }
                     .li-btn-off{
-                        background-color:#eeeeee;
+                        
                         margin-left:-1vw;
                         padding-bottom:0;
-                        margin-top:-3vh;
+                        // margin-top:-3vh;
                     }
                 
                 } 
-                 
+            
             }
             
             
@@ -158,6 +161,9 @@ $colorButton: #5dd8dc;
             .notification {
                 height: 20px;
                 margin-left: 2px;
+                fill: rgb(236, 229, 229) !important;
+
+                
             }
             .buttonNavbar {
                 background-color: $colorButton;
@@ -197,8 +203,16 @@ $colorButton: #5dd8dc;
         }
     }
     
-
+.img_profil_hide {
+    display: none;
+}
  
+.notification_hide {
+    display: none;
+}
+.buttonNavbar_hide {
+    display: none;
+}
 
 /********************** DROPDOWN ***************/
 

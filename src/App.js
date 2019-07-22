@@ -38,8 +38,8 @@ class App extends Component {
           <Switch>
              {/* les routes de page Profil */}
             <Route path="/" exact component={Home}  ></Route>
-            <Route path="/Profil" exact component={Profil}></Route>
-            <Route path="/Video" exact component={Video}></Route>
+            <Route path="/Profil" component={Profil}></Route>
+            <Route path="/Video" component={Video}></Route>
             <Route path="/Abonnements"exact component={Abonnements} ></Route>
             <Route path="/Abonnés" exact component={Abonne} ></Route>
             <Route path="/Notifications" exact component={Notifications} ></Route>

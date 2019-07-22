@@ -114,6 +114,7 @@ class PostTravelInformation extends Component {
 
     // ALLOW TO ASSOCIATE THE ID OF THE VIDEO TO THE TRAVEL INFORMATION
     const url = window.location.href.slice(40);
+    // this.setState = ({ general_video_id_general_video: url})
     this.state.general_video_id_general_video = url
 
     return (

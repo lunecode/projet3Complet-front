@@ -140,6 +140,7 @@ class GetProfil extends Component {
 
                   </div>
                 </div>
+
               </div>
             ))}
           </div>
