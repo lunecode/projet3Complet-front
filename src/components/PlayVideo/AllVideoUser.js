@@ -5,58 +5,56 @@ import './AllVideoUser.css';
 
 class AllVideoUser extends Component {
     state = {
-    video: [],
-}; 
-
-getVideo = async () => {
-    const res = await axios.get('http://localhost:3000/general_video/get_general_video')
-    this.setState({ video: res.data })
-   
-}
-componentDidMount() {
-    this.getVideo()
-}
-
-render() {
-
-    let i = 1;
-
-    
-    
-    const opts = {
-        height: '150',
-        width: '150',
-        playerVars: { // https://developers.google.com/youtube/player_parameters
-        autoplay: 0
-        }
+        video: [],
     };
 
-    const url = window.location.href;
-    const idVidUser = url.slice(32)
-    
-    
-    return (
-    <>
-        {this.state.video.filter(item => 
-        item.id_general_video == idVidUser).map(item =>(
-        <div className="allVideoUser" key={i++}>
-            <div className="contvid" key={item.id_general_video}>
-           {/* <h4> {item.lastname} {item.firstname}</h4>  */}
-        <div className="youtubeVid">
-        <YouTube  videoId={item.video_link} opts={opts} onReady={this._onReady}/>
-        </div>
-        <div className="userVid" key={item.id_profil}>
-            <p className="title_vid">{item.video_title}</p>
-            {/* video youtube a inserer  */}
-            <span>{item.video_description}</span>
-            {/* <p>{item.profil_id_profil}</p>  */}
-        </div>
-        </div>
-        </div>
-        ))}
-        
-    </>
-    )
+    getVideo = async () => {
+        const res = await axios.get('http://localhost:3000/general_video/get_general_video')
+        this.setState({ video: res.data })
+
+    }
+    componentDidMount() {
+        this.getVideo()
+    }
+
+    render() {
+
+        let i = 1;
+
+
+
+        const opts = {
+            height: '150',
+            width: '150',
+            playerVars: {
+                autoplay: 0
+            }
+        };
+
+        const url = window.location.href;
+        const idVidUser = url.slice(32)
+
+
+        return (
+            <>
+                {this.state.video.filter(item =>
+                    item.id_general_video == idVidUser).map(item => (
+                        <div className="allVideoUser" key={i++}>
+                            <div className="contvid" key={item.id_general_video}>
+                                <div className="youtubeVid">
+                                    <YouTube videoId={item.video_link} opts={opts} onReady={this._onReady} />
+                                </div>
+                                <div className="userVid" key={item.id_profil}>
+                                    <p className="title_vid">{item.video_title}</p>
+                                    <span>{item.video_description}</span>
+
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+
+            </>
+        )
     }
 }
 
