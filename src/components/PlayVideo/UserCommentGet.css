@@ -19,25 +19,17 @@
 }
 
 .comment{
-    /* width:100%;  */
     display: flex;
     justify-content: space-between;
     color: #525252;
-    /* border-bottom: 2px solid lightgray; */
-    
-
 } 
 
-/* .editcomment{
-    display:flex;
-    justify-content: space-between;
-} */
+
 
 .editcomment{
     width:22px;
     height:22px;
     background-image: none;
-    
 }
 
 .editcomment:hover{
@@ -53,9 +45,6 @@
     width:100%;
 }
 
-/* .userComment{
-    width:100%;
-} */
 
 .container_date{
     margin-bottom: 2%;

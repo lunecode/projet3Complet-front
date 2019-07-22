@@ -29,16 +29,11 @@ class Video extends Component {
 
   }
 
-
-
-
   getPopularity = async () => {
     const res = await axios.get('http://localhost:3000/popularity/get_popularity_liked_general_video')
     this.setState({ popularity: res.data })
-    // console.log(this.state.popularity)
+
   }
-
-
 
   componentDidMount() {
     this.getVideo()
@@ -52,7 +47,7 @@ class Video extends Component {
     const opts = {
       height: '490',
       width: '850',
-      playerVars: { // https://developers.google.com/youtube/player_parameters
+      playerVars: { 
         autoplay: 0
       }
     };
@@ -71,13 +66,13 @@ class Video extends Component {
               </div>
               <div className="video_info">
                 <div className="cont_video">
-                <div className="title_video">{item.video_title}
-                <span><img className="pop" src={Pop} alt="image_tripitto"></img></span>
-                  <div><button className="buttonCommentVideo">MODIFIER</button>
-                  </div>
+                  <div className="title_video">{item.video_title}
+                    <span><img className="pop" src={Pop} alt="image_tripitto"></img></span>
+                    <div><button className="buttonCommentVideo">MODIFIER</button>
+                    </div>
                   </div>
                   <div className="className">
-                  <span><img className="pop2" src={Pop2} alt="image_trip" ></img></span>
+                    <span><img className="pop2" src={Pop2} alt="image_trip" ></img></span>
                   </div>
                 </div>
                 {this.state.popularity.map(item => (
@@ -91,7 +86,7 @@ class Video extends Component {
                 <div className="test" >
                   <div><span className="loading">Ajouté le {item.loading_time} -</span><span className="status"><i>{item.video_status}</i></span> </div>
                   <p className="text">{item.video_description}</p>
-                  <p><img src={Camera} alt="camera" className="camera"/><a href="{item.link_equipment}>" target="_blank" className="equip_link">Go Pro Hero 6</a></p>
+                  <p><img src={Camera} alt="camera" className="camera" /><a href="{item.link_equipment}>" target="_blank" className="equip_link">Go Pro Hero 6</a></p>
 
                 </div>
                 <div className="userVideo">
@@ -103,12 +98,11 @@ class Video extends Component {
                     <p className="username">{item.video_user} </p>
                     <button className="suscribe">S'ABONNER</button>
                   </div>
-                 
                 </div>
                 <div className="autoplay">
                   <img className="auto" src={Autoplay} alt="equipment_picture"></img>
 
-                  </div>
+                </div>
               </div>
             </div>
           </div>

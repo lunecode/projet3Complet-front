@@ -33,7 +33,6 @@ class TravelInfo extends Component {
                     <div className="container_travel" key={item.id_travel_information}>
                         <div className="travel">
                             <p className="countryName1">{item.countries} <span className="month1">{item.departure_month}</span> <span className="year1">{item.departure_year} - </span><span className="duration1">{item.travel_duration} jours</span></p>
-                            {/* <li>{item.nb_step}</li> */}
                             <span className="accomodation1"> <img className="alone" src={Alone} alt="seul" />   <span className="travelAlone">{item.travel_type}</span> | <img className="house" src={House} alt="house" /> <span> Logement {item.accomodation_budget}</span>  <span className="currency">{item.currency}</span> | <img className="mug" src={Mug} alt="mug" /><span>   Repas et activités {item.activities_budget}</span>  <span>{item.currency}</span> </span>
                         </div>
                     </div>

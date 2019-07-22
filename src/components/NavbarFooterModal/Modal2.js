@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import axios from 'axios';
 
 import ForgottenPassword2 from './ForgottenPassword2'
 import './ForgottenPassword.scss'
@@ -48,6 +49,64 @@ class Modal2 extends Component {
         ModalForgottenPassword2: false,
     }
 
+    onSubmitLogin = e => {
+		e.preventDefault()
+		const email = e.target.email.value
+		const password = e.target.password.value
+		if (email == '' || password == '') {
+			alert('Merci de renseigner les champs')
+		} else  {
+			axios
+				.post('http://localhost:3000/login/login', {
+					email: e.target.email.value,
+					password: e.target.password.value
+				})
+				.then(res => {
+					localStorage.setItem('token', res.headers["x-access-token"])
+					const token = localStorage.getItem('token')
+					if (token == null) {
+						// window.location.reload(false)
+						console.log('nono')
+						
+					} else {
+						axios({
+							method: 'POST',
+							url: 'http://localhost:3000/login/protected',
+							headers: {
+								'Authorization': `Bearer ${token}`,
+							}
+						})
+						.then(res => {
+							if(res.data.message == 'Token OK') {
+								window.location.reload(true)
+							} else {
+								console.log('hahah')
+							}
+							console.log(res)
+						})
+					}
+				})
+		}
+    }
+    
+
+    // protectedRoute = () => {
+	// 	const token = localStorage.getItem('token')
+	// 	axios({
+	// 		method: 'POST',
+	// 		url: 'http://localhost:3000/login/protected',
+	// 		headers: {
+	// 			'Authorization': `Bearer ${token}`,
+	// 		}
+	// 	})
+	// 		.then(res => {
+	// 			console.log(res.data.message)
+	// 			if (!res.data.message == "Token OK") {
+	// 			}
+	// 		})
+	// }
+
+
     openModalForgottenPassword2 =() => {
         this.setState( { ModalForgottenPassword2: true} )
         this.props.onClose4()
@@ -71,13 +130,15 @@ class Modal2 extends Component {
                             <button onClick={onClose4}>X</button>
                         </div>
                     </div>
+
+                    <form onSubmit={this.onSubmitLogin}>
                     <div className="containerIs-open2">
                         <div className="divInputModal">
                                 <input type="text" name="email" id="email" placeholder="Adresse email"></input>
                                 
                         </div>
                         <div className="divInputModal" >
-                                <input type="text" name="password" id="password" placeholder="Mot de passe"></input>
+                                <input type="password" name="password" id="password" placeholder="Mot de passe"></input>
                         </div>
                     </div>
                     <div className="containerIs-open3">
@@ -99,6 +160,7 @@ class Modal2 extends Component {
                             <img src={ButtonGoogle} alt="button google connexion"></img>
                         </div>
                     </div>
+                        </form>
                 </div>
                 <ForgottenPassword2 isOpen5={ModalForgottenPassword2} onClose5={this.closeModalForgottenPassword2} />
             </>

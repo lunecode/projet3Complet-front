@@ -68,21 +68,21 @@ class Modal extends Component {
 
 
 
-	protectedRoute = () => {
-		const token = localStorage.getItem('token')
-		axios({
-			method: 'POST',
-			url: 'http://localhost:3000/login/protected',
-			headers: {
-				'Authorization': `Bearer ${token}`,
-			}
-		})
-			.then(res => {
-				console.log(res.data.message)
-				if (!res.data.message == "Token OK") {
-				}
-			})
-	}
+	// protectedRoute = () => {
+	// 	const token = localStorage.getItem('token')
+	// 	axios({
+	// 		method: 'POST',
+	// 		url: 'http://localhost:3000/login/protected',
+	// 		headers: {
+	// 			'Authorization': `Bearer ${token}`,
+	// 		}
+	// 	})
+	// 		.then(res => {
+	// 			console.log(res.data.message)
+	// 			if (!res.data.message == "Token OK") {
+	// 			}
+	// 		})
+	// }
 
 
 
@@ -152,11 +152,6 @@ class Modal extends Component {
 
 		return (
 			<>
-
-
-
-
-
 				<div className={isOpen ? 'modal--is-open' : 'modal'}>
 					<div className="containerIs-open">
 						<div>

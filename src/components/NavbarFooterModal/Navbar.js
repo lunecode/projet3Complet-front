@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import axios from 'axios'
 import jwt from 'jsonwebtoken'
 
@@ -116,8 +116,9 @@ class Navbar extends Component {
 	// DECONNEXION 
 	logout = () => {
 		localStorage.clear();
-		// window.location.reload(false);
+		window.location.reload(false);
 		this.displayButtonLoginToken()
+		window.location.assign('/')
 	}
 
 
@@ -265,13 +266,6 @@ class Navbar extends Component {
 
 
 
-
-
-
-
-
-
-
 								{/* AFFICHE L'AVATAR DU PROFIL ET LE MENU */}
 
 								<li id="displayProfilImg" className="img_profil">
@@ -279,13 +273,16 @@ class Navbar extends Component {
 									<ul className="Sous_nemu">
 										<li><NavLink className="link_DropDown" exact to="/Favoris">Mes favoris</NavLink></li>
 
-										<li><NavLink to='/Profil/' className="link_DropDown"><li>Gérer mon profil</li></NavLink></li>
+										<li><NavLink className="link_DropDown" exact to="/#">A regarder plus tard</NavLink></li>
 
-										<li><NavLink className="link_DropDown" exact to="/Profil">Envoyer un avis</NavLink></li>
+										<li><NavLink className="link_DropDown" exact to='/Profil/' >Gérer mon profil</NavLink></li>
 
-										<NavLink to="/"><li className="li-btn-off"><button onClick={this.logout} className="btn-deconnection">Se déconnecter</button></li></NavLink>
+										<li><NavLink className="link_DropDown" exact to="/#">Envoyer un avis</NavLink></li>
 
-										{/* <li className="li-btn-off"> <button onClick={this.logout} className="btn-deconnection">Se déconnecter</button></li> */}
+										<li><NavLink className="link_DropDown" exact to="/#">Aide</NavLink></li>
+{/* 
+										<NavLink to="/"><li className="li-btn-off"><button onClick={this.logout} className="btn-deconnection">Se déconnecter</button></li></NavLink> */}
+										<Link to="/"><li className="li-btn-off"> <button onClick={this.logout} className="btn-deconnection">Se déconnecter</button></li></Link>
 									</ul>
 								</li>
 
