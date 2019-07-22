@@ -73,7 +73,6 @@
 
 .pictureUser {
 
-    /* border-radius: 50%; */
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
@@ -152,7 +151,6 @@
     text-align: center;
     color: #59cce0;
     font-size: 15px;
-    /* font-weight: 500; */
     border: 1px solid #59cce0;
     margin-left: 5%;
 }

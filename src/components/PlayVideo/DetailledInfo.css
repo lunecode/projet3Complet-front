@@ -6,12 +6,10 @@
 
 
 .container_info{
-    /* margin-top: 3%; */
     background-color:#313F4F;
     width: 75%;
     box-shadow: 5px 5px 5px lightgray;
     
-    /* padding-top: 1%; */
 }
 
 
@@ -28,7 +26,6 @@
     background-color: white;
     color: #313F4F;
     padding: 5%;
-    /* font-size:19px; */
 }
 
 .trip_box{
