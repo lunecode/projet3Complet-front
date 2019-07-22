@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { NavLink } from 'react-router-dom'
+import jwt from 'jsonwebtoken'
+
 import './PostVideo.css'
 
 import UploadIcon from '../../Images-tripitto/Icon/Upload-Video.png'
@@ -17,7 +19,7 @@ import AboutVideo from '../../Images-tripitto/imgUploadVideo/AboutVideo.PNG'
 
 class PostVideo extends Component {
   state = {
-    profil_id_profil : 1
+    profil_id_profil : ''
   }
 
   changeHandler = (e) => {
@@ -31,6 +33,9 @@ class PostVideo extends Component {
   submitHandler = e => {
     e.preventDefault()
     console.log(this.state)
+
+
+
     axios.post('http://localhost:3000/general_video/insert_general_video', this.state)
       .then(response => {
         console.log(response)
@@ -40,7 +45,27 @@ class PostVideo extends Component {
       })
   }
 
+  getIdProfil = () => {
+    const token = localStorage.getItem('token')
+    const tokenDecoded = jwt.decode(token)
+    const idProfilDecoded= tokenDecoded.id_profil
+    this.setState({ profil_id_profil: idProfilDecoded})
+
+  }
+
+
+  componentDidMount () {
+    this.getIdProfil()
+  }
+
   render() {
+
+    // const token = localStorage.getItem('token')
+    // console.log(token)
+    // const tokenDecoded = jwt.decode(token)
+    // console.log(tokenDecoded)
+    // const idProfilDecoded= tokenDecoded.id_profil
+    // console.log(idProfilDecoded)
     
     const { video_title, video_link, video_description, equipment, link_equipment, equipment2, link_equipment2, equipment3, link_equipment3, cover_picture } = this.state
 
@@ -127,9 +152,13 @@ class PostVideo extends Component {
 
 {/* THIS INPUT ALLOW TO INSERT THE ID PROFIL OF THE UPLOAD VIDEO BUT IS HIDDING FOR NOW UNTIL THE LOGIN WORKS */}
             <div className="temp">
-              <input type="hidden" name="profil_id_profil" value={this.state.profil_id_profil} onChange={this.changeHandler} />
+              {/* <input type="hidden" name="profil_id_profil" value={this.state.profil_id_profil} onChange={this.changeHandler} /> */}
 
-              {/* <input type="text" name="profil_id_profil" value={profil_id_profil} onChange={this.changeHandler} /> */}
+              {/* <input type="hidden" name="profil_id_profil" value={idProfilDecoded} onChange={this.changeHandler} /> */}
+
+              <input type="text" name="profil_id_profil" value={this.state.profil_id_profil} onChange={this.changeHandler} />
+
+
             </div>
 
             <div className="submit-div">
