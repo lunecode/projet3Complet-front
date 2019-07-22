@@ -40,7 +40,6 @@ class VideoProfil extends Component {
 			console.log(getId.id_general_video)
 		})
 	}
-
 //supprition
 	  handleSubmit = (e)=> {	 
 		e.preventDefault()
