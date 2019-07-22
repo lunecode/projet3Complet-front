@@ -277,13 +277,13 @@ class Navbar extends Component {
 									<ul className="Sous_nemu">
 										<li><NavLink className="link_DropDown" exact to="/Favoris">Mes favoris</NavLink></li>
 
-										<li><NavLink className="link_DropDown" exact to="/Favoris">A regarder plus tard</NavLink></li>
+										<li><NavLink className="link_DropDown" exact to="/#">A regarder plus tard</NavLink></li>
 
 										<li><NavLink className="link_DropDown" exact to='/Profil/' >Gérer mon profil</NavLink></li>
 
-										<li><NavLink className="link_DropDown" exact to="/Profil">Envoyer un avis</NavLink></li>
+										<li><NavLink className="link_DropDown" exact to="/#">Envoyer un avis</NavLink></li>
 
-										<li><NavLink className="link_DropDown" exact to="/Profil">Aide</NavLink></li>
+										<li><NavLink className="link_DropDown" exact to="/#">Aide</NavLink></li>
 {/* 
 										<NavLink to="/"><li className="li-btn-off"><button onClick={this.logout} className="btn-deconnection">Se déconnecter</button></li></NavLink> */}
 										<li className="li-btn-off"> <button onClick={this.logout} className="btn-deconnection">Se déconnecter</button></li>
