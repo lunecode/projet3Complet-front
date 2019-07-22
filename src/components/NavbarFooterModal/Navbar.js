@@ -116,7 +116,7 @@ class Navbar extends Component {
 	// DECONNEXION 
 	logout = () => {
 		localStorage.clear();
-		window.location.reload(false);
+		// window.location.reload(false);
 		this.displayButtonLoginToken()
 	}
 
@@ -280,9 +280,10 @@ class Navbar extends Component {
 										<li><NavLink to='/Profil/' className="link_DropDown"><li>Gérer mon profil</li></NavLink></li>
 
 										<li><NavLink className="link_DropDown" exact to="/Profil">Envoyer un avis</NavLink></li>
-{/* 
-										<NavLink to="/"><li className="li-btn-off"><button onClick={this.logout} className="btn-deconnection">Se déconnecter</button></li></NavLink> */}
-										<li className="li-btn-off"> <button onClick={this.logout} className="btn-deconnection">Se déconnecter</button></li>
+
+										<NavLink to="/"><li className="li-btn-off"><button onClick={this.logout} className="btn-deconnection">Se déconnecter</button></li></NavLink>
+
+										{/* <li className="li-btn-off"> <button onClick={this.logout} className="btn-deconnection">Se déconnecter</button></li> */}
 									</ul>
 								</li>
 
