@@ -54,10 +54,11 @@ class Video extends Component {
 
     const url = window.location.href;
     const idVideo = url.slice(32)
-
+    console.log(url)
 
     return (
       <>
+        
         {this.state.videos.filter(item => item.id_general_video == idVideo).map(item => (
           <div className="container_video" key={i++}>
             <div key={item.id_general_video}>
@@ -72,7 +73,8 @@ class Video extends Component {
                     </div>
                   </div>
                   <div className="className">
-                    <span><img className="pop2" src={Pop2} alt="image_trip" ></img></span>
+                    <span><img className="pop2" src={Pop2} alt="image_trip" ></img>
+                    </span>
                   </div>
                 </div>
                 {this.state.popularity.map(item => (
