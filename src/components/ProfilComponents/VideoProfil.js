@@ -10,21 +10,70 @@ import Partager from '../../Images-tripitto/Icon_Vidéo/Partager.png'
 import modification from '../../Images-tripitto/Icon_Vidéo/modification.png'
 import pourcentage from '../../Images-tripitto/Icon_Vidéo/pourcentage.png'
 import upload from '../../Images-tripitto/Icon_Vidéo/upload.png'
+import Delete from '../../Images-tripitto/Icon_Vidéo/Delete.png'
 
 class VideoProfil extends Component {
 	state = {
-		videoByProfil: []
+		videoByProfil: [],
+		id_general_video: []
 	}
+
+
 
 
 	getVideoById = async () => {
 		const token = localStorage.getItem('token')
 		const idProfilDecod = jwt.decode(token)
-		const id = idProfilDecod.id_profil
-		const res = await axios.get(`http://localhost:3000/general_video/get_general_video_travel_information/${id}`)
+		const idProfil = idProfilDecod.id_profil
+		const res = await axios.get(`http://localhost:3000/general_video/get_video_id_profil/${idProfil}`)
 		this.setState({ videoByProfil: res.data })
+		// this.setState({ id_general_video: res.data })
 		console.log(this.state.videoByProfil)
+		// console.log(this.state.id_general_video)
 	}
+
+
+	// getVideoById = async () => {
+	// 	const token = localStorage.getItem('token')
+	// 	const idProfilDecod = jwt.decode(token)
+	// 	const id = idProfilDecod.id_profil
+	// 	const res = await axios.get(`http://localhost:3000/general_video/get_general_video_travel_information/${id}`)
+	// 	this.setState({ videoByProfil: res.data })
+	// 	console.log(this.state.videoByProfil)
+
+	// }
+
+
+	changeHandler = (e) => {
+		// this.setState({ id_general_video: e.target.value })
+		this.setState({ [e.target.name]: e.target.value })
+	}
+
+
+	submitHandler = (e, id) => {
+		console.log(id)
+		if (id) {
+			e.preventDefault()
+			axios.delete(`http://localhost:3000/general_video/delete_general_video/${id}`)
+				.then(response => {
+					console.log(response)
+				})
+				.catch(error => {
+					console.log(error)
+				})
+		}
+	}
+
+	// submitHandler = (e, id) => {
+	// 	e.preventDefault()
+	// 	axios.delete(`http://localhost:3000/general_video/delete_general_video/${id}`, this.state)
+	// 		.then(response => {
+	// 			console.log(response)
+	// 		})
+	// 		.catch(error => {
+	// 			console.log(error)
+	// 		})
+	// }
 
 
 	componentDidMount = () => {
@@ -32,6 +81,10 @@ class VideoProfil extends Component {
 	}
 
 	render() {
+
+		// const url = window.location.href.slice(45);
+		// this.state.general_video_id_general_video = url
+		
 
 		return (
 			<div className="VideoProfilCompnent">
@@ -104,8 +157,7 @@ class VideoProfil extends Component {
 
 
 				{this.state.videoByProfil.map(item => (
-					// <div className={"bloc_2_video" + i} key={i++}>
-					<div>
+					<div className="test">
 						<div className="list_videos" id="dummy">
 							<div>
 								<div className="video_user1">
@@ -128,13 +180,26 @@ class VideoProfil extends Component {
 										<p className="A"> 0 vues</p>
 										<p className="B">.</p>
 										<p className="C">Il y a un jour</p>
-										<p className="D"> <img src={pourcentage} alt="" /></p>
+										<p className="D"> <img src={pourcentage} alt="pourcentage" /></p>
 									</div>
+
 									<div className="icons_video">
-										<img className="img1" src={modification} alt="" />
-										<img className="img2" src={Partager} alt="" />
+										<img className="img1" src={modification} alt="modification" />
+										<img className="img2" src={Partager} alt="Partager" />
 										<ModalHidevide />
-										<ModalDeleteVideo />
+
+										{/* <form onSubmit={this.submitHandler(item.id_general_video)}> */}
+										<form onSubmit={this.submitHandler(item.id_general_video)}>
+
+
+											<input type="texte" name="id_general_video" value={item.id_general_video} ></input>
+
+
+											{/* FONCTIONNE EN ENTRANT MANUELLEMENT L'ID */}
+											{/* <input type="text" name="id_general_video" onChange={this.changeHandler} ></input> */}
+
+											<button type="submit"><img src={Delete}></img></button>
+										</form>
 									</div>
 								</div>
 							</div>
