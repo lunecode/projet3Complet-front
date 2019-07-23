@@ -3,13 +3,13 @@ import Display_Autres_video from "../components/HomeComponents/Display_Autres_vi
 
 
 class Autres_video extends Component {
-    render() {
-        return (
-            <div>
-                <Display_Autres_video />
-            </div>
-        );
-    }
+	render() {
+		return (
+			<div>
+				<Display_Autres_video />
+			</div>
+		);
+	}
 }
 
 export default Autres_video;

@@ -17,47 +17,47 @@ class Profil extends Component {
   }
 
 
-//  submitHandler = e => {
-//     e.preventDefault()
-//     const token = localStorage.getItem('token')
-//     const tokenDecoded = jwt.decode(token)
-//     const idProfilDcoded = tokenDecoded.id_profil
-//     console.log(idProfilDecoded)
-//     axios.get(`http://localhost:3000/profil/get_profil/${idProfilDecoded}`, this.state)
-//       .then(response => {
-//         console.log(response)
-//       })
-//       .then(
-//         // //Pour que  button submit renvoie vers la page ProfilDescription
-//         // this.props.history.push("/ProfilDescription"),
-//         // //permet de rafraichir la page pour afficher le Get
-//         // window.location.reload(true)
-//       )
-//       .catch(error => {
-//         console.log(error)
-//       })
-//   }
-submitHandler = e => {
-  e.preventDefault()
- //Permet de récupérer l'id de l'utilisateur connecté
-  const token = localStorage.getItem('token')
-  const tokenDecoded = jwt.decode(token)
-  const idProfilDecoded = tokenDecoded.id_profil
-  //requete put
-  axios.put(`http://localhost:3000/profil/update_profil/${idProfilDecoded}`, this.state)
-    .then(response => {
-      console.log(response)
-    })
-    .then(
-               //Pour que  button submit renvoie vers la page ProfilDescription
-               this.props.history.push("/ProfilDescription"),
-              //permet de rafraichir la page pour afficher le Get
-             window.location.reload(true)
-            )
-    .catch(error => {
-      console.log(error)
-    })
-}
+  //  submitHandler = e => {
+  //     e.preventDefault()
+  //     const token = localStorage.getItem('token')
+  //     const tokenDecoded = jwt.decode(token)
+  //     const idProfilDcoded = tokenDecoded.id_profil
+  //     console.log(idProfilDecoded)
+  //     axios.get(`http://localhost:3000/profil/get_profil/${idProfilDecoded}`, this.state)
+  //       .then(response => {
+  //         console.log(response)
+  //       })
+  //       .then(
+  //         // //Pour que  button submit renvoie vers la page ProfilDescription
+  //         // this.props.history.push("/ProfilDescription"),
+  //         // //permet de rafraichir la page pour afficher le Get
+  //         // window.location.reload(true)
+  //       )
+  //       .catch(error => {
+  //         console.log(error)
+  //       })
+  //   }
+  submitHandler = e => {
+    e.preventDefault()
+    //Permet de récupérer l'id de l'utilisateur connecté
+    const token = localStorage.getItem('token')
+    const tokenDecoded = jwt.decode(token)
+    const idProfilDecoded = tokenDecoded.id_profil
+    //requete put
+    axios.put(`http://localhost:3000/profil/update_profil/${idProfilDecoded}`, this.state)
+      .then(response => {
+        console.log(response)
+      })
+      .then(
+        //Pour que  button submit renvoie vers la page ProfilDescription
+        this.props.history.push("/ProfilDescription"),
+        //permet de rafraichir la page pour afficher le Get
+        window.location.reload(true)
+      )
+      .catch(error => {
+        console.log(error)
+      })
+  }
 
 
   handleCheckbox = (e) => {
@@ -173,7 +173,7 @@ submitHandler = e => {
             handleCheckbox={this.handleCheckbox}
             changeHandler={this.changeHandler}
             handelchange={this.handelchange}
-       
+
           />
 
           <PostEnumProfil
@@ -227,7 +227,7 @@ submitHandler = e => {
           />
 
           <div className="save-btn">
-          <button type="submit" >SAUVEGARDER</button>
+            <button type="submit" >SAUVEGARDER</button>
           </div>
         </form>
       </div>

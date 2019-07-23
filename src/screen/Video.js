@@ -3,13 +3,13 @@ import VideoProfil from '../components/ProfilComponents/VideoProfil';
 
 
 class Video extends Component {
-    render() {
-        return (
-            <div>
-                <VideoProfil />
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div>
+        <VideoProfil />
+      </div>
+    );
+  }
 }
 
 export default Video;

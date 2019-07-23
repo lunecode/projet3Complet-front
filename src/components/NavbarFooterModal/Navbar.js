@@ -3,15 +3,13 @@ import { NavLink, Link } from 'react-router-dom';
 import axios from 'axios'
 import jwt from 'jsonwebtoken'
 
-import Modal from './Modal'
-import './Modal.scss'
+import Login from './Login'
+import './Login.scss'
 import './Navbar.scss'
 import Logo from '../../Images-tripitto/Logo/B&W.png';
 import Search from '../../Images-tripitto/Icons/Search-White.png';
 import Avatar from '../../Images-tripitto/Icon/User/normal.png';
-// import Notification from '../Images-tripitto/Icon/Notifications.png';
 import NotificationPopup from '../HomeComponents/NotificationPopup';
-// import ModalDeleteVideo from './ProfilComponents/ModalDeleteVideo';
 
 class Navbar extends Component {
 	state = {
@@ -25,8 +23,6 @@ class Navbar extends Component {
 	};
 
 
-
-
 	protectedRoute = () => {
 		const token = localStorage.getItem('token')
 		axios({
@@ -37,15 +33,10 @@ class Navbar extends Component {
 			}
 		})
 			.then(res => {
-				// console.log(res)
-				// console.log(res.data)
-				console.log(res.data.message)
 				if (!res.data.message == "Token OK") {
 				}
 			})
 	}
-
-
 
 
 	openModal = () => {
@@ -58,8 +49,7 @@ class Navbar extends Component {
 	}
 
 
-
-	// PERMET DE CACHER LE BOUTTON CONNEXION DE LA NAVBAR SI LOGIN OK
+	// ALLOW TO HIDE CONNEXION BUTTON OF THE NAVBAR IF LOGIN OK
 	hideButtonLoginToken = () => {
 		const token = localStorage.getItem('token')
 		if (token) {
@@ -67,7 +57,7 @@ class Navbar extends Component {
 		}
 	}
 
-	// PERMET DE CACHER L'IMAGE DU MENU PROFIL SI TOKEN ABSENT
+	// ALLOW TO HIDE IMAGE OF THE PROFIL MENU IF TOKEN ABSENT
 	hidedisplayImgProfilToken = () => {
 		const token = localStorage.getItem('token')
 		if (!token) {
@@ -75,7 +65,7 @@ class Navbar extends Component {
 		}
 	}
 
-	// PERMET DE CACHER LA CLOCHE DE NOTIFICATION SI TOKEN ABSENT
+	// ALLOW TO HIDE THE BELL OF NOTIFICATION IF TOKEN ABSENT
 	hideDisplayBellToken = () => {
 		const token = localStorage.getItem('token')
 		if (!token) {
@@ -84,7 +74,7 @@ class Navbar extends Component {
 		}
 	}
 
-	// PERMET DE CACHER LE BOUTON DE PUBLICATION SI TOKEN ABSENT
+	// ALLOW TO HIDE PUBLICATION BUTTON IF TOKEN ABSENT
 	hideDisplayUploadButtonToken = () => {
 		const token = localStorage.getItem('token')
 		if (!token) {
@@ -93,8 +83,7 @@ class Navbar extends Component {
 	}
 
 
-
-	// PERMET D'AFFICHER LE BOUTON DE CONNEXION DE LA NAVBAR SI TOKEN ABSENT
+	//ALLOW TO DISPLAY CONNEXION BUTTON OF THE NAVBAR IF TOKEN ABSENT
 	displayButtonLoginToken = () => {
 		const token = localStorage.getItem('token')
 		if (!token) {
@@ -103,7 +92,7 @@ class Navbar extends Component {
 	}
 
 
-	// PERMET DE FERMER LA MODAL VIA LE BOUTON CONNEXION DU COMPOSANT DE LA MODAL SI TOKEN OK
+	// ALLOW TO CLOSE MODAL WITH THE CONNEXION BUTTON OF THE MODAL IF TOKEN OK
 	closeModal = () => {
 		const token = localStorage.getItem('token')
 		if (token) {
@@ -113,7 +102,7 @@ class Navbar extends Component {
 	}
 
 
-	// DECONNEXION 
+	// LOGOUT 
 	logout = () => {
 		localStorage.clear();
 		window.location.reload(false);
@@ -123,16 +112,13 @@ class Navbar extends Component {
 
 
 
-	testDecodeToken = () => {
+	decodeToken = () => {
 		const token = localStorage.getItem('token')
 		if (token) {
 			const decoded = jwt.decode(token)
 			const idProfilDecoded = decoded.id_profil
 			this.setState({ idDecoded: idProfilDecoded })
 		}
-		// console.log(decoded)
-		// console.log(idProfilDecoded)
-		// console.log(this.state.idDecoded)
 	}
 
 	getafrique = async () => {
@@ -173,7 +159,7 @@ class Navbar extends Component {
 		this.hidedisplayImgProfilToken()
 		this.hideDisplayBellToken()
 		this.hideDisplayUploadButtonToken()
-		this.testDecodeToken()
+		this.decodeToken()
 	}
 
 	render() {
@@ -183,12 +169,8 @@ class Navbar extends Component {
 		let o = 1
 		const { isModalOpen } = this.state
 
-		// console.log(this.state.idDecoded)
-
 		return (
 			<div>
-
-				{/* <button onClick={crossClose} >TEST</button> */}
 				<header>
 					<nav className="container_nav">
 						<div className="containerNavLeft">
@@ -262,102 +244,39 @@ class Navbar extends Component {
 						<div className="containerNavRight">
 							<ul className="Ulbutton" >
 
-
-
-
-
-								{/* AFFICHE L'AVATAR DU PROFIL ET LE MENU */}
-
+								{/* DISPLAY THE PROFIL AVATAR OF THE MENU */}
 								<li id="displayProfilImg" className="img_profil">
 									<img className='logoAvatar' src={Avatar} alt='logo tripitto'></img>
 									<ul className="Sous_nemu">
 										<li><NavLink className="link_DropDown" exact to="/Favoris">Mes favoris</NavLink></li>
-
 										<li><NavLink className="link_DropDown" exact to="/#">A regarder plus tard</NavLink></li>
-
 										<li><NavLink className="link_DropDown" exact to='/Profil/' >Gérer mon profil</NavLink></li>
-
 										<li><NavLink className="link_DropDown" exact to="/#">Envoyer un avis</NavLink></li>
-
 										<li><NavLink className="link_DropDown" exact to="/#">Aide</NavLink></li>
-{/* 
-										<NavLink to="/"><li className="li-btn-off"><button onClick={this.logout} className="btn-deconnection">Se déconnecter</button></li></NavLink> */}
 										<Link to="/"><li className="li-btn-off"> <button onClick={this.logout} className="btn-deconnection">Se déconnecter</button></li></Link>
 									</ul>
 								</li>
 
-
-								{/* <NavLink to={`/playvideo/${nextpicture.id_general_video}`} ><img src={nextpicture.cover_picture} className={"nextpictureimg" + a} key={a++} /></NavLink> */}
-
-
-								{/* BOUTON QUI OUVRE LA MODAL DE LOGIN */}
+								{/* BUTTON THAT OPENS THE LOGIN MODAL */}
 								<li><button onClick={this.openModal} id="displayLoginNone" className="buttonNavbarConnexion">SE CONNECTER</button></li>
 
-
-								{/* BOUTON TEST DE LA VERIFICATION DU TOKEN */}
-								{/* <button onClick={this.hidedisplayImgProfilToken}>Test</button> */}
-
-
-
-
-								{/* Permet l'affichage du profil ORIGINE */}
-
-								{/* <li className="img_profil" onClick={isModalOpen === true ? this.closeModal : null}>
-									<img className={this.state.isModalOpen === false ? "buttonNavbarConnexionNone" : "logoAvatar"}
-										src={Avatar} alt="logo tripitto">
-									</img>
-									<ul className="Sous_nemu">
-										<li><NavLink className="link_DropDown" exact to="/Favoris">Mes favoris</NavLink></li>
-										<li><NavLink className="link_DropDown" exact to="/Profil">Gérer mon profil</NavLink></li>
-										<li><NavLink className="link_DropDown" exact to="/Profil">Envoyer un avis</NavLink></li>
-										<li className="li-btn-off"> <button className="btn-deconnection">Se déconnecter</button></li>
-									</ul>
-								</li> */}
-
-
-
-
-								{/* AFFICHE LA CLOCHE DE NOTIFICATION UNE FOIS CONNECTE */}
+								{/* DISPLAY BELL NOTIFICATION WHEN CONNECTED */}
 								<li id="displayNotification" className="notification"><NotificationPopup /></li>
 
-
-								{/* Permet l'affichage de la cloche de notification ORIGIN */}
-								{/* <li className={this.state.isModalOpen === false ? "buttonNavbarConnexionNone" : "notification"}><NotificationPopup /></li> */}
-
-
-
-
-
-								{/* BOUTON QUI OUVRE LA MODAL DE LOGIN D'ORIGINE */}
-								{/* 
-								<li><button onClick={this.openModal} className={this.state.isModalOpen === false ? "buttonNavbarConnexion" : "buttonNavbarConnexionNone"}>SE CONNECTER</button></li> */}
-
-
-								{/* AFFICHE LE BOUTON DE PUBLICATION UNE FOIS CONNECTE */}
+								{/* DISPLAY PUBLICATION BUTTON WHEN CONNECTED */}
 								<NavLink to="/uploadVideo"><li><button id="displayUploadButton" className="buttonNavbar">PUBLIER</button></li></NavLink>
-
-
-								{/* Permet d'afficher le bouton de publication origin  */}
-								{/* <NavLink to="/uploadVideo"><li><button className={this.state.isModalOpen === false ? "buttonNavbarChange" : "buttonNavbar"}>PUBLIER</button></li></NavLink> */}
-
 							</ul>
 						</div>
 					</nav>
 
-
-					{/* COMPOSANT QUI DECLENCHE L'OUVERTURE DE LA MODAL */}
+					{/* COMPONENT WHICH SHOWS THE OPENING OF THE MODAL*/}
 					<div className="containerModal">
-						<Modal crossClose={this.closeCrossModal}  isOpen={isModalOpen} onClose={this.closeModal} />
+						<Login crossClose={this.closeCrossModal} isOpen={isModalOpen} onClose={this.closeModal} />
 					</div>
-
-
 				</header>
 			</div>
-
 		)
 	}
 }
-
-
 
 export default Navbar

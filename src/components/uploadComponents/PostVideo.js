@@ -46,7 +46,6 @@ class PostVideo extends Component {
     const tokenDecoded = jwt.decode(token)
     const idProfilDecoded = tokenDecoded.id_profil
     this.setState({ profil_id_profil: idProfilDecoded })
-    console.log(this.state.profil_id_profil)
   }
 
   componentDidMount() {
@@ -58,6 +57,9 @@ class PostVideo extends Component {
   render() {
 
     const { video_title, video_link, video_description, equipment, link_equipment, equipment2, link_equipment2, equipment3, link_equipment3, cover_picture } = this.state
+
+    const test = this.props.idVideo + 1
+    console.log(test)
 
     return (
       <div>
@@ -101,9 +103,6 @@ class PostVideo extends Component {
               <input className="input-link" type='text' name="link_equipment" value={link_equipment} onChange={this.changeHandler} />
             </div>
 
-
-
-
             <div className="title-equipment2">
             </div>
             <div className="equipment2">
@@ -115,7 +114,6 @@ class PostVideo extends Component {
             <div className="link2">
               <input className="input-link2" type='text' name="link_equipment2" value={link_equipment2} onChange={this.changeHandler} />
             </div>
-
 
             <div className="title-equipment3">
             </div>
@@ -140,13 +138,7 @@ class PostVideo extends Component {
 
             {/* THIS INPUT ALLOW TO INSERT THE ID PROFIL OF THE UPLOAD VIDEO BUT IS HIDDING FOR NOW UNTIL THE LOGIN WORKS */}
             <div className="temp">
-              {/* <input type="hidden" name="profil_id_profil" value={this.state.profil_id_profil} onChange={this.changeHandler} /> */}
-
-              {/* <input type="hidden" name="profil_id_profil" value={idProfilDecoded} onChange={this.changeHandler} /> */}
-
               <input type="hidden" name="profil_id_profil" value={this.state.profil_id_profil} />
-
-
             </div>
 
             <div className="submit-div">
@@ -154,10 +146,8 @@ class PostVideo extends Component {
             </div>
 
             <div className="next-div">
-              <NavLink to={`/uploadInformation/${this.props.idVideo}`}><button className="next-button" type="button">SUIVANT</button></NavLink>
+              <NavLink to={`/uploadInformation/${this.props.idVideo + 1}`}><button className="next-button" type="button">SUIVANT</button></NavLink>
             </div>
-
-
           </div>
         </form>
       </div>

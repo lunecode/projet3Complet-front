@@ -3,14 +3,14 @@ import Videoupload from '../components/video/Videoupload';
 
 
 class UploadVideo extends Component {
-    render() {
-        return (
-            <div>
-                télèchargement des vidéos:
+  render() {
+    return (
+      <div>
+        télèchargement des vidéos:
                 <Videoupload />
-            </div>
-        );
-    }
+      </div>
+    );
+  }
 }
 
 export default UploadVideo;
