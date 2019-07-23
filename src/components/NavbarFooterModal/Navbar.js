@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import axios from 'axios'
 import jwt from 'jsonwebtoken'
 
@@ -45,7 +45,7 @@ class Navbar extends Component {
 			})
 	}
 
-	
+
 
 
 	openModal = () => {
@@ -118,6 +118,7 @@ class Navbar extends Component {
 		localStorage.clear();
 		window.location.reload(false);
 		this.displayButtonLoginToken()
+		window.location.assign('/')
 	}
 
 
@@ -186,6 +187,8 @@ class Navbar extends Component {
 
 		return (
 			<div>
+
+				{/* <button onClick={crossClose} >TEST</button> */}
 				<header>
 					<nav className="container_nav">
 						<div className="containerNavLeft">
@@ -263,13 +266,6 @@ class Navbar extends Component {
 
 
 
-
-
-
-
-
-
-
 								{/* AFFICHE L'AVATAR DU PROFIL ET LE MENU */}
 
 								<li id="displayProfilImg" className="img_profil">
@@ -286,7 +282,7 @@ class Navbar extends Component {
 										<li><NavLink className="link_DropDown" exact to="/#">Aide</NavLink></li>
 {/* 
 										<NavLink to="/"><li className="li-btn-off"><button onClick={this.logout} className="btn-deconnection">Se déconnecter</button></li></NavLink> */}
-										<li className="li-btn-off"> <button onClick={this.logout} className="btn-deconnection">Se déconnecter</button></li>
+										<Link to="/"><li className="li-btn-off"> <button onClick={this.logout} className="btn-deconnection">Se déconnecter</button></li></Link>
 									</ul>
 								</li>
 
@@ -351,7 +347,7 @@ class Navbar extends Component {
 
 					{/* COMPOSANT QUI DECLENCHE L'OUVERTURE DE LA MODAL */}
 					<div className="containerModal">
-						<Modal crossClose={this.closeCrossModal} isOpen={isModalOpen} onClose={this.closeModal} />
+						<Modal crossClose={this.closeCrossModal}  isOpen={isModalOpen} onClose={this.closeModal} />
 					</div>
 
 

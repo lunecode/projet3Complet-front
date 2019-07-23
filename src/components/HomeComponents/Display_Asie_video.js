@@ -4,7 +4,7 @@ import axios from 'axios';
 
 
 
-class Display_Afrique_video extends Component {
+class Display_Asie_video extends Component {
 
     state = {
         video: [],
@@ -12,11 +12,12 @@ class Display_Afrique_video extends Component {
     
     
       getVideo = async () => {
-        const res = await axios.get('http://localhost:3000/popularity/get_popularity_liked_general_video_travel_information_continent_afrique')
+        const res = await axios.get('http://localhost:3000/popularity/get_popularity_liked_general_video_travel_information_continent_asie_oceanie')
         this.setState({ video: res.data })
         console.log(this.state.video)
       }
-
+    
+    
       componentDidMount() {
         this.getVideo()
       }
@@ -26,7 +27,7 @@ class Display_Afrique_video extends Component {
         return (
             <div className="Display_Afrique">
                 <div className="titre_Display_Afrique">
-                    <h1>Afrique / </h1>
+                    <h1>Asie-Océanie / </h1>
                     <p className="number_video_Display_Afrique">3 Vidéos</p>
                 </div>
         <div className="countainer_bloc_Afrique">
@@ -82,4 +83,4 @@ class Display_Afrique_video extends Component {
 }
 
 
-export default Display_Afrique_video;
+export default Display_Asie_video;

@@ -134,12 +134,12 @@ class PostTravelInformation extends Component {
             <div className="continent" onClick={this.continentID}>
               <label>
                 Destination *
-             
+
                 <select className="input-continent" name="continent" >
                   <option>Continent</option>
                   {continent}
                 </select>
-              
+
               </label>
             </div>
 
@@ -226,7 +226,7 @@ class PostTravelInformation extends Component {
 
 
             {/* THIS INPUT RECEIVED THE ID OF THE TRAVEL TYPE ENUM, ITS HIDDEN FOR THE FRONT */}
-            
+
             <input className="input-travel_type" type="hidden" name="travel_type" value={this.state.travel_type} onChange={this.changeHandler} />
 
             <div className="travel_type" onClick={this.type1}>

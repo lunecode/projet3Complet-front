@@ -19,6 +19,8 @@ $colorBackgroundModal: #45adcd;
     background-color: white;
 }
 
+
+
 .containerModal {
     z-index: 1;
     position: absolute;
@@ -134,7 +136,7 @@ $colorBackgroundModal: #45adcd;
         color: $colorBackgroundModal;
     }
 
-    span:hover {
+    .title-connection:hover {
         opacity: 0.5;
         text-decoration: underline;
     }
