@@ -4,9 +4,6 @@ import "./VideoProfil.scss"
 import Delete from '../../Images-tripitto/Icon_Vidéo/Delete.png'
 
 const ModalDeleteVideo = (props) => {
-//   const getId=this.props
-// const getIdVideo=getId.videos_profil
-  console.log(props.getFollowing);
   console.log(props)
 
   return (
@@ -26,7 +23,8 @@ const ModalDeleteVideo = (props) => {
             <input placeholder="Mot de passe" type="password" />
             <div className="buttons_confirmer_annuler">
               <div className="button_confirmer" onClick={props.closeModalSecurity}><button >ANNULER</button></div>
-              <div className="button_annuler" submitIdVideoDelete={() => props.submitHandler(item.id_general_video)} ><button >CONFIRMER</button> </div>
+              <div className="button_annuler" onClick={props.submitIdVideoDelete} >CONFIRMER</div>
+              {/* <div className="button_annuler" submitIdVideoDelete={() => props.submitHandler(item.id_general_video)} ><button >CONFIRMER</button> </div> */}
             </div>
           </div>
         </div>
