@@ -172,7 +172,7 @@ class VideoProfil extends Component {
 											<img className="img1" src={modification} alt="modification" />
 											<img className="img2" src={Partager} alt="Partager" />
 											<ModalHidevideo />
-											{/* <ModalDeleteVideo /> */}
+							
 									
 											<ModalDeleteVideo
 												{...this.state}

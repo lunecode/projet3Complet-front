@@ -14,29 +14,13 @@ import axios from "axios"
 
 class Profil extends Component {
   state = {
+    profil_name:[]
+  
   }
+componentDidMount() {
+  this.getNameUser()
+}
 
-
-//  submitHandler = e => {
-//     e.preventDefault()
-//     const token = localStorage.getItem('token')
-//     const tokenDecoded = jwt.decode(token)
-//     const idProfilDcoded = tokenDecoded.id_profil
-//     console.log(idProfilDecoded)
-//     axios.get(`http://localhost:3000/profil/get_profil/${idProfilDecoded}`, this.state)
-//       .then(response => {
-//         console.log(response)
-//       })
-//       .then(
-//         // //Pour que  button submit renvoie vers la page ProfilDescription
-//         // this.props.history.push("/ProfilDescription"),
-//         // //permet de rafraichir la page pour afficher le Get
-//         // window.location.reload(true)
-//       )
-//       .catch(error => {
-//         console.log(error)
-//       })
-//   }
 submitHandler = e => {
   e.preventDefault()
  //Permet de récupérer l'id de l'utilisateur connecté
@@ -49,7 +33,7 @@ submitHandler = e => {
       console.log(response)
     })
     .then(
-               //Pour que  button submit renvoie vers la page ProfilDescription
+           //Pour que  button submit renvoie vers la page ProfilDescription
                this.props.history.push("/ProfilDescription"),
               //permet de rafraichir la page pour afficher le Get
              window.location.reload(true)
@@ -57,6 +41,16 @@ submitHandler = e => {
     .catch(error => {
       console.log(error)
     })
+}
+
+
+getNameUser = async () => {
+  const token = localStorage.getItem('token')
+  const idProfilDecod = jwt.decode(token)
+  const idProfil = idProfilDecod.id_profil
+  const res = await axios.get(`http://localhost:3000/profil/get_video_for_profil_decription/${idProfil}`)
+  this.setState({profil_name:res.data})
+  console.log("profilName",this.state.profil_name)
 }
 
 
@@ -171,9 +165,10 @@ submitHandler = e => {
         <form onSubmit={this.submitHandler}>
           <PostProfilInfo
             {...this.state}
+            // getNameUser={this.getNameUser}
             handleCheckbox={this.handleCheckbox}
             changeHandler={this.changeHandler}
-            handelchange={this.handelchange}
+          
        
           />
 

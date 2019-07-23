@@ -6,14 +6,29 @@ import UploadImgProfil from '../../components/ProfilComponents/UploadImgProfil.j
 
 
 const PostProfilInfo = (props) => {
-
+  const as=props.getNameUser
+  console.log(props);
+  
+console.log( "mamamam",props.getNameUser );
   return (
     <div className="bloc-page-profil">
       <div className="membres-profil">
         <img src="https://images.pexels.com/photos/814499/pexels-photo-814499.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500" alt="pictures profil" />
         <div className="membres-profil-detail">
-          <h4>Julien Mbappé</h4>
-          <p>Membre depuis le 20/02/2019</p>
+          {/* <h4>Julien Mbappé</h4>
+          <p>Membre depuis le 20/02/2019</p> */}
+ 
+         
+              {props.profil_name.map(item => (
+       <div> <h4> {item.lastname} {item.firstname} </h4>
+          <p>Membre depuis le 20/02/2019</p></div>
+      )
+              )
+              }
+         
+          
+        
+         
         </div>
       </div>
       <div className='position-bloc'>
@@ -29,8 +44,6 @@ const PostProfilInfo = (props) => {
             <li>
               <NavLink to='/Video'>Video</NavLink>
             </li>
-
-
 
             <li>
               <NavLink

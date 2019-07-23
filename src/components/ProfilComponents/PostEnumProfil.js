@@ -8,7 +8,7 @@ import Blogueurdevoyage from "../../Images-tripitto/imageProfil/Bloggeurdevoyage
 import Idea from "../../Images-tripitto/Icon/Idea.png"
 
 const PostEnumProfil = (props) => {
-console.log("mes props",props);
+
 
     return (
         <div className="Profil_inscription">
