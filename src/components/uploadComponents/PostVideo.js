@@ -31,10 +31,6 @@ class PostVideo extends Component {
 
   submitHandler = e => {
     e.preventDefault()
-    console.log(this.state)
-
-
-
     axios.post('http://localhost:3000/general_video/insert_general_video', this.state)
       .then(response => {
         console.log(response)
@@ -43,45 +39,32 @@ class PostVideo extends Component {
         console.log(error)
       })
   }
-  getIdProfil = () => {
-    const token = localStorage.getItem('token')
-    const tokenDecoded = jwt.decode(token)
-    const idProfilDecoded = tokenDecoded.id_profil
-    this.setState({
-      profil_id_profil: idProfilDecoded
-    })
-  }
+
 
   getIdProfil = () => {
     const token = localStorage.getItem('token')
     const tokenDecoded = jwt.decode(token)
     const idProfilDecoded = tokenDecoded.id_profil
     this.setState({ profil_id_profil: idProfilDecoded })
-
+    console.log(this.state.profil_id_profil)
   }
-
 
   componentDidMount() {
-    this.getIdProfil()
+    this.getIdProfil() 
   }
+
+
 
   render() {
 
-    // const token = localStorage.getItem('token')
-    // console.log(token)
-    // const tokenDecoded = jwt.decode(token)
-    // console.log(tokenDecoded)
-    // const idProfilDecoded= tokenDecoded.id_profil
-    // console.log(idProfilDecoded)
-
     const { video_title, video_link, video_description, equipment, link_equipment, equipment2, link_equipment2, equipment3, link_equipment3, cover_picture } = this.state
+
     return (
       <div>
         <form onSubmit={this.submitHandler}>
+
           <div className='grid_postVideo'>
-
             <img src={AboutVideo} alt="About video" className="AboutVideo" />
-
 
             <div className="upload_link">
               <img className="uploadIconVideo" src={UploadIcon} alt="upload icon"></img>
@@ -161,7 +144,7 @@ class PostVideo extends Component {
 
               {/* <input type="hidden" name="profil_id_profil" value={idProfilDecoded} onChange={this.changeHandler} /> */}
 
-              <input type="text" name="profil_id_profil" value={this.state.profil_id_profil} onChange={this.changeHandler} />
+              <input type="hidden" name="profil_id_profil" value={this.state.profil_id_profil} />
 
 
             </div>

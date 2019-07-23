@@ -40,7 +40,7 @@ class VideoProfil extends Component {
 
 	submitHandler = (id) => {
 		// e.preventDefault()
-		console.log('test')
+		// console.log('test')
 		axios.delete(`http://localhost:3000/general_video/delete_general_video/${id}`)
 			.then(response => {
 				console.log(response)
@@ -50,18 +50,6 @@ class VideoProfil extends Component {
 				console.log(error)
 			})
 	}
-
-
-	// submitHandler = (e, id) => {
-	// 	e.preventDefault()
-	// 	axios.delete(`http://localhost:3000/general_video/delete_general_video/${id}`, this.state)
-	// 		.then(response => {
-	// 			console.log(response)
-	// 		})
-	// 		.catch(error => {
-	// 			console.log(error)
-	// 		})
-	// }
 
 
 	componentDidMount = () => {

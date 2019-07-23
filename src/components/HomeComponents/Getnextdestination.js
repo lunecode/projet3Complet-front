@@ -30,7 +30,7 @@ class Getnextdestination extends Component {
 				// console.log(this.state.nextpicture)
     }
     getnextvideolimit = () => {
-        this.setState({ offset: this.state.offset + 5}, async () => {
+        this.setState({ offset: this.state.offset + 1}, async () => {
             const res = await axios.get(`http://localhost:3000/travel_information/get_travelinformation_general_video/${this.state.offset}`)
             const Nextdestination = res.data
             this.setState({ nextpicture: Nextdestination })
