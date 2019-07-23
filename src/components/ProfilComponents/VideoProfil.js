@@ -29,7 +29,7 @@ class VideoProfil extends Component {
 		const res = await axios.get(`http://localhost:3000/general_video/get_general_video_travel_information/${idProfil}`)
 		this.setState({ videoByProfil: res.data })
 		// this.setState({ id_general_video: res.data })
-		// console.log(this.state.videoByProfil)
+		console.log(this.state.videoByProfil)
 	}
 
 
@@ -44,7 +44,7 @@ class VideoProfil extends Component {
 		axios.delete(`http://localhost:3000/general_video/delete_general_video/${id}`)
 			.then(response => {
 				console.log(response)
-				window.location.reload(true);
+				 window.location.reload(true);
 			})
 			.catch(error => {
 				console.log(error)
@@ -186,6 +186,7 @@ class VideoProfil extends Component {
 											<img className="img2" src={Partager} alt="Partager" />
 											<ModalHidevideo />
 											{/* <ModalDeleteVideo /> */}
+									
 											<ModalDeleteVideo
 												{...this.state}
 												openModalSecurity={this.openModalSecurity}

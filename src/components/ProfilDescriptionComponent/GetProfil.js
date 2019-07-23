@@ -4,11 +4,13 @@ import './GetProfil.css';
 import { NavLink } from 'react-router-dom';
 
 //Import ingredients pictures
+
 import Selected from "../../Images-tripitto/Icon/Ingredients/Aventurier/Selected.png"
 import MontagneCopy2 from "../../Images-tripitto/Icon/Ingredients/MontagneCopy2.png"
 import FestivalCopy2 from "../../Images-tripitto/Icon/Ingredients/FestivalCopy2.png"
 import EcotourismeCopy2 from "../../Images-tripitto/Icon/Ingredients/EcotourismeCopy2.png"
 import HistoireCultureCopy2 from "../../Images-tripitto/Icon/Ingredients/HistoireCultureCopy2.png"
+import jwt from 'jsonwebtoken'
 
 // Import pictures
 import Pin_On from "../../Images-tripitto/Icon/Pin_ON.png"
@@ -16,23 +18,6 @@ import fb from "../../Images-tripitto/Icon/social/fb.png"
 import insta from "../../Images-tripitto/Icon/social/insta.png"
 import youtube from "../../Images-tripitto/Icon/social/youtube.png"
 import link from "../../Images-tripitto/Icon/social/link.png"
-
-//Import pictures video
-
-
-import ModalDeleteVideo from '../../components/ProfilComponents/ModalDeleteVideo.js';
-import ModalHidevide from '../../components/ProfilComponents/ModalHidevideo.js';
-import Partager from '../../Images-tripitto/Icon_Vidéo/Partager.png'
-import modification from '../../Images-tripitto/Icon_Vidéo/modification.png'
-import pourcentage from '../../Images-tripitto/Icon_Vidéo/pourcentage.png'
-import pourcentage80 from '../../Images-tripitto/Icon_Vidéo/pourcentage80.png'
-import pourcentage60 from '../../Images-tripitto/Icon_Vidéo/pourcentage60.png'
-import vinise from '../../Images-tripitto/Icon_Vidéo/vinise.png'
-
-import img1 from '../../Images-tripitto/Icon_Vidéo/img1.png'
-
-import img3 from '../../Images-tripitto/Icon_Vidéo/img3.png'
-import img4 from '../../Images-tripitto/Icon_Vidéo/img4.png'
 
 // Allow to display data from " profil " table
 
@@ -42,25 +27,20 @@ class GetProfil extends Component {
     general_video: [],
   };
 
-
   getProfil = async () => {
-    const res = await axios.get('http://localhost:3000/profil/get_Profil_describe')
-    this.setState({ profil: res.data })
-    console.log(this.state.profil)
-  }
-
-  getProfil = async () => {
-    const res = await axios.get('http://localhost:3000/profil/get_Profil_describe')
+    const token = localStorage.getItem('token')
+		const idProfilDecod = jwt.decode(token)
+		const idProfil = idProfilDecod.id_profil
+    const res = await axios.get(`http://localhost:3000/profil/get_video_for_profil_decription/${idProfil}`)
     this.setState({ profil: res.data })
     console.log(this.state.profil)
   }
 
   getVideo = async () => {
-    const res = await axios.get('http://localhost:3000/general_video/get_general_video_lim/4')
+    const res = await axios.get('http://localhost:3000/general_video/get_general_video_liked_popularitylimit')
     this.setState({ general_video: res.data })
     console.log(this.state.general_video)
   }
-
 
   componentDidMount() {
     this.getProfil()
@@ -70,6 +50,7 @@ class GetProfil extends Component {
 
   render() {
     let i = 1
+
     return (
       <>
         <div className="generalprofil">
@@ -83,19 +64,17 @@ class GetProfil extends Component {
                       <p>10 vidéos</p>
                       <p>54 abonnés</p>
                       <p>{item.nb_countries_visited} pays visités</p>
+
                     </div>
                     <div className="profil_column_2">
-                      {/* Remplacer Créateur de contenu par item.type? */}
                       <div className="identity"><h2 className="name">{item.firstname} {item.lastname}</h2>
-                        <span className="span">|</span><p className="traveler_type">{item.profil}</p></div>
+                        <span className="span">|</span><p className="traveler_type">{item.type}</p></div>
                       <p className="localisation"><img src={Pin_On} alt="iconlocalisation" className="iconlocalisation" />{item.location}</p>
-  
                       <p className="bio">{item.bio}</p>
                       <div className="icon_general">
                         <div className="iconaventurier">
                           <div className="iconitemaventurier">
                             <img src={Selected} className="iconProfil" alt="iconaventurier" />
-                            {/* <p>{item.ingredients}</p> */}
                           </div>
                           <span className="texticonaventurier">Aventurier seul</span>
                         </div>
@@ -144,59 +123,53 @@ class GetProfil extends Component {
 
                   </div>
                 </div>
-
               </div>
             ))}
           </div>
+
           <div className="video">
-          <div>
-                  <div className="continents"><div className="itemcontinent">Tout</div ><div className="itemcontinent">Afrique</div><div className="itemcontinent">Océanie</div><div className="itemcontinent">Autre</div></div>
-                   <div className="filter">
-                    <select class="w3-select" name="option">
-                      <option value="" disabled selected>Trier par</option>
-                      <option value="1">Date de publication'</option>
-                      <option value="2">Status</option>
-                      <option value="3">Popularité</option>
-                      <option value="3">Titre</option>
-                    </select>
-                  </div>
-                </div>
-<div className="container_blocs_description">
-            {this.state.general_video.map(item => (
-              <div key={item.id_general_video} >
-                <div>
-                  <div className={"bloc_description" + i++}>
-                    <div className="durée_pourcentage">
-                      <p className="pourcentage_description">{item.number_tips}%</p>
-                      <p className="durée_description" >{item.video_duration}</p>
-                    </div>
-                    <div className="picture_description"><img src={item.cover_picture} /></div>
-                    <h3>{item.video_title}</h3>
-                    <div className="infos_Profil_description">
-                      <p className="pays_description">Scandinavia</p>
-                      <p className="Point_description">.</p>
-                      <p className="nb_vues_description">35 vues</p>
-                      <p className="Point_description">.</p>
-                      <p className="temps_description">il y 3 semaines</p>
-                    </div>
-                    <p className="name-personne">Julien Mhapé </p>
-                  </div>
-                </div>
-                <div className="golobal_Afrique">
-                  <div className="blocs_description3"> </div>
-                  <div className="blocs_description4"> </div>
-                  <div> </div>
-                   </div> 
+            <div>
+              <div className="continents"><div className="itemcontinent">Tout</div ><div className="itemcontinent">Afrique</div><div className="itemcontinent">Océanie</div><div className="itemcontinent">Autre</div></div>
+              <div className="filter">
+                <select class="w3-select" name="option">
+                  <option value="" disabled selected>Trier par</option>
+                  <option value="1">Date de publication'</option>
+                  <option value="2">Status</option>
+                  <option value="3">Popularité</option>
+                  <option value="3">Titre</option>
+                </select>
               </div>
-            )
-            )
-            }
-</div>
+            </div>
+            <div className="container_blocs_description">
+              {this.state.general_video.map(item => (
+                <div key={item.id_general_video} >
+                  <div>
+                    <div className={"bloc_description" + i++}>
+                      <div className="durée_pourcentage">
+                        <p className="pourcentage_description">{item.number_tips}%</p>
+                        <p className="durée_description" >{item.video_duration}</p>
+                      </div>
+                      <div className="picture_description"><img src={item.cover_picture} /></div>
+                      <h3>{item.video_title}</h3>
+                      <div className="infos_Profil_description">
+                        <p className="pays_description">Scandinavia</p>
+                        <p className="Point_description">.</p>
+                        <p className="nb_vues_description"> {item.nb_views} vues</p>
+                        <p className="Point_description">.</p>
+                        <p className="temps_description">il y 3 semaines</p>
+                      </div>
+                      <p className="name-personne">{item.video_user} </p>
+                    </div>
+                  </div>
+                </div>
+              )
+              )
+              }
+            </div>
           </div>
         </div>
       </>
     )
   }
 }
-
 export default GetProfil;

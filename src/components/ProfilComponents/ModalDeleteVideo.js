@@ -3,6 +3,7 @@ import './ModalDeleteVideo.scss'
 import "./VideoProfil.scss"
 import Delete from '../../Images-tripitto/Icon_Vidéo/Delete.png'
 
+
 const ModalDeleteVideo = (props) => {
   console.log(props)
 
