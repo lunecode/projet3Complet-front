@@ -94,8 +94,8 @@ class GetProfil extends Component {
                       <div className="icon_general">
                         <div className="iconaventurier">
                           <div className="iconitemaventurier">
-                            {/* <img src={Selected} className="iconProfil" alt="iconaventurier" /> */}
-                            <p>{item.ingredients}</p>
+                            <img src={Selected} className="iconProfil" alt="iconaventurier" />
+                            {/* <p>{item.ingredients}</p> */}
                           </div>
                           <span className="texticonaventurier">Aventurier seul</span>
                         </div>

@@ -7,69 +7,15 @@ import PostBioProfil from '../components/ProfilComponents/PostBioProfil';
 import PostIngedients from '../components/ProfilComponents/PostIngedients';
 import Socialprofil from '../components/ProfilComponents/Socialprofil';
 import { NavLink } from 'react-router-dom';
-
-
 import "./Profil.scss"
 import "../components/ProfilComponents/PostProfilInfo.css"
 import axios from "axios"
 
 
-
 class Profil extends Component {
-  state={
-    // lastname:"",
-    // firstname:"",
-    // pseudo:"",
-    // identity:"",
-    // email:"",
-    // location:"",
-    // birth_date:"",
-    // type:"",
-    // position:"",
-    // profil_link:"",
-    // nb_countries_visited:"",
-    // profile_picture:"",
-    // profil:"",
-    // bio:"",
-    // ingredients: ["Aventurier dabord", "Les copains dabord", "Escapade romantique", "En famille", "Digital nomad", "Iles  Plages", "Montagnes  Campagnes", "Safari & Animaux", "Grandes villes", "En foret", "Sport & Aventures", "Festivals & Musique", "Plaisir culinaire", "Histoire & Culture", "Spiritualité", "Humanitaire", "Ecotourise", "luxe", "En sac à dos", "Rencontres dexceptions"],
-    // ingredients:[],
-    // // option_msg:"",
-    // facebook_link:"",
-    // instagram_link:"",
-    // website_link:"",
-    // inscription_date:"",
-    // inscription_type:"",
-    // password:"",
-    // password_forget:"",
-    // checked_option_msg:"",
-    // is_checked_her:"",
-    // is_checked_team:"",
-    // is_checked_him:"",
-    // New_password:"",
-
-
+  state = {
   }
-  submitHandler = e => {
-    e.preventDefault()
-    const token = localStorage.getItem('token')
-    const tokenDecoded = jwt.decode(token)
-    const idProfilDecoded = tokenDecoded.id_profil
-    console.log(idProfilDecoded)
 
-    axios.put(`http://localhost:3000/profil/update_profil/${idProfilDecoded}`, this.state)
-      .then(response => {
-        console.log(response)
-      })
-      .then( 
-        //Pour que  button submit renvoie vers la page ProfilDescription
-        this.props.history.push("/ProfilDescription"),
-        //permet de rafraichir la page pour afficher le Get
-        window.location.reload(true)
-     )
-      .catch(error => {
-        console.log(error)
-      })
-  }
 
   submitHandler = e => {
     e.preventDefault()
@@ -81,17 +27,17 @@ class Profil extends Component {
       .then(response => {
         console.log(response)
       })
-      .then( 
+      .then(
         //Pour que  button submit renvoie vers la page ProfilDescription
         this.props.history.push("/ProfilDescription"),
         //permet de rafraichir la page pour afficher le Get
         window.location.reload(true)
-     )
+      )
       .catch(error => {
         console.log(error)
       })
   }
-  
+
   handleCheckbox = (e) => {
     e.preventDefault()
     const target = e.target;
@@ -110,7 +56,6 @@ class Profil extends Component {
   handleCloseModal = () => {
     this.setState({ showModal: false });
   }
-
   //les Enumes de la table profile.//
   profil1 = () => {
     this.setState({ profil: 1 })
@@ -128,131 +73,107 @@ class Profil extends Component {
     this.setState({ profil: 5 })
   }
 
-
-
   //les Enumes ingredients//
   Enum1 = () => {
-    const ingredients = this.state.ingredients
-    this.state.ingredients.push("Aventurier dabord")
-    this.setState({ ingredients: ingredients })
-
-
+    this.setState({ ingredients: 1 })
   }
   Enum2 = () => {
-    const ingredients = this.state.ingredients
-    ingredients.push("Les copains dabord")
-    this.setState({ ingredients: ingredients })
+    this.setState({ ingredients: 2 })
   }
   Enum3 = () => {
-    const ingredients = this.state.ingredients
-    ingredients.push("Escapade romantique")
-    this.setState({ ingredients: ingredients })
+    this.setState({ ingredients: 3 })
   }
   Enum4 = () => {
-    const ingredients = this.state.ingredients
-    ingredients.push("En famille")
-    this.setState({ ingredients: ingredients })
+    this.setState({ ingredients: 4 })
   }
   Enum5 = () => {
-    const ingredients = this.state.ingredients
-    ingredients.push("Digital nomad")
-    this.setState({ ingredients: ingredients })
+    this.setState({ ingredients: 5 })
   }
   Enum6 = () => {
-    const ingredients = this.state.ingredients
-    ingredients.push("Iles  Plages")
-    this.setState({ ingredients: ingredients })
+    this.setState({ ingredients: 6 })
   }
   Enum7 = () => {
-    const ingredients = this.state.ingredients
-    ingredients.push("Iles  Plages")
-    this.setState({ ingredients: ingredients })
+    this.setState({ ingredients: 7 })
   }
   Enum8 = () => {
-    const ingredients = this.state.ingredients
-    ingredients.push("Montagnes  Campagnes")
-    this.setState({ ingredients: ingredients })
+    this.setState({ ingredients: 8 })
   }
   Enum9 = () => {
-    const ingredients = this.state.ingredients
-    ingredients.push("Safari & Animaux")
-    this.setState({ ingredients: ingredients })
+    this.setState({ ingredients: 9 })
   }
   Enum10 = () => {
-    const ingredients = this.state.ingredients
-    ingredients.push("Grandes villes")
-    this.setState({ ingredients: ingredients })
+    this.setState({ ingredients: 10 })
   }
   Enum11 = () => {
-    const ingredients = this.state.ingredients
-    ingredients.push("En foret")
-    this.setState({ ingredients: ingredients })
+    this.setState({ ingredients: 11 })
   }
+
 
   Enum12 = () => {
-    const ingredients = this.state.ingredients
-    ingredients.push("Sport & Aventures")
-    this.setState({ ingredients: ingredients })
+    this.setState({ ingredients: 12 })
   }
   Enum13 = () => {
-    const ingredients = this.state.ingredients
-    ingredients.push("Festivals & Musique")
-    this.setState({ ingredients: ingredients })
+    this.setState({ ingredients: 13 })
   }
   Enum14 = () => {
-    const ingredients = this.state.ingredients
-    ingredients.push("Plaisir culinaire")
-    this.setState({ ingredients: ingredients })
+    this.setState({ ingredients: 14 })
   }
   Enum15 = () => {
-    const ingredients = this.state.ingredients
-    ingredients.push("Histoire & Culture")
-    this.setState({ ingredients: ingredients })
+    this.setState({ ingredients: 15 })
   }
   Enum16 = () => {
-    const ingredients = this.state.ingredients
-    ingredients.push("Spiritualité")
-    this.setState({ ingredients: ingredients })
+    this.setState({ ingredients: 16 })
   }
   Enum17 = () => {
-    const ingredients = this.state.ingredients
-    ingredients.push("Humanitaire")
-    this.setState({ ingredients: ingredients })
+    this.setState({ ingredients: 17 })
   }
   Enum18 = () => {
-    const ingredients = this.state.ingredients
-    ingredients.push("Ecotourise")
-    this.setState({ ingredients: ingredients })
+    this.setState({ ingredients: 18 })
   }
   Enum19 = () => {
-    const ingredients = this.state.ingredients
-    ingredients.push("luxe")
-    this.setState({ ingredients: ingredients })
+    this.setState({ ingredients: 19 })
   }
   Enum20 = () => {
-    const ingredients = this.state.ingredients
-    ingredients.push("En sac à dos")
-    this.setState({ ingredients: ingredients })
+    this.setState({ ingredients: 20 })
   }
   Enum21 = () => {
-    const ingredients = this.state.ingredients
-    ingredients.push("Rencontres dexceptions")
-    this.setState({ ingredients: ingredients })
+    this.setState({ ingredients: 21 })
+  }
+  //ouvrir le fichier et le convertir  en binair
+  handelchange = (e) => {
+    let files = e.target.files;
+    let reader = new FileReader();
+    reader.readAsDataURL(files[0]);
+    reader.onload = (e) => {
+      this.setState({ profil_link: e.target.result }, () => {
+        console.log("video data", this.state.profil_link)
+      })
+    }
+  }
+  //convertir en binair
+  blob2file = (blobData) => {
+    const fd = new FormData();
+    fd.set('a', blobData);
+    return fd.get('a');
   }
 
+  myFunction = (e) => {
+
+    const x = document.getElementById("myImg").src;
+    document.getElementById("demo").innerHTML = x;
+  }
 
   render() {
-    console.log(this.state);
-
     return (
       <div className="pageprofil" >
         <form onSubmit={this.submitHandler}>
-
           <PostProfilInfo
             {...this.state}
             handleCheckbox={this.handleCheckbox}
             changeHandler={this.changeHandler}
             handelchange={this.handelchange}
+            blob2file={this.blob2file}
+            myFunction={this.myFunction}
           />
 
           <PostEnumProfil
@@ -294,7 +215,6 @@ class Profil extends Component {
             Enum21={this.Enum21}
             Enum22={this.Enum22}
             changeHandler={this.changeHandler}
-            converti={this.converti}
           />
 
           <AutoriseContact
@@ -307,15 +227,13 @@ class Profil extends Component {
           />
 
           <div className="save-btn">
-
-            <button type="submit" onSubmit={this.submitHandler}>SAUVEGARDER</button>
-            {/* <NavLink to="/ProfilDescription"><button type="submit" onSubmit={this.submitHandler}>SAUVEGARDER</button></NavLink>  */}
-            {/* <button type="submit" onSubmit={this.submitHandler}  onClick={this.functionName}>SAUVEGARDER</button> */}
+          <button type="submit" onSubmit={this.submitHandler}>SAUVEGARDER</button>
           </div>
         </form>
       </div>
     )
   }
 }
+
 
 export default Profil;
