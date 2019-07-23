@@ -6,7 +6,7 @@ import PostEnumProfil from '../components/ProfilComponents/PostEnumProfil';
 import PostBioProfil from '../components/ProfilComponents/PostBioProfil';
 import PostIngedients from '../components/ProfilComponents/PostIngedients';
 import Socialprofil from '../components/ProfilComponents/Socialprofil';
-import { NavLink } from 'react-router-dom';
+
 import "./Profil.scss"
 import "../components/ProfilComponents/PostProfilInfo.css"
 import axios from "axios"
@@ -17,26 +17,48 @@ class Profil extends Component {
   }
 
 
-  submitHandler = e => {
-    e.preventDefault()
-    const token = localStorage.getItem('token')
-    const tokenDecoded = jwt.decode(token)
-    const idProfilDecoded = tokenDecoded.id_profil
-    console.log(idProfilDecoded)
-    axios.get(`http://localhost:3000/profil/get_profil/${idProfilDecoded}`, this.state)
-      .then(response => {
-        console.log(response)
-      })
-      .then(
-        //Pour que  button submit renvoie vers la page ProfilDescription
-        this.props.history.push("/ProfilDescription"),
-        //permet de rafraichir la page pour afficher le Get
-        window.location.reload(true)
-      )
-      .catch(error => {
-        console.log(error)
-      })
-  }
+//  submitHandler = e => {
+//     e.preventDefault()
+//     const token = localStorage.getItem('token')
+//     const tokenDecoded = jwt.decode(token)
+//     const idProfilDcoded = tokenDecoded.id_profil
+//     console.log(idProfilDecoded)
+//     axios.get(`http://localhost:3000/profil/get_profil/${idProfilDecoded}`, this.state)
+//       .then(response => {
+//         console.log(response)
+//       })
+//       .then(
+//         // //Pour que  button submit renvoie vers la page ProfilDescription
+//         // this.props.history.push("/ProfilDescription"),
+//         // //permet de rafraichir la page pour afficher le Get
+//         // window.location.reload(true)
+//       )
+//       .catch(error => {
+//         console.log(error)
+//       })
+//   }
+submitHandler = e => {
+  e.preventDefault()
+ //Permet de récupérer l'id de l'utilisateur connecté
+  const token = localStorage.getItem('token')
+  const tokenDecoded = jwt.decode(token)
+  const idProfilDecoded = tokenDecoded.id_profil
+  //requete put
+  axios.put(`http://localhost:3000/profil/update_profil/${idProfilDecoded}`, this.state)
+    .then(response => {
+      console.log(response)
+    })
+    .then(
+               //Pour que  button submit renvoie vers la page ProfilDescription
+               this.props.history.push("/ProfilDescription"),
+              //permet de rafraichir la page pour afficher le Get
+             window.location.reload(true)
+            )
+    .catch(error => {
+      console.log(error)
+    })
+}
+
 
   handleCheckbox = (e) => {
     e.preventDefault()
@@ -139,29 +161,8 @@ class Profil extends Component {
   Enum21 = () => {
     this.setState({ ingredients: 21 })
   }
-  //ouvrir le fichier et le convertir  en binair
-  handelchange = (e) => {
-    let files = e.target.files;
-    let reader = new FileReader();
-    reader.readAsDataURL(files[0]);
-    reader.onload = (e) => {
-      this.setState({ profil_link: e.target.result }, () => {
-        console.log("video data", this.state.profil_link)
-      })
-    }
-  }
-  //convertir en binair
-  blob2file = (blobData) => {
-    const fd = new FormData();
-    fd.set('a', blobData);
-    return fd.get('a');
-  }
 
-  myFunction = (e) => {
 
-    const x = document.getElementById("myImg").src;
-    document.getElementById("demo").innerHTML = x;
-  }
 
   render() {
     return (
@@ -172,8 +173,7 @@ class Profil extends Component {
             handleCheckbox={this.handleCheckbox}
             changeHandler={this.changeHandler}
             handelchange={this.handelchange}
-            blob2file={this.blob2file}
-            myFunction={this.myFunction}
+       
           />
 
           <PostEnumProfil
@@ -227,7 +227,7 @@ class Profil extends Component {
           />
 
           <div className="save-btn">
-          <button type="submit" onSubmit={this.submitHandler}>SAUVEGARDER</button>
+          <button type="submit" >SAUVEGARDER</button>
           </div>
         </form>
       </div>
