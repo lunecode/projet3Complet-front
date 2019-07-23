@@ -51,19 +51,6 @@ class VideoProfil extends Component {
 			})
 	}
 
-
-	// submitHandler = (e, id) => {
-	// 	e.preventDefault()
-	// 	axios.delete(`http://localhost:3000/general_video/delete_general_video/${id}`, this.state)
-	// 		.then(response => {
-	// 			console.log(response)
-	// 		})
-	// 		.catch(error => {
-	// 			console.log(error)
-	// 		})
-	// }
-
-
 	componentDidMount = () => {
 		this.getVideoById()
 		this.openModalSecurity()
