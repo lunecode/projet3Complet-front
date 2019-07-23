@@ -3,16 +3,15 @@
 /* style of all the page */
 
 @font-face {
-  font-family: 'Roboto-Medium';
-  src: url('../fonts/Roboto/Roboto-Medium.ttf');
+  font-family: "Roboto-Medium";
+  src: url("../fonts/Roboto/Roboto-Medium.ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 p {
-  font-family: 'Roboto-Medium';
+  font-family: "Roboto-Medium";
 }
-
 
 body {
   margin: 0;
@@ -23,36 +22,25 @@ input {
   border-radius: 5px;
 }
 
-
-
-
 /* Grid template start */
 
 .grid {
-  background-color: #F4F4F4;
+  background-color: #f4f4f4;
   display: grid;
   /* grid-template-columns: 1fr 1fr 1fr 1fr; */
   grid-template-columns: 15% 5% 20% 20% 20% 15%;
-  grid-template-rows: 15% 10% 200px 40px 15% 40px 15% 20% 10px 10px; 
+  grid-template-rows: 15% 10% 200px 40px 15% 40px 15% 20% 10px 10px;
   min-height: 100vh;
-  /* grid-auto-rows: minmax(100px, auto); */  
+  /* grid-auto-rows: minmax(100px, auto); */
 }
-
-
-
-
-
-
 
 /* Grid and style for elements */
 
 .empty {
   grid-row: 1;
-  grid-column: 2 / 7; 
+  grid-column: 2 / 7;
   height: 80px;
 }
-
-
 
 .upload-link {
   border: solid 2px;
@@ -63,18 +51,14 @@ input {
   padding-left: 15%;
   margin-left: 10%;
 }
-.input-upload{
-width: 80%;
-margin-left: 0;
+.input-upload {
+  width: 80%;
+  margin-left: 0;
 }
 .uploadIconVideo {
   padding-top: 10%;
   padding-left: 35%;
 }
-
-
-
-
 
 .title {
   grid-row: 2;
@@ -85,7 +69,6 @@ margin-left: 0;
   width: 93%;
   height: 25%;
 }
-
 
 .description {
   grid-row: 3;
@@ -98,11 +81,8 @@ margin-left: 0;
   height: 100px;
 }
 .input-description {
-resize: none;
+  resize: none;
 }
-
-
-
 
 .title-equipment1 {
   margin-left: 14%;
@@ -135,10 +115,6 @@ resize: none;
   width: 80%;
 }
 
-
-
-
-
 .title-equipment2 {
   grid-row: 4;
   grid-column: 4;
@@ -167,10 +143,6 @@ resize: none;
   width: 80%;
 }
 
-
-
-
-
 .title-equipment3 {
   grid-row: 4;
   grid-column: 5;
@@ -196,12 +168,6 @@ resize: none;
   width: 80%;
 }
 
-
-
-
-
-
-
 .cover-picture {
   border: solid 2px;
   border-color: #4999c6;
@@ -216,7 +182,6 @@ resize: none;
   margin-right: 15%;
 }
 
-
 .temp {
   grid-row: 8;
   grid-column: 4;
@@ -230,7 +195,7 @@ resize: none;
   margin-right: 14%;
 }
 .submit-button {
-  background-color: #00C9D4;
+  background-color: #00c9d4;
   color: white;
   height: 90%;
   width: 90%;
@@ -243,8 +208,8 @@ resize: none;
   margin-right: 14%;
 }
 .next-button {
-  border-color: #00C9D4;
-  color: #00C9D4;
+  border-color: #00c9d4;
+  color: #00c9d4;
   height: 90%;
   width: 90%;
 }

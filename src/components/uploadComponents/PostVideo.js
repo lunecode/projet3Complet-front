@@ -18,7 +18,7 @@ import AboutVideo from '../../Images-tripitto/imgUploadVideo/AboutVideo.PNG'
 
 class PostVideo extends Component {
   state = {
-    profil_id_profil : ''
+    profil_id_profil: ''
   }
 
   changeHandler = (e) => {
@@ -43,25 +43,25 @@ class PostVideo extends Component {
         console.log(error)
       })
   }
-  getIdProfil=()=>{
+  getIdProfil = () => {
     const token = localStorage.getItem('token')
-		const tokenDecoded = jwt.decode(token)
+    const tokenDecoded = jwt.decode(token)
     const idProfilDecoded = tokenDecoded.id_profil
     this.setState({
-      profil_id_profil:idProfilDecoded
+      profil_id_profil: idProfilDecoded
     })
   }
 
   getIdProfil = () => {
     const token = localStorage.getItem('token')
     const tokenDecoded = jwt.decode(token)
-    const idProfilDecoded= tokenDecoded.id_profil
-    this.setState({ profil_id_profil: idProfilDecoded})
+    const idProfilDecoded = tokenDecoded.id_profil
+    this.setState({ profil_id_profil: idProfilDecoded })
 
   }
 
 
-  componentDidMount () {
+  componentDidMount() {
     this.getIdProfil()
   }
 
@@ -73,7 +73,7 @@ class PostVideo extends Component {
     // console.log(tokenDecoded)
     // const idProfilDecoded= tokenDecoded.id_profil
     // console.log(idProfilDecoded)
-    
+
     const { video_title, video_link, video_description, equipment, link_equipment, equipment2, link_equipment2, equipment3, link_equipment3, cover_picture } = this.state
     return (
       <div>
@@ -155,7 +155,7 @@ class PostVideo extends Component {
             </div>
 
 
-{/* THIS INPUT ALLOW TO INSERT THE ID PROFIL OF THE UPLOAD VIDEO BUT IS HIDDING FOR NOW UNTIL THE LOGIN WORKS */}
+            {/* THIS INPUT ALLOW TO INSERT THE ID PROFIL OF THE UPLOAD VIDEO BUT IS HIDDING FOR NOW UNTIL THE LOGIN WORKS */}
             <div className="temp">
               {/* <input type="hidden" name="profil_id_profil" value={this.state.profil_id_profil} onChange={this.changeHandler} /> */}
 
