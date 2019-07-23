@@ -49,6 +49,11 @@
     color: gray;
 }
 
+
+.font_text_way {
+    font-size: 90%;
+    font-weight: bold;
+}
 .district{
     margin-left: 4%;
     margin-right: 4%;
@@ -60,6 +65,10 @@
     margin-left: 2%;
 }
 
+
+.color_accomodation {
+    color: red;
+}
 .bed{
 
     width:26px;
