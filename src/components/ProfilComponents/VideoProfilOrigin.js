@@ -333,9 +333,8 @@ class VideoProfil extends Component {
 					</div>
 
 
-					{/* /bloc video 4*/}
+			{/* /bloc video 4*/}
 					<div className="list_videos">
-
 						<div>
 							<div className="video_user1">
 								<div className="upload_video">

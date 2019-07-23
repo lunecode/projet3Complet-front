@@ -45,7 +45,6 @@ class VideoProfil extends Component {
 
 
 	changeHandler = (e) => {
-		// this.setState({ id_general_video: e.target.value })
 		this.setState({ [e.target.name]: e.target.value })
 	}
 
@@ -85,7 +84,7 @@ class VideoProfil extends Component {
 		// const url = window.location.href.slice(45);
 		// this.state.general_video_id_general_video = url
 		
-
+		let i = 1
 		return (
 			<div className="VideoProfilCompnent">
 				<div className="membres-profil">
@@ -155,9 +154,9 @@ class VideoProfil extends Component {
 				</div>
 
 
-
+     	<div className="container_vidéos">
 				{this.state.videoByProfil.map(item => (
-					<div className="test">
+				
 						<div className="list_videos" id="dummy">
 							<div>
 								<div className="video_user1">
@@ -189,9 +188,9 @@ class VideoProfil extends Component {
 										<ModalHidevide />
 
 										{/* <form onSubmit={this.submitHandler(item.id_general_video)}> */}
-										<form onSubmit={this.submitHandler(item.id_general_video)}>
+										{/* <form onSubmit={this.submitHandler(item.id_general_video)}> */}
 
-
+{/* 
 											<input type="texte" name="id_general_video" value={item.id_general_video} ></input>
 
 
@@ -199,29 +198,28 @@ class VideoProfil extends Component {
 											{/* <input type="text" name="id_general_video" onChange={this.changeHandler} ></input> */}
 
 											<button type="submit"><img src={Delete}></img></button>
-										</form>
+										{/* </form> */}
 									</div>
 								</div>
 							</div>
 						</div>
-					</div>
+				
 				))}
+</div>
 
 
+				
+<div className="Upload_video">
+	<div className="video_user1">
+		<div className="upload_video">
+			<img src={upload} alt="upload" />
+			<p>Ajouter une nouvelle video</p>
+		</div>
+	</div>
 
-				<div className="bloc_2_video_3">
-					<div className="list_videos">
-						<div>
-							<div className="video_user1">
-								<div className="upload_video">
-									<img src={upload} alt="upload" />
-									<p>Ajouter une nouvelle video</p>
-								</div>
-							</div>
-						</div>
-					</div>
+</div>
 				</div>
-			</div>
+		
 		);
 	}
 }
