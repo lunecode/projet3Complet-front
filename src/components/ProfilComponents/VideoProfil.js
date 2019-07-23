@@ -50,9 +50,7 @@ class VideoProfil extends Component {
 	}
 
 
-	submitHandler = (e, id) => {
-		console.log(id)
-		if (id) {
+	submitHandler = (e, id ) => {
 			e.preventDefault()
 			axios.delete(`http://localhost:3000/general_video/delete_general_video/${id}`)
 				.then(response => {
@@ -62,7 +60,7 @@ class VideoProfil extends Component {
 					console.log(error)
 				})
 		}
-	}
+	
 
 	// submitHandler = (e, id) => {
 	// 	e.preventDefault()
@@ -80,11 +78,7 @@ class VideoProfil extends Component {
 		this.getVideoById()
 	}
 
-	render() {
-
-		// const url = window.location.href.slice(45);
-		// this.state.general_video_id_general_video = url
-		
+	render() {	
 
 		return (
 			<div className="VideoProfilCompnent">
@@ -189,7 +183,7 @@ class VideoProfil extends Component {
 										<ModalHidevide />
 
 										{/* <form onSubmit={this.submitHandler(item.id_general_video)}> */}
-										<form onSubmit={this.submitHandler(item.id_general_video)}>
+										<form onSubmit={this.submitHandler}>
 
 
 											<input type="texte" name="id_general_video" value={item.id_general_video} ></input>
