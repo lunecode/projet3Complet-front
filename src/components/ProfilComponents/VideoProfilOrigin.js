@@ -38,23 +38,28 @@ class VideoProfil extends Component {
   }
 
 
-	// getVideo = async () => {
-  //   const res = await axios.get('http://localhost:3000/general_video/get_general_video')
-  //   this.setState({ videos: res.data})
-  //   console.log(this.state.videos)
-  // }
-
-
 
 	componentDidMount = () => {
 		this.getVideoById()
+		this.openModalSecurity()
+		this.closeModalSecurity()	
+	}
+
+	openModalSecurity = () => {
+		this.setState({ isModalSecurityOpen: true })
+		// console.log(this.state.isModalSecurityOpen);
+	}
+	closeModalSecurity = () => {
+		this.setState({ isModalSecurityOpen: false })
+		// console.log(this.state.isModalOpen);
+	}
+
+	componentDidUpdate() {
+		console.log(this.state.isModalSecurityOpen);
+		
 	}
 
 	render() {
-		// const token = localStorage.getItem('token')
-		// const idProfilDecod = jwt.decode(token)
-		// const idProfil = idProfilDecod.id_profil
-		// console.log("idprofil: ", idProfil)
 
 		return (
 			<div className="VideoProfilCompnent">

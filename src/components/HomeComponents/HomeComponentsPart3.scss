@@ -12,6 +12,7 @@ $colorButton: #5dd8dc;
     .titleRecentlyPublished {
         color: $ColorFont;
         margin-bottom: 1%;
+        letter-spacing: 2px;
         
     }
 }
@@ -20,6 +21,7 @@ $colorButton: #5dd8dc;
     display: grid;
     grid-template-columns: 65% 35%;
     padding-left: 3%;
+    
 
     .TitlepublishedBorderBottom {
         border-block-end: solid 1px $colorbackground;
@@ -50,6 +52,7 @@ $colorButton: #5dd8dc;
             width: 100%;
             filter: brightness(60%);
             -webkit-filter: brightness(60%);
+
         }
         .titleVideo {
             position: relative;
@@ -58,6 +61,10 @@ $colorButton: #5dd8dc;
             padding-left: 2%;
             font-size: 22px;
             font-weight: bold;
+
+        }
+        .link-destination{
+            text-decoration: none;
         }
 }
 
@@ -78,6 +85,10 @@ $colorButton: #5dd8dc;
         padding-left: 2%;
         font-size: 12px;
         font-weight: bold;
+        text-decoration: none;
+    }
+    .link-destination{
+        text-decoration: none;
     }
 
 }
@@ -99,6 +110,10 @@ $colorButton: #5dd8dc;
         padding-left: 2%;
         font-size: 12px;
         font-weight: bold;
+        text-decoration: none;
+    }
+    .link-destination{
+        text-decoration: none;
     }
     
 }
@@ -120,6 +135,10 @@ $colorButton: #5dd8dc;
         padding-left: 2%;
         font-size: 12px;
         font-weight: bold;
+        text-decoration: none;
+    }
+    .link-destination{
+        text-decoration: none;
     }
     
 }
@@ -141,6 +160,10 @@ $colorButton: #5dd8dc;
         padding-left: 2%;
         font-size: 12px;
         font-weight: bold;
+        text-decoration: none;
+    }
+    .link-destination{
+        text-decoration: none;
     }
     
 }
@@ -179,6 +202,7 @@ margin-top: 1%;
             font-size: 40px;
             font-weight: bold;
             text-align: center;
+
         }
     }
 }
@@ -272,6 +296,7 @@ margin-top: 1%;
         p {
             text-transform: capitalize;
             margin-top: -10px;
+            color:#2C404D;
         }
 
         .centerVideaste {
@@ -291,7 +316,11 @@ margin-top: 1%;
         }
     }
 }
-
+.borderVideaste:hover{
+    background-color:#5dd8dc4d;
+    filter: opacity(70%);
+    -webkit-filter: opacity(90%);
+}
 .videastes1 {
     grid-area: v1;
     padding-right: 2%;

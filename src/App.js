@@ -13,6 +13,10 @@ import Abonnements from './screen/Abonnements'
 import Abonne from './screen/Abonne'
 import ProfilDescription from './screen/ProfilDescription/ProfilDescription';
 import Afrique_video from './screen/Afrique_video.js';
+import Asie_video from './screen/Asie_video.js';
+import Amerique_video from './screen/Amerique_video.js';
+import Europe_video from './screen/Europe_video.js';
+import Autres_video from './screen/Autres_video.js';
 
 import Home from './screen/Home';
 import PlayVideo from './screen/PlayVideo';
@@ -55,14 +59,19 @@ class App extends Component {
             <Route path="/Videaste" component={Videaste} ></Route> 
                  {/* ***** */}
                 {/* Afrique_video*/}
-          <Route path="/Afrique_video" component={Afrique_video} ></Route> 
+          <Route path="/Afrique_video" component={Afrique_video} ></Route>
+          <Route path="/Asie_video" component={Asie_video} ></Route>
+          <Route path="/Amerique_video" component={Amerique_video} ></Route>
+          <Route path="/Europe_video" component={Europe_video} ></Route>
+          <Route path="/Autres_video" component={Autres_video} ></Route> 
                  {/* ***** */}
             <Route component={Error}></Route>
           </Switch>
           <Footer />
+          
         </div>
       </BrowserRouter>
-      </>
+</>
     )
   }
 }

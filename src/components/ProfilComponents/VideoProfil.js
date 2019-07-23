@@ -14,8 +14,8 @@ import Delete from '../../Images-tripitto/Icon_Vidéo/Delete.png'
 
 class VideoProfil extends Component {
 	state = {
-		videoByProfil: [],
-		id_general_video: []
+		videos_profil: [],
+		isModalSecurityOpen: false,
 	}
 
 
@@ -28,33 +28,22 @@ class VideoProfil extends Component {
 		const res = await axios.get(`http://localhost:3000/general_video/get_video_id_profil/${idProfil}`)
 		this.setState({ videoByProfil: res.data })
 		// this.setState({ id_general_video: res.data })
-		console.log(this.state.videoByProfil)
-		// console.log(this.state.id_general_video)
+		// console.log(this.state.videoByProfil)
 	}
 
 
-	// getVideoById = async () => {
-	// 	const token = localStorage.getItem('token')
-	// 	const idProfilDecod = jwt.decode(token)
-	// 	const id = idProfilDecod.id_profil
-	// 	const res = await axios.get(`http://localhost:3000/general_video/get_general_video_travel_information/${id}`)
-	// 	this.setState({ videoByProfil: res.data })
-	// 	console.log(this.state.videoByProfil)
-
-	// }
-
-
 	changeHandler = (e) => {
-		// this.setState({ id_general_video: e.target.value })
 		this.setState({ [e.target.name]: e.target.value })
 	}
 
 
-	submitHandler = (e, id ) => {
-			e.preventDefault()
+	submitHandler = (id) => {
+			// e.preventDefault()
+			console.log('test')
 			axios.delete(`http://localhost:3000/general_video/delete_general_video/${id}`)
 				.then(response => {
 					console.log(response)
+					window.location.reload(true);
 				})
 				.catch(error => {
 					console.log(error)
@@ -76,7 +65,22 @@ class VideoProfil extends Component {
 
 	componentDidMount = () => {
 		this.getVideoById()
+		this.openModalSecurity()
+		this.closeModalSecurity()	
 	}
+
+	openModalSecurity = () => {
+		this.setState({ isModalSecurityOpen: true })
+		// console.log(this.state.isModalSecurityOpen);
+	}
+	closeModalSecurity = () => {
+		this.setState({ isModalSecurityOpen: false })
+		// console.log(this.state.isModalOpen);
+	}
+
+	componentDidUpdate() {
+		console.log(this.state.isModalSecurityOpen);
+		
 
 	render() {	
 
@@ -181,19 +185,15 @@ class VideoProfil extends Component {
 										<img className="img1" src={modification} alt="modification" />
 										<img className="img2" src={Partager} alt="Partager" />
 										<ModalHidevide />
+										<ModalDeleteVideo  />
+										<ModalDeleteVideo 
+									{...this.state}
+									openModalSecurity={this.openModalSecurity}
+									closeModalSecurity={this.closeModalSecurity}
+									submitIdVideoDelete={this.submitHandler(item.id_general_video)} />
 
-										{/* <form onSubmit={this.submitHandler(item.id_general_video)}> */}
-										<form onSubmit={this.submitHandler}>
-
-
-											<input type="texte" name="id_general_video" value={item.id_general_video} ></input>
-
-
-											{/* FONCTIONNE EN ENTRANT MANUELLEMENT L'ID */}
-											{/* <input type="text" name="id_general_video" onChange={this.changeHandler} ></input> */}
-
-											<button type="submit"><img src={Delete}></img></button>
-										</form>
+											{/* <button onClick={() => this.submitHandler(item.id_general_video)}><img src={Delete}></img></button> */}
+									
 									</div>
 								</div>
 							</div>
