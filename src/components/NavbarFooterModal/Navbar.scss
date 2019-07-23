@@ -78,16 +78,77 @@ $colorButton: #5dd8dc;
   }
 
   .button_video {
-    height: 8.1vh;
-    width: 8.5vw;
+    height: 10vh;
     border: none;
-    background-color: #2c404d;
-    margin-bottom: -0.5vh;
+    background: none;
   }
   .containerNavRight {
     position: relative;
     width: 20%;
     padding-right: 3%;
+
+    ul {
+      align-items: center;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-around;
+      list-style: none;
+      position: relative;
+
+      .img_profil {
+        cursor: pointer;
+      }
+
+      .img_profil:hover .Sous_nemu {
+        display: block;
+      }
+      .Sous_nemu {
+        z-index: 2;
+        list-style: none;
+        display: none;
+        background-color: white;
+        position: absolute;
+
+        right: 12vw;
+        width: 170px;
+        height: 260px;
+        border: 1px solid #1ba2a2;
+        padding-top: 20px;
+        padding-left: 20px;
+        z-index: 2;
+        li {
+          padding: 10px;
+
+          .link_DropDown {
+            text-decoration: none;
+            color: #333333;
+            &:hover {
+              color: #5dd8dc;
+            }
+          }
+          .btn-deconnection {
+            border: none;
+            //  padding-top:5px;
+            padding-bottom: 5px;
+            margin-left: 6px;
+            color: red;
+            font-weight: normal;
+            cursor: pointer;
+          }
+        }
+        .li-btn-off {
+          margin-left: -1vw;
+          padding-bottom: 0;
+          // margin-top:-3vh;
+        }
+      }
+    }
+
+    .logoAvatar {
+      border-radius: 50%;
+      height: 33px;
+      margin-left: 79%;
+    }
 
     ul {
       align-items: center;
