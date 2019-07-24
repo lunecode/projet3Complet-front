@@ -20,8 +20,6 @@ class VideoProfil extends Component {
 	}
 
 
-
-
 	getVideoById = async () => {
 		const token = localStorage.getItem('token')
 		const idProfilDecod = jwt.decode(token)
@@ -40,6 +38,7 @@ class VideoProfil extends Component {
 		axios.delete(`http://localhost:3000/general_video/delete_general_video/${id}`)
 			.then(response => {
 				window.location.reload(true);
+				console.log(response)
 			})
 			.catch(error => {
 			})
@@ -53,28 +52,19 @@ class VideoProfil extends Component {
 
 	openModalSecurity = () => {
 		this.setState({ isModalSecurityOpen: true })
-		// console.log(this.state.isModalSecurityOpen);
+	
 	}
 	closeModalSecurity = () => {
 		this.setState({ isModalSecurityOpen: false })
-		// console.log(this.state.isModalOpen);
+		
 	}
 
 	componentDidUpdate() {
-		// console.log(this.state.isModalSecurityOpen);
+	
 	}
 	render() {
-
 		return (
 			<div className="VideoProfilCompnent">
-				<div className="membres-profil">
-					<img src="https://images.pexels.com/photos/814499/pexels-photo-814499.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500" alt="pictures profil" />
-					<div className="membres-profil-detail">
-						<h4>Julien Mbappé</h4>
-						<p>Membre depuis le 20/02/2019</p>
-					</div>
-				</div>
-
 				<div className='position-bloc'>
 					<div className='profil-menu'>
 						<ul>
@@ -166,15 +156,11 @@ class VideoProfil extends Component {
 										<img className="img1" src={modification} alt="modification" />
 										<img className="img2" src={Partager} alt="Partager" />
 										<ModalHidevideo />
-
-
 										<ModalDeleteVideo
 											{...this.state}
 											openModalSecurity={this.openModalSecurity}
 											closeModalSecurity={this.closeModalSecurity}
 											submitIdVideoDelete={() => this.submitHandler(item.id_general_video)} />
-
-										{/* <button onClick={() => this.submitHandler(item.id_general_video)}><img src={Delete}></img></button> */}
 
 									</div>
 								</div>

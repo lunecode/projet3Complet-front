@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import axios from "axios"
 import PostNotifications from '../components/ProfilComponents/PostNotifications';
-
+import UserLastnameFirstname from '../components/ProfilComponents/UserLastnameFirstname';
 
 class Notifications extends Component {
   submitHandler = e => {
@@ -46,7 +46,10 @@ class Notifications extends Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.submitHandler}>
+         
+          <UserLastnameFirstname />
+          <form onSubmit={this.submitHandler}>
+
           <PostNotifications
             {...this.state}
             handleRadio={this.handleRadio}

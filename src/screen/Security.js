@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PostSecurityProfil from '../components/ProfilComponents/PostSecurityProfil';
+import UserLastnameFirstname from '../components/ProfilComponents/UserLastnameFirstname';
 import axios from "axios"
 
 
@@ -32,6 +33,7 @@ class ProfilRoutes extends Component {
   render() {
     return (
       <div>
+         <UserLastnameFirstname />
         <form onSubmit={this.submitHandler}>
           <PostSecurityProfil
             {...this.state}

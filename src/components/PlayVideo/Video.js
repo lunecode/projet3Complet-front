@@ -47,7 +47,7 @@ class Video extends Component {
     const opts = {
       height: '490',
       width: '850',
-      playerVars: { 
+      playerVars: {
         autoplay: 0
       }
     };
@@ -58,7 +58,7 @@ class Video extends Component {
 
     return (
       <>
-        
+
         {this.state.videos.filter(item => item.id_general_video == idVideo).map(item => (
           <div className="container_video" key={i++}>
             <div key={item.id_general_video}>

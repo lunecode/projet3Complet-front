@@ -29,13 +29,7 @@ class PostSecurityProfil extends React.Component {
     const { isModalSecurityOpen } = this.state
     return (
       <div className="bloc-page-profil">
-        <div className="membres-profil">
-          <img src="https://images.pexels.com/photos/814499/pexels-photo-814499.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500" alt="pictures profil" />
-          <div className="membres-profil-detail">
-            <h4>Julien Mbappé</h4>
-            <p>Membre depuis le 20/02/2019</p>
-          </div>
-        </div>
+    
         <div className='position-bloc'>
           <div className='profil-menu'>
             <ul>
