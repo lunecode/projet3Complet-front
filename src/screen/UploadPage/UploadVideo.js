@@ -13,7 +13,7 @@ state = {
   getIdVideo = async () => {
     const res = await axios.get('http://localhost:3000/general_video/get_id_general_video')
     this.setState({ idGeneralVideo: res.data[0] })
-    console.log(this.state.idGeneralVideo.id_general_video)
+    // console.log(this.state.idGeneralVideo.id_general_video)
   }
   componentDidMount() {
     this.getIdVideo()

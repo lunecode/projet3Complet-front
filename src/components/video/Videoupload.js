@@ -19,10 +19,10 @@ class Videoupload extends Component {
     console.log(this.state)
     axios.post('http://localhost:3000/videoUpload/insertdatavideo', this.state)
       .then(response => {
-        console.log(response)
+        // console.log(response)
       })
       .catch(error => {
-        console.log(error)
+        // console.log(error)
       })
   }
 

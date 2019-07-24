@@ -33,10 +33,10 @@ class PostVideo extends Component {
     e.preventDefault()
     axios.post('http://localhost:3000/general_video/insert_general_video', this.state)
       .then(response => {
-        console.log(response)
+        // console.log(response)
       })
       .catch(error => {
-        console.log(error)
+        // console.log(error)
       })
   }
 
@@ -57,9 +57,6 @@ class PostVideo extends Component {
   render() {
 
     const { video_title, video_link, video_description, equipment, link_equipment, equipment2, link_equipment2, equipment3, link_equipment3, cover_picture } = this.state
-
-    const test = this.props.idVideo + 1
-    console.log(test)
 
     return (
       <div>
