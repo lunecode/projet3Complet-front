@@ -32,7 +32,6 @@ class MesFavoris extends Component {
             <div className="favoris_durée_pourcentage">
             <p className="durée_vidéo_favoris">+80%</p>
             <p className="pourcentage_favoris" >12:23</p>
-            
             </div>
             <img src={soleil} alt="" />
         </div>
@@ -83,8 +82,6 @@ class MesFavoris extends Component {
             <p className="Point">.</p>
             <p className="temps">il y 1 semaine</p>
         </div>
-
-       
         <p className="desciptipn_text">
              <p className="auteur">Carmelita Marsham</p>
             Pellentesque habitant morbi tristique senectus et netus
@@ -121,9 +118,7 @@ class MesFavoris extends Component {
             <p className="Point">.</p>
             <p className="temps">il y 3 semaines</p>
         </div>
-
-       
-        <p className="desciptipn_text">
+  <p className="desciptipn_text">
              <p className="auteur">Beth Murphy</p>
             Pellentesque habitant morbi tristique senectus et netus
             et malesuada fames ac turpis egestas. Vestibulum tortor

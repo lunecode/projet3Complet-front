@@ -158,7 +158,6 @@ class Profil extends Component {
 
         <UserLastnameFirstname />
 
-        
         <form onSubmit={this.submitHandler}>
           <PostProfilInfo
             {...this.state}

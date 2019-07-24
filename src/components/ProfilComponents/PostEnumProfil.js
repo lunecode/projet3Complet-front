@@ -18,16 +18,15 @@ const PostEnumProfil = (props) => {
                 <h4>Vous êtes plutôt</h4>
             </div>
 
-    <form className="Profil_Pictures" type="hidden" name="profil"  onSubmit={props.submitHandler} value={props.profil} 
-               onChange={props.changeHandler}>
-
-                <div className="Profil_picture1">
+            <form className="Profil_Pictures" type="hidden" name="profil" onSubmit={props.submitHandler} value={props.profil}
+                onChange={props.changeHandler}>
+                  <div className="Profil_picture1">
                     <img src={Passionnedevoyage}
                         onClick={props.profil1}
                         alt="Passioné de voyage"
                     />
-                  <p> Passionné de voyage</p> 
-        </div>
+                    <p> Passionné de voyage</p>
+                </div>
 
 
                 <div className="Profil_picture2">
@@ -36,7 +35,7 @@ const PostEnumProfil = (props) => {
                         alt="Créateur de contenu"
                     />
                     <p>Créateur de contenu</p>
-        </div>
+                </div>
 
 
                 <div className="Profil_picture3">
@@ -45,21 +44,21 @@ const PostEnumProfil = (props) => {
                         alt="Blogueur de voyage"
                     />
                     <p>Blogueur de voyage</p>
-        </div>
+                </div>
                 <div className="Profil_picture4">
                     <img src={Photographevidéaste}
                         onClick={props.profil4}
                         alt="Photograph & vidéaste"
                     />
-                   <p> Photographe & vidéaste</p>
-               </div>
+                    <p> Photographe & vidéaste</p>
+                </div>
                 <div className="Profil_picture5">
                     <img src={Autre}
                         onClick={props.profil5}
                         alt="L"
                     />
                     <p>Autre</p>
-        </div>
+                </div>
             </form>
         </div>
     );

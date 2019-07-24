@@ -12,12 +12,12 @@ class ModalHidevideo extends Component {
 
   openModalSecurity = (event) => {
     this.setState({ isModalSecurityOpen: true })
-    // console.log(this.state.isModalSecurityOpen);
+
   }
 
   closeModalSecurity = (event) => {
     this.setState({ isModalSecurityOpen: false })
-    // console.log(this.state.isModalOpen);
+
   }
 
   componentDidMount() {
@@ -28,7 +28,7 @@ class ModalHidevideo extends Component {
     return (
       <div className="container-Hide_video">
         <button onClick={this.openModalSecurity}>
-          <img className="img3" src={Vue} alt="" /> </button>
+          <img className="img3" src={Vue} alt="vue" /> </button>
         <div className="Modal_Hide_video">
           <div className={this.state.isModalSecurityOpen ? 'affichage-block' : 'display-none'} >
             <div className="alerte_info_Hide">Etes-vous sûre de vouloir masquervotre vidéo ?

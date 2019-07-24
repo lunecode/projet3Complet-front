@@ -14,10 +14,10 @@ class PostBioProfil extends Component {
     console.log(this.state)
     axios.put(`http://localhost:3000/profil/update_profil/${this.state.id_profil}`, this.state)
       .then(response => {
-        console.log(response)
+
       })
       .catch(error => {
-        console.log(error)
+
       })
   }
   render() {
