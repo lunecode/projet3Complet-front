@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import axios from "axios"
 import GetAbonnements from '../components/ProfilComponents/GetAbonnements';
-
+import UserLastnameFirstname from '../components/ProfilComponents/UserLastnameFirstname';
 
 class Abonnements extends Component {
   submitHandler = e => {
@@ -25,6 +25,7 @@ class Abonnements extends Component {
   render() {
     return (
       <div>
+          <UserLastnameFirstname />
         <form onSubmit={this.submitHandler}>
           <GetAbonnements 
           

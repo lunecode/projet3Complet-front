@@ -23,7 +23,7 @@ class PostBioProfil extends Component {
   render() {
     const { id_profil, lastname, firstname, pseudo, email, birth_date, type,
       position, profil_link, profile_picture, bio, inscription_date, inscription_type, password,
-      password_forget, test } = this.state
+      password_forget } = this.state
     return (
       <div>
         <form onSubmit={this.submitHandler}>

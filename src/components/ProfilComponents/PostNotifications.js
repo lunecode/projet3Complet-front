@@ -7,17 +7,11 @@ import { NavLink } from 'react-router-dom'
 
 
 const PostNotifications = (props) => {
-  return (
-    <div className="bloc-page-profil">
-      <div className="membres-profil">
-        <img src="https://i.ytimg.com/vi/BfCwN4iy6T8/maxresdefault.jpg" alt="pictures profil" />
-        <div className="membres-profil-detail">
-          <h4>Julien Mbappé</h4>
-          <p>Membre depuis le 20/02/2019</p>
-        </div>
-      </div>
-      <div className='position-bloc'>
-        <div className='profil-menu'>
+    return (
+        <div className="bloc-page-profil">
+          
+            <div className='position-bloc'>
+            <div className='profil-menu'>
           <ul>
             <li>
               <NavLink
@@ -44,8 +38,7 @@ const PostNotifications = (props) => {
                 to="/Security" exact >Sécurité</NavLink>
             </li>
             <li>
-              <NavLink
-                to="/Mettre_à_niveau" exact >Mettre à niveau</NavLink>
+              Mettre à niveau
             </li>
           </ul>
         </div>
