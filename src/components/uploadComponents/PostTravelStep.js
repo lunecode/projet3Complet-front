@@ -3,8 +3,6 @@ import axios from 'axios'
 import { NavLink } from 'react-router-dom'
 
 import './PostTravelStep.css'
-// import Village from '../../Images-tripitto/Icon/etape/active/village.png';
-// import Weather from '../../Images-tripitto/Icon/etape/meteo/nuagegris.png';
 import Car from '../../Images-tripitto/Icon/transport/voiture.png';
 import Moto from '../../Images-tripitto/Voyages/Moto.png';
 import Bike from '../../Images-tripitto/Icon/Voyage/velo.png';
@@ -20,10 +18,6 @@ import Itinerary_Step from '../../Images-tripitto/imgUploadVideo/itinerary_step.
 // UPLOAD PAGE 2 / TRAVEL STEP
 // ALLOW TO INSERT DATA IN "TRAVEL STEP" TABLE
 // TEST OK
-
-
-// REVIEW THE TRAVEL_STEP AND TRAVEL_INFORMATION TABLES AS THE TRAVEL_INFORMATION TABLE COLUMNS:
-// CURRENCY, ACCOMODATION_BUDGET, ACTIVITIES_BUDGET, TRAVEL_TYPE ARE BASED ON ITINERARY FROM THE TRAVEL_STEP TABLE
 
 
 class PostTravelStep extends Component {
