@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import Display_Europe_video from "../components/HomeComponents/Display_Europe_video.js"
+import DisplayEuropeVideo from "../../components/HomeComponents/Display_Europe_video"
 
 
 class Europe_video extends Component {
     render() {
         return (
             <div>
-                <Display_Europe_video />
+                <DisplayEuropeVideo />
             </div>
         );
     }

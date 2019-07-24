@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import Display_Asie_video from "../components/HomeComponents/Display_Asie_video.js"
+import DisplayAsieVideo from "../../components/HomeComponents/Display_Asie_video"
 
 
 class Asie_video extends Component {
     render() {
         return (
             <div>
-                <Display_Asie_video />
+                <DisplayAsieVideo />
             </div>
         );
     }

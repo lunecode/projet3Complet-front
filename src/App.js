@@ -12,11 +12,11 @@ import Notifications from './screen/Notifications'
 import Abonnements from './screen/Abonnements'
 import Abonne from './screen/Abonne'
 import ProfilDescription from './screen/ProfilDescription/ProfilDescription';
-import Afrique_video from './screen/Afrique_video.js';
-import Asie_video from './screen/Asie_video.js';
-import Amerique_video from './screen/Amerique_video.js';
-import Europe_video from './screen/Europe_video.js';
-import Autres_video from './screen/Autres_video.js';
+import Afrique_video from './screen/HomePage/Afrique_video';
+import Asie_video from './screen/HomePage/Asie_video';
+import Amerique_video from './screen/HomePage/Amerique_video';
+import Europe_video from './screen/HomePage/Europe_video';
+import Autres_video from './screen/HomePage/Autres_video';
 
 import Home from './screen/Home';
 import PlayVideo from './screen/PlayVideo';

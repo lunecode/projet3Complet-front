@@ -4,7 +4,7 @@ import axios from 'axios';
 
 
 
-class Display_Asie_video extends Component {
+class DisplayAsieVideo extends Component {
 
     state = {
         video: [],
@@ -22,8 +22,7 @@ class Display_Asie_video extends Component {
         this.getVideo()
       }
     render() {
-        let a = 1
-        let c = 1
+
         return (
             <div className="Display_Afrique">
                 <div className="titre_Display_Afrique">
@@ -63,9 +62,9 @@ class Display_Asie_video extends Component {
             <p className="A">.</p>
             <p className="temps_Afrique">il y 3 semaines</p>
         </div>
-             <p className="desciptipn_text">
+             <div className="desciptipn_text">
              <p className="auteur_Afrique">{item.video_user}</p>
-            </p>
+            </div>
         </div>
       </div>
       ))}
@@ -83,4 +82,4 @@ class Display_Asie_video extends Component {
 }
 
 
-export default Display_Asie_video;
+export default DisplayAsieVideo;

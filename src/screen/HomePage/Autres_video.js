@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import Display_Autres_video from "../components/HomeComponents/Display_Autres_video.js"
+import DisplayAutresVideo  from "../../components/HomeComponents/Display_Autres_video"
 
 
 class Autres_video extends Component {
     render() {
         return (
             <div>
-                <Display_Autres_video />
+                <DisplayAutresVideo  />
             </div>
         );
     }
