@@ -19,17 +19,17 @@ class Getnextdestination extends Component {
   getnumbertips = async () => {
     const res = await axios.get('http://localhost:3000/general_video/get_general_video_nextdestination_tauxderemplissage')
     this.setState({ numbertips: res.data })
-  
+
   }
   getnextvideo = async () => {
     const res = await axios.get('http://localhost:3000/travel_information/get_travelinformation_general_video')
     const Nextdestination = res.data
-   
+
     this.setState({ nextpicture: Nextdestination })
 
   }
   getnextvideolimit = () => {
-    this.setState({ offset: this.state.offset + 1 }, async () => {
+    this.setState({ offset: this.state.offset + 5 }, async () => {
       const res = await axios.get(`http://localhost:3000/travel_information/get_travelinformation_general_video/${this.state.offset}`)
       const Nextdestination = res.data
       this.setState({ nextpicture: Nextdestination })

@@ -4,7 +4,7 @@ import axios from 'axios';
 
 
 
-class Display_Autres_video extends Component {
+class DisplayAutresVideo extends Component {
 
   state = {
     video: [],
@@ -74,4 +74,4 @@ class Display_Autres_video extends Component {
 }
 
 
-export default Display_Autres_video;
+export default DisplayAutresVideo ;
