@@ -19,7 +19,7 @@ import Europe_video from './screen/Europe_video.js';
 import Autres_video from './screen/Autres_video.js';
 
 import Home from './screen/Home';
-import PlayVideo from './screen/PlayVideo';
+import PlayVideo from './screen/PlayVideo/PlayVideo';
 import Favoris from './screen/Favoris';
 import Videaste from './screen/Videaste';
 import Footer from './components/NavbarFooterModal/Footer';
