@@ -38,8 +38,7 @@ const PostProfilInfo = (props) => {
                 to="/Security" exact >Sécurité</NavLink>
             </li>
             <li>
-              <NavLink
-                to="/Mettre_à_niveau" exact >Mettre à niveau</NavLink>
+              Mettre à niveau
             </li>
           </ul>
 

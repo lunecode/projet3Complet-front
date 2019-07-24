@@ -167,7 +167,6 @@ class Display extends Component {
                       <img src={User} alt=""></img>
                       <p><strong>{videaste.lastname} {videaste.firstname}</strong></p>
                       <p>{videaste.location}</p>
-                      <p>(Numbers) Video</p>
                       <button className="buttonVideaste">S'ABONNER</button>
                     </div>
                   </div>

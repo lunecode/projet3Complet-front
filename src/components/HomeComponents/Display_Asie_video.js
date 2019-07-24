@@ -27,7 +27,7 @@ class DisplayAsieVideo extends Component {
     return (
       <div className="Display_Afrique">
         <div className="titre_Display_Afrique">
-          <h1>Asie-Océanie / </h1>
+          <h1>Asie-Océanie</h1>
           <p className="number_video_Display_Afrique">3 Vidéos</p>
         </div>
         <div className="countainer_bloc_Afrique">

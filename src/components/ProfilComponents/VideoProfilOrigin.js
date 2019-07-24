@@ -23,9 +23,6 @@ class VideoProfil extends Component {
 		videoByProfil: ''
 	}
 
-
-
-
 	getVideoById = async () => {
 		const token = localStorage.getItem('token')
 		const idProfilDecod = jwt.decode(token)

@@ -3,6 +3,10 @@ import './VideastePage.scss'
 import User from '../../Images-tripitto/Icon/User/photo-videaste.jpg'
 import User2 from '../../Images-tripitto/Icon/User/photo-videaste1.jpg'
 import User3 from '../../Images-tripitto/Icon/User/photo-videaste3.jpg'
+
+
+
+
 class VideastePage extends React.Component {
   render() {
     return (
