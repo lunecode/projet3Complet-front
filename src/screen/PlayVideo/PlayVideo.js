@@ -6,7 +6,7 @@ import DetailledInfo from '../../components/PlayVideo/DetailledInfo';
 import UserCommentGet from '../../components/PlayVideo/UserCommentGet';
 import UserCommentPost from '../../components/PlayVideo/UserCommentPost';
 import AllVideoUser from '../../components/PlayVideo/AllVideoUser';
-import './Playvideo.css';
+import './PlayVideo.css';
 
 
 
