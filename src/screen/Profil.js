@@ -6,6 +6,7 @@ import PostEnumProfil from '../components/ProfilComponents/PostEnumProfil';
 import PostBioProfil from '../components/ProfilComponents/PostBioProfil';
 import PostIngedients from '../components/ProfilComponents/PostIngedients';
 import Socialprofil from '../components/ProfilComponents/Socialprofil';
+import UserLastnameFirstname from '../components/ProfilComponents/UserLastnameFirstname';
 
 import "./Profil.scss"
 import "../components/ProfilComponents/PostProfilInfo.css"
@@ -14,12 +15,8 @@ import axios from "axios"
 
 class Profil extends Component {
   state = {
-    profil_name:[]
-  
   }
-componentDidMount() {
-  this.getNameUser()
-}
+
 
 submitHandler = e => {
   e.preventDefault()
@@ -35,7 +32,6 @@ submitHandler = e => {
     .then(
            //Pour que  button submit renvoie vers la page ProfilDescription
                this.props.history.push("/ProfilDescription"),
-              //permet de rafraichir la page pour afficher le Get
              window.location.reload(true)
             )
     .catch(error => {
@@ -44,14 +40,8 @@ submitHandler = e => {
 }
 
 
-getNameUser = async () => {
-  const token = localStorage.getItem('token')
-  const idProfilDecod = jwt.decode(token)
-  const idProfil = idProfilDecod.id_profil
-  const res = await axios.get(`http://localhost:3000/profil/get_video_for_profil_decription/${idProfil}`)
-  this.setState({profil_name:res.data})
-  console.log("profilName",this.state.profil_name)
-}
+
+
 
 
   handleCheckbox = (e) => {
@@ -162,16 +152,17 @@ getNameUser = async () => {
   render() {
     return (
       <div className="pageprofil" >
-        <form onSubmit={this.submitHandler}>
-          <PostProfilInfo
+
+        <UserLastnameFirstname />
+       <form onSubmit={this.submitHandler}>
+           <PostProfilInfo
             {...this.state}
-            // getNameUser={this.getNameUser}
+            getNameUser={this.getNameUser}
             handleCheckbox={this.handleCheckbox}
             changeHandler={this.changeHandler}
-          
-       
-          />
-
+      
+          /> 
+ 
           <PostEnumProfil
             {...this.state}
             profil1={this.profil1}
