@@ -9,7 +9,6 @@ import AllVideoUser from '../../components/PlayVideo/AllVideoUser';
 import './PlayVideo.css';
 
 
-
 class PlayVideo extends Component {
   render() {
     return (

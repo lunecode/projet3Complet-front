@@ -44,7 +44,6 @@ class AllVideoUser extends Component {
                 <div className="userVid" key={item.id_profil}>
                   <p className="title_vid">{item.video_title}</p>
                   <span>{item.video_description}</span>
-
                 </div>
               </div>
             </div>

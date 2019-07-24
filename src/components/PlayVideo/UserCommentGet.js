@@ -61,8 +61,6 @@ class UserCommentGet extends Component {
         {this.state.comment.filter(item => item.general_video_id_general_video == idVideo).map(item => (
           <div className="container_get" key={i++}>
             <div key={item.video_comment}>
-
-
               <div className="container_date"><img className="pictureuser" src={Picture} alt="pictureuser" />
                 <span className="author">{item.author_comment}  </span>
                 <span className="comment_date">{date}{separator}{month < 10 ? `0${month}` : `${month}`}{separator}{year}
@@ -70,7 +68,6 @@ class UserCommentGet extends Component {
               </div>
               <div className="comment">
                 <div className="display_com">{item.comment}</div>
-                {/* <button></button> */}
                 <div className="editcomment">
                   <img className="editcom" src={EditCom} alt="pic modify" />
                 </div>
@@ -81,7 +78,6 @@ class UserCommentGet extends Component {
         {this.state.picture.map(item => (
           <div className="container_get1" key={i++}>
             <div key={item.id_comment}>
-              <span>{item.profile_picture}</span>
               <span>{item.action_date_comment}</span>
               <span>{item.author_comment}</span>
               <span>{item.comment}</span>
