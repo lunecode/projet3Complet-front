@@ -37,10 +37,7 @@ class ProfilRoutes extends Component {
             {...this.state}
             handleCheckbox={this.handleCheckbox}
             changeHandler={this.changeHandler}
-        
-            
           />
-      
         </form>
       </div>
     )

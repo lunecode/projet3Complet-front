@@ -7,8 +7,8 @@ import ButtonGoogle from "../../Images-tripitto/Buttons/Colored/Google.png"
 
 import ForgottenPassword from './ForgottenPassword'
 import './ForgottenPassword.scss'
-import ModalLogin from './ModalLogin'
-import './ModalLogin.scss'
+import Registration from './Registration'
+import './Registration.scss'
 
 
 
@@ -16,14 +16,12 @@ import './ModalLogin.scss'
 
 
 
-class Modal extends Component {
+class Login extends Component {
 	state = {
 		ModalForgottenPassword: false,
 		ModalCreateLogin: false,
 		CloseModal: false,
 	}
-
-
 
 	onSubmitLogin = e => {
 		e.preventDefault()
@@ -31,7 +29,7 @@ class Modal extends Component {
 		const password = e.target.password.value
 		if (email == '' || password == '') {
 			alert('Merci de renseigner les champs')
-		} else  {
+		} else {
 			axios
 				.post('http://localhost:3000/login/login', {
 					email: e.target.email.value,
@@ -41,9 +39,6 @@ class Modal extends Component {
 					localStorage.setItem('token', res.headers["x-access-token"])
 					const token = localStorage.getItem('token')
 					if (token == null) {
-						// window.location.reload(false)
-						console.log('nono')
-						
 					} else {
 						axios({
 							method: 'POST',
@@ -52,47 +47,21 @@ class Modal extends Component {
 								'Authorization': `Bearer ${token}`,
 							}
 						})
-						.then(res => {
-							if(res.data.message == 'Token OK') {
-								window.location.reload(true)
-							} else {
-								console.log('hahah')
-							}
-							console.log(res)
-						})
+							.then(res => {
+								if (res.data.message == 'Token OK') {
+									window.location.reload(true)
+								} else {
+								}
+							})
 					}
 				})
 		}
 	}
 
 
-
-
-	// protectedRoute = () => {
-	// 	const token = localStorage.getItem('token')
-	// 	axios({
-	// 		method: 'POST',
-	// 		url: 'http://localhost:3000/login/protected',
-	// 		headers: {
-	// 			'Authorization': `Bearer ${token}`,
-	// 		}
-	// 	})
-	// 		.then(res => {
-	// 			console.log(res.data.message)
-	// 			if (!res.data.message == "Token OK") {
-	// 			}
-	// 		})
-	// }
-
-
-
-
 	openModalForgottenPassword = () => {
 		this.setState({ ModalForgottenPassword: true })
 		this.props.onClose()
-		// if (this.state.ModalForgottenPassword === true) {
-		//     return this.state.isModalOpen === false
-		// }console.log(this.state.isModalOpen);
 	}
 
 	closeModalForgottenPassword = () => {
@@ -116,19 +85,6 @@ class Modal extends Component {
 		this.props.crossClose()
 	}
 
-	// openModalLogin = () => {
-	// 		document.getElementById('modal--is-open').classList.toggle('login_close')
-	// }
-
-
-	// hideButtonLoginToken = () => {
-	// 	const token = localStorage.getItem('token')
-	// 	if (token) {
-	// 		document.getElementById('displayLoginNone').classList.toggle('buttonNavbarConnexionNone')
-	// 	}
-	// }
-
-
 
 	closeModalLogin = () => {
 		this.setState({ ModalCreateLogin: false })
@@ -140,16 +96,11 @@ class Modal extends Component {
 		this.closeModalForgottenPassword()
 		this.openModalLogin()
 		this.closeModalLogin()
-
 	}
 
 	render() {
-		// console.log(this.props)
-		const { isOpen, onClose, crossClose } = this.props;
+		const { isOpen, crossClose } = this.props;
 		const { ModalForgottenPassword, ModalCreateLogin } = this.state
-
-
-
 		return (
 			<>
 				<div className={isOpen ? 'modal--is-open' : 'modal'}>
@@ -161,12 +112,10 @@ class Modal extends Component {
 							<button onClick={crossClose}>X</button>
 						</div>
 					</div>
-
 					<form onSubmit={this.onSubmitLogin}>
 						<div className="containerIs-open2">
 							<div className="divInputModal">
 								<input type="email" name="email" id="email" placeholder="Adresse email"></input>
-
 							</div>
 							<div className="divInputModal" >
 								<input type="password" name="password" id="password" placeholder="Mot de passe"></input>
@@ -177,32 +126,13 @@ class Modal extends Component {
 								<p><input className="checkBoxModal" type="checkbox" name="checkMe" id="checkMe" />Se souvenir de moi</p>
 							</div>
 							<div>
-
 								<p onClick={this.forgetPasswordCloseLogin} className="lockModal"><img src={Lock} alt=""></img>Mot de passe oublié</p>
-
 							</div>
 						</div>
-
 						<div className="containerIs-open4">
 							<div>
-
-
-
-								{/* BOUTON DE CONNEXION */}
-
-								{/* <button className="button_connexion" onClick={this.protectedRoute}><img src={ButtonFull} alt="button connexion"></img></button> */}
-
 								<button className="button_connexion"><img src={ButtonFull} alt="button connexion"></img></button>
-
-								{/* <button className="button_connexion" onClick={() => this.protectedRoute()}><img src={ButtonFull} onClick={onClose} alt="button connexion"></img></button> */}
-
-
 							</div>
-
-							{/* <button onClick={crossClose}>X</button> */}
-
-
-
 							<div>
 								<p>ou</p>
 							</div>
@@ -217,11 +147,11 @@ class Modal extends Component {
 				</div>
 				<div>
 					<ForgottenPassword isOpen2={ModalForgottenPassword} onClose2={this.closeModalForgottenPassword} />
-					<ModalLogin isOpen3={ModalCreateLogin} onClose3={this.closeModalLogin} />
+					<Registration isOpen3={ModalCreateLogin} onClose3={this.closeModalLogin} />
 				</div>
 			</>
 		)
 	}
 }
 
-export default Modal
+export default Login

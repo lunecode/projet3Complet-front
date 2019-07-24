@@ -3,13 +3,13 @@ import Display_Amerique_video from "../components/HomeComponents/Display_Ameriqu
 
 
 class Amerique_video extends Component {
-    render() {
-        return (
-            <div>
-                <Display_Amerique_video />
-            </div>
-        );
-    }
+	render() {
+		return (
+			<div>
+				<Display_Amerique_video />
+			</div>
+		);
+	}
 }
 
 export default Amerique_video;

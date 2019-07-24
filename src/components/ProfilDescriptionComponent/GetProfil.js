@@ -68,7 +68,7 @@ class GetProfil extends Component {
                     </div>
                     <div className="profil_column_2">
                       <div className="identity"><h2 className="name">{item.firstname} {item.lastname}</h2>
-                        <span className="span">|</span><p className="traveler_type">{item.type}</p></div>
+                        <span className="span">|</span><p className="traveler_type">{item.profil}</p></div>
                       <p className="localisation"><img src={Pin_On} alt="iconlocalisation" className="iconlocalisation" />{item.location}</p>
                       <p className="bio">{item.bio}</p>
                       <div className="icon_general">
@@ -95,7 +95,7 @@ class GetProfil extends Component {
                         <div className="iconculture"><div className="iconitemculture">
                           <img src={HistoireCultureCopy2} className="iconProfil" alt="iconculture" />
                         </div>
-                          <span className="texticonculture">Histoire <br />& Culture</span></div>
+                          <span className="texticonculture">Histoire <br/>& Culture</span></div>
                       </div>
                     </div>
                     <div className="profil_column_3">

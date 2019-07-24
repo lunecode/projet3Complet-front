@@ -34,10 +34,10 @@ class Notifications extends Component {
   changeHandler = (e) => {
     this.setState({ [e.target.name]: e.target.value })
   }
- 
+
   //Enum Preference_language
   language_Preference_FR = () => {
-    this.setState({ preference_language: 1})
+    this.setState({ preference_language: 1 })
   }
   language_Preference_EN = () => {
     this.setState({ preference_language: 2 })
@@ -55,7 +55,7 @@ class Notifications extends Component {
             language_Preference_FR={this.language_Preference_FR}
             language_Preference_EN={this.language_Preference_EN}
           />
-      
+
         </form>
       </div>
     )

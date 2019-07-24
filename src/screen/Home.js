@@ -9,15 +9,15 @@ import TitleHomeNavbar from '../components/NavbarFooterModal/TitleHomeNavbar';
 
 
 class Home extends Component {
-    render() {
-        return (
-            <>
-                <TitleHomeNavbar />
-                <Getnextdestination />
-                <HomeComponents />
-            </>
-        )
-    }
+  render() {
+    return (
+      <>
+        <TitleHomeNavbar />
+        <Getnextdestination />
+        <HomeComponents />
+      </>
+    )
+  }
 }
 
 export default Home;
