@@ -7,15 +7,9 @@ import UploadImgProfil from '../../components/ProfilComponents/UploadImgProfil.j
 
 const PostProfilInfo = (props) => {
 
+
   return (
     <div className="bloc-page-profil">
-      <div className="membres-profil">
-        <img src="https://images.pexels.com/photos/814499/pexels-photo-814499.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500" alt="pictures profil" />
-        <div className="membres-profil-detail">
-          <h4>Julien Mbappé</h4>
-          <p>Membre depuis le 20/02/2019</p>
-        </div>
-      </div>
       <div className='position-bloc'>
         <div className='profil-menu'>
           <ul>
@@ -29,8 +23,6 @@ const PostProfilInfo = (props) => {
             <li>
               <NavLink to='/Video'>Video</NavLink>
             </li>
-
-
 
             <li>
               <NavLink
@@ -61,7 +53,10 @@ const PostProfilInfo = (props) => {
             <h2>Profil</h2>
             <div className='field-profil-picture-bloc'>
 
-              <UploadImgProfil {...props} />
+              <input type="text" className="input_picture_profil" name="profile_picture" value={props.profile_picture} onChange={props.changeHandler} />
+              <div className="position_avatar_profil">
+              <UploadImgProfil  />
+              </div>
             </div>
           </div>
           <div className="profil-bloc-2">
@@ -93,7 +88,7 @@ const PostProfilInfo = (props) => {
             </div>
             <div>
               <label htmlFor="birth_date">Date de naissance</label>
-              <input  type="date" min="1990-01-01" max="2050-01-01" name="birth_date" value={props.birth_date} onChange={props.changeHandler}  />
+              <input type="date" min="1990-01-01" max="2050-01-01" name="birth_date" value={props.birth_date} onChange={props.changeHandler} />
               {/* <input type="text" name="birth_date" value={props.birth_date} onChange={props.changeHandler} placeholder='1997/02/02' className='field-profil-bloc-3' /> */}
             </div>
             <div>

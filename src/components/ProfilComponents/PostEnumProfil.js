@@ -9,6 +9,7 @@ import Idea from "../../Images-tripitto/Icon/Idea.png"
 
 const PostEnumProfil = (props) => {
 
+
     return (
         <div className="Profil_inscription">
             <div className="Titre">
@@ -17,10 +18,7 @@ const PostEnumProfil = (props) => {
                 <h4>Vous êtes plutôt</h4>
             </div>
 
-            <form className="Profil_Pictures" type="hidden" 
-            name="profil" 
-              onSubmit={props.submitHandler} 
-               value={props.profil} 
+    <form className="Profil_Pictures" type="hidden" name="profil"  onSubmit={props.submitHandler} value={props.profil} 
                onChange={props.changeHandler}>
 
                 <div className="Profil_picture1">

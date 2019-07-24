@@ -6,6 +6,7 @@ import PostEnumProfil from '../components/ProfilComponents/PostEnumProfil';
 import PostBioProfil from '../components/ProfilComponents/PostBioProfil';
 import PostIngedients from '../components/ProfilComponents/PostIngedients';
 import Socialprofil from '../components/ProfilComponents/Socialprofil';
+import UserLastnameFirstname from '../components/ProfilComponents/UserLastnameFirstname';
 
 import "./Profil.scss"
 import "../components/ProfilComponents/PostProfilInfo.css"
@@ -17,26 +18,9 @@ class Profil extends Component {
   }
 
 
-  //  submitHandler = e => {
-  //     e.preventDefault()
-  //     const token = localStorage.getItem('token')
-  //     const tokenDecoded = jwt.decode(token)
-  //     const idProfilDcoded = tokenDecoded.id_profil
-  //     console.log(idProfilDecoded)
-  //     axios.get(`http://localhost:3000/profil/get_profil/${idProfilDecoded}`, this.state)
-  //       .then(response => {
-  //         console.log(response)
-  //       })
-  //       .then(
-  //         // //Pour que  button submit renvoie vers la page ProfilDescription
-  //         // this.props.history.push("/ProfilDescription"),
-  //         // //permet de rafraichir la page pour afficher le Get
-  //         // window.location.reload(true)
-  //       )
-  //       .catch(error => {
-  //         console.log(error)
-  //       })
-  //   }
+
+
+
   submitHandler = e => {
     e.preventDefault()
     //Permet de récupérer l'id de l'utilisateur connecté
@@ -51,13 +35,16 @@ class Profil extends Component {
       .then(
         //Pour que  button submit renvoie vers la page ProfilDescription
         this.props.history.push("/ProfilDescription"),
-        //permet de rafraichir la page pour afficher le Get
         window.location.reload(true)
       )
       .catch(error => {
         console.log(error)
       })
   }
+
+
+
+
 
 
   handleCheckbox = (e) => {
@@ -94,6 +81,7 @@ class Profil extends Component {
   profil5 = () => {
     this.setState({ profil: 5 })
   }
+
 
   //les Enumes ingredients//
   Enum1 = () => {
@@ -167,12 +155,16 @@ class Profil extends Component {
   render() {
     return (
       <div className="pageprofil" >
+
+        <UserLastnameFirstname />
+
+        
         <form onSubmit={this.submitHandler}>
           <PostProfilInfo
             {...this.state}
+            getNameUser={this.getNameUser}
             handleCheckbox={this.handleCheckbox}
             changeHandler={this.changeHandler}
-            handelchange={this.handelchange}
 
           />
 
