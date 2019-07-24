@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import { NavLink } from 'react-router-dom';
 import "./GetFollower.scss"
-
-// image
-
 import iconSearch from '../../Images-tripitto/Icon/TRAILING ICON.png'
 import iconPlus from '../../Images-tripitto/Icon/Plus.png'
 import iconArrow from '../../Images-tripitto/iconAbonnements/icon-arrow.png'
@@ -14,15 +11,15 @@ class GetFollower extends Component {
         Follower: [],
         visible: 6,
     };
-    loadMore=() =>{
+    loadMore = () => {
         this.setState((prev) => {
-          return {visible: prev.visible + 4};
+            return { visible: prev.visible + 4 };
         });
-      }
+    }
     getFollower = async () => {
         const res = await axios.get('http://localhost:3000/follower/get_follower')
         this.setState({ Follower: res.data })
-        console.log(this.state.Follower)
+
     }
     componentDidMount() {
         this.getFollower()
@@ -31,7 +28,6 @@ class GetFollower extends Component {
     render() {
         return (
             <>
-           
                 <div className="bloc-page-profil">
                     <div className="membres-profil">
                         <img src="https://i.ytimg.com/vi/BfCwN4iy6T8/maxresdefault.jpg" alt="pictures profil" />
@@ -42,7 +38,7 @@ class GetFollower extends Component {
                     </div>
                     <div className='position-bloc'>
                         <div className='profil-menu'>
-                            <ul> 
+                            <ul>
                                 <li>
                                     <NavLink
                                         className="nav"
@@ -92,7 +88,7 @@ class GetFollower extends Component {
                                     </div>
                                 </div>
                                 <div className="bloc-follower">
-                                    {this.state.Follower.slice(0,this.state.visible).map(item => (
+                                    {this.state.Follower.slice(0, this.state.visible).map(item => (
                                         <div className="bloc-follower-item">
                                             <div className="bloc-follower-info">
                                                 <div key={item.id_follower}>
@@ -115,9 +111,9 @@ class GetFollower extends Component {
 
                                 </div>
                                 <div className='bloc-plus'>
-                                {this.state.visible < this.state.Follower.length &&
-             <button onClick={this.loadMore} type="button" className="load-more"><img src={iconPlus} alt='icon Plus' /></button>
-          }
+                                    {this.state.visible < this.state.Follower.length &&
+                                        <button onClick={this.loadMore} type="button" className="load-more"><img src={iconPlus} alt='icon Plus' /></button>
+                                    }
                                 </div>
                             </div>
                         </form>

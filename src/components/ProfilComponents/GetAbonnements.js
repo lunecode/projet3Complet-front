@@ -23,7 +23,6 @@ class GetAbonnements extends Component {
     getFollowing = async () => {
         const res = await axios.get('http://localhost:3000/following/get_following')
         this.setState({ Following: res.data })
-        console.log(this.state.Following)
     }
     componentDidMount() {
         this.getFollowing()

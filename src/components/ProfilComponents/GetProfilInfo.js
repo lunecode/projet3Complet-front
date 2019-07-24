@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 
-
-// Permet l'affichage des données pour un test de la table " Profil "
-
 class GetProfilInfo extends Component {
   state = {
     profil: [],
@@ -23,18 +20,16 @@ class GetProfilInfo extends Component {
       <>
         {this.state.profil.map(item => (
           <li key={item.id_profil}>
-          {item.profile_picture}
-          {item.pseudo}
-          {item.identiy}
-          {item.location}
-          {item.profil_link}
-          {item.birth_date}
-          {item.nb_countries_visited}
-          
-        </li>
+            {item.profile_picture}
+            {item.pseudo}
+            {item.identiy}
+            {item.location}
+            {item.profil_link}
+            {item.birth_date}
+            {item.nb_countries_visited}
+
+          </li>
         ))}
-
-
       </>
     )
   }

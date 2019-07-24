@@ -2,32 +2,31 @@ import React from 'react'
 import './PostSecurityProfil.css'
 import { NavLink } from 'react-router-dom'
 import SecurityUpdateModal from './SecurityUpdateModal';
-import DeleteCompteSecurityModal from'./DeleteCompteSecurityModal'
+import DeleteCompteSecurityModal from './DeleteCompteSecurityModal'
 import ModalSaveSecurity from './ModalSaveSecurity';
 
 class PostSecurityProfil extends React.Component {
-    state={
-      isModalSecurityOpen:false,
-    }
-  
-openModalSecurity =() => {
-  this.setState( { isModalSecurityOpen: true} )
+  state = {
+    isModalSecurityOpen: false,
+  }
+
+  openModalSecurity = () => {
+    this.setState({ isModalSecurityOpen: true })
 
   }
 
   closeModalSecurity = () => {
-      this.setState({ isModalSecurityOpen: false })
-      // console.log(this.state.isModalOpen);
+    this.setState({ isModalSecurityOpen: false })
   }
 
   componentDidMount() {
-      this.openModalSecurity()
-      this.closeModalSecurity()
+    this.openModalSecurity()
+    this.closeModalSecurity()
   }
 
   render() {
 
-    const { isModalSecurityOpen} = this.state
+    const { isModalSecurityOpen } = this.state
     return (
       <div className="bloc-page-profil">
         <div className="membres-profil">
@@ -39,37 +38,37 @@ openModalSecurity =() => {
         </div>
         <div className='position-bloc'>
           <div className='profil-menu'>
-          <ul>
-            <li>
-              <NavLink
-                className="nav"
-                to="/Profil" exact>Profil</NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/Video" exact >Video</NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/Abonnements" exact >Abonnements</NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/Abonnés" exact >Abonnés</NavLink>
-               </li>
-               <li>
-              <NavLink
-                to="/Notifications" exact >Notifications</NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/Security" exact >Sécurité</NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/Mettre_à_niveau" exact >Mettre à niveau</NavLink>
-            </li>
-          </ul>
+            <ul>
+              <li>
+                <NavLink
+                  className="nav"
+                  to="/Profil" exact>Profil</NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/Video" exact >Video</NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/Abonnements" exact >Abonnements</NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/Abonnés" exact >Abonnés</NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/Notifications" exact >Notifications</NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/Security" exact >Sécurité</NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/Mettre_à_niveau" exact >Mettre à niveau</NavLink>
+              </li>
+            </ul>
           </div>
           <form className="grid-security-info">
             <div className="bloc-security">
@@ -80,7 +79,7 @@ openModalSecurity =() => {
                 <button type="button" onClick={this.openModalSecurity} className="btn-security-modify">Modifier</button>
               </div>
               <div className="container-security-modal">
-              <SecurityUpdateModal isOpen={isModalSecurityOpen} onClose={this.closeModalSecurity} />
+                <SecurityUpdateModal isOpen={isModalSecurityOpen} onClose={this.closeModalSecurity} />
               </div>
               <div className="bloc-mdp">
                 <p>Mettre à jour votre mot de passe</p>
@@ -116,10 +115,10 @@ openModalSecurity =() => {
             </label>
           </div>
           <div className="off-account">
-          <DeleteCompteSecurityModal />
+            <DeleteCompteSecurityModal />
             {/* <button onClick={this.openModalSecurity}> DESACTIVER MON COMPTE TEMPORAIREMENT</button> */}
           </div>
-      
+
           <p className="account-finally">Pour supprimer définitivement  votre compte et les données associés, <u>contactez-nous</u></p>
         </div>
       </div>

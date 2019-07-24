@@ -28,8 +28,6 @@ class VideoProfil extends Component {
 		const idProfil = idProfilDecod.id_profil
 		const res = await axios.get(`http://localhost:3000/general_video/get_general_video_travel_information/${idProfil}`)
 		this.setState({ videoByProfil: res.data })
-		// this.setState({ id_general_video: res.data })
-		console.log(this.state.videoByProfil)
 	}
 
 
@@ -39,15 +37,11 @@ class VideoProfil extends Component {
 
 
 	submitHandler = (id) => {
-		// e.preventDefault()
-		// console.log('test')
 		axios.delete(`http://localhost:3000/general_video/delete_general_video/${id}`)
 			.then(response => {
-				console.log(response)
 				window.location.reload(true);
 			})
 			.catch(error => {
-				console.log(error)
 			})
 	}
 

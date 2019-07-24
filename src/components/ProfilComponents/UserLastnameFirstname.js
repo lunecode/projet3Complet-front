@@ -15,7 +15,7 @@ class UserLastnameFirstname extends Component {
     const idProfil = idProfilDecod.id_profil
     const res = await axios.get(`http://localhost:3000/profil/get_video_for_profil_decription/${idProfil}`)
     this.setState({ profil_name: res.data })
-    console.log("hihiii", this.state.profil_name)
+
   }
 
   componentDidMount() {

@@ -10,32 +10,29 @@ class SecurityUpdateModal extends React.Component {
 
     openModalSecurity = () => {
         this.setState({ isModalSecurityOpen: true })
-        console.log(this.state.isModalSecurityOpen);
-        return
 
     }
 
     closeModalSecurity = () => {
         this.setState({ isModalSecurityOpen: false })
-        // console.log(this.state.isModalOpen);
+
     }
 
     componentDidMount() {
         this.openModalSecurity()
         this.closeModalSecurity()
-       
+
     }
     handleSubmit = (e) => {
         e.preventDefault()
-
         axios.post('http://localhost:3000/profil/update_profil/:id', {
             email: e.target.email.value,
             password: e.target.password.value
         })
             .then(res => {
-                console.log(res)
+
                 localStorage.setItem('token', res.headers["x-access-token"])
-                console.log('token', localStorage.getItem('token'))
+
             })
     }
 
@@ -53,7 +50,7 @@ class SecurityUpdateModal extends React.Component {
 
                     </div>
                     <div className="containerIs-open-security">
-                     
+
                         <div className="label-modal-security">
                             <label className="label-modal-email" htmlFor="email">Nouvelle adresse email</label>
                             <input type="email" name="email" placeholder="amoureuxduvoyage@video.com" value={this.state.email}></input>

@@ -5,7 +5,6 @@ import Delete from '../../Images-tripitto/Icon_Vidéo/Delete.png'
 
 
 const ModalDeleteVideo = (props) => {
-  console.log(props)
 
   return (
     <div>
@@ -16,16 +15,15 @@ const ModalDeleteVideo = (props) => {
         <div className="Modal_delete_video">
           <div className={props.isModalSecurityOpen ? 'affichage-block' : 'display-none'} >
             <div className="alerte_info">Etes-vous sûre de vouloir supprimer votre vidéo ?
-      </div>
+        </div>
             <p className="description_alerte">Votre vidéo et tous les bons plans partagés seront
             définitivement supprimées. Confirmer la suppresion en renseignant votre mot de passe.
-        </p>
+         </p>
 
             <input placeholder="Mot de passe" type="password" />
             <div className="buttons_confirmer_annuler">
               <div className="button_confirmer" onClick={props.closeModalSecurity}><button >ANNULER</button></div>
               <div className="button_annuler" onClick={props.submitIdVideoDelete} >CONFIRMER</div>
-              {/* <div className="button_annuler" submitIdVideoDelete={() => props.submitHandler(item.id_general_video)} ><button >CONFIRMER</button> </div> */}
             </div>
           </div>
         </div>

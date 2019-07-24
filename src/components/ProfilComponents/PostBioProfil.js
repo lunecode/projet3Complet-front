@@ -4,7 +4,7 @@ import "./PostBioProfil.scss"
 const PostBioProfil =(props)=>{
     return (
       <div className="PostBioProfil">
-        <form >
+        <form>
         <div className="Bio">
           <h3>Bio </h3>
             <textarea type='text' name="bio" value={props.bio} onChange={props.changeHandler}

@@ -3,8 +3,6 @@ import axios from 'axios';
 import './GetProfil.css';
 import { NavLink } from 'react-router-dom';
 
-//Import ingredients pictures
-
 import Selected from "../../Images-tripitto/Icon/Ingredients/Aventurier/Selected.png"
 import MontagneCopy2 from "../../Images-tripitto/Icon/Ingredients/MontagneCopy2.png"
 import FestivalCopy2 from "../../Images-tripitto/Icon/Ingredients/FestivalCopy2.png"
@@ -12,14 +10,13 @@ import EcotourismeCopy2 from "../../Images-tripitto/Icon/Ingredients/Ecotourisme
 import HistoireCultureCopy2 from "../../Images-tripitto/Icon/Ingredients/HistoireCultureCopy2.png"
 import jwt from 'jsonwebtoken'
 
-// Import pictures
+
 import Pin_On from "../../Images-tripitto/Icon/Pin_ON.png"
 import fb from "../../Images-tripitto/Icon/social/fb.png"
 import insta from "../../Images-tripitto/Icon/social/insta.png"
 import youtube from "../../Images-tripitto/Icon/social/youtube.png"
 import link from "../../Images-tripitto/Icon/social/link.png"
 
-// Allow to display data from " profil " table
 
 class GetProfil extends Component {
   state = {
@@ -29,8 +26,8 @@ class GetProfil extends Component {
 
   getProfil = async () => {
     const token = localStorage.getItem('token')
-		const idProfilDecod = jwt.decode(token)
-		const idProfil = idProfilDecod.id_profil
+    const idProfilDecod = jwt.decode(token)
+    const idProfil = idProfilDecod.id_profil
     const res = await axios.get(`http://localhost:3000/profil/get_video_for_profil_decription/${idProfil}`)
     this.setState({ profil: res.data })
     console.log(this.state.profil)
@@ -95,7 +92,7 @@ class GetProfil extends Component {
                         <div className="iconculture"><div className="iconitemculture">
                           <img src={HistoireCultureCopy2} className="iconProfil" alt="iconculture" />
                         </div>
-                          <span className="texticonculture">Histoire <br/>& Culture</span></div>
+                          <span className="texticonculture">Histoire <br />& Culture</span></div>
                       </div>
                     </div>
                     <div className="profil_column_3">

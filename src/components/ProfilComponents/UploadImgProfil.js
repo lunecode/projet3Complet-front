@@ -13,7 +13,6 @@ class UploadImgProfil extends Component {
     const idProfil = idProfilDecod.id_profil
     const res = await axios.get(`http://localhost:3000/profil/get_video_for_profil_decription/${idProfil}`)
     this.setState({ image: res.data })
-    console.log("hihiii", this.state.image)
   }
 
   componentDidMount() {
@@ -26,7 +25,7 @@ class UploadImgProfil extends Component {
       <>
         {this.state.image.map(item => (
           <div>
-            <img src={item.profile_picture} alt="pictures profil"  width="100%" height="100%" />
+            <img src={item.profile_picture} alt="pictures profil" width="100%" height="100%" />
           </div>
         ))}
       </>

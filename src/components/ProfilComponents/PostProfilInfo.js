@@ -6,8 +6,6 @@ import UploadImgProfil from '../../components/ProfilComponents/UploadImgProfil.j
 
 
 const PostProfilInfo = (props) => {
-
-
   return (
     <div className="bloc-page-profil">
       <div className='position-bloc'>
@@ -18,7 +16,6 @@ const PostProfilInfo = (props) => {
                 className="nav"
                 to="/Profil" exact>Profil</NavLink>
             </li>
-
 
             <li>
               <NavLink to='/Video'>Video</NavLink>
@@ -55,7 +52,7 @@ const PostProfilInfo = (props) => {
 
               <input type="text" className="input_picture_profil" name="profile_picture" value={props.profile_picture} onChange={props.changeHandler} />
               <div className="position_avatar_profil">
-              <UploadImgProfil  />
+                <UploadImgProfil />
               </div>
             </div>
           </div>

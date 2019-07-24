@@ -27,40 +27,36 @@ class VideoProfil extends Component {
 
 
 	getVideoById = async () => {
-		// e.preventDefault()
 		const token = localStorage.getItem('token')
 		const idProfilDecod = jwt.decode(token)
 		const id = idProfilDecod.id_profil
 		const res = await axios.get(`http://localhost:3000/general_video/get_video_id_profil/${id}`)
-		this.setState({ videoByProfil: res.data})
-		console.log(this.state.videoByProfil)
-		// console.log(res.data)
-  }
+		this.setState({ videoByProfil: res.data })
+	}
 
 
 
 	componentDidMount = () => {
 		this.getVideoById()
 		this.openModalSecurity()
-		this.closeModalSecurity()	
+		this.closeModalSecurity()
 	}
 
 	openModalSecurity = () => {
 		this.setState({ isModalSecurityOpen: true })
-		// console.log(this.state.isModalSecurityOpen);
+
 	}
 	closeModalSecurity = () => {
 		this.setState({ isModalSecurityOpen: false })
-		// console.log(this.state.isModalOpen);
+
 	}
 
 	componentDidUpdate() {
 		console.log(this.state.isModalSecurityOpen);
-		
+
 	}
 
 	render() {
-
 		return (
 			<div className="VideoProfilCompnent">
 
@@ -125,14 +121,14 @@ class VideoProfil extends Component {
 							<div className='search-bar-following'>
 								<button type='submit'><img src={iconSearch} alt='icon search' /></button>
 								<input type="text" placeholder="Retrouver un abonné" />
-								{/* <input type="text" name="" value="" placeholder="Retrouver un abonné" /> */}
+
 							</div>
 						</div>
 					</div>
 				</div>
 
 
-	
+
 
 
 				<div className="bloc_2_video">
@@ -151,7 +147,7 @@ class VideoProfil extends Component {
 
 								<div className="imagescreen">
 									<img src={img1} alt="" />
-									</div>
+								</div>
 								<div className="countery">
 									<h3> Dans les profondeur du canyon</h3>
 									<p className="countery_p">USA</p>
@@ -338,7 +334,7 @@ class VideoProfil extends Component {
 					</div>
 
 
-			{/* /bloc video 4*/}
+					{/* /bloc video 4*/}
 					<div className="list_videos">
 						<div>
 							<div className="video_user1">
