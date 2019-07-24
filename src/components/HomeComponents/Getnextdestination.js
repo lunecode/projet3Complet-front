@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import axios from 'axios'
 import './Getnextdestination.scss';
 import leftarrow from '../../pictures/arrow_left.png'
@@ -20,14 +19,14 @@ class Getnextdestination extends Component {
   getnumbertips = async () => {
     const res = await axios.get('http://localhost:3000/general_video/get_general_video_nextdestination_tauxderemplissage')
     this.setState({ numbertips: res.data })
-    // console.log(this.state.numbertips)
+  
   }
   getnextvideo = async () => {
     const res = await axios.get('http://localhost:3000/travel_information/get_travelinformation_general_video')
     const Nextdestination = res.data
-    // console.log(Nextdestination)
+   
     this.setState({ nextpicture: Nextdestination })
-    // console.log(this.state.nextpicture)
+
   }
   getnextvideolimit = () => {
     this.setState({ offset: this.state.offset + 1 }, async () => {
