@@ -1,0 +1,68 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("../../fonts/roboto/Roboto-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.container_travel{
+    background-color:#313F4F;
+    width: 75%;
+    padding-top: 1%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container_travel img{
+    height:100%;
+}
+
+.travel{
+    width:90%;
+    margin: 0 auto;
+    padding-bottom: 5%;
+    font-size: 15px;
+}
+
+.countryName1{
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+    margin-right: 3%;
+    
+}
+
+.month1 {
+    
+    font-size: 20px;
+    }
+
+.year1{
+    font-size: 20px;
+
+}
+
+.duration1{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.accomodation1{
+    color: white;
+
+}
+
+.travelAlone, .currency{
+    margin-right: 3%;
+}
+
+.house, .mug{
+    margin-left: 3%;
+    margin-right: 2%;
+
+}
+
+.budget{
+    
+    font-size: 12px;
+}

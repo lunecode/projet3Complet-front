@@ -1,0 +1,18 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("../../fonts/roboto/Roboto-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}   
+
+.container_put{
+    background-color: #F4F4F4;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 2%;
+
+}
+
+.comment_put{
+    width:75%;
+    margin-left: 5%;
+}

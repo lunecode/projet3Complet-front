@@ -1,0 +1,174 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("../../fonts/roboto/Roboto-Medium.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.container_video {
+
+    font-family: 'Roboto', sans-serif;
+    background-color: #F4F4F4;
+}
+
+.title_video {
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    color: #2C404D;
+    font-weight: bold;
+    margin-top: 3%;
+
+}
+
+.video_user {
+    text-align: center;
+    margin: 0 auto;
+    background-color: #232323;
+
+}
+
+.text {
+    width: 54%;
+}
+
+.video_info {
+    margin-top: 1%;
+    width: 90%;
+    margin: 0 auto;
+    font-family: 'Lora', serif;
+}
+
+.loading {
+    font-size: 12px;
+    color: gray;
+}
+
+.equip_link {
+    color: black;
+    margin-left: 1%;
+    margin-bottom: 6%;
+
+}
+
+.status {
+    color: #f4b642;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+.text {
+    font-size: 13px;
+    color: black;
+}
+
+.pictureUser {
+
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    display: inline-block;
+    position: relative;
+    width: 90px;
+    height: 90px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.play,
+.share {
+    width: 25px;
+
+}
+
+.likeComment {
+    float: right;
+
+}
+
+.nameUser {
+    padding-top: 4%;
+    display: flex;
+    padding-left: 2%;
+
+}
+
+.username {
+    margin-top: 2%;
+    font-weight: 500;
+    color: #26434E;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+ 
+}
+
+.suscribe {
+    background-color: #39C3D8;
+    color: white;
+    border: 1px solid #39C3D8;
+    padding: 4%;
+    width: 18vw;
+
+}
+
+.userVideo {
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 2%;
+
+}
+
+.container_suscribe {
+
+
+    padding-left: 1%;
+    padding-bottom: 1%;
+}
+
+
+.suscribe:hover {
+    background-color: white;
+    color: #39C3D8;
+    border: 1px solid #39C3D8;
+
+}
+
+.buttonCommentVideo {
+    background-color: white;
+    width: 150px;
+    padding: 5%;
+    text-align: center;
+    color: #59cce0;
+    font-size: 15px;
+    border: 1px solid #59cce0;
+    margin-left: 5%;
+}
+
+.buttonCommentVideo:hover {
+    background-color: #59cce0;
+    width: 150px;
+    padding: 5%;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    border: 1px solid #59cce0;
+}
+
+.title_video {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.cont_video {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pop2 {
+    padding-top: 6%;
+}
+
+.autoplay {
+    display: flex;
+    justify-content: flex-end;
+}
