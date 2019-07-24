@@ -38,6 +38,7 @@ class VideoProfil extends Component {
 		axios.delete(`http://localhost:3000/general_video/delete_general_video/${id}`)
 			.then(response => {
 				window.location.reload(true);
+				console.log(response)
 			})
 			.catch(error => {
 			})
@@ -62,7 +63,6 @@ class VideoProfil extends Component {
 		// console.log(this.state.isModalSecurityOpen);
 	}
 	render() {
-
 		return (
 			<div className="VideoProfilCompnent">
 				<div className="membres-profil">
@@ -164,8 +164,6 @@ class VideoProfil extends Component {
 										<img className="img1" src={modification} alt="modification" />
 										<img className="img2" src={Partager} alt="Partager" />
 										<ModalHidevideo />
-
-
 										<ModalDeleteVideo
 											{...this.state}
 											openModalSecurity={this.openModalSecurity}
