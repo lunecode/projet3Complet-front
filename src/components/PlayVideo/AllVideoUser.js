@@ -21,8 +21,6 @@ class AllVideoUser extends Component {
 
     let i = 1;
 
-
-
     const opts = {
       height: '150',
       width: '150',
@@ -33,7 +31,6 @@ class AllVideoUser extends Component {
 
     const url = window.location.href;
     const idVidUser = url.slice(32)
-
 
     return (
       <>
@@ -52,7 +49,6 @@ class AllVideoUser extends Component {
               </div>
             </div>
           ))}
-
       </>
     )
   }

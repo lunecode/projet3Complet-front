@@ -60,8 +60,6 @@
   width: 5vw;
 }
 .uploadVideoCardStep img {
-  /* border:1px solid rgb(219, 86, 86); */
-  /* box-shadow: 1px 5px 5px 5px #d8d8d8; */
   box-shadow: 10px 5px 5px grey;
 }
 
