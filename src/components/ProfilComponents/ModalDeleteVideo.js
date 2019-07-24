@@ -17,8 +17,7 @@ const ModalDeleteVideo = (props) => {
             <div className="alerte_info">Etes-vous sûre de vouloir supprimer votre vidéo ?
         </div>
             <p className="description_alerte">Votre vidéo et tous les bons plans partagés seront
-            définitivement supprimées. Confirmer la suppresion en renseignant votre mot de passe.
-         </p>
+            définitivement supprimées. Confirmer la suppresion en renseignant votre mot de passe.</p>
 
             <input placeholder="Mot de passe" type="password" />
             <div className="buttons_confirmer_annuler">

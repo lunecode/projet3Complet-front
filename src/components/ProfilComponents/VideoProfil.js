@@ -20,8 +20,6 @@ class VideoProfil extends Component {
 	}
 
 
-
-
 	getVideoById = async () => {
 		const token = localStorage.getItem('token')
 		const idProfilDecod = jwt.decode(token)
@@ -173,8 +171,6 @@ class VideoProfil extends Component {
 											openModalSecurity={this.openModalSecurity}
 											closeModalSecurity={this.closeModalSecurity}
 											submitIdVideoDelete={() => this.submitHandler(item.id_general_video)} />
-
-										{/* <button onClick={() => this.submitHandler(item.id_general_video)}><img src={Delete}></img></button> */}
 
 									</div>
 								</div>
