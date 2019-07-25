@@ -21,10 +21,14 @@ class VideoProfil extends Component {
 
 
 	getVideoById = async () => {
+		let pathApi = process.env.REACT_APP_PATH_API_DEV + '/general_video/get_general_video_travel_information'
+		if (process.env.NODE_ENV === 'production') {
+			pathApi = process.env.REACT_APP_PATH_API_PROD + '/general_video/get_general_video_travel_information'
+		}
 		const token = localStorage.getItem('token')
 		const idProfilDecod = jwt.decode(token)
 		const idProfil = idProfilDecod.id_profil
-		const res = await axios.get(`http://localhost:3000/general_video/get_general_video_travel_information/${idProfil}`)
+		const res = await axios.get(`${pathApi}/${idProfil}`)
 		this.setState({ videoByProfil: res.data })
 	}
 
@@ -35,7 +39,11 @@ class VideoProfil extends Component {
 
 
 	submitHandler = (id) => {
-		axios.delete(`http://localhost:3000/general_video/delete_general_video/${id}`)
+		let pathApi = process.env.REACT_APP_PATH_API_DEV + '/general_video/delete_general_video'
+		if (process.env.NODE_ENV === 'production') {
+			pathApi = process.env.REACT_APP_PATH_API_PROD + '/general_video/delete_general_video'
+		}
+		axios.delete(`${pathApi}/${id}`)
 			.then(response => {
 				window.location.reload(true);
 				console.log(response)

@@ -24,10 +24,15 @@ class VideoProfil extends Component {
 	}
 
 	getVideoById = async () => {
+		let pathApi = process.env.REACT_APP_PATH_API_DEV + '/general_video/get_video_id_profil'
+		if (process.env.NODE_ENV === 'production') {
+			pathApi = process.env.REACT_APP_PATH_API_PROD + '/general_video/get_video_id_profil'
+		}
+
 		const token = localStorage.getItem('token')
 		const idProfilDecod = jwt.decode(token)
 		const id = idProfilDecod.id_profil
-		const res = await axios.get(`http://localhost:3000/general_video/get_video_id_profil/${id}`)
+		const res = await axios.get(`${pathApi}/${id}`)
 		this.setState({ videoByProfil: res.data })
 	}
 

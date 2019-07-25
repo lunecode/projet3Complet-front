@@ -7,8 +7,12 @@ import UserLastnameFirstname from '../components/ProfilComponents/UserLastnameFi
 class Notifications extends Component {
   submitHandler = e => {
     e.preventDefault()
+    let pathApi = process.env.REACT_APP_PATH_API_DEV + '/notification/post_notification'
+    if (process.env.NODE_ENV === 'production') {
+      pathApi = process.env.REACT_APP_PATH_API_PROD + '/notification/post_notification'
+    }
     console.log(this.state)
-    axios.post('http://localhost:3000/notification/post_notification', this.state)
+    axios.post(pathApi, this.state)
       .then(response => {
         console.log(response)
       })

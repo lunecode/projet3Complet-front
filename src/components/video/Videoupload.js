@@ -16,8 +16,12 @@ class Videoupload extends Component {
 
   fileUploadHandler = (e) => {
     e.preventDefault()
+    let pathApi = process.env.REACT_APP_PATH_API_DEV + '/videoUpload/insertdatavideo'
+    if (process.env.NODE_ENV === 'production') {
+      pathApi = process.env.REACT_APP_PATH_API_PROD + '/videoUpload/insertdatavideo'
+  }
     console.log(this.state)
-    axios.post('http://localhost:3000/videoUpload/insertdatavideo', this.state)
+    axios.post(pathApi, this.state)
       .then(response => {
         // console.log(response)
       })
