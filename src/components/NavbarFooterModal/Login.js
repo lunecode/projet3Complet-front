@@ -38,6 +38,7 @@ class Login extends Component {
 				.then(res => {
 					localStorage.setItem('token', res.headers["x-access-token"])
 					const token = localStorage.getItem('token')
+					console.log(token)
 					if (token == null) {
 					} else {
 						axios({

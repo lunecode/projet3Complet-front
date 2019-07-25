@@ -38,8 +38,7 @@ const PostProfilInfo = (props) => {
                 to="/Security" exact >Sécurité</NavLink>
             </li>
             <li>
-              <NavLink
-                to="/Mettre_à_niveau" exact >Mettre à niveau</NavLink>
+              Mettre à niveau
             </li>
           </ul>
 
@@ -50,7 +49,7 @@ const PostProfilInfo = (props) => {
             <h2>Profil</h2>
             <div className='field-profil-picture-bloc'>
 
-              <input type="text" className="input_picture_profil" name="profile_picture" value={props.profile_picture} onChange={props.changeHandler} />
+              <input type="text" className="input_picture_profil" placeholder="Url de l'avatar" name="profile_picture" value={props.profile_picture} onChange={props.changeHandler} />
               <div className="position_avatar_profil">
                 <UploadImgProfil />
               </div>

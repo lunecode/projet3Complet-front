@@ -24,8 +24,8 @@ class UploadImgProfil extends Component {
     return (
       <>
         {this.state.image.map(item => (
-          <div>
-            <img src={item.profile_picture} alt="pictures profil" width="100%" height="100%" />
+          <div className="UploadVideo">
+            <img src={item.profile_picture} alt="pictures profil" width="100%" height="100%"  className="img-profil-after"/>
           </div>
         ))}
       </>

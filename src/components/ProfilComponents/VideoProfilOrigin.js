@@ -23,9 +23,6 @@ class VideoProfil extends Component {
 		videoByProfil: ''
 	}
 
-
-
-
 	getVideoById = async () => {
 		const token = localStorage.getItem('token')
 		const idProfilDecod = jwt.decode(token)
@@ -97,8 +94,7 @@ class VideoProfil extends Component {
 									to="/Security" exact >Sécurité</NavLink>
 							</li>
 							<li>
-								<NavLink
-									to="/Mettre_à_niveau" exact >Mettre à niveau</NavLink>
+								Mettre à niveau
 							</li>
 						</ul>
 					</div>

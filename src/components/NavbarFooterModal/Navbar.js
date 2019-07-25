@@ -185,7 +185,7 @@ class Navbar extends Component {
 								<li className='Nav_menu'><button className="button_video"><NavLink exact to="/">VIDÉOS</NavLink></button>
 									<ul className="ul_list">
 										<div className="container_list">
-											<li><a href=" " className='continent_name'>AFRIQUE</a>
+											<li><NavLink className="continent_name" exact to="/Afrique_video">AFRIQUE</NavLink>
 												{this.state.afrique.map(afrique => (
 													<div key={i++} className="container_list_afrique">
 														<p className="list_afrique">
@@ -193,8 +193,9 @@ class Navbar extends Component {
 													</div>
 												))}
 												<button className="button_countries">...</button>
+
 											</li>
-											<li><a href=" " className='continent_name'>ASIE-OCEANIE</a>
+											<li><NavLink className="continent_name" exact to="/Asie_video">ASIE-OCEANIE</NavLink>
 												{this.state.asieoceanie.map(asieoceanie => (
 													<div key={a++} className="container_list_asieoceanie">
 														<p className="list_asieoceanie">{asieoceanie.countries}</p>
@@ -203,7 +204,7 @@ class Navbar extends Component {
 												<button className="button_countries">...</button>
 											</li>
 
-											<li><a href=" " className='continent_name'>EUROPE</a>
+											<li><NavLink className="continent_name" exact to="/Europe_video">EUROPE</NavLink>
 												{this.state.europe.map(europe => (
 													<div key={e++} className="container_list_europe">
 														<p className="list_europe">{europe.countries}</p>
@@ -211,7 +212,7 @@ class Navbar extends Component {
 												))}
 												<button className="button_countries">...</button>
 											</li>
-											<li><a href=" " className='continent_name'>AMERIQUE</a>
+											<li><NavLink className="continent_name" exact to="/Amerique_video">AMERIQUE</NavLink>
 												{this.state.amerique.map(amerique => (
 													<div key={o++} className="container_list_amerique">
 														<p className="list_amerique">{amerique.countries}</p>
@@ -219,7 +220,7 @@ class Navbar extends Component {
 												))}
 												<button className="button_countries">...</button>
 											</li>
-											<li><a href=" " className='continent_name'>AUTRES</a>
+											<li><NavLink className="continent_name" exact to="/Autres_video">AUTRES</NavLink>
 												{this.state.autres.map(autres => (
 													<div className="container_list_autres">
 														<p className="list_autres">{autres.countries}</p>
@@ -227,14 +228,7 @@ class Navbar extends Component {
 												))}
 												<button className="button_countries">...</button>
 											</li>
-											<li><a href=" " className='continent_name'>AUTRES</a>
-												{this.state.autres.map(autres => (
-													<div className="container_list_autres">
-														<li><p className="list_autres">{autres.countries}</p></li>
-													</div>
-												))}
-												<button className="button_countries">...</button>
-											</li>
+
 										</div>
 									</ul>
 								</li>

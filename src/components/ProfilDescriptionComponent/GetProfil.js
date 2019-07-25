@@ -124,7 +124,7 @@ class GetProfil extends Component {
             ))}
           </div>
 
-          <div className="video">
+      <div className="video">
             <div>
               <div className="continents"><div className="itemcontinent">Tout</div ><div className="itemcontinent">Afrique</div><div className="itemcontinent">Océanie</div><div className="itemcontinent">Autre</div></div>
               <div className="filter">

@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
-import Video from '../components/PlayVideo/Video';
-import PopularityVideo from '../components/PlayVideo/PopularityVideo';
-import TravelInfo from '../components/PlayVideo/TravelInfo';
-import DetailledInfo from '../components/PlayVideo/DetailledInfo';
-import UserCommentGet from '../components/PlayVideo/UserCommentGet';
-import UserCommentPost from '../components/PlayVideo/UserCommentPost';
-import AllVideoUser from '../components/PlayVideo/AllVideoUser';
-import './Playvideo.css';
-
+import Video from '../../components/PlayVideo/Video';
+import PopularityVideo from '../../components/PlayVideo/PopularityVideo';
+import TravelInfo from '../../components/PlayVideo/TravelInfo';
+import DetailledInfo from '../../components/PlayVideo/DetailledInfo';
+import UserCommentGet from '../../components/PlayVideo/UserCommentGet';
+import UserCommentPost from '../../components/PlayVideo/UserCommentPost';
+import AllVideoUser from '../../components/PlayVideo/AllVideoUser';
+import './PlayVideo.css';
 
 
 class PlayVideo extends Component {

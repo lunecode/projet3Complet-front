@@ -7,35 +7,29 @@ import iconPlus from '../../Images-tripitto/Icon/Plus.png'
 import iconArrow from '../../Images-tripitto/iconAbonnements/icon-arrow.png'
 
 class GetFollower extends Component {
-    state = {
-        Follower: [],
-        visible: 6,
-    };
-    loadMore = () => {
-        this.setState((prev) => {
-            return { visible: prev.visible + 4 };
-        });
-    }
-    getFollower = async () => {
-        const res = await axios.get('http://localhost:3000/follower/get_follower')
-        this.setState({ Follower: res.data })
+  state = {
+    Follower: [],
+    visible: 6,
+  };
+  loadMore = () => {
+    this.setState((prev) => {
+      return { visible: prev.visible + 4 };
+    });
+  }
+  getFollower = async () => {
+    const res = await axios.get('http://localhost:3000/follower/get_follower')
+    this.setState({ Follower: res.data })
 
-    }
-    componentDidMount() {
-        this.getFollower()
-    }
+  }
+  componentDidMount() {
+    this.getFollower()
+  }
 
     render() {
         return (
             <>
                 <div className="bloc-page-profil">
-                    <div className="membres-profil">
-                        <img src="https://i.ytimg.com/vi/BfCwN4iy6T8/maxresdefault.jpg" alt="pictures profil" />
-                        <div className="membres-profil-detail">
-                            <h4>Julien Mbappé</h4>
-                            <p>Membre depuis le 20/02/2019</p>
-                        </div>
-                    </div>
+                  
                     <div className='position-bloc'>
                         <div className='profil-menu'>
                             <ul>
@@ -65,8 +59,7 @@ class GetFollower extends Component {
                                         to="/Security" exact >Sécurité</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink
-                                        to="/Mettre_à_niveau" exact >Mettre à niveau</NavLink>
+                                    Mettre à niveau
                                 </li>
                             </ul>
                         </div>
@@ -76,54 +69,54 @@ class GetFollower extends Component {
                                 <div className="search-following">
                                     <p className='tri-following'>Trier par
                                     <ul class='filter-menu'>
-                                            <li>Date d'abonnement</li>
-                                            <li>Nom</li>
-                                        </ul>
-                                    </p>
-                                    <button><img src={iconArrow} alt='icon fleche' width="20px" height="20px" /></button>
-                                    <div className='search-bar-following'>
-                                        <button type='submit'><img src={iconSearch} alt='icon search' /></button>
-                                        <input type="text" name="" value="" placeholder="Retrouver un abonné" />
+                      <li>Date d'abonnement</li>
+                      <li>Nom</li>
+                    </ul>
+                  </p>
+                  <button><img src={iconArrow} alt='icon fleche' width="20px" height="20px" /></button>
+                  <div className='search-bar-following'>
+                    <button type='submit'><img src={iconSearch} alt='icon search' /></button>
+                    <input type="text" name="" value="" placeholder="Retrouver un abonné" />
 
-                                    </div>
-                                </div>
-                                <div className="bloc-follower">
-                                    {this.state.Follower.slice(0, this.state.visible).map(item => (
-                                        <div className="bloc-follower-item">
-                                            <div className="bloc-follower-info">
-                                                <div key={item.id_follower}>
-                                                    <img src={item.follower_picture} alt='profilpicture 2' />
-                                                </div>
-                                                <div>
-                                                    <h3>{item.follower_user}</h3>
+                  </div>
+                </div>
+                <div className="bloc-follower">
+                  {this.state.Follower.slice(0, this.state.visible).map(item => (
+                    <div className="bloc-follower-item">
+                      <div className="bloc-follower-info">
+                        <div key={item.id_follower}>
+                          <img src={item.follower_picture} alt='profilpicture 2' />
+                        </div>
+                        <div>
+                          <h3>{item.follower_user}</h3>
 
-                                                    <div className="info_follower">
+                          <div className="info_follower">
 
-                                                        <p>{item.follower}</p>
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                </div>
-                                                <button>Abonné</button>
-                                            </div>
-                                        </div>
-                                    ))}
-
-                                </div>
-                                <div className='bloc-plus'>
-                                    {this.state.visible < this.state.Follower.length &&
-                                        <button onClick={this.loadMore} type="button" className="load-more"><img src={iconPlus} alt='icon Plus' /></button>
-                                    }
-                                </div>
-                            </div>
-                        </form>
-
+                            <p>{item.follower}</p>
+                          </div>
+                        </div>
+                        <div>
+                        </div>
+                        <button>Abonné</button>
+                      </div>
                     </div>
+                  ))}
 
                 </div>
-            </>
-        )
-    }
+                <div className='bloc-plus'>
+                  {this.state.visible < this.state.Follower.length &&
+                    <button onClick={this.loadMore} type="button" className="load-more"><img src={iconPlus} alt='icon Plus' /></button>
+                  }
+                </div>
+              </div>
+            </form>
+
+          </div>
+
+        </div>
+      </>
+    )
+  }
 }
 
 export default GetFollower;
