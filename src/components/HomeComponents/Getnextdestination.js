@@ -16,17 +16,26 @@ class Getnextdestination extends Component {
     offsetBestplan: 0
   };
 
+
+
   getnumbertips = async () => {
-    const res = await axios.get('http://localhost:3000/general_video/get_general_video_nextdestination_tauxderemplissage')
+    let pathApi = process.env.REACT_APP_PATH_API_DEV + '/general_video/get_general_video_nextdestination_tauxderemplissage'
+    if (process.env.NODE_ENV === 'production') {
+      pathApi = process.env.REACT_APP_PATH_API_PROD + '/general_video/get_general_video_nextdestination_tauxderemplissage'
+    }
+    const res = await axios.get(pathApi)
     this.setState({ numbertips: res.data })
   }
 
 
 
 
-
   getnextvideo = async () => {
-    const res = await axios.get('http://localhost:3000/travel_information/get_travelinformation_general_video')
+    let pathApi = process.env.REACT_APP_PATH_API_DEV + '/travel_information/get_travelinformation_general_video'
+    if (process.env.NODE_ENV === 'production') {
+      pathApi = process.env.REACT_APP_PATH_API_PROD + '/travel_information/get_travelinformation_general_video'
+    }
+    const res = await axios.get(pathApi)
     const Nextdestination = res.data
     this.setState({ nextpicture: Nextdestination })
   }
