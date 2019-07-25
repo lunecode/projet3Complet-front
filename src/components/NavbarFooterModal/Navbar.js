@@ -24,10 +24,14 @@ class Navbar extends Component {
 
 
 	protectedRoute = () => {
+		let pathApi = process.env.REACT_APP_PATH_API_DEV + '/login/protected'
+		if (process.env.NODE_ENV === 'production') {
+			pathApi = process.env.REACT_APP_PATH_API_PROD + '/login/protected'
+		}
 		const token = localStorage.getItem('token')
 		axios({
 			method: 'POST',
-			url: 'http://localhost:3000/login/protected',
+			url: pathApi,
 			headers: {
 				'Authorization': `Bearer ${token}`,
 			}
@@ -122,32 +126,57 @@ class Navbar extends Component {
 	}
 
 	getafrique = async () => {
-		const res = await axios.get('http://localhost:3000/travel_information/get_travelinformation_continent_afrique')
+		let pathApi = process.env.REACT_APP_PATH_API_DEV + '/travel_information/get_travelinformation_continent_afrique'
+		if (process.env.NODE_ENV === 'production') {
+			pathApi = process.env.REACT_APP_PATH_API_PROD + '/travel_information/get_travelinformation_continent_afrique'
+		}
+		const res = await axios.get(pathApi)
 		const africa = res.data
 		this.setState({ afrique: africa })
 	}
+
+
 	getasieoceanie = async () => {
-		const res = await axios.get('http://localhost:3000/travel_information/get_travelinformation_continent_asieoceanie')
+		let pathApi = process.env.REACT_APP_PATH_API_DEV + '/travel_information/get_travelinformation_continent_asieoceanie'
+		if (process.env.NODE_ENV === 'production') {
+			pathApi = process.env.REACT_APP_PATH_API_PROD + '/travel_information/get_travelinformation_continent_asieoceanie'
+		}
+		const res = await axios.get(pathApi)
 		const asiaoceania = res.data
 		this.setState({ asieoceanie: asiaoceania })
 	}
 
 	geteurope = async () => {
-		const res = await axios.get('http://localhost:3000/travel_information/get_travelinformation_continent_europe')
+		let pathApi = process.env.REACT_APP_PATH_API_DEV + '/travel_information/get_travelinformation_continent_europe'
+		if (process.env.NODE_ENV === 'production') {
+			pathApi = process.env.REACT_APP_PATH_API_PROD + '/travel_information/get_travelinformation_continent_europe'
+		}
+		const res = await axios.get(pathApi)
 		const europes = res.data
 		this.setState({ europe: europes })
 	}
 	getamerique = async () => {
-		const res = await axios.get('http://localhost:3000/travel_information/get_travelinformation_continent_amerique')
+		let pathApi = process.env.REACT_APP_PATH_API_DEV + '/travel_information/get_travelinformation_continent_amerique'
+		if (process.env.NODE_ENV === 'production') {
+			pathApi = process.env.REACT_APP_PATH_API_PROD + '/travel_information/get_travelinformation_continent_amerique'
+		}
+		const res = await axios.get(pathApi)
 		const america = res.data
 		this.setState({ amerique: america })
 	}
 
+
 	getautres = async () => {
-		const res = await axios.get('http://localhost:3000/travel_information/get_travelinformation_continent_autres')
+		let pathApi = process.env.REACT_APP_PATH_API_DEV + '/travel_information/get_travelinformation_continent_autres'
+		if (process.env.NODE_ENV === 'production') {
+			pathApi = process.env.REACT_APP_PATH_API_PROD + '/travel_information/get_travelinformation_continent_autres'
+		}
+	
+		const res = await axios.get(pathApi)
 		const other = res.data
 		this.setState({ autres: other })
 	}
+
 
 	componentDidMount() {
 		this.getafrique()

@@ -12,7 +12,11 @@ class TravelInfo extends Component {
   };
 
   getTravel = async () => {
-    const res = await axios.get('http://localhost:3000/travel_information/get_travelinformation')
+    let pathApi = process.env.REACT_APP_PATH_API_DEV + '/travel_information/get_travelinformation'
+    if (process.env.NODE_ENV === 'production') {
+      pathApi = process.env.REACT_APP_PATH_API_PROD + '/travel_information/get_travelinformation'
+    }
+    const res = await axios.get(pathApi)
     this.setState({ travel: res.data })
 
   }

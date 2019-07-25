@@ -11,63 +11,69 @@ class GetFollower extends Component {
     Follower: [],
     visible: 6,
   };
+
   loadMore = () => {
     this.setState((prev) => {
       return { visible: prev.visible + 4 };
     });
   }
-  getFollower = async () => {
-    const res = await axios.get('http://localhost:3000/follower/get_follower')
-    this.setState({ Follower: res.data })
 
+  getFollower = async () => {
+    let pathApi = process.env.REACT_APP_PATH_API_DEV + '/follower/get_follower'
+    if (process.env.NODE_ENV === 'production') {
+      pathApi = process.env.REACT_APP_PATH_API_PROD + '/follower/get_follower'
+    }
+    const res = await axios.get(pathApi)
+    this.setState({ Follower: res.data })
   }
+
   componentDidMount() {
     this.getFollower()
   }
 
-    render() {
-        return (
-            <>
-                <div className="bloc-page-profil">
-                  
-                    <div className='position-bloc'>
-                        <div className='profil-menu'>
-                            <ul>
-                                <li>
-                                    <NavLink
-                                        className="nav"
-                                        to="/Profil" exact>Profil</NavLink>
+  render() {
+    return (
+      <>
+        <div className="bloc-page-profil">
+
+          <div className='position-bloc'>
+            <div className='profil-menu'>
+              <ul>
+                <li>
+                  <NavLink
+                    className="nav"
+                    to="/Profil" exact>Profil</NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="/Video" exact >Video</NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="/Abonnements" exact >Abonnements</NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="/Abonnés" exact >Abonnés</NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="/Notifications" exact >Notifications</NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="/Security" exact >Sécurité</NavLink>
+                </li>
+                <li>
+                  Mettre à niveau
                                 </li>
-                                <li>
-                                    <NavLink
-                                        to="/Video" exact >Video</NavLink>
-                                </li>
-                                <li>
-                                    <NavLink
-                                        to="/Abonnements" exact >Abonnements</NavLink>
-                                </li>
-                                <li>
-                                    <NavLink
-                                        to="/Abonnés" exact >Abonnés</NavLink>
-                                </li>
-                                <li>
-                                    <NavLink
-                                        to="/Notifications" exact >Notifications</NavLink>
-                                </li>
-                                <li>
-                                    <NavLink
-                                        to="/Security" exact >Sécurité</NavLink>
-                                </li>
-                                <li>
-                                    Mettre à niveau
-                                </li>
-                            </ul>
-                        </div>
-                        <form className="following-block">
-                            <div>
-                                <h2>Abonnés (129)</h2>
-                                <div className="search-following">
-                                    <p className='tri-following'>Trier par
+              </ul>
+            </div>
+            <form className="following-block">
+              <div>
+                <h2>Abonnés (129)</h2>
+                <div className="search-following">
+                  <p className='tri-following'>Trier par
                                     <ul class='filter-menu'>
                       <li>Date d'abonnement</li>
                       <li>Nom</li>

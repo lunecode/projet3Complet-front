@@ -17,10 +17,14 @@ class UserCommentPut extends Component {
     this.setState({ [e.target.name]: e.target.value })
   }
 
+
   submitHandler = e => {
     e.preventDefault()
-    console.log(this.state)
-    axios.put(`http://localhost:3000/comment/put_comment/${this.state.id_comment}`, this.state)
+      let pathApi = process.env.REACT_APP_PATH_API_DEV + '/comment/put_comment'
+  if (process.env.NODE_ENV === 'production') {
+    pathApi = process.env.REACT_APP_PATH_API_PROD + '/comment/put_comment'
+  }
+    axios.put(`${pathApi}/${this.state.id_comment}`, this.state)
       .then(response => {
         console.log(response)
       })

@@ -19,44 +19,79 @@ class Display extends Component {
     offsetVideaste: 0
   };
 
+
+
   getRecentlyPublished = async () => {
-    const res = await axios.get(`http://localhost:3000/general_video/get_general_video_limite/${this.state.offset}`)
+    let pathApi = process.env.REACT_APP_PATH_API_DEV + '/general_video/get_general_video_limite'
+    if (process.env.NODE_ENV === 'production') {
+      pathApi = process.env.REACT_APP_PATH_API_PROD + '/general_video/get_general_video_limite'
+    }
+    const res = await axios.get(`${pathApi}/${this.state.offset}`)
     const recentlyPubVideo = res.data
     this.setState({ videos: recentlyPubVideo })
   }
 
+
+
   getRecentlyPublishedlimit = () => {
+    let pathApi = process.env.REACT_APP_PATH_API_DEV + '/general_video/get_general_video_limite'
+    if (process.env.NODE_ENV === 'production') {
+      pathApi = process.env.REACT_APP_PATH_API_PROD + '/general_video/get_general_video_limite'
+    }
+
     this.setState({ offset: this.state.offset + 5 }, async () => {
-      const res = await axios.get(`http://localhost:3000/general_video/get_general_video_limite/${this.state.offset}`)
+      const res = await axios.get(`${pathApi}/${this.state.offset}`)
       const recentlyPubVideo = res.data
       this.setState({ videos: recentlyPubVideo })
     })
   }
+
+
 
   getRecentlyPublishedlimitBack = () => {
+    let pathApi = process.env.REACT_APP_PATH_API_DEV + '/general_video/get_general_video_limite'
+    if (process.env.NODE_ENV === 'production') {
+      pathApi = process.env.REACT_APP_PATH_API_PROD + '/general_video/get_general_video_limite'
+    }
     this.setState({ offset: this.state.offset - 5 }, async () => {
-      const res = await axios.get(`http://localhost:3000/general_video/get_general_video_limite/${this.state.offset}`)
+      const res = await axios.get(`${pathApi}/${this.state.offset}`)
       const recentlyPubVideo = res.data
       this.setState({ videos: recentlyPubVideo })
     })
   }
 
+
+
   getVideastes = async () => {
-    const res = await axios.get(`http://localhost:3000/profil/get_profil_videaste_home/${this.state.offsetVideaste}`)
+    let pathApi = process.env.REACT_APP_PATH_API_DEV + '/profil/get_profil_videaste_home'
+    if (process.env.NODE_ENV === 'production') {
+      pathApi = process.env.REACT_APP_PATH_API_PROD + '/profil/get_profil_videaste_home'
+    }
+    const res = await axios.get(`${pathApi}/${this.state.offsetVideaste}`)
     this.setState({ videastes: res.data })
   }
 
+
+
   getVideasteLimit = () => {
+    let pathApi = process.env.REACT_APP_PATH_API_DEV + '/profil/get_profil_videaste_home'
+    if (process.env.NODE_ENV === 'production') {
+      pathApi = process.env.REACT_APP_PATH_API_PROD + '/profil/get_profil_videaste_home'
+    }
     this.setState({ offsetVideaste: this.state.offsetVideaste + 8 }, async () => {
-      const res = await axios.get(`http://localhost:3000/profil/get_profil_videaste_home/${this.state.offsetVideaste}`)
+      const res = await axios.get(`${pathApi}/${this.state.offsetVideaste}`)
       const videastesLimite = res.data
       this.setState({ videastes: videastesLimite })
     })
   }
 
   getVideasteLimitBack = () => {
+    let pathApi = process.env.REACT_APP_PATH_API_DEV + '/profil/get_profil_videaste_home'
+    if (process.env.NODE_ENV === 'production') {
+      pathApi = process.env.REACT_APP_PATH_API_PROD + '/profil/get_profil_videaste_home'
+    }
     this.setState({ offsetVideaste: this.state.offsetVideaste - 8 }, async () => {
-      const res = await axios.get(`http://localhost:3000/profil/get_profil_videaste_home/${this.state.offsetVideaste}`)
+      const res = await axios.get(`${pathApi}/${this.state.offsetVideaste}`)
       const videastesLimite = res.data
       this.setState({ videastes: videastesLimite })
     })

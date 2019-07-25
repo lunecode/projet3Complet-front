@@ -25,16 +25,24 @@ class GetProfil extends Component {
   };
 
   getProfil = async () => {
+    let pathApi = process.env.REACT_APP_PATH_API_DEV + '/profil/get_video_for_profil_decription'
+    if (process.env.NODE_ENV === 'production') {
+      pathApi = process.env.REACT_APP_PATH_API_PROD + '/profil/get_video_for_profil_decription'
+  }
     const token = localStorage.getItem('token')
     const idProfilDecod = jwt.decode(token)
     const idProfil = idProfilDecod.id_profil
-    const res = await axios.get(`http://localhost:3000/profil/get_video_for_profil_decription/${idProfil}`)
+    const res = await axios.get(`${pathApi}/${idProfil}`)
     this.setState({ profil: res.data })
     console.log(this.state.profil)
   }
 
   getVideo = async () => {
-    const res = await axios.get('http://localhost:3000/general_video/get_general_video_liked_popularitylimit')
+    let pathApi = process.env.REACT_APP_PATH_API_DEV + '/general_video/get_general_video_liked_popularitylimit'
+    if (process.env.NODE_ENV === 'production') {
+      pathApi = process.env.REACT_APP_PATH_API_PROD + '/general_video/get_general_video_liked_popularitylimit'
+  }
+    const res = await axios.get(pathApi)
     this.setState({ general_video: res.data })
     console.log(this.state.general_video)
   }
@@ -146,7 +154,7 @@ class GetProfil extends Component {
                         <p className="pourcentage_description">{item.number_tips}%</p>
                         <p className="durée_description" >{item.video_duration}</p>
                       </div>
-                      <div className="picture_description"><img src={item.cover_picture} /></div>
+                      <div className="picture_description"><img src={item.cover_picture}  alt=""/></div>
                       <h3>{item.video_title}</h3>
                       <div className="infos_Profil_description">
                         <p className="pays_description">Scandinavia</p>

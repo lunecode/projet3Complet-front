@@ -22,10 +22,15 @@ class REGISTRATION extends Component {
   }
 
 
+
   onSubmit = (e) => {
     e.preventDefault()
+    let pathApi = process.env.REACT_APP_PATH_API_DEV + '/registration/registration'
+    if (process.env.NODE_ENV === 'production') {
+      pathApi = process.env.REACT_APP_PATH_API_PROD + '/registration/registration'
+    }
     axios
-      .post("http://localhost:3000/registration/registration", this.state)
+      .post(pathApi, this.state)
       .then(resp => {
         if (resp.data.error === "User already exists") {
           console.log(resp.data.error)

@@ -13,9 +13,17 @@ class UserCommentDelete extends Component {
     this.setState({ [e.target.name]: e.target.value })
   }
 
+
+
   submitHandler = e => {
     e.preventDefault()
-    axios.delete(`http://localhost:3000/comment/delete_comment/${this.state.id_comment}`, this.state)
+
+    let pathApi = process.env.REACT_APP_PATH_API_DEV + '/comment/delete_comment'
+    if (process.env.NODE_ENV === 'production') {
+      pathApi = process.env.REACT_APP_PATH_API_PROD + '/comment/delete_comment'
+    }
+
+    axios.delete(`${pathApi}/${this.state.id_comment}`, this.state)
       .then(response => {
         console.log(response)
       })

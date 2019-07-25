@@ -23,14 +23,24 @@ class Video extends Component {
   };
 
   getVideo = async () => {
-    const res = await axios.get('http://localhost:3000/general_video/get_general_video')
+    let pathApi = process.env.REACT_APP_PATH_API_DEV + '/general_video/get_general_video'
+    if (process.env.NODE_ENV === 'production') {
+      pathApi = process.env.REACT_APP_PATH_API_PROD + '/general_video/get_general_video'
+    }
+  
+    const res = await axios.get(pathApi)
     this.setState({ videos: res.data })
     console.log(this.state.videos)
 
   }
 
   getPopularity = async () => {
-    const res = await axios.get('http://localhost:3000/popularity/get_popularity_liked_general_video')
+    let pathApi = process.env.REACT_APP_PATH_API_DEV + '/popularity/get_popularity_liked_general_video'
+    if (process.env.NODE_ENV === 'production') {
+      pathApi = process.env.REACT_APP_PATH_API_PROD + '/popularity/get_popularity_liked_general_video'
+    }
+  
+    const res = await axios.get(pathApi)
     this.setState({ popularity: res.data })
 
   }

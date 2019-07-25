@@ -23,15 +23,27 @@ class Login extends Component {
 		CloseModal: false,
 	}
 
+
+
 	onSubmitLogin = e => {
 		e.preventDefault()
+		let pathApi = process.env.REACT_APP_PATH_API_DEV + '/login/login'
+		if (process.env.NODE_ENV === 'production') {
+			pathApi = process.env.REACT_APP_PATH_API_PROD + '/login/login'
+		}
+
+		let pathApi2 = process.env.REACT_APP_PATH_API_DEV + '/login/protected'
+		if (process.env.NODE_ENV === 'production') {
+			pathApi2 = process.env.REACT_APP_PATH_API_PROD + '/login/protected'
+		}
+	
 		const email = e.target.email.value
 		const password = e.target.password.value
 		if (email == '' || password == '') {
 			alert('Merci de renseigner les champs')
 		} else {
 			axios
-				.post('http://localhost:3000/login/login', {
+				.post(pathApi, {
 					email: e.target.email.value,
 					password: e.target.password.value
 				})
@@ -43,7 +55,7 @@ class Login extends Component {
 					} else {
 						axios({
 							method: 'POST',
-							url: 'http://localhost:3000/login/protected',
+							url: pathApi2,
 							headers: {
 								'Authorization': `Bearer ${token}`,
 							}
@@ -58,6 +70,8 @@ class Login extends Component {
 				})
 		}
 	}
+
+
 
 
 	openModalForgottenPassword = () => {

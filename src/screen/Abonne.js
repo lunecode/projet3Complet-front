@@ -7,8 +7,12 @@ import UserLastnameFirstname from '../components/ProfilComponents/UserLastnameFi
 class Abonnements extends Component {
   submitHandler = e => {
     e.preventDefault()
+    let pathApi = process.env.REACT_APP_PATH_API_DEV + '/follower/get_follower'
+    if (process.env.NODE_ENV === 'production') {
+      pathApi = process.env.REACT_APP_PATH_API_PROD + '/follower/get_follower'
+  }
     console.log(this.state)
-    axios.post('http://localhost:3000/follower/get_follower', this.state)
+    axios.post(pathApi, this.state)
       .then(response => {
         console.log(response)
       })

@@ -23,12 +23,16 @@ class Profil extends Component {
 
   submitHandler = e => {
     e.preventDefault()
+    let pathApi = process.env.REACT_APP_PATH_API_DEV + '/profil/update_profil'
+    if (process.env.NODE_ENV === 'production') {
+        pathApi = process.env.REACT_APP_PATH_API_PROD + '/profil/update_profil'
+    }
     //Permet de récupérer l'id de l'utilisateur connecté
     const token = localStorage.getItem('token')
     const tokenDecoded = jwt.decode(token)
     const idProfilDecoded = tokenDecoded.id_profil
     //requete put
-    axios.put(`http://localhost:3000/profil/update_profil/${idProfilDecoded}`, this.state)
+    axios.put(`${pathApi}/${idProfilDecoded}`, this.state)
       .then(response => {
         console.log(response)
       })

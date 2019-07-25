@@ -88,7 +88,11 @@ class PostTravelInformation extends Component {
 
   submitHandlerInformation = e => {
     e.preventDefault()
-    axios.post('http://localhost:3000/travel_information/insert_travelinformation', this.state)
+    let pathApi = process.env.REACT_APP_PATH_API_DEV + '/travel_information/insert_travelinformation'
+    if (process.env.NODE_ENV === 'production') {
+      pathApi = process.env.REACT_APP_PATH_API_PROD + '/travel_information/insert_travelinformation'
+  }
+    axios.post(pathApi, this.state)
       .then(response => {
         console.log(response)
       })

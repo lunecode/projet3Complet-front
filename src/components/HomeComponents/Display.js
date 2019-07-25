@@ -10,10 +10,16 @@ class Display extends Component {
   };
 
   getVideo = async () => {
-    const res = await axios.get('http://localhost:3000/videoUpload/getdatavideo')
+    let pathApi = process.env.REACT_APP_PATH_API_DEV + '/videoUpload/getdatavideo'
+    if (process.env.NODE_ENV === 'production') {
+      pathApi = process.env.REACT_APP_PATH_API_PROD + '/videoUpload/getdatavideo'
+    }
+    const res = await axios.get(pathApi)
     this.setState({ videos: res.data })
-    console.log(this.state.videos)
   }
+
+
+
   componentDidMount() {
     this.getVideo()
   }

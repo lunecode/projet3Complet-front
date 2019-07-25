@@ -55,8 +55,12 @@ class PostTravelStep extends Component {
 
   submitHandler = e => {
     e.preventDefault()
+    let pathApi = process.env.REACT_APP_PATH_API_DEV + '/travel_step/insert_travelstep'
+    if (process.env.NODE_ENV === 'production') {
+      pathApi = process.env.REACT_APP_PATH_API_PROD + '/travel_step/insert_travelstep'
+  }
     console.log(this.state)
-    axios.post('http://localhost:3000/travel_step/insert_travelstep', this.state)
+    axios.post(pathApi, this.state)
       .then(response => {
         console.log(response)
       })
@@ -84,7 +88,7 @@ class PostTravelStep extends Component {
             <div className="AboutVideoStep">
               <img src={AboutVideoStep} alt="About video step"></img>
             </div>
-            <img className="itineraty_step" src={Itinerary_Step}></img>
+            <img className="itineraty_step" src={Itinerary_Step} alt='' ></img>
             <div className="white_style"></div>
             <div className="way">
               <span className="bestwaymove">Meilleurs moyen de se déplacer dans l'étape</span>

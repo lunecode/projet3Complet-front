@@ -12,9 +12,12 @@ class DisplayAsieVideo extends Component {
 
 
   getVideo = async () => {
-    const res = await axios.get('http://localhost:3000/popularity/get_popularity_liked_general_video_travel_information_continent_asie_oceanie')
+    let pathApi = process.env.REACT_APP_PATH_API_DEV + '/popularity/get_popularity_liked_general_video_travel_information_continent_asie_oceanie'
+    if (process.env.NODE_ENV === 'production') {
+      pathApi = process.env.REACT_APP_PATH_API_PROD + '/popularity/get_popularity_liked_general_video_travel_information_continent_asie_oceanie'
+    }
+    const res = await axios.get(pathApi)
     this.setState({ video: res.data })
-    console.log(this.state.video)
   }
 
 
@@ -22,8 +25,7 @@ class DisplayAsieVideo extends Component {
     this.getVideo()
   }
   render() {
-    let a = 1
-    let c = 1
+
     return (
       <div className="Display_Afrique">
         <div className="titre_Display_Afrique">

@@ -31,7 +31,11 @@ class PostVideo extends Component {
 
   submitHandler = e => {
     e.preventDefault()
-    axios.post('http://localhost:3000/general_video/insert_general_video', this.state)
+    let pathApi = process.env.REACT_APP_PATH_API_DEV + '/general_video/insert_general_video'
+    if (process.env.NODE_ENV === 'production') {
+      pathApi = process.env.REACT_APP_PATH_API_PROD + '/general_video/insert_general_video'
+  }
+    axios.post(pathApi, this.state)
       .then(response => {
         console.log(response)
       })
