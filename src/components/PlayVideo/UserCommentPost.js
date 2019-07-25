@@ -19,8 +19,11 @@ class UserCommentPost extends Component {
 
   submitHandler = e => {
     e.preventDefault()
-    console.log(this.state)
-    axios.post('http://localhost:3000/comment/post_data_comment', this.state)
+    let pathApi = process.env.REACT_APP_PATH_API_DEV + '/comment/post_data_comment'
+    if (process.env.NODE_ENV === 'production') {
+      pathApi = process.env.REACT_APP_PATH_API_PROD + '/comment/post_data_comment'
+    }
+    axios.post(pathApi, this.state)
       .then(response => {
         console.log(response)
         window.location.reload(false)

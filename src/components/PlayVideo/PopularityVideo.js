@@ -8,7 +8,12 @@ class PopularityVideo extends Component {
   };
 
   getPopularity = async () => {
-    const res = await axios.get('http://localhost:3000/popularity/get_popularity')
+    let pathApi = process.env.REACT_APP_PATH_API_DEV + '/popularity/get_popularity'
+    if (process.env.NODE_ENV === 'production') {
+      pathApi = process.env.REACT_APP_PATH_API_PROD + '/popularity/get_popularity'
+    }
+  
+    const res = await axios.get(pathApi)
     this.setState({ popularity: res.data })
 
   }

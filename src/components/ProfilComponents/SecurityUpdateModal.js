@@ -25,14 +25,16 @@ class SecurityUpdateModal extends React.Component {
     }
     handleSubmit = (e) => {
         e.preventDefault()
-        axios.post('http://localhost:3000/profil/update_profil/:id', {
+        let pathApi = process.env.REACT_APP_PATH_API_DEV + '/profil/update_profil/:id'
+        if (process.env.NODE_ENV === 'production') {
+            pathApi = process.env.REACT_APP_PATH_API_PROD + '/profil/update_profil/:id'
+        }
+        axios.post(pathApi, {
             email: e.target.email.value,
             password: e.target.password.value
         })
             .then(res => {
-
                 localStorage.setItem('token', res.headers["x-access-token"])
-
             })
     }
 

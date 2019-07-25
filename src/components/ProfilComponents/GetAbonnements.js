@@ -12,21 +12,35 @@ class GetAbonnements extends Component {
         visible:6,
         toggleBtnFollowing:false
     };
+
+
     showToggleBtnFollowing=()=>{
         this.setState({toggleBtnFollowing:true})
     }
+
+
     loadMore=() =>{
         this.setState((prev) => {
           return {visible: prev.visible + 4};
         });
       }
+
+
     getFollowing = async () => {
-        const res = await axios.get('http://localhost:3000/following/get_following')
+      let pathApi = process.env.REACT_APP_PATH_API_DEV + '/following/get_following'
+      if (process.env.NODE_ENV === 'production') {
+        pathApi = process.env.REACT_APP_PATH_API_PROD + '/following/get_following'
+      }
+        const res = await axios.get(pathApi)
         this.setState({ Following: res.data })
     }
+
+
     componentDidMount() {
         this.getFollowing()
     }
+
+    
     render() {
         return (
             <>

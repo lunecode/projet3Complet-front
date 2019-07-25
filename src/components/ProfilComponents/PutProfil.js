@@ -9,17 +9,23 @@ class PostBioProfil extends Component {
   changeHandler = (e) => {
     this.setState({ [e.target.name]: e.target.value })
   }
+
   submitHandler = e => {
     e.preventDefault()
+    let pathApi = process.env.REACT_APP_PATH_API_DEV + '/profil/update_profil'
+    if (process.env.NODE_ENV === 'production') {
+      pathApi = process.env.REACT_APP_PATH_API_PROD + '/profil/update_profil'
+    }
+  
     console.log(this.state)
-    axios.put(`http://localhost:3000/profil/update_profil/${this.state.id_profil}`, this.state)
+    axios.put(`${pathApi}/${this.state.id_profil}`, this.state)
       .then(response => {
-
       })
       .catch(error => {
-
       })
   }
+
+
   render() {
     const { id_profil, lastname, firstname, pseudo, email, birth_date, type,
       position, profil_link, profile_picture, bio, inscription_date, inscription_type, password,

@@ -10,7 +10,6 @@ import Partager from '../../Images-tripitto/Icon_Vidéo/Partager.png'
 import modification from '../../Images-tripitto/Icon_Vidéo/modification.png'
 import pourcentage from '../../Images-tripitto/Icon_Vidéo/pourcentage.png'
 import upload from '../../Images-tripitto/Icon_Vidéo/upload.png'
-import Delete from '../../Images-tripitto/Icon_Vidéo/Delete.png'
 
 class VideoProfil extends Component {
 	state = {

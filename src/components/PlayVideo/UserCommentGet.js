@@ -13,7 +13,11 @@ class UserCommentGet extends Component {
   };
 
   getComment = async () => {
-    const res = await axios.get('http://localhost:3000/comment/get_comment')
+    let pathApi = process.env.REACT_APP_PATH_API_DEV + '/comment/get_comment'
+    if (process.env.NODE_ENV === 'production') {
+      pathApi = process.env.REACT_APP_PATH_API_PROD + '/comment/get_comment'
+    }
+    const res = await axios.get(pathApi)
     this.setState({ comment: res.data })
 
   }
@@ -21,7 +25,11 @@ class UserCommentGet extends Component {
 
 
   getProfil = async () => {
-    const res = await axios.get('http://localhost:3000/profil/get_profil')
+    let pathApi = process.env.REACT_APP_PATH_API_DEV + '/profil/get_profil'
+    if (process.env.NODE_ENV === 'production') {
+      pathApi = process.env.REACT_APP_PATH_API_PROD + '/profil/get_profil'
+    }
+    const res = await axios.get(pathApi)
     this.setState({ picture: res.data })
 
   }

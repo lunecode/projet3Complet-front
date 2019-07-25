@@ -20,7 +20,6 @@ class Display extends Component {
 
 
 
-
   componentDidMount() {
     this.getVideo()
   }

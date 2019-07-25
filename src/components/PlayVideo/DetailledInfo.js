@@ -20,20 +20,24 @@ class DetailledInfo extends Component {
 	};
 
 	getDetailledInfo = async () => {
-		const res = await axios.get('http://localhost:3000/travel_step/get_travelstep')
+		let pathApi = process.env.REACT_APP_PATH_API_DEV + '/travel_step/get_travelstep'
+		if (process.env.NODE_ENV === 'production') {
+			pathApi = process.env.REACT_APP_PATH_API_PROD + '/travel_step/get_travelstep'
+		}
+		const res = await axios.get(pathApi)
 		this.setState({ detailledInfo: res.data })
-
 	}
+
 	componentDidMount() {
 		this.getDetailledInfo()
 	}
+
 
 	render() {
 		let i = 1;
 
 		const url = window.location.href;
 		const idDetailledVideo = url.slice(32)
-
 
 		return (
 			<>
@@ -65,9 +69,7 @@ class DetailledInfo extends Component {
 											<img className="bed" src={Bed} alt="bed" /><span className="district1">{item.district1}</span> |
                     <span className="district">{item.district2}</span> |
                     <span className="district"> {item.district3}</span>
-										</p>
-
-										
+										</p>										
 
 										{/* <li>{item.district_comment}</li> */}
 										{/* <li>{item.accomodation3}</li> */}

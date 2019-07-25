@@ -26,8 +26,7 @@ class DisplayAfriqueVideo extends Component {
     this.getVideo()
   }
   render() {
-    let a = 1
-    let c = 1
+
     return (
       <div className="Display_Afrique">
         <div className="titre_Display_Afrique">

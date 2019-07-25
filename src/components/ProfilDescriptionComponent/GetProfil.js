@@ -146,7 +146,7 @@ class GetProfil extends Component {
                         <p className="pourcentage_description">{item.number_tips}%</p>
                         <p className="durée_description" >{item.video_duration}</p>
                       </div>
-                      <div className="picture_description"><img src={item.cover_picture} /></div>
+                      <div className="picture_description"><img src={item.cover_picture}  alt=""/></div>
                       <h3>{item.video_title}</h3>
                       <div className="infos_Profil_description">
                         <p className="pays_description">Scandinavia</p>

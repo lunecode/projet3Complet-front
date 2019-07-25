@@ -84,7 +84,7 @@ class PostTravelStep extends Component {
             <div className="AboutVideoStep">
               <img src={AboutVideoStep} alt="About video step"></img>
             </div>
-            <img className="itineraty_step" src={Itinerary_Step}></img>
+            <img className="itineraty_step" src={Itinerary_Step} alt='' ></img>
             <div className="white_style"></div>
             <div className="way">
               <span className="bestwaymove">Meilleurs moyen de se déplacer dans l'étape</span>
