@@ -69,13 +69,22 @@ class PostTravelStep extends Component {
       })
   }
 
+  // ALLOW TO ASSOCIATE THE ID OF THE VIDEO TO THE TRAVEL STEP
+  addIdGeneralVideo = () => {
+    const url = window.location.href.slice(39);
+    this.setState({ general_video_id_general_video : url})
+  }
+
+  componentDidMount= () => {
+    this.addIdGeneralVideo()
+  }
+
+
 
   render() {
+    
     const { way_get_around_comment, district1, district2, district3, district_comment, accomodation1, accomodation2, accomodation3, accomodation_link1, accomodation_link2, accomodation_link3, restaurant1, restaurant2, restaurant3, bar1, bar2, bar3, must_visit1, must_visit2, must_visit3, sport_activity1, sport_activity_comment, crush, advice } = this.state
 
-    // ALLOW TO ASSOCIATE THE ID OF THE VIDEO TO THE TRAVEL STEP
-    const url = window.location.href.slice(39);
-    this.state.general_video_id_general_video = url
 
     return (
       <form onSubmit={this.submitHandler}>

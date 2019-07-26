@@ -16,8 +16,6 @@ class Getnextdestination extends Component {
     offsetBestplan: 0
   };
 
-
-
   getnumbertips = async () => {
     let pathApi = process.env.REACT_APP_PATH_API_DEV + '/general_video/get_general_video_nextdestination_tauxderemplissage'
     if (process.env.NODE_ENV === 'production') {
@@ -130,7 +128,7 @@ class Getnextdestination extends Component {
 
             {this.state.nextpicture.map(nextpicture => (
               <div className={"divpictureNext" + i} key={i++}>
-                <NavLink to={`/playvideo/${nextpicture.id_general_video}`} ><img src={nextpicture.cover_picture} alt="" className={"nextpictureimg" + a} key={a++} /></NavLink>
+                <NavLink to={`/playvideo/${nextpicture.id_general_video}`} ><img src={nextpicture.cover_picture} alt='' className={"nextpictureimg" + a} key={a++} /></NavLink>
                 <p className={"p" + b} key={b++}>{nextpicture.video_title}</p> <br />
                 <p className={"p" + b} key={b++}>{nextpicture.countries}</p>
               </div>
@@ -159,8 +157,10 @@ class Getnextdestination extends Component {
         </section>
         <div className="container_bestplan">
           {this.state.videos.map(video => (
+
             <div className={"divVideoPLan" + c} key={c++}>
-              <NavLink to={`/playvideo/${video.id_general_video}`} ><img src={video.cover_picture} className={"nextpictureimg" + a} key={a++} className='picture_bestplan' alt='' /></NavLink>
+              <NavLink to={`/playvideo/${video.id_general_video}`} ><img src={video.cover_picture} className="nextpictureimg" key={a++} alt='' /></NavLink>
+
               <div className='container_title_bestplan_numbertips'>
                 <p className='title_bestplan_numbertips'>+{video.tx_remplissage}%</p>
               </div>

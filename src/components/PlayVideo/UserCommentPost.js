@@ -31,14 +31,19 @@ class UserCommentPost extends Component {
       .catch(error => {
         console.log(error)
       })
+  }
 
+  addIdGeneralVideo = () => {
+    const url = window.location.href;
+    this.setState({ general_video_id_general_video: url.slice(32)})
+  }
+
+  componentDidMount = () => {
+    this.addIdGeneralVideo()
   }
 
   render() {
     const { author_comment, comment, profil_id_profil, popularity_id_popularity, general_video_id_general_video } = this.state
-
-    const url = window.location.href;
-    this.state.general_video_id_general_video = url.slice(32)
 
     return (
 
