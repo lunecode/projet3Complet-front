@@ -45,11 +45,6 @@ class PostTravelInformation extends Component {
   // ALLOW TO GIVE THE ID OF THE ENUM
 
   type1 = () => {
-    // ALLOW TO DISPLAY A BORDER WHEN WE CLIC ON THE IMG
-    // const images = document.querySelectorAll(".travel_type");
-    // images.forEach(function(i) {i.addEventListener("click", function(event) {
-    // i.classList.toggle("selected");
-    // })});
     this.setState({ travel_type: 1 })
   }
   type2 = () => {
@@ -101,6 +96,15 @@ class PostTravelInformation extends Component {
       })
   }
 
+  // ALLOW TO ASSOCIATE THE ID OF THE VIDEO TO THE TRAVEL STEP
+  addIdGeneralVideo = () => {
+    const url = window.location.href.slice(40);
+    this.setState({ general_video_id_general_video : url})
+  }
+
+  componentDidMount= () => {
+    this.addIdGeneralVideo()
+  }
 
 
   render() {
@@ -116,10 +120,6 @@ class PostTravelInformation extends Component {
     const country = CountryList.map((item) =>
       <option key={item.id}>{item.country}</option>)
 
-    // ALLOW TO ASSOCIATE THE ID OF THE VIDEO TO THE TRAVEL INFORMATION
-    const url = window.location.href.slice(40);
-    // this.setState = ({ general_video_id_general_video: url})
-    this.state.general_video_id_general_video = url
 
     return (
       <>
@@ -138,7 +138,6 @@ class PostTravelInformation extends Component {
             <div className="continent" onClick={this.continentID}>
               <label>
                 Destination *
-
                 <select className="input-continent" name="continent" >
                   <option>Continent</option>
                   {continent}
@@ -188,13 +187,6 @@ class PostTravelInformation extends Component {
             <div className="step">
               <img src={itinerary_nb} alt="itinerary number"></img>
             </div>
-
-            {/* ITS THE INPUT FOR POST ITINERARY DATA TO THE DB
-
-            <div className="step">
-              <p>Itinéraire</p>
-              <input className="input-step" type='number' name="nb_step" value={nb_step} onChange={this.changeHandler} />
-            </div> */}
 
 
             <div className="budget">

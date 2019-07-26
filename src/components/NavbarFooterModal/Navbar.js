@@ -37,7 +37,7 @@ class Navbar extends Component {
 			}
 		})
 			.then(res => {
-				if (!res.data.message == "Token OK") {
+				if (!res.data.message === "Token OK") {
 				}
 			})
 	}

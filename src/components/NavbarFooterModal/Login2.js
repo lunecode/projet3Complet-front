@@ -28,7 +28,7 @@ class Login2 extends Component {
   
     const email = e.target.email.value
     const password = e.target.password.value
-    if (email == '' || password == '') {
+    if (email === '' || password === '') {
       alert('Merci de renseigner les champs')
     } else {
       axios
@@ -49,7 +49,7 @@ class Login2 extends Component {
               }
             })
               .then(res => {
-                if (res.data.message == 'Token OK') {
+                if (res.data.message === 'Token OK') {
                   window.location.reload(true)
                 } else {
                 }
