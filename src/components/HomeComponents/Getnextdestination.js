@@ -16,52 +16,32 @@ class Getnextdestination extends Component {
     offsetBestplan: 0
   };
 
-
-
   getnumbertips = async () => {
-    let pathApi = process.env.REACT_APP_PATH_API_DEV + '/general_video/get_general_video_nextdestination_tauxderemplissage'
-    if (process.env.NODE_ENV === 'production') {
-      pathApi = process.env.REACT_APP_PATH_API_PROD + '/general_video/get_general_video_nextdestination_tauxderemplissage'
-    }
-    const res = await axios.get(pathApi)
+    const res = await axios.get('http://localhost:3000/general_video/get_general_video_nextdestination_tauxderemplissage')
     this.setState({ numbertips: res.data })
   }
 
 
 
+
+
   getnextvideo = async () => {
-    let pathApi = process.env.REACT_APP_PATH_API_DEV + '/travel_information/get_travelinformation_general_video'
-    if (process.env.NODE_ENV === 'production') {
-      pathApi = process.env.REACT_APP_PATH_API_PROD + '/travel_information/get_travelinformation_general_video'
-    }
-    const res = await axios.get(pathApi)
+    const res = await axios.get('http://localhost:3000/travel_information/get_travelinformation_general_video')
     const Nextdestination = res.data
     this.setState({ nextpicture: Nextdestination })
   }
 
-
-
   getnextvideolimit = () => {
-    let pathApi = process.env.REACT_APP_PATH_API_DEV + '/travel_information/get_travelinformation_general_video'
-    if (process.env.NODE_ENV === 'production') {
-      pathApi = process.env.REACT_APP_PATH_API_PROD + '/travel_information/get_travelinformation_general_video'
-    }
     this.setState({ offset: this.state.offset + 5 }, async () => {
-      const res = await axios.get(`${pathApi}/${this.state.offset}`)
+      const res = await axios.get(`http://localhost:3000/travel_information/get_travelinformation_general_video/${this.state.offset}`)
       const Nextdestination = res.data
       this.setState({ nextpicture: Nextdestination })
     })
   }
 
-
-
   getnextvideolimitBack = () => {
-    let pathApi = process.env.REACT_APP_PATH_API_DEV + '/travel_information/get_travelinformation_general_video'
-    if (process.env.NODE_ENV === 'production') {
-      pathApi = process.env.REACT_APP_PATH_API_PROD + '/travel_information/get_travelinformation_general_video'
-    }
     this.setState({ offset: this.state.offset - 5 }, async () => {
-      const res = await axios.get(`${pathApi}/${this.state.offset}`)
+      const res = await axios.get(`http://localhost:3000/travel_information/get_travelinformation_general_video/${this.state.offset}`)
       const Nextdestination = res.data
       this.setState({ nextpicture: Nextdestination })
     })
@@ -71,38 +51,20 @@ class Getnextdestination extends Component {
 
 
   getbestplan = async () => {
-    let pathApi = process.env.REACT_APP_PATH_API_DEV + '/popularity/get_popularity_liked_general_video_travel_information2'
-    if (process.env.NODE_ENV === 'production') {
-      pathApi = process.env.REACT_APP_PATH_API_PROD + '/popularity/get_popularity_liked_general_video_travel_information2'
-    }
-    const res = await axios.get(pathApi)
+    const res = await axios.get('http://localhost:3000/popularity/get_popularity_liked_general_video_travel_information2')
     const Bestplan = res.data
     this.setState({ videos: Bestplan })
   }
-
-
-
   getbestplanlimit = () => {
-    let pathApi = process.env.REACT_APP_PATH_API_DEV + '/popularity/get_popularity_liked_general_video_travel_information2'
-    if (process.env.NODE_ENV === 'production') {
-      pathApi = process.env.REACT_APP_PATH_API_PROD + '/popularity/get_popularity_liked_general_video_travel_information2'
-    }
     this.setState({ offsetBestplan: this.state.offsetBestplan + 4 }, async () => {
-      const res = await axios.get(`${pathApi}/${this.state.offsetBestplan}`)
+      const res = await axios.get(`http://localhost:3000/popularity/get_popularity_liked_general_video_travel_information2/${this.state.offsetBestplan}`)
       const Bestplan = res.data
       this.setState({ videos: Bestplan })
     })
   }
-
-
-
   getbestplanlimitBack = () => {
-    let pathApi = process.env.REACT_APP_PATH_API_DEV + '/popularity/get_popularity_liked_general_video_travel_information2'
-    if (process.env.NODE_ENV === 'production') {
-      pathApi = process.env.REACT_APP_PATH_API_PROD + '/popularity/get_popularity_liked_general_video_travel_information2'
-    }
     this.setState({ offsetBestplan: this.state.offsetBestplan - 4 }, async () => {
-      const res = await axios.get(`${pathApi}/${this.state.offsetBestplan}`)
+      const res = await axios.get(`http://localhost:3000/popularity/get_popularity_liked_general_video_travel_information2/${this.state.offsetBestplan}`)
       const Bestplan = res.data
       this.setState({ videos: Bestplan })
     })
@@ -130,7 +92,7 @@ class Getnextdestination extends Component {
 
             {this.state.nextpicture.map(nextpicture => (
               <div className={"divpictureNext" + i} key={i++}>
-                <NavLink to={`/playvideo/${nextpicture.id_general_video}`} ><img src={nextpicture.cover_picture} alt="" className={"nextpictureimg" + a} key={a++} /></NavLink>
+                <NavLink to={`/playvideo/${nextpicture.id_general_video}`} ><img src={nextpicture.cover_picture} alt='' className={"nextpictureimg" + a} key={a++} /></NavLink>
                 <p className={"p" + b} key={b++}>{nextpicture.video_title}</p> <br />
                 <p className={"p" + b} key={b++}>{nextpicture.countries}</p>
               </div>
@@ -159,15 +121,8 @@ class Getnextdestination extends Component {
         </section>
         <div className="container_bestplan">
           {this.state.videos.map(video => (
-            <div className={"divVideoPLan"}>
-
-              
+            <div className={"divVideoPLan" + c} key={c++}>
               <NavLink to={`/playvideo/${video.id_general_video}`} ><img src={video.cover_picture} className={"nextpictureimg" + a} key={a++} className='picture_bestplan' alt='' /></NavLink>
-
-              {/* <NavLink to={`/playvideo/${video.id_general_video}`} ><img src={video.cover_picture} className={"nextpictureimg" + a} key={a++} className='picture_bestplan' alt='' /></NavLink> */}
-
-              
-
               <div className='container_title_bestplan_numbertips'>
                 <p className='title_bestplan_numbertips'>+{video.tx_remplissage}%</p>
               </div>
